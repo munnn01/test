@@ -1,0 +1,128 @@
+Downloading: "https://download.pytorch.org/models/fasterrcnn_resnet50_fpn_coco-258fb6c6.pth" to /kaggle/temp/adaptive_preprocessing/data/torch/hub/checkpoints/fasterrcnn_resnet50_fpn_coco-258fb6c6.pth
+
+  0%|          | 0.00/160M [00:00<?, ?B/s]
+  6%|▌         | 9.12M/160M [00:00<00:01, 94.3MB/s]
+ 22%|██▏       | 34.6M/160M [00:00<00:00, 195MB/s] 
+ 38%|███▊      | 60.6M/160M [00:00<00:00, 230MB/s]
+ 54%|█████▍    | 86.2M/160M [00:00<00:00, 245MB/s]
+ 70%|██████▉   | 112M/160M [00:00<00:00, 253MB/s] 
+ 86%|████████▌ | 137M/160M [00:00<00:00, 258MB/s]
+100%|██████████| 160M/160M [00:00<00:00, 243MB/s]
+Downloading: "https://download.pytorch.org/models/swin3d_t-7615ae03.pth" to /kaggle/temp/adaptive_preprocessing/data/torch/hub/checkpoints/swin3d_t-7615ae03.pth
+
+  0%|          | 0.00/122M [00:00<?, ?B/s]
+  8%|▊         | 10.2M/122M [00:00<00:01, 107MB/s]
+ 27%|██▋       | 32.9M/122M [00:00<00:00, 184MB/s]
+ 49%|████▊     | 59.0M/122M [00:00<00:00, 224MB/s]
+ 69%|██████▉   | 84.0M/122M [00:00<00:00, 239MB/s]
+ 90%|█████████ | 110M/122M [00:00<00:00, 249MB/s] 
+100%|██████████| 122M/122M [00:00<00:00, 233MB/s]
+OT test: 1 sources/windows, 16 paired rows, 169.7s
+OT test: 2 sources/windows, 32 paired rows, 335.6s
+OT test: 3 sources/windows, 48 paired rows, 484.0s
+OT test: 4 sources/windows, 64 paired rows, 625.3s
+OT test: 5 sources/windows, 80 paired rows, 766.6s
+OT test: 6 sources/windows, 96 paired rows, 914.9s
+OT test: 7 sources/windows, 112 paired rows, 1072.7s
+OT test: 8 sources/windows, 128 paired rows, 1232.6s
+OT test: 9 sources/windows, 144 paired rows, 1383.5s
+OT test: 10 sources/windows, 160 paired rows, 1533.4s
+OT test: 11 sources/windows, 176 paired rows, 1686.4s
+OT test: 12 sources/windows, 192 paired rows, 1840.4s
+OT test: 13 sources/windows, 208 paired rows, 1992.0s
+OT test: 14 sources/windows, 224 paired rows, 2153.8s
+OT test: 15 sources/windows, 240 paired rows, 2315.9s
+OT test: 16 sources/windows, 256 paired rows, 2471.8s
+
+Evaluating 16 tracker(s) on 1 sequence(s) for 1 class(es) on MotChallenge2DBox dataset using the following metrics: HOTA, CLEAR, Identity, Count
+
+
+Evaluating h264_30_adaptive
+
+
+Evaluating h264_30_anchor
+
+
+Evaluating h264_35_adaptive
+
+
+Evaluating h264_35_anchor
+
+
+Evaluating h264_40_adaptive
+
+
+Evaluating h264_40_anchor
+
+
+Evaluating h264_45_adaptive
+
+
+Evaluating h264_45_anchor
+
+
+Evaluating h265_30_adaptive
+
+
+Evaluating h265_30_anchor
+
+
+Evaluating h265_35_adaptive
+
+
+Evaluating h265_35_anchor
+
+
+Evaluating h265_40_adaptive
+
+
+Evaluating h265_40_anchor
+
+
+Evaluating h265_45_adaptive
+
+
+Evaluating h265_45_anchor
+
+{
+  "h264": {
+    "adaptive": {
+      "qps": [
+        30,
+        35,
+        40,
+        45
+      ],
+      "primary_interpolator": "PCHIP",
+      "threshold_pct": -15.0,
+      "valid": false,
+      "pchip_bd_rate_pct": null,
+      "point_passes": false,
+      "threshold_confirmed": false,
+      "ci": null,
+      "invalid_reason": "quality is not monotone with rate"
+    }
+  },
+  "h265": {
+    "adaptive": {
+      "qps": [
+        30,
+        35,
+        40,
+        45
+      ],
+      "primary_interpolator": "PCHIP",
+      "threshold_pct": -15.0,
+      "valid": true,
+      "pchip_bd_rate_pct": -16.078360823449774,
+      "point_passes": true,
+      "threshold_confirmed": false,
+      "ci": null,
+      "invalid_reason": null,
+      "common_quality_interval": [
+        0.24728719425431853,
+        0.37565542275857866
+      ]
+    }
+  }
+}

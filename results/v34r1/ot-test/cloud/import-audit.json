@@ -1,0 +1,79 @@
+{
+  "task": "ot",
+  "archive_sha256": "a6c7c338029d1913c22baf4dbaf58dfa1ea1b41699aa718ea14c1834a3f5a0bf",
+  "block_tests_passed": 75,
+  "cloud_status": {
+    "task": "ot",
+    "complete": true,
+    "commit": "5a369016e4214b8339f89768534fed19cbcf194e",
+    "wall_seconds": 2556.162687063217
+  },
+  "grid_audit": {
+    "source_count": 16,
+    "paired_rows": 256,
+    "qps": [
+      30,
+      35,
+      40,
+      45
+    ],
+    "codecs": [
+      "h264",
+      "h265"
+    ],
+    "arms": [
+      "anchor",
+      "adaptive"
+    ],
+    "complete": true
+  },
+  "comparisons": {
+    "h264": {
+      "adaptive": {
+        "qps": [
+          30,
+          35,
+          40,
+          45
+        ],
+        "primary_interpolator": "PCHIP",
+        "threshold_pct": -15.0,
+        "valid": false,
+        "pchip_bd_rate_pct": null,
+        "point_passes": false,
+        "threshold_confirmed": false,
+        "ci": null,
+        "invalid_reason": "quality is not monotone with rate"
+      }
+    },
+    "h265": {
+      "adaptive": {
+        "qps": [
+          30,
+          35,
+          40,
+          45
+        ],
+        "primary_interpolator": "PCHIP",
+        "threshold_pct": -15.0,
+        "valid": true,
+        "pchip_bd_rate_pct": -16.078360823449774,
+        "point_passes": true,
+        "threshold_confirmed": false,
+        "ci": null,
+        "invalid_reason": null,
+        "common_quality_interval": [
+          0.24728719425431853,
+          0.37565542275857866
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "wall_seconds": 2477.707847633,
+    "peak_torch_cuda_allocated_bytes": 1250644992,
+    "timing_scope": "includes sender source preparation, proposal/guard, all actual codec trials and receiver task scoring; model/data load excluded"
+  },
+  "job_url": "https://www.kaggle.com/code/huolgggnuyen/v34r1-ot-test-qp4",
+  "wrapper_sha256": "bbf4623d6506e7e685eeee62f8a91ea6adcbd5071309a6edfb0b0f0e9ee0941c"
+}

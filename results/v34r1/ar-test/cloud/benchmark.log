@@ -1,0 +1,229 @@
+Downloading: "https://download.pytorch.org/models/fasterrcnn_resnet50_fpn_coco-258fb6c6.pth" to /kaggle/temp/adaptive_preprocessing/data/torch/hub/checkpoints/fasterrcnn_resnet50_fpn_coco-258fb6c6.pth
+
+  0%|          | 0.00/160M [00:00<?, ?B/s]
+  5%|▌         | 8.00M/160M [00:00<00:01, 83.7MB/s]
+ 18%|█▊        | 29.1M/160M [00:00<00:00, 164MB/s] 
+ 32%|███▏      | 50.4M/160M [00:00<00:00, 191MB/s]
+ 45%|████▍     | 71.4M/160M [00:00<00:00, 202MB/s]
+ 58%|█████▊    | 92.8M/160M [00:00<00:00, 210MB/s]
+ 71%|███████▏  | 114M/160M [00:00<00:00, 213MB/s] 
+ 85%|████████▍ | 135M/160M [00:00<00:00, 217MB/s]
+ 99%|█████████▊| 158M/160M [00:00<00:00, 221MB/s]
+100%|██████████| 160M/160M [00:00<00:00, 206MB/s]
+Downloading: "https://download.pytorch.org/models/swin3d_t-7615ae03.pth" to /kaggle/temp/adaptive_preprocessing/data/torch/hub/checkpoints/swin3d_t-7615ae03.pth
+
+  0%|          | 0.00/122M [00:00<?, ?B/s]
+  7%|▋         | 8.75M/122M [00:00<00:01, 91.5MB/s]
+ 25%|██▍       | 30.0M/122M [00:00<00:00, 168MB/s] 
+ 38%|███▊      | 46.6M/122M [00:00<00:00, 171MB/s]
+ 56%|█████▌    | 68.1M/122M [00:00<00:00, 192MB/s]
+ 73%|███████▎  | 89.2M/122M [00:00<00:00, 202MB/s]
+ 91%|█████████ | 110M/122M [00:00<00:00, 208MB/s] 
+100%|██████████| 122M/122M [00:00<00:00, 196MB/s]
+UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_numpy.cpp:213.)
+AR test: 1 sources/windows, 16 paired rows, 8.5s
+AR test: 2 sources/windows, 32 paired rows, 14.6s
+AR test: 3 sources/windows, 48 paired rows, 21.4s
+AR test: 4 sources/windows, 64 paired rows, 28.3s
+AR test: 5 sources/windows, 80 paired rows, 36.0s
+AR test: 6 sources/windows, 96 paired rows, 43.2s
+AR test: 7 sources/windows, 112 paired rows, 51.1s
+AR test: 8 sources/windows, 128 paired rows, 58.9s
+AR test: 9 sources/windows, 144 paired rows, 65.5s
+AR test: 10 sources/windows, 160 paired rows, 72.9s
+AR test: 11 sources/windows, 176 paired rows, 80.7s
+AR test: 12 sources/windows, 192 paired rows, 88.4s
+AR test: 13 sources/windows, 208 paired rows, 94.8s
+AR test: 14 sources/windows, 224 paired rows, 102.1s
+AR test: 15 sources/windows, 240 paired rows, 109.5s
+AR test: 16 sources/windows, 256 paired rows, 116.6s
+AR test: 17 sources/windows, 272 paired rows, 124.9s
+AR test: 18 sources/windows, 288 paired rows, 131.9s
+AR test: 19 sources/windows, 304 paired rows, 139.5s
+AR test: 20 sources/windows, 320 paired rows, 146.8s
+AR test: 21 sources/windows, 336 paired rows, 154.8s
+AR test: 22 sources/windows, 352 paired rows, 161.8s
+AR test: 23 sources/windows, 368 paired rows, 170.0s
+AR test: 24 sources/windows, 384 paired rows, 176.8s
+AR test: 25 sources/windows, 400 paired rows, 183.9s
+AR test: 26 sources/windows, 416 paired rows, 191.1s
+AR test: 27 sources/windows, 432 paired rows, 198.1s
+AR test: 28 sources/windows, 448 paired rows, 205.5s
+AR test: 29 sources/windows, 464 paired rows, 212.4s
+AR test: 30 sources/windows, 480 paired rows, 219.6s
+AR test: 31 sources/windows, 496 paired rows, 226.4s
+AR test: 32 sources/windows, 512 paired rows, 233.3s
+AR test: 33 sources/windows, 528 paired rows, 240.4s
+AR test: 34 sources/windows, 544 paired rows, 248.6s
+AR test: 35 sources/windows, 560 paired rows, 255.5s
+AR test: 36 sources/windows, 576 paired rows, 264.1s
+AR test: 37 sources/windows, 592 paired rows, 271.6s
+AR test: 38 sources/windows, 608 paired rows, 278.9s
+AR test: 39 sources/windows, 624 paired rows, 286.8s
+AR test: 40 sources/windows, 640 paired rows, 293.7s
+AR test: 41 sources/windows, 656 paired rows, 300.3s
+AR test: 42 sources/windows, 672 paired rows, 307.1s
+AR test: 43 sources/windows, 688 paired rows, 314.3s
+AR test: 44 sources/windows, 704 paired rows, 321.9s
+AR test: 45 sources/windows, 720 paired rows, 329.6s
+AR test: 46 sources/windows, 736 paired rows, 337.7s
+AR test: 47 sources/windows, 752 paired rows, 344.9s
+AR test: 48 sources/windows, 768 paired rows, 352.5s
+AR test: 49 sources/windows, 784 paired rows, 360.4s
+AR test: 50 sources/windows, 800 paired rows, 368.5s
+AR test: 51 sources/windows, 816 paired rows, 376.9s
+AR test: 52 sources/windows, 832 paired rows, 385.0s
+AR test: 53 sources/windows, 848 paired rows, 391.8s
+AR test: 54 sources/windows, 864 paired rows, 399.3s
+AR test: 55 sources/windows, 880 paired rows, 406.7s
+AR test: 56 sources/windows, 896 paired rows, 414.6s
+AR test: 57 sources/windows, 912 paired rows, 421.8s
+AR test: 58 sources/windows, 928 paired rows, 429.5s
+AR test: 59 sources/windows, 944 paired rows, 437.4s
+AR test: 60 sources/windows, 960 paired rows, 444.4s
+AR test: 61 sources/windows, 976 paired rows, 452.9s
+AR test: 62 sources/windows, 992 paired rows, 460.9s
+AR test: 63 sources/windows, 1008 paired rows, 468.6s
+AR test: 64 sources/windows, 1024 paired rows, 476.7s
+AR test: 65 sources/windows, 1040 paired rows, 483.6s
+AR test: 66 sources/windows, 1056 paired rows, 491.4s
+AR test: 67 sources/windows, 1072 paired rows, 498.7s
+AR test: 68 sources/windows, 1088 paired rows, 507.1s
+AR test: 69 sources/windows, 1104 paired rows, 515.4s
+AR test: 70 sources/windows, 1120 paired rows, 523.2s
+AR test: 71 sources/windows, 1136 paired rows, 530.7s
+AR test: 72 sources/windows, 1152 paired rows, 537.7s
+AR test: 73 sources/windows, 1168 paired rows, 544.9s
+AR test: 74 sources/windows, 1184 paired rows, 552.9s
+AR test: 75 sources/windows, 1200 paired rows, 561.3s
+AR test: 76 sources/windows, 1216 paired rows, 568.5s
+AR test: 77 sources/windows, 1232 paired rows, 576.7s
+AR test: 78 sources/windows, 1248 paired rows, 584.3s
+AR test: 79 sources/windows, 1264 paired rows, 592.5s
+AR test: 80 sources/windows, 1280 paired rows, 599.6s
+AR test: 81 sources/windows, 1296 paired rows, 607.3s
+AR test: 82 sources/windows, 1312 paired rows, 614.3s
+AR test: 83 sources/windows, 1328 paired rows, 621.7s
+AR test: 84 sources/windows, 1344 paired rows, 630.0s
+AR test: 85 sources/windows, 1360 paired rows, 637.4s
+AR test: 86 sources/windows, 1376 paired rows, 644.3s
+AR test: 87 sources/windows, 1392 paired rows, 651.6s
+AR test: 88 sources/windows, 1408 paired rows, 658.5s
+AR test: 89 sources/windows, 1424 paired rows, 665.6s
+AR test: 90 sources/windows, 1440 paired rows, 673.4s
+AR test: 91 sources/windows, 1456 paired rows, 681.0s
+AR test: 92 sources/windows, 1472 paired rows, 688.0s
+AR test: 93 sources/windows, 1488 paired rows, 695.9s
+AR test: 94 sources/windows, 1504 paired rows, 702.4s
+AR test: 95 sources/windows, 1520 paired rows, 710.5s
+AR test: 96 sources/windows, 1536 paired rows, 718.9s
+AR test: 97 sources/windows, 1552 paired rows, 726.8s
+AR test: 98 sources/windows, 1568 paired rows, 734.6s
+AR test: 99 sources/windows, 1584 paired rows, 741.9s
+AR test: 100 sources/windows, 1600 paired rows, 750.0s
+AR test: 101 sources/windows, 1616 paired rows, 757.3s
+AR test: 102 sources/windows, 1632 paired rows, 764.3s
+AR test: 103 sources/windows, 1648 paired rows, 772.4s
+AR test: 104 sources/windows, 1664 paired rows, 780.7s
+AR test: 105 sources/windows, 1680 paired rows, 788.0s
+AR test: 106 sources/windows, 1696 paired rows, 796.2s
+AR test: 107 sources/windows, 1712 paired rows, 803.2s
+AR test: 108 sources/windows, 1728 paired rows, 810.6s
+AR test: 109 sources/windows, 1744 paired rows, 817.9s
+AR test: 110 sources/windows, 1760 paired rows, 824.8s
+AR test: 111 sources/windows, 1776 paired rows, 833.1s
+AR test: 112 sources/windows, 1792 paired rows, 841.1s
+AR test: 113 sources/windows, 1808 paired rows, 848.7s
+AR test: 114 sources/windows, 1824 paired rows, 856.3s
+AR test: 115 sources/windows, 1840 paired rows, 864.4s
+AR test: 116 sources/windows, 1856 paired rows, 871.5s
+AR test: 117 sources/windows, 1872 paired rows, 879.8s
+AR test: 118 sources/windows, 1888 paired rows, 886.8s
+AR test: 119 sources/windows, 1904 paired rows, 894.0s
+AR test: 120 sources/windows, 1920 paired rows, 902.1s
+AR test: 121 sources/windows, 1936 paired rows, 910.4s
+AR test: 122 sources/windows, 1952 paired rows, 917.4s
+AR test: 123 sources/windows, 1968 paired rows, 924.8s
+AR test: 124 sources/windows, 1984 paired rows, 932.2s
+AR test: 125 sources/windows, 2000 paired rows, 940.1s
+AR test: 126 sources/windows, 2016 paired rows, 948.7s
+AR test: 127 sources/windows, 2032 paired rows, 955.6s
+AR test: 128 sources/windows, 2048 paired rows, 962.7s
+{
+  "h264": {
+    "adaptive": {
+      "qps": [
+        30,
+        35,
+        40,
+        45
+      ],
+      "primary_interpolator": "PCHIP",
+      "threshold_pct": -15.0,
+      "valid": true,
+      "pchip_bd_rate_pct": -31.35066760285326,
+      "point_passes": true,
+      "threshold_confirmed": false,
+      "ci": {
+        "lo": null,
+        "hi": null,
+        "draws": 5000,
+        "seed": 303401,
+        "finite_fraction": 0.986,
+        "invalid_reasons": {
+          "quality is not monotone with rate": 69,
+          "at least three distinct quality values are required": 1
+        },
+        "familywise_endpoints": 6,
+        "independent_unit": "video",
+        "independent_count": 128,
+        "one_sided_confidence": 0.9916666666666667,
+        "invalid_draw_policy": "worst-case-unbounded",
+        "scope": "paired video percentile bootstrap; undefined draws pay worst-case unbounded tail mass; no population claim beyond source sampling assumptions"
+      },
+      "invalid_reason": null,
+      "common_quality_interval": [
+        0.484375,
+        0.671875
+      ]
+    }
+  },
+  "h265": {
+    "adaptive": {
+      "qps": [
+        30,
+        35,
+        40,
+        45
+      ],
+      "primary_interpolator": "PCHIP",
+      "threshold_pct": -15.0,
+      "valid": true,
+      "pchip_bd_rate_pct": -21.221701678883925,
+      "point_passes": true,
+      "threshold_confirmed": false,
+      "ci": {
+        "lo": null,
+        "hi": null,
+        "draws": 5000,
+        "seed": 303401,
+        "finite_fraction": 0.7692,
+        "invalid_reasons": {
+          "quality is not monotone with rate": 1150,
+          "at least three distinct quality values are required": 4
+        },
+        "familywise_endpoints": 6,
+        "independent_unit": "video",
+        "independent_count": 128,
+        "one_sided_confidence": 0.9916666666666667,
+        "invalid_draw_policy": "worst-case-unbounded",
+        "scope": "paired video percentile bootstrap; undefined draws pay worst-case unbounded tail mass; no population claim beyond source sampling assumptions"
+      },
+      "invalid_reason": null,
+      "common_quality_interval": [
+        0.375,
+        0.65625
+      ]
+    }
+  }
+}

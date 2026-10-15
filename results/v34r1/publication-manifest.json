@@ -1,0 +1,470 @@
+{
+  "schema": "v34r1-publication-1",
+  "files": {
+    "ar-dev-A0/protocol.json": {
+      "bytes": 6608,
+      "sha256": "f9e856d230f613b014f3aacc5ff35302e30976b9926082925590a4a6f97e95a1"
+    },
+    "ar-dev-A0/rows.json.gz": {
+      "bytes": 162752,
+      "sha256": "497df71b407a4bbddeffbaac1a1ac2d112f275c40582cc95268af7cd874ce7ac"
+    },
+    "ar-dev-A0/summary.json": {
+      "bytes": 5474,
+      "sha256": "7b3013d5a6580a19d13388f11abeba90b9d04d1ad96663d312bb68dc62995976"
+    },
+    "ar-dev-A1/protocol.json": {
+      "bytes": 9129,
+      "sha256": "0082da0f49b0d30e7da8a9df9ac51d83e28bad48273b28c185bbfd346812c0cb"
+    },
+    "ar-dev-A1/rows.json.gz": {
+      "bytes": 60463,
+      "sha256": "6d421219e34ae315da3754ebc15069f9a013a5a57ae0ed5af64e15e19cd1a99d"
+    },
+    "ar-dev-A1/summary.json": {
+      "bytes": 2623,
+      "sha256": "5341347f8a5f6f3ab2389b7361839f1fa0f45c755756ccfed21de374c66305a9"
+    },
+    "ar-dev-A2/protocol.json": {
+      "bytes": 16182,
+      "sha256": "7bae7c744c33fe04f37aeb90b08ee4985ec65ccc96f4b702fdf75fc5e4b745c4"
+    },
+    "ar-dev-A2/rows.json.gz": {
+      "bytes": 64973,
+      "sha256": "fd54a25f1130e521327ffc29f3b58674b7919dd2e422118d721d534375a3b33e"
+    },
+    "ar-dev-A2/summary.json": {
+      "bytes": 2885,
+      "sha256": "8cdcd412b37015e7ebd212984ec8fc99d64c52f58922f557fa8b93f3cbff1707"
+    },
+    "ar-test/cloud/benchmark.log": {
+      "bytes": 10926,
+      "sha256": "2fc915396ccb430d9ba71b874849e903dfeb8c517932f1b478e4ed97bb60a8fc"
+    },
+    "ar-test/cloud/block-tests.log": {
+      "bytes": 2146,
+      "sha256": "a7710731aea815b333b31719682025f155ac028383755f222d1ef86b01a9f500"
+    },
+    "ar-test/cloud/cloud-status.json": {
+      "bytes": 131,
+      "sha256": "e8757751ded11b026bfab07e6917c43b20142106b4e12e1bf5855bc8233a92c7"
+    },
+    "ar-test/cloud/import-audit.json": {
+      "bytes": 3461,
+      "sha256": "d82ca78f0596d05ed3cb62d2a14fdf7c2cb2119c452b79bc18f7cba7a7c64c1e"
+    },
+    "ar-test/cloud/kaggle-execution.log": {
+      "bytes": 33102,
+      "sha256": "ff170613c761af7ec608637128907c44b1b020d76327bac5edf5998eaa4bcd98"
+    },
+    "ar-test/cloud/kernel-metadata.json": {
+      "bytes": 645,
+      "sha256": "9fe63c1787f89ccda3a4f45b72b35ef06586d6b7f2bfa55ca9898455f172cab3"
+    },
+    "ar-test/cloud/notebook.py": {
+      "bytes": 2339,
+      "sha256": "bc8258d17e171639cdd2b3cfc7944945aaa79751253f116ebf2668f723f36328"
+    },
+    "ar-test/cloud/source-restore.log": {
+      "bytes": 554,
+      "sha256": "d82e3348b013dfdcc0d423fd34687cefc4d5cacc3c17cc121d491a2b05b17e9f"
+    },
+    "ar-test/protocol.json": {
+      "bytes": 19296,
+      "sha256": "f686c3108d1bf0c15a8f27a8637a6cb77d91b88bd18acf779db90a830fe2a76e"
+    },
+    "ar-test/rows.json.gz": {
+      "bytes": 542902,
+      "sha256": "3b742157db110099f9501ad18210e0de91ae91f93bbacd5c6b2a8915705a0716"
+    },
+    "ar-test/summary.json": {
+      "bytes": 4251,
+      "sha256": "61d34e2dbf7bf47c8fabdee4fa81bea0dea907890901bec290ea06e021381419"
+    },
+    "data-manifest.json": {
+      "bytes": 838538,
+      "sha256": "08bce7123f7289e8a5722c11b7ea74b63e4cb54ce2be060e77a5c9998dab9352"
+    },
+    "od-dev-A0/protocol.json": {
+      "bytes": 6608,
+      "sha256": "74fc56eaf5de639295afee6258b79df49da2fb10b101f2495943d8c568c195fa"
+    },
+    "od-dev-A0/rows.json.gz": {
+      "bytes": 979875,
+      "sha256": "48997967bcbecffedd7c726042fb565e3567d1c45bd5e5a7361961b03f6d7667"
+    },
+    "od-dev-A0/summary.json": {
+      "bytes": 5609,
+      "sha256": "bea728800405332bd1f00d1cbd03f9cbad75c68904fb3a66f8fbc24837100383"
+    },
+    "od-dev-A1/protocol.json": {
+      "bytes": 7543,
+      "sha256": "3cd616a97f3b022bae9724279ce2c0b179b1360de0ddc45a7a6c00e0f358996a"
+    },
+    "od-dev-A1/rows.json.gz": {
+      "bytes": 555276,
+      "sha256": "cac1070252509cbbd5193a61e62f45d70b9a152d3b6f46a476f396faba693569"
+    },
+    "od-dev-A1/summary.json": {
+      "bytes": 2718,
+      "sha256": "0e81bd5f25bdab815de41b275f74b95f90333c258dbbd8c39139dbc405ea109c"
+    },
+    "od-test/cloud/benchmark.log": {
+      "bytes": 5586,
+      "sha256": "ec6c227f5840e6b2b6b9e07278d758aa9aced86075b3356caa95f1aabb4d47fd"
+    },
+    "od-test/cloud/block-tests.log": {
+      "bytes": 2146,
+      "sha256": "098c9cb31d600b1bbc9144b6e2848ecf9af6d80a120ee2229958fef4f3062e4e"
+    },
+    "od-test/cloud/cloud-status.json": {
+      "bytes": 132,
+      "sha256": "24532bd8c8477c938894bfd940bebd5cbd4e6a4157e85e0c0b6a83bbfb9467da"
+    },
+    "od-test/cloud/import-audit.json": {
+      "bytes": 1995,
+      "sha256": "28e3ea0909504a5aaae552672e2a502d98d9f884348f3fca43b508df7c02e041"
+    },
+    "od-test/cloud/kaggle-execution.log": {
+      "bytes": 20419,
+      "sha256": "f82831e53b9143afb5ca3440e115a36c3b6fcb81e22995ffdf1b301baa799bf7"
+    },
+    "od-test/cloud/kernel-metadata.json": {
+      "bytes": 616,
+      "sha256": "80c6c1c949f5149c8f9a19484eea8d4e0cfb75b232906678037efe0f32cab129"
+    },
+    "od-test/cloud/notebook.py": {
+      "bytes": 639,
+      "sha256": "21c81dba95d8035144445c8ae41ade56dc35c744c2e3c17ce9a7d561b3fb3021"
+    },
+    "od-test/cloud/source-restore.log": {
+      "bytes": 171,
+      "sha256": "b5fcba77daa0c7537528390150c02f96e183df460751de0096b9024b834abb54"
+    },
+    "od-test/protocol.json": {
+      "bytes": 18133,
+      "sha256": "3967a57564b773142333796ac12b89765ccc79c7a4e7505cd376f8a8c1bba26c"
+    },
+    "od-test/rows.json.gz": {
+      "bytes": 1957524,
+      "sha256": "a93e686c4dc4a4fe1102e4abba9c345e16b809a8cbe565f55205d230b57a3873"
+    },
+    "od-test/summary.json": {
+      "bytes": 2977,
+      "sha256": "89f32fd3335e1664308be4dbfc7d18619fdc626e9819a2ae41302df16223630b"
+    },
+    "ot-dev-A1/protocol.json": {
+      "bytes": 8505,
+      "sha256": "7acb737aa276228c27def6a571aa29270aee2b3fd54f5223d9b14f65f7e32649"
+    },
+    "ot-dev-A1/rows.json.gz": {
+      "bytes": 9278,
+      "sha256": "f3c04352a9080d16ec48170056c6cc142b9b3fabc2bf51053d4c498257ef268b"
+    },
+    "ot-dev-A1/summary.json": {
+      "bytes": 11286,
+      "sha256": "d85e1eb5edf7ef72353b3d30b5b89b85d0480ee943d783460462f3efe8664797"
+    },
+    "ot-dev-A1/tracking/trackers/h264_30_adaptive/data/MOT20-03.txt.gz": {
+      "bytes": 60303,
+      "sha256": "ba713a56052558696a802912ac239112da4640bd4fa4f150e1b2af6914b27f59"
+    },
+    "ot-dev-A1/tracking/trackers/h264_30_anchor/data/MOT20-03.txt.gz": {
+      "bytes": 59295,
+      "sha256": "b8532fc143fcc20400648904e58e6057e5ec393c879901ca908180c663387f17"
+    },
+    "ot-dev-A1/tracking/trackers/h264_35_adaptive/data/MOT20-03.txt.gz": {
+      "bytes": 59087,
+      "sha256": "75d63c6f43df242972447788a509c9dc3f2f4ae469bc9375b875bc4786830431"
+    },
+    "ot-dev-A1/tracking/trackers/h264_35_anchor/data/MOT20-03.txt.gz": {
+      "bytes": 58562,
+      "sha256": "460fac588d4e20fe24fca37174479b56d916d6532bf39ff96571f1ae63568076"
+    },
+    "ot-dev-A1/tracking/trackers/h264_40_adaptive/data/MOT20-03.txt.gz": {
+      "bytes": 58466,
+      "sha256": "bd3d8a887909e8321261b761bd60a2634b1b6efbc9353652984e00061a876ffa"
+    },
+    "ot-dev-A1/tracking/trackers/h264_40_anchor/data/MOT20-03.txt.gz": {
+      "bytes": 57536,
+      "sha256": "4b98c4024fa6260dd84cd7b0d60f2679034c82c3e55d4785b46de9acbc01fd63"
+    },
+    "ot-dev-A1/tracking/trackers/h264_45_adaptive/data/MOT20-03.txt.gz": {
+      "bytes": 53615,
+      "sha256": "90be898998c878db7ed6fc14a05182316fe0ffe54eb79e5b55ab8044777719f0"
+    },
+    "ot-dev-A1/tracking/trackers/h264_45_anchor/data/MOT20-03.txt.gz": {
+      "bytes": 52284,
+      "sha256": "644a9219a7fa05b97192fa970d2a58a84684878e3a5110f8b9984d0690e1db8a"
+    },
+    "ot-dev-A1/tracking/trackers/h265_30_adaptive/data/MOT20-03.txt.gz": {
+      "bytes": 58368,
+      "sha256": "e2e7cc8b53afd952a8bdb724bb93fa8839f205cac11e15e6a12524b48b6567fa"
+    },
+    "ot-dev-A1/tracking/trackers/h265_30_anchor/data/MOT20-03.txt.gz": {
+      "bytes": 58174,
+      "sha256": "87bc075c6a11458af44941c757af457131c7a9a3bccdc44f72cdc811d58d07b9"
+    },
+    "ot-dev-A1/tracking/trackers/h265_35_adaptive/data/MOT20-03.txt.gz": {
+      "bytes": 58600,
+      "sha256": "7423fd6d4723cf25ddb9f676dfeb2d431b5115a658d806f439bbcafd1c7cab18"
+    },
+    "ot-dev-A1/tracking/trackers/h265_35_anchor/data/MOT20-03.txt.gz": {
+      "bytes": 58550,
+      "sha256": "7cb4b5fe27e10c3d35dec45c88208bd9f760b8d5f2868a0e723cf8894986bec0"
+    },
+    "ot-dev-A1/tracking/trackers/h265_40_adaptive/data/MOT20-03.txt.gz": {
+      "bytes": 56423,
+      "sha256": "9141e0b05a2e11415c4c0d40ddf23fe6981f0c8219f36774a26225f56793a8cc"
+    },
+    "ot-dev-A1/tracking/trackers/h265_40_anchor/data/MOT20-03.txt.gz": {
+      "bytes": 56435,
+      "sha256": "e743b5c5643e8365d3091be8ab3d2cb601111c5b9488b2a5452290fdb0418d7e"
+    },
+    "ot-dev-A1/tracking/trackers/h265_45_adaptive/data/MOT20-03.txt.gz": {
+      "bytes": 39786,
+      "sha256": "08a64136f57c275e5d1c541ff77fb344b7728c70f9dd71c516c22f0552c5873c"
+    },
+    "ot-dev-A1/tracking/trackers/h265_45_anchor/data/MOT20-03.txt.gz": {
+      "bytes": 42213,
+      "sha256": "3f2b4b2f35b833c80a3ae80b643d059433a9340d8c0d11dba7b2f36caf7e2648"
+    },
+    "ot-dev-A2/protocol.json": {
+      "bytes": 15571,
+      "sha256": "538fb0cb71750b710e4706e270c7d7078edcddf88b264d42f8ef2f9f01eedc37"
+    },
+    "ot-dev-A2/rows.json.gz": {
+      "bytes": 11304,
+      "sha256": "49faa6e50cce7888e443d5709a39a8ae38dbf7ec98482c8b56c34bfc12fb5349"
+    },
+    "ot-dev-A2/summary.json": {
+      "bytes": 11549,
+      "sha256": "25e6a0e6f6b02ae73a1faec0782f52d6a0f84331be0ec98a3fae40078c45b221"
+    },
+    "ot-dev-A2/tracking/trackers/h264_30_adaptive/data/MOT20-03.txt.gz": {
+      "bytes": 60367,
+      "sha256": "93be60d94b7ed9b5dd0b5d570f6e8980346c47497d69ba871944e06043165df3"
+    },
+    "ot-dev-A2/tracking/trackers/h264_30_anchor/data/MOT20-03.txt.gz": {
+      "bytes": 59295,
+      "sha256": "b8532fc143fcc20400648904e58e6057e5ec393c879901ca908180c663387f17"
+    },
+    "ot-dev-A2/tracking/trackers/h264_35_adaptive/data/MOT20-03.txt.gz": {
+      "bytes": 59698,
+      "sha256": "e743c6f6fe773efae684da14373530b6ac70ea48a4e8da46d21505a782dc6916"
+    },
+    "ot-dev-A2/tracking/trackers/h264_35_anchor/data/MOT20-03.txt.gz": {
+      "bytes": 58562,
+      "sha256": "460fac588d4e20fe24fca37174479b56d916d6532bf39ff96571f1ae63568076"
+    },
+    "ot-dev-A2/tracking/trackers/h264_40_adaptive/data/MOT20-03.txt.gz": {
+      "bytes": 59281,
+      "sha256": "144471709b54b3222d068c5b2b98455d4fb60bec2903e1f45f713acc8616e2c4"
+    },
+    "ot-dev-A2/tracking/trackers/h264_40_anchor/data/MOT20-03.txt.gz": {
+      "bytes": 57536,
+      "sha256": "4b98c4024fa6260dd84cd7b0d60f2679034c82c3e55d4785b46de9acbc01fd63"
+    },
+    "ot-dev-A2/tracking/trackers/h264_45_adaptive/data/MOT20-03.txt.gz": {
+      "bytes": 51291,
+      "sha256": "2d0cf33ced164f1a910517f4f5a9b374e0ac6a0dbc04870935607e7d84119f68"
+    },
+    "ot-dev-A2/tracking/trackers/h264_45_anchor/data/MOT20-03.txt.gz": {
+      "bytes": 52284,
+      "sha256": "644a9219a7fa05b97192fa970d2a58a84684878e3a5110f8b9984d0690e1db8a"
+    },
+    "ot-dev-A2/tracking/trackers/h265_30_adaptive/data/MOT20-03.txt.gz": {
+      "bytes": 60758,
+      "sha256": "c2c3e5011b18126bc669d5eac8d74b85077b112ee3dc639382bfc420beae54a6"
+    },
+    "ot-dev-A2/tracking/trackers/h265_30_anchor/data/MOT20-03.txt.gz": {
+      "bytes": 58174,
+      "sha256": "87bc075c6a11458af44941c757af457131c7a9a3bccdc44f72cdc811d58d07b9"
+    },
+    "ot-dev-A2/tracking/trackers/h265_35_adaptive/data/MOT20-03.txt.gz": {
+      "bytes": 57220,
+      "sha256": "5e78f20bc887eed10ef9e4e3b764154fe974d77d2eac0ab441d01da9cc91abbd"
+    },
+    "ot-dev-A2/tracking/trackers/h265_35_anchor/data/MOT20-03.txt.gz": {
+      "bytes": 58550,
+      "sha256": "7cb4b5fe27e10c3d35dec45c88208bd9f760b8d5f2868a0e723cf8894986bec0"
+    },
+    "ot-dev-A2/tracking/trackers/h265_40_adaptive/data/MOT20-03.txt.gz": {
+      "bytes": 56164,
+      "sha256": "c27fa4368e884128dc22da0236de70d40cb6e722d54d0621d5864e4a72b58176"
+    },
+    "ot-dev-A2/tracking/trackers/h265_40_anchor/data/MOT20-03.txt.gz": {
+      "bytes": 56435,
+      "sha256": "e743b5c5643e8365d3091be8ab3d2cb601111c5b9488b2a5452290fdb0418d7e"
+    },
+    "ot-dev-A2/tracking/trackers/h265_45_adaptive/data/MOT20-03.txt.gz": {
+      "bytes": 42589,
+      "sha256": "fd1b4056cea96e88168cd14b64879a069d33ff3fe60f1ad037f9e11c1fa58c50"
+    },
+    "ot-dev-A2/tracking/trackers/h265_45_anchor/data/MOT20-03.txt.gz": {
+      "bytes": 42213,
+      "sha256": "3f2b4b2f35b833c80a3ae80b643d059433a9340d8c0d11dba7b2f36caf7e2648"
+    },
+    "ot-test/cloud/benchmark.log": {
+      "bytes": 3560,
+      "sha256": "e783c87574d571630a032b4c2ab56c773f2cafbae1bdc2cfc7e5ae45d17f260d"
+    },
+    "ot-test/cloud/block-tests.log": {
+      "bytes": 2146,
+      "sha256": "f2d4418722501bec0080ceddda66776d721dad02c09b3885dfbef4f336efd25d"
+    },
+    "ot-test/cloud/cloud-status.json": {
+      "bytes": 131,
+      "sha256": "56e94efdf858f843fd4713cfccdfc76147f025ad6916d95272e86220dbc493fe"
+    },
+    "ot-test/cloud/import-audit.json": {
+      "bytes": 1994,
+      "sha256": "ba787a90814d79e6e0b1564d1e704308cd7e0ab9893143511f658dc90bf6ee2c"
+    },
+    "ot-test/cloud/kaggle-execution.log": {
+      "bytes": 18919,
+      "sha256": "534a2329d2b4085741783910debee59266fa58e10872b8a2eb1ca6b10210428d"
+    },
+    "ot-test/cloud/kernel-metadata.json": {
+      "bytes": 582,
+      "sha256": "a7b23f3aac72b705fb3024edfdc523b9576622bcc738ba8a5adda37269ee0ec3"
+    },
+    "ot-test/cloud/notebook.py": {
+      "bytes": 639,
+      "sha256": "bbf4623d6506e7e685eeee62f8a91ea6adcbd5071309a6edfb0b0f0e9ee0941c"
+    },
+    "ot-test/cloud/source-restore.log": {
+      "bytes": 301,
+      "sha256": "a3d54057a60e45debef5b5e276279be113f6e4e9c8f94b78353b005dfe278e93"
+    },
+    "ot-test/protocol.json": {
+      "bytes": 16896,
+      "sha256": "36400ef44c5e3ca61d21e5dc146dcb88b74b8e12290d8ab23aa4462492425b40"
+    },
+    "ot-test/rows.json.gz": {
+      "bytes": 73346,
+      "sha256": "3ef4e41ba697b2e9124aad4ec94212a2fc3cead77a89ad0e6b739f64b88a23df"
+    },
+    "ot-test/summary.json": {
+      "bytes": 11126,
+      "sha256": "daedc293dc67c822dd7b0bdd3bfe6b10531d2ebdc27c0beb50947fd729609eea"
+    },
+    "ot-test/tracking/trackers/h264_30_adaptive/data/MOT20-01.txt.gz": {
+      "bytes": 212902,
+      "sha256": "e86fe3112f84716a183f98e16a5edcf681dd31a618e09f89e234c91936444ac9"
+    },
+    "ot-test/tracking/trackers/h264_30_anchor/data/MOT20-01.txt.gz": {
+      "bytes": 214800,
+      "sha256": "8deb432452d5232535cf94acaac61b61173e4da1cc4017fdb2782643845014de"
+    },
+    "ot-test/tracking/trackers/h264_35_adaptive/data/MOT20-01.txt.gz": {
+      "bytes": 199729,
+      "sha256": "7b01529bba20b961589c20424ceb074742bdee5d0cd54e29ca7cadcf6d2dc16d"
+    },
+    "ot-test/tracking/trackers/h264_35_anchor/data/MOT20-01.txt.gz": {
+      "bytes": 207927,
+      "sha256": "c78d80e051d2ae6fb93092af10670b8f8ef160b96c5f6138d1dc2220642b4aee"
+    },
+    "ot-test/tracking/trackers/h264_40_adaptive/data/MOT20-01.txt.gz": {
+      "bytes": 187283,
+      "sha256": "9a5aab04f3f67ba305d83ded419cb95e0d2dac426ea68643435c63aba88d5e49"
+    },
+    "ot-test/tracking/trackers/h264_40_anchor/data/MOT20-01.txt.gz": {
+      "bytes": 189129,
+      "sha256": "b9d0dd7257d9521b2b97cd2e4dc7e2980714c65293a61d08f92db212f1941c59"
+    },
+    "ot-test/tracking/trackers/h264_45_adaptive/data/MOT20-01.txt.gz": {
+      "bytes": 168945,
+      "sha256": "95d940ae42ae6002073d24e74839f8fb0f709f7c2a452882ef6f35ac475c41f1"
+    },
+    "ot-test/tracking/trackers/h264_45_anchor/data/MOT20-01.txt.gz": {
+      "bytes": 172561,
+      "sha256": "27d9f5589b5f368b2bfab7022fda20782565079e017ca6d6bda5592f2e2825e7"
+    },
+    "ot-test/tracking/trackers/h265_30_adaptive/data/MOT20-01.txt.gz": {
+      "bytes": 207942,
+      "sha256": "6aad08b63c47210b02eb1e6323c42ef7c2c1ad57ad3c8b1bb94f34a20fed03f7"
+    },
+    "ot-test/tracking/trackers/h265_30_anchor/data/MOT20-01.txt.gz": {
+      "bytes": 213852,
+      "sha256": "29ca8d391b1ac89a02f3f6b7b19ed9432cf27e9c9d3db84134c2c7450f97a048"
+    },
+    "ot-test/tracking/trackers/h265_35_adaptive/data/MOT20-01.txt.gz": {
+      "bytes": 198486,
+      "sha256": "d85379e109aa1ac73ea2892f917a1409e23c93560c5bd54017aedff8aa8ccf48"
+    },
+    "ot-test/tracking/trackers/h265_35_anchor/data/MOT20-01.txt.gz": {
+      "bytes": 203041,
+      "sha256": "2781390e163758a8de73219b4fb627c3d00742f4a3c4927efece716b9955802b"
+    },
+    "ot-test/tracking/trackers/h265_40_adaptive/data/MOT20-01.txt.gz": {
+      "bytes": 182847,
+      "sha256": "897978eefc708d254f6e56c025c4552d65db936675a9777127fdef593b79faae"
+    },
+    "ot-test/tracking/trackers/h265_40_anchor/data/MOT20-01.txt.gz": {
+      "bytes": 183050,
+      "sha256": "2efc7d1eb50869ac2d87e3d7a7a9f38e202876d05df8553a82e55613bd1cf5ce"
+    },
+    "ot-test/tracking/trackers/h265_45_adaptive/data/MOT20-01.txt.gz": {
+      "bytes": 158775,
+      "sha256": "eac89380f387e6786cfa1955adc8cfce0444fb5136605b2b55467723efd0133a"
+    },
+    "ot-test/tracking/trackers/h265_45_anchor/data/MOT20-01.txt.gz": {
+      "bytes": 152911,
+      "sha256": "d7abeaf4fd6bdccba62c4be5d721c26d4b4190487de9d65aac604154858d3bf6"
+    },
+    "target-report.json": {
+      "bytes": 4533,
+      "sha256": "4dab7b1475c8d3618c9b11af54eb98ceea5fdc112c385ac97e07414299eaecb0"
+    }
+  },
+  "compressed_rows": {
+    "ar-dev-A0/rows.json.gz": {
+      "unpacked_bytes": 1020546,
+      "unpacked_sha256": "05aa4240a3b3903d30e1c35b1050735a420478f374f8d418aeb38bf504111c85"
+    },
+    "ar-dev-A1/rows.json.gz": {
+      "unpacked_bytes": 477426,
+      "unpacked_sha256": "77b3048097fcbfd1a170515cb9a4d98bdf9dce385ce13e57822c65df10e7f345"
+    },
+    "ar-dev-A2/rows.json.gz": {
+      "unpacked_bytes": 513466,
+      "unpacked_sha256": "0a1a69b4fa4f1aaecf832e9f9b11f9c4d4ccecea248978e09bab383bf5371452"
+    },
+    "od-dev-A0/rows.json.gz": {
+      "unpacked_bytes": 7267046,
+      "unpacked_sha256": "6bd751a0d438d9d13f75ab443622b31dae7a71942f25fa0715513d7481f9d6d5"
+    },
+    "od-dev-A1/rows.json.gz": {
+      "unpacked_bytes": 3820965,
+      "unpacked_sha256": "ad3002e7da70c21d86e34b23aede845769e1c917d400fa1ecb89b9afca472247"
+    },
+    "ot-dev-A1/rows.json.gz": {
+      "unpacked_bytes": 70028,
+      "unpacked_sha256": "de0bb3dc5ec43c8816421a7364f9cf04ccb7ae38f383bac16316abeae1b2552d"
+    },
+    "ot-dev-A2/rows.json.gz": {
+      "unpacked_bytes": 81539,
+      "unpacked_sha256": "2268af174e2084d5cec6e22d365432bbdcf07a91020f0a95b2760782be44e365"
+    },
+    "ar-test/rows.json.gz": {
+      "unpacked_bytes": 3918441,
+      "unpacked_sha256": "6fac507a64b1a8ecf517d183edd07bd787b7546621d9b23b4cb78b8f0a28adfd"
+    },
+    "od-test/rows.json.gz": {
+      "unpacked_bytes": 13060767,
+      "unpacked_sha256": "76cb8715c512955fda6729c88b0970d815347a5051bb46fa849f1fdeb3677084"
+    },
+    "ot-test/rows.json.gz": {
+      "unpacked_bytes": 511491,
+      "unpacked_sha256": "445385f71d77743b04e2427830736b6d0179aa19dad1d6169589ec1d96c25b02"
+    }
+  },
+  "scope": "actual paired four-QP measurements; DEV is exploratory; final policy frozen before TEST; no raw media or task weights included",
+  "caveats": [
+    "K400 provider source cadence unverified",
+    "COCO64 finite sample",
+    "MOT20 internal heldout single sequence segment; no population sequence CI",
+    "early OT16frame smoke had a GT-prefix scoring defect and is excluded from comparative tables; fixed32frameDEV and256frameTEST use exact observed prefix"
+  ]
+}

@@ -1,0 +1,7 @@
+task,codec,bd_rate_pct,valid,point_passes,threshold_confirmed,invalid_reason,ci_lo,ci_hi,bootstrap_finite_fraction
+ar,h264,-31.35066760285326,True,True,False,,,,0.986
+ar,h265,-21.221701678883925,True,True,False,,,,0.7692
+od,h264,-7.8396124194372225,True,False,False,,,,
+od,h265,,False,False,False,quality is not monotone with rate,,,
+ot,h264,,False,False,False,quality is not monotone with rate,,,
+ot,h265,-16.078360823449774,True,True,False,,,,

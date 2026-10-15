@@ -1,0 +1,415 @@
+{
+  "config": {
+    "schema": "adaptive-vcm-v34r1-1",
+    "qps": [
+      30,
+      35,
+      40,
+      45
+    ],
+    "codecs": [
+      "h264",
+      "h265"
+    ],
+    "seed": 303401,
+    "preset": "medium",
+    "fps": 25,
+    "frames": 16,
+    "temporal_stride": 2,
+    "ar_size": 128,
+    "od_size": 320,
+    "ot_size": 960,
+    "detector": "resnet50",
+    "ot_detector_size": 960,
+    "detector_detections": 300,
+    "detector_batch": 2,
+    "budget_ratio": 1.01,
+    "measured_budget_ratio": 1.0,
+    "damage_tolerance": [
+      0.05,
+      0.05,
+      0.05
+    ],
+    "source_guard_limits": [
+      0.025,
+      0.05,
+      0.05
+    ],
+    "source_shortlist": 3,
+    "extra_profiles": [
+      13,
+      14,
+      17
+    ],
+    "quality_weight": 0.05,
+    "ffmpeg_executable": ".tools/ffmpeg/ffmpeg.exe",
+    "primary_interpolator": "PCHIP",
+    "target_bd_rate_pct": -15.0,
+    "test_policy": "freeze configuration on DEV before any TEST scoring",
+    "arms": [
+      "anchor",
+      "adaptive"
+    ],
+    "guard_tasks": "target",
+    "extra_profiles_by_task": {
+      "od": [
+        13,
+        14,
+        15,
+        17
+      ],
+      "ar": [
+        13,
+        17,
+        19,
+        20
+      ],
+      "ot": [
+        13,
+        14,
+        16
+      ]
+    }
+  },
+  "config_sha256": "8fa511531ca70b16d756c33176c9343ba9f29ec5ba385848276debe438702b02",
+  "checkpoint_sha256": "c4622dbd701df88444344ec908263ccebcbbd28da40c9812c1b86749169c1577",
+  "task_models": {
+    "ar": {
+      "name": "swin3d_t",
+      "state_sha256": "1203c237fc4fee53917f852de56469dfa31d191c00ef54ee8d33461727ebd393"
+    },
+    "od": {
+      "name": "resnet50",
+      "state_sha256": "c4616e10536fb767f901700c621bb851a10259b6ed90f3af0e4596d5a6886533",
+      "transform": {
+        "min_size": [
+          320
+        ],
+        "max_size": 640
+      },
+      "ot_transform": {
+        "min_size": [
+          960
+        ],
+        "max_size": 960
+      },
+      "detections_per_img": 300
+    }
+  },
+  "manifest_sha256": "b03a4478953d72545a8be82e51f7504a0d4239250e3967e310353b7db1df0964",
+  "ffmpeg_sha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3",
+  "runtime_sha256": {
+    "adaptive_vcm/v34r1/__init__.py": "a0e7b24dd7e37990bae7c4e444b20ee9c3abe3caec01388c7c19cd3a91b50d8b",
+    "adaptive_vcm/v34r1/audit.py": "d79312d39b9b5c5c403e45d9d69cb42354edc6134eb1cd83b5795bce8637bb95",
+    "adaptive_vcm/v34r1/metrics.py": "9029c11b32ee009360f0b572b760e7787bb06a0c5b905be2e44851a26e0923c5",
+    "adaptive_vcm/v34r1/policy.py": "471fe3778d32ee59bcf27c40301f240c917f827f8f069d525e407861503157ab",
+    "adaptive_vcm/v34r1/preprocessing.py": "2c842d5ee73793801a94b4868590d7e4adc12fa6efd2781d74e4852402c18451",
+    "adaptive_vcm/v34r1/runner.py": "89f58a5ecb3f251dff25110441469c7514fdd05181e057c1e9ab8ce441d2186e",
+    "adaptive_vcm/v34r1/tasks.py": "ee58f67ef5075c97600b3f59fec6080a5488aa3464f610ed7552a12db1083b53",
+    "adaptive_vcm/v34r1/tracking.py": "9d4ec849d8ec84e28748c86306f45fdf953a430c39f1556bd84fd0843fc3f19e"
+  },
+  "expected_source_ids": [
+    "ot/MOT20-03/000001",
+    "ot/MOT20-03/000017"
+  ],
+  "split": "dev",
+  "task": "ot",
+  "limit": 2,
+  "device": "cuda",
+  "profile_family": [
+    {
+      "name": "legacy-0",
+      "coefficients": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "legacy-1",
+      "coefficients": [
+        0,
+        0,
+        0,
+        0,
+        -0.35,
+        0
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "legacy-2",
+      "coefficients": [
+        0,
+        0,
+        0,
+        0,
+        -0.65,
+        -0.15
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "legacy-3",
+      "coefficients": [
+        0,
+        0,
+        -0.25,
+        0,
+        -0.65,
+        -0.15
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "legacy-4",
+      "coefficients": [
+        0,
+        0,
+        -0.4,
+        -0.1,
+        -0.75,
+        -0.25
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "legacy-5",
+      "coefficients": [
+        -0.15,
+        0,
+        -0.25,
+        0,
+        -0.5,
+        -0.1
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "legacy-6",
+      "coefficients": [
+        -0.25,
+        0,
+        -0.4,
+        -0.1,
+        -0.65,
+        -0.2
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "legacy-7",
+      "coefficients": [
+        0.15,
+        0,
+        0,
+        0,
+        -0.5,
+        -0.1
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "legacy-8",
+      "coefficients": [
+        0.25,
+        0.1,
+        0,
+        0,
+        -0.65,
+        -0.15
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "legacy-9",
+      "coefficients": [
+        0,
+        0,
+        0.15,
+        0,
+        -0.5,
+        -0.1
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "legacy-10",
+      "coefficients": [
+        0.1,
+        0,
+        0.1,
+        0,
+        -0.35,
+        0
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "legacy-11",
+      "coefficients": [
+        -0.35,
+        -0.1,
+        -0.35,
+        -0.1,
+        -0.35,
+        -0.1
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "legacy-12",
+      "coefficients": [
+        0.15,
+        0,
+        0.15,
+        0,
+        0,
+        0
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "protected-core-bg-lowpass",
+      "coefficients": [
+        0,
+        0,
+        0,
+        0,
+        -1,
+        -1
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "protected-core-bg-wide",
+      "coefficients": [
+        0,
+        0,
+        -0.25,
+        0,
+        -1,
+        -1
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 3.2,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "protected-core-bg-coarse",
+      "coefficients": [
+        0,
+        0,
+        -0.35,
+        -0.1,
+        -1,
+        -1
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 4.8,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "mild-object-wide-background",
+      "coefficients": [
+        -0.1,
+        0,
+        -0.35,
+        -0.1,
+        -1,
+        -1
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 3.2,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "uniform-moderate",
+      "coefficients": [
+        -0.5,
+        -0.25,
+        -0.5,
+        -0.25,
+        -0.5,
+        -0.25
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "protected-core-chroma",
+      "coefficients": [
+        0,
+        0,
+        -0.2,
+        0,
+        -0.75,
+        -0.25
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 0.75
+    },
+    {
+      "name": "uniform-soft",
+      "coefficients": [
+        -0.75,
+        -0.4,
+        -0.75,
+        -0.4,
+        -0.75,
+        -0.4
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "uniform-lowpass-1p2",
+      "coefficients": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.2,
+      "background_chroma": 1.0
+    }
+  ]
+}

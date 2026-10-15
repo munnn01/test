@@ -1,0 +1,133 @@
+{
+  "task": "od",
+  "grid_audit": {
+    "source_count": 64,
+    "paired_rows": 1024,
+    "qps": [
+      30,
+      35,
+      40,
+      45
+    ],
+    "codecs": [
+      "h264",
+      "h265"
+    ],
+    "arms": [
+      "anchor",
+      "adaptive"
+    ],
+    "complete": true
+  },
+  "curves": {
+    "h264": {
+      "anchor": {
+        "rate": [
+          0.75884765625,
+          0.462957763671875,
+          0.28474365234375004,
+          0.17766845703125
+        ],
+        "quality": [
+          0.26000375071215914,
+          0.24809947869486748,
+          0.23939637574833078,
+          0.19244049411236108
+        ]
+      },
+      "adaptive": {
+        "rate": [
+          0.5656909179687499,
+          0.360618896484375,
+          0.227042236328125,
+          0.14911865234375
+        ],
+        "quality": [
+          0.258449680697027,
+          0.2404484386128917,
+          0.23150955585994215,
+          0.19841985924241465
+        ]
+      }
+    },
+    "h265": {
+      "anchor": {
+        "rate": [
+          0.796346435546875,
+          0.5450146484375,
+          0.38972167968750004,
+          0.29468627929687496
+        ],
+        "quality": [
+          0.2500480100058006,
+          0.25598876446568114,
+          0.24145686450474818,
+          0.19588308429472404
+        ]
+      },
+      "adaptive": {
+        "rate": [
+          0.6136633300781249,
+          0.44114257812499996,
+          0.341417236328125,
+          0.27199462890625004
+        ],
+        "quality": [
+          0.2537805111659855,
+          0.253743018104572,
+          0.22519105926150015,
+          0.1911234026265936
+        ]
+      }
+    }
+  },
+  "comparisons": {
+    "h264": {
+      "adaptive": {
+        "qps": [
+          30,
+          35,
+          40,
+          45
+        ],
+        "primary_interpolator": "PCHIP",
+        "threshold_pct": -15.0,
+        "valid": true,
+        "pchip_bd_rate_pct": -7.8396124194372225,
+        "point_passes": false,
+        "threshold_confirmed": false,
+        "ci": null,
+        "invalid_reason": null,
+        "common_quality_interval": [
+          0.19841985924241465,
+          0.258449680697027
+        ]
+      }
+    },
+    "h265": {
+      "adaptive": {
+        "qps": [
+          30,
+          35,
+          40,
+          45
+        ],
+        "primary_interpolator": "PCHIP",
+        "threshold_pct": -15.0,
+        "valid": false,
+        "pchip_bd_rate_pct": null,
+        "point_passes": false,
+        "threshold_confirmed": false,
+        "ci": null,
+        "invalid_reason": "quality is not monotone with rate"
+      }
+    }
+  },
+  "official_tracking_metrics": {},
+  "scope": "measured finite-sample task metrics; no confidence claim without independent-unit bootstrap",
+  "runtime": {
+    "wall_seconds": 260.67019622500004,
+    "peak_torch_cuda_allocated_bytes": 424421376,
+    "timing_scope": "includes sender source preparation, proposal/guard, all actual codec trials and receiver task scoring; model/data load excluded"
+  }
+}

@@ -15,7 +15,7 @@ def main():
     args=p.parse_args()
     reports={s['task']:s for s in [json.loads((run/'summary.json').read_text(encoding='utf-8')) for run in args.runs]}
     plt.rcParams.update({'font.size':10,'font.family':'DejaVu Sans','pdf.fonttype':42,'svg.fonttype':'none'})
-    fig,axes=plt.subplots(3,2,figsize=(9,10),layout='constrained')
+    fig,axes=plt.subplots(3,2,figsize=(9,10),layout='constrained',sharex='row',sharey='row')
     metrics={'ar':'Top-1 accuracy','od':'COCO AP','ot':'TrackEval HOTA / 100'}
     for row,task in enumerate(('ar','od','ot')):
         for column,codec in enumerate(('h264','h265')):
@@ -28,7 +28,9 @@ def main():
                         ax.annotate(str(qp),(x,y),xytext=(4,5),textcoords='offset points',fontsize=8,color=color)
             result=report['comparisons'][codec]['adaptive']
             status=f"BD-rate {result['pchip_bd_rate_pct']:.2f}%" if result['valid'] else 'BD-rate undefined: '+result['invalid_reason']
-            ax.set_title(task.upper()+' / '+codec.upper()+'\n'+status,fontsize=10)
+            count=report['grid_audit']['source_count']
+            unit={'ar':'videos','od':'images','ot':'windows'}[task]
+            ax.set_title(task.upper()+' / '+codec.upper()+f' ({count} {unit})'+'\n'+status,fontsize=10)
             ax.set_xlabel('Packet bits per canonical RGB pixel')
             ax.set_ylabel(metrics[task]); ax.grid(alpha=.2); ax.legend(fontsize=8,loc='best')
             ax.margins(x=.12,y=.17)

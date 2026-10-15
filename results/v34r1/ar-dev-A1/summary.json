@@ -1,0 +1,128 @@
+{
+  "task": "ar",
+  "grid_audit": {
+    "source_count": 16,
+    "paired_rows": 256,
+    "qps": [
+      30,
+      35,
+      40,
+      45
+    ],
+    "codecs": [
+      "h264",
+      "h265"
+    ],
+    "arms": [
+      "anchor",
+      "adaptive"
+    ],
+    "complete": true
+  },
+  "curves": {
+    "h264": {
+      "anchor": {
+        "rate": [
+          0.3095703125,
+          0.17548370361328125,
+          0.10589790344238281,
+          0.069732666015625
+        ],
+        "quality": [
+          0.8125,
+          0.6875,
+          0.6875,
+          0.5
+        ]
+      },
+      "adaptive": {
+        "rate": [
+          0.21885108947753906,
+          0.1307964324951172,
+          0.09212303161621094,
+          0.06508636474609375
+        ],
+        "quality": [
+          0.8125,
+          0.625,
+          0.6875,
+          0.4375
+        ]
+      }
+    },
+    "h265": {
+      "anchor": {
+        "rate": [
+          0.3606376647949219,
+          0.22264862060546875,
+          0.15099525451660156,
+          0.11292648315429688
+        ],
+        "quality": [
+          0.75,
+          0.625,
+          0.5625,
+          0.25
+        ]
+      },
+      "adaptive": {
+        "rate": [
+          0.2421588897705078,
+          0.1874217987060547,
+          0.1313037872314453,
+          0.1076507568359375
+        ],
+        "quality": [
+          0.6875,
+          0.625,
+          0.5625,
+          0.3125
+        ]
+      }
+    }
+  },
+  "comparisons": {
+    "h264": {
+      "adaptive": {
+        "qps": [
+          30,
+          35,
+          40,
+          45
+        ],
+        "primary_interpolator": "PCHIP",
+        "threshold_pct": -15.0,
+        "valid": false,
+        "pchip_bd_rate_pct": null,
+        "point_passes": false,
+        "threshold_confirmed": false,
+        "ci": null,
+        "invalid_reason": "quality is not monotone with rate"
+      }
+    },
+    "h265": {
+      "adaptive": {
+        "qps": [
+          30,
+          35,
+          40,
+          45
+        ],
+        "primary_interpolator": "PCHIP",
+        "threshold_pct": -15.0,
+        "valid": true,
+        "pchip_bd_rate_pct": -11.611595329843809,
+        "point_passes": false,
+        "threshold_confirmed": false,
+        "ci": null,
+        "invalid_reason": null,
+        "common_quality_interval": [
+          0.3125,
+          0.6875
+        ]
+      }
+    }
+  },
+  "official_tracking_metrics": {},
+  "scope": "measured finite-sample task metrics; no confidence claim without independent-unit bootstrap"
+}

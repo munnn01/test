@@ -1,4 +1,4 @@
-> **Nhánh cải tiến v34r1:** dùng đúng 4 QP30/35/40/45 cho AR/OD/OT. Xem [giao thức, kiểm chứng và giới hạn mới](docs/V34R1.md). Các số liệu v34 lịch sử bên dưới dùng giao thức cũ và không phải kết quả v34r1.
+> **v34r1:** TEST mới đã chạy trên Kaggle với đúng 4 QP 30/35/40/45. AR đạt BD-rate −31,35%/−21,22%; OD −7,84%/không hợp lệ; OT không hợp lệ/−16,08% (H.264/H.265). **Mục tiêu cả sáu endpoint dưới −15% chưa đạt; chưa xác nhận đồng thời bằng CI.** Xem [pipeline của ba tác vụ](docs/V34R1-PIPELINE.md), [kết quả và giới hạn](docs/V34R1-REPORT.md), [giao thức](docs/V34R1.md). Các số liệu v34 lịch sử bên dưới dùng giao thức cũ, khác lượt v34r1 này.
 
 # V34-R1 — Adaptive preprocessing for Video Swin
 

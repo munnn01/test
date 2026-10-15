@@ -1,0 +1,12 @@
+AR frozen source JPEGs 256 / 3053
+AR frozen source JPEGs 512 / 3053
+AR frozen source JPEGs 768 / 3053
+AR frozen source JPEGs 1024 / 3053
+AR frozen source JPEGs 1280 / 3053
+AR frozen source JPEGs 1536 / 3053
+AR frozen source JPEGs 1792 / 3053
+AR frozen source JPEGs 2048 / 3053
+AR frozen source JPEGs 2304 / 3053
+AR frozen source JPEGs 2560 / 3053
+AR frozen source JPEGs 2816 / 3053
+{"task": "ar", "records": 128, "manifest_sha256": "08bce7123f7289e8a5722c11b7ea74b63e4cb54ce2be060e77a5c9998dab9352", "source_hashes_verified": true, "replacement": false}

@@ -1,0 +1,180 @@
+[{"stream_name":"stdout","time":3.082875273,"data":"RUN /usr/bin/python3 -m pip install -q --no-deps numpy==2.1.3 scipy==1.16.3 opencv-python==4.12.0.88 opencv-python-headless==4.12.0.88 supervision==0.27.0 pycocotools==2.0.11 imageio-ffmpeg==0.6.0 tabulate==0.9.0 pytest==9.1.1\n"}
+,{"stream_name":"stdout","time":7.720488587,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.0/67.0 MB 26.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":8.601291119999999,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.0/54.0 MB 25.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":8.638530799,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 212.4/212.4 kB 10.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":8.680492925,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 386.5/386.5 kB 15.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":39.705558067,"data":"RUN git clone -q https://github.com/JonathonLuiten/TrackEval.git /kaggle/temp/adaptive_preprocessing/data/TrackEval\n"}
+,{"stream_name":"stdout","time":40.221207721,"data":"RUN git -C /kaggle/temp/adaptive_preprocessing/data/TrackEval checkout -q 12c8791b303e0a0b50f753af204249e622d0281a\n"}
+,{"stream_name":"stdout","time":40.22890647,"data":"RUN /usr/bin/python3 -m pytest tests -q\n"}
+,{"stream_name":"stdout","time":54.056330219,"data":"........................................................................ [ 96%]\n"}
+,{"stream_name":"stdout","time":54.295550124,"data":"...                                                                      [100%]\n"}
+,{"stream_name":"stdout","time":54.295601574,"data":"=============================== warnings summary ===============================\n"}
+,{"stream_name":"stdout","time":54.29561003,"data":"tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt\n"}
+,{"stream_name":"stdout","time":54.295615795,"data":"  PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'\n"}
+,{"stream_name":"stdout","time":54.29562069,"data":"\n"}
+,{"stream_name":"stdout","time":54.295625269,"data":"tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt\n"}
+,{"stream_name":"stdout","time":54.29562983,"data":"tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt\n"}
+,{"stream_name":"stdout","time":54.295634244,"data":"tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt\n"}
+,{"stream_name":"stdout","time":54.295638656,"data":"tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt\n"}
+,{"stream_name":"stdout","time":54.29564305,"data":"tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt\n"}
+,{"stream_name":"stdout","time":54.295649059,"data":"tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt\n"}
+,{"stream_name":"stdout","time":54.295653447,"data":"  PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'\n"}
+,{"stream_name":"stdout","time":54.295659363,"data":"\n"}
+,{"stream_name":"stdout","time":54.295663705,"data":"tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt\n"}
+,{"stream_name":"stdout","time":54.295668639,"data":"tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt\n"}
+,{"stream_name":"stdout","time":54.295702774,"data":"tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt\n"}
+,{"stream_name":"stdout","time":54.295710225,"data":"tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt\n"}
+,{"stream_name":"stdout","time":54.295714558,"data":"tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt\n"}
+,{"stream_name":"stdout","time":54.295718828,"data":"tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt\n"}
+,{"stream_name":"stdout","time":54.295723058,"data":"  PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'\n"}
+,{"stream_name":"stdout","time":54.295727137,"data":"\n"}
+,{"stream_name":"stdout","time":54.295730361,"data":"tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt\n"}
+,{"stream_name":"stdout","time":54.295733891,"data":"  PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'\n"}
+,{"stream_name":"stdout","time":54.295737351,"data":"\n"}
+,{"stream_name":"stdout","time":54.295740505,"data":"-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n"}
+,{"stream_name":"stdout","time":54.295756504,"data":"75 passed, 14 warnings in 11.80s\n"}
+,{"stream_name":"stdout","time":59.835977314,"data":"RUN /usr/bin/python3 scripts/reproduce_results.py --verify-only\n"}
+,{"stream_name":"stdout","time":61.911649572,"data":"Verified exact runtime, protocol, annotations/exclusions, 3 checkpoints and 4 complete paired-row archives.\n"}
+,{"stream_name":"stdout","time":61.934419057,"data":"RUN /usr/bin/python3 scripts/prepare_v34r1_cloud_data.py --task ot\n"}
+,{"stream_name":"stdout","time":68.621182697,"data":"MOT20 verified members 64 / 258\n"}
+,{"stream_name":"stdout","time":70.05252896,"data":"MOT20 verified members 128 / 258\n"}
+,{"stream_name":"stdout","time":71.538271562,"data":"MOT20 verified members 192 / 258\n"}
+,{"stream_name":"stdout","time":72.856239391,"data":"MOT20 verified members 256 / 258\n"}
+,{"stream_name":"stdout","time":73.236824414,"data":"{\"task\": \"ot\", \"records\": 1, \"manifest_sha256\": \"08bce7123f7289e8a5722c11b7ea74b63e4cb54ce2be060e77a5c9998dab9352\", \"source_hashes_verified\": true, \"replacement\": false}\n"}
+,{"stream_name":"stdout","time":73.271655593,"data":"RUN /usr/bin/python3 -u -m adaptive_vcm.v34r1.runner --manifest data/v34r1/validation_manifest.json --config configs/v34r1-kaggle.json --task ot --split test --out /kaggle/working/ot-test\n"}
+,{"stream_name":"stdout","time":77.017964805,"data":"Downloading: \"https://download.pytorch.org/models/fasterrcnn_resnet50_fpn_coco-258fb6c6.pth\" to /kaggle/temp/adaptive_preprocessing/data/torch/hub/checkpoints/fasterrcnn_resnet50_fpn_coco-258fb6c6.pth\n"}
+,{"stream_name":"stdout","time":77.139305079,"data":"\n"}
+,{"stream_name":"stdout","time":77.241020943,"data":"  0%|          | 0.00/160M [00:00\u003c?, ?B/s]\n"}
+,{"stream_name":"stdout","time":77.341218074,"data":"  6%|▌         | 9.12M/160M [00:00\u003c00:01, 94.3MB/s]\n"}
+,{"stream_name":"stdout","time":77.441742941,"data":" 22%|██▏       | 34.6M/160M [00:00\u003c00:00, 195MB/s] \n"}
+,{"stream_name":"stdout","time":77.542107595,"data":" 38%|███▊      | 60.6M/160M [00:00\u003c00:00, 230MB/s]\n"}
+,{"stream_name":"stdout","time":77.64230748599999,"data":" 54%|█████▍    | 86.2M/160M [00:00\u003c00:00, 245MB/s]\n"}
+,{"stream_name":"stdout","time":77.742431821,"data":" 70%|██████▉   | 112M/160M [00:00\u003c00:00, 253MB/s] \n"}
+,{"stream_name":"stdout","time":77.829305719,"data":" 86%|████████▌ | 137M/160M [00:00\u003c00:00, 258MB/s]\n"}
+,{"stream_name":"stdout","time":77.829344062,"data":"100%|██████████| 160M/160M [00:00\u003c00:00, 243MB/s]\n"}
+,{"stream_name":"stdout","time":78.521122157,"data":"Downloading: \"https://download.pytorch.org/models/swin3d_t-7615ae03.pth\" to /kaggle/temp/adaptive_preprocessing/data/torch/hub/checkpoints/swin3d_t-7615ae03.pth\n"}
+,{"stream_name":"stdout","time":78.591440208,"data":"\n"}
+,{"stream_name":"stdout","time":78.691800119,"data":"  0%|          | 0.00/122M [00:00\u003c?, ?B/s]\n"}
+,{"stream_name":"stdout","time":78.792023706,"data":"  8%|▊         | 10.2M/122M [00:00\u003c00:01, 107MB/s]\n"}
+,{"stream_name":"stdout","time":78.892431618,"data":" 27%|██▋       | 32.9M/122M [00:00\u003c00:00, 184MB/s]\n"}
+,{"stream_name":"stdout","time":78.992855518,"data":" 49%|████▊     | 59.0M/122M [00:00\u003c00:00, 224MB/s]\n"}
+,{"stream_name":"stdout","time":79.093018524,"data":" 69%|██████▉   | 84.0M/122M [00:00\u003c00:00, 239MB/s]\n"}
+,{"stream_name":"stdout","time":79.137985041,"data":" 90%|█████████ | 110M/122M [00:00\u003c00:00, 249MB/s] \n"}
+,{"stream_name":"stdout","time":79.138008087,"data":"100%|██████████| 122M/122M [00:00\u003c00:00, 233MB/s]\n"}
+,{"stream_name":"stdout","time":250.223834236,"data":"OT test: 1 sources/windows, 16 paired rows, 169.7s\n"}
+,{"stream_name":"stdout","time":416.116775776,"data":"OT test: 2 sources/windows, 32 paired rows, 335.6s\n"}
+,{"stream_name":"stdout","time":564.602133215,"data":"OT test: 3 sources/windows, 48 paired rows, 484.0s\n"}
+,{"stream_name":"stdout","time":705.820602566,"data":"OT test: 4 sources/windows, 64 paired rows, 625.3s\n"}
+,{"stream_name":"stdout","time":847.199766181,"data":"OT test: 5 sources/windows, 80 paired rows, 766.6s\n"}
+,{"stream_name":"stdout","time":995.442978035,"data":"OT test: 6 sources/windows, 96 paired rows, 914.9s\n"}
+,{"stream_name":"stdout","time":1153.209845479,"data":"OT test: 7 sources/windows, 112 paired rows, 1072.7s\n"}
+,{"stream_name":"stdout","time":1313.13492983,"data":"OT test: 8 sources/windows, 128 paired rows, 1232.6s\n"}
+,{"stream_name":"stdout","time":1464.085921079,"data":"OT test: 9 sources/windows, 144 paired rows, 1383.5s\n"}
+,{"stream_name":"stdout","time":1614.003204524,"data":"OT test: 10 sources/windows, 160 paired rows, 1533.4s\n"}
+,{"stream_name":"stdout","time":1767.006844929,"data":"OT test: 11 sources/windows, 176 paired rows, 1686.4s\n"}
+,{"stream_name":"stdout","time":1920.910492491,"data":"OT test: 12 sources/windows, 192 paired rows, 1840.4s\n"}
+,{"stream_name":"stdout","time":2072.537544684,"data":"OT test: 13 sources/windows, 208 paired rows, 1992.0s\n"}
+,{"stream_name":"stdout","time":2234.403940318,"data":"OT test: 14 sources/windows, 224 paired rows, 2153.8s\n"}
+,{"stream_name":"stdout","time":2396.456858772,"data":"OT test: 15 sources/windows, 240 paired rows, 2315.9s\n"}
+,{"stream_name":"stdout","time":2552.371526404,"data":"OT test: 16 sources/windows, 256 paired rows, 2471.8s\n"}
+,{"stream_name":"stdout","time":2553.17352511,"data":"\n"}
+,{"stream_name":"stdout","time":2553.173566227,"data":"Evaluating 16 tracker(s) on 1 sequence(s) for 1 class(es) on MotChallenge2DBox dataset using the following metrics: HOTA, CLEAR, Identity, Count\n"}
+,{"stream_name":"stdout","time":2553.173571951,"data":"\n"}
+,{"stream_name":"stdout","time":2553.173576303,"data":"\n"}
+,{"stream_name":"stdout","time":2553.173581061,"data":"Evaluating h264_30_adaptive\n"}
+,{"stream_name":"stdout","time":2553.17358587,"data":"\n"}
+,{"stream_name":"stdout","time":2553.499620841,"data":"\n"}
+,{"stream_name":"stdout","time":2553.499669155,"data":"Evaluating h264_30_anchor\n"}
+,{"stream_name":"stdout","time":2553.49967454,"data":"\n"}
+,{"stream_name":"stdout","time":2553.81611378,"data":"\n"}
+,{"stream_name":"stdout","time":2553.816136905,"data":"Evaluating h264_35_adaptive\n"}
+,{"stream_name":"stdout","time":2553.816141234,"data":"\n"}
+,{"stream_name":"stdout","time":2554.135630188,"data":"\n"}
+,{"stream_name":"stdout","time":2554.135654051,"data":"Evaluating h264_35_anchor\n"}
+,{"stream_name":"stdout","time":2554.135673659,"data":"\n"}
+,{"stream_name":"stdout","time":2554.471606907,"data":"\n"}
+,{"stream_name":"stdout","time":2554.471634014,"data":"Evaluating h264_40_adaptive\n"}
+,{"stream_name":"stdout","time":2554.471639211,"data":"\n"}
+,{"stream_name":"stdout","time":2554.771455132,"data":"\n"}
+,{"stream_name":"stdout","time":2554.771500537,"data":"Evaluating h264_40_anchor\n"}
+,{"stream_name":"stdout","time":2554.771505897,"data":"\n"}
+,{"stream_name":"stdout","time":2555.074044236,"data":"\n"}
+,{"stream_name":"stdout","time":2555.074073374,"data":"Evaluating h264_45_adaptive\n"}
+,{"stream_name":"stdout","time":2555.074078755,"data":"\n"}
+,{"stream_name":"stdout","time":2555.37093375,"data":"\n"}
+,{"stream_name":"stdout","time":2555.370968381,"data":"Evaluating h264_45_anchor\n"}
+,{"stream_name":"stdout","time":2555.37097375,"data":"\n"}
+,{"stream_name":"stdout","time":2555.665704951,"data":"\n"}
+,{"stream_name":"stdout","time":2555.665736621,"data":"Evaluating h265_30_adaptive\n"}
+,{"stream_name":"stdout","time":2555.665746228,"data":"\n"}
+,{"stream_name":"stdout","time":2556.124805921,"data":"\n"}
+,{"stream_name":"stdout","time":2556.124839232,"data":"Evaluating h265_30_anchor\n"}
+,{"stream_name":"stdout","time":2556.124842742,"data":"\n"}
+,{"stream_name":"stdout","time":2556.436844887,"data":"\n"}
+,{"stream_name":"stdout","time":2556.436875692,"data":"Evaluating h265_35_adaptive\n"}
+,{"stream_name":"stdout","time":2556.436880823,"data":"\n"}
+,{"stream_name":"stdout","time":2556.744031874,"data":"\n"}
+,{"stream_name":"stdout","time":2556.744062866,"data":"Evaluating h265_35_anchor\n"}
+,{"stream_name":"stdout","time":2556.744068032,"data":"\n"}
+,{"stream_name":"stdout","time":2557.053323871,"data":"\n"}
+,{"stream_name":"stdout","time":2557.053369917,"data":"Evaluating h265_40_adaptive\n"}
+,{"stream_name":"stdout","time":2557.053375397,"data":"\n"}
+,{"stream_name":"stdout","time":2557.358583392,"data":"\n"}
+,{"stream_name":"stdout","time":2557.358614792,"data":"Evaluating h265_40_anchor\n"}
+,{"stream_name":"stdout","time":2557.35862008,"data":"\n"}
+,{"stream_name":"stdout","time":2557.659990553,"data":"\n"}
+,{"stream_name":"stdout","time":2557.66002689,"data":"Evaluating h265_45_adaptive\n"}
+,{"stream_name":"stdout","time":2557.660032526,"data":"\n"}
+,{"stream_name":"stdout","time":2557.953038713,"data":"\n"}
+,{"stream_name":"stdout","time":2557.953082826,"data":"Evaluating h265_45_anchor\n"}
+,{"stream_name":"stdout","time":2557.953087781,"data":"\n"}
+,{"stream_name":"stdout","time":2558.283889375,"data":"{\n"}
+,{"stream_name":"stdout","time":2558.28391587,"data":"  \"h264\": {\n"}
+,{"stream_name":"stdout","time":2558.283920044,"data":"    \"adaptive\": {\n"}
+,{"stream_name":"stdout","time":2558.283923512,"data":"      \"qps\": [\n"}
+,{"stream_name":"stdout","time":2558.283927209,"data":"        30,\n"}
+,{"stream_name":"stdout","time":2558.28393062,"data":"        35,\n"}
+,{"stream_name":"stdout","time":2558.283942327,"data":"        40,\n"}
+,{"stream_name":"stdout","time":2558.28394576,"data":"        45\n"}
+,{"stream_name":"stdout","time":2558.283949047,"data":"      ],\n"}
+,{"stream_name":"stdout","time":2558.283952608,"data":"      \"primary_interpolator\": \"PCHIP\",\n"}
+,{"stream_name":"stdout","time":2558.283956262,"data":"      \"threshold_pct\": -15.0,\n"}
+,{"stream_name":"stdout","time":2558.283959633,"data":"      \"valid\": false,\n"}
+,{"stream_name":"stdout","time":2558.283963298,"data":"      \"pchip_bd_rate_pct\": null,\n"}
+,{"stream_name":"stdout","time":2558.283966947,"data":"      \"point_passes\": false,\n"}
+,{"stream_name":"stdout","time":2558.2839703,"data":"      \"threshold_confirmed\": false,\n"}
+,{"stream_name":"stdout","time":2558.283989495,"data":"      \"ci\": null,\n"}
+,{"stream_name":"stdout","time":2558.284004521,"data":"      \"invalid_reason\": \"quality is not monotone with rate\"\n"}
+,{"stream_name":"stdout","time":2558.28400979,"data":"    }\n"}
+,{"stream_name":"stdout","time":2558.284013742,"data":"  },\n"}
+,{"stream_name":"stdout","time":2558.284017852,"data":"  \"h265\": {\n"}
+,{"stream_name":"stdout","time":2558.284021688,"data":"    \"adaptive\": {\n"}
+,{"stream_name":"stdout","time":2558.284025775,"data":"      \"qps\": [\n"}
+,{"stream_name":"stdout","time":2558.284029507,"data":"        30,\n"}
+,{"stream_name":"stdout","time":2558.284033551,"data":"        35,\n"}
+,{"stream_name":"stdout","time":2558.284037537,"data":"        40,\n"}
+,{"stream_name":"stdout","time":2558.284041288,"data":"        45\n"}
+,{"stream_name":"stdout","time":2558.284089879,"data":"      ],\n"}
+,{"stream_name":"stdout","time":2558.284096874,"data":"      \"primary_interpolator\": \"PCHIP\",\n"}
+,{"stream_name":"stdout","time":2558.284100681,"data":"      \"threshold_pct\": -15.0,\n"}
+,{"stream_name":"stdout","time":2558.284104125,"data":"      \"valid\": true,\n"}
+,{"stream_name":"stdout","time":2558.284107581,"data":"      \"pchip_bd_rate_pct\": -16.078360823449774,\n"}
+,{"stream_name":"stdout","time":2558.284113123,"data":"      \"point_passes\": true,\n"}
+,{"stream_name":"stdout","time":2558.284116698,"data":"      \"threshold_confirmed\": false,\n"}
+,{"stream_name":"stdout","time":2558.284121751,"data":"      \"ci\": null,\n"}
+,{"stream_name":"stdout","time":2558.284125567,"data":"      \"invalid_reason\": null,\n"}
+,{"stream_name":"stdout","time":2558.284129477,"data":"      \"common_quality_interval\": [\n"}
+,{"stream_name":"stdout","time":2558.284133536,"data":"        0.24728719425431853,\n"}
+,{"stream_name":"stdout","time":2558.284138135,"data":"        0.37565542275857866\n"}
+,{"stream_name":"stdout","time":2558.284141894,"data":"      ]\n"}
+,{"stream_name":"stdout","time":2558.284146093,"data":"    }\n"}
+,{"stream_name":"stdout","time":2558.284149695,"data":"  }\n"}
+,{"stream_name":"stdout","time":2558.284153814,"data":"}\n"}
+,{"stream_name":"stdout","time":2560.404820271,"data":"CLOUD_STATUS {\"task\": \"ot\", \"complete\": true, \"commit\": \"5a369016e4214b8339f89768534fed19cbcf194e\", \"wall_seconds\": 2556.162687063217}\n"}
+,{"stream_name":"stderr","time":2563.151878847,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":2563.151903804,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":2563.382753525,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":2563.382776852,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":2564.149111732,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":2565.073073998,"data":"[NbConvertApp] Writing 276087 bytes to __results__.html\n"}
+]

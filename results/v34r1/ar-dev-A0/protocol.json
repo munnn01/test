@@ -1,0 +1,348 @@
+{
+  "config": {
+    "schema": "adaptive-vcm-v34r1-1",
+    "qps": [
+      30,
+      35,
+      40,
+      45
+    ],
+    "codecs": [
+      "h264",
+      "h265"
+    ],
+    "seed": 303401,
+    "preset": "medium",
+    "fps": 25,
+    "frames": 16,
+    "temporal_stride": 2,
+    "ar_size": 128,
+    "od_size": 320,
+    "ot_size": 960,
+    "detector": "resnet50",
+    "ot_detector_size": 960,
+    "detector_detections": 300,
+    "detector_batch": 1,
+    "budget_ratio": 1.01,
+    "measured_budget_ratio": 1.0,
+    "damage_tolerance": [
+      0.05,
+      0.05,
+      0.05
+    ],
+    "source_guard_limits": [
+      0.025,
+      0.05,
+      0.05
+    ],
+    "source_shortlist": 3,
+    "extra_profiles": [
+      13,
+      14,
+      17
+    ],
+    "quality_weight": 0.05,
+    "ffmpeg_executable": ".tools/ffmpeg/ffmpeg.exe",
+    "primary_interpolator": "PCHIP",
+    "target_bd_rate_pct": -15.0,
+    "test_policy": "freeze configuration on DEV before any TEST scoring"
+  },
+  "config_sha256": "85ce479264c85011ca86025bbb3b83c7d2486aed3b948336d8c1bcffadec6101",
+  "checkpoint_sha256": "c4622dbd701df88444344ec908263ccebcbbd28da40c9812c1b86749169c1577",
+  "task_models": {
+    "ar": {
+      "name": "swin3d_t",
+      "state_sha256": "1203c237fc4fee53917f852de56469dfa31d191c00ef54ee8d33461727ebd393"
+    },
+    "od": {
+      "name": "resnet50",
+      "state_sha256": "c4616e10536fb767f901700c621bb851a10259b6ed90f3af0e4596d5a6886533",
+      "transform": {
+        "min_size": [
+          320
+        ],
+        "max_size": 640
+      },
+      "ot_transform": {
+        "min_size": [
+          960
+        ],
+        "max_size": 960
+      },
+      "detections_per_img": 300
+    }
+  },
+  "manifest_sha256": "8158628c0050f8241dfe6939702f6dc3485e5d7119b662a83cd0a959bc313cad",
+  "split": "dev",
+  "task": "ar",
+  "limit": null,
+  "device": "cuda",
+  "profile_family": [
+    {
+      "name": "legacy-0",
+      "coefficients": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "legacy-1",
+      "coefficients": [
+        0,
+        0,
+        0,
+        0,
+        -0.35,
+        0
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "legacy-2",
+      "coefficients": [
+        0,
+        0,
+        0,
+        0,
+        -0.65,
+        -0.15
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "legacy-3",
+      "coefficients": [
+        0,
+        0,
+        -0.25,
+        0,
+        -0.65,
+        -0.15
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "legacy-4",
+      "coefficients": [
+        0,
+        0,
+        -0.4,
+        -0.1,
+        -0.75,
+        -0.25
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "legacy-5",
+      "coefficients": [
+        -0.15,
+        0,
+        -0.25,
+        0,
+        -0.5,
+        -0.1
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "legacy-6",
+      "coefficients": [
+        -0.25,
+        0,
+        -0.4,
+        -0.1,
+        -0.65,
+        -0.2
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "legacy-7",
+      "coefficients": [
+        0.15,
+        0,
+        0,
+        0,
+        -0.5,
+        -0.1
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "legacy-8",
+      "coefficients": [
+        0.25,
+        0.1,
+        0,
+        0,
+        -0.65,
+        -0.15
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "legacy-9",
+      "coefficients": [
+        0,
+        0,
+        0.15,
+        0,
+        -0.5,
+        -0.1
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "legacy-10",
+      "coefficients": [
+        0.1,
+        0,
+        0.1,
+        0,
+        -0.35,
+        0
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "legacy-11",
+      "coefficients": [
+        -0.35,
+        -0.1,
+        -0.35,
+        -0.1,
+        -0.35,
+        -0.1
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "legacy-12",
+      "coefficients": [
+        0.15,
+        0,
+        0.15,
+        0,
+        0,
+        0
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "protected-core-bg-lowpass",
+      "coefficients": [
+        0,
+        0,
+        0,
+        0,
+        -1,
+        -1
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "protected-core-bg-wide",
+      "coefficients": [
+        0,
+        0,
+        -0.25,
+        0,
+        -1,
+        -1
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 3.2,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "protected-core-bg-coarse",
+      "coefficients": [
+        0,
+        0,
+        -0.35,
+        -0.1,
+        -1,
+        -1
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 4.8,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "mild-object-wide-background",
+      "coefficients": [
+        -0.1,
+        0,
+        -0.35,
+        -0.1,
+        -1,
+        -1
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 3.2,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "uniform-moderate",
+      "coefficients": [
+        -0.5,
+        -0.25,
+        -0.5,
+        -0.25,
+        -0.5,
+        -0.25
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 1.0
+    },
+    {
+      "name": "protected-core-chroma",
+      "coefficients": [
+        0,
+        0,
+        -0.2,
+        0,
+        -0.75,
+        -0.25
+      ],
+      "sigma_high": 0.8,
+      "sigma_mid": 1.6,
+      "background_chroma": 0.75
+    }
+  ]
+}

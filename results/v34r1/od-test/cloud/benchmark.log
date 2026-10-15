@@ -1,0 +1,127 @@
+Downloading: "https://download.pytorch.org/models/fasterrcnn_resnet50_fpn_coco-258fb6c6.pth" to /kaggle/temp/adaptive_preprocessing/data/torch/hub/checkpoints/fasterrcnn_resnet50_fpn_coco-258fb6c6.pth
+
+  0%|          | 0.00/160M [00:00<?, ?B/s]
+  6%|▌         | 9.75M/160M [00:00<00:01, 102MB/s]
+ 21%|██        | 32.9M/160M [00:00<00:00, 184MB/s]
+ 35%|███▍      | 55.6M/160M [00:00<00:00, 208MB/s]
+ 49%|████▉     | 78.9M/160M [00:00<00:00, 222MB/s]
+ 64%|██████▍   | 102M/160M [00:00<00:00, 229MB/s] 
+ 78%|███████▊  | 125M/160M [00:00<00:00, 233MB/s]
+ 92%|█████████▏| 148M/160M [00:00<00:00, 234MB/s]
+100%|██████████| 160M/160M [00:00<00:00, 222MB/s]
+Downloading: "https://download.pytorch.org/models/swin3d_t-7615ae03.pth" to /kaggle/temp/adaptive_preprocessing/data/torch/hub/checkpoints/swin3d_t-7615ae03.pth
+
+  0%|          | 0.00/122M [00:00<?, ?B/s]
+  7%|▋         | 8.88M/122M [00:00<00:01, 92.7MB/s]
+ 25%|██▍       | 29.9M/122M [00:00<00:00, 168MB/s] 
+ 41%|████      | 49.8M/122M [00:00<00:00, 186MB/s]
+ 58%|█████▊    | 70.0M/122M [00:00<00:00, 196MB/s]
+ 74%|███████▍  | 90.5M/122M [00:00<00:00, 203MB/s]
+ 91%|█████████▏| 111M/122M [00:00<00:00, 207MB/s] 
+100%|██████████| 122M/122M [00:00<00:00, 197MB/s]
+OD test: 1 sources/windows, 16 paired rows, 5.2s
+OD test: 2 sources/windows, 32 paired rows, 9.0s
+OD test: 3 sources/windows, 48 paired rows, 12.8s
+OD test: 4 sources/windows, 64 paired rows, 16.6s
+OD test: 5 sources/windows, 80 paired rows, 20.4s
+OD test: 6 sources/windows, 96 paired rows, 24.6s
+OD test: 7 sources/windows, 112 paired rows, 28.5s
+OD test: 8 sources/windows, 128 paired rows, 32.3s
+OD test: 9 sources/windows, 144 paired rows, 36.2s
+OD test: 10 sources/windows, 160 paired rows, 40.0s
+OD test: 11 sources/windows, 176 paired rows, 43.4s
+OD test: 12 sources/windows, 192 paired rows, 47.2s
+OD test: 13 sources/windows, 208 paired rows, 51.0s
+OD test: 14 sources/windows, 224 paired rows, 54.9s
+OD test: 15 sources/windows, 240 paired rows, 58.5s
+OD test: 16 sources/windows, 256 paired rows, 61.9s
+OD test: 17 sources/windows, 272 paired rows, 65.7s
+OD test: 18 sources/windows, 288 paired rows, 69.2s
+OD test: 19 sources/windows, 304 paired rows, 73.0s
+OD test: 20 sources/windows, 320 paired rows, 76.9s
+OD test: 21 sources/windows, 336 paired rows, 81.0s
+OD test: 22 sources/windows, 352 paired rows, 84.8s
+OD test: 23 sources/windows, 368 paired rows, 88.8s
+OD test: 24 sources/windows, 384 paired rows, 92.7s
+OD test: 25 sources/windows, 400 paired rows, 96.6s
+OD test: 26 sources/windows, 416 paired rows, 100.6s
+OD test: 27 sources/windows, 432 paired rows, 104.6s
+OD test: 28 sources/windows, 448 paired rows, 108.4s
+OD test: 29 sources/windows, 464 paired rows, 112.3s
+OD test: 30 sources/windows, 480 paired rows, 116.5s
+OD test: 31 sources/windows, 496 paired rows, 120.4s
+OD test: 32 sources/windows, 512 paired rows, 124.4s
+OD test: 33 sources/windows, 528 paired rows, 128.5s
+OD test: 34 sources/windows, 544 paired rows, 132.4s
+OD test: 35 sources/windows, 560 paired rows, 136.3s
+OD test: 36 sources/windows, 576 paired rows, 140.3s
+OD test: 37 sources/windows, 592 paired rows, 144.5s
+OD test: 38 sources/windows, 608 paired rows, 148.5s
+OD test: 39 sources/windows, 624 paired rows, 152.4s
+OD test: 40 sources/windows, 640 paired rows, 156.3s
+OD test: 41 sources/windows, 656 paired rows, 160.4s
+OD test: 42 sources/windows, 672 paired rows, 164.5s
+OD test: 43 sources/windows, 688 paired rows, 168.5s
+OD test: 44 sources/windows, 704 paired rows, 172.3s
+OD test: 45 sources/windows, 720 paired rows, 176.4s
+OD test: 46 sources/windows, 736 paired rows, 180.2s
+OD test: 47 sources/windows, 752 paired rows, 184.2s
+OD test: 48 sources/windows, 768 paired rows, 188.3s
+OD test: 49 sources/windows, 784 paired rows, 192.4s
+OD test: 50 sources/windows, 800 paired rows, 196.5s
+OD test: 51 sources/windows, 816 paired rows, 200.7s
+OD test: 52 sources/windows, 832 paired rows, 205.1s
+OD test: 53 sources/windows, 848 paired rows, 209.1s
+OD test: 54 sources/windows, 864 paired rows, 213.0s
+OD test: 55 sources/windows, 880 paired rows, 217.1s
+OD test: 56 sources/windows, 896 paired rows, 221.0s
+OD test: 57 sources/windows, 912 paired rows, 224.4s
+OD test: 58 sources/windows, 928 paired rows, 228.3s
+OD test: 59 sources/windows, 944 paired rows, 232.5s
+OD test: 60 sources/windows, 960 paired rows, 236.7s
+OD test: 61 sources/windows, 976 paired rows, 240.6s
+OD test: 62 sources/windows, 992 paired rows, 244.8s
+OD test: 63 sources/windows, 1008 paired rows, 248.9s
+OD test: 64 sources/windows, 1024 paired rows, 253.1s
+{
+  "h264": {
+    "adaptive": {
+      "qps": [
+        30,
+        35,
+        40,
+        45
+      ],
+      "primary_interpolator": "PCHIP",
+      "threshold_pct": -15.0,
+      "valid": true,
+      "pchip_bd_rate_pct": -7.8396124194372225,
+      "point_passes": false,
+      "threshold_confirmed": false,
+      "ci": null,
+      "invalid_reason": null,
+      "common_quality_interval": [
+        0.19841985924241465,
+        0.258449680697027
+      ]
+    }
+  },
+  "h265": {
+    "adaptive": {
+      "qps": [
+        30,
+        35,
+        40,
+        45
+      ],
+      "primary_interpolator": "PCHIP",
+      "threshold_pct": -15.0,
+      "valid": false,
+      "pchip_bd_rate_pct": null,
+      "point_passes": false,
+      "threshold_confirmed": false,
+      "ci": null,
+      "invalid_reason": "quality is not monotone with rate"
+    }
+  }
+}

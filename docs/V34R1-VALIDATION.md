@@ -32,3 +32,11 @@ Các test numpy/scipy cho ngưỡng, bộ lọc, inventory dữ liệu, báo cá
 - CI chỉ lấy quantile trên draw hợp lệ có thể xác nhận sai ngưỡng. Ví dụ10 video/2000draw cho55 draw không hợp lệ: bản cũ cho cận trên≈−20%; bản sửa trả cận trên không hữu hạn và không xác nhận.
 
 Rà soát mã độc lập không còn vấn đề Critical/Important sau các sửa đổi này. Kiểm thử, review và phản biện AutoResearchClaw không được dùng làm bằng chứng đạt BD-rate. Kết luận hiệu năng phải dựa trên các phép đo TEST đầy đủ.
+
+## Xác minh cuối trên Kaggle và kiểm toán xuất bản
+
+Ba TEST cuối đã hoàn tất trên môi trường Kaggle T4×2 cùng Docker/FFmpeg/config/runtime/task-weight hashes. OD và OT chạy75 tests; AR chạy77 tests sau hai regression test retry HTTP/timeout. Các log gốc, mã notebook và metadata đã kéo lại từ server nằm trong `results/v34r1/*-test/cloud/`.
+
+`D:\App\Anconda\envs\python-tools\python.exe scripts/verify_v34r1_results.py --root results/v34r1` xác nhận104 tệp trong publication manifest, AR2048/OD1024/OT256 hàng, đầy đủ bốn QP. Script tính lại đường AR từ paired rows và BD-rate, nhưng không chạy lại model hay chấm lại GT COCO/TrackEval. Kết quả: `all_point_targets=false`, `all_thresholds_confirmed=false`.
+
+Hai test tải nguồn đã fail trước sửa và pass sau sửa với HTTP giả lập; không benchmark lại trên laptop. Hình cuối được vẽ bằng CPU trong `.venv` đã dùng cho DEV vì backend NumPy.linalg của môi trường Anaconda gặp lỗi DLL khi render; số đo/hashes và kiểm toán CPU ở trên giữ nguyên. Hình giữ đủ48 điểm, thang trục chung trong mỗi tác vụ, nhãn số mẫu và trạng thái không hợp lệ. Các CSV và script xuất báo cáo được công bố để kiểm tra.

@@ -1,0 +1,233 @@
+{
+  "task": "od",
+  "curves": {
+    "h264": {
+      "anchor": {
+        "rate": [
+          0.805888671875,
+          0.49630859374999997,
+          0.301455078125,
+          0.18318359374999998
+        ],
+        "quality": [
+          0.3246867560949872,
+          0.32708614032975053,
+          0.31242854730143776,
+          0.21180938349127562
+        ]
+      },
+      "baseline": {
+        "rate": [
+          0.667490234375,
+          0.4101611328125,
+          0.256533203125,
+          0.1647998046875
+        ],
+        "quality": [
+          0.30348858341817836,
+          0.31731748668687776,
+          0.2840515383292698,
+          0.23998851431144116
+        ]
+      },
+      "guard_legacy": {
+        "rate": [
+          0.805888671875,
+          0.49630859374999997,
+          0.301455078125,
+          0.18318359374999998
+        ],
+        "quality": [
+          0.3246867560949872,
+          0.32708614032975053,
+          0.31242854730143776,
+          0.21180938349127562
+        ]
+      },
+      "adaptive": {
+        "rate": [
+          0.651572265625,
+          0.3896142578125,
+          0.25180664062499997,
+          0.1583740234375
+        ],
+        "quality": [
+          0.32762332711796993,
+          0.33719098166275024,
+          0.28354310632631785,
+          0.20473586632332516
+        ]
+      }
+    },
+    "h265": {
+      "anchor": {
+        "rate": [
+          0.8366162109374999,
+          0.575166015625,
+          0.40607421875,
+          0.3008984375
+        ],
+        "quality": [
+          0.3555281885992375,
+          0.3284999040941045,
+          0.3185430824965884,
+          0.22395752176460174
+        ]
+      },
+      "baseline": {
+        "rate": [
+          0.709560546875,
+          0.4960888671875,
+          0.3626123046875,
+          0.2825732421875
+        ],
+        "quality": [
+          0.3495936083395768,
+          0.3169119122705674,
+          0.29698361398441564,
+          0.20339265273852572
+        ]
+      },
+      "guard_legacy": {
+        "rate": [
+          0.8366162109374999,
+          0.575166015625,
+          0.40607421875,
+          0.3008984375
+        ],
+        "quality": [
+          0.3555281885992375,
+          0.3284999040941045,
+          0.3185430824965884,
+          0.22395752176460174
+        ]
+      },
+      "adaptive": {
+        "rate": [
+          0.639384765625,
+          0.507685546875,
+          0.3688232421875,
+          0.28911132812499996
+        ],
+        "quality": [
+          0.34077250459044134,
+          0.36910934491272357,
+          0.3145291763741412,
+          0.23249568924922057
+        ]
+      }
+    }
+  },
+  "comparisons": {
+    "h264": {
+      "baseline": {
+        "qps": [
+          30,
+          35,
+          40,
+          45
+        ],
+        "primary_interpolator": "PCHIP",
+        "threshold_pct": -15.0,
+        "valid": false,
+        "pchip_bd_rate_pct": null,
+        "point_passes": false,
+        "threshold_confirmed": false,
+        "ci": null,
+        "invalid_reason": "quality is not monotone with rate"
+      },
+      "guard_legacy": {
+        "qps": [
+          30,
+          35,
+          40,
+          45
+        ],
+        "primary_interpolator": "PCHIP",
+        "threshold_pct": -15.0,
+        "valid": false,
+        "pchip_bd_rate_pct": null,
+        "point_passes": false,
+        "threshold_confirmed": false,
+        "ci": null,
+        "invalid_reason": "quality is not monotone with rate"
+      },
+      "adaptive": {
+        "qps": [
+          30,
+          35,
+          40,
+          45
+        ],
+        "primary_interpolator": "PCHIP",
+        "threshold_pct": -15.0,
+        "valid": false,
+        "pchip_bd_rate_pct": null,
+        "point_passes": false,
+        "threshold_confirmed": false,
+        "ci": null,
+        "invalid_reason": "quality is not monotone with rate"
+      }
+    },
+    "h265": {
+      "baseline": {
+        "qps": [
+          30,
+          35,
+          40,
+          45
+        ],
+        "primary_interpolator": "PCHIP",
+        "threshold_pct": -15.0,
+        "valid": true,
+        "pchip_bd_rate_pct": 1.0072191033790332,
+        "point_passes": false,
+        "threshold_confirmed": false,
+        "ci": null,
+        "invalid_reason": null,
+        "common_quality_interval": [
+          0.22395752176460174,
+          0.3495936083395768
+        ]
+      },
+      "guard_legacy": {
+        "qps": [
+          30,
+          35,
+          40,
+          45
+        ],
+        "primary_interpolator": "PCHIP",
+        "threshold_pct": -15.0,
+        "valid": true,
+        "pchip_bd_rate_pct": 0.0,
+        "point_passes": false,
+        "threshold_confirmed": false,
+        "ci": null,
+        "invalid_reason": null,
+        "common_quality_interval": [
+          0.22395752176460174,
+          0.3555281885992375
+        ]
+      },
+      "adaptive": {
+        "qps": [
+          30,
+          35,
+          40,
+          45
+        ],
+        "primary_interpolator": "PCHIP",
+        "threshold_pct": -15.0,
+        "valid": false,
+        "pchip_bd_rate_pct": null,
+        "point_passes": false,
+        "threshold_confirmed": false,
+        "ci": null,
+        "invalid_reason": "quality is not monotone with rate"
+      }
+    }
+  },
+  "official_tracking_metrics": {},
+  "scope": "measured finite-sample task metrics; no confidence claim without independent-unit bootstrap"
+}

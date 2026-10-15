@@ -1,0 +1,167 @@
+{
+  "required_endpoints": [
+    "ar/h264",
+    "ar/h265",
+    "od/h264",
+    "od/h265",
+    "ot/h264",
+    "ot/h265"
+  ],
+  "missing_endpoints": [],
+  "invalid_endpoints": [
+    "od/h265",
+    "ot/h264"
+  ],
+  "all_point_targets": false,
+  "all_thresholds_confirmed": false,
+  "threshold_pct": -15.0,
+  "endpoints": {
+    "ar/h264": {
+      "qps": [
+        30,
+        35,
+        40,
+        45
+      ],
+      "primary_interpolator": "PCHIP",
+      "threshold_pct": -15.0,
+      "valid": true,
+      "pchip_bd_rate_pct": -31.35066760285326,
+      "point_passes": true,
+      "threshold_confirmed": false,
+      "ci": {
+        "lo": null,
+        "hi": null,
+        "draws": 5000,
+        "seed": 303401,
+        "finite_fraction": 0.986,
+        "invalid_reasons": {
+          "quality is not monotone with rate": 69,
+          "at least three distinct quality values are required": 1
+        },
+        "familywise_endpoints": 6,
+        "independent_unit": "video",
+        "independent_count": 128,
+        "one_sided_confidence": 0.9916666666666667,
+        "invalid_draw_policy": "worst-case-unbounded",
+        "scope": "paired video percentile bootstrap; undefined draws pay worst-case unbounded tail mass; no population claim beyond source sampling assumptions"
+      },
+      "invalid_reason": null,
+      "common_quality_interval": [
+        0.484375,
+        0.671875
+      ]
+    },
+    "ar/h265": {
+      "qps": [
+        30,
+        35,
+        40,
+        45
+      ],
+      "primary_interpolator": "PCHIP",
+      "threshold_pct": -15.0,
+      "valid": true,
+      "pchip_bd_rate_pct": -21.221701678883925,
+      "point_passes": true,
+      "threshold_confirmed": false,
+      "ci": {
+        "lo": null,
+        "hi": null,
+        "draws": 5000,
+        "seed": 303401,
+        "finite_fraction": 0.7692,
+        "invalid_reasons": {
+          "quality is not monotone with rate": 1150,
+          "at least three distinct quality values are required": 4
+        },
+        "familywise_endpoints": 6,
+        "independent_unit": "video",
+        "independent_count": 128,
+        "one_sided_confidence": 0.9916666666666667,
+        "invalid_draw_policy": "worst-case-unbounded",
+        "scope": "paired video percentile bootstrap; undefined draws pay worst-case unbounded tail mass; no population claim beyond source sampling assumptions"
+      },
+      "invalid_reason": null,
+      "common_quality_interval": [
+        0.375,
+        0.65625
+      ]
+    },
+    "od/h264": {
+      "qps": [
+        30,
+        35,
+        40,
+        45
+      ],
+      "primary_interpolator": "PCHIP",
+      "threshold_pct": -15.0,
+      "valid": true,
+      "pchip_bd_rate_pct": -7.8396124194372225,
+      "point_passes": false,
+      "threshold_confirmed": false,
+      "ci": null,
+      "invalid_reason": null,
+      "common_quality_interval": [
+        0.19841985924241465,
+        0.258449680697027
+      ]
+    },
+    "od/h265": {
+      "qps": [
+        30,
+        35,
+        40,
+        45
+      ],
+      "primary_interpolator": "PCHIP",
+      "threshold_pct": -15.0,
+      "valid": false,
+      "pchip_bd_rate_pct": null,
+      "point_passes": false,
+      "threshold_confirmed": false,
+      "ci": null,
+      "invalid_reason": "quality is not monotone with rate"
+    },
+    "ot/h264": {
+      "qps": [
+        30,
+        35,
+        40,
+        45
+      ],
+      "primary_interpolator": "PCHIP",
+      "threshold_pct": -15.0,
+      "valid": false,
+      "pchip_bd_rate_pct": null,
+      "point_passes": false,
+      "threshold_confirmed": false,
+      "ci": null,
+      "invalid_reason": "quality is not monotone with rate"
+    },
+    "ot/h265": {
+      "qps": [
+        30,
+        35,
+        40,
+        45
+      ],
+      "primary_interpolator": "PCHIP",
+      "threshold_pct": -15.0,
+      "valid": true,
+      "pchip_bd_rate_pct": -16.078360823449774,
+      "point_passes": true,
+      "threshold_confirmed": false,
+      "ci": null,
+      "invalid_reason": null,
+      "common_quality_interval": [
+        0.24728719425431853,
+        0.37565542275857866
+      ]
+    }
+  },
+  "scope": "finite declared holdout; undefined or unmeasured endpoints are not demonstrated",
+  "config_sha256": "cf3bab18fc8d82e1c0cd784e4155bd44481cd7ab0bfabd66f727e20b1075a938",
+  "manifest_sha256": "08bce7123f7289e8a5722c11b7ea74b63e4cb54ce2be060e77a5c9998dab9352"
+}

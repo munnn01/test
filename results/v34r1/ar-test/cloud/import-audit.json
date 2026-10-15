@@ -1,0 +1,115 @@
+{
+  "task": "ar",
+  "archive_sha256": "649c3e6e29355f834b06ef85e9950bfa1c609e33625964a30d8db267f0b01012",
+  "block_tests_passed": 77,
+  "cloud_status": {
+    "task": "ar",
+    "complete": true,
+    "commit": "b3f30bcd1c111b69311180f9a5259f0541eee817",
+    "wall_seconds": 1047.523811340332
+  },
+  "grid_audit": {
+    "source_count": 128,
+    "paired_rows": 2048,
+    "qps": [
+      30,
+      35,
+      40,
+      45
+    ],
+    "codecs": [
+      "h264",
+      "h265"
+    ],
+    "arms": [
+      "anchor",
+      "adaptive"
+    ],
+    "complete": true
+  },
+  "comparisons": {
+    "h264": {
+      "adaptive": {
+        "qps": [
+          30,
+          35,
+          40,
+          45
+        ],
+        "primary_interpolator": "PCHIP",
+        "threshold_pct": -15.0,
+        "valid": true,
+        "pchip_bd_rate_pct": -31.35066760285326,
+        "point_passes": true,
+        "threshold_confirmed": false,
+        "ci": {
+          "lo": null,
+          "hi": null,
+          "draws": 5000,
+          "seed": 303401,
+          "finite_fraction": 0.986,
+          "invalid_reasons": {
+            "quality is not monotone with rate": 69,
+            "at least three distinct quality values are required": 1
+          },
+          "familywise_endpoints": 6,
+          "independent_unit": "video",
+          "independent_count": 128,
+          "one_sided_confidence": 0.9916666666666667,
+          "invalid_draw_policy": "worst-case-unbounded",
+          "scope": "paired video percentile bootstrap; undefined draws pay worst-case unbounded tail mass; no population claim beyond source sampling assumptions"
+        },
+        "invalid_reason": null,
+        "common_quality_interval": [
+          0.484375,
+          0.671875
+        ]
+      }
+    },
+    "h265": {
+      "adaptive": {
+        "qps": [
+          30,
+          35,
+          40,
+          45
+        ],
+        "primary_interpolator": "PCHIP",
+        "threshold_pct": -15.0,
+        "valid": true,
+        "pchip_bd_rate_pct": -21.221701678883925,
+        "point_passes": true,
+        "threshold_confirmed": false,
+        "ci": {
+          "lo": null,
+          "hi": null,
+          "draws": 5000,
+          "seed": 303401,
+          "finite_fraction": 0.7692,
+          "invalid_reasons": {
+            "quality is not monotone with rate": 1150,
+            "at least three distinct quality values are required": 4
+          },
+          "familywise_endpoints": 6,
+          "independent_unit": "video",
+          "independent_count": 128,
+          "one_sided_confidence": 0.9916666666666667,
+          "invalid_draw_policy": "worst-case-unbounded",
+          "scope": "paired video percentile bootstrap; undefined draws pay worst-case unbounded tail mass; no population claim beyond source sampling assumptions"
+        },
+        "invalid_reason": null,
+        "common_quality_interval": [
+          0.375,
+          0.65625
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "wall_seconds": 969.8281496910001,
+    "peak_torch_cuda_allocated_bytes": 678686720,
+    "timing_scope": "includes sender source preparation, proposal/guard, all actual codec trials and receiver task scoring; model/data load excluded"
+  },
+  "job_url": "https://www.kaggle.com/code/baooo25r/v34r1-ar-cache-test-qp4",
+  "wrapper_sha256": "bc8258d17e171639cdd2b3cfc7944945aaa79751253f116ebf2668f723f36328"
+}
