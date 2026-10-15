@@ -31,3 +31,18 @@ Mỗi job riêng tư ghim immutable Git SHA và Docker image, bật GPU+Internet
 Manifest portable trong [v34r1-cloud-data-manifest.json.gz](../configs/v34r1-cloud-data-manifest.json.gz) chỉ chứa metadata/hash, không chứa media hay thông tin đăng nhập. Một số video giữ hash cả JPEG xen kẽ đã tải trước đó; model chỉ đọc đúng16 JPEG ở `provider_selected_paths`.
 
 Tổng hợp cuối phải có đủ AR128 video, OD64 ảnh, OT256 frame và cả hai codec. Job được đẩy thành công hoặc báo RUNNING không đồng nghĩa đã đạt BD-rate hay đã hoàn thành.
+
+## Job và xử lý chờ nguồn
+
+Mã đo bất biến: `5a369016e4214b8339f89768534fed19cbcf194e`. Các job riêng tư được gửi qua Kaggle API; không đưa token vào notebook. OD và OT đã ghi `75 passed` trên cùng Docker image và xác nhận hash các artifact lịch sử.
+
+- AR ban đầu: `shungg05/v34r1-ar-test-qp4`, gắn dataset provider23GB. Sau nhiều lần trạng thái RUNNING nhưng chưa có log mã chạy, kiểm tra riêng trên Kaggle đã tải một JPEG qua endpoint version1, SHA-256 khớp trong0.775s.
+- AR dự phòng: `baooo25r/v34r1-ar-direct-test-qp4`, notebook giống từng byte, cùng Docker/GPU/config/commit và manifest; không gắn toàn dataset. Script khôi phục có sẵn tải từng tệp đúng tên/hash. Không thay ID hoặc chọn nguồn theo độ chính xác. Đây là thay đổi vận chuyển dữ liệu, không phải một chính sách khác.
+- OD: `dieulinhh/v34r1-od-test-qp4`.
+- OT: `huolgggnuyen/v34r1-ot-test-qp4`.
+
+Nếu cả hai job AR hoàn tất, chọn job hoàn tất trước theo thời gian, không chọn theo BD-rate. Phân biệt rõ lượt lặp khỏi số lượng video độc lập; không ghép hai lượt thành256 video.
+
+OD hoàn tất đủ1024 hàng ghép cặp: H.264−7.8396124194%; H.265 không hợp lệ do quality không đơn điệu theo rate. Đây là kết quả chưa đạt mục tiêu, vẫn được giữ nguyên.
+
+AR direct version1 dừng khi khôi phục JPEG vì HTTP404, trước suy luận TEST. Bộ tải cục bộ trước đó có retry mọi lỗi request; bộ tải cloud chỉ retry429. Bổ sung retry có giới hạn cho lỗi HTTP/timeout, ghi tên tệp khi hết lượt, vẫn bắt buộc đúng SHA-256 và không thay nguồn. Hai regression test CPU tái hiện HTTP404/timeout và lỗi kéo dài đã fail trước sửa, pass sau sửa. Chỉ script vận chuyển nguồn/tests/docs thay đổi; `adaptive_vcm` và toàn bộ `configs` giữ nguyên từng byte. Job AR tiếp theo kiểm tra lại toàn bộ77 tests trên Kaggle trước khi đo.

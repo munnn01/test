@@ -59,14 +59,19 @@ def ar_frame(job):
         checked_copy(source,destination,sha); return
     if destination.exists() and hashlib.sha256(destination.read_bytes()).hexdigest()==sha: return
     payload=dict(ownerSlug='jizeyong',datasetSlug='kinetics400-rgb256-f10-val-data',datasetVersionNumber=1,fileName=yt+'/'+name)
-    for attempt in range(10):
-        response=requests.post('https://www.kaggle.com/api/v1/datasets.DatasetApiService/DownloadDataset',json=payload,timeout=(20,90))
-        if response.status_code==429: time.sleep(min(60,2**attempt)); continue
-        response.raise_for_status()
+    for attempt in range(12):
+        try:
+            response=requests.post('https://www.kaggle.com/api/v1/datasets.DatasetApiService/DownloadDataset',json=payload,timeout=(20,90))
+            response.raise_for_status()
+        except requests.RequestException as error:
+            if attempt==11:
+                raise RuntimeError('frozen AR source unavailable after retries: '+yt+'/'+name) from error
+            print('AR source transport retry',attempt+1,yt+'/'+name,type(error).__name__,flush=True)
+            time.sleep(min(60,max(2,2**attempt))); continue
         if hashlib.sha256(response.content).hexdigest()!=sha: raise ValueError('AR provider byte hash mismatch')
         destination.parent.mkdir(parents=True,exist_ok=True)
         temporary=destination.with_name(destination.name+'.part'); temporary.write_bytes(response.content); temporary.replace(destination); return
-    raise RuntimeError('provider throttled; no source replacement permitted')
+    raise RuntimeError('provider unavailable; no source replacement permitted: '+yt+'/'+name)
 
 
 def main():
