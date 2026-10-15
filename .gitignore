@@ -25,3 +25,6 @@ results/v34_r1/shards/*/test_rows.json
 results/v34_od_coco/test_rows.json
 results/v34_od_coco/dev_rows.json
 results/v34_od_coco/measurements.json
+
+.tools/
+.tmp/

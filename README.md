@@ -1,3 +1,5 @@
+> **Nhánh cải tiến v34r1:** dùng đúng 4 QP30/35/40/45 cho AR/OD/OT. Xem [giao thức, kiểm chứng và giới hạn mới](docs/V34R1.md). Các số liệu v34 lịch sử bên dưới dùng giao thức cũ và không phải kết quả v34r1.
+
 # V34-R1 — Adaptive preprocessing for Video Swin
 
 CNN+GRU chọn bộ lọc theo vùng và theo thời gian **trước H.264/H.265**. Decoder chuẩn dựng RGB, sau đó **Video Swin-T đóng băng** nhận dạng hành động. Codec, bộ lọc và task model không được huấn luyện bằng backpropagation trong V34-R1.

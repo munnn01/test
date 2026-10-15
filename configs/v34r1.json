@@ -1,0 +1,82 @@
+{
+  "schema": "adaptive-vcm-v34r1-1",
+  "qps": [
+    30,
+    35,
+    40,
+    45
+  ],
+  "codecs": [
+    "h264",
+    "h265"
+  ],
+  "seed": 303401,
+  "preset": "medium",
+  "fps": 25,
+  "frames": 16,
+  "temporal_stride": 2,
+  "ar_size": 128,
+  "od_size": 320,
+  "ot_size": 960,
+  "detector": "resnet50",
+  "ot_detector_size": 960,
+  "detector_detections": 300,
+  "detector_batch": 2,
+  "budget_ratio": 1.01,
+  "measured_budget_ratio": 1.0,
+  "damage_tolerance": [
+    0.05,
+    0.05,
+    0.05
+  ],
+  "source_guard_limits": [
+    0.025,
+    0.05,
+    0.05
+  ],
+  "source_shortlist": 3,
+  "extra_profiles": [
+    13,
+    14,
+    17
+  ],
+  "quality_weight": 0.05,
+  "ffmpeg_executable": ".tools/ffmpeg/ffmpeg.exe",
+  "primary_interpolator": "PCHIP",
+  "target_bd_rate_pct": -15.0,
+  "test_policy": "freeze configuration on DEV before any TEST scoring",
+  "arms": [
+    "anchor",
+    "adaptive"
+  ],
+  "guard_tasks": "target",
+  "extra_profiles_by_task": {
+    "od": [
+      13,
+      14,
+      15,
+      17
+    ],
+    "ar": [
+      13,
+      17,
+      19,
+      20
+    ],
+    "ot": [
+      13,
+      16,
+      17,
+      19
+    ]
+  },
+  "ar_top1_penalty": 0.05,
+  "ar_bootstrap_draws": 5000,
+  "controller_sha256_by_task": {
+    "od": "4ef6ecb1e18b77d62695d3372d2225aeabc517a77a038a3ad9dedbca20635d43",
+    "ot": "c4622dbd701df88444344ec908263ccebcbbd28da40c9812c1b86749169c1577",
+    "ar": "c4622dbd701df88444344ec908263ccebcbbd28da40c9812c1b86749169c1577"
+  },
+  "policy_frozen_utc": "2026-10-15T12:41:27.1289882Z",
+  "selection_basis": "A2 AR source-decision guard improves DEV H265 -11.61 to -19.51; OT expanded bank improves DEV -17.23/-1.44 to -17.91/-4.38; OD bank unchanged. No TEST outcomes observed. No claim all DEV targets passed."
+}
