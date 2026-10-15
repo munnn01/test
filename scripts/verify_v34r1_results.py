@@ -33,10 +33,16 @@ def main():
         raw=gzip.decompress((root/relative).read_bytes())
         if len(raw)!=value['unpacked_bytes'] or hashlib.sha256(raw).hexdigest()!=value['unpacked_sha256']:
             raise ValueError('paired row archive mismatch: '+relative)
+    declared_report=json.loads((root/'target-report.json').read_text(encoding='utf-8'))
+    data_sha256=hashlib.sha256((root/'data-manifest.json').read_bytes()).hexdigest()
+    if data_sha256!=declared_report.get('manifest_sha256'):
+        raise ValueError('publication data manifest does not match frozen TEST protocol/report')
     counts={}
     for task in ('ar','od','ot'):
         run=root/(task+'-test')
         protocol=json.loads((run/'protocol.json').read_text(encoding='utf-8'))
+        if protocol['manifest_sha256']!=data_sha256:
+            raise ValueError('publication data manifest differs from task protocol: '+task)
         summary=json.loads((run/'summary.json').read_text(encoding='utf-8'))
         rows=json.loads(gzip.decompress((run/'rows.json.gz').read_bytes()))
         audit=audit_grid(rows,source_ids=protocol['expected_source_ids'],arms=protocol['config']['arms'])
@@ -56,7 +62,7 @@ def main():
                                 qps=protocol['config']['qps'],ci=summary['comparisons'][codec]['adaptive']['ci'])
             if actual!=summary['comparisons'][codec]['adaptive']: raise ValueError('BD-rate summary mismatch')
     actual=collect([root/(t+'-test') for t in ('ar','od','ot')])
-    if actual!=json.loads((root/'target-report.json').read_text(encoding='utf-8')): raise ValueError('target report mismatch')
+    if actual!=declared_report: raise ValueError('target report mismatch')
     print(json.dumps(dict(verified=True,file_count=len(manifest['files']),paired_rows=counts,
         all_point_targets=actual['all_point_targets'],all_thresholds_confirmed=actual['all_thresholds_confirmed'],
         scope='CPU publication/grid/AR-curve/BD-rate audit; does not repeat task-model or GT inference'),indent=2))

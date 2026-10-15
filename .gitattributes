@@ -6,3 +6,4 @@
 adaptive_vcm/** -text
 configs/** -text
 results/v34_r1/** -text
+results/v34r1/** -text
