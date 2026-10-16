@@ -1,0 +1,5152 @@
+{
+  "schema": "v34r1-A6-AR512-1",
+  "frozen_utc": "2026-10-16T15:09:36.172849+00:00",
+  "qps": [
+    30,
+    35,
+    40,
+    45
+  ],
+  "codecs": [
+    "h264",
+    "h265"
+  ],
+  "dataset": "jizeyong/kinetics400-rgb256-f10-val-data",
+  "version": 1,
+  "frames": 16,
+  "stride": 2,
+  "minimum_source_frames": 32,
+  "count": 512,
+  "records": [
+    {
+      "youtube_id": "4p4eqetk4R8",
+      "label": 310,
+      "time_start": 45,
+      "time_end": 55,
+      "frame_count_metadata": 122,
+      "directory": "4p4eqetk4R8",
+      "rank": "0001f70ca5ffcde97ecdd67d1ee2cb65c4c46e473579ccbe08ce29333ff30d66"
+    },
+    {
+      "youtube_id": "ZlF61ic42wc",
+      "label": 176,
+      "time_start": 72,
+      "time_end": 82,
+      "frame_count_metadata": 122,
+      "directory": "ZlF61ic42wc",
+      "rank": "0008cd6b2263f217ee36c0618d85e5e472bfb1867515aa24e7473b86af0f2efd"
+    },
+    {
+      "youtube_id": "hQ3kPL2pTAs",
+      "label": 226,
+      "time_start": 512,
+      "time_end": 522,
+      "frame_count_metadata": 122,
+      "directory": "hQ3kPL2pTAs",
+      "rank": "00092ae97373490ddd45dc28e1a198e36a33f9aa55a27dac8875dc0034aa9205"
+    },
+    {
+      "youtube_id": "wsfCY4x8yU8",
+      "label": 372,
+      "time_start": 2,
+      "time_end": 12,
+      "frame_count_metadata": 122,
+      "directory": "wsfCY4x8yU8",
+      "rank": "000935cc37f5789e5b7f4d9d3cbc7795fb6634273fd6a7eb2b0ceac7b56af3a1"
+    },
+    {
+      "youtube_id": "-DgC31LRuXs",
+      "label": 167,
+      "time_start": 6,
+      "time_end": 16,
+      "frame_count_metadata": 94,
+      "directory": "-DgC31LRuXs",
+      "rank": "000da077e13146e1e6a025402d98950abefd516bef64a66a748fdf3b5e3f45b4"
+    },
+    {
+      "youtube_id": "x77K1gXY4R8",
+      "label": 168,
+      "time_start": 21,
+      "time_end": 31,
+      "frame_count_metadata": 94,
+      "directory": "x77K1gXY4R8",
+      "rank": "000dbe04135118e82f0ab7e5c7f5619de8539d9a29b405fbe86344352bc96afb"
+    },
+    {
+      "youtube_id": "xlDZNta0r8g",
+      "label": 24,
+      "time_start": 34,
+      "time_end": 44,
+      "frame_count_metadata": 76,
+      "directory": "xlDZNta0r8g",
+      "rank": "000f4e8a03f058a8df20a03a7b42deb9d476ee169f03b50a83d42318e6de21da"
+    },
+    {
+      "youtube_id": "4zZ1JoAv4z4",
+      "label": 261,
+      "time_start": 21,
+      "time_end": 31,
+      "frame_count_metadata": 122,
+      "directory": "4zZ1JoAv4z4",
+      "rank": "00151da1e8c346d1ee7dc4ccfe811e66ab41a89e7761044fbd5b74fb5f39fe66"
+    },
+    {
+      "youtube_id": "DyTh-HA7L6E",
+      "label": 169,
+      "time_start": 23,
+      "time_end": 33,
+      "frame_count_metadata": 63,
+      "directory": "DyTh-HA7L6E",
+      "rank": "001840adb835816221e9e56198997bfd3b3be6ab581ff5d24c943aa6459dfc00"
+    },
+    {
+      "youtube_id": "C9boKvSr3kU",
+      "label": 241,
+      "time_start": 15,
+      "time_end": 25,
+      "frame_count_metadata": 122,
+      "directory": "C9boKvSr3kU",
+      "rank": "001a4644eee8c2077706c9db2bcd704b785aa3325969182643816dcf7f272a69"
+    },
+    {
+      "youtube_id": "BAHRnMEFEwg",
+      "label": 125,
+      "time_start": 4,
+      "time_end": 14,
+      "frame_count_metadata": 122,
+      "directory": "BAHRnMEFEwg",
+      "rank": "001cfb9530d51d0399d5428ba68f1cdccdc3740be9d8a1c871acdffe937f0e11"
+    },
+    {
+      "youtube_id": "JBzWsBMff6A",
+      "label": 315,
+      "time_start": 8,
+      "time_end": 18,
+      "frame_count_metadata": 114,
+      "directory": "JBzWsBMff6A",
+      "rank": "002f7c83807d21171c7ec2aded46de5e3b468b3f3c1a481b4c91f02df5d463af"
+    },
+    {
+      "youtube_id": "qarexnzoZuo",
+      "label": 361,
+      "time_start": 77,
+      "time_end": 87,
+      "frame_count_metadata": 122,
+      "directory": "qarexnzoZuo",
+      "rank": "003106f50f4845c2a60b8ca8480ae7ba7af8b68af84fe53b65effeb0dc54873b"
+    },
+    {
+      "youtube_id": "cDRi9AzrapA",
+      "label": 153,
+      "time_start": 151,
+      "time_end": 161,
+      "frame_count_metadata": 122,
+      "directory": "cDRi9AzrapA",
+      "rank": "0036ecc431d17b3ba6b60b9f2b44c0b220e6f921025aeb41cf0137570579f1db"
+    },
+    {
+      "youtube_id": "jY2N5gOu5sw",
+      "label": 15,
+      "time_start": 121,
+      "time_end": 131,
+      "frame_count_metadata": 122,
+      "directory": "jY2N5gOu5sw",
+      "rank": "00371a2fe23173a0e833255baeb12875018ab950b7f99cf651f0eb5523129501"
+    },
+    {
+      "youtube_id": "jeQHEbt09OM",
+      "label": 376,
+      "time_start": 2,
+      "time_end": 12,
+      "frame_count_metadata": 122,
+      "directory": "jeQHEbt09OM",
+      "rank": "003a3dfd85e11e593efa35cd622233fe6a6f94629c640361e963b650f51a4a34"
+    },
+    {
+      "youtube_id": "rsCodvxQzg4",
+      "label": 304,
+      "time_start": 103,
+      "time_end": 113,
+      "frame_count_metadata": 122,
+      "directory": "rsCodvxQzg4",
+      "rank": "004264fe0be3d8b45c51b86bea6b751c06238184b1fe87463e2f1df3f7925c88"
+    },
+    {
+      "youtube_id": "nt5sPExRJxQ",
+      "label": 78,
+      "time_start": 3,
+      "time_end": 13,
+      "frame_count_metadata": 122,
+      "directory": "nt5sPExRJxQ",
+      "rank": "0045e6deb75a996ec2412ae69792a7ff015d5c16ba8b47ef95ebbc7db0f300c1"
+    },
+    {
+      "youtube_id": "YxMzRRdhrfw",
+      "label": 55,
+      "time_start": 256,
+      "time_end": 266,
+      "frame_count_metadata": 122,
+      "directory": "YxMzRRdhrfw",
+      "rank": "004eff99ab3b905812266066ae4007a367e9c73ceaa1db589bc391d463b954ea"
+    },
+    {
+      "youtube_id": "t2ilfdahddE",
+      "label": 387,
+      "time_start": 21,
+      "time_end": 31,
+      "frame_count_metadata": 120,
+      "directory": "t2ilfdahddE",
+      "rank": "0050cf242fc9fa06320c6aa57bff833260982a859292c8d13589b05b3d023c47"
+    },
+    {
+      "youtube_id": "ClkSJavnIUo",
+      "label": 358,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 122,
+      "directory": "ClkSJavnIUo",
+      "rank": "0058071ba0de5e2d009ad6ea5abe55d47e023d503b56f229c4f46cd35c00fea7"
+    },
+    {
+      "youtube_id": "Wjnvjwsi-fM",
+      "label": 71,
+      "time_start": 1,
+      "time_end": 11,
+      "frame_count_metadata": 41,
+      "directory": "Wjnvjwsi-fM",
+      "rank": "005c9eb5b96488a34755396a51fe54f725e0da9a27977bbf86df08d71763d7da"
+    },
+    {
+      "youtube_id": "oq4vdXUtr9I",
+      "label": 240,
+      "time_start": 19,
+      "time_end": 29,
+      "frame_count_metadata": 122,
+      "directory": "oq4vdXUtr9I",
+      "rank": "005cb8fbee3929bd621af331bf9c869914495f70ae0787b261fd59239dff4c93"
+    },
+    {
+      "youtube_id": "CZfe0PkjvA4",
+      "label": 365,
+      "time_start": 25,
+      "time_end": 35,
+      "frame_count_metadata": 122,
+      "directory": "CZfe0PkjvA4",
+      "rank": "005ff8fde44463d23c539325b8d0be886b818390312254650dc090e58a429e50"
+    },
+    {
+      "youtube_id": "Y7CZDrJ6Jv4",
+      "label": 174,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 122,
+      "directory": "Y7CZDrJ6Jv4",
+      "rank": "006159958c74b1dffd56eeee06370786ecbb11071d9208ce733de0e71acf2fa1"
+    },
+    {
+      "youtube_id": "-khmO1mLnoA",
+      "label": 141,
+      "time_start": 143,
+      "time_end": 153,
+      "frame_count_metadata": 122,
+      "directory": "-khmO1mLnoA",
+      "rank": "00630155ff0f50aa61fd34e21ee39d722d24d2ed2877a1dd77227f23b45d7e17"
+    },
+    {
+      "youtube_id": "nKXCpkKFonA",
+      "label": 229,
+      "time_start": 11,
+      "time_end": 21,
+      "frame_count_metadata": 122,
+      "directory": "nKXCpkKFonA",
+      "rank": "0069c7fa8ce34955bd1071199def20f6fcd87e1cfdce3ad9a2e027653aaee9b6"
+    },
+    {
+      "youtube_id": "BUT8oefH9Nw",
+      "label": 120,
+      "time_start": 38,
+      "time_end": 48,
+      "frame_count_metadata": 122,
+      "directory": "BUT8oefH9Nw",
+      "rank": "006b3d791bcba2a767beac9361fa00522fd0816f052598debb90e5b550cab8b2"
+    },
+    {
+      "youtube_id": "g4wZMQnBc3Y",
+      "label": 225,
+      "time_start": 191,
+      "time_end": 201,
+      "frame_count_metadata": 122,
+      "directory": "g4wZMQnBc3Y",
+      "rank": "007578bb6f697731aa8c34c19b05668e8b715afc3c2d4a5989c7395f882bc0b1"
+    },
+    {
+      "youtube_id": "djkFgIJSze0",
+      "label": 227,
+      "time_start": 923,
+      "time_end": 933,
+      "frame_count_metadata": 122,
+      "directory": "djkFgIJSze0",
+      "rank": "007cb96b419676440e6c386c092ce2d187241ecc5c18f07b719b434292214eb2"
+    },
+    {
+      "youtube_id": "I4RIyZDsltM",
+      "label": 300,
+      "time_start": 5,
+      "time_end": 15,
+      "frame_count_metadata": 122,
+      "directory": "I4RIyZDsltM",
+      "rank": "00882589490fcd97c0755ac115066efa0384ef41b2df2c851e5a8910df027072"
+    },
+    {
+      "youtube_id": "RUNwB3-Qxqg",
+      "label": 45,
+      "time_start": 7,
+      "time_end": 17,
+      "frame_count_metadata": 119,
+      "directory": "RUNwB3-Qxqg",
+      "rank": "008a9af09379702fd6da345d815637d8d672e4e801bc505f3adfcb87e5f91fa4"
+    },
+    {
+      "youtube_id": "8kN7EyPBmrI",
+      "label": 189,
+      "time_start": 82,
+      "time_end": 92,
+      "frame_count_metadata": 79,
+      "directory": "8kN7EyPBmrI",
+      "rank": "008bceec59671fc2dfb2ff76ad28cd078a0970d05d2e8072580555387a70f35f"
+    },
+    {
+      "youtube_id": "2albmWipJAs",
+      "label": 314,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 69,
+      "directory": "2albmWipJAs",
+      "rank": "008dda55c4170d9ccc0565fab6c1dab40620ce909232e5ab3e2c1e352ea6b05e"
+    },
+    {
+      "youtube_id": "kt6Egq5WSjI",
+      "label": 134,
+      "time_start": 18,
+      "time_end": 28,
+      "frame_count_metadata": 122,
+      "directory": "kt6Egq5WSjI",
+      "rank": "009928f3a9b3b4cef995d3e7b464c2f3ca92786c72f8f53faaa7c3f4cefcd727"
+    },
+    {
+      "youtube_id": "GZbDnvtR9RE",
+      "label": 362,
+      "time_start": 277,
+      "time_end": 287,
+      "frame_count_metadata": 122,
+      "directory": "GZbDnvtR9RE",
+      "rank": "00a0bdfcf5e89e77c7046ca27c62c262aaf2de9a877ba71668f32612797e6eeb"
+    },
+    {
+      "youtube_id": "VRmmlteL97Q",
+      "label": 320,
+      "time_start": 5,
+      "time_end": 15,
+      "frame_count_metadata": 61,
+      "directory": "VRmmlteL97Q",
+      "rank": "00ab7f849004ef2742dc9bf8dc4e6505bb86f25d9511d8b1e2f1fa543155ca98"
+    },
+    {
+      "youtube_id": "rVw05V3fI88",
+      "label": 217,
+      "time_start": 38,
+      "time_end": 48,
+      "frame_count_metadata": 122,
+      "directory": "rVw05V3fI88",
+      "rank": "00acc1c38f1f6bbaf2d9ef9f293694707e7e07bffbd19a62af5e898dfeb20a00"
+    },
+    {
+      "youtube_id": "GJzywS6GjSE",
+      "label": 82,
+      "time_start": 28,
+      "time_end": 38,
+      "frame_count_metadata": 111,
+      "directory": "GJzywS6GjSE",
+      "rank": "00b1f4397468e81cccea769bbaa0dba18fed4100ed0d8235aa896493dd563f4a"
+    },
+    {
+      "youtube_id": "4DP5vsyAg1c",
+      "label": 151,
+      "time_start": 3,
+      "time_end": 13,
+      "frame_count_metadata": 112,
+      "directory": "4DP5vsyAg1c",
+      "rank": "00b6047779bc1b61018d1f8c8cc98bdb5093b73038633a23c005ebe0694ffc7c"
+    },
+    {
+      "youtube_id": "BuJGnRL504Y",
+      "label": 202,
+      "time_start": 16,
+      "time_end": 26,
+      "frame_count_metadata": 122,
+      "directory": "BuJGnRL504Y",
+      "rank": "00b8189d4f70c50a081d66c1d311f76ea7b155c407d5d5cd6eea517b5b647bb5"
+    },
+    {
+      "youtube_id": "06IRoSKPlFM",
+      "label": 303,
+      "time_start": 175,
+      "time_end": 185,
+      "frame_count_metadata": 122,
+      "directory": "06IRoSKPlFM",
+      "rank": "00bb61d42a516e1bba8ceab333056e26a800ff12fefe3d3c03efaa2e42c86f29"
+    },
+    {
+      "youtube_id": "BJj9z4n0STk",
+      "label": 340,
+      "time_start": 27,
+      "time_end": 37,
+      "frame_count_metadata": 122,
+      "directory": "BJj9z4n0STk",
+      "rank": "00bec3792a4cde9ae85486a119e87e16140e81e75965820be857baaf36fca1b7"
+    },
+    {
+      "youtube_id": "HjQIihs-zIU",
+      "label": 293,
+      "time_start": 32,
+      "time_end": 42,
+      "frame_count_metadata": 96,
+      "directory": "HjQIihs-zIU",
+      "rank": "00c4510be75b69c063c5c30eaf777f28ec69e6a2771ca1744828627843089d23"
+    },
+    {
+      "youtube_id": "Z5ywBikWPqU",
+      "label": 326,
+      "time_start": 45,
+      "time_end": 55,
+      "frame_count_metadata": 122,
+      "directory": "Z5ywBikWPqU",
+      "rank": "00c4e076799c67774ae35592311d6b39cc4f2df31913f504599090f956845547"
+    },
+    {
+      "youtube_id": "rGCE2UN_9Vc",
+      "label": 344,
+      "time_start": 52,
+      "time_end": 62,
+      "frame_count_metadata": 122,
+      "directory": "rGCE2UN_9Vc",
+      "rank": "00cc4c5904484f18701e626881973d3f9af107ceeb3ab19ff2d932aceaff80f8"
+    },
+    {
+      "youtube_id": "54OeCiZcXQQ",
+      "label": 243,
+      "time_start": 15,
+      "time_end": 25,
+      "frame_count_metadata": 59,
+      "directory": "54OeCiZcXQQ",
+      "rank": "00cd2a2a8592aef4636efa6a6d75d7fd33210b9806b429f8228b9d0f2857ae08"
+    },
+    {
+      "youtube_id": "epfCEGpA8OY",
+      "label": 318,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 96,
+      "directory": "epfCEGpA8OY",
+      "rank": "00d141d8a933afb22c85e8a9fa4ab52bfa40b3052e47cb508b32c92ebe093310"
+    },
+    {
+      "youtube_id": "n4uALpKmtDQ",
+      "label": 54,
+      "time_start": 47,
+      "time_end": 57,
+      "frame_count_metadata": 122,
+      "directory": "n4uALpKmtDQ",
+      "rank": "00d42455d7955ddd446cbb0b045495f57a11287750c5537ba9a17c84d4d1e93c"
+    },
+    {
+      "youtube_id": "UABK4y0_xe8",
+      "label": 135,
+      "time_start": 59,
+      "time_end": 69,
+      "frame_count_metadata": 122,
+      "directory": "UABK4y0_xe8",
+      "rank": "00d8fba763f5d2f1be516d9f10283908ea32b038da594214434d6a8d70b041b1"
+    },
+    {
+      "youtube_id": "1Ob-133153o",
+      "label": 41,
+      "time_start": 88,
+      "time_end": 98,
+      "frame_count_metadata": 122,
+      "directory": "1Ob-133153o",
+      "rank": "00e239d22eb8ca6a4f3e459a9a179dbce2aa034ff33ab3badc1afbbe2eb6c568"
+    },
+    {
+      "youtube_id": "44EO6L1wBGk",
+      "label": 201,
+      "time_start": 3,
+      "time_end": 13,
+      "frame_count_metadata": 74,
+      "directory": "44EO6L1wBGk",
+      "rank": "00e97302cacb2120b75227ec1ef2650f8a4e07e43117ffd8467bdce355f01a1d"
+    },
+    {
+      "youtube_id": "UdJfHWKpCsc",
+      "label": 291,
+      "time_start": 62,
+      "time_end": 72,
+      "frame_count_metadata": 122,
+      "directory": "UdJfHWKpCsc",
+      "rank": "00ebe651943b0551a0e53ede55dbaa012569dd55a89c8f2bfc3d52dfab509f37"
+    },
+    {
+      "youtube_id": "ML4se4A-RZo",
+      "label": 298,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 122,
+      "directory": "ML4se4A-RZo",
+      "rank": "00ec1295df3a060564516f84478b7430c4a59e45b69011b8814583f8796b76f4"
+    },
+    {
+      "youtube_id": "rFee2NCkWQE",
+      "label": 4,
+      "time_start": 13,
+      "time_end": 23,
+      "frame_count_metadata": 122,
+      "directory": "rFee2NCkWQE",
+      "rank": "00eda23aff5fbfa4a6f980de7e73d314de2f0da08168a3089d8cfede29d4b7f3"
+    },
+    {
+      "youtube_id": "caR1ft-_b0Q",
+      "label": 182,
+      "time_start": 9,
+      "time_end": 19,
+      "frame_count_metadata": 71,
+      "directory": "caR1ft-_b0Q",
+      "rank": "00ef4b747a18cb7d7f87d60a6296b11590f714fb369992ab1fa89b6e435de4f8"
+    },
+    {
+      "youtube_id": "e1lLmbbiksk",
+      "label": 223,
+      "time_start": 144,
+      "time_end": 154,
+      "frame_count_metadata": 122,
+      "directory": "e1lLmbbiksk",
+      "rank": "00f508c8889dc1060cb610ff66b99fc8e6cd80378bb9eb28f5b999144c3b5824"
+    },
+    {
+      "youtube_id": "tV8xpJII1LM",
+      "label": 212,
+      "time_start": 86,
+      "time_end": 96,
+      "frame_count_metadata": 122,
+      "directory": "tV8xpJII1LM",
+      "rank": "00f8618c3cc581b81da84cf7b6e05a5ec5e3969711aad25089f99c0b3eeeec47"
+    },
+    {
+      "youtube_id": "P_L4Tuvc3l0",
+      "label": 253,
+      "time_start": 84,
+      "time_end": 94,
+      "frame_count_metadata": 122,
+      "directory": "P_L4Tuvc3l0",
+      "rank": "010d559632f78e3c3fdc84ecd24e1a5a755244c2bafe7cbc4ce726501950af76"
+    },
+    {
+      "youtube_id": "a_BnFfXVcc4",
+      "label": 253,
+      "time_start": 2,
+      "time_end": 12,
+      "frame_count_metadata": 41,
+      "directory": "a_BnFfXVcc4",
+      "rank": "011174506c0c43e88156c288b651bce3028f53abcb9bec761484c9f75ffc6319"
+    },
+    {
+      "youtube_id": "At7NeSrao5I",
+      "label": 166,
+      "time_start": 26,
+      "time_end": 36,
+      "frame_count_metadata": 117,
+      "directory": "At7NeSrao5I",
+      "rank": "0111b3b4deab47b6b139570895a8902187192983c70175bba6289868c9da12ae"
+    },
+    {
+      "youtube_id": "AV5bPnbuR20",
+      "label": 57,
+      "time_start": 19,
+      "time_end": 29,
+      "frame_count_metadata": 122,
+      "directory": "AV5bPnbuR20",
+      "rank": "01136e6a65046a35ec5e822649350e48c02bfd66de12f21c9e23e4998eb06c5f"
+    },
+    {
+      "youtube_id": "XNDkoioI3rE",
+      "label": 163,
+      "time_start": 5,
+      "time_end": 15,
+      "frame_count_metadata": 122,
+      "directory": "XNDkoioI3rE",
+      "rank": "01157ef08d77510280237dbae2aee927bdd68abf5d4bbda9742d81312c64a596"
+    },
+    {
+      "youtube_id": "go5_N9JnL0U",
+      "label": 27,
+      "time_start": 2,
+      "time_end": 12,
+      "frame_count_metadata": 64,
+      "directory": "go5_N9JnL0U",
+      "rank": "011cf81d71200b6cb24ea3945a3ed1730138a43eb38e254b1e32fc80ca55f228"
+    },
+    {
+      "youtube_id": "ZyvONwcYFtw",
+      "label": 248,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 122,
+      "directory": "ZyvONwcYFtw",
+      "rank": "01264f8d12fe96ee00ade785fa8d417e0d8849a8e12086cf30370be1d9ab506f"
+    },
+    {
+      "youtube_id": "q0PZBq8tm6U",
+      "label": 27,
+      "time_start": 52,
+      "time_end": 62,
+      "frame_count_metadata": 122,
+      "directory": "q0PZBq8tm6U",
+      "rank": "012d32822a99c6560a769dfed136792cba5f4af934f27feaa83f479921f68704"
+    },
+    {
+      "youtube_id": "-m-2ka9iN9M",
+      "label": 237,
+      "time_start": 42,
+      "time_end": 52,
+      "frame_count_metadata": 122,
+      "directory": "-m-2ka9iN9M",
+      "rank": "013359b6eda0b1c4705cc0634c10fef63520eefbbdfb39342e89df52ae1f1559"
+    },
+    {
+      "youtube_id": "auHqPVQAz5E",
+      "label": 53,
+      "time_start": 67,
+      "time_end": 77,
+      "frame_count_metadata": 122,
+      "directory": "auHqPVQAz5E",
+      "rank": "013c4e4538d724eb0e6856f8cbcb7ece09f26f343f8175666bd484e8f1a4e5b7"
+    },
+    {
+      "youtube_id": "JQ6sX-uG9yY",
+      "label": 128,
+      "time_start": 28,
+      "time_end": 38,
+      "frame_count_metadata": 122,
+      "directory": "JQ6sX-uG9yY",
+      "rank": "0147b3f9301c75fe5cc79e4340d6f712036993edf059e690d38ef2f5f2aa841d"
+    },
+    {
+      "youtube_id": "8nYqTnJm-eg",
+      "label": 238,
+      "time_start": 2,
+      "time_end": 12,
+      "frame_count_metadata": 122,
+      "directory": "8nYqTnJm-eg",
+      "rank": "014feb6a884b7f8d75a538538cf306c5f16f2b8508de6bfe04113baf192aaef4"
+    },
+    {
+      "youtube_id": "W9aju01D0LQ",
+      "label": 166,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 111,
+      "directory": "W9aju01D0LQ",
+      "rank": "015080d392eed27c87d2bf83eb4f50f92814296802ac97c5c86ae7f980b9431a"
+    },
+    {
+      "youtube_id": "p0f8Q4CxW0M",
+      "label": 187,
+      "time_start": 146,
+      "time_end": 156,
+      "frame_count_metadata": 116,
+      "directory": "p0f8Q4CxW0M",
+      "rank": "015bde80f8f65d62370fef465fb4ae5b3460e53855f8b68652bc867c57172f32"
+    },
+    {
+      "youtube_id": "_R-LnymjC0o",
+      "label": 177,
+      "time_start": 34,
+      "time_end": 44,
+      "frame_count_metadata": 122,
+      "directory": "_R-LnymjC0o",
+      "rank": "01704f7628ea72e1e68886f848a898dd42f1705e5817e7af7f991c8a2c26a0cb"
+    },
+    {
+      "youtube_id": "ao7G7hAyPco",
+      "label": 356,
+      "time_start": 9,
+      "time_end": 19,
+      "frame_count_metadata": 122,
+      "directory": "ao7G7hAyPco",
+      "rank": "0173b8e039f3f8a73b2b66648e33821744160f93607cbe8e48033cf398059628"
+    },
+    {
+      "youtube_id": "3Wx4j5V0rWg",
+      "label": 28,
+      "time_start": 122,
+      "time_end": 132,
+      "frame_count_metadata": 122,
+      "directory": "3Wx4j5V0rWg",
+      "rank": "017896796de157710467f77fc81d117b77fb1c2b83540203a7a6b7067b6ead6b"
+    },
+    {
+      "youtube_id": "ahoHyCo1-rI",
+      "label": 382,
+      "time_start": 3,
+      "time_end": 13,
+      "frame_count_metadata": 95,
+      "directory": "ahoHyCo1-rI",
+      "rank": "01810e34587db3f6fce9caff6115da7cdd586315bee064e07728ba57abd29c10"
+    },
+    {
+      "youtube_id": "IgE3g3HyUE4",
+      "label": 89,
+      "time_start": 33,
+      "time_end": 43,
+      "frame_count_metadata": 122,
+      "directory": "IgE3g3HyUE4",
+      "rank": "018123b4b8178b058a863a0852799b99676b22e9ec93bf6687ac9524f6c31126"
+    },
+    {
+      "youtube_id": "F7Tmh5j81zI",
+      "label": 213,
+      "time_start": 1,
+      "time_end": 11,
+      "frame_count_metadata": 122,
+      "directory": "F7Tmh5j81zI",
+      "rank": "018441ede1877582f5d20a0ded8f3e3883c41ae32a4c86a2b758fbeb9f848abf"
+    },
+    {
+      "youtube_id": "YH_2tWoQKH4",
+      "label": 115,
+      "time_start": 31,
+      "time_end": 41,
+      "frame_count_metadata": 122,
+      "directory": "YH_2tWoQKH4",
+      "rank": "01858a94f6c874e70da191576db558e1bce74690bca8857855e3db44ad29a658"
+    },
+    {
+      "youtube_id": "y1U6Z2ZYQdc",
+      "label": 111,
+      "time_start": 5,
+      "time_end": 15,
+      "frame_count_metadata": 122,
+      "directory": "y1U6Z2ZYQdc",
+      "rank": "018878517662b9a5e8637b2daf485308650df39edefe19ede2f5be7e215277c0"
+    },
+    {
+      "youtube_id": "lqXDA8aiEsw",
+      "label": 286,
+      "time_start": 81,
+      "time_end": 91,
+      "frame_count_metadata": 122,
+      "directory": "lqXDA8aiEsw",
+      "rank": "018bfd80399ce5f387f73dc276004f975127727c3f98fb667954a3e9dffced4a"
+    },
+    {
+      "youtube_id": "TA7nm2dPZVc",
+      "label": 376,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 101,
+      "directory": "TA7nm2dPZVc",
+      "rank": "0192e0a14595e1408c01ba8de1e97f28c05d46426b923ead36a1d2b86b674e07"
+    },
+    {
+      "youtube_id": "IyCxPrBNAmk",
+      "label": 357,
+      "time_start": 4,
+      "time_end": 14,
+      "frame_count_metadata": 112,
+      "directory": "IyCxPrBNAmk",
+      "rank": "01b6e1453c53a7b1373bfdce34d32a3e2628f8a1444b3460c206cd265a69228a"
+    },
+    {
+      "youtube_id": "IgKFqseG-9c",
+      "label": 192,
+      "time_start": 4,
+      "time_end": 14,
+      "frame_count_metadata": 122,
+      "directory": "IgKFqseG-9c",
+      "rank": "01b7fb1681610c9b8f9701e6e1aab23ff40ec043eb606bd8b8389bbe0f1221d5"
+    },
+    {
+      "youtube_id": "kjgejOmW3Sc",
+      "label": 55,
+      "time_start": 6,
+      "time_end": 16,
+      "frame_count_metadata": 122,
+      "directory": "kjgejOmW3Sc",
+      "rank": "01ba0b62e09c8a199e1c8a2f262e44c40d8571c087fd301f9b7b235370cfaca5"
+    },
+    {
+      "youtube_id": "qH1dW6YUeUo",
+      "label": 232,
+      "time_start": 273,
+      "time_end": 283,
+      "frame_count_metadata": 122,
+      "directory": "qH1dW6YUeUo",
+      "rank": "01c3d338061318dcbf4f881c57a4de85b4436ea8559be3efdc08d22b949a538e"
+    },
+    {
+      "youtube_id": "QpC-rZE2FAE",
+      "label": 178,
+      "time_start": 303,
+      "time_end": 313,
+      "frame_count_metadata": 115,
+      "directory": "QpC-rZE2FAE",
+      "rank": "01c72dc4f369e9cc7a94d34c263d9e2d21a8972b4dd18cec25be3f2899fad8c6"
+    },
+    {
+      "youtube_id": "Zk_4N83fkx4",
+      "label": 141,
+      "time_start": 164,
+      "time_end": 174,
+      "frame_count_metadata": 122,
+      "directory": "Zk_4N83fkx4",
+      "rank": "01c7575f570f4d357259d2c47c909b131d03cbc57c425c1ad22b9c07e555cb7f"
+    },
+    {
+      "youtube_id": "CVPjZGMWIUM",
+      "label": 199,
+      "time_start": 25,
+      "time_end": 35,
+      "frame_count_metadata": 103,
+      "directory": "CVPjZGMWIUM",
+      "rank": "01cea129f725c924be17c37158b68eb25a59b246134580c87c1cbee3f8557b8b"
+    },
+    {
+      "youtube_id": "k1hIvekGoBE",
+      "label": 308,
+      "time_start": 221,
+      "time_end": 231,
+      "frame_count_metadata": 122,
+      "directory": "k1hIvekGoBE",
+      "rank": "01d54ba14a6ee27fa37828c4426c3de1508d38122ad61e3ccf4743f8a3e3b2b2"
+    },
+    {
+      "youtube_id": "bKM3pS6y2iU",
+      "label": 308,
+      "time_start": 32,
+      "time_end": 42,
+      "frame_count_metadata": 122,
+      "directory": "bKM3pS6y2iU",
+      "rank": "01db26b9c4ff175dbeaae53f3d0bd83a8b6ec804671368192b9ec04d37514808"
+    },
+    {
+      "youtube_id": "PjBFvqIA6hk",
+      "label": 63,
+      "time_start": 10,
+      "time_end": 20,
+      "frame_count_metadata": 96,
+      "directory": "PjBFvqIA6hk",
+      "rank": "01e1c168da8cbd3406ce9675a2906ba7b937cba21ef4aae26cfa1b82119d0d09"
+    },
+    {
+      "youtube_id": "dzeivZlP6tU",
+      "label": 389,
+      "time_start": 24,
+      "time_end": 34,
+      "frame_count_metadata": 122,
+      "directory": "dzeivZlP6tU",
+      "rank": "01e258b820715d7e580e60174984941c4321e3f1784546bc97b44ae812eb8f99"
+    },
+    {
+      "youtube_id": "ehG5gMBt9gs",
+      "label": 202,
+      "time_start": 202,
+      "time_end": 212,
+      "frame_count_metadata": 122,
+      "directory": "ehG5gMBt9gs",
+      "rank": "01e8edfac09c4b4dbdcc0427ed2ac5df43b5ac18fdd423b50119eb954d36491f"
+    },
+    {
+      "youtube_id": "p7gcAtB0VrI",
+      "label": 300,
+      "time_start": 2,
+      "time_end": 12,
+      "frame_count_metadata": 122,
+      "directory": "p7gcAtB0VrI",
+      "rank": "01f1f15322c149c85e82b10c6623a269deb0f400620d071bb81f80feee1bbd97"
+    },
+    {
+      "youtube_id": "9bx-YVn-N2s",
+      "label": 1,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 66,
+      "directory": "9bx-YVn-N2s",
+      "rank": "01fbe626c52211379254e4a78437f10b5f45b48b824f0353cfccc23ac92e325c"
+    },
+    {
+      "youtube_id": "yGd4y0Z5xOg",
+      "label": 41,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 73,
+      "directory": "yGd4y0Z5xOg",
+      "rank": "021268a3a91369126a82737815320a8a72331a692cd8cc28f609202fbce89730"
+    },
+    {
+      "youtube_id": "HJXT067oOi8",
+      "label": 203,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 122,
+      "directory": "HJXT067oOi8",
+      "rank": "02127a6e8cd5a3a8fea196503421a0621af70bbff8a839599ae4d84b9e96a27b"
+    },
+    {
+      "youtube_id": "0GJDwzYw7wo",
+      "label": 18,
+      "time_start": 3,
+      "time_end": 13,
+      "frame_count_metadata": 122,
+      "directory": "0GJDwzYw7wo",
+      "rank": "022663c9efa981c058f4c25ece03e9e5062778eaaae49cd4ace31500328776e5"
+    },
+    {
+      "youtube_id": "ocUbXJkvYRY",
+      "label": 238,
+      "time_start": 5,
+      "time_end": 15,
+      "frame_count_metadata": 122,
+      "directory": "ocUbXJkvYRY",
+      "rank": "0226dfc6f961af305d82e9b33261337b8dcfe4139e28493cc7de69aa1ec3fc67"
+    },
+    {
+      "youtube_id": "9dUkIbsOEAM",
+      "label": 154,
+      "time_start": 7,
+      "time_end": 17,
+      "frame_count_metadata": 77,
+      "directory": "9dUkIbsOEAM",
+      "rank": "022b43b9f33d9405e65b8659f6836d967853294e124421c3e14e3285960f45f8"
+    },
+    {
+      "youtube_id": "AV9_t0LYy8Y",
+      "label": 94,
+      "time_start": 76,
+      "time_end": 86,
+      "frame_count_metadata": 122,
+      "directory": "AV9_t0LYy8Y",
+      "rank": "022d04e2b1873afdc968c7d6c2ddfc0b7f7bfc78d0c9fcc652ac7c1eb1f1f0a9"
+    },
+    {
+      "youtube_id": "TPKVrO6DdPw",
+      "label": 218,
+      "time_start": 26,
+      "time_end": 36,
+      "frame_count_metadata": 122,
+      "directory": "TPKVrO6DdPw",
+      "rank": "02395d1e96c5a2763ff1e13f5bb8ecffad9671c127b3bf4c615da99e2d7ec4d8"
+    },
+    {
+      "youtube_id": "wR3cCcmP0SQ",
+      "label": 385,
+      "time_start": 28,
+      "time_end": 38,
+      "frame_count_metadata": 122,
+      "directory": "wR3cCcmP0SQ",
+      "rank": "024b2cb8f7cce006a30c2bbcafbc0acc20af5d49ec1a1f12cd39d299dc3a4356"
+    },
+    {
+      "youtube_id": "8vNVXYT-x2A",
+      "label": 193,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 122,
+      "directory": "8vNVXYT-x2A",
+      "rank": "024b96619e86c397c67623392b9c58eba5a9c45725657af8c65ed4cdcc67b582"
+    },
+    {
+      "youtube_id": "ieN8KAqiJl8",
+      "label": 283,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 122,
+      "directory": "ieN8KAqiJl8",
+      "rank": "024d28279bae94467196b696e9f3d6764a5817310d5a8cdfe5ec7e6ac82431d5"
+    },
+    {
+      "youtube_id": "E4iysix7GcU",
+      "label": 82,
+      "time_start": 31,
+      "time_end": 41,
+      "frame_count_metadata": 122,
+      "directory": "E4iysix7GcU",
+      "rank": "024fc8292a857c3c8970ad36de40eed68e6aa96952367379a9832f62d9316e4a"
+    },
+    {
+      "youtube_id": "2uVVdgxzy2A",
+      "label": 50,
+      "time_start": 5,
+      "time_end": 15,
+      "frame_count_metadata": 122,
+      "directory": "2uVVdgxzy2A",
+      "rank": "0255ca8e97e546a4b75dde551319ce180d81e8062c4a858ad0ca956d7ad4e5a5"
+    },
+    {
+      "youtube_id": "4jWDOUY_CP0",
+      "label": 254,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 122,
+      "directory": "4jWDOUY_CP0",
+      "rank": "025f2ccca29615d11144a70f96ac9af357e9ef63b0ca99faf84a73d9921b4e4c"
+    },
+    {
+      "youtube_id": "EWWYBI928ms",
+      "label": 350,
+      "time_start": 1,
+      "time_end": 11,
+      "frame_count_metadata": 122,
+      "directory": "EWWYBI928ms",
+      "rank": "026185883b68e0f67861f1761e19df47e4c72737a86555e8675058d134fb6fbb"
+    },
+    {
+      "youtube_id": "Oef3VceFO9s",
+      "label": 258,
+      "time_start": 11,
+      "time_end": 21,
+      "frame_count_metadata": 122,
+      "directory": "Oef3VceFO9s",
+      "rank": "02671dc47853c38f26548a1b0d55e5e4455238ea18cf488c9f61190c8066edfe"
+    },
+    {
+      "youtube_id": "hjKnYwZaVX4",
+      "label": 3,
+      "time_start": 5,
+      "time_end": 15,
+      "frame_count_metadata": 122,
+      "directory": "hjKnYwZaVX4",
+      "rank": "026917d2c2dd5730c0cd5d03a6b7f2eaf1aa9918c485fd3091344877a9322898"
+    },
+    {
+      "youtube_id": "PCmschRcWLQ",
+      "label": 312,
+      "time_start": 49,
+      "time_end": 59,
+      "frame_count_metadata": 122,
+      "directory": "PCmschRcWLQ",
+      "rank": "026a7a65917a1dd1700ffab69f9a40f32f5b72f1d77fffe85049bb00437ffe57"
+    },
+    {
+      "youtube_id": "TPs6CZs7LtY",
+      "label": 170,
+      "time_start": 238,
+      "time_end": 248,
+      "frame_count_metadata": 122,
+      "directory": "TPs6CZs7LtY",
+      "rank": "0274e08884cd215b0b20e4075454f28fb6a54ef0f7bdd789109e0e8d1dd813b2"
+    },
+    {
+      "youtube_id": "rF8jfu5F5v4",
+      "label": 383,
+      "time_start": 110,
+      "time_end": 120,
+      "frame_count_metadata": 122,
+      "directory": "rF8jfu5F5v4",
+      "rank": "0276ec5cc012996528f12268cce99e99e539e21d64b1b2402d501f5c49f7ef1b"
+    },
+    {
+      "youtube_id": "Hu4OX-8jzoc",
+      "label": 183,
+      "time_start": 2,
+      "time_end": 12,
+      "frame_count_metadata": 122,
+      "directory": "Hu4OX-8jzoc",
+      "rank": "0283370ca1707ca7e5f542eba4c52539a89f02e543fadc96dc33d356d48803a1"
+    },
+    {
+      "youtube_id": "ZcYT82-Agrc",
+      "label": 208,
+      "time_start": 7,
+      "time_end": 17,
+      "frame_count_metadata": 92,
+      "directory": "ZcYT82-Agrc",
+      "rank": "0284f071577fedef2e871905d50d5dc0e4dd288a2a2d3bdeeea0673dd5f7eedd"
+    },
+    {
+      "youtube_id": "NGBxhcfD7O8",
+      "label": 346,
+      "time_start": 3,
+      "time_end": 13,
+      "frame_count_metadata": 122,
+      "directory": "NGBxhcfD7O8",
+      "rank": "028c8f424e374ed264d9ba50f00d6db1d7f2fdaa2393b50a8d5fa19da540b194"
+    },
+    {
+      "youtube_id": "Ij_3UvY3b8E",
+      "label": 319,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 81,
+      "directory": "Ij_3UvY3b8E",
+      "rank": "028d14411d95f7baa2bca65f513ac659d4bbbb0478728d4bd5c40d0703696428"
+    },
+    {
+      "youtube_id": "HihF3GPhvhA",
+      "label": 61,
+      "time_start": 117,
+      "time_end": 127,
+      "frame_count_metadata": 122,
+      "directory": "HihF3GPhvhA",
+      "rank": "029e9c58505b674afb20e43796aabf59f69ab75ed8a32f92b9889fe56dfa706c"
+    },
+    {
+      "youtube_id": "pa9qyV8cbek",
+      "label": 125,
+      "time_start": 6,
+      "time_end": 16,
+      "frame_count_metadata": 122,
+      "directory": "pa9qyV8cbek",
+      "rank": "029ec822c078859d6abe7d66105d1fac7ab48093d45bbc5f195a75fa6ab98984"
+    },
+    {
+      "youtube_id": "6CEV2jpEZjY",
+      "label": 280,
+      "time_start": 113,
+      "time_end": 123,
+      "frame_count_metadata": 122,
+      "directory": "6CEV2jpEZjY",
+      "rank": "029f6931215ab98c7184fe3600af616c54fb03398e478e7fbb8fc56e942d99a2"
+    },
+    {
+      "youtube_id": "Nay7yu0HMM4",
+      "label": 36,
+      "time_start": 48,
+      "time_end": 58,
+      "frame_count_metadata": 122,
+      "directory": "Nay7yu0HMM4",
+      "rank": "02a2c52d696b4e37f833d8072aadf4cb2eae5700a078d23d053b24354e31d52c"
+    },
+    {
+      "youtube_id": "m0wo07UGmaQ",
+      "label": 68,
+      "time_start": 16,
+      "time_end": 26,
+      "frame_count_metadata": 122,
+      "directory": "m0wo07UGmaQ",
+      "rank": "02a71ffd670b19b3bb74380357ec7adcb3a1ac28984b5d47d7c986f5ab397634"
+    },
+    {
+      "youtube_id": "Lz2aUsmtGGc",
+      "label": 50,
+      "time_start": 130,
+      "time_end": 140,
+      "frame_count_metadata": 122,
+      "directory": "Lz2aUsmtGGc",
+      "rank": "02b00776d855f1442e1191e701c4df1e59aa506461c7098386a580c89d430011"
+    },
+    {
+      "youtube_id": "sqqOLTSLM6A",
+      "label": 375,
+      "time_start": 361,
+      "time_end": 371,
+      "frame_count_metadata": 122,
+      "directory": "sqqOLTSLM6A",
+      "rank": "02b3388eef2e3a866f25386ace6890321df1a6b68696141055f9dcbd08bb969a"
+    },
+    {
+      "youtube_id": "Fpe5A0w9m10",
+      "label": 305,
+      "time_start": 23,
+      "time_end": 33,
+      "frame_count_metadata": 122,
+      "directory": "Fpe5A0w9m10",
+      "rank": "02b94dde7c293f02d7af9f7157a6a579c80e47ec90121d42ef3a4ff6db6730de"
+    },
+    {
+      "youtube_id": "LKtpHHx793A",
+      "label": 304,
+      "time_start": 186,
+      "time_end": 196,
+      "frame_count_metadata": 122,
+      "directory": "LKtpHHx793A",
+      "rank": "02bc341680ed0d05f6e1ffec5e48ffc9d7a6335eaf602ba08e309069d720c9a3"
+    },
+    {
+      "youtube_id": "sFobl5_CbJk",
+      "label": 123,
+      "time_start": 4,
+      "time_end": 14,
+      "frame_count_metadata": 91,
+      "directory": "sFobl5_CbJk",
+      "rank": "02beea3f6f93f40e1a31b4e6aad938ce3938d6119c91a9ebbcbef7f50cd759ef"
+    },
+    {
+      "youtube_id": "Kxhz0tM5kro",
+      "label": 307,
+      "time_start": 37,
+      "time_end": 47,
+      "frame_count_metadata": 122,
+      "directory": "Kxhz0tM5kro",
+      "rank": "02c257284604867fc1a45a28839a2cd95854dffd0ec4330c1a210a6da58786e5"
+    },
+    {
+      "youtube_id": "wjTyHApVMJg",
+      "label": 96,
+      "time_start": 21,
+      "time_end": 31,
+      "frame_count_metadata": 122,
+      "directory": "wjTyHApVMJg",
+      "rank": "02cd976eab4beff5726fb026d8c87ac39b0fec8e6b8bce9659f5369013d42c1d"
+    },
+    {
+      "youtube_id": "oj7arJHLcHo",
+      "label": 199,
+      "time_start": 130,
+      "time_end": 140,
+      "frame_count_metadata": 122,
+      "directory": "oj7arJHLcHo",
+      "rank": "02d18299fae5b85215404954c91fc1ad4d89ee46e22d003c99925321c93c809c"
+    },
+    {
+      "youtube_id": "C15qK3MFWLk",
+      "label": 370,
+      "time_start": 1,
+      "time_end": 11,
+      "frame_count_metadata": 122,
+      "directory": "C15qK3MFWLk",
+      "rank": "02d3a5b976d075d3a6d4a9fd544485e100f374a92cf92e10f0fe9941d0af94a5"
+    },
+    {
+      "youtube_id": "2zxsFNN_UiI",
+      "label": 295,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 122,
+      "directory": "2zxsFNN_UiI",
+      "rank": "02d57e66eb8c6699a050a7dda84f259149328acde17155976afc62f09558af05"
+    },
+    {
+      "youtube_id": "xSV-oLfCsrI",
+      "label": 135,
+      "time_start": 63,
+      "time_end": 73,
+      "frame_count_metadata": 122,
+      "directory": "xSV-oLfCsrI",
+      "rank": "02e24c823b4a91656f72f449b84c7562af30d162be3f9fea57a481b7e3a4ffc6"
+    },
+    {
+      "youtube_id": "9fpVvCRPNy0",
+      "label": 265,
+      "time_start": 76,
+      "time_end": 86,
+      "frame_count_metadata": 114,
+      "directory": "9fpVvCRPNy0",
+      "rank": "02e5346c5915707232647154abc9fe654218201b287949f5e50789b808cb03d4"
+    },
+    {
+      "youtube_id": "NMaC-_IGv_Q",
+      "label": 182,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 62,
+      "directory": "NMaC-_IGv_Q",
+      "rank": "02e5b252825258cae9d244acbaa9efd50995534ef0e8bac3d92bb220d376df8d"
+    },
+    {
+      "youtube_id": "ZpYNqEbzJec",
+      "label": 329,
+      "time_start": 2,
+      "time_end": 12,
+      "frame_count_metadata": 104,
+      "directory": "ZpYNqEbzJec",
+      "rank": "02e79bba3c67654d77cbcf62640370d4926b6c1219e92332c8ba5b5defe39690"
+    },
+    {
+      "youtube_id": "jtS3MRFjV1Y",
+      "label": 79,
+      "time_start": 6,
+      "time_end": 16,
+      "frame_count_metadata": 122,
+      "directory": "jtS3MRFjV1Y",
+      "rank": "02edc4d6f2afd15210b7ab32fcaf9347e6eec5b5cc259ebae7c33eb5f1398ee2"
+    },
+    {
+      "youtube_id": "IX7XRhiV8b4",
+      "label": 383,
+      "time_start": 78,
+      "time_end": 88,
+      "frame_count_metadata": 122,
+      "directory": "IX7XRhiV8b4",
+      "rank": "02eed77c896bdd7f2a46c4f04e1e99a1ae0680a5031f212be2f6cd149432c159"
+    },
+    {
+      "youtube_id": "ZQPOHo5G1z8",
+      "label": 347,
+      "time_start": 37,
+      "time_end": 47,
+      "frame_count_metadata": 122,
+      "directory": "ZQPOHo5G1z8",
+      "rank": "02fccaec448801ee8aa1853df65c900305ca55574f4a229cd65c1e50f60816d0"
+    },
+    {
+      "youtube_id": "HzZP5PVc080",
+      "label": 218,
+      "time_start": 208,
+      "time_end": 218,
+      "frame_count_metadata": 122,
+      "directory": "HzZP5PVc080",
+      "rank": "03019e5f77e2f78f3c75c6e46d0e434dc862ae861b111b3c24c7e535ba067869"
+    },
+    {
+      "youtube_id": "UFpdMfP3XPc",
+      "label": 298,
+      "time_start": 3,
+      "time_end": 13,
+      "frame_count_metadata": 122,
+      "directory": "UFpdMfP3XPc",
+      "rank": "03064f824cbecd77d600026d32075e384d177feab54ae8d2fe3fbe87cc63af69"
+    },
+    {
+      "youtube_id": "69lGQYJOxA8",
+      "label": 94,
+      "time_start": 409,
+      "time_end": 419,
+      "frame_count_metadata": 72,
+      "directory": "69lGQYJOxA8",
+      "rank": "03118b1247367274e06669ddea98a99359a1381a73f784fc51e975a16b42cd17"
+    },
+    {
+      "youtube_id": "Ui06uqNqVl8",
+      "label": 165,
+      "time_start": 17,
+      "time_end": 27,
+      "frame_count_metadata": 122,
+      "directory": "Ui06uqNqVl8",
+      "rank": "0314ab877215844f9ebd736f9d9007c2d8b818cbc428ed356fe4ed3a40cbd1ab"
+    },
+    {
+      "youtube_id": "jiOopSLvFMQ",
+      "label": 298,
+      "time_start": 5,
+      "time_end": 15,
+      "frame_count_metadata": 74,
+      "directory": "jiOopSLvFMQ",
+      "rank": "03166cd9ebb5de7d7571a93f442e977b984da4dd2715ccb850949fe87561ddab"
+    },
+    {
+      "youtube_id": "Lr7QCcuko2E",
+      "label": 61,
+      "time_start": 20,
+      "time_end": 30,
+      "frame_count_metadata": 122,
+      "directory": "Lr7QCcuko2E",
+      "rank": "031a07ce49c5cc5e75f79c48a5772703b0cebcb42448bbde86b2ae7ec9babf69"
+    },
+    {
+      "youtube_id": "wo36qZoOOLU",
+      "label": 191,
+      "time_start": 2,
+      "time_end": 12,
+      "frame_count_metadata": 122,
+      "directory": "wo36qZoOOLU",
+      "rank": "032988af4dd1bc8c83eaf6ee9d39661baa9b75fe3b2e3261805f9ccf027791a7"
+    },
+    {
+      "youtube_id": "SKZqCF74dao",
+      "label": 268,
+      "time_start": 15,
+      "time_end": 25,
+      "frame_count_metadata": 122,
+      "directory": "SKZqCF74dao",
+      "rank": "032a352ddd16cddc3bc2d642384b3ef3d92aedbacca74efb1a1880a01e2a2ade"
+    },
+    {
+      "youtube_id": "w68UOpC3bUw",
+      "label": 296,
+      "time_start": 316,
+      "time_end": 326,
+      "frame_count_metadata": 122,
+      "directory": "w68UOpC3bUw",
+      "rank": "032a8cebb1f11e2846b3f4a87f1bf59ef1c15cc68de62fd17a25c514316eada4"
+    },
+    {
+      "youtube_id": "mVHZaKeWPlI",
+      "label": 101,
+      "time_start": 1,
+      "time_end": 11,
+      "frame_count_metadata": 65,
+      "directory": "mVHZaKeWPlI",
+      "rank": "032b277ae968f4d33b17badce738edc036cd1f0c8cf7d8a2e9ee3b0e7f320c28"
+    },
+    {
+      "youtube_id": "4F3HxPIT91o",
+      "label": 295,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 122,
+      "directory": "4F3HxPIT91o",
+      "rank": "03353e7f4294c1cbba95389a0b28fe886f2cc65b01caf53df27ac0aa1649e6a5"
+    },
+    {
+      "youtube_id": "_pvhiVa3FjA",
+      "label": 136,
+      "time_start": 240,
+      "time_end": 250,
+      "frame_count_metadata": 122,
+      "directory": "_pvhiVa3FjA",
+      "rank": "03372c47e0c353c318297bbd5d5d6e68b24cb9cdbdae5ceaf922734e9d1bc7e8"
+    },
+    {
+      "youtube_id": "nPGctuxTMd4",
+      "label": 219,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 122,
+      "directory": "nPGctuxTMd4",
+      "rank": "034b93b1407ebcfc604c6139a484b56563d233f67ce34919422d7b760e9b0e79"
+    },
+    {
+      "youtube_id": "1sXlRCAtVAM",
+      "label": 135,
+      "time_start": 705,
+      "time_end": 715,
+      "frame_count_metadata": 122,
+      "directory": "1sXlRCAtVAM",
+      "rank": "03523c0e28a5e6d94832b4a89108ff8fda876ca912fb093e780ea262fde46442"
+    },
+    {
+      "youtube_id": "g0AmzoZYSq0",
+      "label": 75,
+      "time_start": 67,
+      "time_end": 77,
+      "frame_count_metadata": 122,
+      "directory": "g0AmzoZYSq0",
+      "rank": "035d9cb55ddb6bb84ad5b36e1e28075d5437d9c6f2cf02fdec0b8e8f728eac24"
+    },
+    {
+      "youtube_id": "PHh6eI5oN14",
+      "label": 254,
+      "time_start": 9,
+      "time_end": 19,
+      "frame_count_metadata": 122,
+      "directory": "PHh6eI5oN14",
+      "rank": "035fb8830f1b70063a0deb5de8da400af221f36c7a7332ec850b1b276950b7f0"
+    },
+    {
+      "youtube_id": "39q2d9JQN0E",
+      "label": 184,
+      "time_start": 164,
+      "time_end": 174,
+      "frame_count_metadata": 122,
+      "directory": "39q2d9JQN0E",
+      "rank": "03601ff96c600823641845437ec3662493e18e9619049d8dcea93ec20f0128ea"
+    },
+    {
+      "youtube_id": "7dUhZWrCgUU",
+      "label": 116,
+      "time_start": 20,
+      "time_end": 30,
+      "frame_count_metadata": 122,
+      "directory": "7dUhZWrCgUU",
+      "rank": "036071779975312aabaf05448b77b7606bf1569679e471e5eeabcd7d3c863df7"
+    },
+    {
+      "youtube_id": "FC1iry0ICA0",
+      "label": 128,
+      "time_start": 16,
+      "time_end": 26,
+      "frame_count_metadata": 122,
+      "directory": "FC1iry0ICA0",
+      "rank": "0367a44a4083bf9a1c39d182339798610671e5dfb057c8ce876fa75f2e1bb98a"
+    },
+    {
+      "youtube_id": "4JxH3S5JwMs",
+      "label": 31,
+      "time_start": 3,
+      "time_end": 13,
+      "frame_count_metadata": 122,
+      "directory": "4JxH3S5JwMs",
+      "rank": "03691f44a69863f48845bce59eeeba9ace835a009d54e90d5ff629e5787cf641"
+    },
+    {
+      "youtube_id": "hu2dBJTGJqI",
+      "label": 374,
+      "time_start": 12,
+      "time_end": 22,
+      "frame_count_metadata": 122,
+      "directory": "hu2dBJTGJqI",
+      "rank": "0379215a1fb88d02eb57f87e38aff4ef08f4afa111d5a23559f98c791f5b5b13"
+    },
+    {
+      "youtube_id": "Hp2i2CG11wY",
+      "label": 27,
+      "time_start": 63,
+      "time_end": 73,
+      "frame_count_metadata": 122,
+      "directory": "Hp2i2CG11wY",
+      "rank": "037d7bef82b90d274c76bc0892e04a5ee1d76350fd76bda122e3e26c04897334"
+    },
+    {
+      "youtube_id": "mhTqD1rA-po",
+      "label": 373,
+      "time_start": 17,
+      "time_end": 27,
+      "frame_count_metadata": 122,
+      "directory": "mhTqD1rA-po",
+      "rank": "037e2b42180943e6a063f6470d4c603aeb72b08c956c1789dea1b5f4357db591"
+    },
+    {
+      "youtube_id": "SxW8hYW0FnA",
+      "label": 169,
+      "time_start": 1,
+      "time_end": 11,
+      "frame_count_metadata": 110,
+      "directory": "SxW8hYW0FnA",
+      "rank": "03820f7e93db2b87ff52aa59e115660504322661edacf2a70f90cbebf5aa3591"
+    },
+    {
+      "youtube_id": "F4C7r0y49lQ",
+      "label": 241,
+      "time_start": 4,
+      "time_end": 14,
+      "frame_count_metadata": 122,
+      "directory": "F4C7r0y49lQ",
+      "rank": "0397110095cecaf8a2b704c6a3dedfe2847e58ac4344e155834bc731bcb51f2a"
+    },
+    {
+      "youtube_id": "mQYuteamGwA",
+      "label": 1,
+      "time_start": 3,
+      "time_end": 13,
+      "frame_count_metadata": 122,
+      "directory": "mQYuteamGwA",
+      "rank": "0399bb699d93dcd3e2931845d3c67eb572f010adf3781a751b6b410beb364a9a"
+    },
+    {
+      "youtube_id": "2OlWhcFoaMM",
+      "label": 9,
+      "time_start": 117,
+      "time_end": 127,
+      "frame_count_metadata": 84,
+      "directory": "2OlWhcFoaMM",
+      "rank": "039b92c82053a856fe5ae35b2770860c2bd4071892af1ba4c62233286f1b2212"
+    },
+    {
+      "youtube_id": "tSKKYB6t51g",
+      "label": 27,
+      "time_start": 6,
+      "time_end": 16,
+      "frame_count_metadata": 122,
+      "directory": "tSKKYB6t51g",
+      "rank": "039bbfdf890f5b8780345802131813fc41b722d3cf88b8c1811bff162a557361"
+    },
+    {
+      "youtube_id": "vLOJziNeVzM",
+      "label": 173,
+      "time_start": 45,
+      "time_end": 55,
+      "frame_count_metadata": 122,
+      "directory": "vLOJziNeVzM",
+      "rank": "03a1bf3aecb7decbcc9948f04eafdcc7fd3ccf8e55464b4277dc8eb946e045f2"
+    },
+    {
+      "youtube_id": "HgCI6VFMGiw",
+      "label": 386,
+      "time_start": 2,
+      "time_end": 12,
+      "frame_count_metadata": 122,
+      "directory": "HgCI6VFMGiw",
+      "rank": "03a2edffed92558d278f9aaeec459d9761b6a971cf5872783e5feb345f4e691e"
+    },
+    {
+      "youtube_id": "tkv9hTAJFeg",
+      "label": 129,
+      "time_start": 3,
+      "time_end": 13,
+      "frame_count_metadata": 68,
+      "directory": "tkv9hTAJFeg",
+      "rank": "03a8810525a58156ae27426c415fbb21aca8e1446697fb55ff2c46f42050a4d1"
+    },
+    {
+      "youtube_id": "tiqPxgLXVcY",
+      "label": 159,
+      "time_start": 9,
+      "time_end": 19,
+      "frame_count_metadata": 63,
+      "directory": "tiqPxgLXVcY",
+      "rank": "03a99908b65b298da938e09e000943b616b37ba3539b4442c7c4a1896cb49638"
+    },
+    {
+      "youtube_id": "ocNg21dKAzc",
+      "label": 92,
+      "time_start": 1593,
+      "time_end": 1603,
+      "frame_count_metadata": 122,
+      "directory": "ocNg21dKAzc",
+      "rank": "03ae43d7096ea040460529435bed09393be6dfe98824f4db4c35276342849e9f"
+    },
+    {
+      "youtube_id": "cAj84e7_6w4",
+      "label": 77,
+      "time_start": 19,
+      "time_end": 29,
+      "frame_count_metadata": 122,
+      "directory": "cAj84e7_6w4",
+      "rank": "03b0b96be0201535bdf967a461bba4493906ca9d594cd220ba1aac8ac99d4e7e"
+    },
+    {
+      "youtube_id": "U96UWdc-3Aw",
+      "label": 252,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 122,
+      "directory": "U96UWdc-3Aw",
+      "rank": "03b3865c1788d73a642b83f1ffa5429258e1fe16f4a21b883e384de7617e44cb"
+    },
+    {
+      "youtube_id": "JdTbS0BtltQ",
+      "label": 68,
+      "time_start": 27,
+      "time_end": 37,
+      "frame_count_metadata": 122,
+      "directory": "JdTbS0BtltQ",
+      "rank": "03bc5fc90b43c644c79798878fe52a56980762a48d03d7dfbfb37aefc09d5839"
+    },
+    {
+      "youtube_id": "V12ELx1WHok",
+      "label": 38,
+      "time_start": 80,
+      "time_end": 90,
+      "frame_count_metadata": 122,
+      "directory": "V12ELx1WHok",
+      "rank": "03c062405568f5b1484f5ff4c2cf51aac96e7fbfa073b6b17494871cacdffb2d"
+    },
+    {
+      "youtube_id": "-9Rcf4Fzed8",
+      "label": 272,
+      "time_start": 2,
+      "time_end": 12,
+      "frame_count_metadata": 122,
+      "directory": "-9Rcf4Fzed8",
+      "rank": "03ca113fd273a0738cf6ad964cd05d884449103e64bab1634afcd1c1a26e7a3d"
+    },
+    {
+      "youtube_id": "6FEwHX0NpOQ",
+      "label": 8,
+      "time_start": 386,
+      "time_end": 396,
+      "frame_count_metadata": 122,
+      "directory": "6FEwHX0NpOQ",
+      "rank": "03cdbc803f794e50916720b5958e1614d2c3336bf857baa5039becdf0baa883a"
+    },
+    {
+      "youtube_id": "fWDXUvC1zuo",
+      "label": 314,
+      "time_start": 21,
+      "time_end": 31,
+      "frame_count_metadata": 122,
+      "directory": "fWDXUvC1zuo",
+      "rank": "03d4ea361d110910090eee3c7964f3f0e6f305e64a156e1b26589af314ee77e3"
+    },
+    {
+      "youtube_id": "eJjZKa14gCQ",
+      "label": 210,
+      "time_start": 17,
+      "time_end": 27,
+      "frame_count_metadata": 122,
+      "directory": "eJjZKa14gCQ",
+      "rank": "03d669cea76b3f5de344a8a910e1c756370246beb4c5c5e0479e8ccba31e3f3e"
+    },
+    {
+      "youtube_id": "jDTfMSxMSjQ",
+      "label": 337,
+      "time_start": 112,
+      "time_end": 122,
+      "frame_count_metadata": 122,
+      "directory": "jDTfMSxMSjQ",
+      "rank": "03d94348c9c13a9d451364b1dde004f409eb2d25490a75fb6c9812a9937b605c"
+    },
+    {
+      "youtube_id": "gw_M5A_Mww4",
+      "label": 27,
+      "time_start": 4,
+      "time_end": 14,
+      "frame_count_metadata": 122,
+      "directory": "gw_M5A_Mww4",
+      "rank": "03dc549e1eb13daa16bc5f368c33e615474d53df8190b3febec993768b228652"
+    },
+    {
+      "youtube_id": "9xRs-w8HtXE",
+      "label": 243,
+      "time_start": 3,
+      "time_end": 13,
+      "frame_count_metadata": 99,
+      "directory": "9xRs-w8HtXE",
+      "rank": "03e2889b70b22073341376b7da6c62eafb2d3934ebe7fe57a4ff556ccafec279"
+    },
+    {
+      "youtube_id": "Vgz1ER6MNic",
+      "label": 375,
+      "time_start": 4,
+      "time_end": 14,
+      "frame_count_metadata": 122,
+      "directory": "Vgz1ER6MNic",
+      "rank": "03eb3b7b073d633cabe416c492754d2f5417da3611714941afd039483689a951"
+    },
+    {
+      "youtube_id": "y0dO7BCGmqs",
+      "label": 336,
+      "time_start": 4,
+      "time_end": 14,
+      "frame_count_metadata": 122,
+      "directory": "y0dO7BCGmqs",
+      "rank": "03ebdaff8248d943de6de98fd450ed15b1e1873c6ac7f4f49d78cbcbbb9d9607"
+    },
+    {
+      "youtube_id": "dSmWDBOP6r4",
+      "label": 155,
+      "time_start": 1,
+      "time_end": 11,
+      "frame_count_metadata": 122,
+      "directory": "dSmWDBOP6r4",
+      "rank": "03fa63261b66e1b613784125e24fd15cc65e887ff7421ef712ec8ebbff4dfa9c"
+    },
+    {
+      "youtube_id": "1pWCgNggH5M",
+      "label": 208,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 57,
+      "directory": "1pWCgNggH5M",
+      "rank": "03fae571bae9038f3cf9dc81d8c57811c01bc1d605ed1aa6c2c95456b9906e96"
+    },
+    {
+      "youtube_id": "SQddPtgoQGE",
+      "label": 298,
+      "time_start": 7,
+      "time_end": 17,
+      "frame_count_metadata": 122,
+      "directory": "SQddPtgoQGE",
+      "rank": "03fd6e4702c0263b7a10b6a528f6d83d87674ea229acc68a54695f3d446d9c1a"
+    },
+    {
+      "youtube_id": "HV0Hs4UysUM",
+      "label": 49,
+      "time_start": 4,
+      "time_end": 14,
+      "frame_count_metadata": 122,
+      "directory": "HV0Hs4UysUM",
+      "rank": "03ffa895c013c0a8df63d3415c6c52c2e58e5734ed9001ba4a36aa765c42d581"
+    },
+    {
+      "youtube_id": "9RKVtmshPrg",
+      "label": 49,
+      "time_start": 14,
+      "time_end": 24,
+      "frame_count_metadata": 122,
+      "directory": "9RKVtmshPrg",
+      "rank": "04007d068a860f8e12adeef7f7fddc06e0b904284e16be0032406646fcb91c7d"
+    },
+    {
+      "youtube_id": "WpJcyfCzf30",
+      "label": 119,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 122,
+      "directory": "WpJcyfCzf30",
+      "rank": "0401773956bd9f1f0f2e15a566ea2eb9862199a6acc6da6a2bf98a84715129c5"
+    },
+    {
+      "youtube_id": "lz0_CYRI0NA",
+      "label": 303,
+      "time_start": 9,
+      "time_end": 19,
+      "frame_count_metadata": 122,
+      "directory": "lz0_CYRI0NA",
+      "rank": "0403ca1aef27f32ca465d1c3ef703cd32a09cae7793656e1f02549a966da3290"
+    },
+    {
+      "youtube_id": "4Raya03L2xU",
+      "label": 170,
+      "time_start": 46,
+      "time_end": 56,
+      "frame_count_metadata": 122,
+      "directory": "4Raya03L2xU",
+      "rank": "04058b2dfa2e3cfe172724c544d394234c88410b25d0122892498187d21d2dcb"
+    },
+    {
+      "youtube_id": "ZgHZ0KgFOSc",
+      "label": 165,
+      "time_start": 215,
+      "time_end": 225,
+      "frame_count_metadata": 122,
+      "directory": "ZgHZ0KgFOSc",
+      "rank": "040c597b54ca2053cad7d1528a4b73fd47b66b06c554117afb1dca1cef283aef"
+    },
+    {
+      "youtube_id": "EjQCOH12RX0",
+      "label": 283,
+      "time_start": 65,
+      "time_end": 75,
+      "frame_count_metadata": 122,
+      "directory": "EjQCOH12RX0",
+      "rank": "0412265dc16e3177c471efb4ec8f3952d89e875d8b4927f39e7d786a4d0fa965"
+    },
+    {
+      "youtube_id": "uPMrdDdZ688",
+      "label": 220,
+      "time_start": 107,
+      "time_end": 117,
+      "frame_count_metadata": 122,
+      "directory": "uPMrdDdZ688",
+      "rank": "04178b83044d2905cb0b8c81b55c76b9d2f2043ade7f71350c7377daa543ea68"
+    },
+    {
+      "youtube_id": "VbEWELuXntI",
+      "label": 110,
+      "time_start": 36,
+      "time_end": 46,
+      "frame_count_metadata": 122,
+      "directory": "VbEWELuXntI",
+      "rank": "0425a1d029de1e99f133203410af4bf1c58210d4de57d214aa285f1cd46ec34a"
+    },
+    {
+      "youtube_id": "9MHjWwTRBGY",
+      "label": 311,
+      "time_start": 63,
+      "time_end": 73,
+      "frame_count_metadata": 122,
+      "directory": "9MHjWwTRBGY",
+      "rank": "04294281cc6feddcb1b93c0cde6ca6c5ab722d6a45feafc809c935d334359525"
+    },
+    {
+      "youtube_id": "yiIpsWdwxwk",
+      "label": 217,
+      "time_start": 24,
+      "time_end": 34,
+      "frame_count_metadata": 122,
+      "directory": "yiIpsWdwxwk",
+      "rank": "0437633ba9843289f8dc12ca394e85b1885baf8d9c8e0e775b77da1cb11faa62"
+    },
+    {
+      "youtube_id": "4A-hQHF5wFc",
+      "label": 303,
+      "time_start": 47,
+      "time_end": 57,
+      "frame_count_metadata": 122,
+      "directory": "4A-hQHF5wFc",
+      "rank": "043a6fe9f9672c2949c2b0d1f506b2acc5fba3638751b44be8db6f5ff6d227e2"
+    },
+    {
+      "youtube_id": "tREQGo8rNoA",
+      "label": 181,
+      "time_start": 58,
+      "time_end": 68,
+      "frame_count_metadata": 122,
+      "directory": "tREQGo8rNoA",
+      "rank": "043ce4f8bd717d0a755f52ad110810c7add1581284bde3259e1951ae0c6eda27"
+    },
+    {
+      "youtube_id": "5ft5ebGnMFU",
+      "label": 273,
+      "time_start": 28,
+      "time_end": 38,
+      "frame_count_metadata": 122,
+      "directory": "5ft5ebGnMFU",
+      "rank": "043cf572ca5dee5b13638305d32bb0d8cb8a51ef087d38e112efc6c10a29a207"
+    },
+    {
+      "youtube_id": "URLxWfi96Os",
+      "label": 167,
+      "time_start": 29,
+      "time_end": 39,
+      "frame_count_metadata": 122,
+      "directory": "URLxWfi96Os",
+      "rank": "043ef5dcff58d40c51cb7bed9586c1eb9e96a9ebe5f24f3b7f52d90e65f4d10c"
+    },
+    {
+      "youtube_id": "HurRfREGGVU",
+      "label": 33,
+      "time_start": 145,
+      "time_end": 155,
+      "frame_count_metadata": 122,
+      "directory": "HurRfREGGVU",
+      "rank": "044816e1573963bcd9670d70b39546a06851547bd968f1b0a9139a1f8a2f913f"
+    },
+    {
+      "youtube_id": "TOwjQ_RSm8s",
+      "label": 201,
+      "time_start": 20,
+      "time_end": 30,
+      "frame_count_metadata": 122,
+      "directory": "TOwjQ_RSm8s",
+      "rank": "044cb2c83820fc7acc829de2889bdd74a362d8ffe783ca0241efbc41ae387f43"
+    },
+    {
+      "youtube_id": "V_N-z2w6p4c",
+      "label": 211,
+      "time_start": 64,
+      "time_end": 74,
+      "frame_count_metadata": 122,
+      "directory": "V_N-z2w6p4c",
+      "rank": "044e7166ead44c91523522ef41ba1d2f1d4442273ea5d4b19f1b1d99e0502040"
+    },
+    {
+      "youtube_id": "Xllal9867PY",
+      "label": 368,
+      "time_start": 15,
+      "time_end": 25,
+      "frame_count_metadata": 122,
+      "directory": "Xllal9867PY",
+      "rank": "045e0170828ac8cdec284a984a3b7d401e91da33b90ef949ab74982dfe337abb"
+    },
+    {
+      "youtube_id": "xH_-PcTPGes",
+      "label": 201,
+      "time_start": 34,
+      "time_end": 44,
+      "frame_count_metadata": 122,
+      "directory": "xH_-PcTPGes",
+      "rank": "0464ff5545691971e118e9e94be20638f94fb084b422b3398bdc8a208fe07b86"
+    },
+    {
+      "youtube_id": "KsFDUHkmWuc",
+      "label": 56,
+      "time_start": 19,
+      "time_end": 29,
+      "frame_count_metadata": 122,
+      "directory": "KsFDUHkmWuc",
+      "rank": "046f7ab5c9c1ed0c6b7e7a181544a8a8d7f65f40f688a4e741b2b7f5cd7109a6"
+    },
+    {
+      "youtube_id": "1Vup5goTOyU",
+      "label": 274,
+      "time_start": 40,
+      "time_end": 50,
+      "frame_count_metadata": 122,
+      "directory": "1Vup5goTOyU",
+      "rank": "046fa00e209288885182773489a22b81fcff85947e61fff30cd57910c2388048"
+    },
+    {
+      "youtube_id": "IAsnGE-gU28",
+      "label": 377,
+      "time_start": 34,
+      "time_end": 44,
+      "frame_count_metadata": 112,
+      "directory": "IAsnGE-gU28",
+      "rank": "0470b6d13feb6b6607cf17795c11a4156d7e4ebd400a9c450373da7c024f56a8"
+    },
+    {
+      "youtube_id": "t2ZXSVfstOg",
+      "label": 273,
+      "time_start": 10,
+      "time_end": 20,
+      "frame_count_metadata": 76,
+      "directory": "t2ZXSVfstOg",
+      "rank": "04734066f35912b63c4a3d8a6f13716ebc3f308c9031818b84bf37f21a723116"
+    },
+    {
+      "youtube_id": "-9ILBd-ArtM",
+      "label": 156,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 122,
+      "directory": "-9ILBd-ArtM",
+      "rank": "0473d3962fb08b6457604e75129519da88b9ceb5abc24c4bfe297a125a8dd8ee"
+    },
+    {
+      "youtube_id": "ih_yOz2UVuw",
+      "label": 104,
+      "time_start": 27,
+      "time_end": 37,
+      "frame_count_metadata": 111,
+      "directory": "ih_yOz2UVuw",
+      "rank": "047983bcda17c1c686a46fce819516c6d0a75da1e4615b1e0a9a180a632b48e8"
+    },
+    {
+      "youtube_id": "syfqx1SecXY",
+      "label": 373,
+      "time_start": 150,
+      "time_end": 160,
+      "frame_count_metadata": 122,
+      "directory": "syfqx1SecXY",
+      "rank": "047e9165f0145769c27155a094339c766fdf617d745b156b17f47f27c69d4291"
+    },
+    {
+      "youtube_id": "nIhVmEwpv0g",
+      "label": 291,
+      "time_start": 56,
+      "time_end": 66,
+      "frame_count_metadata": 122,
+      "directory": "nIhVmEwpv0g",
+      "rank": "048b6acbc3b000c3dd594cc401d76f82f72dd389f35f67c20da9a2d8936c9c89"
+    },
+    {
+      "youtube_id": "oRvuziGNW5g",
+      "label": 300,
+      "time_start": 16,
+      "time_end": 26,
+      "frame_count_metadata": 122,
+      "directory": "oRvuziGNW5g",
+      "rank": "048c06dbe59a61abeaf296485fd11cd71c9b03ec2983475d4c242d549a5ae076"
+    },
+    {
+      "youtube_id": "HqZCDjQaV3Y",
+      "label": 341,
+      "time_start": 14,
+      "time_end": 24,
+      "frame_count_metadata": 76,
+      "directory": "HqZCDjQaV3Y",
+      "rank": "048d26634da58ef66eef13f5d355cb5b6d8161cc64423d120d872ad10e200906"
+    },
+    {
+      "youtube_id": "HPHxxvmYmCw",
+      "label": 258,
+      "time_start": 4,
+      "time_end": 14,
+      "frame_count_metadata": 122,
+      "directory": "HPHxxvmYmCw",
+      "rank": "049a8382a3394574fc3d13bf5b9b13ee3a144f71372b1e7cae005efa1b73f02c"
+    },
+    {
+      "youtube_id": "JuDaHMQvbrs",
+      "label": 13,
+      "time_start": 42,
+      "time_end": 52,
+      "frame_count_metadata": 122,
+      "directory": "JuDaHMQvbrs",
+      "rank": "049c09f341c5fdd4a1db86b4ff83d7e772138e09dcbd13a19144d930fa993fc5"
+    },
+    {
+      "youtube_id": "3NTlGQH4jdQ",
+      "label": 198,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 122,
+      "directory": "3NTlGQH4jdQ",
+      "rank": "04a48cabf109ef80473e9238121e3bb85a16e0e0a53b6a95faaa3a9342a585a2"
+    },
+    {
+      "youtube_id": "XM5d49kwaWM",
+      "label": 162,
+      "time_start": 11,
+      "time_end": 21,
+      "frame_count_metadata": 122,
+      "directory": "XM5d49kwaWM",
+      "rank": "04a6d0592407408ad9de82f010ecb0eb32389c65351816216f22a281926d19b4"
+    },
+    {
+      "youtube_id": "n5uf4BVoyYY",
+      "label": 81,
+      "time_start": 35,
+      "time_end": 45,
+      "frame_count_metadata": 122,
+      "directory": "n5uf4BVoyYY",
+      "rank": "04a74b85a02a644fc7ab9dc9c82ecd71cebbfb972079e34d5dddfd1a8388284e"
+    },
+    {
+      "youtube_id": "WEwORc3Jjek",
+      "label": 45,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 49,
+      "directory": "WEwORc3Jjek",
+      "rank": "04b19a6d6887bb2643b138c2e01e62ecd7c292b4526ea5af424c5e7ca6508962"
+    },
+    {
+      "youtube_id": "Y4ywR3V5XKM",
+      "label": 236,
+      "time_start": 133,
+      "time_end": 143,
+      "frame_count_metadata": 122,
+      "directory": "Y4ywR3V5XKM",
+      "rank": "04b9f73d3bcc23377d3da101a44407a20f0ac0bae75e4a9c7e71395b904725d5"
+    },
+    {
+      "youtube_id": "ntFmk_-g6fE",
+      "label": 278,
+      "time_start": 15,
+      "time_end": 25,
+      "frame_count_metadata": 122,
+      "directory": "ntFmk_-g6fE",
+      "rank": "04ba3dbb4cb866bc1a7c77c416b5d5edf09fab813abe81628c5e9b7dfa0c3a8d"
+    },
+    {
+      "youtube_id": "gxbUZcsy4EA",
+      "label": 226,
+      "time_start": 97,
+      "time_end": 107,
+      "frame_count_metadata": 122,
+      "directory": "gxbUZcsy4EA",
+      "rank": "04c06edce664b0a5ef877dc34dcbc4e2db3177211b9c25fa137f6745666a55b2"
+    },
+    {
+      "youtube_id": "QGlOiSMAzLA",
+      "label": 245,
+      "time_start": 128,
+      "time_end": 138,
+      "frame_count_metadata": 116,
+      "directory": "QGlOiSMAzLA",
+      "rank": "04c4e8adb7d9041741cc4bd8e12344020dd4c256646a08b1429af7381edd38a4"
+    },
+    {
+      "youtube_id": "RPCl_8jAXV4",
+      "label": 113,
+      "time_start": 51,
+      "time_end": 61,
+      "frame_count_metadata": 122,
+      "directory": "RPCl_8jAXV4",
+      "rank": "04c96ff3703479825f391a905fa7617b3e43118669fdfc5a7d6b14544be4eaa8"
+    },
+    {
+      "youtube_id": "yZ83qnFvpQ0",
+      "label": 236,
+      "time_start": 29,
+      "time_end": 39,
+      "frame_count_metadata": 122,
+      "directory": "yZ83qnFvpQ0",
+      "rank": "04d53fbebda7b5baceaa2a326de4bc8d85709a8ad7732847ccf87c84bb108eed"
+    },
+    {
+      "youtube_id": "1vcbRgLeQds",
+      "label": 9,
+      "time_start": 172,
+      "time_end": 182,
+      "frame_count_metadata": 122,
+      "directory": "1vcbRgLeQds",
+      "rank": "04d8b411f8a46f8a3f5e9b76e741b1a68072ec3f4db4f07d9c699e841c646a06"
+    },
+    {
+      "youtube_id": "-4HCMJkLhus",
+      "label": 218,
+      "time_start": 21,
+      "time_end": 31,
+      "frame_count_metadata": 122,
+      "directory": "-4HCMJkLhus",
+      "rank": "04da18644987b97adb5d1e100c6ad8cc30c16e7be3dfd98f1e3c1e675d1454d3"
+    },
+    {
+      "youtube_id": "VxDOiYNIfnA",
+      "label": 44,
+      "time_start": 41,
+      "time_end": 51,
+      "frame_count_metadata": 122,
+      "directory": "VxDOiYNIfnA",
+      "rank": "04dafd86d43e46352f6224bf76443f32227cd8d5e1da099b455e1a2a50f0febc"
+    },
+    {
+      "youtube_id": "xMG9lkdiqDg",
+      "label": 360,
+      "time_start": 4,
+      "time_end": 14,
+      "frame_count_metadata": 122,
+      "directory": "xMG9lkdiqDg",
+      "rank": "04ddf9c1085b55d11c4ddfc260f38449ee969705cfd49b71dd5f14fd7664b6bd"
+    },
+    {
+      "youtube_id": "FHlk7WMsDDA",
+      "label": 369,
+      "time_start": 151,
+      "time_end": 161,
+      "frame_count_metadata": 122,
+      "directory": "FHlk7WMsDDA",
+      "rank": "04dfd37980e90b4ff63c61c4f1c35791ec9c20f12ae7d19c55d4ae9513f3fcc3"
+    },
+    {
+      "youtube_id": "Gdrzzsl7XpE",
+      "label": 303,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 119,
+      "directory": "Gdrzzsl7XpE",
+      "rank": "04e008ce133f457c3dcb3bf9fd84e364aeadbadc8ec281c54a49a94d2272f88d"
+    },
+    {
+      "youtube_id": "XwQhLfYGP-4",
+      "label": 284,
+      "time_start": 81,
+      "time_end": 91,
+      "frame_count_metadata": 96,
+      "directory": "XwQhLfYGP-4",
+      "rank": "04eb113a42bce7311e2f77321ac7a4a7b4363767b0fb3c3fadc5a7909cd2dbde"
+    },
+    {
+      "youtube_id": "aU2ByztjE60",
+      "label": 48,
+      "time_start": 9,
+      "time_end": 19,
+      "frame_count_metadata": 122,
+      "directory": "aU2ByztjE60",
+      "rank": "04f13ecaaefa5cf32881f40f0d0938c18ebf9607c44a83dd4f1ebdc997309cd6"
+    },
+    {
+      "youtube_id": "w48NvDRQh_c",
+      "label": 211,
+      "time_start": 18,
+      "time_end": 28,
+      "frame_count_metadata": 122,
+      "directory": "w48NvDRQh_c",
+      "rank": "04f779edaff256124d423a51acbdf7ce23f955f42e4c4dc5de6f5d42520a3d5f"
+    },
+    {
+      "youtube_id": "weBWP6td8ZU",
+      "label": 254,
+      "time_start": 27,
+      "time_end": 37,
+      "frame_count_metadata": 122,
+      "directory": "weBWP6td8ZU",
+      "rank": "04fb5cf722540a08eaf4df07f441cbad3e5ef870afd7d51b72d6454d86c3a6ff"
+    },
+    {
+      "youtube_id": "l1-i2xW1Qk8",
+      "label": 141,
+      "time_start": 23,
+      "time_end": 33,
+      "frame_count_metadata": 66,
+      "directory": "l1-i2xW1Qk8",
+      "rank": "04fe04a7dd6a8c308027c5e6af4fd2a54a63dfb7e53331b90e13a3eee1501f19"
+    },
+    {
+      "youtube_id": "-8jPV06bmhA",
+      "label": 46,
+      "time_start": 46,
+      "time_end": 56,
+      "frame_count_metadata": 122,
+      "directory": "-8jPV06bmhA",
+      "rank": "0511e558291a3c3979b9f79f545b9e4152f0a618782e9bfb79fee0e411e0ece8"
+    },
+    {
+      "youtube_id": "oH85TNw8F20",
+      "label": 374,
+      "time_start": 99,
+      "time_end": 109,
+      "frame_count_metadata": 122,
+      "directory": "oH85TNw8F20",
+      "rank": "0514fe7ae84529cf91e18fa0d5ec9ff9afece2755c1895d64112b5e4cbd0955f"
+    },
+    {
+      "youtube_id": "27iZS0aq5CA",
+      "label": 254,
+      "time_start": 263,
+      "time_end": 273,
+      "frame_count_metadata": 122,
+      "directory": "27iZS0aq5CA",
+      "rank": "0519db06fb615b463452c98f6016f16328f2da14303be0ac8997c2d90b3a917b"
+    },
+    {
+      "youtube_id": "BXb1JVzqhpA",
+      "label": 114,
+      "time_start": 3,
+      "time_end": 13,
+      "frame_count_metadata": 122,
+      "directory": "BXb1JVzqhpA",
+      "rank": "051e26470615bc04230fbc1e2a75fca57c6cf26b300a256d1d4af7e48efafad8"
+    },
+    {
+      "youtube_id": "c-h_3mybzOg",
+      "label": 137,
+      "time_start": 22,
+      "time_end": 32,
+      "frame_count_metadata": 122,
+      "directory": "c-h_3mybzOg",
+      "rank": "051f98dcb8a5c10541959edd409490f401bf2921acf81f8b267bff7ddd9a294b"
+    },
+    {
+      "youtube_id": "EWnRPJ7BEjM",
+      "label": 148,
+      "time_start": 25,
+      "time_end": 35,
+      "frame_count_metadata": 67,
+      "directory": "EWnRPJ7BEjM",
+      "rank": "052331412d8adfc8c5b242f94e6bb890f7396c34aad4b5dfd4f72fe853c8eeda"
+    },
+    {
+      "youtube_id": "ZDoWouAlh_o",
+      "label": 359,
+      "time_start": 28,
+      "time_end": 38,
+      "frame_count_metadata": 122,
+      "directory": "ZDoWouAlh_o",
+      "rank": "052af0087854ddb6b4a347180e4e2a8093256d747d8cb98754bc6866efc6c9fd"
+    },
+    {
+      "youtube_id": "_f6apJjL2hw",
+      "label": 53,
+      "time_start": 127,
+      "time_end": 137,
+      "frame_count_metadata": 122,
+      "directory": "_f6apJjL2hw",
+      "rank": "0535c3333f078411eef67119ccda16a0ba93361ed5e9498be2f4040f393be3fc"
+    },
+    {
+      "youtube_id": "zFGH_LjuHdo",
+      "label": 143,
+      "time_start": 8,
+      "time_end": 18,
+      "frame_count_metadata": 114,
+      "directory": "zFGH_LjuHdo",
+      "rank": "0536fdff5b96b93a231a7a0ea26ccd2eb0a3bf0e1aba50f80c53e05caf0fc1aa"
+    },
+    {
+      "youtube_id": "Bn6zdyCAwJs",
+      "label": 394,
+      "time_start": 52,
+      "time_end": 62,
+      "frame_count_metadata": 122,
+      "directory": "Bn6zdyCAwJs",
+      "rank": "053a7438b119fd9599eaee3d6272dead5f3e35218abd4222748e708dbebf8356"
+    },
+    {
+      "youtube_id": "KUBBMiiHPkc",
+      "label": 265,
+      "time_start": 27,
+      "time_end": 37,
+      "frame_count_metadata": 120,
+      "directory": "KUBBMiiHPkc",
+      "rank": "053d9f7b0f3f9e960c3a2fb7f2729102f03c64eb72d60ec716e8123675868125"
+    },
+    {
+      "youtube_id": "aZTD_KQWUYA",
+      "label": 282,
+      "time_start": 48,
+      "time_end": 58,
+      "frame_count_metadata": 122,
+      "directory": "aZTD_KQWUYA",
+      "rank": "0540445d91ceae1c023c7c6b2a361cc9e44878b7f422e1d337521c78a6cb554c"
+    },
+    {
+      "youtube_id": "t-CG8YUiyHE",
+      "label": 264,
+      "time_start": 31,
+      "time_end": 41,
+      "frame_count_metadata": 122,
+      "directory": "t-CG8YUiyHE",
+      "rank": "0543e1124951aaa5afa9765f4007841bd6d374a4368310e575c8344630d7a7f5"
+    },
+    {
+      "youtube_id": "_p8yd7EV8Cc",
+      "label": 211,
+      "time_start": 38,
+      "time_end": 48,
+      "frame_count_metadata": 122,
+      "directory": "_p8yd7EV8Cc",
+      "rank": "054cdb14a6e78d941807894bdbc94e6ddbc35384f9abdfe5e8646c6813445c98"
+    },
+    {
+      "youtube_id": "vC3qNixYyGY",
+      "label": 258,
+      "time_start": 324,
+      "time_end": 334,
+      "frame_count_metadata": 122,
+      "directory": "vC3qNixYyGY",
+      "rank": "055d98a3f972a13ba270c45a6e673685b9efa2f2e22dab5a1c3c6581c573c297"
+    },
+    {
+      "youtube_id": "gR8VhpL5ovk",
+      "label": 305,
+      "time_start": 55,
+      "time_end": 65,
+      "frame_count_metadata": 67,
+      "directory": "gR8VhpL5ovk",
+      "rank": "056273105b66fd57ecc0b762f204e040f438dc346ea2e8b748a02102985fc9c8"
+    },
+    {
+      "youtube_id": "7Ei19kkyoGU",
+      "label": 200,
+      "time_start": 3,
+      "time_end": 13,
+      "frame_count_metadata": 122,
+      "directory": "7Ei19kkyoGU",
+      "rank": "056c12e4517ca8503367dc24cfd2a01702e28c26f1d626e3b4e5b80a0b0d2052"
+    },
+    {
+      "youtube_id": "uZJkAopGUgA",
+      "label": 306,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 87,
+      "directory": "uZJkAopGUgA",
+      "rank": "0578f1c297c2970b5455e1f637dd4a428899d02cd1bcf5310be1dc081ef4cd9a"
+    },
+    {
+      "youtube_id": "b4V-LQsk1FY",
+      "label": 194,
+      "time_start": 702,
+      "time_end": 712,
+      "frame_count_metadata": 122,
+      "directory": "b4V-LQsk1FY",
+      "rank": "057c1d6c916b793e5a8dedf86249ae5f2bbe0b90a2b1c164eaf9643d08521e23"
+    },
+    {
+      "youtube_id": "0MJ9Rk0k92Q",
+      "label": 122,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 122,
+      "directory": "0MJ9Rk0k92Q",
+      "rank": "058002543cc6b4bccbc31aefaca3362e7c2f9efd127f15c7129f197f2b4baeb0"
+    },
+    {
+      "youtube_id": "zJVULgHStBU",
+      "label": 69,
+      "time_start": 254,
+      "time_end": 264,
+      "frame_count_metadata": 122,
+      "directory": "zJVULgHStBU",
+      "rank": "05803d31540d44c7f3f9782a8f2e5938b307d29e34db758dd88751d36e63c1da"
+    },
+    {
+      "youtube_id": "D7zBuPBBnYA",
+      "label": 128,
+      "time_start": 12,
+      "time_end": 22,
+      "frame_count_metadata": 122,
+      "directory": "D7zBuPBBnYA",
+      "rank": "058363c848d15e7ef9df59dad42d420d0833890d482e1cef429d63c24dc2a527"
+    },
+    {
+      "youtube_id": "Xj2HoKVk3As",
+      "label": 252,
+      "time_start": 9,
+      "time_end": 19,
+      "frame_count_metadata": 122,
+      "directory": "Xj2HoKVk3As",
+      "rank": "0585006ad5a033963c9f79f16a5c699fcf86555375b3ad41855f04dabf2452d8"
+    },
+    {
+      "youtube_id": "bVuTVj3Px5I",
+      "label": 42,
+      "time_start": 23,
+      "time_end": 33,
+      "frame_count_metadata": 122,
+      "directory": "bVuTVj3Px5I",
+      "rank": "0586c46d42a85351fc95680a215b5115c6c493d9427b37ee3756edf79bc2c35e"
+    },
+    {
+      "youtube_id": "FGj7-Cxu__0",
+      "label": 291,
+      "time_start": 27,
+      "time_end": 37,
+      "frame_count_metadata": 122,
+      "directory": "FGj7-Cxu__0",
+      "rank": "058f94b833cd101187f13808d902a8eefffc6d6d67e9a817656ec833c8b535d1"
+    },
+    {
+      "youtube_id": "Rtb8ETNloCQ",
+      "label": 98,
+      "time_start": 1102,
+      "time_end": 1112,
+      "frame_count_metadata": 122,
+      "directory": "Rtb8ETNloCQ",
+      "rank": "059265905fbb59ab215bcfb1f92779455f03576dde24ac957ec50f347ca5c930"
+    },
+    {
+      "youtube_id": "KF6jGi77jqE",
+      "label": 257,
+      "time_start": 3,
+      "time_end": 13,
+      "frame_count_metadata": 89,
+      "directory": "KF6jGi77jqE",
+      "rank": "0592bda9b03ceae51d255b2976f5eb1a5c865e99a1fe77cc6cb394ec135c773a"
+    },
+    {
+      "youtube_id": "GQ-hPUp__3I",
+      "label": 367,
+      "time_start": 1,
+      "time_end": 11,
+      "frame_count_metadata": 122,
+      "directory": "GQ-hPUp__3I",
+      "rank": "059928b62e48a6011954916aa0197cb40bdffc8e122efe71a03558ed0d02941d"
+    },
+    {
+      "youtube_id": "AjZ_d0fWUBc",
+      "label": 149,
+      "time_start": 45,
+      "time_end": 55,
+      "frame_count_metadata": 122,
+      "directory": "AjZ_d0fWUBc",
+      "rank": "059bb1596b5ddb9daa3919a3182125e1bea6ebbb72dd2903978382966d243262"
+    },
+    {
+      "youtube_id": "g6YjwYGwSlI",
+      "label": 32,
+      "time_start": 110,
+      "time_end": 120,
+      "frame_count_metadata": 122,
+      "directory": "g6YjwYGwSlI",
+      "rank": "05a0bf7e4ad99aee0efd8f570ded8722021d7da42bfe4fe1c7f411b52beb6f92"
+    },
+    {
+      "youtube_id": "QQp6IfJInQc",
+      "label": 370,
+      "time_start": 105,
+      "time_end": 115,
+      "frame_count_metadata": 122,
+      "directory": "QQp6IfJInQc",
+      "rank": "05a0d6e5fc8bfbcd03b65da95236748329db7121427fdcf82661fe9f6b45877d"
+    },
+    {
+      "youtube_id": "tzdAkod9HJs",
+      "label": 288,
+      "time_start": 65,
+      "time_end": 75,
+      "frame_count_metadata": 122,
+      "directory": "tzdAkod9HJs",
+      "rank": "05a61a3c681d5fe247d4c4021f2254c427b7b460d935b4c263076852b9c04713"
+    },
+    {
+      "youtube_id": "JWvR_MmdTOA",
+      "label": 210,
+      "time_start": 76,
+      "time_end": 86,
+      "frame_count_metadata": 122,
+      "directory": "JWvR_MmdTOA",
+      "rank": "05aac2ddac3bd7ed8c56b48ea54945ec9108bec55eb25eeed832dc95b490ac01"
+    },
+    {
+      "youtube_id": "A1GyD1xuAbk",
+      "label": 208,
+      "time_start": 12,
+      "time_end": 22,
+      "frame_count_metadata": 122,
+      "directory": "A1GyD1xuAbk",
+      "rank": "05addb97125563b4603cd6e5d671a05dbf46da18d07ee97ca05ff7e825a35978"
+    },
+    {
+      "youtube_id": "y9TUT-GsAvY",
+      "label": 26,
+      "time_start": 27,
+      "time_end": 37,
+      "frame_count_metadata": 122,
+      "directory": "y9TUT-GsAvY",
+      "rank": "05b68fc5f7c2cefd1efe66818fe1e38e06a604ec45af6b34e9f047f409b95af6"
+    },
+    {
+      "youtube_id": "ij3u6P0iv1M",
+      "label": 213,
+      "time_start": 8,
+      "time_end": 18,
+      "frame_count_metadata": 122,
+      "directory": "ij3u6P0iv1M",
+      "rank": "05c15c83cdc7b9473238d3bcb5d883e18acac66b762e2a9a96756b6a40c17bac"
+    },
+    {
+      "youtube_id": "BYjR9k93WlI",
+      "label": 307,
+      "time_start": 13,
+      "time_end": 23,
+      "frame_count_metadata": 122,
+      "directory": "BYjR9k93WlI",
+      "rank": "05c1c5e694647b5af14fee3afaad43ec65d40714d920392bcd7eb78f74fdacc9"
+    },
+    {
+      "youtube_id": "eHhkhwSOy8U",
+      "label": 375,
+      "time_start": 53,
+      "time_end": 63,
+      "frame_count_metadata": 122,
+      "directory": "eHhkhwSOy8U",
+      "rank": "05c5aa84ebcc57f135629b78f3b25171842d4222cd98b9ef2e67d01d1f0711b2"
+    },
+    {
+      "youtube_id": "9TPkWhaXoOk",
+      "label": 42,
+      "time_start": 3,
+      "time_end": 13,
+      "frame_count_metadata": 122,
+      "directory": "9TPkWhaXoOk",
+      "rank": "05cb87b480e89b7952e0c911c3d6028b53a4cb1871c334e18318e9a0beee109c"
+    },
+    {
+      "youtube_id": "Xz9FubtN8es",
+      "label": 56,
+      "time_start": 51,
+      "time_end": 61,
+      "frame_count_metadata": 122,
+      "directory": "Xz9FubtN8es",
+      "rank": "05cfddaeb4727b06a1678d87b836cce0875f4af8bc31eaa9b4fa85aeae727d52"
+    },
+    {
+      "youtube_id": "OtZXH06q0Io",
+      "label": 137,
+      "time_start": 39,
+      "time_end": 49,
+      "frame_count_metadata": 122,
+      "directory": "OtZXH06q0Io",
+      "rank": "05d537a35ba351287d5aea49678d5e7af412a2e871eb2c8bd40646b140f0a65c"
+    },
+    {
+      "youtube_id": "oSJw4wU7g4g",
+      "label": 26,
+      "time_start": 2,
+      "time_end": 12,
+      "frame_count_metadata": 122,
+      "directory": "oSJw4wU7g4g",
+      "rank": "05d5af4c627ccb02f90c083877f990180e732d4aadb7534c72486ea82234edf8"
+    },
+    {
+      "youtube_id": "-Ovwq0kVUx4",
+      "label": 276,
+      "time_start": 2,
+      "time_end": 12,
+      "frame_count_metadata": 122,
+      "directory": "-Ovwq0kVUx4",
+      "rank": "05d62ccc0068021ddf85a5c5d92554dcf2fb5270803383eb3dde082552458d81"
+    },
+    {
+      "youtube_id": "-73Kg-MKmwE",
+      "label": 79,
+      "time_start": 10,
+      "time_end": 20,
+      "frame_count_metadata": 122,
+      "directory": "-73Kg-MKmwE",
+      "rank": "05db63c545e0f1fc8a9f2c7a6d503bc4d0ebaa1aa9bb6e5ce3dae2916df4b567"
+    },
+    {
+      "youtube_id": "glcVei9aPXY",
+      "label": 178,
+      "time_start": 477,
+      "time_end": 487,
+      "frame_count_metadata": 122,
+      "directory": "glcVei9aPXY",
+      "rank": "05e670acceb528b691aebf968ea46f0a164b9a3f154c836ef0115e75f32de68c"
+    },
+    {
+      "youtube_id": "V6sdCPuEdWI",
+      "label": 134,
+      "time_start": 3,
+      "time_end": 13,
+      "frame_count_metadata": 122,
+      "directory": "V6sdCPuEdWI",
+      "rank": "05e9817e9591386574c8862078a628daef39266ebc2ef4bc1cdf4fad170de5a7"
+    },
+    {
+      "youtube_id": "pqyrWlDp3jc",
+      "label": 327,
+      "time_start": 94,
+      "time_end": 104,
+      "frame_count_metadata": 122,
+      "directory": "pqyrWlDp3jc",
+      "rank": "05f637eb953ac7db946de8e87d491d0e86691738bd5be4d8cd59f6c7e6313377"
+    },
+    {
+      "youtube_id": "bwlizlTA7Uk",
+      "label": 31,
+      "time_start": 129,
+      "time_end": 139,
+      "frame_count_metadata": 86,
+      "directory": "bwlizlTA7Uk",
+      "rank": "05f669d92ed4fec18ccc11406e887c1120a4f9cd304a10327670c8e28aeb3d6b"
+    },
+    {
+      "youtube_id": "xBmohjteQCU",
+      "label": 182,
+      "time_start": 1,
+      "time_end": 11,
+      "frame_count_metadata": 49,
+      "directory": "xBmohjteQCU",
+      "rank": "05fadd616bf20798e212cdd7428bb7ce03d73a1a869f08b1e4c6b1c0ceeced34"
+    },
+    {
+      "youtube_id": "G4wgZyOgcFc",
+      "label": 378,
+      "time_start": 4,
+      "time_end": 14,
+      "frame_count_metadata": 122,
+      "directory": "G4wgZyOgcFc",
+      "rank": "05ff7641b31766882188f396668a1fb2aba9829a1e17cea5a182faa277e23bbd"
+    },
+    {
+      "youtube_id": "dl54gRr-bmc",
+      "label": 54,
+      "time_start": 84,
+      "time_end": 94,
+      "frame_count_metadata": 122,
+      "directory": "dl54gRr-bmc",
+      "rank": "06046b9544c246501f9c7f6b74a31d286250542c29f4c3fec6ec6e6d56bd45b7"
+    },
+    {
+      "youtube_id": "RR18KL8GSe4",
+      "label": 91,
+      "time_start": 1,
+      "time_end": 11,
+      "frame_count_metadata": 122,
+      "directory": "RR18KL8GSe4",
+      "rank": "060bad51923dd140f98dd59e0e5d5846a8e9e1e5c5527ed20b1012edda339c35"
+    },
+    {
+      "youtube_id": "pA4Bh0qvO3w",
+      "label": 175,
+      "time_start": 1,
+      "time_end": 11,
+      "frame_count_metadata": 89,
+      "directory": "pA4Bh0qvO3w",
+      "rank": "0611222605e9d8e239046d5e72c7386f5b88d0312e1724056ac20362b59f6898"
+    },
+    {
+      "youtube_id": "Rxv6sXM4NiM",
+      "label": 304,
+      "time_start": 101,
+      "time_end": 111,
+      "frame_count_metadata": 122,
+      "directory": "Rxv6sXM4NiM",
+      "rank": "0611942ffbd80ca33fe3e7b97977bf54a13d8a075cc8c99ad6006cd0a6d4a94d"
+    },
+    {
+      "youtube_id": "dxDA6om2fdw",
+      "label": 13,
+      "time_start": 18,
+      "time_end": 28,
+      "frame_count_metadata": 122,
+      "directory": "dxDA6om2fdw",
+      "rank": "06170ea4e045a9356731d1efe87dd85bbd66e1e0fb4e90e16087f50eacd2488c"
+    },
+    {
+      "youtube_id": "cjk3tn-kqkU",
+      "label": 122,
+      "time_start": 3,
+      "time_end": 13,
+      "frame_count_metadata": 122,
+      "directory": "cjk3tn-kqkU",
+      "rank": "061819b450e422904d4471bba6d4ea7953449e9865e6d8c38be58904a9b90ddc"
+    },
+    {
+      "youtube_id": "yymr4YWVFe4",
+      "label": 69,
+      "time_start": 46,
+      "time_end": 56,
+      "frame_count_metadata": 122,
+      "directory": "yymr4YWVFe4",
+      "rank": "0620c565d5b8b33124f655f9c8ed4ee900aa3b4d4fcbef4dcb48b63fca86167c"
+    },
+    {
+      "youtube_id": "Sa25C3h-F6A",
+      "label": 237,
+      "time_start": 177,
+      "time_end": 187,
+      "frame_count_metadata": 122,
+      "directory": "Sa25C3h-F6A",
+      "rank": "062606c996aa2d0c3040fe36b4019817827710c178736e500f5eeb6cf9b5973f"
+    },
+    {
+      "youtube_id": "DEo_WE0vecM",
+      "label": 315,
+      "time_start": 514,
+      "time_end": 524,
+      "frame_count_metadata": 122,
+      "directory": "DEo_WE0vecM",
+      "rank": "062af2838f7fe4a237796aadc3c728dd7877c3ce5421108fa9e234f64a4c8f2f"
+    },
+    {
+      "youtube_id": "c1qUSnEZ9e8",
+      "label": 118,
+      "time_start": 41,
+      "time_end": 51,
+      "frame_count_metadata": 122,
+      "directory": "c1qUSnEZ9e8",
+      "rank": "062c4a1eb15e97fd3621b138ac829b9748f5472577a74a9181783566bda197d2"
+    },
+    {
+      "youtube_id": "UPSaUWMg3pQ",
+      "label": 313,
+      "time_start": 10,
+      "time_end": 20,
+      "frame_count_metadata": 109,
+      "directory": "UPSaUWMg3pQ",
+      "rank": "062ec320c49c966c28a2f78bada427b6032604766e3316338bfbd3da9e1f8f8d"
+    },
+    {
+      "youtube_id": "R_u7MaMi9ak",
+      "label": 126,
+      "time_start": 517,
+      "time_end": 527,
+      "frame_count_metadata": 122,
+      "directory": "R_u7MaMi9ak",
+      "rank": "06320343adf3478c0e0985acbb479973069799bfd95ceb0ae0809de305f2c73e"
+    },
+    {
+      "youtube_id": "hjr3bdMONXE",
+      "label": 305,
+      "time_start": 1,
+      "time_end": 11,
+      "frame_count_metadata": 122,
+      "directory": "hjr3bdMONXE",
+      "rank": "0637e2e61f1d33a2dce04a4a7b6fbfeab206fd03a102d5c50bfa557d95f00037"
+    },
+    {
+      "youtube_id": "fBcKhmdWCvE",
+      "label": 93,
+      "time_start": 12,
+      "time_end": 22,
+      "frame_count_metadata": 122,
+      "directory": "fBcKhmdWCvE",
+      "rank": "06387e562848f780ebe69228f71b5c15186cb299f41f3096bcbbe5a703028402"
+    },
+    {
+      "youtube_id": "f9Hl6hXOmOo",
+      "label": 16,
+      "time_start": 4,
+      "time_end": 14,
+      "frame_count_metadata": 122,
+      "directory": "f9Hl6hXOmOo",
+      "rank": "0640e630a548fc2c6bacd2174fc192e868829bc468fa9621b7b6a9dd69b94b00"
+    },
+    {
+      "youtube_id": "4Nt9m-pPdFw",
+      "label": 204,
+      "time_start": 63,
+      "time_end": 73,
+      "frame_count_metadata": 122,
+      "directory": "4Nt9m-pPdFw",
+      "rank": "0643c25996247fe48f490baf6305f6ee2823c4d7515acde7fa903f37675163c4"
+    },
+    {
+      "youtube_id": "ZBekxypiXzk",
+      "label": 228,
+      "time_start": 102,
+      "time_end": 112,
+      "frame_count_metadata": 122,
+      "directory": "ZBekxypiXzk",
+      "rank": "064776a8391489c81d9c11f35c88df28bb8d51e309b0d850c219e311168e5616"
+    },
+    {
+      "youtube_id": "wBxm_5pUf00",
+      "label": 90,
+      "time_start": 140,
+      "time_end": 150,
+      "frame_count_metadata": 122,
+      "directory": "wBxm_5pUf00",
+      "rank": "0649815f03b3216d75a6c2163fb1ab43c0d0d3d9900e255a97c25fd8d3d61d68"
+    },
+    {
+      "youtube_id": "wR0WOAkatpA",
+      "label": 387,
+      "time_start": 229,
+      "time_end": 239,
+      "frame_count_metadata": 122,
+      "directory": "wR0WOAkatpA",
+      "rank": "064af327ba2f715fc73ca29cdd57a154e13c0a7eccdb6352235d28153ecfce3a"
+    },
+    {
+      "youtube_id": "bcGVwwQFCzo",
+      "label": 221,
+      "time_start": 569,
+      "time_end": 579,
+      "frame_count_metadata": 122,
+      "directory": "bcGVwwQFCzo",
+      "rank": "064c1ad039e3bc2008fb85fb767f5eb4563d3a651c038ea7c6f38f9b8b1a8137"
+    },
+    {
+      "youtube_id": "UJJ7bi6LCKY",
+      "label": 206,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 122,
+      "directory": "UJJ7bi6LCKY",
+      "rank": "064db06073c9b01e33c9a3b58ae3452be46a93ca0d67b35cde5f881918228bc0"
+    },
+    {
+      "youtube_id": "oeSoRa8xtUg",
+      "label": 99,
+      "time_start": 3,
+      "time_end": 13,
+      "frame_count_metadata": 99,
+      "directory": "oeSoRa8xtUg",
+      "rank": "065d60d768f3454cd45c6ed1d4e18471c17b7dbd961ba10db83d84528572d90f"
+    },
+    {
+      "youtube_id": "HlPsAACIp88",
+      "label": 294,
+      "time_start": 387,
+      "time_end": 397,
+      "frame_count_metadata": 122,
+      "directory": "HlPsAACIp88",
+      "rank": "0660329d8b19f8bfd046a621c890d37d0247536d5bb8bbac7dd99c9b3b653593"
+    },
+    {
+      "youtube_id": "iox__MbwxNg",
+      "label": 257,
+      "time_start": 10,
+      "time_end": 20,
+      "frame_count_metadata": 82,
+      "directory": "iox__MbwxNg",
+      "rank": "06651871403eea1e3d1d3586016e31c8d13fe3d01700a16cf6bd4b91970f2737"
+    },
+    {
+      "youtube_id": "1yNtzcAsYM4",
+      "label": 17,
+      "time_start": 330,
+      "time_end": 340,
+      "frame_count_metadata": 122,
+      "directory": "1yNtzcAsYM4",
+      "rank": "0665191fff5fb07c7dabb81f9f67458114549ec22ac8271ee207dce3ee04f2f3"
+    },
+    {
+      "youtube_id": "Bu9cLA8a52A",
+      "label": 376,
+      "time_start": 88,
+      "time_end": 98,
+      "frame_count_metadata": 122,
+      "directory": "Bu9cLA8a52A",
+      "rank": "0665baae9aef7e1f933534f969aa6395cd08df6268a3399b9965a907bfb408a6"
+    },
+    {
+      "youtube_id": "T3nHYMukZM4",
+      "label": 247,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 116,
+      "directory": "T3nHYMukZM4",
+      "rank": "06698e90fec17b77755317be1c02dfbb293cba4dcdfcaabb2c7d02c6d2aaed4f"
+    },
+    {
+      "youtube_id": "dT0xlEDaXkY",
+      "label": 70,
+      "time_start": 10,
+      "time_end": 20,
+      "frame_count_metadata": 122,
+      "directory": "dT0xlEDaXkY",
+      "rank": "066ae6e7f06431f3d4558e7e491ea815a62daf5c8ee6a94953b9f2218c449952"
+    },
+    {
+      "youtube_id": "ofuABYNgdI4",
+      "label": 224,
+      "time_start": 219,
+      "time_end": 229,
+      "frame_count_metadata": 122,
+      "directory": "ofuABYNgdI4",
+      "rank": "066d418852fecb73d33f836b0f68239fa2be2acd5ead805e7f793d273cf66f8f"
+    },
+    {
+      "youtube_id": "Eraqc_w2rnc",
+      "label": 372,
+      "time_start": 5,
+      "time_end": 15,
+      "frame_count_metadata": 122,
+      "directory": "Eraqc_w2rnc",
+      "rank": "066e6b41d6d4b812fde008936666b456f5dec084bcd359ba8fbc266f80c7bbde"
+    },
+    {
+      "youtube_id": "C4G5Md3vDm8",
+      "label": 121,
+      "time_start": 40,
+      "time_end": 50,
+      "frame_count_metadata": 122,
+      "directory": "C4G5Md3vDm8",
+      "rank": "0672965605a9c60496bf8ad2524756600cc2b7ca2c3bb8fdfe46469d6487485c"
+    },
+    {
+      "youtube_id": "dC4ngeTfUvM",
+      "label": 52,
+      "time_start": 35,
+      "time_end": 45,
+      "frame_count_metadata": 122,
+      "directory": "dC4ngeTfUvM",
+      "rank": "06751772bdbd3df6f517ba0b331cb8b4f2db04c0dc8ba7800efb45417d0408cb"
+    },
+    {
+      "youtube_id": "mLUnkjOZ15k",
+      "label": 67,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 122,
+      "directory": "mLUnkjOZ15k",
+      "rank": "067aa7b3c9d57f5305774dfdc92897445f1c1149aefdd10e16f675ebd1a7cd49"
+    },
+    {
+      "youtube_id": "rIMbGogcqOs",
+      "label": 142,
+      "time_start": 96,
+      "time_end": 106,
+      "frame_count_metadata": 122,
+      "directory": "rIMbGogcqOs",
+      "rank": "0684a54ac57ea6f9b7eb818c27582b5af9f2be792b58982c8401187cda5d07cc"
+    },
+    {
+      "youtube_id": "9SMKZVbMSwM",
+      "label": 271,
+      "time_start": 12,
+      "time_end": 22,
+      "frame_count_metadata": 122,
+      "directory": "9SMKZVbMSwM",
+      "rank": "0688036ff3c9c7b698d1996608ca58eeb31aaacf5e3716a065b8da57826f1521"
+    },
+    {
+      "youtube_id": "k_jAwU5eWI8",
+      "label": 3,
+      "time_start": 1,
+      "time_end": 11,
+      "frame_count_metadata": 122,
+      "directory": "k_jAwU5eWI8",
+      "rank": "068fa652373d811f0fd0b6ab30f71a37115e542c3c2d3eab966b4b20af52dce1"
+    },
+    {
+      "youtube_id": "M6kYpQ_biCU",
+      "label": 179,
+      "time_start": 151,
+      "time_end": 161,
+      "frame_count_metadata": 122,
+      "directory": "M6kYpQ_biCU",
+      "rank": "069009c24381ed297f285f38e84924ace4059ea49d2c163f9e620d769a11daeb"
+    },
+    {
+      "youtube_id": "SZfgBg08fgQ",
+      "label": 88,
+      "time_start": 31,
+      "time_end": 41,
+      "frame_count_metadata": 122,
+      "directory": "SZfgBg08fgQ",
+      "rank": "0694099ac744c2f091ea7bf2fc6b320344f333770501c015bae39f1af27a31a0"
+    },
+    {
+      "youtube_id": "jeHs4Wst9Fs",
+      "label": 154,
+      "time_start": 265,
+      "time_end": 275,
+      "frame_count_metadata": 122,
+      "directory": "jeHs4Wst9Fs",
+      "rank": "069c18ae1a913a6b40ae83a1d9bb15366f14f2cd6e3618cec206e24cf6e7423a"
+    },
+    {
+      "youtube_id": "k8StfRMZSt0",
+      "label": 264,
+      "time_start": 99,
+      "time_end": 109,
+      "frame_count_metadata": 122,
+      "directory": "k8StfRMZSt0",
+      "rank": "069c402026b01d4d129ab86f1cb21917e56744dc8481bf2457f2bea42d2f158e"
+    },
+    {
+      "youtube_id": "7Uz7HCOd4zQ",
+      "label": 386,
+      "time_start": 84,
+      "time_end": 94,
+      "frame_count_metadata": 122,
+      "directory": "7Uz7HCOd4zQ",
+      "rank": "069d0efd6bcc8e9eb9a033e6e9540807bc90d4b0498adaae4296c77f5a3c93d0"
+    },
+    {
+      "youtube_id": "ld1mfCLItcw",
+      "label": 68,
+      "time_start": 22,
+      "time_end": 32,
+      "frame_count_metadata": 122,
+      "directory": "ld1mfCLItcw",
+      "rank": "06a7638bfc2d0b7728d751ce1f494737fbaa83973f6e195b07622dd855af06a7"
+    },
+    {
+      "youtube_id": "h8CZjnsgyQQ",
+      "label": 173,
+      "time_start": 27,
+      "time_end": 37,
+      "frame_count_metadata": 122,
+      "directory": "h8CZjnsgyQQ",
+      "rank": "06a7ed653cf9dcb8297b9664e583e4c8bd32be2a3465e3ded7f73ecda9c9a42c"
+    },
+    {
+      "youtube_id": "wG1wBA9lyJE",
+      "label": 201,
+      "time_start": 4,
+      "time_end": 14,
+      "frame_count_metadata": 122,
+      "directory": "wG1wBA9lyJE",
+      "rank": "06b1ae7cb1974b7bc230efdef139471bec675d32b3088126d17f3e81c731bda9"
+    },
+    {
+      "youtube_id": "Sa9w8xclGW4",
+      "label": 19,
+      "time_start": 103,
+      "time_end": 113,
+      "frame_count_metadata": 122,
+      "directory": "Sa9w8xclGW4",
+      "rank": "06b2128c25d1bd7508a50e67840affa2dc7db980f6e75d2301ab5e7399ce283e"
+    },
+    {
+      "youtube_id": "HPFJe6qRFaA",
+      "label": 151,
+      "time_start": 14,
+      "time_end": 24,
+      "frame_count_metadata": 122,
+      "directory": "HPFJe6qRFaA",
+      "rank": "06b2eef4913cada50a8abbacf719117bdff6e965c1c771891499697d300cf0a9"
+    },
+    {
+      "youtube_id": "rQlxLEor6ns",
+      "label": 250,
+      "time_start": 83,
+      "time_end": 93,
+      "frame_count_metadata": 122,
+      "directory": "rQlxLEor6ns",
+      "rank": "06b3cee11c0ac11e8c33127f1131043be30239f039265f3d0c2ccc81ec22b48c"
+    },
+    {
+      "youtube_id": "CAtgKuqiWUc",
+      "label": 191,
+      "time_start": 104,
+      "time_end": 114,
+      "frame_count_metadata": 122,
+      "directory": "CAtgKuqiWUc",
+      "rank": "06bc357a0e77a2fd97cd456955dd6bd96c92ea851e2227c44f61e73ba5b6eccb"
+    },
+    {
+      "youtube_id": "bWeyTDutG2U",
+      "label": 29,
+      "time_start": 159,
+      "time_end": 169,
+      "frame_count_metadata": 122,
+      "directory": "bWeyTDutG2U",
+      "rank": "06c1cbe62c762c1096e5ac69fc499ba6a044c5305dca46df4350796d7d276bd4"
+    },
+    {
+      "youtube_id": "4luRjdOCkSg",
+      "label": 177,
+      "time_start": 17,
+      "time_end": 27,
+      "frame_count_metadata": 122,
+      "directory": "4luRjdOCkSg",
+      "rank": "06c24969e92645f598852c1e0825a78eab7a7bfc2c263cec54628f0e8a9095f5"
+    },
+    {
+      "youtube_id": "kKhu3_nRxE8",
+      "label": 313,
+      "time_start": 3,
+      "time_end": 13,
+      "frame_count_metadata": 122,
+      "directory": "kKhu3_nRxE8",
+      "rank": "06c25a91a49001e6e80faf1b110f58306fd169496a56ebae17159f8013b4482d"
+    },
+    {
+      "youtube_id": "RgFyeIVrxXw",
+      "label": 56,
+      "time_start": 23,
+      "time_end": 33,
+      "frame_count_metadata": 84,
+      "directory": "RgFyeIVrxXw",
+      "rank": "06c29442db63b700518b753bfe1913017dc04713c2a3a22948fb0256bd503756"
+    },
+    {
+      "youtube_id": "ADe2db9hApA",
+      "label": 346,
+      "time_start": 63,
+      "time_end": 73,
+      "frame_count_metadata": 122,
+      "directory": "ADe2db9hApA",
+      "rank": "06cbee900c4e901fe45be4d1abd56bf7e35c7f6ff43c742a80bb05525f8991be"
+    },
+    {
+      "youtube_id": "Wjv9HIe1cgg",
+      "label": 143,
+      "time_start": 73,
+      "time_end": 83,
+      "frame_count_metadata": 122,
+      "directory": "Wjv9HIe1cgg",
+      "rank": "06cf8c81fde66fa1f98387cccf46140d2ac103c00007f80227d1070303f21af0"
+    },
+    {
+      "youtube_id": "q6I9vWst_hU",
+      "label": 166,
+      "time_start": 5,
+      "time_end": 15,
+      "frame_count_metadata": 103,
+      "directory": "q6I9vWst_hU",
+      "rank": "06d9a207da22a3df702257b3a9913fd2bd84faa3af8c206b30e7888f26368538"
+    },
+    {
+      "youtube_id": "mRc3WuqdBIQ",
+      "label": 393,
+      "time_start": 1,
+      "time_end": 11,
+      "frame_count_metadata": 81,
+      "directory": "mRc3WuqdBIQ",
+      "rank": "06efc3b3870144deec7777c54209ba8de836c542eb3374c6ad8f04d8376c6ac1"
+    },
+    {
+      "youtube_id": "XhyTvk_VJ3I",
+      "label": 55,
+      "time_start": 37,
+      "time_end": 47,
+      "frame_count_metadata": 122,
+      "directory": "XhyTvk_VJ3I",
+      "rank": "06f52a9563231393d0be350db9814d77ec7521381c57e36454881b6f340852c2"
+    },
+    {
+      "youtube_id": "7sN_A46nOEU",
+      "label": 378,
+      "time_start": 14,
+      "time_end": 24,
+      "frame_count_metadata": 122,
+      "directory": "7sN_A46nOEU",
+      "rank": "06f92a36bcc58120c719c3228badce8493d498aded2410398108b325dde41844"
+    },
+    {
+      "youtube_id": "SRPGgm1409g",
+      "label": 101,
+      "time_start": 22,
+      "time_end": 32,
+      "frame_count_metadata": 87,
+      "directory": "SRPGgm1409g",
+      "rank": "06fc2e6e073e25e837e2b3c89e1b296b7c732599458848b39e38bf90e575e879"
+    },
+    {
+      "youtube_id": "z6OjotkBuG4",
+      "label": 205,
+      "time_start": 58,
+      "time_end": 68,
+      "frame_count_metadata": 122,
+      "directory": "z6OjotkBuG4",
+      "rank": "06fd821f77ee7e9c5732a7265335ebdf8393ff91b39a5576b59115714f6604ad"
+    },
+    {
+      "youtube_id": "y9VzQwZuYQM",
+      "label": 315,
+      "time_start": 21,
+      "time_end": 31,
+      "frame_count_metadata": 122,
+      "directory": "y9VzQwZuYQM",
+      "rank": "07005472245899c76e41a46531044746e646540ce87e4b8f7a599069783687f9"
+    },
+    {
+      "youtube_id": "t2s26LT632o",
+      "label": 231,
+      "time_start": 30,
+      "time_end": 40,
+      "frame_count_metadata": 122,
+      "directory": "t2s26LT632o",
+      "rank": "070d0c74f48f593d38fb68df6e2cbf99425b4da2205cae833eedecc3193903a9"
+    },
+    {
+      "youtube_id": "7-dud__cqq8",
+      "label": 67,
+      "time_start": 42,
+      "time_end": 52,
+      "frame_count_metadata": 122,
+      "directory": "7-dud__cqq8",
+      "rank": "071230fc694c3420f8b65275b751317bb23ffff8f6ab3ff13815c00ba47e9cd2"
+    },
+    {
+      "youtube_id": "hR--iDJcjgU",
+      "label": 267,
+      "time_start": 69,
+      "time_end": 79,
+      "frame_count_metadata": 122,
+      "directory": "hR--iDJcjgU",
+      "rank": "0719e2320614c0109db9c3a16eb434b84aebe90be04d71fd53f341b28e00c913"
+    },
+    {
+      "youtube_id": "ui--UqzKuZ4",
+      "label": 338,
+      "time_start": 23,
+      "time_end": 33,
+      "frame_count_metadata": 122,
+      "directory": "ui--UqzKuZ4",
+      "rank": "072087c8ee3269c90f5d5a3024a0898471b1f04d46d2e100947a9d4c8f97acfd"
+    },
+    {
+      "youtube_id": "L9OwUf1n-x8",
+      "label": 356,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 122,
+      "directory": "L9OwUf1n-x8",
+      "rank": "072f5e6c28239768ae6b2a974f98f186dfca5b6f2ddcb5f87171cde8d59acd4f"
+    },
+    {
+      "youtube_id": "o0tfI02ehDE",
+      "label": 357,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 113,
+      "directory": "o0tfI02ehDE",
+      "rank": "07356eb2b42d5112124812afb15dd07d4e5353592b7a803ad4480b8359137d84"
+    },
+    {
+      "youtube_id": "hqTsAZjbDIU",
+      "label": 335,
+      "time_start": 425,
+      "time_end": 435,
+      "frame_count_metadata": 122,
+      "directory": "hqTsAZjbDIU",
+      "rank": "0737523a597b2d573ead11f3b4ed6e415e3b050de51b1e38a120bb9dc9188d30"
+    },
+    {
+      "youtube_id": "nyO86Yf_MA0",
+      "label": 311,
+      "time_start": 197,
+      "time_end": 207,
+      "frame_count_metadata": 122,
+      "directory": "nyO86Yf_MA0",
+      "rank": "0738ad13b5c38d30142d65500792a1e62b99859718b9783008ab57a2314f7f88"
+    },
+    {
+      "youtube_id": "86B6CX_uYeU",
+      "label": 261,
+      "time_start": 2,
+      "time_end": 12,
+      "frame_count_metadata": 88,
+      "directory": "86B6CX_uYeU",
+      "rank": "073d3411ddaf3a4a3ce7c5854e6e0fd8e06a4cb1ecf1103e2783debeee40fe4e"
+    },
+    {
+      "youtube_id": "cAcnW55E_2Q",
+      "label": 9,
+      "time_start": 11,
+      "time_end": 21,
+      "frame_count_metadata": 122,
+      "directory": "cAcnW55E_2Q",
+      "rank": "073e0c1399095e7d01a7907454eaa55c55f844b267c33f18477b07c150bdf96a"
+    },
+    {
+      "youtube_id": "3p1fQNmgY9w",
+      "label": 339,
+      "time_start": 20,
+      "time_end": 30,
+      "frame_count_metadata": 122,
+      "directory": "3p1fQNmgY9w",
+      "rank": "0742fbcf87b8973cbbb2134858ddb7c7fb72ca4b11bcb98634fd868e68b50356"
+    },
+    {
+      "youtube_id": "VefhBPzw-SY",
+      "label": 250,
+      "time_start": 58,
+      "time_end": 68,
+      "frame_count_metadata": 122,
+      "directory": "VefhBPzw-SY",
+      "rank": "074a068b5f195f0a80814ab486947ebc0782e138bda2c074fc80f6c869a0595f"
+    },
+    {
+      "youtube_id": "3a8zJ6AoXyU",
+      "label": 398,
+      "time_start": 203,
+      "time_end": 213,
+      "frame_count_metadata": 122,
+      "directory": "3a8zJ6AoXyU",
+      "rank": "0759a6c10d95530f3de4f7ef4fb8e66559154f7afc567968ce348fe00527b920"
+    },
+    {
+      "youtube_id": "JgL16l2a280",
+      "label": 15,
+      "time_start": 65,
+      "time_end": 75,
+      "frame_count_metadata": 122,
+      "directory": "JgL16l2a280",
+      "rank": "0759bc1435142c107ede9860f12c433822bfb479a0a9536d4697b6f4d52378d4"
+    },
+    {
+      "youtube_id": "Oyx3tZgabIA",
+      "label": 323,
+      "time_start": 69,
+      "time_end": 79,
+      "frame_count_metadata": 122,
+      "directory": "Oyx3tZgabIA",
+      "rank": "075d78c38a051a524867e59c5bd38f8a54fbd79dc2ef8e236e43e1503f712c94"
+    },
+    {
+      "youtube_id": "hrvnnf7wzj4",
+      "label": 194,
+      "time_start": 760,
+      "time_end": 770,
+      "frame_count_metadata": 122,
+      "directory": "hrvnnf7wzj4",
+      "rank": "075e0b877ffea859e80b84672f64335801bf31679ad4d55133985dd211a8fd54"
+    },
+    {
+      "youtube_id": "NhVQFHJqmss",
+      "label": 66,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 122,
+      "directory": "NhVQFHJqmss",
+      "rank": "07686a825d722782d1194552a296ffe94a4cf11d6020e263ef57a9ac8b0e4f22"
+    },
+    {
+      "youtube_id": "5BRQYmi-n3Q",
+      "label": 250,
+      "time_start": 221,
+      "time_end": 231,
+      "frame_count_metadata": 122,
+      "directory": "5BRQYmi-n3Q",
+      "rank": "076b2a524cdb0f5f2a7b31e403232956443a44ce4ea896cc729939ff0509d9a4"
+    },
+    {
+      "youtube_id": "kWuBo-p6zG0",
+      "label": 62,
+      "time_start": 3,
+      "time_end": 13,
+      "frame_count_metadata": 122,
+      "directory": "kWuBo-p6zG0",
+      "rank": "076beadb372edcf8ed1cdd79c5bddafa0cd02358f55a027215286bf4f0187cb8"
+    },
+    {
+      "youtube_id": "BdMiTo_OtnU",
+      "label": 6,
+      "time_start": 24,
+      "time_end": 34,
+      "frame_count_metadata": 122,
+      "directory": "BdMiTo_OtnU",
+      "rank": "076bfac64fa79da5e6e41026e97efa1848b5737136b13b6bf1e9ded48db2c633"
+    },
+    {
+      "youtube_id": "2u1MqYT1B3I",
+      "label": 292,
+      "time_start": 46,
+      "time_end": 56,
+      "frame_count_metadata": 91,
+      "directory": "2u1MqYT1B3I",
+      "rank": "0772a4bbc133686252ff09c6ec11659c69f894de7ef44c025a90929bdaa975b0"
+    },
+    {
+      "youtube_id": "Ii8dzS2Lu_M",
+      "label": 375,
+      "time_start": 13,
+      "time_end": 23,
+      "frame_count_metadata": 122,
+      "directory": "Ii8dzS2Lu_M",
+      "rank": "0773ec9f918bce11452bc1915bc27056cde00f15c44c07065846924e9120b9a1"
+    },
+    {
+      "youtube_id": "UBjwOghFbvY",
+      "label": 377,
+      "time_start": 12,
+      "time_end": 22,
+      "frame_count_metadata": 63,
+      "directory": "UBjwOghFbvY",
+      "rank": "077806f2ebae7e690a0bafa1509209d7dccb7eb123aefcc6138fb9821b977a02"
+    },
+    {
+      "youtube_id": "Eoe38EW0KWA",
+      "label": 275,
+      "time_start": 15,
+      "time_end": 25,
+      "frame_count_metadata": 122,
+      "directory": "Eoe38EW0KWA",
+      "rank": "077a8f93c81aa7d4570c5e22a33c8af288088c610a4ec65b4357a3ab57ab8ffd"
+    },
+    {
+      "youtube_id": "a3Ki429gUZI",
+      "label": 70,
+      "time_start": 246,
+      "time_end": 256,
+      "frame_count_metadata": 122,
+      "directory": "a3Ki429gUZI",
+      "rank": "077ad9383405d78ee009bb4bfb966e7b91652266330e56b8f63fa1c76507f51e"
+    },
+    {
+      "youtube_id": "Re7HnlVTrqA",
+      "label": 309,
+      "time_start": 175,
+      "time_end": 185,
+      "frame_count_metadata": 122,
+      "directory": "Re7HnlVTrqA",
+      "rank": "077c7a80f817189cfba698fcd65b81f59f9902ad498d155e2e64db7ee9299ae9"
+    },
+    {
+      "youtube_id": "Lzs27USI7Es",
+      "label": 121,
+      "time_start": 3,
+      "time_end": 13,
+      "frame_count_metadata": 84,
+      "directory": "Lzs27USI7Es",
+      "rank": "077d6290b47a2ed80a3f69fd11120a192c3365d9d52efba03854714e285fe6e2"
+    },
+    {
+      "youtube_id": "1z1HDy2-jQw",
+      "label": 235,
+      "time_start": 2,
+      "time_end": 12,
+      "frame_count_metadata": 122,
+      "directory": "1z1HDy2-jQw",
+      "rank": "077eaac9d344c12e6a1fa5a8ed61ca3e61420d56355a5145c417a37a9a65e9ba"
+    },
+    {
+      "youtube_id": "MHJDFRjxO2w",
+      "label": 43,
+      "time_start": 6,
+      "time_end": 16,
+      "frame_count_metadata": 120,
+      "directory": "MHJDFRjxO2w",
+      "rank": "0786eff1e8a6875d5a8bbb4283c7ae6dc2273dc1e73aa523f343dc88daac7f0b"
+    },
+    {
+      "youtube_id": "uEuG-ejXVuA",
+      "label": 26,
+      "time_start": 3,
+      "time_end": 13,
+      "frame_count_metadata": 122,
+      "directory": "uEuG-ejXVuA",
+      "rank": "0795d8083a693d81c409b7f005e7f9a7d20912d5489155ef88e8404176083ed6"
+    },
+    {
+      "youtube_id": "Lqz_-Q91RH4",
+      "label": 109,
+      "time_start": 3,
+      "time_end": 13,
+      "frame_count_metadata": 122,
+      "directory": "Lqz_-Q91RH4",
+      "rank": "0797c4a50056d9ee68f9801144817d6a25420ab21b4ea5ee550d19084873b405"
+    },
+    {
+      "youtube_id": "MMMabYYxsew",
+      "label": 4,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 122,
+      "directory": "MMMabYYxsew",
+      "rank": "079978a5e97910d1b10b4cb384cbe7ae8809326ec64d562876f724c15a8c3bca"
+    },
+    {
+      "youtube_id": "e4sAMeH90a0",
+      "label": 73,
+      "time_start": 54,
+      "time_end": 64,
+      "frame_count_metadata": 122,
+      "directory": "e4sAMeH90a0",
+      "rank": "07aef69d4022faeb85faf8ca6bb612aa849875127b9faefcbda64e822225da40"
+    },
+    {
+      "youtube_id": "OnU1Hr__jlY",
+      "label": 56,
+      "time_start": 2,
+      "time_end": 12,
+      "frame_count_metadata": 122,
+      "directory": "OnU1Hr__jlY",
+      "rank": "07b78621919c9d6263917da7b8b98f286ff133a16c00b3bfb024ff0905517ec9"
+    },
+    {
+      "youtube_id": "_EvhwFGaHyU",
+      "label": 148,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 91,
+      "directory": "_EvhwFGaHyU",
+      "rank": "07beb08e8a5a4fa9ec2bb5b45988b5af08d523c5e5d49f6a61d6517174090065"
+    },
+    {
+      "youtube_id": "LJXNAVg9J-4",
+      "label": 193,
+      "time_start": 463,
+      "time_end": 473,
+      "frame_count_metadata": 122,
+      "directory": "LJXNAVg9J-4",
+      "rank": "07bf6d08c7cc71e9b4d8ed39d3bc7b01d2cd4eeec81b7ea268ade9549e2a0dc3"
+    },
+    {
+      "youtube_id": "6J57U2QgTiU",
+      "label": 140,
+      "time_start": 59,
+      "time_end": 69,
+      "frame_count_metadata": 122,
+      "directory": "6J57U2QgTiU",
+      "rank": "07cb0390a53508d9b156a62cf4c83b25bd029432e083f9137ff8da11b238ee3d"
+    },
+    {
+      "youtube_id": "Vh_bchJz99Y",
+      "label": 26,
+      "time_start": 22,
+      "time_end": 32,
+      "frame_count_metadata": 122,
+      "directory": "Vh_bchJz99Y",
+      "rank": "07cd59286e14f549ee2d9585efc6d68ba662bdc1a00780e455bc5c07f66e4524"
+    },
+    {
+      "youtube_id": "p3lQV8P2V7c",
+      "label": 234,
+      "time_start": 71,
+      "time_end": 81,
+      "frame_count_metadata": 122,
+      "directory": "p3lQV8P2V7c",
+      "rank": "07d11529e362b76075b7b935b5faeaaf2b7aa9b07354fea0195aa947604e5365"
+    },
+    {
+      "youtube_id": "_adU_0hUdr8",
+      "label": 29,
+      "time_start": 676,
+      "time_end": 686,
+      "frame_count_metadata": 122,
+      "directory": "_adU_0hUdr8",
+      "rank": "07d3a8cca0ec854958d38f757726d795128e68c7e74e10dd29415860c68abb1b"
+    },
+    {
+      "youtube_id": "3AEzQclPTKg",
+      "label": 123,
+      "time_start": 33,
+      "time_end": 43,
+      "frame_count_metadata": 122,
+      "directory": "3AEzQclPTKg",
+      "rank": "07db35f4177b5a31cf8a612c9d91e7de641e057b5ab167c1bcccb1a860499619"
+    },
+    {
+      "youtube_id": "3-evHTgxa8M",
+      "label": 346,
+      "time_start": 104,
+      "time_end": 114,
+      "frame_count_metadata": 122,
+      "directory": "3-evHTgxa8M",
+      "rank": "07e777db66cf16fe1720ea8101835a96f9d3c5577fcf442ac35acadec2b2d4b0"
+    },
+    {
+      "youtube_id": "rO4kl4cb67g",
+      "label": 167,
+      "time_start": 82,
+      "time_end": 92,
+      "frame_count_metadata": 122,
+      "directory": "rO4kl4cb67g",
+      "rank": "07ed897bbeacc53cf4295b1f5d78e044d3b019c38b96312ed762a317fabc09b4"
+    },
+    {
+      "youtube_id": "tJ7Y8VZR2R4",
+      "label": 134,
+      "time_start": 12,
+      "time_end": 22,
+      "frame_count_metadata": 81,
+      "directory": "tJ7Y8VZR2R4",
+      "rank": "07ef894ea0043f02bb8c80f98bdd07327b71779d63f46bbea0a6dff2eb0f7955"
+    },
+    {
+      "youtube_id": "_U5ZCn8Ki9s",
+      "label": 342,
+      "time_start": 41,
+      "time_end": 51,
+      "frame_count_metadata": 122,
+      "directory": "_U5ZCn8Ki9s",
+      "rank": "07f0800414f9eb20fb37ffe1ed47ccd068d98dc3ac7bbb4d09ce54b496379242"
+    },
+    {
+      "youtube_id": "KYndL4FoJRo",
+      "label": 126,
+      "time_start": 22,
+      "time_end": 32,
+      "frame_count_metadata": 122,
+      "directory": "KYndL4FoJRo",
+      "rank": "07f125201524b6bb70d73ff27aba0fb930cbacc806bc27414df5051d4b984674"
+    },
+    {
+      "youtube_id": "w202HsFm59g",
+      "label": 330,
+      "time_start": 37,
+      "time_end": 47,
+      "frame_count_metadata": 108,
+      "directory": "w202HsFm59g",
+      "rank": "07f1a329277ccb7d059fb327be51ca893826a1d24173592a628af7621cf9b309"
+    },
+    {
+      "youtube_id": "BG3qTBvDIYg",
+      "label": 307,
+      "time_start": 22,
+      "time_end": 32,
+      "frame_count_metadata": 122,
+      "directory": "BG3qTBvDIYg",
+      "rank": "07fe7883859612a251e99a1243c2cd933f1a8b02cdd0ec8bf74eb4af8b5a3e84"
+    },
+    {
+      "youtube_id": "X75F9gFpFRw",
+      "label": 21,
+      "time_start": 8,
+      "time_end": 18,
+      "frame_count_metadata": 122,
+      "directory": "X75F9gFpFRw",
+      "rank": "080027f4cd752ea40b7f2bdd7f2fce1eac7de3f01e4d34704ddacb68948df981"
+    },
+    {
+      "youtube_id": "-0ew-c0w7uc",
+      "label": 122,
+      "time_start": 2,
+      "time_end": 12,
+      "frame_count_metadata": 105,
+      "directory": "-0ew-c0w7uc",
+      "rank": "0807c5ac383cb560263356823926934775c33b7fcb67703e7640c86771ab9832"
+    },
+    {
+      "youtube_id": "usHuufTQ1P0",
+      "label": 115,
+      "time_start": 3,
+      "time_end": 13,
+      "frame_count_metadata": 122,
+      "directory": "usHuufTQ1P0",
+      "rank": "080a419422f575631d88753bd2331a94782c5005b6b9f31195eb9e3d0f7597d4"
+    },
+    {
+      "youtube_id": "PrRfO1aMTnA",
+      "label": 367,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 112,
+      "directory": "PrRfO1aMTnA",
+      "rank": "080b9888c1f184f5f378c5ddf7aef0e21536c79a2bf4f9c99018fdf252a7e2a9"
+    },
+    {
+      "youtube_id": "kH3HY6fjdB0",
+      "label": 89,
+      "time_start": 484,
+      "time_end": 494,
+      "frame_count_metadata": 122,
+      "directory": "kH3HY6fjdB0",
+      "rank": "080d02e92665477519aff5b46792f8c7ca96e01db674dda8ea2a785923db2790"
+    },
+    {
+      "youtube_id": "bfrdgr9G8-g",
+      "label": 332,
+      "time_start": 32,
+      "time_end": 42,
+      "frame_count_metadata": 122,
+      "directory": "bfrdgr9G8-g",
+      "rank": "080d75fa193037e8d2072701c7a1bc49c13f87456ddbee6d02ac8570180525d2"
+    },
+    {
+      "youtube_id": "s3uMwPU3DaM",
+      "label": 184,
+      "time_start": 79,
+      "time_end": 89,
+      "frame_count_metadata": 122,
+      "directory": "s3uMwPU3DaM",
+      "rank": "080fbc4f19feca150d3ee6b97cf3b1b1246df51031970b66a50267a8b67e8c3c"
+    },
+    {
+      "youtube_id": "4iVBolW8F1o",
+      "label": 396,
+      "time_start": 77,
+      "time_end": 87,
+      "frame_count_metadata": 122,
+      "directory": "4iVBolW8F1o",
+      "rank": "08159f43bae5ed0603f7e90c6087e6a8beed9ab57321eaf972e8c0103c24d949"
+    },
+    {
+      "youtube_id": "TGDEZRNXHuU",
+      "label": 252,
+      "time_start": 25,
+      "time_end": 35,
+      "frame_count_metadata": 122,
+      "directory": "TGDEZRNXHuU",
+      "rank": "081be57aca485e3ad46a91588e89180be37bd423b383d88e0050e89af37548ed"
+    },
+    {
+      "youtube_id": "Znqi81RS3NA",
+      "label": 118,
+      "time_start": 191,
+      "time_end": 201,
+      "frame_count_metadata": 122,
+      "directory": "Znqi81RS3NA",
+      "rank": "081d790bb85f87563d98c00ef6a15ebad2a3268ecd891263a52a4d6cc9bc4597"
+    },
+    {
+      "youtube_id": "2jMweIhqE3E",
+      "label": 133,
+      "time_start": 3,
+      "time_end": 13,
+      "frame_count_metadata": 122,
+      "directory": "2jMweIhqE3E",
+      "rank": "0821b5b770c963915ed98a3ab4e8586a9d2b2c15838fce2b227bea8e526904be"
+    },
+    {
+      "youtube_id": "tDdXHUTEdXk",
+      "label": 322,
+      "time_start": 57,
+      "time_end": 67,
+      "frame_count_metadata": 122,
+      "directory": "tDdXHUTEdXk",
+      "rank": "0824f8b1ccfeb02635c9c59efb0da99e67e7eb87b33c0e821608f32fe5f3a3f1"
+    },
+    {
+      "youtube_id": "LXjM7nBZcak",
+      "label": 153,
+      "time_start": 1,
+      "time_end": 11,
+      "frame_count_metadata": 76,
+      "directory": "LXjM7nBZcak",
+      "rank": "08265dbc82e3886356e5df0361be88c10c9425cdc294136c9fabfdd1389aaab3"
+    },
+    {
+      "youtube_id": "jei3QQUwYEQ",
+      "label": 253,
+      "time_start": 14,
+      "time_end": 24,
+      "frame_count_metadata": 107,
+      "directory": "jei3QQUwYEQ",
+      "rank": "0828ab51ed7dced1273923bf8d4c5989a13a986ba1a71d04a4c7b6f79c2bec46"
+    },
+    {
+      "youtube_id": "0PAZuNazXY0",
+      "label": 53,
+      "time_start": 106,
+      "time_end": 116,
+      "frame_count_metadata": 122,
+      "directory": "0PAZuNazXY0",
+      "rank": "0830920a25bf10a51c711870f997694f05c9f316f9ab40f65d1a0e505a6af8cc"
+    },
+    {
+      "youtube_id": "kYS8byJ78U4",
+      "label": 43,
+      "time_start": 38,
+      "time_end": 48,
+      "frame_count_metadata": 122,
+      "directory": "kYS8byJ78U4",
+      "rank": "083c8ebf0893d246c474d2d5659ee1231e43637806b02df4c70c61f835047165"
+    },
+    {
+      "youtube_id": "lPFtN6pPsE4",
+      "label": 385,
+      "time_start": 99,
+      "time_end": 109,
+      "frame_count_metadata": 122,
+      "directory": "lPFtN6pPsE4",
+      "rank": "0843b582dc9c5eb136d4d7f16ce40159d1cff220ed96773952c40847b2245ba3"
+    },
+    {
+      "youtube_id": "glF3R-pYFp4",
+      "label": 155,
+      "time_start": 83,
+      "time_end": 93,
+      "frame_count_metadata": 122,
+      "directory": "glF3R-pYFp4",
+      "rank": "08484b612a14bab29fdf1ca446c257d895525151946a8700a2ac2a641d16110d"
+    },
+    {
+      "youtube_id": "Rfihil7FhJ0",
+      "label": 22,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 122,
+      "directory": "Rfihil7FhJ0",
+      "rank": "084dc7599e057bc32870cde3e8ed655f53a7735328650400692e5834afb9e288"
+    },
+    {
+      "youtube_id": "YsCKbXAGVC0",
+      "label": 363,
+      "time_start": 114,
+      "time_end": 124,
+      "frame_count_metadata": 122,
+      "directory": "YsCKbXAGVC0",
+      "rank": "084e9e5e3ff64e0252629ea0addc22ebe42b08e6a525331c6e88d22cc1801123"
+    },
+    {
+      "youtube_id": "-g5emSW-SOg",
+      "label": 155,
+      "time_start": 10,
+      "time_end": 20,
+      "frame_count_metadata": 97,
+      "directory": "-g5emSW-SOg",
+      "rank": "0852e0cbfd37cdb40879262cb6a281edfcd9c382e80e811e85d476d4515e6a14"
+    },
+    {
+      "youtube_id": "tNr-tFCmC7o",
+      "label": 46,
+      "time_start": 138,
+      "time_end": 148,
+      "frame_count_metadata": 122,
+      "directory": "tNr-tFCmC7o",
+      "rank": "085354a44a177180c52eac35ce32d2543d2bd310537dda0408f76341ef99f116"
+    },
+    {
+      "youtube_id": "7oUvm4e9oQ8",
+      "label": 232,
+      "time_start": 279,
+      "time_end": 289,
+      "frame_count_metadata": 122,
+      "directory": "7oUvm4e9oQ8",
+      "rank": "085360418e32f16715383eb429d459971235c4077b6d0d73165911abdcfea305"
+    },
+    {
+      "youtube_id": "NlFLyy3HBEY",
+      "label": 239,
+      "time_start": 52,
+      "time_end": 62,
+      "frame_count_metadata": 122,
+      "directory": "NlFLyy3HBEY",
+      "rank": "08586dfacc51b5445f6e384ed9e4d390375ce9c521cf949a2a89f40585dc5855"
+    },
+    {
+      "youtube_id": "MC02vu7jguw",
+      "label": 218,
+      "time_start": 19,
+      "time_end": 29,
+      "frame_count_metadata": 122,
+      "directory": "MC02vu7jguw",
+      "rank": "085dab20530665e18bbf9a9002369216178fea11bc8e88a78263be7bacbd92e6"
+    },
+    {
+      "youtube_id": "qeDi7i1XXhM",
+      "label": 107,
+      "time_start": 68,
+      "time_end": 78,
+      "frame_count_metadata": 108,
+      "directory": "qeDi7i1XXhM",
+      "rank": "086227d222608b82d8e56ca545a4d7b7229f8007837260826b1442c5946699b7"
+    },
+    {
+      "youtube_id": "YAM1fh0KK4s",
+      "label": 228,
+      "time_start": 76,
+      "time_end": 86,
+      "frame_count_metadata": 122,
+      "directory": "YAM1fh0KK4s",
+      "rank": "086525f2b051e0fd216483759f0846e7641f72914e6496b8f83dfa8040902864"
+    },
+    {
+      "youtube_id": "vtVtfv6mVOc",
+      "label": 120,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 122,
+      "directory": "vtVtfv6mVOc",
+      "rank": "08681ed6daf86c48afc665ff3a1f5157071670bf6a52580a23e6f8a4bfceb4db"
+    },
+    {
+      "youtube_id": "1K1b8Zphi3U",
+      "label": 130,
+      "time_start": 9,
+      "time_end": 19,
+      "frame_count_metadata": 122,
+      "directory": "1K1b8Zphi3U",
+      "rank": "0868f6bdef1c6be909c291b000c50d9adc38270b676fa5faab66abd960c213c4"
+    },
+    {
+      "youtube_id": "XxnnMRaYub0",
+      "label": 88,
+      "time_start": 1,
+      "time_end": 11,
+      "frame_count_metadata": 122,
+      "directory": "XxnnMRaYub0",
+      "rank": "0873f985385f47b58a1535986d0ffb9cc6c40bba308f0af4aecf38ae460bc7bb"
+    },
+    {
+      "youtube_id": "CZNQfolOAhs",
+      "label": 75,
+      "time_start": 137,
+      "time_end": 147,
+      "frame_count_metadata": 122,
+      "directory": "CZNQfolOAhs",
+      "rank": "08818633e6b9662565d187ddf4b9fb886c24f27c4dbe7e9c8d4df963b7a5bd20"
+    },
+    {
+      "youtube_id": "nZG6du0gq7s",
+      "label": 92,
+      "time_start": 39,
+      "time_end": 49,
+      "frame_count_metadata": 90,
+      "directory": "nZG6du0gq7s",
+      "rank": "088284183dd9c3d3059b14232e18e3fbd458781b883a407a2eba5d9f26b6d35a"
+    },
+    {
+      "youtube_id": "SU_x2LQqSLs",
+      "label": 66,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 78,
+      "directory": "SU_x2LQqSLs",
+      "rank": "088f0d8321d629ba96d45f43118a9f988eebaed431346379a68a924218d67f25"
+    },
+    {
+      "youtube_id": "F72Uq20m-uA",
+      "label": 186,
+      "time_start": 180,
+      "time_end": 190,
+      "frame_count_metadata": 122,
+      "directory": "F72Uq20m-uA",
+      "rank": "08923103010b002ae599dd93836cc187426efc1b5578e344f419b73a420f430d"
+    },
+    {
+      "youtube_id": "iR99L0gD0cs",
+      "label": 114,
+      "time_start": 14,
+      "time_end": 24,
+      "frame_count_metadata": 119,
+      "directory": "iR99L0gD0cs",
+      "rank": "08941277b0bc5c1f5045a012ced0c1fce1c204fcf9f075563481162c00f74894"
+    },
+    {
+      "youtube_id": "5c9HlCmmAGw",
+      "label": 205,
+      "time_start": 50,
+      "time_end": 60,
+      "frame_count_metadata": 122,
+      "directory": "5c9HlCmmAGw",
+      "rank": "089a381718e2265d1fa8f63ccf3437260cf6584ab8fdbd279230c6897ccfb805"
+    },
+    {
+      "youtube_id": "AD-2M-QdE0I",
+      "label": 280,
+      "time_start": 1,
+      "time_end": 11,
+      "frame_count_metadata": 122,
+      "directory": "AD-2M-QdE0I",
+      "rank": "089dd488d5f29c3baf19fe4d26cbc3301a4b993f348704b34b0a9d9dc3423a57"
+    },
+    {
+      "youtube_id": "T2xWP7WqMUM",
+      "label": 288,
+      "time_start": 1,
+      "time_end": 11,
+      "frame_count_metadata": 122,
+      "directory": "T2xWP7WqMUM",
+      "rank": "08abb06305c37cbe078133905f067b242994d64dd7807394ac6b0499920d6d0f"
+    },
+    {
+      "youtube_id": "N3bROK0uXE4",
+      "label": 17,
+      "time_start": 10,
+      "time_end": 20,
+      "frame_count_metadata": 122,
+      "directory": "N3bROK0uXE4",
+      "rank": "08afc59830dd06dcf1a4d214291c566b959a4d10c0809a6e66ba1dff8d045044"
+    },
+    {
+      "youtube_id": "d_RHfG9Xhh0",
+      "label": 197,
+      "time_start": 74,
+      "time_end": 84,
+      "frame_count_metadata": 122,
+      "directory": "d_RHfG9Xhh0",
+      "rank": "08b24a563d02fb4c00174024e811e8a4f268095ce4dd6adaf245947a024fe567"
+    },
+    {
+      "youtube_id": "aRrNyjIv900",
+      "label": 28,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 122,
+      "directory": "aRrNyjIv900",
+      "rank": "08b28eb61effbcb331fa98520b41aec8d93525d0a5bccb29dae8b239539e3310"
+    },
+    {
+      "youtube_id": "piYKF7yTMOA",
+      "label": 68,
+      "time_start": 1,
+      "time_end": 11,
+      "frame_count_metadata": 122,
+      "directory": "piYKF7yTMOA",
+      "rank": "08b4463d13f98b10c9b0b22f4a8d567071d6f37ed678561011fb28a93129ddbe"
+    },
+    {
+      "youtube_id": "RpBJ9ymW6Dg",
+      "label": 398,
+      "time_start": 58,
+      "time_end": 68,
+      "frame_count_metadata": 122,
+      "directory": "RpBJ9ymW6Dg",
+      "rank": "08b4e02753911e31d20aaede32c74da28aa034f362b3af1fc4fbadebe5944e41"
+    },
+    {
+      "youtube_id": "_C5Xq0pr56A",
+      "label": 136,
+      "time_start": 294,
+      "time_end": 304,
+      "frame_count_metadata": 122,
+      "directory": "_C5Xq0pr56A",
+      "rank": "08d09581067b94286869ee43e87dc1f4a449ec0c72849c169cd5fe66e39a456d"
+    },
+    {
+      "youtube_id": "i4ssdweKkZY",
+      "label": 3,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 49,
+      "directory": "i4ssdweKkZY",
+      "rank": "08d229c51d32d979a2bfdd895f65a45863752ecfb3df7783414a8620db616ec6"
+    },
+    {
+      "youtube_id": "PbyZxS_-BZE",
+      "label": 118,
+      "time_start": 89,
+      "time_end": 99,
+      "frame_count_metadata": 122,
+      "directory": "PbyZxS_-BZE",
+      "rank": "08e25745422f85349512927d6688303590a675353f420ad184a20f7d9559d75c"
+    },
+    {
+      "youtube_id": "uMhQ8GzHjHA",
+      "label": 292,
+      "time_start": 564,
+      "time_end": 574,
+      "frame_count_metadata": 122,
+      "directory": "uMhQ8GzHjHA",
+      "rank": "08e3d3c65752b268bd9a6e29805d8c5922b8e8b341707d926dd79309a7549a43"
+    },
+    {
+      "youtube_id": "RiNmtnpzdSI",
+      "label": 125,
+      "time_start": 47,
+      "time_end": 57,
+      "frame_count_metadata": 122,
+      "directory": "RiNmtnpzdSI",
+      "rank": "08e435c4d8369b23789350c6b86a6adfb88fe37232c99b66b9022c319a93ebfd"
+    },
+    {
+      "youtube_id": "azt6RWQiJCg",
+      "label": 287,
+      "time_start": 11,
+      "time_end": 21,
+      "frame_count_metadata": 122,
+      "directory": "azt6RWQiJCg",
+      "rank": "08ee0f2bdcddc796b1506956682ccf8402b1adaafbbef95d0a8438b4ebb61063"
+    },
+    {
+      "youtube_id": "u6PXN2gCiwY",
+      "label": 296,
+      "time_start": 5,
+      "time_end": 15,
+      "frame_count_metadata": 122,
+      "directory": "u6PXN2gCiwY",
+      "rank": "08eefa2e01345073619d3a1ba32aa721ee8b6fa0e77f7e91917b25664c21574f"
+    },
+    {
+      "youtube_id": "xME1X5_D88c",
+      "label": 208,
+      "time_start": 4,
+      "time_end": 14,
+      "frame_count_metadata": 85,
+      "directory": "xME1X5_D88c",
+      "rank": "08faba4bba4592918bf16cf257fc4473a8294473c1d712028eda7a2f778433b5"
+    },
+    {
+      "youtube_id": "a06xpsZj--U",
+      "label": 44,
+      "time_start": 62,
+      "time_end": 72,
+      "frame_count_metadata": 122,
+      "directory": "a06xpsZj--U",
+      "rank": "08ff83503682dbecc838718ef52bd279bde3953f6df969eaa7bf6e5cc8a76c32"
+    },
+    {
+      "youtube_id": "fS3qZwhKnfA",
+      "label": 352,
+      "time_start": 401,
+      "time_end": 411,
+      "frame_count_metadata": 122,
+      "directory": "fS3qZwhKnfA",
+      "rank": "09001dc454d8787bb010fa312390d776cc452aa541b83725eca8e643290745d9"
+    },
+    {
+      "youtube_id": "5w7-2_KAP2k",
+      "label": 49,
+      "time_start": 6,
+      "time_end": 16,
+      "frame_count_metadata": 122,
+      "directory": "5w7-2_KAP2k",
+      "rank": "090a7c3b85e1036c0d37869196597659cde8fb8adcb7ed38de2e0a9c076f9921"
+    },
+    {
+      "youtube_id": "3exdpRbcMmA",
+      "label": 346,
+      "time_start": 34,
+      "time_end": 44,
+      "frame_count_metadata": 122,
+      "directory": "3exdpRbcMmA",
+      "rank": "090b7c52c845639069664ac914235f00cd3e6bad8f2eabf2ec86566791dedfb2"
+    },
+    {
+      "youtube_id": "-yv8c2CDbR8",
+      "label": 129,
+      "time_start": 4,
+      "time_end": 14,
+      "frame_count_metadata": 122,
+      "directory": "-yv8c2CDbR8",
+      "rank": "091af860fe68f9e068b1d8dda254302d22da348fdc145493b14507e96dc99487"
+    },
+    {
+      "youtube_id": "8wHTcDaq63g",
+      "label": 13,
+      "time_start": 272,
+      "time_end": 282,
+      "frame_count_metadata": 122,
+      "directory": "8wHTcDaq63g",
+      "rank": "091dcbd52291eb81b362711944e71343803c2d7a7b6d24e7504fd73305547dba"
+    },
+    {
+      "youtube_id": "GVWXXU2H79Y",
+      "label": 9,
+      "time_start": 78,
+      "time_end": 88,
+      "frame_count_metadata": 122,
+      "directory": "GVWXXU2H79Y",
+      "rank": "09205e70030ab806e9864826eb193ad4e4a23565dd4587db00a6ccc0724e6d25"
+    },
+    {
+      "youtube_id": "uBXZoo3fHAQ",
+      "label": 166,
+      "time_start": 27,
+      "time_end": 37,
+      "frame_count_metadata": 122,
+      "directory": "uBXZoo3fHAQ",
+      "rank": "092186d3571b7e62c080df5eac60d988d65e6ce557bf48b23fa302297392176b"
+    },
+    {
+      "youtube_id": "T8AdoaB6dEo",
+      "label": 227,
+      "time_start": 29,
+      "time_end": 39,
+      "frame_count_metadata": 122,
+      "directory": "T8AdoaB6dEo",
+      "rank": "0924ebf1b906ae6d30e41f57b9c2baac5a5b5d199c46e71fc73c7f2f944b3a0a"
+    },
+    {
+      "youtube_id": "IdVVUhYkLP4",
+      "label": 348,
+      "time_start": 39,
+      "time_end": 49,
+      "frame_count_metadata": 122,
+      "directory": "IdVVUhYkLP4",
+      "rank": "092629cfd524b39e4b4b4da1f6cd20ffaef6c5a947d55b8cf95c22aac71db252"
+    },
+    {
+      "youtube_id": "X_hXueBLRk0",
+      "label": 277,
+      "time_start": 11,
+      "time_end": 21,
+      "frame_count_metadata": 122,
+      "directory": "X_hXueBLRk0",
+      "rank": "0929b2551efcdc18429ca8f58e1ce4f1f6e50290fdde0670ae7c056213ae55e8"
+    },
+    {
+      "youtube_id": "6GBx-xHKhug",
+      "label": 326,
+      "time_start": 66,
+      "time_end": 76,
+      "frame_count_metadata": 122,
+      "directory": "6GBx-xHKhug",
+      "rank": "092ef4ab83f01b69150df41a5c24e9f78c94b16199308a6cd4e1b97cdcbaaa28"
+    },
+    {
+      "youtube_id": "OnfgY84e8DE",
+      "label": 178,
+      "time_start": 111,
+      "time_end": 121,
+      "frame_count_metadata": 122,
+      "directory": "OnfgY84e8DE",
+      "rank": "093909cce1fb388b9a39a8c31da49ecb47c32e58ad21e721db26bf3e866c346e"
+    },
+    {
+      "youtube_id": "pjZ8fqKUyzE",
+      "label": 151,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 50,
+      "directory": "pjZ8fqKUyzE",
+      "rank": "0940dd86a4541c7339dde8cc69634b3f1f01e903c21b222e88fb9a5880ce266b"
+    },
+    {
+      "youtube_id": "pITuRPnrT-4",
+      "label": 353,
+      "time_start": 136,
+      "time_end": 146,
+      "frame_count_metadata": 122,
+      "directory": "pITuRPnrT-4",
+      "rank": "09436e92d6666f667f649e37250144f60e99e1e168fdb20eb88f46dcbf8071e2"
+    },
+    {
+      "youtube_id": "RzEMZ5VoHao",
+      "label": 179,
+      "time_start": 86,
+      "time_end": 96,
+      "frame_count_metadata": 122,
+      "directory": "RzEMZ5VoHao",
+      "rank": "0948371b415708fa1a7bb6b475021371fe72d46284951b4f50aa75d6e105fe4a"
+    },
+    {
+      "youtube_id": "8Xpc_kPQ0TY",
+      "label": 139,
+      "time_start": 18,
+      "time_end": 28,
+      "frame_count_metadata": 122,
+      "directory": "8Xpc_kPQ0TY",
+      "rank": "094ec1b4118aeaaebea1408aa6068baccd92d1716c0c964cbfc3a63108c27eb0"
+    },
+    {
+      "youtube_id": "1UO2RdoUuMI",
+      "label": 322,
+      "time_start": 108,
+      "time_end": 118,
+      "frame_count_metadata": 122,
+      "directory": "1UO2RdoUuMI",
+      "rank": "09566e539f64d5c06e2b2b51a33814c6372695b822d7c466eb73f6a23c0e0ba1"
+    },
+    {
+      "youtube_id": "S8_ErlI3phA",
+      "label": 351,
+      "time_start": 28,
+      "time_end": 38,
+      "frame_count_metadata": 122,
+      "directory": "S8_ErlI3phA",
+      "rank": "095d9e4d2216af94911bba38bc670689be7390c670a286d34b02ccb73d544ba6"
+    },
+    {
+      "youtube_id": "3e0IkQDTzjQ",
+      "label": 81,
+      "time_start": 63,
+      "time_end": 73,
+      "frame_count_metadata": 122,
+      "directory": "3e0IkQDTzjQ",
+      "rank": "09611f4d78df679bc6bd5c6ce7fdcf6141e949fb913a4c7ffa2c65820174cc12"
+    },
+    {
+      "youtube_id": "eZTQRUBQxqw",
+      "label": 1,
+      "time_start": 31,
+      "time_end": 41,
+      "frame_count_metadata": 122,
+      "directory": "eZTQRUBQxqw",
+      "rank": "0976a0a8bef32f26d5d6fa873a8d41e5846c38ee74b99c81731d130f30ba1f66"
+    },
+    {
+      "youtube_id": "3QF0XHz2jt4",
+      "label": 346,
+      "time_start": 3,
+      "time_end": 13,
+      "frame_count_metadata": 122,
+      "directory": "3QF0XHz2jt4",
+      "rank": "0979da746cce1909be1389d2f5f4057a9b16c8bc315b8713d8f88803015a195a"
+    },
+    {
+      "youtube_id": "4oTDMhDhzoc",
+      "label": 278,
+      "time_start": 23,
+      "time_end": 33,
+      "frame_count_metadata": 122,
+      "directory": "4oTDMhDhzoc",
+      "rank": "0983fd5f0d97a2eda7d3df57351508ab9b7f83dd82b9f0ce99185c238dd7d31f"
+    },
+    {
+      "youtube_id": "i2AJ5SAqzCE",
+      "label": 252,
+      "time_start": 193,
+      "time_end": 203,
+      "frame_count_metadata": 122,
+      "directory": "i2AJ5SAqzCE",
+      "rank": "098789310cf08a78cbcb6c90a62f3faeda2434570dee27274794247839c9700f"
+    },
+    {
+      "youtube_id": "PcXRWmzyTM8",
+      "label": 194,
+      "time_start": 106,
+      "time_end": 116,
+      "frame_count_metadata": 122,
+      "directory": "PcXRWmzyTM8",
+      "rank": "098bb1108857a17e5de6a5d6b818618f3156c2ca2f62d8928682135d7f426567"
+    },
+    {
+      "youtube_id": "C4dltoCC-LY",
+      "label": 187,
+      "time_start": 340,
+      "time_end": 350,
+      "frame_count_metadata": 122,
+      "directory": "C4dltoCC-LY",
+      "rank": "09981fc34b00adfbf601f7795487d015e66ecf0805ea7ce6984fa4ef7d23521e"
+    },
+    {
+      "youtube_id": "xyUeMz9bAsA",
+      "label": 100,
+      "time_start": 154,
+      "time_end": 164,
+      "frame_count_metadata": 122,
+      "directory": "xyUeMz9bAsA",
+      "rank": "0998fdc5e036e563f875d55155041364efc09d7f0b4c233f7008469a738fff7e"
+    },
+    {
+      "youtube_id": "7Nn0vXVuDVQ",
+      "label": 145,
+      "time_start": 25,
+      "time_end": 35,
+      "frame_count_metadata": 122,
+      "directory": "7Nn0vXVuDVQ",
+      "rank": "099d74b87e64c0c619d633998e82a009cdb70e3389307606dd55a12f23c5696b"
+    },
+    {
+      "youtube_id": "g-onpXcXseM",
+      "label": 234,
+      "time_start": 28,
+      "time_end": 38,
+      "frame_count_metadata": 122,
+      "directory": "g-onpXcXseM",
+      "rank": "09a4b3be5a376712f09b0d55b518ee8b729e3fda19c98882ec7d89751ae9dc70"
+    },
+    {
+      "youtube_id": "ERALCayUaEA",
+      "label": 148,
+      "time_start": 7,
+      "time_end": 17,
+      "frame_count_metadata": 79,
+      "directory": "ERALCayUaEA",
+      "rank": "09a7031568f4b14eb716dc820c6dff409ae255befe3244a2aa98772a935b3a75"
+    },
+    {
+      "youtube_id": "YNFv8ocICMo",
+      "label": 267,
+      "time_start": 39,
+      "time_end": 49,
+      "frame_count_metadata": 85,
+      "directory": "YNFv8ocICMo",
+      "rank": "09a7ebf51a5ef7a489e82c075f7832c346caa2516ae21ca9fb1e3cde5e0d2b85"
+    },
+    {
+      "youtube_id": "vopk4ehIE-I",
+      "label": 6,
+      "time_start": 1,
+      "time_end": 11,
+      "frame_count_metadata": 122,
+      "directory": "vopk4ehIE-I",
+      "rank": "09aab856bfd9ff9f72cec0a1a264d2bcef2835ea3a14a9ed975a553691c06a2a"
+    },
+    {
+      "youtube_id": "HQj_YmhlaiY",
+      "label": 205,
+      "time_start": 57,
+      "time_end": 67,
+      "frame_count_metadata": 122,
+      "directory": "HQj_YmhlaiY",
+      "rank": "09abbb4651a2e51cae45853f4a9637fa1f940838c1c061b2816abb7b8aefd890"
+    },
+    {
+      "youtube_id": "9iytLJcY9gk",
+      "label": 25,
+      "time_start": 5,
+      "time_end": 15,
+      "frame_count_metadata": 120,
+      "directory": "9iytLJcY9gk",
+      "rank": "09ac01ac53e8df4ef29cfa04a01b56a6fc6370dfdc4bde04a138d9db6249bb28"
+    },
+    {
+      "youtube_id": "fE6mbagcIDQ",
+      "label": 280,
+      "time_start": 101,
+      "time_end": 111,
+      "frame_count_metadata": 122,
+      "directory": "fE6mbagcIDQ",
+      "rank": "09ac5627d3552d02ff76338b5d2e0c2ac4ee0eda4dd9fa3702c56862477ab1d0"
+    },
+    {
+      "youtube_id": "SkZRD5UzVwg",
+      "label": 200,
+      "time_start": 23,
+      "time_end": 33,
+      "frame_count_metadata": 122,
+      "directory": "SkZRD5UzVwg",
+      "rank": "09ae9fa0b044117e20ae662b36683fedba391a85e74beb2cf1b6e67310244ca0"
+    },
+    {
+      "youtube_id": "AMuD4K62DUo",
+      "label": 2,
+      "time_start": 136,
+      "time_end": 146,
+      "frame_count_metadata": 122,
+      "directory": "AMuD4K62DUo",
+      "rank": "09b3369dfb24b94b7cb5567189239112c8c64e79de1012a91d19355429c8df8a"
+    },
+    {
+      "youtube_id": "IqbP_Db5O4Y",
+      "label": 101,
+      "time_start": 16,
+      "time_end": 26,
+      "frame_count_metadata": 113,
+      "directory": "IqbP_Db5O4Y",
+      "rank": "09c5a361a9a8fe6f3b7036b396d1bf7f75d4a91c335a07503e4b6389ce45aa10"
+    },
+    {
+      "youtube_id": "WZ7EVLPZNYs",
+      "label": 348,
+      "time_start": 167,
+      "time_end": 177,
+      "frame_count_metadata": 122,
+      "directory": "WZ7EVLPZNYs",
+      "rank": "09c7739742bad6013451743bd17d6b2b3e340e0fc2f1b6d55d250163330bfd3f"
+    },
+    {
+      "youtube_id": "HnXoI7Cj6w4",
+      "label": 67,
+      "time_start": 55,
+      "time_end": 65,
+      "frame_count_metadata": 122,
+      "directory": "HnXoI7Cj6w4",
+      "rank": "09ccc2a7b4eda861bc787e9eb13d0a226c6dd463e92be576a7fbce7a22dd1c48"
+    },
+    {
+      "youtube_id": "L-pnyKdG6Xc",
+      "label": 136,
+      "time_start": 1,
+      "time_end": 11,
+      "frame_count_metadata": 122,
+      "directory": "L-pnyKdG6Xc",
+      "rank": "09ce5e8f84b3fa3b3629cf786ff37056535bf6e0b958287da353da8dd0cc632e"
+    },
+    {
+      "youtube_id": "w_d4GpaumnI",
+      "label": 371,
+      "time_start": 506,
+      "time_end": 516,
+      "frame_count_metadata": 122,
+      "directory": "w_d4GpaumnI",
+      "rank": "09d0a40f18db0389d97988be95ce79f630a04f531b7aa5a3c089cb2eafec62cc"
+    },
+    {
+      "youtube_id": "JEp2k627zJQ",
+      "label": 315,
+      "time_start": 303,
+      "time_end": 313,
+      "frame_count_metadata": 122,
+      "directory": "JEp2k627zJQ",
+      "rank": "09d66df940ccd80a986ac3a883250fa45345814ceb77a405c88d4628d1aa9b34"
+    },
+    {
+      "youtube_id": "PPRlQ1m3LlA",
+      "label": 376,
+      "time_start": 8,
+      "time_end": 18,
+      "frame_count_metadata": 122,
+      "directory": "PPRlQ1m3LlA",
+      "rank": "09d82fe7a03727b5883e659c537bb631623c338e37eaac3e44fb17c3a0788633"
+    },
+    {
+      "youtube_id": "BplZKBmpXIg",
+      "label": 340,
+      "time_start": 16,
+      "time_end": 26,
+      "frame_count_metadata": 122,
+      "directory": "BplZKBmpXIg",
+      "rank": "09e68d28d67857a092e17ea07007408281dc6403cc0e73e72e21748ca2818466"
+    },
+    {
+      "youtube_id": "Fm-uOSfuq9I",
+      "label": 168,
+      "time_start": 64,
+      "time_end": 74,
+      "frame_count_metadata": 122,
+      "directory": "Fm-uOSfuq9I",
+      "rank": "09ea3a603be8a7204ee8fbe0ccde043780e87fd0a3da7cf085e3f6b29ced715c"
+    },
+    {
+      "youtube_id": "6DJITVBoQgY",
+      "label": 355,
+      "time_start": 116,
+      "time_end": 126,
+      "frame_count_metadata": 122,
+      "directory": "6DJITVBoQgY",
+      "rank": "09ef4a0569e4b6636014de1a7752d84ee25ff8acd621418867a95275c01e40f2"
+    },
+    {
+      "youtube_id": "a4fW4fQhmpQ",
+      "label": 384,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 122,
+      "directory": "a4fW4fQhmpQ",
+      "rank": "09f1ef62a0f60c523de1252ef40e0f644369a3e0de07694946a08c5673631e2e"
+    },
+    {
+      "youtube_id": "M7-e1pEnoKI",
+      "label": 28,
+      "time_start": 101,
+      "time_end": 111,
+      "frame_count_metadata": 122,
+      "directory": "M7-e1pEnoKI",
+      "rank": "09f8a7c234ee200627f68d670b7958c3293412a25de631b49de2e472c34dbf42"
+    },
+    {
+      "youtube_id": "-35wittelPs",
+      "label": 133,
+      "time_start": 26,
+      "time_end": 36,
+      "frame_count_metadata": 122,
+      "directory": "-35wittelPs",
+      "rank": "09f8c69f8711ee8968d335f62ed8c2c719fa4c58107afadd32d05d92badd30fd"
+    },
+    {
+      "youtube_id": "98EmLs-rAio",
+      "label": 168,
+      "time_start": 68,
+      "time_end": 78,
+      "frame_count_metadata": 122,
+      "directory": "98EmLs-rAio",
+      "rank": "09fa141c23b6dab2d24e3f169a4182d2151cea102a7339c5ea7f31e424592a5e"
+    },
+    {
+      "youtube_id": "Adspplz782U",
+      "label": 344,
+      "time_start": 15,
+      "time_end": 25,
+      "frame_count_metadata": 122,
+      "directory": "Adspplz782U",
+      "rank": "09fa15666066db3f130fa70fa5b3534b16f1fc16c11065687a736ddeeed85a53"
+    },
+    {
+      "youtube_id": "TbOqddhTNL0",
+      "label": 334,
+      "time_start": 83,
+      "time_end": 93,
+      "frame_count_metadata": 75,
+      "directory": "TbOqddhTNL0",
+      "rank": "09fd70993046bc448d4304e1e8ab1575542e99468351f64161a3d8a93b650c02"
+    },
+    {
+      "youtube_id": "l4DqqV7f_dU",
+      "label": 383,
+      "time_start": 0,
+      "time_end": 10,
+      "frame_count_metadata": 122,
+      "directory": "l4DqqV7f_dU",
+      "rank": "09fed568b10f92f5ae382646b6c640c7b8ebdb993328f2f724dc289b94b960ea"
+    },
+    {
+      "youtube_id": "hMu1AqRYMG8",
+      "label": 38,
+      "time_start": 41,
+      "time_end": 51,
+      "frame_count_metadata": 94,
+      "directory": "hMu1AqRYMG8",
+      "rank": "0a011032090ccb62be86dcfe1f58a246613e37bcee2d66f2098244d210dd8893"
+    },
+    {
+      "youtube_id": "R86vJyi_VVQ",
+      "label": 343,
+      "time_start": 12,
+      "time_end": 22,
+      "frame_count_metadata": 102,
+      "directory": "R86vJyi_VVQ",
+      "rank": "0a016825a93a3ed424444eae756ca9cef6476def656c8a34c3c7f5fdd2b8d7ab"
+    },
+    {
+      "youtube_id": "F-kAJo-dWRQ",
+      "label": 301,
+      "time_start": 83,
+      "time_end": 93,
+      "frame_count_metadata": 122,
+      "directory": "F-kAJo-dWRQ",
+      "rank": "0a0c064c865ef7c5b8c7b14edfc20a6d47ad1b215d1647005691eb1ee1e426d3"
+    },
+    {
+      "youtube_id": "HM9BP-QR8xk",
+      "label": 116,
+      "time_start": 61,
+      "time_end": 71,
+      "frame_count_metadata": 122,
+      "directory": "HM9BP-QR8xk",
+      "rank": "0a14a84c04918fa10ee83ae6e9fc15c94d651671af35dd1a954839133949a6fc"
+    },
+    {
+      "youtube_id": "BC8PLOvo8rk",
+      "label": 335,
+      "time_start": 50,
+      "time_end": 60,
+      "frame_count_metadata": 122,
+      "directory": "BC8PLOvo8rk",
+      "rank": "0a18ad1fb6c921b1fce286b86192da31adc2c4f4b30dd3401d9767aee70041ae"
+    }
+  ],
+  "original128": [
+    "4p4eqetk4R8",
+    "ZlF61ic42wc",
+    "hQ3kPL2pTAs",
+    "wsfCY4x8yU8",
+    "-DgC31LRuXs",
+    "x77K1gXY4R8",
+    "xlDZNta0r8g",
+    "4zZ1JoAv4z4",
+    "DyTh-HA7L6E",
+    "C9boKvSr3kU",
+    "BAHRnMEFEwg",
+    "JBzWsBMff6A",
+    "qarexnzoZuo",
+    "cDRi9AzrapA",
+    "jY2N5gOu5sw",
+    "jeQHEbt09OM",
+    "rsCodvxQzg4",
+    "nt5sPExRJxQ",
+    "YxMzRRdhrfw",
+    "t2ilfdahddE",
+    "ClkSJavnIUo",
+    "Wjnvjwsi-fM",
+    "oq4vdXUtr9I",
+    "CZfe0PkjvA4",
+    "Y7CZDrJ6Jv4",
+    "-khmO1mLnoA",
+    "nKXCpkKFonA",
+    "BUT8oefH9Nw",
+    "g4wZMQnBc3Y",
+    "djkFgIJSze0",
+    "I4RIyZDsltM",
+    "RUNwB3-Qxqg",
+    "8kN7EyPBmrI",
+    "2albmWipJAs",
+    "kt6Egq5WSjI",
+    "GZbDnvtR9RE",
+    "VRmmlteL97Q",
+    "rVw05V3fI88",
+    "GJzywS6GjSE",
+    "4DP5vsyAg1c",
+    "BuJGnRL504Y",
+    "06IRoSKPlFM",
+    "BJj9z4n0STk",
+    "HjQIihs-zIU",
+    "Z5ywBikWPqU",
+    "rGCE2UN_9Vc",
+    "54OeCiZcXQQ",
+    "epfCEGpA8OY",
+    "n4uALpKmtDQ",
+    "UABK4y0_xe8",
+    "1Ob-133153o",
+    "44EO6L1wBGk",
+    "UdJfHWKpCsc",
+    "ML4se4A-RZo",
+    "rFee2NCkWQE",
+    "caR1ft-_b0Q",
+    "e1lLmbbiksk",
+    "tV8xpJII1LM",
+    "P_L4Tuvc3l0",
+    "a_BnFfXVcc4",
+    "At7NeSrao5I",
+    "AV5bPnbuR20",
+    "XNDkoioI3rE",
+    "go5_N9JnL0U",
+    "ZyvONwcYFtw",
+    "q0PZBq8tm6U",
+    "-m-2ka9iN9M",
+    "auHqPVQAz5E",
+    "JQ6sX-uG9yY",
+    "8nYqTnJm-eg",
+    "W9aju01D0LQ",
+    "p0f8Q4CxW0M",
+    "_R-LnymjC0o",
+    "ao7G7hAyPco",
+    "3Wx4j5V0rWg",
+    "ahoHyCo1-rI",
+    "IgE3g3HyUE4",
+    "F7Tmh5j81zI",
+    "YH_2tWoQKH4",
+    "y1U6Z2ZYQdc",
+    "lqXDA8aiEsw",
+    "TA7nm2dPZVc",
+    "IyCxPrBNAmk",
+    "IgKFqseG-9c",
+    "kjgejOmW3Sc",
+    "qH1dW6YUeUo",
+    "QpC-rZE2FAE",
+    "Zk_4N83fkx4",
+    "CVPjZGMWIUM",
+    "k1hIvekGoBE",
+    "bKM3pS6y2iU",
+    "PjBFvqIA6hk",
+    "dzeivZlP6tU",
+    "ehG5gMBt9gs",
+    "p7gcAtB0VrI",
+    "9bx-YVn-N2s",
+    "yGd4y0Z5xOg",
+    "HJXT067oOi8",
+    "0GJDwzYw7wo",
+    "ocUbXJkvYRY",
+    "9dUkIbsOEAM",
+    "AV9_t0LYy8Y",
+    "TPKVrO6DdPw",
+    "wR3cCcmP0SQ",
+    "8vNVXYT-x2A",
+    "ieN8KAqiJl8",
+    "E4iysix7GcU",
+    "2uVVdgxzy2A",
+    "4jWDOUY_CP0",
+    "EWWYBI928ms",
+    "Oef3VceFO9s",
+    "hjKnYwZaVX4",
+    "PCmschRcWLQ",
+    "TPs6CZs7LtY",
+    "rF8jfu5F5v4",
+    "Hu4OX-8jzoc",
+    "ZcYT82-Agrc",
+    "NGBxhcfD7O8",
+    "Ij_3UvY3b8E",
+    "HihF3GPhvhA",
+    "pa9qyV8cbek",
+    "6CEV2jpEZjY",
+    "Nay7yu0HMM4",
+    "m0wo07UGmaQ",
+    "Lz2aUsmtGGc",
+    "sqqOLTSLM6A",
+    "Fpe5A0w9m10",
+    "LKtpHHx793A"
+  ],
+  "additional384": [
+    "sFobl5_CbJk",
+    "Kxhz0tM5kro",
+    "wjTyHApVMJg",
+    "oj7arJHLcHo",
+    "C15qK3MFWLk",
+    "2zxsFNN_UiI",
+    "xSV-oLfCsrI",
+    "9fpVvCRPNy0",
+    "NMaC-_IGv_Q",
+    "ZpYNqEbzJec",
+    "jtS3MRFjV1Y",
+    "IX7XRhiV8b4",
+    "ZQPOHo5G1z8",
+    "HzZP5PVc080",
+    "UFpdMfP3XPc",
+    "69lGQYJOxA8",
+    "Ui06uqNqVl8",
+    "jiOopSLvFMQ",
+    "Lr7QCcuko2E",
+    "wo36qZoOOLU",
+    "SKZqCF74dao",
+    "w68UOpC3bUw",
+    "mVHZaKeWPlI",
+    "4F3HxPIT91o",
+    "_pvhiVa3FjA",
+    "nPGctuxTMd4",
+    "1sXlRCAtVAM",
+    "g0AmzoZYSq0",
+    "PHh6eI5oN14",
+    "39q2d9JQN0E",
+    "7dUhZWrCgUU",
+    "FC1iry0ICA0",
+    "4JxH3S5JwMs",
+    "hu2dBJTGJqI",
+    "Hp2i2CG11wY",
+    "mhTqD1rA-po",
+    "SxW8hYW0FnA",
+    "F4C7r0y49lQ",
+    "mQYuteamGwA",
+    "2OlWhcFoaMM",
+    "tSKKYB6t51g",
+    "vLOJziNeVzM",
+    "HgCI6VFMGiw",
+    "tkv9hTAJFeg",
+    "tiqPxgLXVcY",
+    "ocNg21dKAzc",
+    "cAj84e7_6w4",
+    "U96UWdc-3Aw",
+    "JdTbS0BtltQ",
+    "V12ELx1WHok",
+    "-9Rcf4Fzed8",
+    "6FEwHX0NpOQ",
+    "fWDXUvC1zuo",
+    "eJjZKa14gCQ",
+    "jDTfMSxMSjQ",
+    "gw_M5A_Mww4",
+    "9xRs-w8HtXE",
+    "Vgz1ER6MNic",
+    "y0dO7BCGmqs",
+    "dSmWDBOP6r4",
+    "1pWCgNggH5M",
+    "SQddPtgoQGE",
+    "HV0Hs4UysUM",
+    "9RKVtmshPrg",
+    "WpJcyfCzf30",
+    "lz0_CYRI0NA",
+    "4Raya03L2xU",
+    "ZgHZ0KgFOSc",
+    "EjQCOH12RX0",
+    "uPMrdDdZ688",
+    "VbEWELuXntI",
+    "9MHjWwTRBGY",
+    "yiIpsWdwxwk",
+    "4A-hQHF5wFc",
+    "tREQGo8rNoA",
+    "5ft5ebGnMFU",
+    "URLxWfi96Os",
+    "HurRfREGGVU",
+    "TOwjQ_RSm8s",
+    "V_N-z2w6p4c",
+    "Xllal9867PY",
+    "xH_-PcTPGes",
+    "KsFDUHkmWuc",
+    "1Vup5goTOyU",
+    "IAsnGE-gU28",
+    "t2ZXSVfstOg",
+    "-9ILBd-ArtM",
+    "ih_yOz2UVuw",
+    "syfqx1SecXY",
+    "nIhVmEwpv0g",
+    "oRvuziGNW5g",
+    "HqZCDjQaV3Y",
+    "HPHxxvmYmCw",
+    "JuDaHMQvbrs",
+    "3NTlGQH4jdQ",
+    "XM5d49kwaWM",
+    "n5uf4BVoyYY",
+    "WEwORc3Jjek",
+    "Y4ywR3V5XKM",
+    "ntFmk_-g6fE",
+    "gxbUZcsy4EA",
+    "QGlOiSMAzLA",
+    "RPCl_8jAXV4",
+    "yZ83qnFvpQ0",
+    "1vcbRgLeQds",
+    "-4HCMJkLhus",
+    "VxDOiYNIfnA",
+    "xMG9lkdiqDg",
+    "FHlk7WMsDDA",
+    "Gdrzzsl7XpE",
+    "XwQhLfYGP-4",
+    "aU2ByztjE60",
+    "w48NvDRQh_c",
+    "weBWP6td8ZU",
+    "l1-i2xW1Qk8",
+    "-8jPV06bmhA",
+    "oH85TNw8F20",
+    "27iZS0aq5CA",
+    "BXb1JVzqhpA",
+    "c-h_3mybzOg",
+    "EWnRPJ7BEjM",
+    "ZDoWouAlh_o",
+    "_f6apJjL2hw",
+    "zFGH_LjuHdo",
+    "Bn6zdyCAwJs",
+    "KUBBMiiHPkc",
+    "aZTD_KQWUYA",
+    "t-CG8YUiyHE",
+    "_p8yd7EV8Cc",
+    "vC3qNixYyGY",
+    "gR8VhpL5ovk",
+    "7Ei19kkyoGU",
+    "uZJkAopGUgA",
+    "b4V-LQsk1FY",
+    "0MJ9Rk0k92Q",
+    "zJVULgHStBU",
+    "D7zBuPBBnYA",
+    "Xj2HoKVk3As",
+    "bVuTVj3Px5I",
+    "FGj7-Cxu__0",
+    "Rtb8ETNloCQ",
+    "KF6jGi77jqE",
+    "GQ-hPUp__3I",
+    "AjZ_d0fWUBc",
+    "g6YjwYGwSlI",
+    "QQp6IfJInQc",
+    "tzdAkod9HJs",
+    "JWvR_MmdTOA",
+    "A1GyD1xuAbk",
+    "y9TUT-GsAvY",
+    "ij3u6P0iv1M",
+    "BYjR9k93WlI",
+    "eHhkhwSOy8U",
+    "9TPkWhaXoOk",
+    "Xz9FubtN8es",
+    "OtZXH06q0Io",
+    "oSJw4wU7g4g",
+    "-Ovwq0kVUx4",
+    "-73Kg-MKmwE",
+    "glcVei9aPXY",
+    "V6sdCPuEdWI",
+    "pqyrWlDp3jc",
+    "bwlizlTA7Uk",
+    "xBmohjteQCU",
+    "G4wgZyOgcFc",
+    "dl54gRr-bmc",
+    "RR18KL8GSe4",
+    "pA4Bh0qvO3w",
+    "Rxv6sXM4NiM",
+    "dxDA6om2fdw",
+    "cjk3tn-kqkU",
+    "yymr4YWVFe4",
+    "Sa25C3h-F6A",
+    "DEo_WE0vecM",
+    "c1qUSnEZ9e8",
+    "UPSaUWMg3pQ",
+    "R_u7MaMi9ak",
+    "hjr3bdMONXE",
+    "fBcKhmdWCvE",
+    "f9Hl6hXOmOo",
+    "4Nt9m-pPdFw",
+    "ZBekxypiXzk",
+    "wBxm_5pUf00",
+    "wR0WOAkatpA",
+    "bcGVwwQFCzo",
+    "UJJ7bi6LCKY",
+    "oeSoRa8xtUg",
+    "HlPsAACIp88",
+    "iox__MbwxNg",
+    "1yNtzcAsYM4",
+    "Bu9cLA8a52A",
+    "T3nHYMukZM4",
+    "dT0xlEDaXkY",
+    "ofuABYNgdI4",
+    "Eraqc_w2rnc",
+    "C4G5Md3vDm8",
+    "dC4ngeTfUvM",
+    "mLUnkjOZ15k",
+    "rIMbGogcqOs",
+    "9SMKZVbMSwM",
+    "k_jAwU5eWI8",
+    "M6kYpQ_biCU",
+    "SZfgBg08fgQ",
+    "jeHs4Wst9Fs",
+    "k8StfRMZSt0",
+    "7Uz7HCOd4zQ",
+    "ld1mfCLItcw",
+    "h8CZjnsgyQQ",
+    "wG1wBA9lyJE",
+    "Sa9w8xclGW4",
+    "HPFJe6qRFaA",
+    "rQlxLEor6ns",
+    "CAtgKuqiWUc",
+    "bWeyTDutG2U",
+    "4luRjdOCkSg",
+    "kKhu3_nRxE8",
+    "RgFyeIVrxXw",
+    "ADe2db9hApA",
+    "Wjv9HIe1cgg",
+    "q6I9vWst_hU",
+    "mRc3WuqdBIQ",
+    "XhyTvk_VJ3I",
+    "7sN_A46nOEU",
+    "SRPGgm1409g",
+    "z6OjotkBuG4",
+    "y9VzQwZuYQM",
+    "t2s26LT632o",
+    "7-dud__cqq8",
+    "hR--iDJcjgU",
+    "ui--UqzKuZ4",
+    "L9OwUf1n-x8",
+    "o0tfI02ehDE",
+    "hqTsAZjbDIU",
+    "nyO86Yf_MA0",
+    "86B6CX_uYeU",
+    "cAcnW55E_2Q",
+    "3p1fQNmgY9w",
+    "VefhBPzw-SY",
+    "3a8zJ6AoXyU",
+    "JgL16l2a280",
+    "Oyx3tZgabIA",
+    "hrvnnf7wzj4",
+    "NhVQFHJqmss",
+    "5BRQYmi-n3Q",
+    "kWuBo-p6zG0",
+    "BdMiTo_OtnU",
+    "2u1MqYT1B3I",
+    "Ii8dzS2Lu_M",
+    "UBjwOghFbvY",
+    "Eoe38EW0KWA",
+    "a3Ki429gUZI",
+    "Re7HnlVTrqA",
+    "Lzs27USI7Es",
+    "1z1HDy2-jQw",
+    "MHJDFRjxO2w",
+    "uEuG-ejXVuA",
+    "Lqz_-Q91RH4",
+    "MMMabYYxsew",
+    "e4sAMeH90a0",
+    "OnU1Hr__jlY",
+    "_EvhwFGaHyU",
+    "LJXNAVg9J-4",
+    "6J57U2QgTiU",
+    "Vh_bchJz99Y",
+    "p3lQV8P2V7c",
+    "_adU_0hUdr8",
+    "3AEzQclPTKg",
+    "3-evHTgxa8M",
+    "rO4kl4cb67g",
+    "tJ7Y8VZR2R4",
+    "_U5ZCn8Ki9s",
+    "KYndL4FoJRo",
+    "w202HsFm59g",
+    "BG3qTBvDIYg",
+    "X75F9gFpFRw",
+    "-0ew-c0w7uc",
+    "usHuufTQ1P0",
+    "PrRfO1aMTnA",
+    "kH3HY6fjdB0",
+    "bfrdgr9G8-g",
+    "s3uMwPU3DaM",
+    "4iVBolW8F1o",
+    "TGDEZRNXHuU",
+    "Znqi81RS3NA",
+    "2jMweIhqE3E",
+    "tDdXHUTEdXk",
+    "LXjM7nBZcak",
+    "jei3QQUwYEQ",
+    "0PAZuNazXY0",
+    "kYS8byJ78U4",
+    "lPFtN6pPsE4",
+    "glF3R-pYFp4",
+    "Rfihil7FhJ0",
+    "YsCKbXAGVC0",
+    "-g5emSW-SOg",
+    "tNr-tFCmC7o",
+    "7oUvm4e9oQ8",
+    "NlFLyy3HBEY",
+    "MC02vu7jguw",
+    "qeDi7i1XXhM",
+    "YAM1fh0KK4s",
+    "vtVtfv6mVOc",
+    "1K1b8Zphi3U",
+    "XxnnMRaYub0",
+    "CZNQfolOAhs",
+    "nZG6du0gq7s",
+    "SU_x2LQqSLs",
+    "F72Uq20m-uA",
+    "iR99L0gD0cs",
+    "5c9HlCmmAGw",
+    "AD-2M-QdE0I",
+    "T2xWP7WqMUM",
+    "N3bROK0uXE4",
+    "d_RHfG9Xhh0",
+    "aRrNyjIv900",
+    "piYKF7yTMOA",
+    "RpBJ9ymW6Dg",
+    "_C5Xq0pr56A",
+    "i4ssdweKkZY",
+    "PbyZxS_-BZE",
+    "uMhQ8GzHjHA",
+    "RiNmtnpzdSI",
+    "azt6RWQiJCg",
+    "u6PXN2gCiwY",
+    "xME1X5_D88c",
+    "a06xpsZj--U",
+    "fS3qZwhKnfA",
+    "5w7-2_KAP2k",
+    "3exdpRbcMmA",
+    "-yv8c2CDbR8",
+    "8wHTcDaq63g",
+    "GVWXXU2H79Y",
+    "uBXZoo3fHAQ",
+    "T8AdoaB6dEo",
+    "IdVVUhYkLP4",
+    "X_hXueBLRk0",
+    "6GBx-xHKhug",
+    "OnfgY84e8DE",
+    "pjZ8fqKUyzE",
+    "pITuRPnrT-4",
+    "RzEMZ5VoHao",
+    "8Xpc_kPQ0TY",
+    "1UO2RdoUuMI",
+    "S8_ErlI3phA",
+    "3e0IkQDTzjQ",
+    "eZTQRUBQxqw",
+    "3QF0XHz2jt4",
+    "4oTDMhDhzoc",
+    "i2AJ5SAqzCE",
+    "PcXRWmzyTM8",
+    "C4dltoCC-LY",
+    "xyUeMz9bAsA",
+    "7Nn0vXVuDVQ",
+    "g-onpXcXseM",
+    "ERALCayUaEA",
+    "YNFv8ocICMo",
+    "vopk4ehIE-I",
+    "HQj_YmhlaiY",
+    "9iytLJcY9gk",
+    "fE6mbagcIDQ",
+    "SkZRD5UzVwg",
+    "AMuD4K62DUo",
+    "IqbP_Db5O4Y",
+    "WZ7EVLPZNYs",
+    "HnXoI7Cj6w4",
+    "L-pnyKdG6Xc",
+    "w_d4GpaumnI",
+    "JEp2k627zJQ",
+    "PPRlQ1m3LlA",
+    "BplZKBmpXIg",
+    "Fm-uOSfuq9I",
+    "6DJITVBoQgY",
+    "a4fW4fQhmpQ",
+    "M7-e1pEnoKI",
+    "-35wittelPs",
+    "98EmLs-rAio",
+    "Adspplz782U",
+    "TbOqddhTNL0",
+    "l4DqqV7f_dU",
+    "hMu1AqRYMG8",
+    "R86vJyi_VVQ",
+    "F-kAJo-dWRQ",
+    "HM9BP-QR8xk",
+    "BC8PLOvo8rk"
+  ],
+  "annotation_sha256": "02e0fb98df45ca7db3d93e60e0afbd0c1019d3f026a4e8522be72a65010fb934",
+  "source_inventory_sha256": "f08fd67dcf51bdc515732274c613240d68f3f69a7c5f4b451334ff5c93c30679",
+  "rank_recipe": "SHA256 UTF8(v34r1-fresh-k400:20261015: + YouTube ID), ascending",
+  "policy": "unchanged frozen A2; original128 already pass both point targets, so expand to512; report old128/new384/full512 separately",
+  "source_rule": "verify every directory and prescribed16 frame paths on Kaggle, freeze raw/canonical hashes before inference; missing sources abort, never choose replacements",
+  "source_cadence": "Not verified; F10 title not accepted as FPS evidence"
+}

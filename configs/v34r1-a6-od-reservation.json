@@ -1,0 +1,1944 @@
+{
+  "schema": "v34r1-A6-OD-reservation-1",
+  "frozen_utc": "2026-10-16T15:09:36.172849+00:00",
+  "qps": [
+    30,
+    35,
+    40,
+    45
+  ],
+  "codecs": [
+    "h264",
+    "h265"
+  ],
+  "annotation_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+  "unused_pool_before_pilot": 134,
+  "selected": [
+    {
+      "id": 329447,
+      "file_name": "000000329447.jpg",
+      "width": 640,
+      "height": 505
+    },
+    {
+      "id": 104782,
+      "file_name": "000000104782.jpg",
+      "width": 500,
+      "height": 375
+    },
+    {
+      "id": 169996,
+      "file_name": "000000169996.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 309452,
+      "file_name": "000000309452.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 419653,
+      "file_name": "000000419653.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 308793,
+      "file_name": "000000308793.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 558854,
+      "file_name": "000000558854.jpg",
+      "width": 500,
+      "height": 375
+    },
+    {
+      "id": 222118,
+      "file_name": "000000222118.jpg",
+      "width": 640,
+      "height": 427
+    },
+    {
+      "id": 465836,
+      "file_name": "000000465836.jpg",
+      "width": 500,
+      "height": 375
+    },
+    {
+      "id": 394940,
+      "file_name": "000000394940.jpg",
+      "width": 426,
+      "height": 640
+    },
+    {
+      "id": 441442,
+      "file_name": "000000441442.jpg",
+      "width": 600,
+      "height": 400
+    },
+    {
+      "id": 63740,
+      "file_name": "000000063740.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 57760,
+      "file_name": "000000057760.jpg",
+      "width": 500,
+      "height": 313
+    },
+    {
+      "id": 537802,
+      "file_name": "000000537802.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 270677,
+      "file_name": "000000270677.jpg",
+      "width": 634,
+      "height": 640
+    },
+    {
+      "id": 392722,
+      "file_name": "000000392722.jpg",
+      "width": 640,
+      "height": 423
+    },
+    {
+      "id": 342367,
+      "file_name": "000000342367.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 133819,
+      "file_name": "000000133819.jpg",
+      "width": 640,
+      "height": 425
+    },
+    {
+      "id": 9400,
+      "file_name": "000000009400.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 573008,
+      "file_name": "000000573008.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 333237,
+      "file_name": "000000333237.jpg",
+      "width": 640,
+      "height": 409
+    },
+    {
+      "id": 537991,
+      "file_name": "000000537991.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 331317,
+      "file_name": "000000331317.jpg",
+      "width": 640,
+      "height": 484
+    },
+    {
+      "id": 259625,
+      "file_name": "000000259625.jpg",
+      "width": 640,
+      "height": 427
+    },
+    {
+      "id": 289229,
+      "file_name": "000000289229.jpg",
+      "width": 362,
+      "height": 500
+    },
+    {
+      "id": 99114,
+      "file_name": "000000099114.jpg",
+      "width": 500,
+      "height": 335
+    },
+    {
+      "id": 78823,
+      "file_name": "000000078823.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 463690,
+      "file_name": "000000463690.jpg",
+      "width": 640,
+      "height": 427
+    },
+    {
+      "id": 33368,
+      "file_name": "000000033368.jpg",
+      "width": 427,
+      "height": 640
+    },
+    {
+      "id": 398652,
+      "file_name": "000000398652.jpg",
+      "width": 640,
+      "height": 427
+    },
+    {
+      "id": 138492,
+      "file_name": "000000138492.jpg",
+      "width": 427,
+      "height": 640
+    },
+    {
+      "id": 99182,
+      "file_name": "000000099182.jpg",
+      "width": 500,
+      "height": 334
+    },
+    {
+      "id": 546011,
+      "file_name": "000000546011.jpg",
+      "width": 500,
+      "height": 334
+    },
+    {
+      "id": 140203,
+      "file_name": "000000140203.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 99054,
+      "file_name": "000000099054.jpg",
+      "width": 427,
+      "height": 640
+    },
+    {
+      "id": 220310,
+      "file_name": "000000220310.jpg",
+      "width": 333,
+      "height": 500
+    },
+    {
+      "id": 347163,
+      "file_name": "000000347163.jpg",
+      "width": 640,
+      "height": 427
+    },
+    {
+      "id": 66706,
+      "file_name": "000000066706.jpg",
+      "width": 612,
+      "height": 612
+    },
+    {
+      "id": 227985,
+      "file_name": "000000227985.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 402774,
+      "file_name": "000000402774.jpg",
+      "width": 425,
+      "height": 640
+    },
+    {
+      "id": 288862,
+      "file_name": "000000288862.jpg",
+      "width": 427,
+      "height": 640
+    },
+    {
+      "id": 367095,
+      "file_name": "000000367095.jpg",
+      "width": 640,
+      "height": 427
+    },
+    {
+      "id": 3661,
+      "file_name": "000000003661.jpg",
+      "width": 640,
+      "height": 384
+    },
+    {
+      "id": 281409,
+      "file_name": "000000281409.jpg",
+      "width": 640,
+      "height": 427
+    },
+    {
+      "id": 11813,
+      "file_name": "000000011813.jpg",
+      "width": 333,
+      "height": 500
+    },
+    {
+      "id": 384527,
+      "file_name": "000000384527.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 68093,
+      "file_name": "000000068093.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 439854,
+      "file_name": "000000439854.jpg",
+      "width": 500,
+      "height": 333
+    },
+    {
+      "id": 442456,
+      "file_name": "000000442456.jpg",
+      "width": 640,
+      "height": 356
+    },
+    {
+      "id": 341681,
+      "file_name": "000000341681.jpg",
+      "width": 640,
+      "height": 427
+    },
+    {
+      "id": 449198,
+      "file_name": "000000449198.jpg",
+      "width": 500,
+      "height": 333
+    },
+    {
+      "id": 24243,
+      "file_name": "000000024243.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 321118,
+      "file_name": "000000321118.jpg",
+      "width": 640,
+      "height": 426
+    },
+    {
+      "id": 20992,
+      "file_name": "000000020992.jpg",
+      "width": 500,
+      "height": 333
+    },
+    {
+      "id": 283520,
+      "file_name": "000000283520.jpg",
+      "width": 640,
+      "height": 426
+    },
+    {
+      "id": 335800,
+      "file_name": "000000335800.jpg",
+      "width": 640,
+      "height": 427
+    },
+    {
+      "id": 152686,
+      "file_name": "000000152686.jpg",
+      "width": 640,
+      "height": 400
+    },
+    {
+      "id": 134886,
+      "file_name": "000000134886.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 441586,
+      "file_name": "000000441586.jpg",
+      "width": 640,
+      "height": 425
+    },
+    {
+      "id": 200839,
+      "file_name": "000000200839.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 514797,
+      "file_name": "000000514797.jpg",
+      "width": 640,
+      "height": 439
+    },
+    {
+      "id": 201646,
+      "file_name": "000000201646.jpg",
+      "width": 640,
+      "height": 427
+    },
+    {
+      "id": 491497,
+      "file_name": "000000491497.jpg",
+      "width": 375,
+      "height": 500
+    },
+    {
+      "id": 77396,
+      "file_name": "000000077396.jpg",
+      "width": 640,
+      "height": 480
+    }
+  ],
+  "confirmation256": [
+    {
+      "file_name": "000000506178.jpg",
+      "height": 500,
+      "width": 375,
+      "id": 506178
+    },
+    {
+      "file_name": "000000369323.jpg",
+      "height": 500,
+      "width": 377,
+      "id": 369323
+    },
+    {
+      "file_name": "000000261097.jpg",
+      "height": 500,
+      "width": 333,
+      "id": 261097
+    },
+    {
+      "file_name": "000000389381.jpg",
+      "height": 543,
+      "width": 640,
+      "id": 389381
+    },
+    {
+      "file_name": "000000498463.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 498463
+    },
+    {
+      "file_name": "000000429011.jpg",
+      "height": 343,
+      "width": 640,
+      "id": 429011
+    },
+    {
+      "file_name": "000000513524.jpg",
+      "height": 425,
+      "width": 640,
+      "id": 513524
+    },
+    {
+      "file_name": "000000176778.jpg",
+      "height": 640,
+      "width": 427,
+      "id": 176778
+    },
+    {
+      "file_name": "000000009448.jpg",
+      "height": 640,
+      "width": 551,
+      "id": 9448
+    },
+    {
+      "file_name": "000000581357.jpg",
+      "height": 612,
+      "width": 612,
+      "id": 581357
+    },
+    {
+      "file_name": "000000186873.jpg",
+      "height": 612,
+      "width": 612,
+      "id": 186873
+    },
+    {
+      "file_name": "000000497599.jpg",
+      "height": 640,
+      "width": 427,
+      "id": 497599
+    },
+    {
+      "file_name": "000000492077.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 492077
+    },
+    {
+      "file_name": "000000383838.jpg",
+      "height": 588,
+      "width": 640,
+      "id": 383838
+    },
+    {
+      "file_name": "000000420916.jpg",
+      "height": 400,
+      "width": 640,
+      "id": 420916
+    },
+    {
+      "file_name": "000000329219.jpg",
+      "height": 427,
+      "width": 640,
+      "id": 329219
+    },
+    {
+      "file_name": "000000474854.jpg",
+      "height": 640,
+      "width": 424,
+      "id": 474854
+    },
+    {
+      "file_name": "000000394559.jpg",
+      "height": 640,
+      "width": 426,
+      "id": 394559
+    },
+    {
+      "file_name": "000000475678.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 475678
+    },
+    {
+      "file_name": "000000095155.jpg",
+      "height": 427,
+      "width": 640,
+      "id": 95155
+    },
+    {
+      "file_name": "000000251065.jpg",
+      "height": 640,
+      "width": 480,
+      "id": 251065
+    },
+    {
+      "file_name": "000000519039.jpg",
+      "height": 299,
+      "width": 640,
+      "id": 519039
+    },
+    {
+      "file_name": "000000054123.jpg",
+      "height": 428,
+      "width": 640,
+      "id": 54123
+    },
+    {
+      "file_name": "000000334371.jpg",
+      "height": 419,
+      "width": 640,
+      "id": 334371
+    },
+    {
+      "file_name": "000000072852.jpg",
+      "height": 640,
+      "width": 424,
+      "id": 72852
+    },
+    {
+      "file_name": "000000039484.jpg",
+      "height": 437,
+      "width": 640,
+      "id": 39484
+    },
+    {
+      "file_name": "000000113354.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 113354
+    },
+    {
+      "file_name": "000000561889.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 561889
+    },
+    {
+      "file_name": "000000274687.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 274687
+    },
+    {
+      "file_name": "000000421455.jpg",
+      "height": 375,
+      "width": 500,
+      "id": 421455
+    },
+    {
+      "file_name": "000000343315.jpg",
+      "height": 478,
+      "width": 640,
+      "id": 343315
+    },
+    {
+      "file_name": "000000229221.jpg",
+      "height": 427,
+      "width": 640,
+      "id": 229221
+    },
+    {
+      "file_name": "000000210273.jpg",
+      "height": 428,
+      "width": 640,
+      "id": 210273
+    },
+    {
+      "file_name": "000000050844.jpg",
+      "height": 500,
+      "width": 334,
+      "id": 50844
+    },
+    {
+      "file_name": "000000517056.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 517056
+    },
+    {
+      "file_name": "000000257566.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 257566
+    },
+    {
+      "file_name": "000000415727.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 415727
+    },
+    {
+      "file_name": "000000232348.jpg",
+      "height": 502,
+      "width": 640,
+      "id": 232348
+    },
+    {
+      "file_name": "000000475387.jpg",
+      "height": 431,
+      "width": 640,
+      "id": 475387
+    },
+    {
+      "file_name": "000000245448.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 245448
+    },
+    {
+      "file_name": "000000001503.jpg",
+      "height": 240,
+      "width": 320,
+      "id": 1503
+    },
+    {
+      "file_name": "000000001761.jpg",
+      "height": 640,
+      "width": 427,
+      "id": 1761
+    },
+    {
+      "file_name": "000000490936.jpg",
+      "height": 640,
+      "width": 480,
+      "id": 490936
+    },
+    {
+      "file_name": "000000004795.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 4795
+    },
+    {
+      "file_name": "000000104198.jpg",
+      "height": 375,
+      "width": 500,
+      "id": 104198
+    },
+    {
+      "file_name": "000000181859.jpg",
+      "height": 640,
+      "width": 426,
+      "id": 181859
+    },
+    {
+      "file_name": "000000149568.jpg",
+      "height": 549,
+      "width": 640,
+      "id": 149568
+    },
+    {
+      "file_name": "000000252332.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 252332
+    },
+    {
+      "file_name": "000000119038.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 119038
+    },
+    {
+      "file_name": "000000424162.jpg",
+      "height": 512,
+      "width": 640,
+      "id": 424162
+    },
+    {
+      "file_name": "000000176232.jpg",
+      "height": 640,
+      "width": 480,
+      "id": 176232
+    },
+    {
+      "file_name": "000000443303.jpg",
+      "height": 375,
+      "width": 500,
+      "id": 443303
+    },
+    {
+      "file_name": "000000051938.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 51938
+    },
+    {
+      "file_name": "000000465585.jpg",
+      "height": 640,
+      "width": 427,
+      "id": 465585
+    },
+    {
+      "file_name": "000000276055.jpg",
+      "height": 375,
+      "width": 500,
+      "id": 276055
+    },
+    {
+      "file_name": "000000328601.jpg",
+      "height": 640,
+      "width": 396,
+      "id": 328601
+    },
+    {
+      "file_name": "000000094326.jpg",
+      "height": 500,
+      "width": 375,
+      "id": 94326
+    },
+    {
+      "file_name": "000000467176.jpg",
+      "height": 428,
+      "width": 640,
+      "id": 467176
+    },
+    {
+      "file_name": "000000000885.jpg",
+      "height": 427,
+      "width": 640,
+      "id": 885
+    },
+    {
+      "file_name": "000000123321.jpg",
+      "height": 612,
+      "width": 612,
+      "id": 123321
+    },
+    {
+      "file_name": "000000446206.jpg",
+      "height": 385,
+      "width": 640,
+      "id": 446206
+    },
+    {
+      "file_name": "000000297343.jpg",
+      "height": 432,
+      "width": 640,
+      "id": 297343
+    },
+    {
+      "file_name": "000000127476.jpg",
+      "height": 640,
+      "width": 480,
+      "id": 127476
+    },
+    {
+      "file_name": "000000424975.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 424975
+    },
+    {
+      "file_name": "000000323263.jpg",
+      "height": 447,
+      "width": 640,
+      "id": 323263
+    },
+    {
+      "file_name": "000000009483.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 9483
+    },
+    {
+      "file_name": "000000097924.jpg",
+      "height": 400,
+      "width": 600,
+      "id": 97924
+    },
+    {
+      "file_name": "000000015660.jpg",
+      "height": 348,
+      "width": 640,
+      "id": 15660
+    },
+    {
+      "file_name": "000000017714.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 17714
+    },
+    {
+      "file_name": "000000433103.jpg",
+      "height": 425,
+      "width": 640,
+      "id": 433103
+    },
+    {
+      "file_name": "000000166509.jpg",
+      "height": 444,
+      "width": 640,
+      "id": 166509
+    },
+    {
+      "file_name": "000000547144.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 547144
+    },
+    {
+      "file_name": "000000518213.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 518213
+    },
+    {
+      "file_name": "000000080666.jpg",
+      "height": 640,
+      "width": 640,
+      "id": 80666
+    },
+    {
+      "file_name": "000000073533.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 73533
+    },
+    {
+      "file_name": "000000248112.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 248112
+    },
+    {
+      "file_name": "000000135673.jpg",
+      "height": 427,
+      "width": 640,
+      "id": 135673
+    },
+    {
+      "file_name": "000000064495.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 64495
+    },
+    {
+      "file_name": "000000415238.jpg",
+      "height": 474,
+      "width": 640,
+      "id": 415238
+    },
+    {
+      "file_name": "000000148662.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 148662
+    },
+    {
+      "file_name": "000000116206.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 116206
+    },
+    {
+      "file_name": "000000370900.jpg",
+      "height": 478,
+      "width": 640,
+      "id": 370900
+    },
+    {
+      "file_name": "000000147518.jpg",
+      "height": 640,
+      "width": 480,
+      "id": 147518
+    },
+    {
+      "file_name": "000000302882.jpg",
+      "height": 400,
+      "width": 500,
+      "id": 302882
+    },
+    {
+      "file_name": "000000217400.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 217400
+    },
+    {
+      "file_name": "000000580294.jpg",
+      "height": 443,
+      "width": 640,
+      "id": 580294
+    },
+    {
+      "file_name": "000000117908.jpg",
+      "height": 320,
+      "width": 500,
+      "id": 117908
+    },
+    {
+      "file_name": "000000259854.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 259854
+    },
+    {
+      "file_name": "000000169356.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 169356
+    },
+    {
+      "file_name": "000000307658.jpg",
+      "height": 640,
+      "width": 589,
+      "id": 307658
+    },
+    {
+      "file_name": "000000109916.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 109916
+    },
+    {
+      "file_name": "000000513181.jpg",
+      "height": 423,
+      "width": 640,
+      "id": 513181
+    },
+    {
+      "file_name": "000000196141.jpg",
+      "height": 429,
+      "width": 640,
+      "id": 196141
+    },
+    {
+      "file_name": "000000440507.jpg",
+      "height": 375,
+      "width": 500,
+      "id": 440507
+    },
+    {
+      "file_name": "000000295420.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 295420
+    },
+    {
+      "file_name": "000000117425.jpg",
+      "height": 426,
+      "width": 640,
+      "id": 117425
+    },
+    {
+      "file_name": "000000415716.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 415716
+    },
+    {
+      "file_name": "000000458410.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 458410
+    },
+    {
+      "file_name": "000000348488.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 348488
+    },
+    {
+      "file_name": "000000017905.jpg",
+      "height": 640,
+      "width": 480,
+      "id": 17905
+    },
+    {
+      "file_name": "000000122745.jpg",
+      "height": 640,
+      "width": 480,
+      "id": 122745
+    },
+    {
+      "file_name": "000000463618.jpg",
+      "height": 451,
+      "width": 640,
+      "id": 463618
+    },
+    {
+      "file_name": "000000020553.jpg",
+      "height": 375,
+      "width": 500,
+      "id": 20553
+    },
+    {
+      "file_name": "000000206994.jpg",
+      "height": 427,
+      "width": 640,
+      "id": 206994
+    },
+    {
+      "file_name": "000000383289.jpg",
+      "height": 444,
+      "width": 640,
+      "id": 383289
+    },
+    {
+      "file_name": "000000513688.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 513688
+    },
+    {
+      "file_name": "000000190140.jpg",
+      "height": 428,
+      "width": 640,
+      "id": 190140
+    },
+    {
+      "file_name": "000000403584.jpg",
+      "height": 640,
+      "width": 640,
+      "id": 403584
+    },
+    {
+      "file_name": "000000026564.jpg",
+      "height": 426,
+      "width": 640,
+      "id": 26564
+    },
+    {
+      "file_name": "000000180383.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 180383
+    },
+    {
+      "file_name": "000000366141.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 366141
+    },
+    {
+      "file_name": "000000078266.jpg",
+      "height": 428,
+      "width": 640,
+      "id": 78266
+    },
+    {
+      "file_name": "000000250758.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 250758
+    },
+    {
+      "file_name": "000000222299.jpg",
+      "height": 375,
+      "width": 500,
+      "id": 222299
+    },
+    {
+      "file_name": "000000119995.jpg",
+      "height": 500,
+      "width": 468,
+      "id": 119995
+    },
+    {
+      "file_name": "000000578922.jpg",
+      "height": 640,
+      "width": 598,
+      "id": 578922
+    },
+    {
+      "file_name": "000000082986.jpg",
+      "height": 444,
+      "width": 640,
+      "id": 82986
+    },
+    {
+      "file_name": "000000294783.jpg",
+      "height": 428,
+      "width": 640,
+      "id": 294783
+    },
+    {
+      "file_name": "000000303818.jpg",
+      "height": 640,
+      "width": 480,
+      "id": 303818
+    },
+    {
+      "file_name": "000000369757.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 369757
+    },
+    {
+      "file_name": "000000456559.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 456559
+    },
+    {
+      "file_name": "000000272416.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 272416
+    },
+    {
+      "file_name": "000000435081.jpg",
+      "height": 500,
+      "width": 500,
+      "id": 435081
+    },
+    {
+      "file_name": "000000050679.jpg",
+      "height": 427,
+      "width": 640,
+      "id": 50679
+    },
+    {
+      "file_name": "000000172946.jpg",
+      "height": 640,
+      "width": 427,
+      "id": 172946
+    },
+    {
+      "file_name": "000000236845.jpg",
+      "height": 640,
+      "width": 495,
+      "id": 236845
+    },
+    {
+      "file_name": "000000128748.jpg",
+      "height": 640,
+      "width": 491,
+      "id": 128748
+    },
+    {
+      "file_name": "000000475365.jpg",
+      "height": 426,
+      "width": 640,
+      "id": 475365
+    },
+    {
+      "file_name": "000000567197.jpg",
+      "height": 407,
+      "width": 500,
+      "id": 567197
+    },
+    {
+      "file_name": "000000325347.jpg",
+      "height": 359,
+      "width": 640,
+      "id": 325347
+    },
+    {
+      "file_name": "000000289960.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 289960
+    },
+    {
+      "file_name": "000000078404.jpg",
+      "height": 350,
+      "width": 500,
+      "id": 78404
+    },
+    {
+      "file_name": "000000473821.jpg",
+      "height": 333,
+      "width": 500,
+      "id": 473821
+    },
+    {
+      "file_name": "000000022755.jpg",
+      "height": 479,
+      "width": 640,
+      "id": 22755
+    },
+    {
+      "file_name": "000000153568.jpg",
+      "height": 400,
+      "width": 500,
+      "id": 153568
+    },
+    {
+      "file_name": "000000556873.jpg",
+      "height": 640,
+      "width": 427,
+      "id": 556873
+    },
+    {
+      "file_name": "000000290771.jpg",
+      "height": 477,
+      "width": 640,
+      "id": 290771
+    },
+    {
+      "file_name": "000000463647.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 463647
+    },
+    {
+      "file_name": "000000044652.jpg",
+      "height": 427,
+      "width": 640,
+      "id": 44652
+    },
+    {
+      "file_name": "000000341828.jpg",
+      "height": 612,
+      "width": 612,
+      "id": 341828
+    },
+    {
+      "file_name": "000000240754.jpg",
+      "height": 427,
+      "width": 640,
+      "id": 240754
+    },
+    {
+      "file_name": "000000206025.jpg",
+      "height": 640,
+      "width": 424,
+      "id": 206025
+    },
+    {
+      "file_name": "000000571857.jpg",
+      "height": 426,
+      "width": 640,
+      "id": 571857
+    },
+    {
+      "file_name": "000000281179.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 281179
+    },
+    {
+      "file_name": "000000231339.jpg",
+      "height": 640,
+      "width": 480,
+      "id": 231339
+    },
+    {
+      "file_name": "000000049759.jpg",
+      "height": 457,
+      "width": 640,
+      "id": 49759
+    },
+    {
+      "file_name": "000000166478.jpg",
+      "height": 426,
+      "width": 640,
+      "id": 166478
+    },
+    {
+      "file_name": "000000023272.jpg",
+      "height": 375,
+      "width": 500,
+      "id": 23272
+    },
+    {
+      "file_name": "000000482275.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 482275
+    },
+    {
+      "file_name": "000000150638.jpg",
+      "height": 469,
+      "width": 640,
+      "id": 150638
+    },
+    {
+      "file_name": "000000015272.jpg",
+      "height": 640,
+      "width": 424,
+      "id": 15272
+    },
+    {
+      "file_name": "000000102356.jpg",
+      "height": 640,
+      "width": 427,
+      "id": 102356
+    },
+    {
+      "file_name": "000000159458.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 159458
+    },
+    {
+      "file_name": "000000539445.jpg",
+      "height": 612,
+      "width": 612,
+      "id": 539445
+    },
+    {
+      "file_name": "000000198960.jpg",
+      "height": 425,
+      "width": 640,
+      "id": 198960
+    },
+    {
+      "file_name": "000000572517.jpg",
+      "height": 424,
+      "width": 640,
+      "id": 572517
+    },
+    {
+      "file_name": "000000477805.jpg",
+      "height": 427,
+      "width": 640,
+      "id": 477805
+    },
+    {
+      "file_name": "000000516173.jpg",
+      "height": 640,
+      "width": 408,
+      "id": 516173
+    },
+    {
+      "file_name": "000000476514.jpg",
+      "height": 640,
+      "width": 426,
+      "id": 476514
+    },
+    {
+      "file_name": "000000065455.jpg",
+      "height": 375,
+      "width": 500,
+      "id": 65455
+    },
+    {
+      "file_name": "000000482477.jpg",
+      "height": 640,
+      "width": 492,
+      "id": 482477
+    },
+    {
+      "file_name": "000000571008.jpg",
+      "height": 425,
+      "width": 640,
+      "id": 571008
+    },
+    {
+      "file_name": "000000134096.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 134096
+    },
+    {
+      "file_name": "000000047112.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 47112
+    },
+    {
+      "file_name": "000000262631.jpg",
+      "height": 640,
+      "width": 480,
+      "id": 262631
+    },
+    {
+      "file_name": "000000296284.jpg",
+      "height": 360,
+      "width": 270,
+      "id": 296284
+    },
+    {
+      "file_name": "000000172856.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 172856
+    },
+    {
+      "file_name": "000000046048.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 46048
+    },
+    {
+      "file_name": "000000370711.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 370711
+    },
+    {
+      "file_name": "000000534394.jpg",
+      "height": 359,
+      "width": 640,
+      "id": 534394
+    },
+    {
+      "file_name": "000000180188.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 180188
+    },
+    {
+      "file_name": "000000357903.jpg",
+      "height": 640,
+      "width": 480,
+      "id": 357903
+    },
+    {
+      "file_name": "000000520832.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 520832
+    },
+    {
+      "file_name": "000000182805.jpg",
+      "height": 360,
+      "width": 640,
+      "id": 182805
+    },
+    {
+      "file_name": "000000170191.jpg",
+      "height": 531,
+      "width": 640,
+      "id": 170191
+    },
+    {
+      "file_name": "000000514586.jpg",
+      "height": 500,
+      "width": 354,
+      "id": 514586
+    },
+    {
+      "file_name": "000000368961.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 368961
+    },
+    {
+      "file_name": "000000187362.jpg",
+      "height": 425,
+      "width": 640,
+      "id": 187362
+    },
+    {
+      "file_name": "000000471991.jpg",
+      "height": 424,
+      "width": 640,
+      "id": 471991
+    },
+    {
+      "file_name": "000000115245.jpg",
+      "height": 612,
+      "width": 612,
+      "id": 115245
+    },
+    {
+      "file_name": "000000488710.jpg",
+      "height": 400,
+      "width": 500,
+      "id": 488710
+    },
+    {
+      "file_name": "000000528705.jpg",
+      "height": 640,
+      "width": 426,
+      "id": 528705
+    },
+    {
+      "file_name": "000000329041.jpg",
+      "height": 640,
+      "width": 480,
+      "id": 329041
+    },
+    {
+      "file_name": "000000032941.jpg",
+      "height": 640,
+      "width": 458,
+      "id": 32941
+    },
+    {
+      "file_name": "000000147498.jpg",
+      "height": 524,
+      "width": 640,
+      "id": 147498
+    },
+    {
+      "file_name": "000000243199.jpg",
+      "height": 333,
+      "width": 500,
+      "id": 243199
+    },
+    {
+      "file_name": "000000439180.jpg",
+      "height": 360,
+      "width": 640,
+      "id": 439180
+    },
+    {
+      "file_name": "000000386210.jpg",
+      "height": 640,
+      "width": 478,
+      "id": 386210
+    },
+    {
+      "file_name": "000000404534.jpg",
+      "height": 500,
+      "width": 386,
+      "id": 404534
+    },
+    {
+      "file_name": "000000170955.jpg",
+      "height": 427,
+      "width": 640,
+      "id": 170955
+    },
+    {
+      "file_name": "000000234607.jpg",
+      "height": 500,
+      "width": 375,
+      "id": 234607
+    },
+    {
+      "file_name": "000000061108.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 61108
+    },
+    {
+      "file_name": "000000323571.jpg",
+      "height": 640,
+      "width": 478,
+      "id": 323571
+    },
+    {
+      "file_name": "000000261712.jpg",
+      "height": 476,
+      "width": 640,
+      "id": 261712
+    },
+    {
+      "file_name": "000000204871.jpg",
+      "height": 612,
+      "width": 612,
+      "id": 204871
+    },
+    {
+      "file_name": "000000155051.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 155051
+    },
+    {
+      "file_name": "000000509656.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 509656
+    },
+    {
+      "file_name": "000000447789.jpg",
+      "height": 427,
+      "width": 640,
+      "id": 447789
+    },
+    {
+      "file_name": "000000416534.jpg",
+      "height": 355,
+      "width": 640,
+      "id": 416534
+    },
+    {
+      "file_name": "000000371699.jpg",
+      "height": 640,
+      "width": 480,
+      "id": 371699
+    },
+    {
+      "file_name": "000000176634.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 176634
+    },
+    {
+      "file_name": "000000097337.jpg",
+      "height": 375,
+      "width": 500,
+      "id": 97337
+    },
+    {
+      "file_name": "000000154358.jpg",
+      "height": 640,
+      "width": 427,
+      "id": 154358
+    },
+    {
+      "file_name": "000000084031.jpg",
+      "height": 427,
+      "width": 640,
+      "id": 84031
+    },
+    {
+      "file_name": "000000529148.jpg",
+      "height": 426,
+      "width": 640,
+      "id": 529148
+    },
+    {
+      "file_name": "000000343076.jpg",
+      "height": 640,
+      "width": 480,
+      "id": 343076
+    },
+    {
+      "file_name": "000000174231.jpg",
+      "height": 500,
+      "width": 375,
+      "id": 174231
+    },
+    {
+      "file_name": "000000019402.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 19402
+    },
+    {
+      "file_name": "000000159399.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 159399
+    },
+    {
+      "file_name": "000000375278.jpg",
+      "height": 500,
+      "width": 333,
+      "id": 375278
+    },
+    {
+      "file_name": "000000230008.jpg",
+      "height": 360,
+      "width": 640,
+      "id": 230008
+    },
+    {
+      "file_name": "000000223182.jpg",
+      "height": 538,
+      "width": 640,
+      "id": 223182
+    },
+    {
+      "file_name": "000000519491.jpg",
+      "height": 640,
+      "width": 480,
+      "id": 519491
+    },
+    {
+      "file_name": "000000227898.jpg",
+      "height": 424,
+      "width": 640,
+      "id": 227898
+    },
+    {
+      "file_name": "000000409475.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 409475
+    },
+    {
+      "file_name": "000000311394.jpg",
+      "height": 640,
+      "width": 480,
+      "id": 311394
+    },
+    {
+      "file_name": "000000552775.jpg",
+      "height": 500,
+      "width": 375,
+      "id": 552775
+    },
+    {
+      "file_name": "000000147745.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 147745
+    },
+    {
+      "file_name": "000000226111.jpg",
+      "height": 640,
+      "width": 480,
+      "id": 226111
+    },
+    {
+      "file_name": "000000128658.jpg",
+      "height": 427,
+      "width": 640,
+      "id": 128658
+    },
+    {
+      "file_name": "000000302165.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 302165
+    },
+    {
+      "file_name": "000000383339.jpg",
+      "height": 428,
+      "width": 640,
+      "id": 383339
+    },
+    {
+      "file_name": "000000416104.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 416104
+    },
+    {
+      "file_name": "000000080659.jpg",
+      "height": 427,
+      "width": 640,
+      "id": 80659
+    },
+    {
+      "file_name": "000000456662.jpg",
+      "height": 612,
+      "width": 612,
+      "id": 456662
+    },
+    {
+      "file_name": "000000001296.jpg",
+      "height": 640,
+      "width": 427,
+      "id": 1296
+    },
+    {
+      "file_name": "000000529105.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 529105
+    },
+    {
+      "file_name": "000000410880.jpg",
+      "height": 375,
+      "width": 500,
+      "id": 410880
+    },
+    {
+      "file_name": "000000119641.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 119641
+    },
+    {
+      "file_name": "000000056127.jpg",
+      "height": 640,
+      "width": 580,
+      "id": 56127
+    },
+    {
+      "file_name": "000000506310.jpg",
+      "height": 425,
+      "width": 640,
+      "id": 506310
+    },
+    {
+      "file_name": "000000205776.jpg",
+      "height": 425,
+      "width": 640,
+      "id": 205776
+    },
+    {
+      "file_name": "000000446117.jpg",
+      "height": 426,
+      "width": 640,
+      "id": 446117
+    },
+    {
+      "file_name": "000000388846.jpg",
+      "height": 427,
+      "width": 640,
+      "id": 388846
+    },
+    {
+      "file_name": "000000058705.jpg",
+      "height": 482,
+      "width": 640,
+      "id": 58705
+    },
+    {
+      "file_name": "000000215723.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 215723
+    },
+    {
+      "file_name": "000000117645.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 117645
+    },
+    {
+      "file_name": "000000370478.jpg",
+      "height": 480,
+      "width": 640,
+      "id": 370478
+    },
+    {
+      "file_name": "000000357081.jpg",
+      "height": 427,
+      "width": 640,
+      "id": 357081
+    },
+    {
+      "file_name": "000000114049.jpg",
+      "height": 640,
+      "width": 425,
+      "id": 114049
+    },
+    {
+      "file_name": "000000356094.jpg",
+      "height": 389,
+      "width": 640,
+      "id": 356094
+    },
+    {
+      "file_name": "000000184978.jpg",
+      "height": 640,
+      "width": 480,
+      "id": 184978
+    },
+    {
+      "file_name": "000000397681.jpg",
+      "height": 640,
+      "width": 640,
+      "id": 397681
+    },
+    {
+      "file_name": "000000314709.jpg",
+      "height": 426,
+      "width": 640,
+      "id": 314709
+    },
+    {
+      "file_name": "000000505565.jpg",
+      "height": 424,
+      "width": 640,
+      "id": 505565
+    },
+    {
+      "file_name": "000000449996.jpg",
+      "height": 428,
+      "width": 640,
+      "id": 449996
+    },
+    {
+      "file_name": "000000023781.jpg",
+      "height": 427,
+      "width": 640,
+      "id": 23781
+    },
+    {
+      "file_name": "000000233238.jpg",
+      "height": 640,
+      "width": 480,
+      "id": 233238
+    },
+    {
+      "file_name": "000000286849.jpg",
+      "height": 500,
+      "width": 333,
+      "id": 286849
+    },
+    {
+      "file_name": "000000324158.jpg",
+      "height": 334,
+      "width": 500,
+      "id": 324158
+    },
+    {
+      "file_name": "000000538458.jpg",
+      "height": 427,
+      "width": 640,
+      "id": 538458
+    },
+    {
+      "file_name": "000000052996.jpg",
+      "height": 426,
+      "width": 640,
+      "id": 52996
+    },
+    {
+      "file_name": "000000444879.jpg",
+      "height": 479,
+      "width": 640,
+      "id": 444879
+    },
+    {
+      "file_name": "000000545826.jpg",
+      "height": 333,
+      "width": 500,
+      "id": 545826
+    },
+    {
+      "file_name": "000000381971.jpg",
+      "height": 427,
+      "width": 640,
+      "id": 381971
+    },
+    {
+      "file_name": "000000561335.jpg",
+      "height": 376,
+      "width": 500,
+      "id": 561335
+    }
+  ],
+  "source_ids_rule": "no inference before model/policy lock; missing IDs abort, no substitution; freeze original/canonical hashes on Kaggle",
+  "gate": "both valid strict pilot BD<-15% plus complete block/provenance checks ->one frozen256 confirmation; CI separately reported",
+  "remaining_unobserved_after_pilot": 70,
+  "original_reserved_test512_unchanged": true
+}

@@ -1,0 +1,117 @@
+{
+  "schema": "v34r1-A6-OT21-1",
+  "frozen_utc": "2026-10-16T15:09:36.172849+00:00",
+  "qps": [
+    30,
+    35,
+    40,
+    45
+  ],
+  "codecs": [
+    "h264",
+    "h265"
+  ],
+  "profiles": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "frames": 64,
+  "window_frames": 16,
+  "lookback": 32,
+  "pilot_sequences": [
+    {
+      "name": "MOT17-02-FRCNN",
+      "split": "fit"
+    },
+    {
+      "name": "MOT17-05-FRCNN",
+      "split": "fit"
+    },
+    {
+      "name": "MOT17-04-FRCNN",
+      "split": "validation"
+    },
+    {
+      "name": "MOT17-11-FRCNN",
+      "split": "validation"
+    }
+  ],
+  "source_catalog_sha256": "c80b4a9a5c45721f999544f1fac828aee4ffa23679c1e56d87f704983d87a51c",
+  "source_byte_manifest_sha256": "ab97036f90c03f768a69cb92177295829ceb99e45755cf824611497d223866b7",
+  "parent_a3_publication_sha256": "68a48ae45bb5d0d5fdc87c0b77714c79269110d0f58eb52a7dc60f61a8c63e6c",
+  "parent_a5_publication_sha256": "b7219c82b45040963a4f1bd2ba2640e29b88f9d1ea4f901055035c7f171d1709",
+  "lambdas": [
+    0,
+    1,
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "selection": "same source-HOTA Lagrangian and FIT-only endpoint utility as A5, now all21; choose one lambda, lock before reusedCAL",
+  "controls": "same-lambda old-shortlist ablation; old shortlist lambda32 exact A5 replay; anchors equal actual parent bytes/metrics",
+  "scale4_sequences": [
+    {
+      "dataset": "MOT17",
+      "name": "MOT17-04-FRCNN",
+      "frames": 64
+    },
+    {
+      "dataset": "MOT17",
+      "name": "MOT17-11-FRCNN",
+      "frames": 64
+    },
+    {
+      "dataset": "MOT17",
+      "name": "MOT17-09-FRCNN",
+      "frames": 64
+    },
+    {
+      "dataset": "MOT17",
+      "name": "MOT17-10-FRCNN",
+      "frames": 64
+    },
+    {
+      "dataset": "MOT17",
+      "name": "MOT17-13-FRCNN",
+      "frames": 64
+    },
+    {
+      "dataset": "MOT20",
+      "name": "MOT20-02",
+      "frames": 64
+    },
+    {
+      "dataset": "MOT20",
+      "name": "MOT20-03",
+      "frames": 64
+    },
+    {
+      "dataset": "MOT20",
+      "name": "MOT20-05",
+      "frames": 64
+    }
+  ],
+  "scale4_rule": "only after both valid pilot BD<-15% and complete provenance/blocks; eight distinct physical videos, native dataset scoring; report old2 and additional6 separately; no retuning",
+  "compute": "one private per-video cache job on each new account, two T4 workers partition codecs; no actual task compute on laptop"
+}
