@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "scope": "archive hashes,48 exact parent tracker-output files, paid-byte lookups, saved HOTA means and BD arithmetic; no tracker/GT scoring locally",
+  "archive_sha256": "a16271534c1140f544898cbb382b9f2b11ea43127ab7e255b5e0ce5ad108fc64",
+  "archive_bytes": 2499483,
+  "exact_parent_tracker_files": 48,
+  "calibration_gate": false,
+  "test_scored": false
+}

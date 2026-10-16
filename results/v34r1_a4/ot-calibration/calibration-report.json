@@ -1,0 +1,4032 @@
+{
+  "scope": "development calibration from cached A3 predictions; previous validation reused, not independent validation",
+  "protocol_sha256": "bd9d19231a61a20ac2148dfb9c07a8bf5602bd2d754fbdd0a89f3c79aa946571",
+  "protocol": {
+    "schema": "v34r1-A4-OT-rd-fit-1",
+    "frozen_utc": "2026-10-16T04:25:12.356917+00:00",
+    "parent_commit": "749f8f876ccca875536d4c88565ccc075d8a9197",
+    "parent_report_sha256": "436391c8ddba2e630993e2a353f32ef2302947aaff5428f9950cb54b34733f12",
+    "parent_archive_sha256": "2e13ec6e2aae813d3d54273bd341e21ae677ab3a23160f0c686967cefbdbeccd",
+    "qps": [
+      30,
+      35,
+      40,
+      45
+    ],
+    "codecs": [
+      "h264",
+      "h265"
+    ],
+    "policy": {
+      "kind": "observed_trailing32",
+      "threshold": 0.02
+    },
+    "fit": {
+      "objective_is_bd_rate": false,
+      "endpoint_scales": {
+        "h264": 26.455678117195777,
+        "h265": 35.323977310903366
+      },
+      "candidates": [
+        {
+          "threshold": 0,
+          "quality": [
+            0.3932414073171613,
+            0.3590434764209509,
+            0.3550438576064879,
+            0.33391096249339974,
+            0.37061240401102724,
+            0.3496722639055248,
+            0.35536510701966373,
+            0.3010194611505455
+          ],
+          "log_rate_ratio": -0.09896174263109092,
+          "utility": -0.0853107861844725
+        },
+        {
+          "threshold": 0.005,
+          "quality": [
+            0.3838501069655513,
+            0.37103951380888,
+            0.3637425774081185,
+            0.3363952195234573,
+            0.3730102690525758,
+            0.35331813681492213,
+            0.3520897289120102,
+            0.3010194611505455
+          ],
+          "log_rate_ratio": -0.1411141094550608,
+          "utility": -0.18528225305305118
+        },
+        {
+          "threshold": 0.01,
+          "quality": [
+            0.382564571643949,
+            0.3596042267498342,
+            0.3627558038342384,
+            0.3393364764076935,
+            0.3730102690525758,
+            0.3599484078169846,
+            0.3520897289120102,
+            0.31415340058936686
+          ],
+          "log_rate_ratio": -0.16272245057702672,
+          "utility": -0.2585555592047005
+        },
+        {
+          "threshold": 0.02,
+          "quality": [
+            0.37782164875979946,
+            0.35236042291699965,
+            0.35461094531221743,
+            0.3458844125211955,
+            0.38450600294749515,
+            0.35208531233750745,
+            0.3520897289120102,
+            0.3079137818968098
+          ],
+          "log_rate_ratio": -0.22427307424543458,
+          "utility": -0.2636744877381064
+        },
+        {
+          "threshold": 0.04,
+          "quality": [
+            0.37120299168671256,
+            0.3510578493642309,
+            0.34017577953565364,
+            0.342763858183912,
+            0.3796914533890156,
+            0.3532268712119004,
+            0.35727093485229905,
+            0.3090456010708107
+          ],
+          "log_rate_ratio": -0.27456137481763737,
+          "utility": -0.24136860182721742
+        },
+        {
+          "threshold": 0.08,
+          "quality": [
+            0.37120299168671256,
+            0.350101160179117,
+            0.34017577953565364,
+            0.3175886926692144,
+            0.36165100638036185,
+            0.35191114136527546,
+            0.34470277244267716,
+            0.3090456010708107
+          ],
+          "log_rate_ratio": -0.29598292688557293,
+          "utility": -0.03541133234484417
+        }
+      ],
+      "selected": {
+        "threshold": 0.02,
+        "quality": [
+          0.37782164875979946,
+          0.35236042291699965,
+          0.35461094531221743,
+          0.3458844125211955,
+          0.38450600294749515,
+          0.35208531233750745,
+          0.3520897289120102,
+          0.3079137818968098
+        ],
+        "log_rate_ratio": -0.22427307424543458,
+        "utility": -0.2636744877381064
+      }
+    },
+    "scope": "development calibration from cached A3 predictions; previous validation reused, not independent validation",
+    "compute": "Kaggle CPU tracker replay and official HOTA only; no model inference or codec or TEST access",
+    "gate": "both calibration codec raw four-point PCHIP BD-rate strictly below -15%; otherwise no TEST; passing motivates a separately frozen fresh-data study"
+  },
+  "results": {
+    "fit": {
+      "anchor": {
+        "policy": {
+          "kind": "anchor"
+        },
+        "curves": {
+          "h264": {
+            "rate": [
+              0.055089586046006944,
+              0.03073520236545139,
+              0.018779703776041667,
+              0.011909586588541667
+            ],
+            "quality": [
+              0.38092022648990037,
+              0.36216064915935536,
+              0.3498417002769725,
+              0.32302652899872664
+            ]
+          },
+          "h265": {
+            "rate": [
+              0.04751837836371528,
+              0.025335218641493053,
+              0.014780409071180556,
+              0.008655938042534722
+            ],
+            "quality": [
+              0.37284329192318666,
+              0.34624967600357887,
+              0.3549730445838255,
+              0.3246360651488358
+            ]
+          }
+        },
+        "metrics": {
+          "h264_30": {
+            "combined": {
+              "HOTA": 0.38092022648990037,
+              "DetA": 0.2774311307809377,
+              "AssA": 0.5561024491199353,
+              "IDF1": 0.4166666666666667,
+              "MOTA": -0.07876370887337986
+            },
+            "sequences": {
+              "MOT17-02-FRCNN": {
+                "HOTA": 0.37164370368242555,
+                "DetA": 0.2650289343745243,
+                "AssA": 0.5701639758686089,
+                "IDF1": 0.4087685364281109,
+                "MOTA": -0.13249001331557922
+              },
+              "MOT17-05-FRCNN": {
+                "HOTA": 0.4091259757391473,
+                "DetA": 0.3200001561304443,
+                "AssA": 0.5318792811663587,
+                "IDF1": 0.44171779141104295,
+                "MOTA": 0.08134920634920635
+              }
+            }
+          },
+          "h264_35": {
+            "combined": {
+              "HOTA": 0.36216064915935536,
+              "DetA": 0.24733966475689254,
+              "AssA": 0.5578759662265553,
+              "IDF1": 0.3839724680432645,
+              "MOTA": -0.14057826520438685
+            },
+            "sequences": {
+              "MOT17-02-FRCNN": {
+                "HOTA": 0.3517990566448545,
+                "DetA": 0.2275333903321683,
+                "AssA": 0.5870872933628686,
+                "IDF1": 0.37362637362637363,
+                "MOTA": -0.2137150466045273
+              },
+              "MOT17-05-FRCNN": {
+                "HOTA": 0.3937967753946409,
+                "DetA": 0.3158705594400957,
+                "AssA": 0.49894456761159395,
+                "IDF1": 0.41683778234086244,
+                "MOTA": 0.07738095238095238
+              }
+            }
+          },
+          "h264_40": {
+            "combined": {
+              "HOTA": 0.3498417002769725,
+              "DetA": 0.23999230075195105,
+              "AssA": 0.5379743644353132,
+              "IDF1": 0.3687580025608195,
+              "MOTA": -0.09970089730807577
+            },
+            "sequences": {
+              "MOT17-02-FRCNN": {
+                "HOTA": 0.3424686570012301,
+                "DetA": 0.2225087841525947,
+                "AssA": 0.5692932448596527,
+                "IDF1": 0.3631361760660248,
+                "MOTA": -0.13448735019973368
+              },
+              "MOT17-05-FRCNN": {
+                "HOTA": 0.37095610943609914,
+                "DetA": 0.2945541934025667,
+                "AssA": 0.4770476558645763,
+                "IDF1": 0.38515546639919757,
+                "MOTA": 0.003968253968253968
+              }
+            }
+          },
+          "h264_45": {
+            "combined": {
+              "HOTA": 0.32302652899872664,
+              "DetA": 0.2202611652761121,
+              "AssA": 0.49606455621621354,
+              "IDF1": 0.34888214187137734,
+              "MOTA": -0.11365902293120637
+            },
+            "sequences": {
+              "MOT17-02-FRCNN": {
+                "HOTA": 0.30818486717748533,
+                "DetA": 0.20230262118080267,
+                "AssA": 0.5097740222258673,
+                "IDF1": 0.3214013709063214,
+                "MOTA": -0.14913448735019974
+              },
+              "MOT17-05-FRCNN": {
+                "HOTA": 0.36068007191489065,
+                "DetA": 0.2713577125008718,
+                "AssA": 0.4824094076967219,
+                "IDF1": 0.42126379137412234,
+                "MOTA": -0.007936507936507936
+              }
+            }
+          },
+          "h265_30": {
+            "combined": {
+              "HOTA": 0.37284329192318666,
+              "DetA": 0.26527874934581197,
+              "AssA": 0.5572007211771437,
+              "IDF1": 0.3960591133004926,
+              "MOTA": -0.11615154536390827
+            },
+            "sequences": {
+              "MOT17-02-FRCNN": {
+                "HOTA": 0.3607506146160112,
+                "DetA": 0.24612551575688923,
+                "AssA": 0.5788535377046813,
+                "IDF1": 0.37806451612903225,
+                "MOTA": -0.19840213049267644
+              },
+              "MOT17-05-FRCNN": {
+                "HOTA": 0.4099992811463606,
+                "DetA": 0.33309416059068775,
+                "AssA": 0.5140291984629886,
+                "IDF1": 0.45416666666666666,
+                "MOTA": 0.12896825396825398
+              }
+            }
+          },
+          "h265_35": {
+            "combined": {
+              "HOTA": 0.34624967600357887,
+              "DetA": 0.2458997557815863,
+              "AssA": 0.5156966159208716,
+              "IDF1": 0.3740610916374562,
+              "MOTA": -0.1251246261216351
+            },
+            "sequences": {
+              "MOT17-02-FRCNN": {
+                "HOTA": 0.32726619351119524,
+                "DetA": 0.225902718799536,
+                "AssA": 0.5172436608045831,
+                "IDF1": 0.3529801324503311,
+                "MOTA": -0.19307589880159787
+              },
+              "MOT17-05-FRCNN": {
+                "HOTA": 0.40241549989164377,
+                "DetA": 0.3132293598511242,
+                "AssA": 0.525094988520852,
+                "IDF1": 0.4394250513347023,
+                "MOTA": 0.07738095238095238
+              }
+            }
+          },
+          "h265_40": {
+            "combined": {
+              "HOTA": 0.3549730445838255,
+              "DetA": 0.24426082729167686,
+              "AssA": 0.5412202205603506,
+              "IDF1": 0.3633507853403141,
+              "MOTA": -0.08574277168494517
+            },
+            "sequences": {
+              "MOT17-02-FRCNN": {
+                "HOTA": 0.3452188807577992,
+                "DetA": 0.23277824218830445,
+                "AssA": 0.5508484599649524,
+                "IDF1": 0.34652777777777777,
+                "MOTA": -0.1318242343541944
+              },
+              "MOT17-05-FRCNN": {
+                "HOTA": 0.3833073966120083,
+                "DetA": 0.2820713832601588,
+                "AssA": 0.5270212249275231,
+                "IDF1": 0.4148936170212766,
+                "MOTA": 0.051587301587301584
+              }
+            }
+          },
+          "h265_45": {
+            "combined": {
+              "HOTA": 0.3246360651488358,
+              "DetA": 0.2151097705537055,
+              "AssA": 0.5256451364442492,
+              "IDF1": 0.3267605633802817,
+              "MOTA": 0.005982053838484547
+            },
+            "sequences": {
+              "MOT17-02-FRCNN": {
+                "HOTA": 0.301529631694234,
+                "DetA": 0.19574855977907285,
+                "AssA": 0.5314883791533767,
+                "IDF1": 0.2750642673521851,
+                "MOTA": -0.043275632490013316
+              },
+              "MOT17-05-FRCNN": {
+                "HOTA": 0.382949113987827,
+                "DetA": 0.2726609057198917,
+                "AssA": 0.5409231849992392,
+                "IDF1": 0.46689895470383275,
+                "MOTA": 0.1527777777777778
+              }
+            }
+          }
+        },
+        "selected": [
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 30,
+            "action": 0,
+            "bytes": 65983,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 30,
+            "action": 0,
+            "bytes": 65913,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 30,
+            "action": 0,
+            "bytes": 67120,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 30,
+            "action": 0,
+            "bytes": 64413,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 35,
+            "action": 0,
+            "bytes": 34486,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 35,
+            "action": 0,
+            "bytes": 35174,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 35,
+            "action": 0,
+            "bytes": 34706,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 35,
+            "action": 0,
+            "bytes": 33153,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 40,
+            "action": 0,
+            "bytes": 19263,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 40,
+            "action": 0,
+            "bytes": 19675,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 40,
+            "action": 0,
+            "bytes": 19147,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 40,
+            "action": 0,
+            "bytes": 18408,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 45,
+            "action": 0,
+            "bytes": 10557,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 45,
+            "action": 0,
+            "bytes": 10719,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 45,
+            "action": 0,
+            "bytes": 10642,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 45,
+            "action": 0,
+            "bytes": 10080,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 30,
+            "action": 0,
+            "bytes": 60992,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 30,
+            "action": 0,
+            "bytes": 61857,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 30,
+            "action": 0,
+            "bytes": 61326,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 30,
+            "action": 0,
+            "bytes": 58384,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 35,
+            "action": 0,
+            "bytes": 31700,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 35,
+            "action": 0,
+            "bytes": 32644,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 35,
+            "action": 0,
+            "bytes": 32062,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 35,
+            "action": 0,
+            "bytes": 30039,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 40,
+            "action": 0,
+            "bytes": 18099,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 40,
+            "action": 0,
+            "bytes": 18348,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 40,
+            "action": 0,
+            "bytes": 18182,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 40,
+            "action": 0,
+            "bytes": 17093,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 45,
+            "action": 0,
+            "bytes": 10384,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 45,
+            "action": 0,
+            "bytes": 10555,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 45,
+            "action": 0,
+            "bytes": 10445,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 45,
+            "action": 0,
+            "bytes": 9780,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 30,
+            "action": 0,
+            "bytes": 128073,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 30,
+            "action": 0,
+            "bytes": 149998,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 30,
+            "action": 0,
+            "bytes": 138212,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 30,
+            "action": 0,
+            "bytes": 132617,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 35,
+            "action": 0,
+            "bytes": 70811,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 35,
+            "action": 0,
+            "bytes": 85673,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 35,
+            "action": 0,
+            "bytes": 80140,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 35,
+            "action": 0,
+            "bytes": 79066,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 40,
+            "action": 0,
+            "bytes": 44353,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 40,
+            "action": 0,
+            "bytes": 53890,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 40,
+            "action": 0,
+            "bytes": 51282,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 40,
+            "action": 0,
+            "bytes": 50900,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 45,
+            "action": 0,
+            "bytes": 29497,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 45,
+            "action": 0,
+            "bytes": 35175,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 45,
+            "action": 0,
+            "bytes": 34563,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 45,
+            "action": 0,
+            "bytes": 34381,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 30,
+            "action": 0,
+            "bytes": 110733,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 30,
+            "action": 0,
+            "bytes": 125460,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 30,
+            "action": 0,
+            "bytes": 117676,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 30,
+            "action": 0,
+            "bytes": 104259,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 35,
+            "action": 0,
+            "bytes": 57421,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 35,
+            "action": 0,
+            "bytes": 67919,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 35,
+            "action": 0,
+            "bytes": 63222,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 35,
+            "action": 0,
+            "bytes": 58576,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 40,
+            "action": 0,
+            "bytes": 33461,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 40,
+            "action": 0,
+            "bytes": 39869,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 40,
+            "action": 0,
+            "bytes": 37032,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 40,
+            "action": 0,
+            "bytes": 35862,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 45,
+            "action": 0,
+            "bytes": 19622,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 45,
+            "action": 0,
+            "bytes": 23438,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 45,
+            "action": 0,
+            "bytes": 21633,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 45,
+            "action": 0,
+            "bytes": 21780,
+            "source_hota": null
+          }
+        ],
+        "selection_counts": {
+          "0": 64
+        },
+        "log_rate_ratio": 0.0
+      },
+      "frozen_a4": {
+        "policy": {
+          "kind": "observed_trailing32",
+          "threshold": 0.02
+        },
+        "curves": {
+          "h264": {
+            "rate": [
+              0.04216484917534722,
+              0.026564737955729167,
+              0.01634921603732639,
+              0.010742255316840277
+            ],
+            "quality": [
+              0.37782164875979946,
+              0.35236042291699965,
+              0.35461094531221743,
+              0.3458844125211955
+            ]
+          },
+          "h265": {
+            "rate": [
+              0.04014980740017361,
+              0.020745510525173608,
+              0.013235405815972223,
+              0.007711249457465277
+            ],
+            "quality": [
+              0.38450600294749515,
+              0.35208531233750745,
+              0.3520897289120102,
+              0.3079137818968098
+            ]
+          }
+        },
+        "metrics": {
+          "h264_30": {
+            "combined": {
+              "HOTA": 0.37782164875979946,
+              "DetA": 0.2590558539359608,
+              "AssA": 0.5812316689146036,
+              "IDF1": 0.3908270309831666,
+              "MOTA": -0.13559322033898305
+            },
+            "sequences": {
+              "MOT17-02-FRCNN": {
+                "HOTA": 0.36998330622253434,
+                "DetA": 0.24163911900761506,
+                "AssA": 0.6134799660840985,
+                "IDF1": 0.3708187320802803,
+                "MOTA": -0.22503328894806923
+              },
+              "MOT17-05-FRCNN": {
+                "HOTA": 0.4014567546615729,
+                "DetA": 0.32117097361064373,
+                "AssA": 0.5109263979084301,
+                "IDF1": 0.45625,
+                "MOTA": 0.13095238095238096
+              }
+            }
+          },
+          "h264_35": {
+            "combined": {
+              "HOTA": 0.35236042291699965,
+              "DetA": 0.24978229607027852,
+              "AssA": 0.5295559839189383,
+              "IDF1": 0.3867784903798717,
+              "MOTA": -0.14307078763708872
+            },
+            "sequences": {
+              "MOT17-02-FRCNN": {
+                "HOTA": 0.3345836547080989,
+                "DetA": 0.23071176868055504,
+                "AssA": 0.5312421874757751,
+                "IDF1": 0.37072856221792394,
+                "MOTA": -0.2303595206391478
+              },
+              "MOT17-05-FRCNN": {
+                "HOTA": 0.40684944262322187,
+                "DetA": 0.316991163177853,
+                "AssA": 0.5331777724703317,
+                "IDF1": 0.43907563025210083,
+                "MOTA": 0.11706349206349206
+              }
+            }
+          },
+          "h264_40": {
+            "combined": {
+              "HOTA": 0.35461094531221743,
+              "DetA": 0.246309837977328,
+              "AssA": 0.538999496179409,
+              "IDF1": 0.3863157894736842,
+              "MOTA": -0.03389830508474576
+            },
+            "sequences": {
+              "MOT17-02-FRCNN": {
+                "HOTA": 0.3449002737023261,
+                "DetA": 0.22809219491555802,
+                "AssA": 0.5679596957123756,
+                "IDF1": 0.36538461538461536,
+                "MOTA": -0.06857523302263649
+              },
+              "MOT17-05-FRCNN": {
+                "HOTA": 0.3814566785126795,
+                "DetA": 0.30198182245954913,
+                "AssA": 0.48892365785815667,
+                "IDF1": 0.44556451612903225,
+                "MOTA": 0.06944444444444445
+              }
+            }
+          },
+          "h264_45": {
+            "combined": {
+              "HOTA": 0.3458844125211955,
+              "DetA": 0.2274311966702462,
+              "AssA": 0.5498260083926167,
+              "IDF1": 0.373951928451649,
+              "MOTA": -0.06480558325024925
+            },
+            "sequences": {
+              "MOT17-02-FRCNN": {
+                "HOTA": 0.335358274059472,
+                "DetA": 0.21397829496299775,
+                "AssA": 0.5657498751001737,
+                "IDF1": 0.3455223880597015,
+                "MOTA": -0.12450066577896138
+              },
+              "MOT17-05-FRCNN": {
+                "HOTA": 0.37664229903891594,
+                "DetA": 0.2703666154102256,
+                "AssA": 0.5283260431058517,
+                "IDF1": 0.45879732739420936,
+                "MOTA": 0.1130952380952381
+              }
+            }
+          },
+          "h265_30": {
+            "combined": {
+              "HOTA": 0.38450600294749515,
+              "DetA": 0.27502416975157723,
+              "AssA": 0.5672640110644498,
+              "IDF1": 0.42521260630315155,
+              "MOTA": -0.058325024925224324
+            },
+            "sequences": {
+              "MOT17-02-FRCNN": {
+                "HOTA": 0.3774938474882347,
+                "DetA": 0.25930192238017796,
+                "AssA": 0.5941129954220743,
+                "IDF1": 0.41620019756338494,
+                "MOTA": -0.11917443408788282
+              },
+              "MOT17-05-FRCNN": {
+                "HOTA": 0.4043332807117072,
+                "DetA": 0.329032587727458,
+                "AssA": 0.5064437830040639,
+                "IDF1": 0.45369406867845996,
+                "MOTA": 0.12301587301587301
+              }
+            }
+          },
+          "h265_35": {
+            "combined": {
+              "HOTA": 0.35208531233750745,
+              "DetA": 0.25071274813459127,
+              "AssA": 0.5252952705805615,
+              "IDF1": 0.38478747203579416,
+              "MOTA": -0.12911266201395813
+            },
+            "sequences": {
+              "MOT17-02-FRCNN": {
+                "HOTA": 0.3367724062319115,
+                "DetA": 0.23481855187753958,
+                "AssA": 0.5292517875831164,
+                "IDF1": 0.36227642276422767,
+                "MOTA": -0.20306258322237017
+              },
+              "MOT17-05-FRCNN": {
+                "HOTA": 0.399518596320439,
+                "DetA": 0.30660121453168193,
+                "AssA": 0.5282432606083747,
+                "IDF1": 0.4578059071729958,
+                "MOTA": 0.09126984126984126
+              }
+            }
+          },
+          "h265_40": {
+            "combined": {
+              "HOTA": 0.3520897289120102,
+              "DetA": 0.23998846717051303,
+              "AssA": 0.5399137729517697,
+              "IDF1": 0.38894907908992415,
+              "MOTA": -0.04037886340977069
+            },
+            "sequences": {
+              "MOT17-02-FRCNN": {
+                "HOTA": 0.3393857778082744,
+                "DetA": 0.22448283113998194,
+                "AssA": 0.5502598740868618,
+                "IDF1": 0.3740072202166065,
+                "MOTA": -0.08255659121171771
+              },
+              "MOT17-05-FRCNN": {
+                "HOTA": 0.388898367399961,
+                "DetA": 0.28995625578416556,
+                "AssA": 0.5272261330033787,
+                "IDF1": 0.43383947939262474,
+                "MOTA": 0.08531746031746032
+              }
+            }
+          },
+          "h265_45": {
+            "combined": {
+              "HOTA": 0.3079137818968098,
+              "DetA": 0.20832064137166983,
+              "AssA": 0.48037232775607674,
+              "IDF1": 0.3282950423216445,
+              "MOTA": -0.041375872382851446
+            },
+            "sequences": {
+              "MOT17-02-FRCNN": {
+                "HOTA": 0.2819582490170812,
+                "DetA": 0.18678914445583544,
+                "AssA": 0.4666800742669608,
+                "IDF1": 0.29343006852075776,
+                "MOTA": -0.10918774966711052
+              },
+              "MOT17-05-FRCNN": {
+                "HOTA": 0.3794241993513435,
+                "DetA": 0.27878792904983835,
+                "AssA": 0.5215023479155451,
+                "IDF1": 0.4328899637243047,
+                "MOTA": 0.16071428571428573
+              }
+            }
+          }
+        },
+        "selected": [
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 30,
+            "action": 16,
+            "bytes": 36447,
+            "source_hota": {
+              "HOTA": 0.6701438491226831,
+              "DetA": 0.5719062933368487,
+              "AssA": 0.8013721319174689
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 30,
+            "action": 16,
+            "bytes": 37859,
+            "source_hota": {
+              "HOTA": 0.6227925345388022,
+              "DetA": 0.5520220080836975,
+              "AssA": 0.7144405385755005
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 30,
+            "action": 13,
+            "bytes": 42950,
+            "source_hota": {
+              "HOTA": 0.651084430518417,
+              "DetA": 0.5784681991486698,
+              "AssA": 0.7443869587626463
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 30,
+            "action": 16,
+            "bytes": 33635,
+            "source_hota": {
+              "HOTA": 0.677445227016698,
+              "DetA": 0.6205109924999603,
+              "AssA": 0.750696830387882
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 35,
+            "action": 16,
+            "bytes": 20470,
+            "source_hota": {
+              "HOTA": 0.6023088263686782,
+              "DetA": 0.49553922078285173,
+              "AssA": 0.7546416617976694
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 35,
+            "action": 16,
+            "bytes": 21680,
+            "source_hota": {
+              "HOTA": 0.5587714959006154,
+              "DetA": 0.47787146669073566,
+              "AssA": 0.6735631604757831
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 35,
+            "action": 0,
+            "bytes": 34706,
+            "source_hota": {
+              "HOTA": 0.5734692928384432,
+              "DetA": 0.5025932974458819,
+              "AssA": 0.670815486457997
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 35,
+            "action": 16,
+            "bytes": 18945,
+            "source_hota": {
+              "HOTA": 0.6029077324216715,
+              "DetA": 0.5382999811816683,
+              "AssA": 0.6874616696416116
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 40,
+            "action": 16,
+            "bytes": 12144,
+            "source_hota": {
+              "HOTA": 0.5562244721219816,
+              "DetA": 0.4089902687225301,
+              "AssA": 0.7955522010788942
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 40,
+            "action": 0,
+            "bytes": 19675,
+            "source_hota": {
+              "HOTA": 0.5238197018146419,
+              "DetA": 0.4144797866198372,
+              "AssA": 0.6916312289435284
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 40,
+            "action": 16,
+            "bytes": 12582,
+            "source_hota": {
+              "HOTA": 0.49021395886454644,
+              "DetA": 0.40393536778797845,
+              "AssA": 0.613044210023575
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 40,
+            "action": 16,
+            "bytes": 11587,
+            "source_hota": {
+              "HOTA": 0.5042044634525982,
+              "DetA": 0.3983217330458844,
+              "AssA": 0.6526979033621254
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 45,
+            "action": 16,
+            "bytes": 7159,
+            "source_hota": {
+              "HOTA": 0.49388508668341563,
+              "DetA": 0.31191179248052364,
+              "AssA": 0.8000793460994696
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 45,
+            "action": 16,
+            "bytes": 7811,
+            "source_hota": {
+              "HOTA": 0.44872979883616315,
+              "DetA": 0.2979401661190074,
+              "AssA": 0.6927385992582442
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 45,
+            "action": 0,
+            "bytes": 10642,
+            "source_hota": {
+              "HOTA": 0.4296198330910502,
+              "DetA": 0.3085004934325587,
+              "AssA": 0.6115656502862655
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 45,
+            "action": 16,
+            "bytes": 6932,
+            "source_hota": {
+              "HOTA": 0.4280615847744344,
+              "DetA": 0.3083387102682037,
+              "AssA": 0.6042397574516595
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 30,
+            "action": 16,
+            "bytes": 34120,
+            "source_hota": {
+              "HOTA": 0.6798266142846202,
+              "DetA": 0.5670925843112876,
+              "AssA": 0.830080059861803
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 30,
+            "action": 19,
+            "bytes": 36458,
+            "source_hota": {
+              "HOTA": 0.6230357453038169,
+              "DetA": 0.534348232273928,
+              "AssA": 0.7378034182804155
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 30,
+            "action": 0,
+            "bytes": 61326,
+            "source_hota": {
+              "HOTA": 0.6100686308299795,
+              "DetA": 0.5598360688402997,
+              "AssA": 0.6749862712443901
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 30,
+            "action": 13,
+            "bytes": 37627,
+            "source_hota": {
+              "HOTA": 0.6402096785263004,
+              "DetA": 0.6070024433913076,
+              "AssA": 0.6858342247607181
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 35,
+            "action": 16,
+            "bytes": 19299,
+            "source_hota": {
+              "HOTA": 0.6146733997874332,
+              "DetA": 0.4931805713084122,
+              "AssA": 0.7905789145399118
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 35,
+            "action": 16,
+            "bytes": 20326,
+            "source_hota": {
+              "HOTA": 0.5848238194012222,
+              "DetA": 0.47593576880530597,
+              "AssA": 0.7342631958067583
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 35,
+            "action": 16,
+            "bytes": 19615,
+            "source_hota": {
+              "HOTA": 0.5855587583565345,
+              "DetA": 0.4851611051833585,
+              "AssA": 0.7233479677113127
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 35,
+            "action": 16,
+            "bytes": 17749,
+            "source_hota": {
+              "HOTA": 0.5762660288385627,
+              "DetA": 0.5055889125386254,
+              "AssA": 0.676455590688775
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 40,
+            "action": 0,
+            "bytes": 18099,
+            "source_hota": {
+              "HOTA": 0.578908115020367,
+              "DetA": 0.4420822564332578,
+              "AssA": 0.7772749674292785
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 40,
+            "action": 0,
+            "bytes": 18348,
+            "source_hota": {
+              "HOTA": 0.5478060566222593,
+              "DetA": 0.42215338624264187,
+              "AssA": 0.7213785164133492
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 40,
+            "action": 16,
+            "bytes": 11867,
+            "source_hota": {
+              "HOTA": 0.502871668508575,
+              "DetA": 0.4033995568536057,
+              "AssA": 0.6393707752667259
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 40,
+            "action": 13,
+            "bytes": 12582,
+            "source_hota": {
+              "HOTA": 0.5042089050146956,
+              "DetA": 0.3902583383883243,
+              "AssA": 0.6637778478196373
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 45,
+            "action": 16,
+            "bytes": 7551,
+            "source_hota": {
+              "HOTA": 0.44853274532297477,
+              "DetA": 0.30824022057031863,
+              "AssA": 0.7242128349936581
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 45,
+            "action": 16,
+            "bytes": 7756,
+            "source_hota": {
+              "HOTA": 0.35701440397527867,
+              "DetA": 0.25946615803034107,
+              "AssA": 0.5212474869815619
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 45,
+            "action": 16,
+            "bytes": 7627,
+            "source_hota": {
+              "HOTA": 0.3418210157925503,
+              "DetA": 0.22250354840066985,
+              "AssA": 0.5356301009368308
+            }
+          },
+          {
+            "sequence": "MOT17-02-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 45,
+            "action": 16,
+            "bytes": 7035,
+            "source_hota": {
+              "HOTA": 0.36609605241568793,
+              "DetA": 0.2220455495032658,
+              "AssA": 0.6206208805044241
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 30,
+            "action": 19,
+            "bytes": 105361,
+            "source_hota": {
+              "HOTA": 0.7493973437313715,
+              "DetA": 0.8040890483263101,
+              "AssA": 0.7055663799043577
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 30,
+            "action": 17,
+            "bytes": 133374,
+            "source_hota": {
+              "HOTA": 0.7434853986625983,
+              "DetA": 0.7587924854055016,
+              "AssA": 0.7343612747358087
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 30,
+            "action": 19,
+            "bytes": 117095,
+            "source_hota": {
+              "HOTA": 0.6967001104695033,
+              "DetA": 0.6625784178309986,
+              "AssA": 0.7396693249421737
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 30,
+            "action": 19,
+            "bytes": 115025,
+            "source_hota": {
+              "HOTA": 0.61453751711415,
+              "DetA": 0.626322268013813,
+              "AssA": 0.6118862836601048
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 35,
+            "action": 19,
+            "bytes": 62277,
+            "source_hota": {
+              "HOTA": 0.7122263016916953,
+              "DetA": 0.7022587957065166,
+              "AssA": 0.7304630522324933
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 35,
+            "action": 0,
+            "bytes": 85673,
+            "source_hota": {
+              "HOTA": 0.7112338042341113,
+              "DetA": 0.6767641955500334,
+              "AssA": 0.7528877648728419
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 35,
+            "action": 17,
+            "bytes": 73806,
+            "source_hota": {
+              "HOTA": 0.6605626801139557,
+              "DetA": 0.6214651000931573,
+              "AssA": 0.7086864366008933
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 35,
+            "action": 17,
+            "bytes": 74156,
+            "source_hota": {
+              "HOTA": 0.6141055584170885,
+              "DetA": 0.5885302567671655,
+              "AssA": 0.6531346839275247
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 40,
+            "action": 19,
+            "bytes": 40350,
+            "source_hota": {
+              "HOTA": 0.6771646662053112,
+              "DetA": 0.612818337390116,
+              "AssA": 0.7535365268852968
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 40,
+            "action": 19,
+            "bytes": 48597,
+            "source_hota": {
+              "HOTA": 0.6660561445548204,
+              "DetA": 0.61099420792454,
+              "AssA": 0.7333249289658752
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 40,
+            "action": 17,
+            "bytes": 48620,
+            "source_hota": {
+              "HOTA": 0.6375589829207489,
+              "DetA": 0.5807787289043194,
+              "AssA": 0.7060284134242671
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 40,
+            "action": 19,
+            "bytes": 47524,
+            "source_hota": {
+              "HOTA": 0.5673041530051334,
+              "DetA": 0.5340181656334034,
+              "AssA": 0.6106118748225369
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 45,
+            "action": 17,
+            "bytes": 27927,
+            "source_hota": {
+              "HOTA": 0.6259296870252994,
+              "DetA": 0.5523364767533264,
+              "AssA": 0.7214900111166893
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 45,
+            "action": 17,
+            "bytes": 33571,
+            "source_hota": {
+              "HOTA": 0.5911331235746491,
+              "DetA": 0.5037189189937464,
+              "AssA": 0.7041628621664389
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 45,
+            "action": 19,
+            "bytes": 32086,
+            "source_hota": {
+              "HOTA": 0.5526822127433392,
+              "DetA": 0.4738354622384829,
+              "AssA": 0.6487291544774196
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 45,
+            "action": 19,
+            "bytes": 32273,
+            "source_hota": {
+              "HOTA": 0.5390022656131727,
+              "DetA": 0.45603640795719175,
+              "AssA": 0.6431276381875
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 30,
+            "action": 17,
+            "bytes": 93315,
+            "source_hota": {
+              "HOTA": 0.8032013123199041,
+              "DetA": 0.8220076710340173,
+              "AssA": 0.7888139165517781
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 30,
+            "action": 17,
+            "bytes": 107252,
+            "source_hota": {
+              "HOTA": 0.7815029653116089,
+              "DetA": 0.7649260099640869,
+              "AssA": 0.8023878006996998
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 30,
+            "action": 0,
+            "bytes": 117676,
+            "source_hota": {
+              "HOTA": 0.7304861144340037,
+              "DetA": 0.7027581457975797,
+              "AssA": 0.7641522428823733
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 30,
+            "action": 0,
+            "bytes": 104259,
+            "source_hota": {
+              "HOTA": 0.6960032891866641,
+              "DetA": 0.6821089933298897,
+              "AssA": 0.7144827705384795
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 35,
+            "action": 19,
+            "bytes": 48342,
+            "source_hota": {
+              "HOTA": 0.6969840513776167,
+              "DetA": 0.6813727874125223,
+              "AssA": 0.720797538800921
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 35,
+            "action": 0,
+            "bytes": 67919,
+            "source_hota": {
+              "HOTA": 0.7076275520486343,
+              "DetA": 0.6585814780698849,
+              "AssA": 0.7659286534288587
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 35,
+            "action": 19,
+            "bytes": 54079,
+            "source_hota": {
+              "HOTA": 0.671294607339644,
+              "DetA": 0.5969613143919025,
+              "AssA": 0.7603854583932215
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 35,
+            "action": 0,
+            "bytes": 58576,
+            "source_hota": {
+              "HOTA": 0.6227921087279483,
+              "DetA": 0.5927241181450383,
+              "AssA": 0.661410764920595
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 40,
+            "action": 17,
+            "bytes": 30590,
+            "source_hota": {
+              "HOTA": 0.6535790037638216,
+              "DetA": 0.5866561225327898,
+              "AssA": 0.7354403426236488
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 40,
+            "action": 19,
+            "bytes": 35050,
+            "source_hota": {
+              "HOTA": 0.6312505441786513,
+              "DetA": 0.5505531659432269,
+              "AssA": 0.7336766822278866
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 40,
+            "action": 19,
+            "bytes": 32853,
+            "source_hota": {
+              "HOTA": 0.5974624628462691,
+              "DetA": 0.5336759266255229,
+              "AssA": 0.6796744914602473
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 40,
+            "action": 3,
+            "bytes": 35775,
+            "source_hota": {
+              "HOTA": 0.599512121101745,
+              "DetA": 0.5400082939899639,
+              "AssA": 0.6747244560827008
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 45,
+            "action": 0,
+            "bytes": 19622,
+            "source_hota": {
+              "HOTA": 0.615650534732388,
+              "DetA": 0.5029901893584395,
+              "AssA": 0.7613749353334955
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 45,
+            "action": 7,
+            "bytes": 23275,
+            "source_hota": {
+              "HOTA": 0.5612719544377867,
+              "DetA": 0.40779677392905844,
+              "AssA": 0.7754680299400667
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 45,
+            "action": 17,
+            "bytes": 20505,
+            "source_hota": {
+              "HOTA": 0.504418356209146,
+              "DetA": 0.41696741313905955,
+              "AssA": 0.6199429818831783
+            }
+          },
+          {
+            "sequence": "MOT17-05-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 45,
+            "action": 19,
+            "bytes": 20336,
+            "source_hota": {
+              "HOTA": 0.516022492244625,
+              "DetA": 0.4463519948410789,
+              "AssA": 0.6023465651015133
+            }
+          }
+        ],
+        "selection_counts": {
+          "16": 22,
+          "13": 3,
+          "0": 12,
+          "19": 15,
+          "17": 10,
+          "3": 1,
+          "7": 1
+        },
+        "log_rate_ratio": -0.22427307424543458,
+        "bd": {
+          "h264": {
+            "qps": [
+              30,
+              35,
+              40,
+              45
+            ],
+            "primary_interpolator": "PCHIP",
+            "threshold_pct": -15.0,
+            "valid": false,
+            "pchip_bd_rate_pct": null,
+            "point_passes": false,
+            "threshold_confirmed": false,
+            "ci": null,
+            "invalid_reason": "quality is not monotone with rate"
+          },
+          "h265": {
+            "qps": [
+              30,
+              35,
+              40,
+              45
+            ],
+            "primary_interpolator": "PCHIP",
+            "threshold_pct": -15.0,
+            "valid": false,
+            "pchip_bd_rate_pct": null,
+            "point_passes": false,
+            "threshold_confirmed": false,
+            "ci": null,
+            "invalid_reason": "quality is not monotone with rate"
+          }
+        }
+      }
+    },
+    "validation": {
+      "anchor": {
+        "policy": {
+          "kind": "anchor"
+        },
+        "curves": {
+          "h264": {
+            "rate": [
+              0.04915859646267361,
+              0.0275506591796875,
+              0.016403605143229166,
+              0.010249498155381944
+            ],
+            "quality": [
+              0.5287049377025168,
+              0.5141134956596505,
+              0.49515176385912396,
+              0.443015805739975
+            ]
+          },
+          "h265": {
+            "rate": [
+              0.044556545681423615,
+              0.02414306640625,
+              0.013509046766493055,
+              0.007588907877604166
+            ],
+            "quality": [
+              0.537852956711556,
+              0.5180980053556755,
+              0.48652933261771447,
+              0.41093424707389803
+            ]
+          }
+        },
+        "metrics": {
+          "h264_30": {
+            "combined": {
+              "HOTA": 0.5287049377025168,
+              "DetA": 0.41633878913543504,
+              "AssA": 0.6872814921192084,
+              "IDF1": 0.5874292523086089,
+              "MOTA": 0.3291139240506329
+            },
+            "sequences": {
+              "MOT17-04-FRCNN": {
+                "HOTA": 0.5523548657674564,
+                "DetA": 0.4419200418270383,
+                "AssA": 0.7061558950926423,
+                "IDF1": 0.642120169937285,
+                "MOTA": 0.3925373134328358
+              },
+              "MOT17-11-FRCNN": {
+                "HOTA": 0.45861813762969317,
+                "DetA": 0.35227376325563153,
+                "AssA": 0.6119066825544837,
+                "IDF1": 0.43478260869565216,
+                "MOTA": 0.1509433962264151
+              }
+            }
+          },
+          "h264_35": {
+            "combined": {
+              "HOTA": 0.5141134956596505,
+              "DetA": 0.3935950599034676,
+              "AssA": 0.6878665943162595,
+              "IDF1": 0.583499769549854,
+              "MOTA": 0.3282883874518437
+            },
+            "sequences": {
+              "MOT17-04-FRCNN": {
+                "HOTA": 0.5266911148296993,
+                "DetA": 0.40822099976443216,
+                "AssA": 0.6975835422471488,
+                "IDF1": 0.6195314119842422,
+                "MOTA": 0.36007462686567165
+              },
+              "MOT17-11-FRCNN": {
+                "HOTA": 0.47584120788882756,
+                "DetA": 0.35551618673952184,
+                "AssA": 0.6482450216340081,
+                "IDF1": 0.4804270462633452,
+                "MOTA": 0.2389937106918239
+              }
+            }
+          },
+          "h264_40": {
+            "combined": {
+              "HOTA": 0.49515176385912396,
+              "DetA": 0.3878052943821895,
+              "AssA": 0.6503155407358249,
+              "IDF1": 0.5735573874445149,
+              "MOTA": 0.3538800220143093
+            },
+            "sequences": {
+              "MOT17-04-FRCNN": {
+                "HOTA": 0.5043094654009473,
+                "DetA": 0.39842302040782857,
+                "AssA": 0.6573518876354684,
+                "IDF1": 0.6150204432967505,
+                "MOTA": 0.38992537313432835
+              },
+              "MOT17-11-FRCNN": {
+                "HOTA": 0.4667779107768749,
+                "DetA": 0.36123243837981345,
+                "AssA": 0.6172427859184461,
+                "IDF1": 0.45755568934376883,
+                "MOTA": 0.2526205450733753
+              }
+            }
+          },
+          "h264_45": {
+            "combined": {
+              "HOTA": 0.443015805739975,
+              "DetA": 0.32924239392054594,
+              "AssA": 0.6218796015274649,
+              "IDF1": 0.4985663686962388,
+              "MOTA": 0.28315905338470004
+            },
+            "sequences": {
+              "MOT17-04-FRCNN": {
+                "HOTA": 0.4419494503729253,
+                "DetA": 0.32814287777220497,
+                "AssA": 0.6253924735453894,
+                "IDF1": 0.5129974695192087,
+                "MOTA": 0.28955223880597014
+              },
+              "MOT17-11-FRCNN": {
+                "HOTA": 0.44427803892903023,
+                "DetA": 0.33327922612226607,
+                "AssA": 0.609904748101536,
+                "IDF1": 0.4589127686472819,
+                "MOTA": 0.26519916142557654
+              }
+            }
+          },
+          "h265_30": {
+            "combined": {
+              "HOTA": 0.537852956711556,
+              "DetA": 0.41690931844898305,
+              "AssA": 0.7100061186587352,
+              "IDF1": 0.6138161898965308,
+              "MOTA": 0.35553109521188775
+            },
+            "sequences": {
+              "MOT17-04-FRCNN": {
+                "HOTA": 0.5589384075495643,
+                "DetA": 0.438601942456695,
+                "AssA": 0.7289937668978225,
+                "IDF1": 0.6655656482246077,
+                "MOTA": 0.4126865671641791
+              },
+              "MOT17-11-FRCNN": {
+                "HOTA": 0.4754153842764488,
+                "DetA": 0.3615781659573046,
+                "AssA": 0.6399738486190351,
+                "IDF1": 0.46875,
+                "MOTA": 0.1949685534591195
+              }
+            }
+          },
+          "h265_35": {
+            "combined": {
+              "HOTA": 0.5180980053556755,
+              "DetA": 0.4036836885512081,
+              "AssA": 0.6831232443512727,
+              "IDF1": 0.5872991106256826,
+              "MOTA": 0.35608145294441385
+            },
+            "sequences": {
+              "MOT17-04-FRCNN": {
+                "HOTA": 0.5363869705777102,
+                "DetA": 0.42322603486320914,
+                "AssA": 0.6990476857624093,
+                "IDF1": 0.6393162393162393,
+                "MOTA": 0.4130597014925373
+              },
+              "MOT17-11-FRCNN": {
+                "HOTA": 0.4655802018461614,
+                "DetA": 0.3552266770775642,
+                "AssA": 0.6253207503270186,
+                "IDF1": 0.44650086755349916,
+                "MOTA": 0.1960167714884696
+              }
+            }
+          },
+          "h265_40": {
+            "combined": {
+              "HOTA": 0.48652933261771447,
+              "DetA": 0.3647097817335338,
+              "AssA": 0.6640517138974193,
+              "IDF1": 0.5663511044676964,
+              "MOTA": 0.3574573472757292
+            },
+            "sequences": {
+              "MOT17-04-FRCNN": {
+                "HOTA": 0.49028033076187505,
+                "DetA": 0.3751586584643226,
+                "AssA": 0.6576532891186577,
+                "IDF1": 0.5895026358010543,
+                "MOTA": 0.3914179104477612
+              },
+              "MOT17-11-FRCNN": {
+                "HOTA": 0.4752636276164689,
+                "DetA": 0.3392970611822518,
+                "AssA": 0.6766140599610796,
+                "IDF1": 0.5054282267792521,
+                "MOTA": 0.2620545073375262
+              }
+            }
+          },
+          "h265_45": {
+            "combined": {
+              "HOTA": 0.41093424707389803,
+              "DetA": 0.29580184201445175,
+              "AssA": 0.5877079510836272,
+              "IDF1": 0.4616736990154712,
+              "MOTA": 0.25178866263071
+            },
+            "sequences": {
+              "MOT17-04-FRCNN": {
+                "HOTA": 0.40459648847558066,
+                "DetA": 0.2876997518560485,
+                "AssA": 0.5919613165619527,
+                "IDF1": 0.4713253012048193,
+                "MOTA": 0.251865671641791
+              },
+              "MOT17-11-FRCNN": {
+                "HOTA": 0.42677254412720805,
+                "DetA": 0.3187123825903583,
+                "AssA": 0.5801020219876485,
+                "IDF1": 0.435630689206762,
+                "MOTA": 0.25157232704402516
+              }
+            }
+          }
+        },
+        "selected": [
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 30,
+            "action": 0,
+            "bytes": 48838,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 30,
+            "action": 0,
+            "bytes": 49609,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 30,
+            "action": 0,
+            "bytes": 49855,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 30,
+            "action": 0,
+            "bytes": 49600,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 35,
+            "action": 0,
+            "bytes": 28481,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 35,
+            "action": 0,
+            "bytes": 28782,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 35,
+            "action": 0,
+            "bytes": 29325,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 35,
+            "action": 0,
+            "bytes": 28859,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 40,
+            "action": 0,
+            "bytes": 17296,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 40,
+            "action": 0,
+            "bytes": 17521,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 40,
+            "action": 0,
+            "bytes": 17651,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 40,
+            "action": 0,
+            "bytes": 17941,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 45,
+            "action": 0,
+            "bytes": 10599,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 45,
+            "action": 0,
+            "bytes": 10480,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 45,
+            "action": 0,
+            "bytes": 10792,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 45,
+            "action": 0,
+            "bytes": 10712,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 30,
+            "action": 0,
+            "bytes": 45415,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 30,
+            "action": 0,
+            "bytes": 46244,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 30,
+            "action": 0,
+            "bytes": 46055,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 30,
+            "action": 0,
+            "bytes": 46239,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 35,
+            "action": 0,
+            "bytes": 26245,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 35,
+            "action": 0,
+            "bytes": 27295,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 35,
+            "action": 0,
+            "bytes": 27086,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 35,
+            "action": 0,
+            "bytes": 27118,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 40,
+            "action": 0,
+            "bytes": 15998,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 40,
+            "action": 0,
+            "bytes": 16287,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 40,
+            "action": 0,
+            "bytes": 16344,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 40,
+            "action": 0,
+            "bytes": 16424,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 45,
+            "action": 0,
+            "bytes": 9897,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 45,
+            "action": 0,
+            "bytes": 9980,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 45,
+            "action": 0,
+            "bytes": 9968,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 45,
+            "action": 0,
+            "bytes": 10009,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 30,
+            "action": 0,
+            "bytes": 122358,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 30,
+            "action": 0,
+            "bytes": 140358,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 30,
+            "action": 0,
+            "bytes": 131979,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 30,
+            "action": 0,
+            "bytes": 132276,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 35,
+            "action": 0,
+            "bytes": 67964,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 35,
+            "action": 0,
+            "bytes": 76934,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 35,
+            "action": 0,
+            "bytes": 73117,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 35,
+            "action": 0,
+            "bytes": 72789,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 40,
+            "action": 0,
+            "bytes": 40190,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 40,
+            "action": 0,
+            "bytes": 44235,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 40,
+            "action": 0,
+            "bytes": 43996,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 40,
+            "action": 0,
+            "bytes": 43051,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 45,
+            "action": 0,
+            "bytes": 25285,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 45,
+            "action": 0,
+            "bytes": 27457,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 45,
+            "action": 0,
+            "bytes": 28364,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 45,
+            "action": 0,
+            "bytes": 27446,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 30,
+            "action": 0,
+            "bytes": 110157,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 30,
+            "action": 0,
+            "bytes": 126434,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 30,
+            "action": 0,
+            "bytes": 118732,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 30,
+            "action": 0,
+            "bytes": 117737,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 35,
+            "action": 0,
+            "bytes": 58641,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 35,
+            "action": 0,
+            "bytes": 65829,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 35,
+            "action": 0,
+            "bytes": 62513,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 35,
+            "action": 0,
+            "bytes": 61277,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 40,
+            "action": 0,
+            "bytes": 31824,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 40,
+            "action": 0,
+            "bytes": 35246,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 40,
+            "action": 0,
+            "bytes": 34010,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 40,
+            "action": 0,
+            "bytes": 33066,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 45,
+            "action": 0,
+            "bytes": 17236,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 45,
+            "action": 0,
+            "bytes": 18487,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 45,
+            "action": 0,
+            "bytes": 18501,
+            "source_hota": null
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 45,
+            "action": 0,
+            "bytes": 17825,
+            "source_hota": null
+          }
+        ],
+        "selection_counts": {
+          "0": 64
+        },
+        "log_rate_ratio": 0.0
+      },
+      "frozen_a4": {
+        "policy": {
+          "kind": "observed_trailing32",
+          "threshold": 0.02
+        },
+        "curves": {
+          "h264": {
+            "rate": [
+              0.039422743055555556,
+              0.02385735405815972,
+              0.015254380967881944,
+              0.009684719509548611
+            ],
+            "quality": [
+              0.5329295056255002,
+              0.5200424869669932,
+              0.49144430901826874,
+              0.43477654115037423
+            ]
+          },
+          "h265": {
+            "rate": [
+              0.03988240559895834,
+              0.021098904079861112,
+              0.011993815104166666,
+              0.007167222764756945
+            ],
+            "quality": [
+              0.5374138694360252,
+              0.5221298604254215,
+              0.48558763260540827,
+              0.4018178219738933
+            ]
+          }
+        },
+        "metrics": {
+          "h264_30": {
+            "combined": {
+              "HOTA": 0.5329295056255002,
+              "DetA": 0.41357156825810487,
+              "AssA": 0.7051989674813014,
+              "IDF1": 0.5938107340409627,
+              "MOTA": 0.3365437534397358
+            },
+            "sequences": {
+              "MOT17-04-FRCNN": {
+                "HOTA": 0.5534175274819721,
+                "DetA": 0.4338021225279344,
+                "AssA": 0.7261779031873089,
+                "IDF1": 0.6424558587479936,
+                "MOTA": 0.3794776119402985
+              },
+              "MOT17-11-FRCNN": {
+                "HOTA": 0.46919412568974606,
+                "DetA": 0.3599859170462768,
+                "AssA": 0.6274559790332034,
+                "IDF1": 0.45161290322580644,
+                "MOTA": 0.21593291404612158
+              }
+            }
+          },
+          "h264_35": {
+            "combined": {
+              "HOTA": 0.5200424869669932,
+              "DetA": 0.4109675207017708,
+              "AssA": 0.6764506866609801,
+              "IDF1": 0.5824260082809385,
+              "MOTA": 0.3472757292239956
+            },
+            "sequences": {
+              "MOT17-04-FRCNN": {
+                "HOTA": 0.5372774984050104,
+                "DetA": 0.4287459482700797,
+                "AssA": 0.6928145137678158,
+                "IDF1": 0.628500823723229,
+                "MOTA": 0.3832089552238806
+              },
+              "MOT17-11-FRCNN": {
+                "HOTA": 0.4659795746184119,
+                "DetA": 0.36403189501989724,
+                "AssA": 0.6120738916584847,
+                "IDF1": 0.44804804804804804,
+                "MOTA": 0.24633123689727462
+              }
+            }
+          },
+          "h264_40": {
+            "combined": {
+              "HOTA": 0.49144430901826874,
+              "DetA": 0.3810930537947351,
+              "AssA": 0.6590932072597679,
+              "IDF1": 0.5615311610249921,
+              "MOTA": 0.329389102916896
+            },
+            "sequences": {
+              "MOT17-04-FRCNN": {
+                "HOTA": 0.49645672577582545,
+                "DetA": 0.3898292443102216,
+                "AssA": 0.6632440876325072,
+                "IDF1": 0.5888368129527056,
+                "MOTA": 0.3451492537313433
+              },
+              "MOT17-11-FRCNN": {
+                "HOTA": 0.4747432095306312,
+                "DetA": 0.3586972766231076,
+                "AssA": 0.64071925845923,
+                "IDF1": 0.4828009828009828,
+                "MOTA": 0.2851153039832285
+              }
+            }
+          },
+          "h264_45": {
+            "combined": {
+              "HOTA": 0.43477654115037423,
+              "DetA": 0.3231318738561141,
+              "AssA": 0.6173275309454584,
+              "IDF1": 0.4912106135986733,
+              "MOTA": 0.25784259768849754
+            },
+            "sequences": {
+              "MOT17-04-FRCNN": {
+                "HOTA": 0.42823397692962945,
+                "DetA": 0.3180829980603339,
+                "AssA": 0.621503610430436,
+                "IDF1": 0.49753252579632123,
+                "MOTA": 0.24029850746268658
+              },
+              "MOT17-11-FRCNN": {
+                "HOTA": 0.45160240237398297,
+                "DetA": 0.3392478762339288,
+                "AssA": 0.6135674247049493,
+                "IDF1": 0.4732824427480916,
+                "MOTA": 0.30712788259958074
+              }
+            }
+          },
+          "h265_30": {
+            "combined": {
+              "HOTA": 0.5374138694360252,
+              "DetA": 0.41503256290328777,
+              "AssA": 0.7129673756806125,
+              "IDF1": 0.6118460613349369,
+              "MOTA": 0.345074298293891
+            },
+            "sequences": {
+              "MOT17-04-FRCNN": {
+                "HOTA": 0.557939599609161,
+                "DetA": 0.4379769225690648,
+                "AssA": 0.7286522966305509,
+                "IDF1": 0.6593585058871295,
+                "MOTA": 0.3958955223880597
+              },
+              "MOT17-11-FRCNN": {
+                "HOTA": 0.4754133726867019,
+                "DetA": 0.35597674866926776,
+                "AssA": 0.6491211142542355,
+                "IDF1": 0.4762456546929316,
+                "MOTA": 0.20230607966457023
+              }
+            }
+          },
+          "h265_35": {
+            "combined": {
+              "HOTA": 0.5221298604254215,
+              "DetA": 0.4020898220031851,
+              "AssA": 0.693374177043387,
+              "IDF1": 0.5962887883985654,
+              "MOTA": 0.3701155751238305
+            },
+            "sequences": {
+              "MOT17-04-FRCNN": {
+                "HOTA": 0.5427123455811783,
+                "DetA": 0.4232855266830492,
+                "AssA": 0.7109276525528049,
+                "IDF1": 0.6512515910055154,
+                "MOTA": 0.42686567164179107
+              },
+              "MOT17-11-FRCNN": {
+                "HOTA": 0.46147544089142795,
+                "DetA": 0.3485453939628794,
+                "AssA": 0.6256830556745234,
+                "IDF1": 0.44379046497939967,
+                "MOTA": 0.21069182389937108
+              }
+            }
+          },
+          "h265_40": {
+            "combined": {
+              "HOTA": 0.48558763260540827,
+              "DetA": 0.3712284765782958,
+              "AssA": 0.6520208436781916,
+              "IDF1": 0.5513784461152882,
+              "MOTA": 0.35635663181067695
+            },
+            "sequences": {
+              "MOT17-04-FRCNN": {
+                "HOTA": 0.4949111942134215,
+                "DetA": 0.38155833775494835,
+                "AssA": 0.6591285985009043,
+                "IDF1": 0.5859232175502742,
+                "MOTA": 0.3977611940298508
+              },
+              "MOT17-11-FRCNN": {
+                "HOTA": 0.4575820099172286,
+                "DetA": 0.34508486925310067,
+                "AssA": 0.6239860340941181,
+                "IDF1": 0.4574269732753263,
+                "MOTA": 0.240041928721174
+              }
+            }
+          },
+          "h265_45": {
+            "combined": {
+              "HOTA": 0.4018178219738933,
+              "DetA": 0.2913259644389003,
+              "AssA": 0.5726285569364006,
+              "IDF1": 0.4703155642717062,
+              "MOTA": 0.2820583379196478
+            },
+            "sequences": {
+              "MOT17-04-FRCNN": {
+                "HOTA": 0.39231104417963253,
+                "DetA": 0.2821514362600194,
+                "AssA": 0.5698672771156067,
+                "IDF1": 0.48165476483624725,
+                "MOTA": 0.28246268656716417
+              },
+              "MOT17-11-FRCNN": {
+                "HOTA": 0.4248263277416835,
+                "DetA": 0.3166661374044577,
+                "AssA": 0.5796943579270237,
+                "IDF1": 0.4405684754521964,
+                "MOTA": 0.2809224318658281
+              }
+            }
+          }
+        },
+        "selected": [
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 30,
+            "action": 17,
+            "bytes": 41489,
+            "source_hota": {
+              "HOTA": 0.7835906100065833,
+              "DetA": 0.7110297012513106,
+              "AssA": 0.8729164988863187
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 30,
+            "action": 17,
+            "bytes": 41642,
+            "source_hota": {
+              "HOTA": 0.7665873004055556,
+              "DetA": 0.699790210050926,
+              "AssA": 0.8487306661671535
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 30,
+            "action": 19,
+            "bytes": 37863,
+            "source_hota": {
+              "HOTA": 0.7571861332551295,
+              "DetA": 0.6786346445887118,
+              "AssA": 0.8528885662973572
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 30,
+            "action": 17,
+            "bytes": 41384,
+            "source_hota": {
+              "HOTA": 0.7566527282856569,
+              "DetA": 0.6899718730968206,
+              "AssA": 0.8358674920158558
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 35,
+            "action": 13,
+            "bytes": 27860,
+            "source_hota": {
+              "HOTA": 0.762397927925364,
+              "DetA": 0.6816078223303381,
+              "AssA": 0.8686628457813912
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 35,
+            "action": 17,
+            "bytes": 24494,
+            "source_hota": {
+              "HOTA": 0.7294593837063046,
+              "DetA": 0.6549060776177289,
+              "AssA": 0.821137225887621
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 35,
+            "action": 19,
+            "bytes": 23013,
+            "source_hota": {
+              "HOTA": 0.696481282315161,
+              "DetA": 0.619821145692117,
+              "AssA": 0.7892656367766293
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 35,
+            "action": 13,
+            "bytes": 27816,
+            "source_hota": {
+              "HOTA": 0.7058290515787077,
+              "DetA": 0.6229323813479059,
+              "AssA": 0.8070696566636144
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 40,
+            "action": 16,
+            "bytes": 16295,
+            "source_hota": {
+              "HOTA": 0.671818411719175,
+              "DetA": 0.5515357880805953,
+              "AssA": 0.8410571370761228
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 40,
+            "action": 19,
+            "bytes": 14601,
+            "source_hota": {
+              "HOTA": 0.626494868363675,
+              "DetA": 0.5185300993439985,
+              "AssA": 0.7707899238280579
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 40,
+            "action": 16,
+            "bytes": 16216,
+            "source_hota": {
+              "HOTA": 0.6202265025620943,
+              "DetA": 0.5239782540494793,
+              "AssA": 0.7425681251575238
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 40,
+            "action": 13,
+            "bytes": 16753,
+            "source_hota": {
+              "HOTA": 0.6454770528201359,
+              "DetA": 0.5564218970688898,
+              "AssA": 0.7620548631193172
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 45,
+            "action": 16,
+            "bytes": 9810,
+            "source_hota": {
+              "HOTA": 0.5548271744831655,
+              "DetA": 0.41248347191101387,
+              "AssA": 0.7677338702746752
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 45,
+            "action": 16,
+            "bytes": 9807,
+            "source_hota": {
+              "HOTA": 0.5212168297452233,
+              "DetA": 0.3966584718654224,
+              "AssA": 0.7028310596852726
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 45,
+            "action": 16,
+            "bytes": 9775,
+            "source_hota": {
+              "HOTA": 0.5271507948012444,
+              "DetA": 0.40447877784882696,
+              "AssA": 0.7047629891359201
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 45,
+            "action": 19,
+            "bytes": 9318,
+            "source_hota": {
+              "HOTA": 0.5431606866973756,
+              "DetA": 0.43739838729524544,
+              "AssA": 0.6925812134978625
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 30,
+            "action": 0,
+            "bytes": 45415,
+            "source_hota": {
+              "HOTA": 0.7961535889133531,
+              "DetA": 0.74571052035581,
+              "AssA": 0.8576729737649756
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 30,
+            "action": 13,
+            "bytes": 45089,
+            "source_hota": {
+              "HOTA": 0.7954671842751638,
+              "DetA": 0.7519533948092164,
+              "AssA": 0.8468557047829643
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 30,
+            "action": 16,
+            "bytes": 41849,
+            "source_hota": {
+              "HOTA": 0.7999684881028969,
+              "DetA": 0.7516441388078958,
+              "AssA": 0.8552788527291891
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 30,
+            "action": 17,
+            "bytes": 38053,
+            "source_hota": {
+              "HOTA": 0.7594750136566215,
+              "DetA": 0.712646971979073,
+              "AssA": 0.8165638997550974
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 35,
+            "action": 0,
+            "bytes": 26245,
+            "source_hota": {
+              "HOTA": 0.7128837329869624,
+              "DetA": 0.6003909674956797,
+              "AssA": 0.8554480300866129
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 35,
+            "action": 16,
+            "bytes": 25110,
+            "source_hota": {
+              "HOTA": 0.7105524297703182,
+              "DetA": 0.626891605234499,
+              "AssA": 0.8117498670985824
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 35,
+            "action": 17,
+            "bytes": 23069,
+            "source_hota": {
+              "HOTA": 0.7198949617081392,
+              "DetA": 0.6368185594993824,
+              "AssA": 0.8193504024787469
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 35,
+            "action": 19,
+            "bytes": 20911,
+            "source_hota": {
+              "HOTA": 0.6964589787593889,
+              "DetA": 0.6095537111606852,
+              "AssA": 0.804157468959625
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 40,
+            "action": 0,
+            "bytes": 15998,
+            "source_hota": {
+              "HOTA": 0.6088222938112685,
+              "DetA": 0.4453836963846627,
+              "AssA": 0.8577923796889175
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 40,
+            "action": 0,
+            "bytes": 16287,
+            "source_hota": {
+              "HOTA": 0.6032607337723128,
+              "DetA": 0.4892548271425214,
+              "AssA": 0.7582287773463126
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 40,
+            "action": 0,
+            "bytes": 16344,
+            "source_hota": {
+              "HOTA": 0.6350317019568897,
+              "DetA": 0.516166153634204,
+              "AssA": 0.7928698894292406
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 40,
+            "action": 16,
+            "bytes": 15003,
+            "source_hota": {
+              "HOTA": 0.6067741722437505,
+              "DetA": 0.5067148372908409,
+              "AssA": 0.7381434198473188
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 45,
+            "action": 16,
+            "bytes": 9115,
+            "source_hota": {
+              "HOTA": 0.47471361331919393,
+              "DetA": 0.3106895580720037,
+              "AssA": 0.7351010723287227
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 45,
+            "action": 19,
+            "bytes": 8829,
+            "source_hota": {
+              "HOTA": 0.441592701277573,
+              "DetA": 0.308390357011704,
+              "AssA": 0.6421191335595431
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 45,
+            "action": 0,
+            "bytes": 9968,
+            "source_hota": {
+              "HOTA": 0.46550091362769946,
+              "DetA": 0.35039160271377656,
+              "AssA": 0.6408534675184099
+            }
+          },
+          {
+            "sequence": "MOT17-04-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 45,
+            "action": 13,
+            "bytes": 9621,
+            "source_hota": {
+              "HOTA": 0.4848595941485458,
+              "DetA": 0.36052132875122644,
+              "AssA": 0.6658268571609024
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 30,
+            "action": 16,
+            "bytes": 113541,
+            "source_hota": {
+              "HOTA": 0.7208426028223309,
+              "DetA": 0.6220002610276716,
+              "AssA": 0.8422642796961256
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 30,
+            "action": 19,
+            "bytes": 102722,
+            "source_hota": {
+              "HOTA": 0.7108937478820885,
+              "DetA": 0.6636790002165828,
+              "AssA": 0.7679092259809043
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 30,
+            "action": 17,
+            "bytes": 107535,
+            "source_hota": {
+              "HOTA": 0.699506820434077,
+              "DetA": 0.6872878677614745,
+              "AssA": 0.7219141797902859
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 30,
+            "action": 19,
+            "bytes": 95136,
+            "source_hota": {
+              "HOTA": 0.6999511068830647,
+              "DetA": 0.6429580788641003,
+              "AssA": 0.7723946450919318
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 35,
+            "action": 17,
+            "bytes": 58713,
+            "source_hota": {
+              "HOTA": 0.6769733338114563,
+              "DetA": 0.5436997330367731,
+              "AssA": 0.8515953347090981
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 35,
+            "action": 19,
+            "bytes": 60038,
+            "source_hota": {
+              "HOTA": 0.6561206751903116,
+              "DetA": 0.570479403979678,
+              "AssA": 0.7614553464331478
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 35,
+            "action": 0,
+            "bytes": 73117,
+            "source_hota": {
+              "HOTA": 0.6916883181311168,
+              "DetA": 0.6361982917074998,
+              "AssA": 0.7596846496925794
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 35,
+            "action": 19,
+            "bytes": 56740,
+            "source_hota": {
+              "HOTA": 0.7169932962422851,
+              "DetA": 0.6360781997655404,
+              "AssA": 0.8169585108904406
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 40,
+            "action": 0,
+            "bytes": 40190,
+            "source_hota": {
+              "HOTA": 0.6373167056679785,
+              "DetA": 0.49809824944011183,
+              "AssA": 0.822104029344095
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 40,
+            "action": 17,
+            "bytes": 39362,
+            "source_hota": {
+              "HOTA": 0.6183346107912371,
+              "DetA": 0.5346051265832108,
+              "AssA": 0.72013630557811
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 40,
+            "action": 17,
+            "bytes": 39193,
+            "source_hota": {
+              "HOTA": 0.6170831735596144,
+              "DetA": 0.5730060760864313,
+              "AssA": 0.6739906122093974
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 40,
+            "action": 10,
+            "bytes": 42325,
+            "source_hota": {
+              "HOTA": 0.6791670551981563,
+              "DetA": 0.5823561849490356,
+              "AssA": 0.8020057811127244
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 1,
+            "codec": "h264",
+            "qp": 45,
+            "action": 0,
+            "bytes": 25285,
+            "source_hota": {
+              "HOTA": 0.5607951151681583,
+              "DetA": 0.44522052569134596,
+              "AssA": 0.7163717723280595
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 17,
+            "codec": "h264",
+            "qp": 45,
+            "action": 16,
+            "bytes": 26763,
+            "source_hota": {
+              "HOTA": 0.5421252755399124,
+              "DetA": 0.4522964865091444,
+              "AssA": 0.6581901220763714
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 33,
+            "codec": "h264",
+            "qp": 45,
+            "action": 19,
+            "bytes": 25409,
+            "source_hota": {
+              "HOTA": 0.5640416117924323,
+              "DetA": 0.4564335138076188,
+              "AssA": 0.7071563865026179
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 49,
+            "codec": "h264",
+            "qp": 45,
+            "action": 16,
+            "bytes": 26640,
+            "source_hota": {
+              "HOTA": 0.6190299336539172,
+              "DetA": 0.46509842308825916,
+              "AssA": 0.831029091937432
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 30,
+            "action": 13,
+            "bytes": 105635,
+            "source_hota": {
+              "HOTA": 0.751420274161484,
+              "DetA": 0.667665426641558,
+              "AssA": 0.8517042682067689
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 30,
+            "action": 17,
+            "bytes": 100051,
+            "source_hota": {
+              "HOTA": 0.7232354957847549,
+              "DetA": 0.6797272810006123,
+              "AssA": 0.7759441971469887
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 30,
+            "action": 17,
+            "bytes": 94261,
+            "source_hota": {
+              "HOTA": 0.6985669292732698,
+              "DetA": 0.6812891001124236,
+              "AssA": 0.7263672696683009
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 30,
+            "action": 0,
+            "bytes": 117737,
+            "source_hota": {
+              "HOTA": 0.7305246014999678,
+              "DetA": 0.6891848797237184,
+              "AssA": 0.7823763114730705
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 35,
+            "action": 17,
+            "bytes": 48652,
+            "source_hota": {
+              "HOTA": 0.6382037258754636,
+              "DetA": 0.5406112204983105,
+              "AssA": 0.763921833141859
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 35,
+            "action": 17,
+            "bytes": 54129,
+            "source_hota": {
+              "HOTA": 0.6367465237962124,
+              "DetA": 0.5754402669257862,
+              "AssA": 0.7127381449440167
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 35,
+            "action": 17,
+            "bytes": 51723,
+            "source_hota": {
+              "HOTA": 0.6666790827019389,
+              "DetA": 0.6279245521967204,
+              "AssA": 0.7185600884100872
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 35,
+            "action": 0,
+            "bytes": 61277,
+            "source_hota": {
+              "HOTA": 0.7177795791047196,
+              "DetA": 0.6280021270514795,
+              "AssA": 0.8289357852115435
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 40,
+            "action": 17,
+            "bytes": 27729,
+            "source_hota": {
+              "HOTA": 0.5842776966880908,
+              "DetA": 0.4470899648919227,
+              "AssA": 0.7708588797646684
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 40,
+            "action": 19,
+            "bytes": 27821,
+            "source_hota": {
+              "HOTA": 0.5776376377348756,
+              "DetA": 0.4798398144201062,
+              "AssA": 0.7027088453330718
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 40,
+            "action": 17,
+            "bytes": 29481,
+            "source_hota": {
+              "HOTA": 0.5984515098394588,
+              "DetA": 0.5192813978401927,
+              "AssA": 0.7035578036140532
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 40,
+            "action": 17,
+            "bytes": 28193,
+            "source_hota": {
+              "HOTA": 0.6344437594509452,
+              "DetA": 0.5162922695091762,
+              "AssA": 0.788880796646802
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 1,
+            "codec": "h265",
+            "qp": 45,
+            "action": 16,
+            "bytes": 15527,
+            "source_hota": {
+              "HOTA": 0.5272392633929641,
+              "DetA": 0.40206926787207525,
+              "AssA": 0.6978242838353437
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 17,
+            "codec": "h265",
+            "qp": 45,
+            "action": 16,
+            "bytes": 17839,
+            "source_hota": {
+              "HOTA": 0.5185618364388405,
+              "DetA": 0.41922037052935357,
+              "AssA": 0.6465876304906977
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 33,
+            "codec": "h265",
+            "qp": 45,
+            "action": 16,
+            "bytes": 17783,
+            "source_hota": {
+              "HOTA": 0.5577611644941092,
+              "DetA": 0.46238089916966524,
+              "AssA": 0.6797115336820647
+            }
+          },
+          {
+            "sequence": "MOT17-11-FRCNN",
+            "start": 49,
+            "codec": "h265",
+            "qp": 45,
+            "action": 16,
+            "bytes": 17003,
+            "source_hota": {
+              "HOTA": 0.5511402791690223,
+              "DetA": 0.4488876607857078,
+              "AssA": 0.6847882234707248
+            }
+          }
+        ],
+        "selection_counts": {
+          "17": 18,
+          "19": 12,
+          "13": 6,
+          "16": 16,
+          "0": 11,
+          "10": 1
+        },
+        "log_rate_ratio": -0.11172906918833025,
+        "bd": {
+          "h264": {
+            "qps": [
+              30,
+              35,
+              40,
+              45
+            ],
+            "primary_interpolator": "PCHIP",
+            "threshold_pct": -15.0,
+            "valid": true,
+            "pchip_bd_rate_pct": -8.232395247955473,
+            "point_passes": false,
+            "threshold_confirmed": false,
+            "ci": null,
+            "invalid_reason": null,
+            "common_quality_interval": [
+              0.443015805739975,
+              0.5287049377025168
+            ]
+          },
+          "h265": {
+            "qps": [
+              30,
+              35,
+              40,
+              45
+            ],
+            "primary_interpolator": "PCHIP",
+            "threshold_pct": -15.0,
+            "valid": true,
+            "pchip_bd_rate_pct": -9.943127374227858,
+            "point_passes": false,
+            "threshold_confirmed": false,
+            "ci": null,
+            "invalid_reason": null,
+            "common_quality_interval": [
+              0.41093424707389803,
+              0.5374138694360252
+            ]
+          }
+        }
+      }
+    }
+  },
+  "test_scored": false,
+  "new_model_inferences": 0,
+  "new_encodes": 0,
+  "independent_validation": false,
+  "calibration_both_codecs_below_minus15": false,
+  "exact_parent_tracker_output_and_aggregate_fit_parity": true,
+  "wall_seconds": 97.98328638499999
+}

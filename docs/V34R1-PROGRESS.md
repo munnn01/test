@@ -17,3 +17,15 @@ OT A3 chạy4 video MOT17 DEV tách theo video,64 khung/video, đúng FPS gốc.
 Cả12 ứng viên FIT bị loại bởi ràng buộc giảm HOTA tại cùngQP. Một số ứng viên vẫn giảm byte và cải thiện HOTA trung bình; vì vậy A4 kiểm tra một mục tiêu chọn theo sự đánh đổi bitrate/chất lượng. A3 giữ nguyên kết quả âm. A4 đã khóa duy nhất guard32 khung với ngưỡng.02 từ FIT, trước khi chạy lại calibration. Mục tiêu chọn gần đúng không phải BD-rate; chỉ phép PCHIP hợp lệ từ đủ4 điểm thô mới được dùng kết luận. Validation cũ được gọi rõ là calibration tái sử dụng, không phải kiểm chứng độc lập mới. Ba video TEST dự phòng chưa được đánh giá.
 
 Với OD, bước kế tiếp là huấn luyện dự đoán rủi ro từ DEV cũ. Nhãn huấn luyện mới đo ảnh hưởng của một ảnh tới AP cả tập, để tính đến thứ tự độ tin cậy giữa các ảnh. Các kiểm tra tổng hợp đã xác nhận khớp COCO AP chính thức, xử lý ảnh không có đối tượng và không sửa dữ liệu prediction đầu vào.64 ảnh DEV mới đã được dành riêng; chưa chạy inference trên chúng.
+
+
+## A4 OT đã đo
+
+Kaggle CPU chạy21 kiểm thử và phát lại cấu hình đã khóa, không mã hóa hay suy luận detector mới. Byte của48 tệp đầu ra tracker khớp lần chạy gốc ở hai anchor và ứng viên FIT; phép tính HOTA/BD-rate đã lưu cũng khớp. Thời gian cloud146,07 giây.
+
+| OT, calibration tái sử dụng | H.264 | H.265 |
+|---|---:|---:|
+| A2 ở FPS gốc | −2,55% | −6,66% |
+| A4 guard32 khung, ngưỡng.02 | −8,23% | −9,94% |
+
+A4 cải thiện so với A2 trong phép đo này nhưng **chưa đạt −15%**. Cả hai đường FIT của A4 không đơn điệu nên BD-rate FIT không xác định. Calibration đã được tái sử dụng cho nghiên cứu, chưa là bằng chứng độc lập. TEST chưa được đánh giá.

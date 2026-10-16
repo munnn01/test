@@ -20,9 +20,11 @@ Per-image AP ignores the global confidence ordering used by full-cohort COCO AP.
 - [x] RED/GREEN synthetic contracts for FIT tradeoff selection and the exact marginal-AP teacher.
 - [x] Freeze the OT policy; implement replay with cloud-only guard and exact A3 parity checks.
 - [x] Independent code review; run synthetic contracts and provenance checks before push.
-- [ ] Run the frozen OT replay on Kaggle CPU; audit and publish the measured result without changing the gate after calibration.
-- [ ] Build the OD training-label job from immutable A3 predictions; preserve separate cohorts and no TEST access.
+- [x] Run the frozen OT replay on Kaggle CPU; audit and publish the measured result without changing the gate after calibration.
+- [x] Build the OD training-label job from immutable A3 predictions; preserve separate cohorts and no TEST access.
 
 Ruling: keep the original FIT/validation names in the parent evidence for byte fidelity, but call the reused validation set calibration in every A4 interpretation. Cost if wrong: development reuse could be mistaken for independent evidence; the fresh cohorts remain reserved to prevent that.
 
 Review fixes: replace whole-suite codec integration with an explicit synthetic unittest allowlist; preserve setup failures in immutable status/archive with existing logs only; compare every parent/replay tracker output byte before asserting tracker parity. Three new failure/parity contracts were observed RED then GREEN. All21 relevant synthetic contracts pass locally; no real local task scoring. No deferred minor findings.
+
+OT A4 measurement: calibration H.264 -8.232395247955473%, H.265 -9.943127374227858%; gate false, no TEST. The CPU cloud replay matched48 parent tracker files exactly and ran21 contracts. OD exact-label job is running on Kaggle; the next bounded task is the prespecified two-forest encoder critic in V34R1-A4-OD-RISK-PLAN.md.

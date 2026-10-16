@@ -8,6 +8,12 @@ import tarfile
 import time
 
 
+def require_sha256(raw,expected):
+    actual=hashlib.sha256(raw).hexdigest()
+    if actual!=expected: raise ValueError('frozen input SHA256 mismatch')
+    return actual
+
+
 def assert_same_files(actual,expected):
     def hashes(root):
         root=Path(root)

@@ -1,0 +1,34 @@
+test_empty_source_is_undefined_and_temporal_or_duplicate_ids_are_rejected (tests.test_v34r1_a3_hota.HOTASourceContracts.test_empty_source_is_undefined_and_temporal_or_duplicate_ids_are_rejected) ... ok
+test_id_relabeling_is_invariant_but_a_switch_lowers_association (tests.test_v34r1_a3_hota.HOTASourceContracts.test_id_relabeling_is_invariant_but_a_switch_lowers_association) ... ok
+test_long_prefix_dilutes_recent_misses_but_trailing_window_retains_them (tests.test_v34r1_a3_hota.HOTASourceContracts.test_long_prefix_dilutes_recent_misses_but_trailing_window_retains_them) ... ok
+test_native_state_resets_at_sequence_boundary_and_preserves_prefix_alignment (tests.test_v34r1_a3_tracking.HOTAStateContracts.test_native_state_resets_at_sequence_boundary_and_preserves_prefix_alignment) ... PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+In /usr/local/lib/python3.13/dist-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'parseString' deprecated - use 'parse_string'
+In /usr/local/lib/python3.13/dist-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'resetCache' deprecated - use 'reset_cache'
+ok
+test_trials_share_committed_past_and_only_one_commit_advances_history (tests.test_v34r1_a3_tracking.HOTAStateContracts.test_trials_share_committed_past_and_only_one_commit_advances_history) ... ok
+test_complete_grid_cannot_drop_or_duplicate_a_profile_condition (tests.test_v34r1_a3_core.A3Contracts.test_complete_grid_cannot_drop_or_duplicate_a_profile_condition) ... ok
+test_fit_threshold_uses_fit_metrics_only_with_predeclared_quality_limits (tests.test_v34r1_a3_core.A3Contracts.test_fit_threshold_uses_fit_metrics_only_with_predeclared_quality_limits) ... ok
+test_fresh_split_excludes_every_old_id_and_groups_images (tests.test_v34r1_a3_core.A3Contracts.test_fresh_split_excludes_every_old_id_and_groups_images) ... ok
+test_identity_required_and_nonfinite_thresholds_are_rejected (tests.test_v34r1_a3_core.A3Contracts.test_identity_required_and_nonfinite_thresholds_are_rejected) ... ok
+test_source_selector_rejects_guard_damage_and_paid_rate_overrun (tests.test_v34r1_a3_core.A3Contracts.test_source_selector_rejects_guard_damage_and_paid_rate_overrun) ... ok
+test_identity_fallback_and_stable_ties (tests.test_v34r1_a4_rd_fit.RDFitContracts.test_identity_fallback_and_stable_ties) ... ok
+test_nonmonotone_interior_does_not_become_a_repaired_bd_curve (tests.test_v34r1_a4_rd_fit.RDFitContracts.test_nonmonotone_interior_does_not_become_a_repaired_bd_curve) ... ok
+test_rate_quality_tradeoff_replaces_arbitrary_same_qp_quality_gate (tests.test_v34r1_a4_rd_fit.RDFitContracts.test_rate_quality_tradeoff_replaces_arbitrary_same_qp_quality_gate) ... ok
+test_rejects_nonfinite_partial_or_invalid_endpoint_tables (tests.test_v34r1_a4_rd_fit.RDFitContracts.test_rejects_nonfinite_partial_or_invalid_endpoint_tables) ... ok
+test_multiple_categories_and_crowd_match_full_official_ap (tests.test_v34r1_a4_marginal_ap.MarginalAPContracts.test_multiple_categories_and_crowd_match_full_official_ap) ... ok
+test_negative_images_have_a_defined_marginal_false_positive_cost (tests.test_v34r1_a4_marginal_ap.MarginalAPContracts.test_negative_images_have_a_defined_marginal_false_positive_cost) ... ok
+test_stitch_matches_full_official_evaluation_and_captures_global_score_order (tests.test_v34r1_a4_marginal_ap.MarginalAPContracts.test_stitch_matches_full_official_evaluation_and_captures_global_score_order) ... ok
+test_teacher_does_not_mutate_cached_anchor_or_candidate_predictions (tests.test_v34r1_a4_marginal_ap.MarginalAPContracts.test_teacher_does_not_mutate_cached_anchor_or_candidate_predictions) ... ok
+test_existing_output_is_preserved_and_success_omits_gt_from_bundle (tests.test_v34r1_a4_cloud_record.CloudRecordContracts.test_existing_output_is_preserved_and_success_omits_gt_from_bundle) ... A4_CLOUD_STATUS {"test_scored": false, "complete": true, "wall_seconds": 0.000324249267578125}
+ok
+test_failed_setup_records_error_and_available_logs_without_masking_original (tests.test_v34r1_a4_cloud_record.CloudRecordContracts.test_failed_setup_records_error_and_available_logs_without_masking_original) ... A4_CLOUD_STATUS {"commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "test_scored": false, "complete": false, "error_type": "RuntimeError", "error": "parent hash mismatch", "wall_seconds": 4.792213439941406e-05}
+ok
+test_tracker_parity_rejects_changed_association_or_missing_output (tests.test_v34r1_a4_cloud_record.CloudRecordContracts.test_tracker_parity_rejects_changed_association_or_missing_output) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 13.662s
+
+OK

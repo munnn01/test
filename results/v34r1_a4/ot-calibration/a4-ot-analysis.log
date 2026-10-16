@@ -1,0 +1,5 @@
+A4_OT_REPLAY fit anchor
+A4_OT_REPLAY fit frozen_a4
+A4_OT_REPLAY validation anchor
+A4_OT_REPLAY validation frozen_a4
+A4_OT_COMPLETE {"gate": false, "seconds": 97.98328638499999, "test_scored": false}

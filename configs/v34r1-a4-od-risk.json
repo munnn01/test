@@ -1,0 +1,66 @@
+{
+  "schema": "v34r1-A4-OD-risk-1",
+  "frozen_utc": "2026-10-16T04:45:10.943009+00:00",
+  "scope": "FIT64 training / reused CAL64 model selection; fresh DEV64 and TEST512 not inferred or scored",
+  "qps": [
+    30,
+    35,
+    40,
+    45
+  ],
+  "codecs": [
+    "h264",
+    "h265"
+  ],
+  "sklearn": "1.7.2",
+  "label_commit": "5559fc7db276992828919d68ee68bb996eff7813",
+  "annotation_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+  "models": [
+    {
+      "name": "extra_trees_depth6",
+      "parameters": {
+        "n_estimators": 128,
+        "max_depth": 6,
+        "min_samples_leaf": 64,
+        "max_features": 0.8,
+        "bootstrap": false,
+        "random_state": 303404,
+        "n_jobs": 2
+      }
+    },
+    {
+      "name": "extra_trees_depth10",
+      "parameters": {
+        "n_estimators": 128,
+        "max_depth": 10,
+        "min_samples_leaf": 64,
+        "max_features": 0.8,
+        "bootstrap": false,
+        "random_state": 303404,
+        "n_jobs": 2
+      }
+    }
+  ],
+  "thresholds": [
+    0,
+    0.002,
+    0.005,
+    0.01,
+    0.02,
+    0.04,
+    0.08
+  ],
+  "features": "Fixed risk.py whitelist: source/identity/candidate detector statistics and source matching incl weak detections, class counts, paid ratio, profile/codec/QP, current/feature/pseudoAP costs. No GT, IDs, split/hash, or pseudo-loss inputs.",
+  "training": "All168 profile/codec/QP rows per FIT image, 64images only; same row count per image; no row-random CV or CAL fitting. Separate marginal cohort labels. Exactly two prespecified forest fits.",
+  "calibration_selection": "For each model minimize mean log actual per-image paid ratio plus equally weighted scaled AP drop over8 codec/QP conditions; scales from CAL anchor endpoint secants, invalid spans abort. Select best negative-utility model, fixed model order then smaller threshold ties, else identity. Utility is NOT BD-rate.",
+  "deployment_selection": "Identity always available; accept candidates with predicted scaled marginal AP damage<=threshold and actual paid bytes<=same-condition identity; choose minimum paid bytes then smaller profile ID. No GT.",
+  "fresh_dev_id_protocol_sha256": "38dade92b7e5630403df2d638d658515526a103d6ec4124a45fb10adf38759b5",
+  "fresh_dev_gate": {
+    "scope": "one fresh64-image DEV evaluation after exact model/policy hash lock, no refit or retuning on it",
+    "per_codec_objective": "mean log actual paid ratio + frozen CAL endpoint scale * mean four-QP AP drop",
+    "per_codec_max_utility_exclusive": -0.16251892949777494,
+    "decision": "both utilities strictly below log(.85) and complete provenance/block checks -> one frozen reserved512 TEST evaluation; otherwise no TEST. Identity cannot pass. Utility is a go/no-go resource rule, not a BD claim.",
+    "revision": "Any change after inspecting freshDEV consumes it as development and requires another untouched confirmation cohort. TEST never used for selection."
+  },
+  "final_success": "Both actual TEST raw four-point PCHIP BD-rates strictly below -15%, common quality support, no extrapolation or point repair; undefined never passes. Point estimates and confidence limitations separately reported."
+}

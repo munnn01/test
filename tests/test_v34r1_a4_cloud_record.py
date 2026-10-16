@@ -57,5 +57,13 @@ class CloudRecordContracts(unittest.TestCase):
             (b/'extra.txt').write_text('unexpected')
             with self.assertRaises(ValueError): m.assert_same_files(a,b)
 
+    def test_changed_fresh_reservation_cannot_be_silently_rebound(self):
+        import hashlib
+        m=module(); raw=b'{"fresh_ids":[1,2]}'
+        self.assertTrue(hasattr(m,'require_sha256'),'frozen input binding missing')
+        expected=hashlib.sha256(raw).hexdigest()
+        self.assertEqual(m.require_sha256(raw,expected),expected)
+        with self.assertRaises(ValueError): m.require_sha256(b'{"fresh_ids":[3,4]}',expected)
+
 
 if __name__=='__main__': unittest.main()

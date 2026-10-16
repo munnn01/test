@@ -1,0 +1,64 @@
+{
+  "schema": "v34r1-A4-evidence-1",
+  "task": "ot",
+  "split": "reused development calibration",
+  "source_commit": "97cabc2a54269366168b9146e8c5e1b8da342fcf",
+  "qps": [
+    30,
+    35,
+    40,
+    45
+  ],
+  "codecs": [
+    "h264",
+    "h265"
+  ],
+  "test_scored": false,
+  "files": [
+    {
+      "path": "a4-block-tests.log",
+      "bytes": 4870,
+      "sha256": "c5b0afc7d00e8c1a7a055f27997d8cbe3f4abbe7539702d59a4cf0efd855e37a"
+    },
+    {
+      "path": "a4-ot-analysis.log",
+      "bytes": 199,
+      "sha256": "539e7cf70da15a9598e1d90146b9562157287524a75cde82893d21836a60712f"
+    },
+    {
+      "path": "calibration-report.json",
+      "bytes": 114975,
+      "sha256": "bad6644df4cbb8ff6555630963c9ce7b8de454d2103d674444600aaacd5d4a9e"
+    },
+    {
+      "path": "cloud-status.json",
+      "bytes": 190,
+      "sha256": "f554ed3c3c149890c072ba7811d65ee4da4d41bb62029c1f5c8cff5fc2292257"
+    },
+    {
+      "path": "import-audit.json",
+      "bytes": 389,
+      "sha256": "9606dffd04bc8ad54f99ad447f7161d2b76da7807a4d8098b54b2ec274403be7"
+    },
+    {
+      "path": "kaggle-execution.log",
+      "bytes": 10254,
+      "sha256": "29b09f3c96c5028fbe1e691ee4275ca37db3b8cf0654c600d62e2e1f7744f76d"
+    },
+    {
+      "path": "kaggle-metadata.json",
+      "bytes": 700,
+      "sha256": "90fe84c91f0b852464aa8704e0532c41a3d4bb3ee5a684d3939838281a65fa40"
+    },
+    {
+      "path": "kaggle-notebook.py",
+      "bytes": 502,
+      "sha256": "8166b8904eb677d9846f8672400a94b989a60c98a923c7d9b02dd61fbfa56123"
+    },
+    {
+      "path": "v34r1-a4-ot-calibration.tgz",
+      "bytes": 2499483,
+      "sha256": "a16271534c1140f544898cbb382b9f2b11ea43127ab7e255b5e0ce5ad108fc64"
+    }
+  ]
+}
