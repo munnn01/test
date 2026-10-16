@@ -1,0 +1,126 @@
+{
+  "schema": "v34r1-A6-OT-scale4-amendment-1",
+  "frozen_utc": "2026-10-16T15:30:45.857414+00:00",
+  "supersedes_only_scale4_sequences_of_sha256": "e0697f4d74a40090567ec231d0c3043b469772fd8711e4c6e1c003ff02fa5e72",
+  "pilot_sequences_unchanged": true,
+  "selection_and_gate_unchanged": true,
+  "reason": "metadata audit found originally proposed MOT20-02/05/03 were historical train/cal/dev; replace before A6 policy outcomes, no outcome-based source replacement",
+  "historical_manifest_sha256": "08bce7123f7289e8a5722c11b7ea74b63e4cb54ce2be060e77a5c9998dab9352",
+  "removed_prior_exposure": {
+    "MOT20-02": "train",
+    "MOT20-05": "cal",
+    "MOT20-03": "dev"
+  },
+  "official_dataset_documentation": "https://github.com/DanceTrack/DanceTrack",
+  "official_hf_dataset": "noahcao/dancetrack",
+  "hf_revision": "a0ba42ac690c41e9850a20e76a0b9450a6fb6a47",
+  "archive_metadata": {
+    "type": "file",
+    "oid": "5cf1618c0827698ae403160fdc34d7964df126ba",
+    "size": 4209785614,
+    "lfs": {
+      "oid": "90ba30973761ce0b81a9654c11086d87537392475ac8bc666d842e645641277c",
+      "size": 4209785614,
+      "pointerSize": 135
+    },
+    "xetHash": "06652c0eec4f5bd3a57646c20cad70e8b79c1c35bf16861a95aecc30b118e752",
+    "path": "val.zip"
+  },
+  "archive_url": "https://huggingface.co/datasets/noahcao/dancetrack/resolve/a0ba42ac690c41e9850a20e76a0b9450a6fb6a47/val.zip",
+  "seqmap_url": "https://raw.githubusercontent.com/DanceTrack/DanceTrack/main/dancetrack/val_seqmap.txt",
+  "seqmap_sha256": "b641a18ce58bf44429d584534ad5bcad4776aed9cfb30ad405e3a8f86698527b",
+  "seqmap_population": [
+    "dancetrack0004",
+    "dancetrack0005",
+    "dancetrack0007",
+    "dancetrack0010",
+    "dancetrack0014",
+    "dancetrack0018",
+    "dancetrack0019",
+    "dancetrack0025",
+    "dancetrack0026",
+    "dancetrack0030",
+    "dancetrack0034",
+    "dancetrack0035",
+    "dancetrack0041",
+    "dancetrack0043",
+    "dancetrack0047",
+    "dancetrack0058",
+    "dancetrack0063",
+    "dancetrack0065",
+    "dancetrack0073",
+    "dancetrack0077",
+    "dancetrack0079",
+    "dancetrack0081",
+    "dancetrack0090",
+    "dancetrack0094",
+    "dancetrack0097"
+  ],
+  "rank_recipe": "SHA256 UTF8(v34r1/A6/OT/external/ + benchmark video name), ascending, first3 of official25 validation videos; metadata only",
+  "scale4_sequences": [
+    {
+      "dataset": "MOT17",
+      "name": "MOT17-04-FRCNN",
+      "frames": 64,
+      "role": "reused_calibration"
+    },
+    {
+      "dataset": "MOT17",
+      "name": "MOT17-11-FRCNN",
+      "frames": 64,
+      "role": "reused_calibration"
+    },
+    {
+      "dataset": "MOT17",
+      "name": "MOT17-09-FRCNN",
+      "frames": 64,
+      "role": "additional_unscored"
+    },
+    {
+      "dataset": "MOT17",
+      "name": "MOT17-10-FRCNN",
+      "frames": 64,
+      "role": "additional_unscored"
+    },
+    {
+      "dataset": "MOT17",
+      "name": "MOT17-13-FRCNN",
+      "frames": 64,
+      "role": "additional_unscored"
+    },
+    {
+      "dataset": "DanceTrack",
+      "name": "dancetrack0081",
+      "frames": 64,
+      "role": "additional_external_unscored"
+    },
+    {
+      "dataset": "DanceTrack",
+      "name": "dancetrack0090",
+      "frames": 64,
+      "role": "additional_external_unscored"
+    },
+    {
+      "dataset": "DanceTrack",
+      "name": "dancetrack0035",
+      "frames": 64,
+      "role": "additional_external_unscored"
+    }
+  ],
+  "physical_video_count": 8,
+  "original_video_count": 2,
+  "additional_video_count": 6,
+  "source_byte_freeze": "on Kaggle before any expanded model/codec work; audit exact duplicate selected frames across physical video IDs; no missing-source substitutions",
+  "evaluation": "native source FPS and per-dataset TrackEval preprocessing; disclose MOT17 versus DanceTrack and old2/new6/full8 separately; preserve raw19IoU HOTA arrays before predeclared pooling",
+  "scientific_limit": "old2 are reused calibration; additional6 are new to this experiment, external pretraining corpus exposure cannot be excluded merely by filenames; point gate is not confidence confirmation",
+  "qps": [
+    30,
+    35,
+    40,
+    45
+  ],
+  "codecs": [
+    "h264",
+    "h265"
+  ]
+}
