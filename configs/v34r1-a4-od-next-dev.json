@@ -1,0 +1,407 @@
+{
+  "schema": "v34r1-A4-OD-DEV-reservation-1",
+  "frozen_utc": "2026-10-16T04:03:49.621633+00:00",
+  "role": "fresh64image development holdout reserved before next policy choice; original512TEST remains untouched",
+  "qps": [
+    30,
+    35,
+    40,
+    45
+  ],
+  "codecs": [
+    "h264",
+    "h265"
+  ],
+  "annotation_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+  "a3_source_protocol_sha256": "6d05c00c9cbac852fec7ce749cc08d3221ad212a68cdeead257b2da4eac1d2f8",
+  "candidate_pool": 198,
+  "selected": [
+    {
+      "id": 273712,
+      "file_name": "000000273712.jpg",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "id": 480842,
+      "file_name": "000000480842.jpg",
+      "width": 640,
+      "height": 590
+    },
+    {
+      "id": 460494,
+      "file_name": "000000460494.jpg",
+      "width": 640,
+      "height": 426
+    },
+    {
+      "id": 370486,
+      "file_name": "000000370486.jpg",
+      "width": 421,
+      "height": 640
+    },
+    {
+      "id": 108253,
+      "file_name": "000000108253.jpg",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "id": 445602,
+      "file_name": "000000445602.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 212573,
+      "file_name": "000000212573.jpg",
+      "width": 640,
+      "height": 559
+    },
+    {
+      "id": 213033,
+      "file_name": "000000213033.jpg",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "id": 134882,
+      "file_name": "000000134882.jpg",
+      "width": 640,
+      "height": 639
+    },
+    {
+      "id": 568147,
+      "file_name": "000000568147.jpg",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "id": 52565,
+      "file_name": "000000052565.jpg",
+      "width": 640,
+      "height": 458
+    },
+    {
+      "id": 339823,
+      "file_name": "000000339823.jpg",
+      "width": 484,
+      "height": 640
+    },
+    {
+      "id": 531036,
+      "file_name": "000000531036.jpg",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "id": 26941,
+      "file_name": "000000026941.jpg",
+      "width": 640,
+      "height": 427
+    },
+    {
+      "id": 184324,
+      "file_name": "000000184324.jpg",
+      "width": 640,
+      "height": 425
+    },
+    {
+      "id": 269196,
+      "file_name": "000000269196.jpg",
+      "width": 640,
+      "height": 427
+    },
+    {
+      "id": 10995,
+      "file_name": "000000010995.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 530146,
+      "file_name": "000000530146.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "id": 370999,
+      "file_name": "000000370999.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 517523,
+      "file_name": "000000517523.jpg",
+      "width": 640,
+      "height": 435
+    },
+    {
+      "id": 205333,
+      "file_name": "000000205333.jpg",
+      "width": 640,
+      "height": 164
+    },
+    {
+      "id": 119677,
+      "file_name": "000000119677.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 435299,
+      "file_name": "000000435299.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 71756,
+      "file_name": "000000071756.jpg",
+      "width": 640,
+      "height": 512
+    },
+    {
+      "id": 351096,
+      "file_name": "000000351096.jpg",
+      "width": 500,
+      "height": 375
+    },
+    {
+      "id": 426836,
+      "file_name": "000000426836.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "id": 156643,
+      "file_name": "000000156643.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 376478,
+      "file_name": "000000376478.jpg",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "id": 326128,
+      "file_name": "000000326128.jpg",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "id": 12670,
+      "file_name": "000000012670.jpg",
+      "width": 640,
+      "height": 428
+    },
+    {
+      "id": 194940,
+      "file_name": "000000194940.jpg",
+      "width": 500,
+      "height": 375
+    },
+    {
+      "id": 172648,
+      "file_name": "000000172648.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 565469,
+      "file_name": "000000565469.jpg",
+      "width": 426,
+      "height": 640
+    },
+    {
+      "id": 402346,
+      "file_name": "000000402346.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 317024,
+      "file_name": "000000317024.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 302760,
+      "file_name": "000000302760.jpg",
+      "width": 500,
+      "height": 375
+    },
+    {
+      "id": 632,
+      "file_name": "000000000632.jpg",
+      "width": 640,
+      "height": 483
+    },
+    {
+      "id": 112378,
+      "file_name": "000000112378.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 140270,
+      "file_name": "000000140270.jpg",
+      "width": 600,
+      "height": 400
+    },
+    {
+      "id": 501523,
+      "file_name": "000000501523.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 307598,
+      "file_name": "000000307598.jpg",
+      "width": 640,
+      "height": 426
+    },
+    {
+      "id": 281929,
+      "file_name": "000000281929.jpg",
+      "width": 640,
+      "height": 504
+    },
+    {
+      "id": 396205,
+      "file_name": "000000396205.jpg",
+      "width": 425,
+      "height": 640
+    },
+    {
+      "id": 129062,
+      "file_name": "000000129062.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 356387,
+      "file_name": "000000356387.jpg",
+      "width": 500,
+      "height": 335
+    },
+    {
+      "id": 60363,
+      "file_name": "000000060363.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 559099,
+      "file_name": "000000559099.jpg",
+      "width": 640,
+      "height": 360
+    },
+    {
+      "id": 97994,
+      "file_name": "000000097994.jpg",
+      "width": 640,
+      "height": 427
+    },
+    {
+      "id": 68933,
+      "file_name": "000000068933.jpg",
+      "width": 500,
+      "height": 313
+    },
+    {
+      "id": 22479,
+      "file_name": "000000022479.jpg",
+      "width": 640,
+      "height": 605
+    },
+    {
+      "id": 225184,
+      "file_name": "000000225184.jpg",
+      "width": 457,
+      "height": 640
+    },
+    {
+      "id": 562581,
+      "file_name": "000000562581.jpg",
+      "width": 640,
+      "height": 444
+    },
+    {
+      "id": 241668,
+      "file_name": "000000241668.jpg",
+      "width": 460,
+      "height": 640
+    },
+    {
+      "id": 345941,
+      "file_name": "000000345941.jpg",
+      "width": 640,
+      "height": 640
+    },
+    {
+      "id": 166391,
+      "file_name": "000000166391.jpg",
+      "width": 640,
+      "height": 427
+    },
+    {
+      "id": 261888,
+      "file_name": "000000261888.jpg",
+      "width": 640,
+      "height": 426
+    },
+    {
+      "id": 295713,
+      "file_name": "000000295713.jpg",
+      "width": 640,
+      "height": 427
+    },
+    {
+      "id": 494913,
+      "file_name": "000000494913.jpg",
+      "width": 640,
+      "height": 428
+    },
+    {
+      "id": 287347,
+      "file_name": "000000287347.jpg",
+      "width": 478,
+      "height": 640
+    },
+    {
+      "id": 407403,
+      "file_name": "000000407403.jpg",
+      "width": 346,
+      "height": 500
+    },
+    {
+      "id": 138819,
+      "file_name": "000000138819.jpg",
+      "width": 640,
+      "height": 480
+    },
+    {
+      "id": 515982,
+      "file_name": "000000515982.jpg",
+      "width": 640,
+      "height": 426
+    },
+    {
+      "id": 136600,
+      "file_name": "000000136600.jpg",
+      "width": 640,
+      "height": 457
+    },
+    {
+      "id": 102820,
+      "file_name": "000000102820.jpg",
+      "width": 427,
+      "height": 640
+    }
+  ],
+  "forbidden_ids_sha256": "532eea2c46ce1395a71f0d1e8923f158c40eeb3c83806c52947d4456d3913f9a",
+  "source_pixels": "hash original JPEGs on Kaggle before any inference; unavailable frozen IDs cannot be replaced after scoring",
+  "scientific_limit": "Once inspected or reused for tuning this becomes exploratory DEV; never relabel as independent TEST"
+}
