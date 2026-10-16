@@ -1,0 +1,169 @@
+{
+  "task": "ar",
+  "grid_audit": {
+    "source_count": 128,
+    "paired_rows": 2048,
+    "qps": [
+      30,
+      35,
+      40,
+      45
+    ],
+    "codecs": [
+      "h264",
+      "h265"
+    ],
+    "arms": [
+      "anchor",
+      "adaptive"
+    ],
+    "complete": true
+  },
+  "curves": {
+    "h264": {
+      "anchor": {
+        "rate": [
+          0.3884544372558594,
+          0.21978974342346191,
+          0.1301746368408203,
+          0.08328986167907715
+        ],
+        "quality": [
+          0.671875,
+          0.609375,
+          0.5390625,
+          0.4140625
+        ]
+      },
+      "adaptive": {
+        "rate": [
+          0.26619935035705566,
+          0.1646733283996582,
+          0.11101555824279785,
+          0.07556509971618652
+        ],
+        "quality": [
+          0.6875,
+          0.6328125,
+          0.5625,
+          0.484375
+        ]
+      }
+    },
+    "h265": {
+      "anchor": {
+        "rate": [
+          0.4252152442932129,
+          0.2598543167114258,
+          0.1710803508758545,
+          0.12211823463439941
+        ],
+        "quality": [
+          0.65625,
+          0.625,
+          0.5390625,
+          0.3203125
+        ]
+      },
+      "adaptive": {
+        "rate": [
+          0.2969801425933838,
+          0.20601820945739746,
+          0.1510601043701172,
+          0.11506009101867676
+        ],
+        "quality": [
+          0.671875,
+          0.6484375,
+          0.5859375,
+          0.375
+        ]
+      }
+    }
+  },
+  "comparisons": {
+    "h264": {
+      "adaptive": {
+        "qps": [
+          30,
+          35,
+          40,
+          45
+        ],
+        "primary_interpolator": "PCHIP",
+        "threshold_pct": -15.0,
+        "valid": true,
+        "pchip_bd_rate_pct": -31.35066760285326,
+        "point_passes": true,
+        "threshold_confirmed": false,
+        "ci": {
+          "lo": null,
+          "hi": null,
+          "draws": 5000,
+          "seed": 303401,
+          "finite_fraction": 0.986,
+          "invalid_reasons": {
+            "quality is not monotone with rate": 69,
+            "at least three distinct quality values are required": 1
+          },
+          "familywise_endpoints": 6,
+          "independent_unit": "video",
+          "independent_count": 128,
+          "one_sided_confidence": 0.9916666666666667,
+          "invalid_draw_policy": "worst-case-unbounded",
+          "scope": "paired video percentile bootstrap; undefined draws pay worst-case unbounded tail mass; no population claim beyond source sampling assumptions"
+        },
+        "invalid_reason": null,
+        "common_quality_interval": [
+          0.484375,
+          0.671875
+        ]
+      }
+    },
+    "h265": {
+      "adaptive": {
+        "qps": [
+          30,
+          35,
+          40,
+          45
+        ],
+        "primary_interpolator": "PCHIP",
+        "threshold_pct": -15.0,
+        "valid": true,
+        "pchip_bd_rate_pct": -21.221701678883925,
+        "point_passes": true,
+        "threshold_confirmed": false,
+        "ci": {
+          "lo": null,
+          "hi": null,
+          "draws": 5000,
+          "seed": 303401,
+          "finite_fraction": 0.7692,
+          "invalid_reasons": {
+            "quality is not monotone with rate": 1150,
+            "at least three distinct quality values are required": 4
+          },
+          "familywise_endpoints": 6,
+          "independent_unit": "video",
+          "independent_count": 128,
+          "one_sided_confidence": 0.9916666666666667,
+          "invalid_draw_policy": "worst-case-unbounded",
+          "scope": "paired video percentile bootstrap; undefined draws pay worst-case unbounded tail mass; no population claim beyond source sampling assumptions"
+        },
+        "invalid_reason": null,
+        "common_quality_interval": [
+          0.375,
+          0.65625
+        ]
+      }
+    }
+  },
+  "official_tracking_metrics": {},
+  "scope": "measured finite-sample task metrics; no confidence claim without independent-unit bootstrap",
+  "runtime": {
+    "wall_seconds": 991.383054985,
+    "peak_torch_cuda_allocated_bytes": 678686720,
+    "timing_scope": "includes sender source preparation, proposal/guard, all actual codec trials and receiver task scoring; model/data load excluded"
+  }
+}

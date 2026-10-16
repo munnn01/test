@@ -1,0 +1,9 @@
+{
+  "schema": "v34r1-A3-OT-primary-selection-1",
+  "frozen_utc": "2026-10-16T04:00:29.593968+00:00",
+  "parent_experiment_commit": "749f8f876ccca875536d4c88565ccc075d8a9197",
+  "scope": "prospective TEST policy choice before validation results are inspected; no additional threshold fitting",
+  "rule": "choose observed_trailing32 if both frozen validation codec BD-rate endpoints strictly<-15; otherwise observed_prefix only if its FIT-frozen threshold is exactly0 and both validation endpoints pass; otherwise do not score reserved TEST",
+  "rationale": "positive whole-prefix slack weakens on longer sequences; synthetic512frame test loses all16recent detections yet prefixHOTA loss<.04, while trailing32 loss>.4",
+  "prohibit": "do not choose between candidates using reserved TEST results; preserve both validation outcomes and every raw4QPpoint"
+}

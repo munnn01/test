@@ -1,0 +1,43 @@
+{
+  "scope": "computational repeatability of reported curves/protocol only; no complete per-packet re-audit; same128 videos, no added independent sample",
+  "primary": "results/v34r1/ar-test",
+  "repeats": {
+    "mounted": {
+      "checks": {
+        "curves": true,
+        "comparisons": true,
+        "source_manifest": true,
+        "task_models": true,
+        "controller": true,
+        "source_ids": true
+      },
+      "status": {
+        "task": "ar",
+        "complete": true,
+        "commit": "5a369016e4214b8339f89768534fed19cbcf194e",
+        "wall_seconds": 1063.164056777954
+      }
+    },
+    "direct": {
+      "checks": {
+        "curves": true,
+        "comparisons": true,
+        "source_manifest": true,
+        "task_models": true,
+        "controller": true,
+        "source_ids": true
+      },
+      "status": {
+        "task": "ar",
+        "complete": true,
+        "commit": "b3f30bcd1c111b69311180f9a5259f0541eee817",
+        "wall_seconds": 2634.7439324855804
+      }
+    }
+  },
+  "bd_rate_pct": {
+    "h264": -31.35066760285326,
+    "h265": -21.221701678883925
+  },
+  "confidence_limit": "AR bootstrap intervals remain unbounded/undefined as in primary report; repeated runs do not repair sampling uncertainty"
+}

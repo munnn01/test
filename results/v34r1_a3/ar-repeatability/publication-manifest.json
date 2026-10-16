@@ -1,0 +1,40 @@
+{
+  "schema": "v34r1-A3-AR-repeatability-1",
+  "files": [
+    {
+      "path": "direct/cloud-status.json",
+      "bytes": 132,
+      "sha256": "a4454ce9019eda5e72583652b8179a0dd1448d6b80bb2a80be0e3be2ece7c0d4"
+    },
+    {
+      "path": "direct/protocol.json",
+      "bytes": 19296,
+      "sha256": "f686c3108d1bf0c15a8f27a8637a6cb77d91b88bd18acf779db90a830fe2a76e"
+    },
+    {
+      "path": "direct/summary.json",
+      "bytes": 4251,
+      "sha256": "8d3b673c3286ee645e302ad68db0cfe85f457bb83afc43da5cb87c44bcc47d05"
+    },
+    {
+      "path": "mounted/cloud-status.json",
+      "bytes": 131,
+      "sha256": "751b9b9825f5faac30b1f286b60b9454eb4bc606b97a50a2605a0f2100405426"
+    },
+    {
+      "path": "mounted/protocol.json",
+      "bytes": 19296,
+      "sha256": "f686c3108d1bf0c15a8f27a8637a6cb77d91b88bd18acf779db90a830fe2a76e"
+    },
+    {
+      "path": "mounted/summary.json",
+      "bytes": 4247,
+      "sha256": "195902b790120a835d326e74420a69fc70c2d6e6b07dd1e5150daab307b40d71"
+    },
+    {
+      "path": "repeatability.json",
+      "bytes": 1288,
+      "sha256": "13092acf833b7960e091f62b5a77841743e5676e8574d59fd60ff0f3e77489b1"
+    }
+  ]
+}
