@@ -1,0 +1,649 @@
+{
+  "role": "fresh_dev64",
+  "source_id_protocol_sha256": "38dade92b7e5630403df2d638d658515526a103d6ec4124a45fb10adf38759b5",
+  "frozen_policy_sha256": "9be1362dfe911a99063e5548c935e2bc5a695305ecd290b8f1e57caf88d7dc04",
+  "training_archive_sha256": "517cbaada33bbca88ff0492ceda9a9860d00a26cf269ae4ef0d62247b67855c3",
+  "prior_source_manifest_sha256": "b890b71121619cfd7f0023c38260cb614d502afb886169ac85e4fcaa6f112dca",
+  "fresh_dev": [
+    {
+      "id": 273712,
+      "file_name": "000000273712.jpg",
+      "width": 480,
+      "height": 640,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000273712.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "c8af9b2d81ecf798fde207301f299758826e49184a07c5b25fde4501f4ce463e",
+      "canonical_sha256": "bc9b1c12f75daef2b933ccff16dc84059e749f60f925a61fb66444636550be27"
+    },
+    {
+      "id": 480842,
+      "file_name": "000000480842.jpg",
+      "width": 640,
+      "height": 590,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000480842.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "fa24a7f3a0142e7dc8182d2ea76520d5b06c09ce89b6220fa565ac8a22c605fd",
+      "canonical_sha256": "98c81ae0a0d88f017c586d37f33d4a51c0e5ad7a4e8ee83f9d620c792ef2b29f"
+    },
+    {
+      "id": 460494,
+      "file_name": "000000460494.jpg",
+      "width": 640,
+      "height": 426,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000460494.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "340bd3040b0bd19a63ea373badaac838fa0ca02abc885248cf4f0f5764877596",
+      "canonical_sha256": "e332a43e84945797be648f1fff832bab0fd12a5e29c0ef32e015d5f44dae6175"
+    },
+    {
+      "id": 370486,
+      "file_name": "000000370486.jpg",
+      "width": 421,
+      "height": 640,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000370486.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "30df28745b0b675a6b7d00556dd516a4ad5afacb9a7a92bbb4fa638ea9753274",
+      "canonical_sha256": "4dc86e5c53264ffa31805a539fdda93eb750dab7dcaf24bbe95897606cd17810"
+    },
+    {
+      "id": 108253,
+      "file_name": "000000108253.jpg",
+      "width": 480,
+      "height": 640,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000108253.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "dbeb3abe982e31109d09f96e782ef1a14462eef85da9ed94032fdc85b4874b03",
+      "canonical_sha256": "bf04498f72bf6fa2f58a7101b1f84ade4f24a0288dc5e50b115ce52a6a685d54"
+    },
+    {
+      "id": 445602,
+      "file_name": "000000445602.jpg",
+      "width": 640,
+      "height": 480,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000445602.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "56ac4b8eb60e81efeeb2c9c2d974276bcbaa8f62aef1fe4f8fa38281339426cf",
+      "canonical_sha256": "67e66624ec4a72a55ee1fbf9c47bc8e90e7742c1e7e4fdae35206db14368e8db"
+    },
+    {
+      "id": 212573,
+      "file_name": "000000212573.jpg",
+      "width": 640,
+      "height": 559,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000212573.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "8c0f1cae223eb12fa98f429f523b7623da66cc84d51c3330c0a4aea35bbf3986",
+      "canonical_sha256": "09b1b5ca1193981dacec18c8d347b787e3cb2256f5940806a023f77143f72216"
+    },
+    {
+      "id": 213033,
+      "file_name": "000000213033.jpg",
+      "width": 480,
+      "height": 640,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000213033.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "73a97cb8eceb57e2b1872b7470a11c6e5abb2c03173bd4ce94a45c0d096ae5ea",
+      "canonical_sha256": "f33649f8ddf35a5ee6ccfbf9625befce357609879e339bd9a6179c66bb5c9694"
+    },
+    {
+      "id": 134882,
+      "file_name": "000000134882.jpg",
+      "width": 640,
+      "height": 639,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000134882.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "d2a42fe606563d125e105246e6cd473f098338364b51f085da8a97d5943876c5",
+      "canonical_sha256": "8bc495c45475d9def5c52e1d5462779b773312569d11319d165e54a8cf641e99"
+    },
+    {
+      "id": 568147,
+      "file_name": "000000568147.jpg",
+      "width": 480,
+      "height": 640,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000568147.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "a43a30c8c1fa592eb76b7205a2764642240f2b29c76d06543a9197bdc8b95a8a",
+      "canonical_sha256": "91f88f741b9af236f75d19b18d07a0764115f102736ce87903f28659fbadf79c"
+    },
+    {
+      "id": 52565,
+      "file_name": "000000052565.jpg",
+      "width": 640,
+      "height": 458,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000052565.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "a1d362810f97e0dd00ecda4f1d427aec52ba3361c1a15f00cc525d9dc8216ad3",
+      "canonical_sha256": "b52cd044d178f075c08f66f310d9736640ebd6082da55517e9f0085f5f90f7f3"
+    },
+    {
+      "id": 339823,
+      "file_name": "000000339823.jpg",
+      "width": 484,
+      "height": 640,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000339823.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "c278f5713c135f44dcd7d708f0d9abc4f63a2870a6d1c7753ad5a7b198bbabbe",
+      "canonical_sha256": "93bb7ee3726b54f80fc1435b408ce70d1bc02239b2831002e644b128017fd66c"
+    },
+    {
+      "id": 531036,
+      "file_name": "000000531036.jpg",
+      "width": 480,
+      "height": 640,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000531036.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "79be9c405b3ce4d2eea61fc29b0e1e633504fbeebee6483d64dfb38b1dd844a5",
+      "canonical_sha256": "cad2585302841c82afe47314ee7b453160dc95aaf476f5910f12035d98936f6d"
+    },
+    {
+      "id": 26941,
+      "file_name": "000000026941.jpg",
+      "width": 640,
+      "height": 427,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000026941.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "2e4081f3a5a5a747adb86d3f85dbd3e22db944ba8c2aa3f6119cb4146de4d2ad",
+      "canonical_sha256": "e31beacd7b6fb2db6ac477eceb281c2bfb90dfaf67587dabc5d381f13e6dcdfe"
+    },
+    {
+      "id": 184324,
+      "file_name": "000000184324.jpg",
+      "width": 640,
+      "height": 425,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000184324.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "5bfec85c40197744fc7fa8262a0a0e14ad1a6fc0e11cee4b7b0c5df97a146107",
+      "canonical_sha256": "e8bf414625c9a24c59e05da1336c964be0408343767163c99c4349a46bf7a0f1"
+    },
+    {
+      "id": 269196,
+      "file_name": "000000269196.jpg",
+      "width": 640,
+      "height": 427,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000269196.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "23bbb8a6d291e561703b537bc795ac07c6aa85ca43efefc53931b73ce8770deb",
+      "canonical_sha256": "b6be5717fdda4cd1d860be5e64826fbc6ec81c2c85a2211e705a357c9ee9513d"
+    },
+    {
+      "id": 10995,
+      "file_name": "000000010995.jpg",
+      "width": 640,
+      "height": 480,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000010995.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "19ee23abae8a3da6b5914987e991ea9ee8a9743309ae17db732426c8fa860fe2",
+      "canonical_sha256": "e023764c8522bd74bc6a9da7bd0a87f994a322afd3398728a2fe7f555fe2c434"
+    },
+    {
+      "id": 530146,
+      "file_name": "000000530146.jpg",
+      "width": 640,
+      "height": 640,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000530146.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "31e0b9ff5ec4bffbe2948acaa40d3b048284d729d1179c60ed1fce41f87b7370",
+      "canonical_sha256": "19fbef91fdf2fc7b240ed73299d638c9cbc9fa456b4c7751097c9593595e9630"
+    },
+    {
+      "id": 370999,
+      "file_name": "000000370999.jpg",
+      "width": 640,
+      "height": 480,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000370999.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "174fc27563ff6cb874ccea6f13014c75ae71fd98966c2c407d9ae36114bee32d",
+      "canonical_sha256": "0d2fcedfe9f5ec3a30b002f4bd7cacf5742df990cb33ff1c1e43729bf2de5512"
+    },
+    {
+      "id": 517523,
+      "file_name": "000000517523.jpg",
+      "width": 640,
+      "height": 435,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000517523.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "03a5552c8c8c60548e8bf93df23ebd6b39fd10c367533e060c6aebc07d489233",
+      "canonical_sha256": "ee1378dfc910e96406be5b29b7f108cf9d0e7c8724954fbfafcc8a35de78f17c"
+    },
+    {
+      "id": 205333,
+      "file_name": "000000205333.jpg",
+      "width": 640,
+      "height": 164,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000205333.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "f63a76e52e5c8d30444893a91c94f5738a6c6d044bffb8485fe937fc2c9dea7c",
+      "canonical_sha256": "7fcc9960f20d1d5096790248d4bf3fcd735810b463fc07ba9781e1052a17bc14"
+    },
+    {
+      "id": 119677,
+      "file_name": "000000119677.jpg",
+      "width": 640,
+      "height": 480,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000119677.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "3916fc42936471ef0cc962c4585e309991e5a8ee02d8725e9e655addc53d00bb",
+      "canonical_sha256": "ae15e5e551137b07b107c188047f67d5a20221f55b38e2eb4f30aad826382b03"
+    },
+    {
+      "id": 435299,
+      "file_name": "000000435299.jpg",
+      "width": 640,
+      "height": 480,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000435299.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "a6e060e6e23667a937f1130eed8616b97166e546e148cc62c1f82037b4c3738d",
+      "canonical_sha256": "1d8ae83136b222dae1cdd22352c7d5b77e67b5c7ef046f7bd5ab78bae37019e5"
+    },
+    {
+      "id": 71756,
+      "file_name": "000000071756.jpg",
+      "width": 640,
+      "height": 512,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000071756.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "9e615f1cc2e5e9ba9acd4d53e3e7072593bc88d0627fc9749ccc7d41b0c72ab1",
+      "canonical_sha256": "328843b70e3a48c3bc59eb38dba52d660293f78298e73f1cc97f9a59ec0ce496"
+    },
+    {
+      "id": 351096,
+      "file_name": "000000351096.jpg",
+      "width": 500,
+      "height": 375,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000351096.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "e671c3e71386f51caae7f0dc55051ed79896567e1ccf34810fe784e60f8c679d",
+      "canonical_sha256": "e9d76d087aab33e04be59759b702b9350ccb80b7ccb99f0890b9bc3b6eb0e62b"
+    },
+    {
+      "id": 426836,
+      "file_name": "000000426836.jpg",
+      "width": 640,
+      "height": 640,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000426836.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "58226343a8196f38f86225c5025e7dd6d72327eb97a558da39198837639ce103",
+      "canonical_sha256": "70b018fddcb3c9a72bc2264e0e753da21a2d4298fdba747526c81f3a7d32ddd9"
+    },
+    {
+      "id": 156643,
+      "file_name": "000000156643.jpg",
+      "width": 640,
+      "height": 480,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000156643.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "9d16c4c9af76cdf2d8163e07d0257958cca6f39f42aff0bf3c5713c070b83907",
+      "canonical_sha256": "def06846a4536c65f074deda2852f4228b5986101f72fbe6cacd943946c554a2"
+    },
+    {
+      "id": 376478,
+      "file_name": "000000376478.jpg",
+      "width": 480,
+      "height": 640,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000376478.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "a860eaf59ac0a06e7db1e7009039dd72766f2dd5d2e1bb019f0fdb26b7d0e803",
+      "canonical_sha256": "ba99dcf1830c2218b53f194cee97f5fb5a19cf7489752dc5c842ba25ca2743c6"
+    },
+    {
+      "id": 326128,
+      "file_name": "000000326128.jpg",
+      "width": 480,
+      "height": 640,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000326128.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "16fc08c185eeec30bf11d3c0944157279885f938838159e13773e4cfde879618",
+      "canonical_sha256": "2df916a4becab1e666aa7b49d714919c5265f3560625a1c9738c2dbe0b9f80e4"
+    },
+    {
+      "id": 12670,
+      "file_name": "000000012670.jpg",
+      "width": 640,
+      "height": 428,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000012670.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "00c989b165bdde8eb54cbe7d1fcfb0ae7b2ac7f5f23d83baea723e7d2acf7099",
+      "canonical_sha256": "d11c08c1783a9f791bbad314a1e5a015648e5f6cac05c6022a321d305635489c"
+    },
+    {
+      "id": 194940,
+      "file_name": "000000194940.jpg",
+      "width": 500,
+      "height": 375,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000194940.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "f8fd2daecf19f0313769c4c3f9440781ee11605e4c55bf164ea50936f68006ac",
+      "canonical_sha256": "1462f46aa14b55d356c8cb021f52c2cef56a42e919967cbb93278b9f70e1df17"
+    },
+    {
+      "id": 172648,
+      "file_name": "000000172648.jpg",
+      "width": 640,
+      "height": 480,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000172648.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "09eb185b95f7ff9b2fbfd0ede3a704f227fcd02d6b1d1a5cbb891a8536e21157",
+      "canonical_sha256": "34a61cb8352f86dc38ea05c3a50653573bc48215078bd3cd38920ae995600c9c"
+    },
+    {
+      "id": 565469,
+      "file_name": "000000565469.jpg",
+      "width": 426,
+      "height": 640,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000565469.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "5e870905018a9716605fa429f478188527d646cc62236344a7fef7ace90cada3",
+      "canonical_sha256": "7697adefd88684f4da6f787561587fbbdbbdab40e4156d95030afbc319da47e3"
+    },
+    {
+      "id": 402346,
+      "file_name": "000000402346.jpg",
+      "width": 640,
+      "height": 480,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000402346.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "4d38646dca39b55df3d8c39e5edab5600939884c60e46b7ff9a9e6d1456b41d7",
+      "canonical_sha256": "319682f7b3ae0ecc76a41fbc1b0f396f7aa229571834f913ce868318c99fcfdc"
+    },
+    {
+      "id": 317024,
+      "file_name": "000000317024.jpg",
+      "width": 640,
+      "height": 480,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000317024.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "9c7f90d13e4d37e9030f1632c2f3fbf54d593c63dedeac604dce20c2e85ac62f",
+      "canonical_sha256": "23e5c72280d44de850e20ac4f161ec00e17da0479c3e828e5faed12867bedc3d"
+    },
+    {
+      "id": 302760,
+      "file_name": "000000302760.jpg",
+      "width": 500,
+      "height": 375,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000302760.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "833d0c79e697c11d7079b7afeabdb5342f8ebe9bf8926ecd88c0b7903c42652a",
+      "canonical_sha256": "733f9638e2c6facfb61490c05b2113d310ed70407c54194b36f00ca7d09fda61"
+    },
+    {
+      "id": 632,
+      "file_name": "000000000632.jpg",
+      "width": 640,
+      "height": 483,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000000632.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "a4cd7f45ac1ce27eaafb254b23af7c0b18a064be08870ceaaf03b2147f2ce550",
+      "canonical_sha256": "6fc5343cb380bf0d1ca5294103d88c24c4b2e2e87fc253d9b5f7429fa8c9a9da"
+    },
+    {
+      "id": 112378,
+      "file_name": "000000112378.jpg",
+      "width": 640,
+      "height": 480,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000112378.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "0fc1b2deb7e443d27c15478dbbe4fa7174732d733e65dafaca2b8b3b32a0ba46",
+      "canonical_sha256": "bb62287ae8f2fd1894d427852873cf92562a9e9ba42c78814d8e483455d8125c"
+    },
+    {
+      "id": 140270,
+      "file_name": "000000140270.jpg",
+      "width": 600,
+      "height": 400,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000140270.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "87184354a20f84b77c00d22defce29899dd8a19e7a5be2c65c94d77901d36688",
+      "canonical_sha256": "bba2dec3e98e553be73e6b25e615816a1e250e06ccfea36f970ae86ae604d6b3"
+    },
+    {
+      "id": 501523,
+      "file_name": "000000501523.jpg",
+      "width": 640,
+      "height": 480,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000501523.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "4607dff7471059b8243710e1eac998a4e0899d414d903dfcfa103a252339e99f",
+      "canonical_sha256": "05d586e35fa4873e74b87f8d0d216f6505345bbd25fe55d4ff19f2f9cbcc6094"
+    },
+    {
+      "id": 307598,
+      "file_name": "000000307598.jpg",
+      "width": 640,
+      "height": 426,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000307598.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "ce566f887959fec68326da2469ae8faaf80d8d227876f2449b2bb521403dac86",
+      "canonical_sha256": "241a0ef314d4fd1b8783b4557a6b329a1f86d2ad6405ea6dd4beaff0aa4f7a7c"
+    },
+    {
+      "id": 281929,
+      "file_name": "000000281929.jpg",
+      "width": 640,
+      "height": 504,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000281929.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "b300f819b43b6f41bda197dde44a7a715b77623398a60030fca7fc2231451b9f",
+      "canonical_sha256": "7ea44b8c1aec83d2ca3cc8f71d1f5b8985038018f55a0915fa21e6c8317df567"
+    },
+    {
+      "id": 396205,
+      "file_name": "000000396205.jpg",
+      "width": 425,
+      "height": 640,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000396205.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "e221dc08396f57cc9d57c1dde2502e9ac5168fa643802d4822f62de4837fd73c",
+      "canonical_sha256": "c9f73a191700942ae4f31aaac9324c55c6f7d981f5934ddd1e543b5029428438"
+    },
+    {
+      "id": 129062,
+      "file_name": "000000129062.jpg",
+      "width": 640,
+      "height": 480,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000129062.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "a5aa8bf64678f4da55e3f55c4a4802b48ee8ca9c4be69bb985702f746e88bf7c",
+      "canonical_sha256": "7112497fe97aa44d16bd10a5a801b2e2d122889e73264b3d6329c55ca3e944d1"
+    },
+    {
+      "id": 356387,
+      "file_name": "000000356387.jpg",
+      "width": 500,
+      "height": 335,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000356387.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "d728e357255116bacd64621f096aae8a7aacaa0c1588b40591b8758a0cc32485",
+      "canonical_sha256": "198b482028cb3794228652455031a597182c2ed3a16b8bf857054edd1b99f7c5"
+    },
+    {
+      "id": 60363,
+      "file_name": "000000060363.jpg",
+      "width": 640,
+      "height": 480,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000060363.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "f0c260ac44dfd4199719e0e00c92600ab0eea655fcdc9084c9e929943ee10dc7",
+      "canonical_sha256": "b6fc492dd30cbf6204cbfc1e99f42f2505f9a134852aa19c33c57206dfafff76"
+    },
+    {
+      "id": 559099,
+      "file_name": "000000559099.jpg",
+      "width": 640,
+      "height": 360,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000559099.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "2061d2007fc43ba426705e5f7cc33cdbb55b213fa8b1a162efcbfd3a5cb5cc1b",
+      "canonical_sha256": "45f493657e6c59357128635b1e0e46aabdf451ebb62f48ff27ae9b0b5bad49d7"
+    },
+    {
+      "id": 97994,
+      "file_name": "000000097994.jpg",
+      "width": 640,
+      "height": 427,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000097994.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "bcc6c62fe3750227cd9cb23a1ed86c148f648c6ef825e26434c971880a2ae711",
+      "canonical_sha256": "503ed36f1a710bae1fc39f8c50dfb0269237a466f3e1c1f3f6188786488ce00a"
+    },
+    {
+      "id": 68933,
+      "file_name": "000000068933.jpg",
+      "width": 500,
+      "height": 313,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000068933.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "1081eb9ebbff9220b92ab89cff73ad3a65a745629cc41aa91c46df12549480ac",
+      "canonical_sha256": "e2a9c6dc28d19b170ce0ee8fc7c20fef44f4508195b92a55db719eaef73df914"
+    },
+    {
+      "id": 22479,
+      "file_name": "000000022479.jpg",
+      "width": 640,
+      "height": 605,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000022479.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "9f09af60f0a4f214a8b34ff6badbd25111cd8438c39097197a629255408cdb75",
+      "canonical_sha256": "b02c87eccaabf18cfe0deb5c1fb2f60b54f540e8602bb2548c11c0a548b0199e"
+    },
+    {
+      "id": 225184,
+      "file_name": "000000225184.jpg",
+      "width": 457,
+      "height": 640,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000225184.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "aa03f1ca7f63f541daf98a9f14e4674f909aa2d43c242b8b54d63a479275fd2e",
+      "canonical_sha256": "69752d28991adde69e26ff3249da5f0afced275cd9a0db7a7aa7fc2771463099"
+    },
+    {
+      "id": 562581,
+      "file_name": "000000562581.jpg",
+      "width": 640,
+      "height": 444,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000562581.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "2fa9db119e7dfd18b8254a12f105670de45db462ab2f344e054e9bf9b40255cb",
+      "canonical_sha256": "e2ebdd9f4482720d2df188e2e74d13ad668218f50fe6b73ff059ae7dc7328996"
+    },
+    {
+      "id": 241668,
+      "file_name": "000000241668.jpg",
+      "width": 460,
+      "height": 640,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000241668.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "bda77cd5d1369d0d1275045f2f74dc25d19cec2fe4b7665b8b838dc8081f5e4a",
+      "canonical_sha256": "0bfaac9767aa00df6a553c731cd312b21cde42bba698bd60f1809a672aa678d9"
+    },
+    {
+      "id": 345941,
+      "file_name": "000000345941.jpg",
+      "width": 640,
+      "height": 640,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000345941.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "2336682bc863b1eb39a926b32d40659d09358c8163fffbdc5f4f818a074fadb8",
+      "canonical_sha256": "c32c7efd16099a63700359f1ecba49cb7ce1aae6a24627d62a9f9cb36114c3d9"
+    },
+    {
+      "id": 166391,
+      "file_name": "000000166391.jpg",
+      "width": 640,
+      "height": 427,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000166391.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "4ee9bb8a8ac31522bd24dc3068760d4cf7a9255257ba38572ba5b4c750360c35",
+      "canonical_sha256": "1b5f38d6593d312059a4631e35686f9fce220e7a930d0e1aaabf8325159ef60c"
+    },
+    {
+      "id": 261888,
+      "file_name": "000000261888.jpg",
+      "width": 640,
+      "height": 426,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000261888.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "02df0f1cd1c0997aacb71636e96f06a033cb2c1adee465744802e7cd691ac4de",
+      "canonical_sha256": "84604df2327eeea0daa06623a740567706e0300abd64019442ef93829ccd7d93"
+    },
+    {
+      "id": 295713,
+      "file_name": "000000295713.jpg",
+      "width": 640,
+      "height": 427,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000295713.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "6ad91f53f6e9d9c788852373253089e9e97238879e31bbb5315e76a0bbb6e299",
+      "canonical_sha256": "1394e1d168e116ff725450dc42cf85e4acca16f77df9aa825c23f7370ba1b2ab"
+    },
+    {
+      "id": 494913,
+      "file_name": "000000494913.jpg",
+      "width": 640,
+      "height": 428,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000494913.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "7868756811455c2f96aeff017674b9c3a3c50778333c664452740a795f4ff687",
+      "canonical_sha256": "d9d8b327d3782c220db17aa2f7071b19459b2a71c037be90c9a717df2ffa9392"
+    },
+    {
+      "id": 287347,
+      "file_name": "000000287347.jpg",
+      "width": 478,
+      "height": 640,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000287347.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "13276f8d15148d023ebcc28e52226350b95332533c778d1f87d44633e7c4304d",
+      "canonical_sha256": "1719e0b987091bc7c1723f7723b1896a8232ed6655390f754aa276612ee4e4e6"
+    },
+    {
+      "id": 407403,
+      "file_name": "000000407403.jpg",
+      "width": 346,
+      "height": 500,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000407403.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "7a22cbb635f1a89081df046549ad066422ca9cee3270b57f66627cd7a0d096c6",
+      "canonical_sha256": "f30a7378870d99a401a7be0c7d25f8fa2769e58c6743309277076d5b9c93c7d0"
+    },
+    {
+      "id": 138819,
+      "file_name": "000000138819.jpg",
+      "width": 640,
+      "height": 480,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000138819.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "9af2254f27aa3dee46b1f91e2212b4e81931573d018aa672413e0d35a408126a",
+      "canonical_sha256": "6b363214fb3ebeb8dfc14ca9089458de487838428edcbd4179ab89a54fa84442"
+    },
+    {
+      "id": 515982,
+      "file_name": "000000515982.jpg",
+      "width": 640,
+      "height": 426,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000515982.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "fc2c2dd08b842a266f42c430ef39628e5e9f6638ff90fe860242a5569ec2922a",
+      "canonical_sha256": "c5f27c97db577e1276b5c72cd158455e461a78e4c654cfc53ebf36da848d8871"
+    },
+    {
+      "id": 136600,
+      "file_name": "000000136600.jpg",
+      "width": 640,
+      "height": 457,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000136600.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "d60884afbf97caa7f0a3a6ae37eb8b25ae61be3abffc25192622980f177afcc1",
+      "canonical_sha256": "363f25b27d6a3f409eda584dc1a64680113a35107a6dd90c44388c2b7e5ff971"
+    },
+    {
+      "id": 102820,
+      "file_name": "000000102820.jpg",
+      "width": 427,
+      "height": 640,
+      "path": "/kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/val2017/000000102820.jpg",
+      "split": "fresh_dev",
+      "file_sha256": "06e71d6ff0e636e73040f3013eab8b57528d09a5829eb2fddd6607655021ef76",
+      "canonical_sha256": "3bb717daf33083a7766150a43bd122c9986f46f43ba5e5b7fac4708f589c607b"
+    }
+  ]
+}

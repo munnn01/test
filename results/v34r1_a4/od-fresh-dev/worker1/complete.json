@@ -1,0 +1,63 @@
+{
+  "grid": {
+    "images": 32,
+    "rows": 5376,
+    "profiles": 21,
+    "qps": [
+      30,
+      35,
+      40,
+      45
+    ],
+    "codecs": [
+      "h264",
+      "h265"
+    ]
+  },
+  "wall_seconds": 636.685175275,
+  "reproducibility": {
+    "codec": "h264",
+    "qp": 30,
+    "profile": 0,
+    "image_id": 480842,
+    "extra_actual_encodes": 1,
+    "extra_actual_decodes": 1,
+    "repeat_codec_times": {
+      "encode_seconds": 0.017529640999981666,
+      "decode_seconds": 0.019572690000018156,
+      "inverse_seconds": 0.0
+    },
+    "exact_packet_and_pixels": true,
+    "prediction_absolute_tolerance": 1e-06
+  },
+  "actual_work": {
+    "logical_rows": 5376,
+    "actual_encodes": 5265,
+    "actual_decodes": 5265,
+    "source_task_model_forwards": 32,
+    "decoded_task_model_forwards": 5253,
+    "a2_controller_forwards": 256,
+    "repeat_roundtrips": 1,
+    "repeat_detector_forwards": 1,
+    "codec_scope": "MeasuredCodec performs one encoder and one independent decoder per new packet/roundtrip, including the repeat audit"
+  },
+  "codec_seconds": {
+    "encode_seconds": 190.62680553900412,
+    "decode_seconds": 102.27535287400286,
+    "inverse_seconds": 0.0
+  },
+  "stage_seconds": {
+    "source_detector_seconds": 3.087245566999968,
+    "a2_controller_seconds": 0.5972931249994531,
+    "decoded_detector_seconds": 235.29205542099936,
+    "source_proxy_seconds": 79.67948650699876,
+    "repeat_detector_seconds": 0.048008901999992304
+  },
+  "source_preparation_seconds": 10.950474342000234,
+  "timing_scope": "nested stage timers; source preparation includes source detector and filtering, do not add all fields",
+  "peak_cuda_bytes": 293498368,
+  "actual_encodes": 5265,
+  "decoded_inferences": 5253,
+  "pseudo_loss_forwards": 0,
+  "source_inferences": 32
+}

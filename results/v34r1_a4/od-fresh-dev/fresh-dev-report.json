@@ -1,0 +1,403 @@
+{
+  "scope": "one fresh64-image DEV confirmation after model/policy lock; TEST512 never inferred or GT-scored",
+  "grid": {
+    "images": 64,
+    "rows": 10752,
+    "profiles": 21,
+    "qps": [
+      30,
+      35,
+      40,
+      45
+    ],
+    "codecs": [
+      "h264",
+      "h265"
+    ]
+  },
+  "frozen_policy_sha256": "9be1362dfe911a99063e5548c935e2bc5a695305ecd290b8f1e57caf88d7dc04",
+  "source_manifest_sha256": "d04913fb6894acac5cfc57b33a9cdd29fe54f092c6a1d354edd7dcbfed5f2d12",
+  "source_only_decisions_sha256": "965458435e1b0ed3ebf68fbc75c1192dce97138d474583c51431d882d4733add",
+  "results": {
+    "anchor": {
+      "curves": {
+        "h264": {
+          "rate": [
+            0.7590759277343749,
+            0.46122924804687504,
+            0.28323974609375,
+            0.17680297851562501
+          ],
+          "quality": [
+            0.29646727180349625,
+            0.28038701371670505,
+            0.25102596233298646,
+            0.19354008149331955
+          ]
+        },
+        "h265": {
+          "rate": [
+            0.79634765625,
+            0.54333740234375,
+            0.3877099609375,
+            0.29316040039062496
+          ],
+          "quality": [
+            0.30141021126594836,
+            0.2935018234233151,
+            0.25114682374994685,
+            0.18728033593454044
+          ]
+        }
+      },
+      "log_rate_ratio_by_codec": {
+        "h264": 0.0,
+        "h265": 0.0
+      },
+      "selection_counts": {
+        "0": 512
+      },
+      "bd": {
+        "h264": {
+          "qps": [
+            30,
+            35,
+            40,
+            45
+          ],
+          "primary_interpolator": "PCHIP",
+          "threshold_pct": -15.0,
+          "valid": true,
+          "pchip_bd_rate_pct": 0.0,
+          "point_passes": false,
+          "threshold_confirmed": false,
+          "ci": null,
+          "invalid_reason": null,
+          "common_quality_interval": [
+            0.19354008149331955,
+            0.29646727180349625
+          ]
+        },
+        "h265": {
+          "qps": [
+            30,
+            35,
+            40,
+            45
+          ],
+          "primary_interpolator": "PCHIP",
+          "threshold_pct": -15.0,
+          "valid": true,
+          "pchip_bd_rate_pct": 0.0,
+          "point_passes": false,
+          "threshold_confirmed": false,
+          "ci": null,
+          "invalid_reason": null,
+          "common_quality_interval": [
+            0.18728033593454044,
+            0.30141021126594836
+          ]
+        }
+      }
+    },
+    "a2": {
+      "curves": {
+        "h264": {
+          "rate": [
+            0.59467529296875,
+            0.36479370117187504,
+            0.227637939453125,
+            0.1512939453125
+          ],
+          "quality": [
+            0.2948067393771279,
+            0.2624012891793303,
+            0.2457964487470331,
+            0.1922658709690543
+          ]
+        },
+        "h265": {
+          "rate": [
+            0.6394091796875,
+            0.458896484375,
+            0.34239990234375,
+            0.26910766601562497
+          ],
+          "quality": [
+            0.28955123274203554,
+            0.294980490643028,
+            0.24261857399150402,
+            0.19398759980943892
+          ]
+        }
+      },
+      "log_rate_ratio_by_codec": {
+        "h264": -0.22906719744423457,
+        "h265": -0.15196748065688626
+      },
+      "selection_counts": {
+        "17": 159,
+        "15": 169,
+        "0": 76,
+        "14": 65,
+        "13": 43
+      },
+      "bd": {
+        "h264": {
+          "qps": [
+            30,
+            35,
+            40,
+            45
+          ],
+          "primary_interpolator": "PCHIP",
+          "threshold_pct": -15.0,
+          "valid": true,
+          "pchip_bd_rate_pct": -7.534303689832031,
+          "point_passes": false,
+          "threshold_confirmed": false,
+          "ci": null,
+          "invalid_reason": null,
+          "common_quality_interval": [
+            0.19354008149331955,
+            0.2948067393771279
+          ]
+        },
+        "h265": {
+          "qps": [
+            30,
+            35,
+            40,
+            45
+          ],
+          "primary_interpolator": "PCHIP",
+          "threshold_pct": -15.0,
+          "valid": false,
+          "pchip_bd_rate_pct": null,
+          "point_passes": false,
+          "threshold_confirmed": false,
+          "ci": null,
+          "invalid_reason": "quality is not monotone with rate"
+        }
+      }
+    },
+    "all21_guard": {
+      "curves": {
+        "h264": {
+          "rate": [
+            0.51134765625,
+            0.31935424804687496,
+            0.20999267578125003,
+            0.14211914062499997
+          ],
+          "quality": [
+            0.2805329102565306,
+            0.2588750973371446,
+            0.23127697618742693,
+            0.19056250206869602
+          ]
+        },
+        "h265": {
+          "rate": [
+            0.566051025390625,
+            0.41827880859375,
+            0.32173461914062496,
+            0.261693115234375
+          ],
+          "quality": [
+            0.2832579656688485,
+            0.2776538473450932,
+            0.23677896698414988,
+            0.18787384735258653
+          ]
+        }
+      },
+      "log_rate_ratio_by_codec": {
+        "h264": -0.32022452196870077,
+        "h265": -0.2193411399639303
+      },
+      "selection_counts": {
+        "17": 44,
+        "20": 141,
+        "16": 66,
+        "19": 56,
+        "6": 25,
+        "15": 82,
+        "4": 13,
+        "14": 22,
+        "18": 12,
+        "11": 9,
+        "13": 22,
+        "0": 10,
+        "1": 1,
+        "2": 2,
+        "5": 4,
+        "3": 1,
+        "7": 1,
+        "9": 1
+      },
+      "bd": {
+        "h264": {
+          "qps": [
+            30,
+            35,
+            40,
+            45
+          ],
+          "primary_interpolator": "PCHIP",
+          "threshold_pct": -15.0,
+          "valid": true,
+          "pchip_bd_rate_pct": -5.367654682545868,
+          "point_passes": false,
+          "threshold_confirmed": false,
+          "ci": null,
+          "invalid_reason": null,
+          "common_quality_interval": [
+            0.19354008149331955,
+            0.2805329102565306
+          ]
+        },
+        "h265": {
+          "qps": [
+            30,
+            35,
+            40,
+            45
+          ],
+          "primary_interpolator": "PCHIP",
+          "threshold_pct": -15.0,
+          "valid": true,
+          "pchip_bd_rate_pct": -9.824467648698558,
+          "point_passes": false,
+          "threshold_confirmed": false,
+          "ci": null,
+          "invalid_reason": null,
+          "common_quality_interval": [
+            0.18787384735258653,
+            0.2832579656688485
+          ]
+        }
+      }
+    },
+    "risk_forest": {
+      "curves": {
+        "h264": {
+          "rate": [
+            0.556607666015625,
+            0.354908447265625,
+            0.222320556640625,
+            0.1453857421875
+          ],
+          "quality": [
+            0.29584580982165304,
+            0.26504001457665227,
+            0.23797257332877575,
+            0.18898908312900653
+          ]
+        },
+        "h265": {
+          "rate": [
+            0.6027905273437499,
+            0.43746337890625003,
+            0.332200927734375,
+            0.26457031249999996
+          ],
+          "quality": [
+            0.2788641120255605,
+            0.2786050925696392,
+            0.24704323747292423,
+            0.18771382820477572
+          ]
+        }
+      },
+      "log_rate_ratio_by_codec": {
+        "h264": -0.2592903241392919,
+        "h265": -0.18493872657763544
+      },
+      "selection_counts": {
+        "15": 69,
+        "20": 119,
+        "6": 30,
+        "19": 50,
+        "0": 58,
+        "5": 4,
+        "17": 35,
+        "18": 13,
+        "16": 45,
+        "1": 2,
+        "11": 18,
+        "4": 14,
+        "2": 6,
+        "14": 17,
+        "13": 14,
+        "3": 7,
+        "9": 6,
+        "10": 1,
+        "8": 3,
+        "7": 1
+      },
+      "bd": {
+        "h264": {
+          "qps": [
+            30,
+            35,
+            40,
+            45
+          ],
+          "primary_interpolator": "PCHIP",
+          "threshold_pct": -15.0,
+          "valid": true,
+          "pchip_bd_rate_pct": -8.207763196543656,
+          "point_passes": false,
+          "threshold_confirmed": false,
+          "ci": null,
+          "invalid_reason": null,
+          "common_quality_interval": [
+            0.19354008149331955,
+            0.29584580982165304
+          ]
+        },
+        "h265": {
+          "qps": [
+            30,
+            35,
+            40,
+            45
+          ],
+          "primary_interpolator": "PCHIP",
+          "threshold_pct": -15.0,
+          "valid": true,
+          "pchip_bd_rate_pct": -11.885295945442136,
+          "point_passes": false,
+          "threshold_confirmed": false,
+          "ci": null,
+          "invalid_reason": null,
+          "common_quality_interval": [
+            0.18771382820477572,
+            0.2788641120255605
+          ]
+        }
+      }
+    }
+  },
+  "resource_gate": {
+    "objective_is_bd_rate": false,
+    "utility": {
+      "h264": -0.11292064302359173,
+      "h265": -0.06140350376942991
+    },
+    "frozen_limit": -0.16251892949777494,
+    "eligible_for_test": false
+  },
+  "no_retuning": true,
+  "test_scored": false,
+  "critic_predictions": 10752,
+  "sender_seconds": {
+    "feature_extraction": 35.72944952599994,
+    "critic_inference": 0.47362615800000185,
+    "selection_and_audit_write": 0.3313943540000537,
+    "total_pre_gt": 38.30715136099991,
+    "scope": "CPU sender replay only; excludes actual codec/task-model work already measured by workers; total includes validation/loading"
+  },
+  "wall_seconds": 54.38407757599998
+}

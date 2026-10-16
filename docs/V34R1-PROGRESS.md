@@ -1,4 +1,4 @@
-# V34r1: cập nhật A3 và hướng A4
+# V34r1: OD trên DEV mới và OT A5
 
 **Chưa đạt mục tiêu BD-rate < −15% cho cả ba tác vụ và hai codec.** Chỉ dùng QP30/35/40/45. Mọi mô hình, codec và đánh giá tác vụ đều chạy trên Kaggle; kiểm tra trên máy chỉ đọc tệp, đối chiếu byte/hash và tính lại số đã đo.
 
@@ -16,7 +16,7 @@ OT A3 chạy4 video MOT17 DEV tách theo video,64 khung/video, đúng FPS gốc.
 
 Cả12 ứng viên FIT bị loại bởi ràng buộc giảm HOTA tại cùngQP. Một số ứng viên vẫn giảm byte và cải thiện HOTA trung bình; vì vậy A4 kiểm tra một mục tiêu chọn theo sự đánh đổi bitrate/chất lượng. A3 giữ nguyên kết quả âm. A4 đã khóa duy nhất guard32 khung với ngưỡng.02 từ FIT, trước khi chạy lại calibration. Mục tiêu chọn gần đúng không phải BD-rate; chỉ phép PCHIP hợp lệ từ đủ4 điểm thô mới được dùng kết luận. Validation cũ được gọi rõ là calibration tái sử dụng, không phải kiểm chứng độc lập mới. Ba video TEST dự phòng chưa được đánh giá.
 
-Với OD, bước kế tiếp là huấn luyện dự đoán rủi ro từ DEV cũ. Nhãn huấn luyện mới đo ảnh hưởng của một ảnh tới AP cả tập, để tính đến thứ tự độ tin cậy giữa các ảnh. Các kiểm tra tổng hợp đã xác nhận khớp COCO AP chính thức, xử lý ảnh không có đối tượng và không sửa dữ liệu prediction đầu vào.64 ảnh DEV mới đã được dành riêng; chưa chạy inference trên chúng.
+Với OD, A4 đã huấn luyện dự đoán rủi ro từ DEV cũ và chạy xác nhận trên64 ảnh mới; kết quả chi tiết ở cuối báo cáo. Nhãn huấn luyện mới đo ảnh hưởng của một ảnh tới AP cả tập, để tính đến thứ tự độ tin cậy giữa các ảnh. Các kiểm tra tổng hợp đã xác nhận khớp COCO AP chính thức, xử lý ảnh không có đối tượng và không sửa dữ liệu prediction đầu vào.64 ảnh DEV mới đã được dành riêng trước huấn luyện và được đánh giá một lần sau khóa mô hình.
 
 
 ## A4 OT đã đo
@@ -38,3 +38,20 @@ Kaggle đã tạo21.504 nhãn marginal AP, với32 phép thay thế kiểm tra l
 Chính sách khóa là ExtraTrees depth10,128 cây, ngưỡng0,005. Hai bản xuất JSON khớp dự đoán sklearn trên toàn21.504 hàng với sai lệch tối đa5,6×10⁻¹⁷. Kiểm toán tệp và7.168 quyết định đã lưu đều khớp; không chạy lại mô hình trên laptop.
 
 Trên calibration tái sử dụng, BD-rate H.264 **không xác định** vì anchor không đơn điệu; H.265 **−11,93%**, chưa đạt−15%. Mục tiêu gần đúng dùng để chọn mô hình là−0,26388, **không phải BD-rate**. Đã khóa mô hình/ngưỡng/hash và chuẩn bị kiểm chứng một lần trên64 ảnh DEV mới với đúng QP30/35/40/45; chưa suy luận hoặc đánh giá TEST512.
+
+
+## A4 OD: đã kiểm chứng trên64 ảnh DEV mới
+
+Mô hình depth10/ngưỡng0,005 đã khóa trước khi suy luận64 ảnh, đủ10.752 hàng21 bộ lọc ×2 codec ×4 QP. Hai lần lặp anchor khớp packet/pixel; kiểm tra trạng thái detector ở cuối worker không đổi. Kiểm toán đối chiếu hash, đủ lưới,2.048 quyết định đã lưu, byte/header, tái sử dụng và các phép tính BD/resource đều qua.
+
+| Phương pháp, cùng64 ảnh mới | H.264 | H.265 |
+|---|---:|---:|
+| A2 shortlist + guard cũ | −7,53% | Không xác định: không đơn điệu |
+| Toàn21 bộ lọc + guard cũ | −5,37% | −9,82% |
+| Critic A4 đã khóa | **−8,21%** | **−11,89%** |
+
+**Chưa đạt−15%.** Cả hai đường critic tính được BD, nhưng điều kiện mở TEST cũng thất bại: utility H.264−0,11292 và H.265−0,06140, đều chưa thấp hơn log(.85)=−0,16252. Utility này không phải BD-rate. Không chỉnh mô hình/ngưỡng trên64 ảnh để gọi lại đó là xác nhận độc lập;512 ảnh TEST chưa đánh giá. Chưa có khoảng tin cậy BD cho phép đo64 ảnh này.
+
+Kaggle chạy774,53 giây trên2 T4. Có10.538 lần encode và10.538 decode thật, gồm2 lượt lặp;10.499 forward detector trên bản giải mã,64 trên nguồn và512 forward controller A2. Các hàng trùng packet/pixel được ghi riêng;10.752 hàng logic không phải10.752 mẫu độc lập. Chi phí CPU phía gửi: tạo đặc trưng35,73 giây, critic0,47 giây, chọn/lưu0,33 giây; không cộng các timer lồng nhau. Tổng byte truyền luôn gồm40 byte header/gói.
+
+OT A5 đã qua23 kiểm thử tổng hợp và review độc lập, đang chạy Kaggle CPU. Nó kiểm tra bộ chọn theo log-bitrate cộng tổn hại HOTA nguồn, chỉ chọn lambda trên FIT rồi khóa trước một lần calibration cũ. Job này không mở TEST. AutoResearchClaw đã có phản biện A4; lượt phản biện A5 chưa thành công do lỗi khởi động ACP, không tính là phản biện hoàn thành.

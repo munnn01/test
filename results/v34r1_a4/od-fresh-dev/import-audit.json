@@ -1,0 +1,24 @@
+{
+  "complete": true,
+  "scope": "saved source/model/hash locks, complete rows, reuse/cost counts,2048 decision lookups, paid-rate/BD/resource arithmetic; no local real model, critic inference, codec or GT scoring",
+  "archive_sha256": "d98dd296a904152ed6252d258d4e2706c05de77d190843d1a13f830be6c78ee9",
+  "archive_bytes": 35116009,
+  "logical_rows": 10752,
+  "selected_rows_checked": 2048,
+  "actual_encodes": 10538,
+  "actual_decodes": 10538,
+  "decoded_task_model_forwards": 10499,
+  "source_task_model_forwards": 64,
+  "a2_controller_forwards": 512,
+  "cloud_wall_seconds": 774.5311794281006,
+  "resource_gate": {
+    "objective_is_bd_rate": false,
+    "utility": {
+      "h264": -0.11292064302359173,
+      "h265": -0.06140350376942991
+    },
+    "frozen_limit": -0.16251892949777494,
+    "eligible_for_test": false
+  },
+  "test_scored": false
+}
