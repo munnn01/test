@@ -29,3 +29,12 @@ Kaggle CPU chạy21 kiểm thử và phát lại cấu hình đã khóa, không 
 | A4 guard32 khung, ngưỡng.02 | −8,23% | −9,94% |
 
 A4 cải thiện so với A2 trong phép đo này nhưng **chưa đạt −15%**. Cả hai đường FIT của A4 không đơn điệu nên BD-rate FIT không xác định. Calibration đã được tái sử dụng cho nghiên cứu, chưa là bằng chứng độc lập. TEST chưa được đánh giá.
+
+
+## A4 OD đã huấn luyện, chờ DEV mới
+
+Kaggle đã tạo21.504 nhãn marginal AP, với32 phép thay thế kiểm tra lại bằng COCOeval đầy đủ đều sai lệch0. Nhãn FIT và calibration được tính riêng. Hai mô hình ExtraTrees chỉ học từ64 ảnh FIT;302 đặc trưng phía gửi không chứa GT hay ID. Lần huấn luyện thành công chạy22 kiểm thử, hoàn tất trong171,42 giây. Lần đầu lỗi chuẩn bị thư mục trước khi huấn luyện đã được lưu riêng.
+
+Chính sách khóa là ExtraTrees depth10,128 cây, ngưỡng0,005. Hai bản xuất JSON khớp dự đoán sklearn trên toàn21.504 hàng với sai lệch tối đa5,6×10⁻¹⁷. Kiểm toán tệp và7.168 quyết định đã lưu đều khớp; không chạy lại mô hình trên laptop.
+
+Trên calibration tái sử dụng, BD-rate H.264 **không xác định** vì anchor không đơn điệu; H.265 **−11,93%**, chưa đạt−15%. Mục tiêu gần đúng dùng để chọn mô hình là−0,26388, **không phải BD-rate**. Đã khóa mô hình/ngưỡng/hash và chuẩn bị kiểm chứng một lần trên64 ảnh DEV mới với đúng QP30/35/40/45; chưa suy luận hoặc đánh giá TEST512.

@@ -1,0 +1,18 @@
+{
+  "complete": true,
+  "scope": "saved file/model hashes, FIT IDs, full saved-prediction grid,7168 threshold/paid-byte lookups and utility/BD arithmetic; no local forest prediction, training, codec, task model or GT scoring",
+  "archive_sha256": "517cbaada33bbca88ff0492ceda9a9860d00a26cf269ae4ef0d62247b67855c3",
+  "archive_bytes": 803977,
+  "saved_prediction_rows": 21504,
+  "selection_rows_checked": 7168,
+  "cloud_wall_seconds": 171.41747212409973,
+  "training_analysis_seconds": 147.599259362,
+  "selected": {
+    "kind": "risk_forest",
+    "model": "extra_trees_depth10",
+    "threshold": 0.005,
+    "model_sha256": "b552f71241907aeee847f8f755574cfbb507f96c0dc9e02367d15422451d8ae3"
+  },
+  "test_scored": false,
+  "fresh_dev64_scored": false
+}

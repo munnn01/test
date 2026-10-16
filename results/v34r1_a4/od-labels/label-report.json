@@ -1,0 +1,288 @@
+{
+  "scope": "cohort-dependent one-image replacement labels for training/development only; not additive joint AP damages or intrinsic image scores",
+  "grid": {
+    "images": 128,
+    "rows": 21504,
+    "profiles": 21,
+    "qps": [
+      30,
+      35,
+      40,
+      45
+    ],
+    "codecs": [
+      "h264",
+      "h265"
+    ]
+  },
+  "annotation_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+  "parent_publication_manifest_sha256": "43678006e290a6f5bba4716fbf6d659df627d5b7011c7d2f540fd9dffe824cd9",
+  "label_sha256": "3ea4fa20a3b37bd3546327ee0383b75a9f8b7570a484c0f9c58fb4c43ec38924",
+  "fit_images": 64,
+  "calibration_images": 64,
+  "separate_fit_calibration_teachers": true,
+  "full_official_parity_checks": [
+    {
+      "split": "fit",
+      "codec": "h264",
+      "qp": 30,
+      "image_id": 802,
+      "profile": 14,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "fit",
+      "codec": "h264",
+      "qp": 30,
+      "image_id": 577584,
+      "profile": 20,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "fit",
+      "codec": "h264",
+      "qp": 35,
+      "image_id": 802,
+      "profile": 14,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "fit",
+      "codec": "h264",
+      "qp": 35,
+      "image_id": 577584,
+      "profile": 20,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "fit",
+      "codec": "h264",
+      "qp": 40,
+      "image_id": 802,
+      "profile": 14,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "fit",
+      "codec": "h264",
+      "qp": 40,
+      "image_id": 577584,
+      "profile": 20,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "fit",
+      "codec": "h264",
+      "qp": 45,
+      "image_id": 802,
+      "profile": 14,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "fit",
+      "codec": "h264",
+      "qp": 45,
+      "image_id": 577584,
+      "profile": 20,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "fit",
+      "codec": "h265",
+      "qp": 30,
+      "image_id": 802,
+      "profile": 14,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "fit",
+      "codec": "h265",
+      "qp": 30,
+      "image_id": 577584,
+      "profile": 20,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "fit",
+      "codec": "h265",
+      "qp": 35,
+      "image_id": 802,
+      "profile": 14,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "fit",
+      "codec": "h265",
+      "qp": 35,
+      "image_id": 577584,
+      "profile": 20,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "fit",
+      "codec": "h265",
+      "qp": 40,
+      "image_id": 802,
+      "profile": 14,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "fit",
+      "codec": "h265",
+      "qp": 40,
+      "image_id": 577584,
+      "profile": 20,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "fit",
+      "codec": "h265",
+      "qp": 45,
+      "image_id": 802,
+      "profile": 14,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "fit",
+      "codec": "h265",
+      "qp": 45,
+      "image_id": 577584,
+      "profile": 20,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "validation",
+      "codec": "h264",
+      "qp": 30,
+      "image_id": 5037,
+      "profile": 14,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "validation",
+      "codec": "h264",
+      "qp": 30,
+      "image_id": 579970,
+      "profile": 20,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "validation",
+      "codec": "h264",
+      "qp": 35,
+      "image_id": 5037,
+      "profile": 14,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "validation",
+      "codec": "h264",
+      "qp": 35,
+      "image_id": 579970,
+      "profile": 20,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "validation",
+      "codec": "h264",
+      "qp": 40,
+      "image_id": 5037,
+      "profile": 14,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "validation",
+      "codec": "h264",
+      "qp": 40,
+      "image_id": 579970,
+      "profile": 20,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "validation",
+      "codec": "h264",
+      "qp": 45,
+      "image_id": 5037,
+      "profile": 14,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "validation",
+      "codec": "h264",
+      "qp": 45,
+      "image_id": 579970,
+      "profile": 20,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "validation",
+      "codec": "h265",
+      "qp": 30,
+      "image_id": 5037,
+      "profile": 14,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "validation",
+      "codec": "h265",
+      "qp": 30,
+      "image_id": 579970,
+      "profile": 20,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "validation",
+      "codec": "h265",
+      "qp": 35,
+      "image_id": 5037,
+      "profile": 14,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "validation",
+      "codec": "h265",
+      "qp": 35,
+      "image_id": 579970,
+      "profile": 20,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "validation",
+      "codec": "h265",
+      "qp": 40,
+      "image_id": 5037,
+      "profile": 14,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "validation",
+      "codec": "h265",
+      "qp": 40,
+      "image_id": 579970,
+      "profile": 20,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "validation",
+      "codec": "h265",
+      "qp": 45,
+      "image_id": 5037,
+      "profile": 14,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "split": "validation",
+      "codec": "h265",
+      "qp": 45,
+      "image_id": 579970,
+      "profile": 20,
+      "absolute_ap_error": 0.0
+    }
+  ],
+  "unique_nonidentity_reaccumulations": 19833,
+  "new_encodes": 0,
+  "new_model_inferences": 0,
+  "test_scored": false,
+  "fresh_dev64_scored": false,
+  "wall_seconds": 693.7867319730001
+}

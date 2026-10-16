@@ -1,0 +1,11 @@
+{
+  "commit": "e4f2062f02e6c53b99419c6f9e57a1aafcafb24e",
+  "label_archive_sha256": "f74d6b9002d0ea96a31c955142a1723ddf08b8c5cd36cb44ade35049b5fabca1",
+  "test_scored": false,
+  "fresh_dev64_scored": false,
+  "new_encodes": 0,
+  "new_task_model_inferences": 0,
+  "mode": "critic_training",
+  "complete": true,
+  "wall_seconds": 171.41747212409973
+}

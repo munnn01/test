@@ -1,0 +1,81 @@
+[{"stream_name":"stdout","time":8.017562638,"data":"RUN /usr/bin/python3 -m pip install -q --no-deps numpy==2.1.3 scipy==1.16.3 pycocotools==2.0.11 scikit-learn==1.7.2 joblib==1.5.2 threadpoolctl==3.6.0\n"}
+,{"stream_name":"stdout","time":12.660375467,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.4/9.4 MB 56.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":12.69868464,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 308.4/308.4 kB 10.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":18.025817436,"data":"RUN /usr/bin/python3 -m unittest tests.test_v34r1_a4_risk tests.test_v34r1_a4_marginal_ap tests.test_v34r1_a4_cloud_record tests.test_v34r1_a4_rd_fit tests.test_v34r1_a3_core -v\n"}
+,{"stream_name":"stdout","time":18.457579249,"data":"test_features_ignore_labels_identifiers_and_private_provenance (tests.test_v34r1_a4_risk.RiskContracts.test_features_ignore_labels_identifiers_and_private_provenance) ... ok\n"}
+,{"stream_name":"stdout","time":18.458204178,"data":"test_paid_cap_identity_fallback_and_ties_are_independent_of_gt (tests.test_v34r1_a4_risk.RiskContracts.test_paid_cap_identity_fallback_and_ties_are_independent_of_gt) ... ok\n"}
+,{"stream_name":"stdout","time":18.458930881,"data":"test_portable_tree_uses_safe_indices_and_sklearn_float32_boundary (tests.test_v34r1_a4_risk.RiskContracts.test_portable_tree_uses_safe_indices_and_sklearn_float32_boundary) ... ok\n"}
+,{"stream_name":"stdout","time":18.5432831,"data":"test_multiple_categories_and_crowd_match_full_official_ap (tests.test_v34r1_a4_marginal_ap.MarginalAPContracts.test_multiple_categories_and_crowd_match_full_official_ap) ... ok\n"}
+,{"stream_name":"stdout","time":18.546244573,"data":"test_negative_images_have_a_defined_marginal_false_positive_cost (tests.test_v34r1_a4_marginal_ap.MarginalAPContracts.test_negative_images_have_a_defined_marginal_false_positive_cost) ... ok\n"}
+,{"stream_name":"stdout","time":18.568028255,"data":"test_stitch_matches_full_official_evaluation_and_captures_global_score_order (tests.test_v34r1_a4_marginal_ap.MarginalAPContracts.test_stitch_matches_full_official_evaluation_and_captures_global_score_order) ... ok\n"}
+,{"stream_name":"stdout","time":18.571006524,"data":"test_teacher_does_not_mutate_cached_anchor_or_candidate_predictions (tests.test_v34r1_a4_marginal_ap.MarginalAPContracts.test_teacher_does_not_mutate_cached_anchor_or_candidate_predictions) ... ok\n"}
+,{"stream_name":"stdout","time":18.575683,"data":"test_archive_extract_creates_absent_parents_and_blocks_escape_or_overwrite (tests.test_v34r1_a4_cloud_record.CloudRecordContracts.test_archive_extract_creates_absent_parents_and_blocks_escape_or_overwrite) ... ok\n"}
+,{"stream_name":"stdout","time":18.577927074,"data":"test_artifact_lookup_skips_media_datasets_and_rejects_ambiguous_notebooks (tests.test_v34r1_a4_cloud_record.CloudRecordContracts.test_artifact_lookup_skips_media_datasets_and_rejects_ambiguous_notebooks) ... ok\n"}
+,{"stream_name":"stdout","time":18.57836238,"data":"test_changed_fresh_reservation_cannot_be_silently_rebound (tests.test_v34r1_a4_cloud_record.CloudRecordContracts.test_changed_fresh_reservation_cannot_be_silently_rebound) ... ok\n"}
+,{"stream_name":"stdout","time":18.580313068,"data":"test_existing_output_is_preserved_and_success_omits_gt_from_bundle (tests.test_v34r1_a4_cloud_record.CloudRecordContracts.test_existing_output_is_preserved_and_success_omits_gt_from_bundle) ... A4_CLOUD_STATUS {\"test_scored\": false, \"complete\": true, \"wall_seconds\": 0.00019288063049316406}\n"}
+,{"stream_name":"stdout","time":18.58116177,"data":"ok\n"}
+,{"stream_name":"stdout","time":18.583371105,"data":"test_failed_setup_records_error_and_available_logs_without_masking_original (tests.test_v34r1_a4_cloud_record.CloudRecordContracts.test_failed_setup_records_error_and_available_logs_without_masking_original) ... A4_CLOUD_STATUS {\"commit\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"test_scored\": false, \"complete\": false, \"error_type\": \"RuntimeError\", \"error\": \"parent hash mismatch\", \"wall_seconds\": 4.482269287109375e-05}\n"}
+,{"stream_name":"stdout","time":18.584205103,"data":"ok\n"}
+,{"stream_name":"stdout","time":18.586564002,"data":"test_tracker_parity_rejects_changed_association_or_missing_output (tests.test_v34r1_a4_cloud_record.CloudRecordContracts.test_tracker_parity_rejects_changed_association_or_missing_output) ... ok\n"}
+,{"stream_name":"stdout","time":18.588028574,"data":"test_identity_fallback_and_stable_ties (tests.test_v34r1_a4_rd_fit.RDFitContracts.test_identity_fallback_and_stable_ties) ... ok\n"}
+,{"stream_name":"stdout","time":18.588437576,"data":"test_nonmonotone_interior_does_not_become_a_repaired_bd_curve (tests.test_v34r1_a4_rd_fit.RDFitContracts.test_nonmonotone_interior_does_not_become_a_repaired_bd_curve) ... ok\n"}
+,{"stream_name":"stdout","time":18.588866717,"data":"test_rate_quality_tradeoff_replaces_arbitrary_same_qp_quality_gate (tests.test_v34r1_a4_rd_fit.RDFitContracts.test_rate_quality_tradeoff_replaces_arbitrary_same_qp_quality_gate) ... ok\n"}
+,{"stream_name":"stdout","time":18.589263168,"data":"test_rejects_nonfinite_partial_or_invalid_endpoint_tables (tests.test_v34r1_a4_rd_fit.RDFitContracts.test_rejects_nonfinite_partial_or_invalid_endpoint_tables) ... ok\n"}
+,{"stream_name":"stdout","time":18.592200601000002,"data":"test_complete_grid_cannot_drop_or_duplicate_a_profile_condition (tests.test_v34r1_a3_core.A3Contracts.test_complete_grid_cannot_drop_or_duplicate_a_profile_condition) ... ok\n"}
+,{"stream_name":"stdout","time":18.592611983,"data":"test_fit_threshold_uses_fit_metrics_only_with_predeclared_quality_limits (tests.test_v34r1_a3_core.A3Contracts.test_fit_threshold_uses_fit_metrics_only_with_predeclared_quality_limits) ... ok\n"}
+,{"stream_name":"stdout","time":18.598094837,"data":"test_fresh_split_excludes_every_old_id_and_groups_images (tests.test_v34r1_a3_core.A3Contracts.test_fresh_split_excludes_every_old_id_and_groups_images) ... ok\n"}
+,{"stream_name":"stdout","time":18.598475707,"data":"test_identity_required_and_nonfinite_thresholds_are_rejected (tests.test_v34r1_a3_core.A3Contracts.test_identity_required_and_nonfinite_thresholds_are_rejected) ... ok\n"}
+,{"stream_name":"stdout","time":18.598936407,"data":"test_source_selector_rejects_guard_damage_and_paid_rate_overrun (tests.test_v34r1_a3_core.A3Contracts.test_source_selector_rejects_guard_damage_and_paid_rate_overrun) ... ok\n"}
+,{"stream_name":"stdout","time":18.598956032,"data":"\n"}
+,{"stream_name":"stdout","time":18.598960839,"data":"----------------------------------------------------------------------\n"}
+,{"stream_name":"stdout","time":18.598965102,"data":"Ran 22 tests in 0.455s\n"}
+,{"stream_name":"stdout","time":18.598969212,"data":"\n"}
+,{"stream_name":"stdout","time":18.599032382,"data":"OK\n"}
+,{"stream_name":"stdout","time":18.635665604,"data":"RUN /usr/bin/python3 /kaggle/temp/adaptive_preprocessing/scripts/verify_v34r1_a3.py --root /kaggle/temp/adaptive_preprocessing/results/v34r1_a3/od-dev\n"}
+,{"stream_name":"stdout","time":24.28269149,"data":"{\n"}
+,{"stream_name":"stdout","time":24.28273356,"data":"  \"files\": 20,\n"}
+,{"stream_name":"stdout","time":24.282754928,"data":"  \"grid\": {\n"}
+,{"stream_name":"stdout","time":24.282759501,"data":"    \"images\": 128,\n"}
+,{"stream_name":"stdout","time":24.282764079,"data":"    \"rows\": 21504,\n"}
+,{"stream_name":"stdout","time":24.282766852,"data":"    \"profiles\": 21,\n"}
+,{"stream_name":"stdout","time":24.282769436,"data":"    \"qps\": [\n"}
+,{"stream_name":"stdout","time":24.282790316,"data":"      30,\n"}
+,{"stream_name":"stdout","time":24.28279303,"data":"      35,\n"}
+,{"stream_name":"stdout","time":24.282795359,"data":"      40,\n"}
+,{"stream_name":"stdout","time":24.282798158,"data":"      45\n"}
+,{"stream_name":"stdout","time":24.282801983,"data":"    ],\n"}
+,{"stream_name":"stdout","time":24.282805686,"data":"    \"codecs\": [\n"}
+,{"stream_name":"stdout","time":24.282809598,"data":"      \"h264\",\n"}
+,{"stream_name":"stdout","time":24.282813497,"data":"      \"h265\"\n"}
+,{"stream_name":"stdout","time":24.282817506,"data":"    ]\n"}
+,{"stream_name":"stdout","time":24.282821223,"data":"  },\n"}
+,{"stream_name":"stdout","time":24.282824728,"data":"  \"validation_gate\": {\n"}
+,{"stream_name":"stdout","time":24.28282888,"data":"    \"pseudo_ap\": false,\n"}
+,{"stream_name":"stdout","time":24.282833298,"data":"    \"pseudo_loss\": false\n"}
+,{"stream_name":"stdout","time":24.282837246,"data":"  },\n"}
+,{"stream_name":"stdout","time":24.282840856,"data":"  \"test_scored\": false,\n"}
+,{"stream_name":"stdout","time":24.282845008,"data":"  \"scope\": \"hashes, paid-byte sums, source selector decisions and BD arithmetic from measured COCO AP; no GT inference repeated\"\n"}
+,{"stream_name":"stdout","time":24.282849339,"data":"}\n"}
+,{"stream_name":"stdout","time":24.372738774,"data":"A4_LOCATE_NOTEBOOK_INPUT\n"}
+,{"stream_name":"stdout","time":24.436698231,"data":"RUN /usr/bin/python3 -u -m adaptive_vcm.v34r1_a4.od_train --labels /kaggle/temp/adaptive_preprocessing/data/a4-labels/a4-od-labels --annotation /kaggle/input/datasets/awsaf49/coco-2017-dataset/coco2017/annotations/instances_val2017.json --out /kaggle/working/a4-od-training\n"}
+,{"stream_name":"stdout","time":38.438732262,"data":"A4_FEATURE_PROGRESS 2048 21504\n"}
+,{"stream_name":"stdout","time":45.5212535,"data":"A4_FEATURE_PROGRESS 4096 21504\n"}
+,{"stream_name":"stdout","time":52.603917911,"data":"A4_FEATURE_PROGRESS 6144 21504\n"}
+,{"stream_name":"stdout","time":60.218115691,"data":"A4_FEATURE_PROGRESS 8192 21504\n"}
+,{"stream_name":"stdout","time":67.614934058,"data":"A4_FEATURE_PROGRESS 10240 21504\n"}
+,{"stream_name":"stdout","time":74.264649623,"data":"A4_FEATURE_PROGRESS 12288 21504\n"}
+,{"stream_name":"stdout","time":81.548172259,"data":"A4_FEATURE_PROGRESS 14336 21504\n"}
+,{"stream_name":"stdout","time":88.14859617,"data":"A4_FEATURE_PROGRESS 16384 21504\n"}
+,{"stream_name":"stdout","time":95.391739161,"data":"A4_FEATURE_PROGRESS 18432 21504\n"}
+,{"stream_name":"stdout","time":102.414452093,"data":"A4_FEATURE_PROGRESS 20480 21504\n"}
+,{"stream_name":"stdout","time":113.198939202,"data":"A4_MODEL_TRAINED extra_trees_depth6 5.551115123125783e-17\n"}
+,{"stream_name":"stdout","time":123.749069192,"data":"A4_MODEL_TRAINED extra_trees_depth10 5.551115123125783e-17\n"}
+,{"stream_name":"stdout","time":178.897142298,"data":"A4_OD_TRAINING_COMPLETE {\"policy\": {\"kind\": \"risk_forest\", \"model\": \"extra_trees_depth10\", \"threshold\": 0.005, \"model_sha256\": \"b552f71241907aeee847f8f755574cfbb507f96c0dc9e02367d15422451d8ae3\"}, \"seconds\": 147.599259362, \"test_scored\": false}\n"}
+,{"stream_name":"stdout","time":179.619399737,"data":"A4_CLOUD_STATUS {\"commit\": \"e4f2062f02e6c53b99419c6f9e57a1aafcafb24e\", \"label_archive_sha256\": \"f74d6b9002d0ea96a31c955142a1723ddf08b8c5cd36cb44ade35049b5fabca1\", \"test_scored\": false, \"fresh_dev64_scored\": false, \"new_encodes\": 0, \"new_task_model_inferences\": 0, \"mode\": \"critic_training\", \"complete\": true, \"wall_seconds\": 171.41747212409973}\n"}
+,{"stream_name":"stderr","time":182.296362406,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":182.296420898,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":182.675862232,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":182.675893864,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":183.790639487,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":185.123210457,"data":"[NbConvertApp] Writing 275461 bytes to __results__.html\n"}
+]

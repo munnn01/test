@@ -1,0 +1,25 @@
+{
+  "frozen_utc": "2026-10-16T05:10:08.919532+00:00",
+  "policy": {
+    "kind": "risk_forest",
+    "model": "extra_trees_depth10",
+    "threshold": 0.005,
+    "model_sha256": "b552f71241907aeee847f8f755574cfbb507f96c0dc9e02367d15422451d8ae3"
+  },
+  "calibration_reused": true,
+  "independent_validation": false,
+  "training_protocol_sha256": "4bd1b47c226bcebd596dc0f06b620c3093231345b78be7a3d1e57929b3e4dfc2",
+  "fresh_dev_id_protocol_sha256": "38dade92b7e5630403df2d638d658515526a103d6ec4124a45fb10adf38759b5",
+  "calibration_scales": {
+    "h264": 17.43905419970163,
+    "h265": 12.019113260362646
+  },
+  "fresh_dev_gate": {
+    "scope": "one fresh64-image DEV evaluation after exact model/policy hash lock, no refit or retuning on it",
+    "per_codec_objective": "mean log actual paid ratio + frozen CAL endpoint scale * mean four-QP AP drop",
+    "per_codec_max_utility_exclusive": -0.16251892949777494,
+    "decision": "both utilities strictly below log(.85) and complete provenance/block checks -> one frozen reserved512 TEST evaluation; otherwise no TEST. Identity cannot pass. Utility is a go/no-go resource rule, not a BD claim.",
+    "revision": "Any change after inspecting freshDEV consumes it as development and requires another untouched confirmation cohort. TEST never used for selection."
+  },
+  "test_scored": false
+}

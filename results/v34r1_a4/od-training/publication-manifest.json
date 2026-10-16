@@ -1,0 +1,89 @@
+{
+  "schema": "v34r1-A4-evidence-1",
+  "task": "od-risk-training",
+  "source_commit": "e4f2062f02e6c53b99419c6f9e57a1aafcafb24e",
+  "qps": [
+    30,
+    35,
+    40,
+    45
+  ],
+  "codecs": [
+    "h264",
+    "h265"
+  ],
+  "test_scored": false,
+  "fresh_dev64_scored": false,
+  "files": [
+    {
+      "path": "a4-training-analysis.log",
+      "bytes": 677,
+      "sha256": "b537f1a63bfdc6274d2e9d3d5378659b91864ed0a7ddba5a8d1c297ca27e7edb"
+    },
+    {
+      "path": "a4-training-block-tests.log",
+      "bytes": 4452,
+      "sha256": "db20ad3fd23be72ae41e697b1eddb2f3fa9565a46dd97467f28da4eb3c33c8b4"
+    },
+    {
+      "path": "cloud-status.json",
+      "bytes": 349,
+      "sha256": "d4f3324b4995eeba2861dfa5fc9d3e287b0c20f4b9cf4b3d27dba6ea9c84ca76"
+    },
+    {
+      "path": "extra_trees_depth10.json",
+      "bytes": 441039,
+      "sha256": "b552f71241907aeee847f8f755574cfbb507f96c0dc9e02367d15422451d8ae3"
+    },
+    {
+      "path": "extra_trees_depth6.json",
+      "bytes": 198447,
+      "sha256": "2cf76374aa189a1a0b3586f5f565ec27e0ad50d01ff36c475567f61b6ae41830"
+    },
+    {
+      "path": "frozen-policy.json",
+      "bytes": 1335,
+      "sha256": "9be1362dfe911a99063e5548c935e2bc5a695305ecd290b8f1e57caf88d7dc04"
+    },
+    {
+      "path": "import-audit.json",
+      "bytes": 769,
+      "sha256": "d37dfb557d67b6fbb5dd9e6598e3e6031b2a7cfd052a546ced50ebdf79890169"
+    },
+    {
+      "path": "kaggle-execution.log",
+      "bytes": 12204,
+      "sha256": "0ba892c884444b2de7391993689a9d7cc89163391299200652014e1bfb670b0c"
+    },
+    {
+      "path": "kaggle-metadata.json",
+      "bytes": 684,
+      "sha256": "20072b2ada9c6a7647f1d5cae05b7466475eb3f88303e2e661fdea4a9c5af481"
+    },
+    {
+      "path": "kaggle-notebook.py",
+      "bytes": 593,
+      "sha256": "844bebdd7b104710549806111057e4d21007842bb9581678a8356a1172e9c88d"
+    },
+    {
+      "path": "risk-predictions.json.gz",
+      "bytes": 503539,
+      "sha256": "33a1093c5963d71453b0177a749587ea570050718c959f7602cfe6e3956fa390"
+    },
+    {
+      "path": "trained-model-manifest.json",
+      "bytes": 8587,
+      "sha256": "c54d7e2a724a5e29c875d426e70f34a394e48f665abcb3914a59fc2e77e6269a"
+    },
+    {
+      "path": "training-report.json",
+      "bytes": 1061053,
+      "sha256": "39bc7c30eae442b93a361ae1db12a624e704940f41937883dcb18d5854966227"
+    },
+    {
+      "path": "v34r1-a4-od-training.tgz",
+      "bytes": 803977,
+      "sha256": "517cbaada33bbca88ff0492ceda9a9860d00a26cf269ae4ef0d62247b67855c3"
+    }
+  ]
+}

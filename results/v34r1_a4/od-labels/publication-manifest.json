@@ -1,0 +1,68 @@
+{
+  "schema": "v34r1-A4-evidence-1",
+  "task": "od-marginal-labels",
+  "source_commit": "5559fc7db276992828919d68ee68bb996eff7813",
+  "qps": [
+    30,
+    35,
+    40,
+    45
+  ],
+  "codecs": [
+    "h264",
+    "h265"
+  ],
+  "test_scored": false,
+  "files": [
+    {
+      "path": "a4-label-analysis.log",
+      "bytes": 884,
+      "sha256": "c8c77360334f04282e7efe4626070681b10bfb331ce428e4d39febbbb4cd0674"
+    },
+    {
+      "path": "a4-label-block-tests.log",
+      "bytes": 2665,
+      "sha256": "f3dc728984d2c058740ffb4959d28d1aef3e8db6764a330c4fb93e02039d630e"
+    },
+    {
+      "path": "cloud-status.json",
+      "bytes": 189,
+      "sha256": "587156b2a97dd6e17ddb1c0eb5175350667727449d0b154fccd914ee01ff3c5d"
+    },
+    {
+      "path": "import-audit.json",
+      "bytes": 479,
+      "sha256": "091bcfea069e22536a4fb70e665077a427d3490c3a88b8bdc156dc927ac0037f"
+    },
+    {
+      "path": "kaggle-execution.log",
+      "bytes": 9490,
+      "sha256": "644bd3aa9649246f735474c38b79cf59a59d66714538101156aec2c72325af72"
+    },
+    {
+      "path": "kaggle-metadata.json",
+      "bytes": 647,
+      "sha256": "cbc5b77c9bc5cbc03a7c887d4330c6f1b9577d4e373838336aef1525bae7abd1"
+    },
+    {
+      "path": "kaggle-notebook.py",
+      "bytes": 509,
+      "sha256": "50f056f58ec0e4f986be95d33ef387d1b2b19fe093ef756dacde2d01a600b00f"
+    },
+    {
+      "path": "label-report.json",
+      "bytes": 5874,
+      "sha256": "1861744fe8c4daf6e498e6cb6b752f97303ce938793f6e7b50572f978eb17ee5"
+    },
+    {
+      "path": "marginal-ap-labels.json.gz",
+      "bytes": 395477,
+      "sha256": "3ea4fa20a3b37bd3546327ee0383b75a9f8b7570a484c0f9c58fb4c43ec38924"
+    },
+    {
+      "path": "v34r1-a4-od-labels.tgz",
+      "bytes": 398323,
+      "sha256": "f74d6b9002d0ea96a31c955142a1723ddf08b8c5cd36cb44ade35049b5fabca1"
+    }
+  ]
+}

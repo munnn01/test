@@ -1,0 +1,12 @@
+{
+  "complete": true,
+  "scope": "full label grid/hash, saved anchor equality, scaled-AP arithmetic and32 saved parity residuals; no local GT or model scoring",
+  "label_rows": 21504,
+  "archive_sha256": "f74d6b9002d0ea96a31c955142a1723ddf08b8c5cd36cb44ade35049b5fabca1",
+  "archive_bytes": 398323,
+  "cloud_wall_seconds": 711.7154483795166,
+  "label_seconds": 693.7867319730001,
+  "official_parity_checks": 32,
+  "max_parity_residual": 0.0,
+  "test_scored": false
+}
