@@ -1,0 +1,3551 @@
+{
+  "frozen_utc": "2026-10-16T13:56:30.805411+00:00",
+  "scope": "this replay decisions before its GT scoring; no future or GT policy inputs",
+  "split": "fit",
+  "weight": 2,
+  "selected": [
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 1,
+      "codec": "h264",
+      "qp": 30,
+      "action": 16,
+      "bytes": 36447,
+      "source_hota": {
+        "HOTA": 0.6701438491226831,
+        "DetA": 0.5719062933368487,
+        "AssA": 0.8013721319174689
+      },
+      "identity_source_hota": {
+        "HOTA": 0.6661068364371449,
+        "DetA": 0.5640742052354203,
+        "AssA": 0.8019821131964368
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.4336902385306117,
+          -0.6016120079208787,
+          -0.23863288954544826,
+          -0.462246787941876
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.002211440541098897,
+          -0.004037012685538244,
+          0.051234710500286273,
+          0.03687132017147876
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 17,
+      "codec": "h264",
+      "qp": 30,
+      "action": 16,
+      "bytes": 37859,
+      "source_hota": {
+        "HOTA": 0.6227925345388022,
+        "DetA": 0.5520220080836975,
+        "AssA": 0.7144405385755005
+      },
+      "identity_source_hota": {
+        "HOTA": 0.6323325154969203,
+        "DetA": 0.5590987671191371,
+        "AssA": 0.7253363327277104
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.4159997904844479,
+          -0.5353869963946601,
+          -0.3094723825476353,
+          -0.46645597039354303
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.006585523769816692,
+          0.009539980958118033,
+          0.008561790488164855,
+          0.01763892893946073
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 33,
+      "codec": "h264",
+      "qp": 30,
+      "action": 16,
+      "bytes": 36825,
+      "source_hota": {
+        "HOTA": 0.6269369925051105,
+        "DetA": 0.5460598276202557,
+        "AssA": 0.7339667492289468
+      },
+      "identity_source_hota": {
+        "HOTA": 0.639437907785014,
+        "DetA": 0.5699210836185072,
+        "AssA": 0.7318459136846617
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.4697384591954924,
+          -0.5753032692504497,
+          -0.3491971420273197,
+          -0.5064914829922117
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.011646522733403053,
+          0.01250091527990349,
+          -0.0011747272023971966,
+          0.012998181276124399
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 49,
+      "codec": "h264",
+      "qp": 30,
+      "action": 16,
+      "bytes": 33635,
+      "source_hota": {
+        "HOTA": 0.6609538097072891,
+        "DetA": 0.5919368938258521,
+        "AssA": 0.750519933783866
+      },
+      "identity_source_hota": {
+        "HOTA": 0.6621391866335943,
+        "DetA": 0.5793544962691295,
+        "AssA": 0.769422180905053
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.4583711259054431,
+          -0.6473775307625004,
+          -0.31997529884120585,
+          -0.46338057393054866
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.003129925311768922,
+          0.0011853769263051595,
+          0.023086184621707306,
+          0.04660428924238347
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 1,
+      "codec": "h264",
+      "qp": 35,
+      "action": 16,
+      "bytes": 20470,
+      "source_hota": {
+        "HOTA": 0.6023088263686782,
+        "DetA": 0.49553922078285173,
+        "AssA": 0.7546416617976694
+      },
+      "identity_source_hota": {
+        "HOTA": 0.6051169838722233,
+        "DetA": 0.48829817156868505,
+        "AssA": 0.7718092264164949
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.39802297578873796,
+          -0.5159767298976515,
+          -0.25000431972075476,
+          -0.4367723436855182
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.01345148963256615,
+          0.002808157503545128,
+          0.017593545709287173,
+          -0.0027738396220549077
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 17,
+      "codec": "h264",
+      "qp": 35,
+      "action": 16,
+      "bytes": 21680,
+      "source_hota": {
+        "HOTA": 0.5587714959006154,
+        "DetA": 0.47787146669073566,
+        "AssA": 0.6735631604757831
+      },
+      "identity_source_hota": {
+        "HOTA": 0.5527539141791887,
+        "DetA": 0.4778813528104792,
+        "AssA": 0.6529255369154036
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.3483442644831576,
+          -0.49595216018558025,
+          -0.27340815643302774,
+          -0.37636851579243374
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.0016532102215370825,
+          -0.006017581721426635,
+          -0.00022877417862554594,
+          0.017571004120455425
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 33,
+      "codec": "h264",
+      "qp": 35,
+      "action": 16,
+      "bytes": 20608,
+      "source_hota": {
+        "HOTA": 0.563515471610351,
+        "DetA": 0.47584323930627714,
+        "AssA": 0.680835468757046
+      },
+      "identity_source_hota": {
+        "HOTA": 0.5734692928384432,
+        "DetA": 0.5025932974458819,
+        "AssA": 0.670815486457997
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.3239076996722693,
+          -0.5013255902901845,
+          -0.24807804738686423,
+          -0.40226931671868393
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.013903592741209558,
+          0.009953821228092186,
+          0.013721082251500705,
+          0.012021005174883914
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 49,
+      "codec": "h264",
+      "qp": 35,
+      "action": 16,
+      "bytes": 18945,
+      "source_hota": {
+        "HOTA": 0.5970918240530071,
+        "DetA": 0.5123506949234227,
+        "AssA": 0.7042174144039443
+      },
+      "identity_source_hota": {
+        "HOTA": 0.5919486016391189,
+        "DetA": 0.5014397668570115,
+        "AssA": 0.7114200953475839
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.3690214842514602,
+          -0.569879610631967,
+          -0.26560052441995935,
+          -0.3633956498632299
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.009098248395796649,
+          -0.005143222413888204,
+          0.015235925010161466,
+          0.043711204543621096
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 1,
+      "codec": "h264",
+      "qp": 40,
+      "action": 16,
+      "bytes": 12144,
+      "source_hota": {
+        "HOTA": 0.5562244721219816,
+        "DetA": 0.4089902687225301,
+        "AssA": 0.7955522010788942
+      },
+      "identity_source_hota": {
+        "HOTA": 0.5545823089850791,
+        "DetA": 0.39286361068555203,
+        "AssA": 0.8141477965969263
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.3285751282476963,
+          -0.46463526310055175,
+          -0.1816599230910863,
+          -0.2534104304290832
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.0030059189671495234,
+          -0.0016421631369024636,
+          0.03584058211783647,
+          0.04878885047256476
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 17,
+      "codec": "h264",
+      "qp": 40,
+      "action": 16,
+      "bytes": 13001,
+      "source_hota": {
+        "HOTA": 0.5139956564071761,
+        "DetA": 0.41069818011655557,
+        "AssA": 0.6700683858320963
+      },
+      "identity_source_hota": {
+        "HOTA": 0.5238197018146419,
+        "DetA": 0.4144797866198372,
+        "AssA": 0.6916312289435284
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.24355705915754722,
+          -0.39467442590850377,
+          -0.20768988259219284,
+          -0.3204611757021307
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.018290241355456982,
+          0.009824045407465731,
+          0.012386343411932899,
+          0.014507599281575079
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 33,
+      "codec": "h264",
+      "qp": 40,
+      "action": 16,
+      "bytes": 12582,
+      "source_hota": {
+        "HOTA": 0.48645423976146634,
+        "DetA": 0.40030568280014067,
+        "AssA": 0.6107835147741216
+      },
+      "identity_source_hota": {
+        "HOTA": 0.48987513856583537,
+        "DetA": 0.4054764133997425,
+        "AssA": 0.6119689919929477
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.24782673055533438,
+          -0.41303702663449227,
+          -0.20214158147405167,
+          -0.3508243773516545
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.020424078565745463,
+          0.0034208988043689104,
+          0.0064243188380762595,
+          -0.01470771498006318
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 49,
+      "codec": "h264",
+      "qp": 40,
+      "action": 16,
+      "bytes": 11587,
+      "source_hota": {
+        "HOTA": 0.48938377386506693,
+        "DetA": 0.39612680557008206,
+        "AssA": 0.6207376406658778
+      },
+      "identity_source_hota": {
+        "HOTA": 0.48404774266968664,
+        "DetA": 0.37356982920832277,
+        "AssA": 0.6402966238978124
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.3046047001310012,
+          -0.4735736351089001,
+          -0.16831504225097832,
+          -0.3109507466099461
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.007995168797194308,
+          -0.005336031195380286,
+          0.030356400974460462,
+          0.026976578586864974
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 1,
+      "codec": "h264",
+      "qp": 45,
+      "action": 16,
+      "bytes": 7159,
+      "source_hota": {
+        "HOTA": 0.49388508668341563,
+        "DetA": 0.31191179248052364,
+        "AssA": 0.8000793460994696
+      },
+      "identity_source_hota": {
+        "HOTA": 0.43838125900967917,
+        "DetA": 0.27732300946556343,
+        "AssA": 0.7109131912645827
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.31120442318271546,
+          -0.4994264959409828,
+          -0.2649123725692992,
+          -0.34986931717441727
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.03285939550186878,
+          -0.05550382767373652,
+          -0.03457237711700012,
+          -0.03507194353036569
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 17,
+      "codec": "h264",
+      "qp": 45,
+      "action": 16,
+      "bytes": 7811,
+      "source_hota": {
+        "HOTA": 0.44872979883616315,
+        "DetA": 0.2979401661190074,
+        "AssA": 0.6927385992582442
+      },
+      "identity_source_hota": {
+        "HOTA": 0.4395505050369997,
+        "DetA": 0.3103886200478043,
+        "AssA": 0.6371403038342013
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.19298970254034356,
+          -0.3348434586795491,
+          -0.12210065234248532,
+          -0.1747061505325857
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.00378867009989714,
+          -0.00917929379916349,
+          0.018573713347607712,
+          0.04101026130163177
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 33,
+      "codec": "h264",
+      "qp": 45,
+      "action": 16,
+      "bytes": 7589,
+      "source_hota": {
+        "HOTA": 0.37594129149740885,
+        "DetA": 0.2626705558789408,
+        "AssA": 0.5516207715152831
+      },
+      "identity_source_hota": {
+        "HOTA": 0.4296198330910502,
+        "DetA": 0.3085004934325587,
+        "AssA": 0.6115656502862655
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.161199457046005,
+          -0.23075152256511922,
+          -0.08760054189540153,
+          -0.1834131786486654
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.037331621272623794,
+          0.05367854159364127,
+          0.04255376723000115,
+          0.04138201072626746
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 49,
+      "codec": "h264",
+      "qp": 45,
+      "action": 16,
+      "bytes": 6932,
+      "source_hota": {
+        "HOTA": 0.375022775046678,
+        "DetA": 0.24790081952991158,
+        "AssA": 0.5794602662030803
+      },
+      "identity_source_hota": {
+        "HOTA": 0.36944844191802895,
+        "DetA": 0.22674535290679446,
+        "AssA": 0.6243899406953864
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.24215733670765363,
+          -0.38555355704716104,
+          -0.20491632715383665,
+          -0.217089858028174
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.0029866947126638843,
+          -0.005574333128649078,
+          -0.00795289110454267,
+          0.032789174924807374
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 1,
+      "codec": "h265",
+      "qp": 30,
+      "action": 16,
+      "bytes": 34120,
+      "source_hota": {
+        "HOTA": 0.6798266142846202,
+        "DetA": 0.5670925843112876,
+        "AssA": 0.830080059861803
+      },
+      "identity_source_hota": {
+        "HOTA": 0.6662493346851961,
+        "DetA": 0.5693614223283088,
+        "AssA": 0.7869812770062877
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.36286185243404523,
+          -0.6080135446071068,
+          -0.2809583493337735,
+          -0.45561162753965556
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.023622885236450952,
+          -0.013577279599424119,
+          0.039411261143741716,
+          0.04687207344671085
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 17,
+      "codec": "h265",
+      "qp": 30,
+      "action": 19,
+      "bytes": 36458,
+      "source_hota": {
+        "HOTA": 0.6230357453038169,
+        "DetA": 0.534348232273928,
+        "AssA": 0.7378034182804155
+      },
+      "identity_source_hota": {
+        "HOTA": 0.631754631215401,
+        "DetA": 0.5405222862836576,
+        "AssA": 0.7507277739299659
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.35943738492410854,
+          -0.5052101245216464,
+          -0.31352104504497075,
+          -0.5112265845417895
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.017335475848031523,
+          0.019271821737205097,
+          0.012944035134375476,
+          0.008718885911584096
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 19
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 33,
+      "codec": "h265",
+      "qp": 30,
+      "action": 16,
+      "bytes": 34491,
+      "source_hota": {
+        "HOTA": 0.6049735857977323,
+        "DetA": 0.5310448386912445,
+        "AssA": 0.6980430037465986
+      },
+      "identity_source_hota": {
+        "HOTA": 0.6100686308299795,
+        "DetA": 0.5598360688402997,
+        "AssA": 0.6749862712443901
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.3770270526763858,
+          -0.5653153860707868,
+          -0.29831380780803296,
+          -0.49529830600789226
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.019963177680227484,
+          0.005095045032247225,
+          0.02538862756731186,
+          0.019972739336329925
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 49,
+      "codec": "h265",
+      "qp": 30,
+      "action": 16,
+      "bytes": 31370,
+      "source_hota": {
+        "HOTA": 0.6062410829337351,
+        "DetA": 0.5498595324468938,
+        "AssA": 0.677997955316188
+      },
+      "identity_source_hota": {
+        "HOTA": 0.627449831973021,
+        "DetA": 0.5758527398238618,
+        "AssA": 0.692495655713187
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.4465782236639914,
+          -0.5787723594129335,
+          -0.29161895934742665,
+          -0.5117755085929445
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.0036291108861904453,
+          0.021208749039285824,
+          0.03953572569701391,
+          0.030152729813414436
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 1,
+      "codec": "h265",
+      "qp": 35,
+      "action": 16,
+      "bytes": 19299,
+      "source_hota": {
+        "HOTA": 0.6146733997874332,
+        "DetA": 0.4931805713084122,
+        "AssA": 0.7905789145399118
+      },
+      "identity_source_hota": {
+        "HOTA": 0.6027411063605224,
+        "DetA": 0.4968522269677229,
+        "AssA": 0.7496100149946565
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.36082466561131454,
+          -0.5201279866400836,
+          -0.26313811727081754,
+          -0.36897320974030134
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.007654250554872677,
+          -0.011932293426910823,
+          0.008125183275990988,
+          0.030201635232374735
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 17,
+      "codec": "h265",
+      "qp": 35,
+      "action": 16,
+      "bytes": 20326,
+      "source_hota": {
+        "HOTA": 0.5848238194012222,
+        "DetA": 0.47593576880530597,
+        "AssA": 0.7342631958067583
+      },
+      "identity_source_hota": {
+        "HOTA": 0.5721654873865416,
+        "DetA": 0.4945568350913576,
+        "AssA": 0.6786905029937433
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.3708709275886088,
+          -0.49907688092078284,
+          -0.25974065777919364,
+          -0.39600554198817983
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.021424185689311814,
+          -0.012658332014680584,
+          0.0059481698453132115,
+          0.014161399490438376
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 33,
+      "codec": "h265",
+      "qp": 35,
+      "action": 16,
+      "bytes": 19615,
+      "source_hota": {
+        "HOTA": 0.5855587583565345,
+        "DetA": 0.4851611051833585,
+        "AssA": 0.7233479677113127
+      },
+      "identity_source_hota": {
+        "HOTA": 0.5709986773392733,
+        "DetA": 0.4776115813404968,
+        "AssA": 0.6974351038034903
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.3264668286311756,
+          -0.5204971106404882,
+          -0.288577032720207,
+          -0.41810730978809724
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.010213468554045368,
+          -0.01456008101726114,
+          -0.005093863236923735,
+          0.004907529754309636
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 49,
+      "codec": "h265",
+      "qp": 35,
+      "action": 16,
+      "bytes": 17749,
+      "source_hota": {
+        "HOTA": 0.5762660288385627,
+        "DetA": 0.5055889125386254,
+        "AssA": 0.676455590688775
+      },
+      "identity_source_hota": {
+        "HOTA": 0.581857405554059,
+        "DetA": 0.5019115319084901,
+        "AssA": 0.6949155498124994
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.37038753074747927,
+          -0.5149846076565734,
+          -0.27011140868695294,
+          -0.39567133488178
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.0009169273357234609,
+          0.005591376715496255,
+          0.008568993325844598,
+          0.026087687029617168
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 1,
+      "codec": "h265",
+      "qp": 40,
+      "action": 16,
+      "bytes": 11656,
+      "source_hota": {
+        "HOTA": 0.5573166117838937,
+        "DetA": 0.39253792611275024,
+        "AssA": 0.8175349946443365
+      },
+      "identity_source_hota": {
+        "HOTA": 0.578908115020367,
+        "DetA": 0.4420822564332578,
+        "AssA": 0.7772749674292785
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.1526348911140311,
+          -0.3968526127608841,
+          -0.09473971231354797,
+          -0.20257490056762212
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.07282816454288255,
+          0.021591503236473297,
+          0.07126858509263623,
+          0.07509242454488241
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 17,
+      "codec": "h265",
+      "qp": 40,
+      "action": 16,
+      "bytes": 12365,
+      "source_hota": {
+        "HOTA": 0.5254215964574115,
+        "DetA": 0.3999733811545117,
+        "AssA": 0.7114965000172834
+      },
+      "identity_source_hota": {
+        "HOTA": 0.5215880277504127,
+        "DetA": 0.4010375362439456,
+        "AssA": 0.6925986509968609
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.22986880130180432,
+          -0.4023178131755436,
+          -0.20964886030764254,
+          -0.29994191770617457
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.02097625521371682,
+          -0.0038335687069988023,
+          0.005400240961437874,
+          0.018483214410822568
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 33,
+      "codec": "h265",
+      "qp": 40,
+      "action": 16,
+      "bytes": 11867,
+      "source_hota": {
+        "HOTA": 0.506034581799193,
+        "DetA": 0.3970045767988873,
+        "AssA": 0.6721308666802249
+      },
+      "identity_source_hota": {
+        "HOTA": 0.4998934402554777,
+        "DetA": 0.39466566477479903,
+        "AssA": 0.6627946256600935
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.3239190569716866,
+          -0.43895293810409497,
+          -0.17437525529200687,
+          -0.3002947669556516
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.011938855944348958,
+          -0.006141141543715256,
+          0.026023064764486792,
+          0.02331894274520141
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 49,
+      "codec": "h265",
+      "qp": 40,
+      "action": 16,
+      "bytes": 10884,
+      "source_hota": {
+        "HOTA": 0.49607641338286734,
+        "DetA": 0.39595338521467993,
+        "AssA": 0.6370360770026926
+      },
+      "identity_source_hota": {
+        "HOTA": 0.5107543213575271,
+        "DetA": 0.3962391893888318,
+        "AssA": 0.6788029149636197
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.28529052142298916,
+          -0.4220193861038116,
+          -0.14749018915294515,
+          -0.23372541045284456
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.010555640201652006,
+          0.014677907974659732,
+          0.04773823294270996,
+          0.06740612415772029
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 1,
+      "codec": "h265",
+      "qp": 45,
+      "action": 16,
+      "bytes": 7551,
+      "source_hota": {
+        "HOTA": 0.44853274532297477,
+        "DetA": 0.30824022057031863,
+        "AssA": 0.7242128349936581
+      },
+      "identity_source_hota": {
+        "HOTA": 0.4458694847536952,
+        "DetA": 0.28447702020811966,
+        "AssA": 0.7200566583897948
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.23604500243805215,
+          -0.3239126762790048,
+          -0.0991105985634822,
+          -0.1508326246570436
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.012421767314738874,
+          -0.0026632605692795686,
+          0.03645109059974905,
+          0.0457691574833039
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 17,
+      "codec": "h265",
+      "qp": 45,
+      "action": 16,
+      "bytes": 7756,
+      "source_hota": {
+        "HOTA": 0.35701440397527867,
+        "DetA": 0.25946615803034107,
+        "AssA": 0.5212474869815619
+      },
+      "identity_source_hota": {
+        "HOTA": 0.3638126460233139,
+        "DetA": 0.26521047905607315,
+        "AssA": 0.5276912402973407
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.1565459430371549,
+          -0.294536459823808,
+          -0.188671671631409,
+          -0.18454393806171485
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.020034806934052796,
+          0.006798242048035252,
+          -0.009005450602925125,
+          0.024478116109635017
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 33,
+      "codec": "h265",
+      "qp": 45,
+      "action": 16,
+      "bytes": 7627,
+      "source_hota": {
+        "HOTA": 0.3418210157925503,
+        "DetA": 0.22250354840066985,
+        "AssA": 0.5356301009368308
+      },
+      "identity_source_hota": {
+        "HOTA": 0.33825235012785565,
+        "DetA": 0.21512414770046728,
+        "AssA": 0.5547659316179512
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.24059338325923293,
+          -0.32156614315581694,
+          -0.15471896458809975,
+          -0.2041756267746228
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.013133380132233974,
+          -0.0035686656646947146,
+          0.005832583712614747,
+          0.015080025257429464
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 49,
+      "codec": "h265",
+      "qp": 45,
+      "action": 16,
+      "bytes": 7035,
+      "source_hota": {
+        "HOTA": 0.36609605241568793,
+        "DetA": 0.2220455495032658,
+        "AssA": 0.6206208805044241
+      },
+      "identity_source_hota": {
+        "HOTA": 0.35137246886266044,
+        "DetA": 0.21403382492245598,
+        "AssA": 0.5881053834543943
+      },
+      "candidate_actions": [
+        0,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.24739812750906448,
+          -0.35888896058642866,
+          -0.1368455011143951,
+          -0.16584813285164116
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.01746677438535449,
+          -0.014723583553027497,
+          0.011455248960659858,
+          0.037025273432490735
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_action": 16
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 1,
+      "codec": "h264",
+      "qp": 30,
+      "action": 19,
+      "bytes": 105361,
+      "source_hota": {
+        "HOTA": 0.7493973437313715,
+        "DetA": 0.8040890483263101,
+        "AssA": 0.7055663799043577
+      },
+      "identity_source_hota": {
+        "HOTA": 0.7498069042457247,
+        "DetA": 0.7923199299666177,
+        "AssA": 0.712620832593795
+      },
+      "candidate_actions": [
+        0,
+        4,
+        3,
+        2,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.05181202362689849,
+          0.018559531769264698,
+          0.13035916252736093,
+          0.09581180180094558,
+          0.009996471147820606,
+          -0.1450239042621127,
+          -0.19438874416652582
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.01133277870214866,
+          0.016372696870392,
+          0.059701127498881235,
+          0.0366265305601946,
+          0.015197358725983379,
+          -0.006130375687540268,
+          0.0004095605143532577
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7
+        ],
+        "selected_action": 19
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 17,
+      "codec": "h264",
+      "qp": 30,
+      "action": 19,
+      "bytes": 125625,
+      "source_hota": {
+        "HOTA": 0.7392146015795018,
+        "DetA": 0.7482882664123122,
+        "AssA": 0.7352615503140606
+      },
+      "identity_source_hota": {
+        "HOTA": 0.7530420740807099,
+        "DetA": 0.776496319484972,
+        "AssA": 0.7357144668837328
+      },
+      "candidate_actions": [
+        0,
+        4,
+        3,
+        2,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.007857026050520808,
+          4.514374184961395e-05,
+          0.07648806420958046,
+          0.05368746026361335,
+          0.0058729858709122874,
+          -0.09835139790098195,
+          -0.1496657368582763
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.0024048468423153446,
+          -0.0003006612713949419,
+          0.02999894461428132,
+          0.013616724755454945,
+          0.0009935801174076886,
+          0.00955667541811156,
+          0.013827472501208082
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          6,
+          7
+        ],
+        "selected_action": 19
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 33,
+      "codec": "h264",
+      "qp": 30,
+      "action": 19,
+      "bytes": 117095,
+      "source_hota": {
+        "HOTA": 0.6956731171529738,
+        "DetA": 0.6563284535939535,
+        "AssA": 0.7449297758434311
+      },
+      "identity_source_hota": {
+        "HOTA": 0.6807774893692737,
+        "DetA": 0.6496470418561567,
+        "AssA": 0.7199163957621113
+      },
+      "candidate_actions": [
+        0,
+        4,
+        3,
+        2,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.04381548912695481,
+          -0.015755482697327534,
+          0.02509930521816203,
+          -0.022301886181055636,
+          -0.017797205526635527,
+          -0.0751788979800186,
+          -0.19559442266776464
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.018338907050702957,
+          -0.009001560637614814,
+          0.007997750006384363,
+          -0.021164887147091194,
+          -0.014489031462584845,
+          0.019770541315830448,
+          -0.014895627783700016
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          6,
+          7
+        ],
+        "selected_action": 19
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 49,
+      "codec": "h264",
+      "qp": 30,
+      "action": 19,
+      "bytes": 115025,
+      "source_hota": {
+        "HOTA": 0.6287103002426573,
+        "DetA": 0.6262472585153037,
+        "AssA": 0.6392311503548308
+      },
+      "identity_source_hota": {
+        "HOTA": 0.6101181620556437,
+        "DetA": 0.6255935976225567,
+        "AssA": 0.6033929047224266
+      },
+      "candidate_actions": [
+        0,
+        4,
+        3,
+        9,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.08744890315377206,
+          -0.07654825977079233,
+          -0.07216665056403246,
+          -0.04642325206711881,
+          -0.03256233112535174,
+          -0.12053939194730841,
+          -0.17950005499488694
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.042437138630279314,
+          -0.036846938292053655,
+          -0.03627557135936055,
+          -0.026245002374678084,
+          -0.020093404921511904,
+          -0.01193021350819612,
+          -0.01859213818701355
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          6,
+          7
+        ],
+        "selected_action": 19
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 1,
+      "codec": "h264",
+      "qp": 35,
+      "action": 19,
+      "bytes": 62277,
+      "source_hota": {
+        "HOTA": 0.7122263016916953,
+        "DetA": 0.7022587957065166,
+        "AssA": 0.7304630522324933
+      },
+      "identity_source_hota": {
+        "HOTA": 0.6947291975083708,
+        "DetA": 0.7094818071643969,
+        "AssA": 0.684180049363837
+      },
+      "candidate_actions": [
+        0,
+        4,
+        3,
+        2,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.1222996098980894,
+          -0.04659792267437765,
+          0.00402004469188866,
+          -0.0745424351266176,
+          -0.08260499809474807,
+          -0.10442140586699518,
+          -0.16341638798095598
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.05373035297984985,
+          -0.019478496629157127,
+          -0.004966818733713629,
+          -0.0563147394998319,
+          -0.052950651983198926,
+          -0.008049190714324528,
+          -0.017497104183324508
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          6,
+          7
+        ],
+        "selected_action": 19
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 17,
+      "codec": "h264",
+      "qp": 35,
+      "action": 19,
+      "bytes": 75321,
+      "source_hota": {
+        "HOTA": 0.6608337710579155,
+        "DetA": 0.6293103633048074,
+        "AssA": 0.7010415879053884
+      },
+      "identity_source_hota": {
+        "HOTA": 0.7112338042341113,
+        "DetA": 0.6767641955500334,
+        "AssA": 0.7528877648728419
+      },
+      "candidate_actions": [
+        0,
+        4,
+        3,
+        2,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          0.007467545330600459,
+          0.025085941429526804,
+          0.062432045820912635,
+          0.0776316047287242,
+          0.09667642164969331,
+          0.016137764215679973,
+          -0.027978676716166773
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.006689746177856781,
+          0.011464448046957898,
+          0.02252035280092113,
+          0.022628587868249395,
+          0.03766769026851602,
+          0.04791809931894486,
+          0.05040003317619579
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          6,
+          7
+        ],
+        "selected_action": 19
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 33,
+      "codec": "h264",
+      "qp": 35,
+      "action": 19,
+      "bytes": 71432,
+      "source_hota": {
+        "HOTA": 0.6197044609431988,
+        "DetA": 0.5884653825733969,
+        "AssA": 0.6613183238124071
+      },
+      "identity_source_hota": {
+        "HOTA": 0.623868135267617,
+        "DetA": 0.618458051674959,
+        "AssA": 0.6374097180934979
+      },
+      "candidate_actions": [
+        0,
+        4,
+        3,
+        9,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.05710488316108919,
+          -0.02108910028056233,
+          0.02168191993759665,
+          0.010093898286067039,
+          -0.007477621447018155,
+          -0.03210327529827885,
+          -0.10670180834424671
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.02585614041843598,
+          -0.012244924864552309,
+          0.005639756151364694,
+          -0.004586379197451307,
+          -0.01538767975870925,
+          0.02511590039750833,
+          0.004163674324418221
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          6,
+          7
+        ],
+        "selected_action": 19
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 49,
+      "codec": "h264",
+      "qp": 35,
+      "action": 19,
+      "bytes": 71716,
+      "source_hota": {
+        "HOTA": 0.6024864568855343,
+        "DetA": 0.5728436971152575,
+        "AssA": 0.641437920905843
+      },
+      "identity_source_hota": {
+        "HOTA": 0.5764477118647321,
+        "DetA": 0.5638285630015133,
+        "AssA": 0.5999121095342946
+      },
+      "candidate_actions": [
+        0,
+        4,
+        3,
+        9,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.09327354854833186,
+          -0.05026272853197957,
+          -0.0029158753173175117,
+          0.03819807836902741,
+          -0.06222082602573123,
+          -0.12568000893999992,
+          -0.14964656202513313
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.045402104126659903,
+          -0.027024923386347544,
+          -0.003855237093141284,
+          0.014347198677601147,
+          -0.036575841862938385,
+          -0.030784022296818092,
+          -0.026038745020802168
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          6,
+          7
+        ],
+        "selected_action": 19
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 1,
+      "codec": "h264",
+      "qp": 40,
+      "action": 17,
+      "bytes": 41616,
+      "source_hota": {
+        "HOTA": 0.698379189933042,
+        "DetA": 0.6736310900679183,
+        "AssA": 0.7281232340312849
+      },
+      "identity_source_hota": {
+        "HOTA": 0.6201277711281442,
+        "DetA": 0.6226706868458717,
+        "AssA": 0.6289626350402402
+      },
+      "candidate_actions": [
+        0,
+        3,
+        2,
+        9,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.12342941453727622,
+          -0.12743597199631235,
+          0.08249814722988613,
+          0.014774064187170328,
+          -0.0355560238876506,
+          -0.2201984791143074,
+          -0.2086627456491837
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.06129742499244761,
+          -0.0660012233842241,
+          0.034408163920571444,
+          -0.007232658173624507,
+          -0.029157463725756005,
+          -0.07825141880489783,
+          -0.05703689507716703
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          6,
+          7
+        ],
+        "selected_action": 17
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 17,
+      "codec": "h264",
+      "qp": 40,
+      "action": 19,
+      "bytes": 48597,
+      "source_hota": {
+        "HOTA": 0.6824676789024289,
+        "DetA": 0.6444760102104405,
+        "AssA": 0.7281866884307461
+      },
+      "identity_source_hota": {
+        "HOTA": 0.6382126918409755,
+        "DetA": 0.5788981069771979,
+        "AssA": 0.7096433924999447
+      },
+      "candidate_actions": [
+        0,
+        3,
+        2,
+        9,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.05159768482228926,
+          -0.010175777927624845,
+          -0.07780339020751174,
+          -0.007541846777476203,
+          -0.022674550236187686,
+          -0.10044200296779292,
+          -0.19189310546220154
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.022083084164242428,
+          -0.005356883210113406,
+          -0.03868825189032865,
+          -0.01878717673886432,
+          -0.020548618349084613,
+          -0.01817065754105851,
+          -0.044254987061453366
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          3,
+          6,
+          7
+        ],
+        "selected_action": 19
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 33,
+      "codec": "h264",
+      "qp": 40,
+      "action": 19,
+      "bytes": 47117,
+      "source_hota": {
+        "HOTA": 0.615665761071231,
+        "DetA": 0.586411139675726,
+        "AssA": 0.6545186259391751
+      },
+      "identity_source_hota": {
+        "HOTA": 0.6283239408484548,
+        "DetA": 0.5907027962655006,
+        "AssA": 0.6804379164157272
+      },
+      "candidate_actions": [
+        0,
+        3,
+        9,
+        10,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          0.10051729503437644,
+          -0.0009193275381460045,
+          0.022137576373323607,
+          0.028191583230387143,
+          0.018138420726267864,
+          0.0028408959982947554,
+          -0.05938958377359918
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.05121506261957509,
+          -0.0014726379730318762,
+          0.010260191558516318,
+          0.00326469501009119,
+          -0.0007495081454920172,
+          0.028072870261126703,
+          0.012658179777223721
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          6,
+          7
+        ],
+        "selected_action": 19
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 49,
+      "codec": "h264",
+      "qp": 40,
+      "action": 19,
+      "bytes": 47524,
+      "source_hota": {
+        "HOTA": 0.5703776433734283,
+        "DetA": 0.5301681983191886,
+        "AssA": 0.6188311928232016
+      },
+      "identity_source_hota": {
+        "HOTA": 0.5610425259204547,
+        "DetA": 0.5489014968283609,
+        "AssA": 0.5790747155672791
+      },
+      "candidate_actions": [
+        0,
+        4,
+        3,
+        9,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.04509687022315818,
+          0.013451295501518648,
+          -0.009742533941717833,
+          0.02648731712957001,
+          -0.002266366162368855,
+          -0.019330825282953587,
+          -0.08729831186638344
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.020875699122639868,
+          0.004139029660424454,
+          -0.003375909331796323,
+          0.007355091142889458,
+          -0.0066138409198327475,
+          0.010530748657944455,
+          -0.009335117452973662
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          3,
+          6,
+          7
+        ],
+        "selected_action": 19
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 1,
+      "codec": "h264",
+      "qp": 45,
+      "action": 17,
+      "bytes": 27927,
+      "source_hota": {
+        "HOTA": 0.6259296870252994,
+        "DetA": 0.5523364767533264,
+        "AssA": 0.7214900111166893
+      },
+      "identity_source_hota": {
+        "HOTA": 0.5818116993414746,
+        "DetA": 0.5487715056538184,
+        "AssA": 0.631512220259742
+      },
+      "candidate_actions": [
+        0,
+        9,
+        10,
+        7,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          0.007289027316489523,
+          0.016139323114233342,
+          -0.0794011876961587,
+          -0.05514744466135332,
+          0.0493225057449869,
+          -0.14293057582442847,
+          -0.061174137036576745
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.006483353793185653,
+          0.006039682790115464,
+          -0.03927664225490679,
+          -0.03290171069925085,
+          0.02439011238118538,
+          -0.0441179876838248,
+          0.0023957678643520275
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          3,
+          6,
+          7
+        ],
+        "selected_action": 17
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 17,
+      "codec": "h264",
+      "qp": 45,
+      "action": 17,
+      "bytes": 33571,
+      "source_hota": {
+        "HOTA": 0.5911331235746491,
+        "DetA": 0.5037189189937464,
+        "AssA": 0.7041628621664389
+      },
+      "identity_source_hota": {
+        "HOTA": 0.5989579932399131,
+        "DetA": 0.5052380748483828,
+        "AssA": 0.7167605856581293
+      },
+      "candidate_actions": [
+        0,
+        9,
+        10,
+        7,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          0.03563562331138013,
+          0.06733239528543036,
+          0.05326600361326476,
+          0.060062742147158905,
+          0.08110819657745859,
+          -0.031023264620011495,
+          -0.01150729883027575
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.014417883553123456,
+          0.0292366935589633,
+          0.023727458941039115,
+          0.017080441502777544,
+          0.030158303979102574,
+          0.007824869665263967,
+          0.028331746068916863
+        ],
+        "eligible_paid_indices": [
+          0,
+          6,
+          7
+        ],
+        "selected_action": 17
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 33,
+      "codec": "h264",
+      "qp": 45,
+      "action": 19,
+      "bytes": 32086,
+      "source_hota": {
+        "HOTA": 0.5526822127433392,
+        "DetA": 0.4738354622384829,
+        "AssA": 0.6487291544774196
+      },
+      "identity_source_hota": {
+        "HOTA": 0.5275725874569449,
+        "DetA": 0.4595715303225119,
+        "AssA": 0.6136277211777157
+      },
+      "candidate_actions": [
+        0,
+        3,
+        9,
+        10,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.04224760304753404,
+          -0.027383055178051532,
+          -0.08213159516821043,
+          -0.01820079173152596,
+          -0.057944540069089966,
+          -0.023396521959012304,
+          -0.12458319836793073
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.016020158521021566,
+          -0.013329738308251793,
+          -0.036823682472912345,
+          -0.007230747180890118,
+          -0.025502806144969137,
+          0.012273859699615364,
+          -0.025109625286394266
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "selected_action": 19
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 49,
+      "codec": "h264",
+      "qp": 45,
+      "action": 19,
+      "bytes": 32273,
+      "source_hota": {
+        "HOTA": 0.5390022656131727,
+        "DetA": 0.45603640795719175,
+        "AssA": 0.6431276381875
+      },
+      "identity_source_hota": {
+        "HOTA": 0.5012642468246574,
+        "DetA": 0.4291285297969527,
+        "AssA": 0.5929403860375861
+      },
+      "candidate_actions": [
+        0,
+        3,
+        9,
+        10,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.07400909500892049,
+          -0.05526554984607012,
+          -0.051874602732167416,
+          -0.06147492050999457,
+          -0.05136394474968304,
+          -0.07710269756493258,
+          -0.13874915644146216
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.03720810688845133,
+          -0.024466960859987785,
+          -0.022346883696207853,
+          -0.025518496125665813,
+          -0.02440055512571937,
+          -0.016414039231793187,
+          -0.03773801878851524
+        ],
+        "eligible_paid_indices": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "selected_action": 19
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 1,
+      "codec": "h265",
+      "qp": 30,
+      "action": 17,
+      "bytes": 93315,
+      "source_hota": {
+        "HOTA": 0.8032013123199041,
+        "DetA": 0.8220076710340173,
+        "AssA": 0.7888139165517781
+      },
+      "identity_source_hota": {
+        "HOTA": 0.7853449449459454,
+        "DetA": 0.8111404206446621,
+        "AssA": 0.7643162555347273
+      },
+      "candidate_actions": [
+        0,
+        5,
+        4,
+        3,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          0.025435059129557895,
+          -0.03609053610703721,
+          0.0444802080036828,
+          0.04844808172653982,
+          0.0023171148142405104,
+          -0.20685376638458028,
+          -0.12240465980556564
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.028818426612559067,
+          0.0029195443943924593,
+          0.027943812371831522,
+          0.008765560467889899,
+          0.01534656971979309,
+          -0.01785636737395868,
+          0.06524311402169247
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7
+        ],
+        "selected_action": 17
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 17,
+      "codec": "h265",
+      "qp": 30,
+      "action": 19,
+      "bytes": 99223,
+      "source_hota": {
+        "HOTA": 0.7665606710155619,
+        "DetA": 0.7467135859337358,
+        "AssA": 0.792817123516686
+      },
+      "identity_source_hota": {
+        "HOTA": 0.7900211693663701,
+        "DetA": 0.7716535169627752,
+        "AssA": 0.8127644083677115
+      },
+      "candidate_actions": [
+        0,
+        5,
+        4,
+        3,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.013475763850114276,
+          0.02681357074809692,
+          0.025472870770907183,
+          0.038757237050505114,
+          0.027299007797733536,
+          -0.1397693689061726,
+          -0.1876961437116232
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.004087048493584433,
+          0.02487151636004381,
+          0.011955919449386565,
+          -0.0021692965545964116,
+          0.004930339495572755,
+          0.008518204054761225,
+          0.023460498350808212
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          6,
+          7
+        ],
+        "selected_action": 19
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 33,
+      "codec": "h265",
+      "qp": 30,
+      "action": 19,
+      "bytes": 93658,
+      "source_hota": {
+        "HOTA": 0.6871098182954435,
+        "DetA": 0.6259061219685758,
+        "AssA": 0.7623691769906171
+      },
+      "identity_source_hota": {
+        "HOTA": 0.7172996777633838,
+        "DetA": 0.6667167828346441,
+        "AssA": 0.7795926040957384
+      },
+      "candidate_actions": [
+        0,
+        4,
+        3,
+        9,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          0.07473554657419666,
+          0.0473348964376564,
+          0.10850584161335287,
+          0.12213146902699222,
+          0.03351506920650914,
+          -0.04502570075739287,
+          -0.16790551660256076
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.04297371134830741,
+          0.023535747967836307,
+          0.04727408123230814,
+          0.04612663120295124,
+          0.011903373856052557,
+          0.05420641231554979,
+          0.030189859467940283
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          6,
+          7
+        ],
+        "selected_action": 19
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 49,
+      "codec": "h265",
+      "qp": 30,
+      "action": 19,
+      "bytes": 86386,
+      "source_hota": {
+        "HOTA": 0.5975248869997061,
+        "DetA": 0.5844960840790402,
+        "AssA": 0.617487919483275
+      },
+      "identity_source_hota": {
+        "HOTA": 0.6399378639813826,
+        "DetA": 0.623875698150298,
+        "AssA": 0.6608336593899772
+      },
+      "candidate_actions": [
+        0,
+        4,
+        3,
+        9,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.05248121070494277,
+          -0.03120628604965915,
+          0.08231152714158349,
+          0.015548173677842468,
+          0.024206001487078386,
+          -0.05835508628626404,
+          -0.10322660828095487
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.025967172905056568,
+          -0.017441327592243927,
+          0.03804820365563655,
+          0.0002678176840547053,
+          0.004729029221316905,
+          0.03326944575801749,
+          0.042412976981676564
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          6,
+          7
+        ],
+        "selected_action": 19
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 1,
+      "codec": "h265",
+      "qp": 35,
+      "action": 19,
+      "bytes": 48342,
+      "source_hota": {
+        "HOTA": 0.6969840513776167,
+        "DetA": 0.6813727874125223,
+        "AssA": 0.720797538800921
+      },
+      "identity_source_hota": {
+        "HOTA": 0.6831070428056252,
+        "DetA": 0.6986020000122921,
+        "AssA": 0.6719867857959597
+      },
+      "candidate_actions": [
+        0,
+        5,
+        3,
+        9,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.02551914548549329,
+          -0.023903832654823678,
+          -0.10822024449852438,
+          -0.055368387033376744,
+          -0.09978174699755021,
+          -0.12030472637975263,
+          -0.1998633591967952
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.006450451336026175,
+          -0.011176337319933394,
+          -0.06526972375273399,
+          -0.04953474930988022,
+          -0.06230917172589212,
+          -0.007647194527635071,
+          -0.013877008571991478
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          6,
+          7
+        ],
+        "selected_action": 19
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 17,
+      "codec": "h265",
+      "qp": 35,
+      "action": 19,
+      "bytes": 57358,
+      "source_hota": {
+        "HOTA": 0.695618891577113,
+        "DetA": 0.6645197515075617,
+        "AssA": 0.7356621499347682
+      },
+      "identity_source_hota": {
+        "HOTA": 0.7076275520486343,
+        "DetA": 0.6585814780698849,
+        "AssA": 0.7659286534288587
+      },
+      "candidate_actions": [
+        0,
+        5,
+        3,
+        9,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          0.017672375222444792,
+          -0.009078456607709182,
+          0.022296568735506946,
+          0.07477497998027229,
+          0.07380914480192208,
+          -0.07259639142754984,
+          -0.14498616956790006
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.016618878923746472,
+          -0.005561460360867132,
+          0.004558993528553934,
+          0.01579030977217699,
+          0.01966235778939196,
+          0.02164548067440497,
+          0.01200866047152127
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          6,
+          7
+        ],
+        "selected_action": 19
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 33,
+      "codec": "h265",
+      "qp": 35,
+      "action": 17,
+      "bytes": 56918,
+      "source_hota": {
+        "HOTA": 0.6811341709739033,
+        "DetA": 0.6291763913727885,
+        "AssA": 0.7451988699348225
+      },
+      "identity_source_hota": {
+        "HOTA": 0.6577538790505689,
+        "DetA": 0.6165101521041848,
+        "AssA": 0.7112137424415423
+      },
+      "candidate_actions": [
+        0,
+        3,
+        9,
+        10,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.021462181265674337,
+          0.0026774038326007193,
+          -0.015378536807563795,
+          -0.009436905412234471,
+          -0.05349558277282169,
+          -0.15180129012221705,
+          -0.1354949955910944
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.012231478700605036,
+          -0.005502703958586097,
+          -0.01593291566639443,
+          -0.020620234203771015,
+          -0.039568005598482836,
+          -0.02338029192333435,
+          0.010355702907432929
+        ],
+        "eligible_paid_indices": [
+          0,
+          6,
+          7
+        ],
+        "selected_action": 17
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 49,
+      "codec": "h265",
+      "qp": 35,
+      "action": 19,
+      "bytes": 51622,
+      "source_hota": {
+        "HOTA": 0.603129703116077,
+        "DetA": 0.5926096607838038,
+        "AssA": 0.621131295801652
+      },
+      "identity_source_hota": {
+        "HOTA": 0.642886333277088,
+        "DetA": 0.6049926975697923,
+        "AssA": 0.691785424955642
+      },
+      "candidate_actions": [
+        0,
+        3,
+        9,
+        10,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          0.05807727953664634,
+          0.04103216669105935,
+          0.05821187177939598,
+          0.002436585139785938,
+          0.041010711494708654,
+          -0.026918112019256896,
+          -0.04686385784333866
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          0.024382701282350205,
+          0.013750401480613683,
+          0.024187905225825146,
+          -0.00817629986242252,
+          0.008754002917684467,
+          0.023760422961742966,
+          0.03975663016101094
+        ],
+        "eligible_paid_indices": [
+          0,
+          6,
+          7
+        ],
+        "selected_action": 19
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 1,
+      "codec": "h265",
+      "qp": 40,
+      "action": 19,
+      "bytes": 29290,
+      "source_hota": {
+        "HOTA": 0.6319009710684194,
+        "DetA": 0.5276425422506203,
+        "AssA": 0.764660415195856
+      },
+      "identity_source_hota": {
+        "HOTA": 0.6200923991089623,
+        "DetA": 0.5811320386838024,
+        "AssA": 0.6661739477040565
+      },
+      "candidate_actions": [
+        0,
+        5,
+        3,
+        9,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.04681295572201751,
+          -0.11003080236332274,
+          -0.004746631388630837,
+          -0.09445085652988018,
+          -0.02912278797692953,
+          -0.156680632690554,
+          -0.15675156462291956
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.015377866915004534,
+          -0.05097955192512105,
+          -0.0059912872608494094,
+          -0.061310451671193866,
+          -0.025396198257099822,
+          -0.03348660465485931,
+          -0.01180857195945706
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          6,
+          7
+        ],
+        "selected_action": 19
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 17,
+      "codec": "h265",
+      "qp": 40,
+      "action": 19,
+      "bytes": 35050,
+      "source_hota": {
+        "HOTA": 0.6222405863787118,
+        "DetA": 0.5269500529613391,
+        "AssA": 0.7462332876923705
+      },
+      "identity_source_hota": {
+        "HOTA": 0.6172427600023156,
+        "DetA": 0.5217066472581731,
+        "AssA": 0.738117896784431
+      },
+      "candidate_actions": [
+        0,
+        3,
+        9,
+        10,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.026485198085920557,
+          -0.005866677934439007,
+          0.04449386469511254,
+          0.05041125789311173,
+          0.021667258198326975,
+          -0.08310662169552335,
+          -0.1388191188359871
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.012200605068456216,
+          -0.006295557443568356,
+          0.020781775704632688,
+          0.013921547217842445,
+          -8.248087317130892e-05,
+          0.004167928034610302,
+          -0.0049978263763962305
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          6,
+          7
+        ],
+        "selected_action": 19
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 33,
+      "codec": "h265",
+      "qp": 40,
+      "action": 19,
+      "bytes": 32853,
+      "source_hota": {
+        "HOTA": 0.5940230056406891,
+        "DetA": 0.5297291917749528,
+        "AssA": 0.6779203963260659
+      },
+      "identity_source_hota": {
+        "HOTA": 0.5859513362577143,
+        "DetA": 0.538982118082176,
+        "AssA": 0.6506702650330386
+      },
+      "candidate_actions": [
+        0,
+        3,
+        9,
+        10,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.06753527283118911,
+          0.02676498196087799,
+          -0.012984324455426598,
+          0.035178201058532574,
+          0.0069631523790715105,
+          -0.016377451129511084,
+          -0.1358826775331872
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.03512946561316044,
+          0.00867904027293065,
+          -0.009185263643196606,
+          0.005754149528213404,
+          -0.011756938685334561,
+          0.030246430891474385,
+          -0.008071669382974767
+        ],
+        "eligible_paid_indices": [
+          0,
+          6,
+          7
+        ],
+        "selected_action": 19
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 49,
+      "codec": "h265",
+      "qp": 40,
+      "action": 19,
+      "bytes": 32387,
+      "source_hota": {
+        "HOTA": 0.5500501463883136,
+        "DetA": 0.5059474614583688,
+        "AssA": 0.6059685183515022
+      },
+      "identity_source_hota": {
+        "HOTA": 0.5771198998164125,
+        "DetA": 0.5184812816728767,
+        "AssA": 0.6488487782516628
+      },
+      "candidate_actions": [
+        0,
+        3,
+        9,
+        10,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.03421119239670695,
+          -0.04894269545054058,
+          0.0262179022615089,
+          -0.005909111731325498,
+          0.02780390584013782,
+          -0.04067906971114239,
+          -0.04778162449971897
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.01589113938452469,
+          -0.024638627753595377,
+          0.012189602773122088,
+          -0.004193886426511417,
+          0.007708250242866699,
+          0.010290936763300285,
+          0.02706975342809892
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          6,
+          7
+        ],
+        "selected_action": 19
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 1,
+      "codec": "h265",
+      "qp": 45,
+      "action": 9,
+      "bytes": 19298,
+      "source_hota": {
+        "HOTA": 0.6176148548608973,
+        "DetA": 0.5201597051145693,
+        "AssA": 0.7392684658913788
+      },
+      "identity_source_hota": {
+        "HOTA": 0.615650534732388,
+        "DetA": 0.5029901893584395,
+        "AssA": 0.7613749353334955
+      },
+      "candidate_actions": [
+        0,
+        9,
+        10,
+        7,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.020578562400025657,
+          0.16293721774771946,
+          0.12700048327990027,
+          0.09033001583432777,
+          0.019114660679832047,
+          0.10293457706630829,
+          0.04691544245586177
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.0019643201285093337,
+          0.08715776870981806,
+          0.06700346511521338,
+          0.05087994161327891,
+          0.01759736898031472,
+          0.08782004244211239,
+          0.07763513897637686
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "selected_action": 9
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 17,
+      "codec": "h265",
+      "qp": 45,
+      "action": 19,
+      "bytes": 21028,
+      "source_hota": {
+        "HOTA": 0.5763190042197441,
+        "DetA": 0.45315277021234807,
+        "AssA": 0.7348005297457395
+      },
+      "identity_source_hota": {
+        "HOTA": 0.5520300773157852,
+        "DetA": 0.41151379904371194,
+        "AssA": 0.7457243897154229
+      },
+      "candidate_actions": [
+        0,
+        9,
+        10,
+        7,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.027639336202928758,
+          -0.041778434366458624,
+          -0.023360384144704094,
+          -0.07437384699893723,
+          -0.042652012664810036,
+          -0.08294336047154875,
+          -0.15708160768712676
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.009082734161474981,
+          -0.017872197223606223,
+          -0.00819078523571215,
+          -0.03350413877855063,
+          -0.02143265934789018,
+          -0.0047425047795036646,
+          -0.024288926903958896
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6,
+          7
+        ],
+        "selected_action": 19
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 33,
+      "codec": "h265",
+      "qp": 45,
+      "action": 19,
+      "bytes": 19697,
+      "source_hota": {
+        "HOTA": 0.4934324842209086,
+        "DetA": 0.39700509643798587,
+        "AssA": 0.6217580575182101
+      },
+      "identity_source_hota": {
+        "HOTA": 0.5040564784290303,
+        "DetA": 0.41987300365995095,
+        "AssA": 0.6118530099151137
+      },
+      "candidate_actions": [
+        0,
+        3,
+        9,
+        10,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.06217648159361016,
+          0.018753925104674725,
+          0.017402146879124204,
+          0.03399769209517751,
+          0.020358436029014288,
+          -0.06066814979831337,
+          -0.07250559830293109
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.029977591999159392,
+          0.00792296997471087,
+          0.004214262078935382,
+          0.009292624975433594,
+          0.004662681569671756,
+          -0.0035584910198018793,
+          0.010623994208121768
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          6,
+          7
+        ],
+        "selected_action": 19
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 49,
+      "codec": "h265",
+      "qp": 45,
+      "action": 17,
+      "bytes": 20917,
+      "source_hota": {
+        "HOTA": 0.5144168250945027,
+        "DetA": 0.40686568808131174,
+        "AssA": 0.6605674380653589
+      },
+      "identity_source_hota": {
+        "HOTA": 0.4975220228623192,
+        "DetA": 0.41461026066355045,
+        "AssA": 0.6055720070150151
+      },
+      "candidate_actions": [
+        0,
+        3,
+        9,
+        10,
+        13,
+        16,
+        17,
+        19
+      ],
+      "audit": {
+        "empty_source_reference": false,
+        "objective_is_bd_rate": false,
+        "objective": [
+          0.0,
+          -0.013317835244674149,
+          0.0023839438707800183,
+          0.019925904160311075,
+          0.0023990442516710394,
+          0.0359457817120872,
+          -0.07421949649739858,
+          -0.07240819283292214
+        ],
+        "relative_source_hota_cost": [
+          0.0,
+          -0.005463734558072697,
+          -0.00013775510814006964,
+          0.00760397099645127,
+          0.0006488612772255209,
+          0.015431152882654398,
+          -0.016894802232183537,
+          -0.001904394887602967
+        ],
+        "eligible_paid_indices": [
+          0,
+          1,
+          6,
+          7
+        ],
+        "selected_action": 17
+      }
+    }
+  ]
+}

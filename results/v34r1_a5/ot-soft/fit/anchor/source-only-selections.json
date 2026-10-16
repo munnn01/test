@@ -1,0 +1,1032 @@
+{
+  "frozen_utc": "2026-10-16T13:54:54.897878+00:00",
+  "scope": "this replay decisions before its GT scoring; no future or GT policy inputs",
+  "split": "fit",
+  "weight": null,
+  "selected": [
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 1,
+      "codec": "h264",
+      "qp": 30,
+      "action": 0,
+      "bytes": 65983,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 17,
+      "codec": "h264",
+      "qp": 30,
+      "action": 0,
+      "bytes": 65913,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 33,
+      "codec": "h264",
+      "qp": 30,
+      "action": 0,
+      "bytes": 67120,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 49,
+      "codec": "h264",
+      "qp": 30,
+      "action": 0,
+      "bytes": 64413,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 1,
+      "codec": "h264",
+      "qp": 35,
+      "action": 0,
+      "bytes": 34486,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 17,
+      "codec": "h264",
+      "qp": 35,
+      "action": 0,
+      "bytes": 35174,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 33,
+      "codec": "h264",
+      "qp": 35,
+      "action": 0,
+      "bytes": 34706,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 49,
+      "codec": "h264",
+      "qp": 35,
+      "action": 0,
+      "bytes": 33153,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 1,
+      "codec": "h264",
+      "qp": 40,
+      "action": 0,
+      "bytes": 19263,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 17,
+      "codec": "h264",
+      "qp": 40,
+      "action": 0,
+      "bytes": 19675,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 33,
+      "codec": "h264",
+      "qp": 40,
+      "action": 0,
+      "bytes": 19147,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 49,
+      "codec": "h264",
+      "qp": 40,
+      "action": 0,
+      "bytes": 18408,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 1,
+      "codec": "h264",
+      "qp": 45,
+      "action": 0,
+      "bytes": 10557,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 17,
+      "codec": "h264",
+      "qp": 45,
+      "action": 0,
+      "bytes": 10719,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 33,
+      "codec": "h264",
+      "qp": 45,
+      "action": 0,
+      "bytes": 10642,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 49,
+      "codec": "h264",
+      "qp": 45,
+      "action": 0,
+      "bytes": 10080,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 1,
+      "codec": "h265",
+      "qp": 30,
+      "action": 0,
+      "bytes": 60992,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 17,
+      "codec": "h265",
+      "qp": 30,
+      "action": 0,
+      "bytes": 61857,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 33,
+      "codec": "h265",
+      "qp": 30,
+      "action": 0,
+      "bytes": 61326,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 49,
+      "codec": "h265",
+      "qp": 30,
+      "action": 0,
+      "bytes": 58384,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 1,
+      "codec": "h265",
+      "qp": 35,
+      "action": 0,
+      "bytes": 31700,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 17,
+      "codec": "h265",
+      "qp": 35,
+      "action": 0,
+      "bytes": 32644,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 33,
+      "codec": "h265",
+      "qp": 35,
+      "action": 0,
+      "bytes": 32062,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 49,
+      "codec": "h265",
+      "qp": 35,
+      "action": 0,
+      "bytes": 30039,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 1,
+      "codec": "h265",
+      "qp": 40,
+      "action": 0,
+      "bytes": 18099,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 17,
+      "codec": "h265",
+      "qp": 40,
+      "action": 0,
+      "bytes": 18348,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 33,
+      "codec": "h265",
+      "qp": 40,
+      "action": 0,
+      "bytes": 18182,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 49,
+      "codec": "h265",
+      "qp": 40,
+      "action": 0,
+      "bytes": 17093,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 1,
+      "codec": "h265",
+      "qp": 45,
+      "action": 0,
+      "bytes": 10384,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 17,
+      "codec": "h265",
+      "qp": 45,
+      "action": 0,
+      "bytes": 10555,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 33,
+      "codec": "h265",
+      "qp": 45,
+      "action": 0,
+      "bytes": 10445,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-02-FRCNN",
+      "start": 49,
+      "codec": "h265",
+      "qp": 45,
+      "action": 0,
+      "bytes": 9780,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 1,
+      "codec": "h264",
+      "qp": 30,
+      "action": 0,
+      "bytes": 128073,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 17,
+      "codec": "h264",
+      "qp": 30,
+      "action": 0,
+      "bytes": 149998,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 33,
+      "codec": "h264",
+      "qp": 30,
+      "action": 0,
+      "bytes": 138212,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 49,
+      "codec": "h264",
+      "qp": 30,
+      "action": 0,
+      "bytes": 132617,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 1,
+      "codec": "h264",
+      "qp": 35,
+      "action": 0,
+      "bytes": 70811,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 17,
+      "codec": "h264",
+      "qp": 35,
+      "action": 0,
+      "bytes": 85673,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 33,
+      "codec": "h264",
+      "qp": 35,
+      "action": 0,
+      "bytes": 80140,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 49,
+      "codec": "h264",
+      "qp": 35,
+      "action": 0,
+      "bytes": 79066,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 1,
+      "codec": "h264",
+      "qp": 40,
+      "action": 0,
+      "bytes": 44353,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 17,
+      "codec": "h264",
+      "qp": 40,
+      "action": 0,
+      "bytes": 53890,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 33,
+      "codec": "h264",
+      "qp": 40,
+      "action": 0,
+      "bytes": 51282,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 49,
+      "codec": "h264",
+      "qp": 40,
+      "action": 0,
+      "bytes": 50900,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 1,
+      "codec": "h264",
+      "qp": 45,
+      "action": 0,
+      "bytes": 29497,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 17,
+      "codec": "h264",
+      "qp": 45,
+      "action": 0,
+      "bytes": 35175,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 33,
+      "codec": "h264",
+      "qp": 45,
+      "action": 0,
+      "bytes": 34563,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 49,
+      "codec": "h264",
+      "qp": 45,
+      "action": 0,
+      "bytes": 34381,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 1,
+      "codec": "h265",
+      "qp": 30,
+      "action": 0,
+      "bytes": 110733,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 17,
+      "codec": "h265",
+      "qp": 30,
+      "action": 0,
+      "bytes": 125460,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 33,
+      "codec": "h265",
+      "qp": 30,
+      "action": 0,
+      "bytes": 117676,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 49,
+      "codec": "h265",
+      "qp": 30,
+      "action": 0,
+      "bytes": 104259,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 1,
+      "codec": "h265",
+      "qp": 35,
+      "action": 0,
+      "bytes": 57421,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 17,
+      "codec": "h265",
+      "qp": 35,
+      "action": 0,
+      "bytes": 67919,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 33,
+      "codec": "h265",
+      "qp": 35,
+      "action": 0,
+      "bytes": 63222,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 49,
+      "codec": "h265",
+      "qp": 35,
+      "action": 0,
+      "bytes": 58576,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 1,
+      "codec": "h265",
+      "qp": 40,
+      "action": 0,
+      "bytes": 33461,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 17,
+      "codec": "h265",
+      "qp": 40,
+      "action": 0,
+      "bytes": 39869,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 33,
+      "codec": "h265",
+      "qp": 40,
+      "action": 0,
+      "bytes": 37032,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 49,
+      "codec": "h265",
+      "qp": 40,
+      "action": 0,
+      "bytes": 35862,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 1,
+      "codec": "h265",
+      "qp": 45,
+      "action": 0,
+      "bytes": 19622,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 17,
+      "codec": "h265",
+      "qp": 45,
+      "action": 0,
+      "bytes": 23438,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 33,
+      "codec": "h265",
+      "qp": 45,
+      "action": 0,
+      "bytes": 21633,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    },
+    {
+      "sequence": "MOT17-05-FRCNN",
+      "start": 49,
+      "codec": "h265",
+      "qp": 45,
+      "action": 0,
+      "bytes": 21780,
+      "source_hota": null,
+      "identity_source_hota": null,
+      "candidate_actions": [
+        0
+      ],
+      "audit": {
+        "anchor": true
+      }
+    }
+  ]
+}

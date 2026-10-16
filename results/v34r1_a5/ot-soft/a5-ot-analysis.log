@@ -1,0 +1,11 @@
+A5_OT_REPLAY fit anchor 0.0
+A5_OT_REPLAY fit lambda-0 -0.29869315766004434
+A5_OT_REPLAY fit lambda-1 -0.29723970565190694
+A5_OT_REPLAY fit lambda-2 -0.2935128207745947
+A5_OT_REPLAY fit lambda-4 -0.28169071326858175
+A5_OT_REPLAY fit lambda-8 -0.2555422034597855
+A5_OT_REPLAY fit lambda-16 -0.23441703553791335
+A5_OT_REPLAY fit lambda-32 -0.2103085047472864
+A5_OT_REPLAY validation anchor 0.0
+A5_OT_REPLAY validation lambda-32 -0.05133792503387323
+A5_OT_COMPLETE {"policy": {"kind": "source_hota_lagrangian", "weight": 32}, "calibration_both_codecs_below_minus15": false, "test_scored": false, "seconds": 279.05165177799995}

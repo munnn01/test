@@ -1,4 +1,33 @@
-# Pipeline v34r1 đang kiểm chứng
+# Pipeline v34r1 hiện tại
+
+Ba nhánh dùng chung cơ chế tiền xử lý, codec thật, tính byte/header và kiểm chứng; **chạy riêng theo tác vụ**, không phải một bitstream phục vụ đồng thời cả ba. Chỉ QP30/35/40/45, H.264/H.265. Mọi mô hình, codec, tracking và chấm GT thật đều chạy Kaggle. Laptop điều phối và kiểm toán số/tệp đã lưu.
+
+| Nhánh | Luồng xử lý hiện tại | Bằng chứng mới nhất |
+|---|---|---|
+| AR | Kinetics →16 frame,128px → bản đồ vùng/shortlist CNN-GRU đóng băng → codec/decoder thật → guard KL/feature/top-1 → Video Swin-T → Top-1 | A2 TEST128: −31,35%/−21,22%; CI chưa xác nhận ngưỡng; chạy lại cùng dữ liệu không tăng cỡ mẫu |
+| OD | COCO320px → Faster R-CNN đóng băng →21 bộ lọc → codec/decoder thật →302 đặc trưng không GT → critic ExtraTrees depth10/ngưỡng0,005 → chọn gói → COCO AP toàn cohort | A4 DEV64 mới: −8,21%/−11,89%; chưa đạt; không mở TEST512 |
+| OT | MOT17 đúng FPS gốc → dự đoán nguồn/candidate đã lưu từ codec thật → ByteTrack trial cùng quá khứ → HOTA nguồn32 frame → chọn/commit một trial → TrackEval HOTA theo GT | A4 CAL cũ: −8,23%/−9,94%; A5 log-byte + lambda32×tổn hại HOTA nguồn: −12,94%/−7,67%, vẫn chưa đạt |
+
+OD critic chỉ học FIT64; hai mô hình xuất và chính sách đã khóa trước DEV64 mới. OT A5 chỉ chọn một lambda từ bảy giá trị0,1,2,4,8,16,32 bằng FIT, rồi khóa trước một lần CAL cũ; job không đánh giá TEST. Calibration đã tái sử dụng được ghi rõ là phát triển. Các nhánh chưa dùng chung một mô hình critic đã huấn luyện.
+
+```mermaid
+flowchart TD
+    A[Nguồn và task ID đã khóa] --> B[Chuẩn hóa và mô hình nguồn đóng băng]
+    B --> C[Bản đồ vùng và bộ lọc ứng viên theo task]
+    C --> D[Encode và decode thật; đúng bốn QP]
+    D --> E[Byte trả thực và proxy nguồn theo AR / OD / OT]
+    E --> F[Bộ chọn phía gửi; không dùng GT lúc triển khai]
+    F --> G[Một packet đã chọn của nhánh đó]
+    G --> H[Giải mã độc lập và mô hình tác vụ]
+    H --> I[Chấm GT sau quyết định; kiểm đủ lưới và BD-rate]
+```
+
+Tất cả bốn điểm thô được giữ, đường không đơn điệu báo BD không xác định; không sửa điểm hoặc đổi QP để đạt−15%. Một lần tìm kiếm21 bộ lọc có thể tốn hàng nghìn encode/forward, được báo riêng với bitrate gói truyền. AR/OT dùng cửa sổ video; COCO hiện là ảnh intra, nên cấu hình theo task được công bố riêng.
+
+Chi tiết mới: [tiến độ](V34R1-PROGRESS.md), [OD DEV mới](V34R1-A4-OD-FRESH-REPORT.md), [đề xuất thí nghiệm bài báo](V34R1-PAPER-PROTOCOL.md).
+
+## Lượt A2 gốc để đối chiếu
+
 
 Mã đo đã đóng băng: [`5a36901`](https://github.com/munnn01/test/commit/5a369016e4214b8339f89768534fed19cbcf194e). Benchmark chạy trên Kaggle. Laptop chỉ điều phối, tải log và kiểm toán kết quả, không chạy suy luận hay encode benchmark.
 

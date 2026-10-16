@@ -16,7 +16,7 @@ Bảng chính cần sáu ô BD-rate cùng sáu đường so sánh bitrate–ch�
 
 ## Đối chứng và kiểm chứng khối
 
-So sánh codec gốc/identity, phiên bản trước, cùng ngân hàng ứng viên với bộ chọn cũ, rồi phương pháp mới. Dùng chung detector/recognizer/tracker đóng băng trong từng phép so sánh, cùng nguồn, geometry, codec version/preset/GOP/chroma, QP và quy tắc tính byte. AR/OT là video liên khung; COCO hiện là ảnh mã hóa intra, phải trình bày riêng cấu hình thay vì nói ba tác vụ có cùng GOP.
+So sánh codec gốc/identity, phiên bản trước, cùng ngân hàng ứng viên với bộ chọn cũ, rồi phương pháp mới. Bài báo cũng cần đối chiếu ít nhất một phương pháp công bố có thể tái lập trên cùng điều kiện; các phiên bản A2/A4/A5 của chính mình chủ yếu là ablation. [Preprocessing Enhanced Image Compression for Machine Vision](https://arxiv.org/abs/2206.05650) là một tham khảo gần về neural preprocessing trước codec truyền thống; không mang trực tiếp con số tiết kiệm từ bài đó sang H.264/H.265 hiện tại. Thử thêm downstream model khác trên cùng gói đã chọn là kiểm tra chuyển giao hữu ích nếu muốn tuyên bố khái quát. Dùng chung detector/recognizer/tracker đóng băng trong từng phép so sánh, cùng nguồn, geometry, codec version/preset/GOP/chroma, QP và quy tắc tính byte. AR/OT là video liên khung; COCO hiện là ảnh mã hóa intra, phải trình bày riêng cấu hình thay vì nói ba tác vụ có cùng GOP.
 
 Ablation lần lượt kiểm tra ngân hàng bộ lọc, vùng bảo vệ đối tượng, proxy tổn hại, critic/bộ chọn và thành phần thời gian của OT. Chỉ so các nhánh thay đúng thành phần được nghiên cứu. GT chỉ dùng huấn luyện/chọn trên FIT/CAL được khai báo và đánh giá; GT oracle là chẩn đoán riêng, không phải phương pháp triển khai.
 

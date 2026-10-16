@@ -1,0 +1,63 @@
+[{"stream_name":"stdout","time":6.795490473,"data":"RUN /usr/bin/python3 -m pip install -q --no-deps numpy==2.1.3 scipy==1.16.3 opencv-python==4.12.0.88 opencv-python-headless==4.12.0.88 supervision==0.27.0 pycocotools==2.0.11 tabulate==0.9.0\n"}
+,{"stream_name":"stdout","time":17.819403807,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.0/67.0 MB 11.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":20.461703218,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.0/54.0 MB 16.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":20.506480851,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 212.4/212.4 kB 7.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":26.06546909,"data":"RUN git clone -q https://github.com/JonathonLuiten/TrackEval.git /kaggle/temp/adaptive_preprocessing/data/TrackEval\n"}
+,{"stream_name":"stdout","time":26.572336731,"data":"RUN git -C /kaggle/temp/adaptive_preprocessing/data/TrackEval checkout -q 12c8791b303e0a0b50f753af204249e622d0281a\n"}
+,{"stream_name":"stdout","time":26.581428972,"data":"RUN /usr/bin/python3 -m unittest tests.test_v34r1_a5_ot_choice tests.test_v34r1_a3_hota tests.test_v34r1_a3_tracking tests.test_v34r1_a3_core tests.test_v34r1_a4_rd_fit tests.test_v34r1_a4_cloud_record -v\n"}
+,{"stream_name":"stdout","time":27.016600289,"data":"test_invalid_or_unaligned_tables_fail_closed (tests.test_v34r1_a5_ot_choice.OTChoiceContracts.test_invalid_or_unaligned_tables_fail_closed) ... ok\n"}
+,{"stream_name":"stdout","time":27.017158812,"data":"test_paid_cap_empty_source_and_action_id_ties (tests.test_v34r1_a5_ot_choice.OTChoiceContracts.test_paid_cap_empty_source_and_action_id_ties) ... ok\n"}
+,{"stream_name":"stdout","time":27.017585225,"data":"test_soft_tradeoff_can_accept_five_point_proxy_loss_then_reject_at_larger_lambda (tests.test_v34r1_a5_ot_choice.OTChoiceContracts.test_soft_tradeoff_can_accept_five_point_proxy_loss_then_reject_at_larger_lambda) ... ok\n"}
+,{"stream_name":"stdout","time":28.422419765,"data":"test_empty_source_is_undefined_and_temporal_or_duplicate_ids_are_rejected (tests.test_v34r1_a3_hota.HOTASourceContracts.test_empty_source_is_undefined_and_temporal_or_duplicate_ids_are_rejected) ... ok\n"}
+,{"stream_name":"stdout","time":28.429437291,"data":"test_id_relabeling_is_invariant_but_a_switch_lowers_association (tests.test_v34r1_a3_hota.HOTASourceContracts.test_id_relabeling_is_invariant_but_a_switch_lowers_association) ... ok\n"}
+,{"stream_name":"stdout","time":28.643896054,"data":"test_long_prefix_dilutes_recent_misses_but_trailing_window_retains_them (tests.test_v34r1_a3_hota.HOTASourceContracts.test_long_prefix_dilutes_recent_misses_but_trailing_window_retains_them) ... ok\n"}
+,{"stream_name":"stdout","time":38.640455197,"data":"test_native_state_resets_at_sequence_boundary_and_preserves_prefix_alignment (tests.test_v34r1_a3_tracking.HOTAStateContracts.test_native_state_resets_at_sequence_boundary_and_preserves_prefix_alignment) ... PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'\n"}
+,{"stream_name":"stdout","time":38.641832439,"data":"PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'\n"}
+,{"stream_name":"stdout","time":38.64242608,"data":"PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'\n"}
+,{"stream_name":"stdout","time":38.797192301,"data":"PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'\n"}
+,{"stream_name":"stdout","time":38.853657939,"data":"In /usr/local/lib/python3.13/dist-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'parseString' deprecated - use 'parse_string'\n"}
+,{"stream_name":"stdout","time":38.853682172,"data":"In /usr/local/lib/python3.13/dist-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'resetCache' deprecated - use 'reset_cache'\n"}
+,{"stream_name":"stdout","time":39.280324069,"data":"ok\n"}
+,{"stream_name":"stdout","time":39.297417613,"data":"test_trials_share_committed_past_and_only_one_commit_advances_history (tests.test_v34r1_a3_tracking.HOTAStateContracts.test_trials_share_committed_past_and_only_one_commit_advances_history) ... ok\n"}
+,{"stream_name":"stdout","time":39.300436289,"data":"test_complete_grid_cannot_drop_or_duplicate_a_profile_condition (tests.test_v34r1_a3_core.A3Contracts.test_complete_grid_cannot_drop_or_duplicate_a_profile_condition) ... ok\n"}
+,{"stream_name":"stdout","time":39.300901924,"data":"test_fit_threshold_uses_fit_metrics_only_with_predeclared_quality_limits (tests.test_v34r1_a3_core.A3Contracts.test_fit_threshold_uses_fit_metrics_only_with_predeclared_quality_limits) ... ok\n"}
+,{"stream_name":"stdout","time":39.306195289,"data":"test_fresh_split_excludes_every_old_id_and_groups_images (tests.test_v34r1_a3_core.A3Contracts.test_fresh_split_excludes_every_old_id_and_groups_images) ... ok\n"}
+,{"stream_name":"stdout","time":39.306634704,"data":"test_identity_required_and_nonfinite_thresholds_are_rejected (tests.test_v34r1_a3_core.A3Contracts.test_identity_required_and_nonfinite_thresholds_are_rejected) ... ok\n"}
+,{"stream_name":"stdout","time":39.307083434,"data":"test_source_selector_rejects_guard_damage_and_paid_rate_overrun (tests.test_v34r1_a3_core.A3Contracts.test_source_selector_rejects_guard_damage_and_paid_rate_overrun) ... ok\n"}
+,{"stream_name":"stdout","time":39.308622903,"data":"test_identity_fallback_and_stable_ties (tests.test_v34r1_a4_rd_fit.RDFitContracts.test_identity_fallback_and_stable_ties) ... ok\n"}
+,{"stream_name":"stdout","time":39.309061173,"data":"test_nonmonotone_interior_does_not_become_a_repaired_bd_curve (tests.test_v34r1_a4_rd_fit.RDFitContracts.test_nonmonotone_interior_does_not_become_a_repaired_bd_curve) ... ok\n"}
+,{"stream_name":"stdout","time":39.309468815,"data":"test_rate_quality_tradeoff_replaces_arbitrary_same_qp_quality_gate (tests.test_v34r1_a4_rd_fit.RDFitContracts.test_rate_quality_tradeoff_replaces_arbitrary_same_qp_quality_gate) ... ok\n"}
+,{"stream_name":"stdout","time":39.309919125,"data":"test_rejects_nonfinite_partial_or_invalid_endpoint_tables (tests.test_v34r1_a4_rd_fit.RDFitContracts.test_rejects_nonfinite_partial_or_invalid_endpoint_tables) ... ok\n"}
+,{"stream_name":"stdout","time":39.314428641,"data":"test_archive_extract_creates_absent_parents_and_blocks_escape_or_overwrite (tests.test_v34r1_a4_cloud_record.CloudRecordContracts.test_archive_extract_creates_absent_parents_and_blocks_escape_or_overwrite) ... ok\n"}
+,{"stream_name":"stdout","time":39.31658296,"data":"test_artifact_lookup_skips_media_datasets_and_rejects_ambiguous_notebooks (tests.test_v34r1_a4_cloud_record.CloudRecordContracts.test_artifact_lookup_skips_media_datasets_and_rejects_ambiguous_notebooks) ... ok\n"}
+,{"stream_name":"stdout","time":39.317059009,"data":"test_changed_fresh_reservation_cannot_be_silently_rebound (tests.test_v34r1_a4_cloud_record.CloudRecordContracts.test_changed_fresh_reservation_cannot_be_silently_rebound) ... ok\n"}
+,{"stream_name":"stdout","time":39.319145409,"data":"test_existing_output_is_preserved_and_success_omits_gt_from_bundle (tests.test_v34r1_a4_cloud_record.CloudRecordContracts.test_existing_output_is_preserved_and_success_omits_gt_from_bundle) ... A4_CLOUD_STATUS {\"test_scored\": false, \"complete\": true, \"wall_seconds\": 0.00019121170043945312}\n"}
+,{"stream_name":"stdout","time":39.320049733,"data":"ok\n"}
+,{"stream_name":"stdout","time":39.322511737,"data":"test_failed_setup_records_error_and_available_logs_without_masking_original (tests.test_v34r1_a4_cloud_record.CloudRecordContracts.test_failed_setup_records_error_and_available_logs_without_masking_original) ... A4_CLOUD_STATUS {\"commit\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"test_scored\": false, \"complete\": false, \"error_type\": \"RuntimeError\", \"error\": \"parent hash mismatch\", \"wall_seconds\": 4.172325134277344e-05}\n"}
+,{"stream_name":"stdout","time":39.323389898,"data":"ok\n"}
+,{"stream_name":"stdout","time":39.325772564,"data":"test_tracker_parity_rejects_changed_association_or_missing_output (tests.test_v34r1_a4_cloud_record.CloudRecordContracts.test_tracker_parity_rejects_changed_association_or_missing_output) ... ok\n"}
+,{"stream_name":"stdout","time":39.325794542,"data":"\n"}
+,{"stream_name":"stdout","time":39.325799513,"data":"----------------------------------------------------------------------\n"}
+,{"stream_name":"stdout","time":39.325802945,"data":"Ran 23 tests in 12.311s\n"}
+,{"stream_name":"stdout","time":39.325805346,"data":"\n"}
+,{"stream_name":"stdout","time":39.325807614,"data":"OK\n"}
+,{"stream_name":"stdout","time":53.793597622,"data":"RUN /usr/bin/python3 -u -m adaptive_vcm.v34r1_a5.ot_replay --cache /kaggle/temp/adaptive_preprocessing/data/a5-parent/a3-ot-dev --sources /kaggle/temp/adaptive_preprocessing/data/a5-mot17-metadata --out /kaggle/working/a5-ot-soft\n"}
+,{"stream_name":"stdout","time":69.187936408,"data":"A5_OT_REPLAY fit anchor 0.0\n"}
+,{"stream_name":"stdout","time":101.216902607,"data":"A5_OT_REPLAY fit lambda-0 -0.29869315766004434\n"}
+,{"stream_name":"stdout","time":133.153062636,"data":"A5_OT_REPLAY fit lambda-1 -0.29723970565190694\n"}
+,{"stream_name":"stdout","time":165.140927335,"data":"A5_OT_REPLAY fit lambda-2 -0.2935128207745947\n"}
+,{"stream_name":"stdout","time":197.201812896,"data":"A5_OT_REPLAY fit lambda-4 -0.28169071326858175\n"}
+,{"stream_name":"stdout","time":229.34049754,"data":"A5_OT_REPLAY fit lambda-8 -0.2555422034597855\n"}
+,{"stream_name":"stdout","time":261.548091801,"data":"A5_OT_REPLAY fit lambda-16 -0.23441703553791335\n"}
+,{"stream_name":"stdout","time":293.541842466,"data":"A5_OT_REPLAY fit lambda-32 -0.2103085047472864\n"}
+,{"stream_name":"stdout","time":304.194014016,"data":"A5_OT_REPLAY validation anchor 0.0\n"}
+,{"stream_name":"stdout","time":339.086547321,"data":"A5_OT_REPLAY validation lambda-32 -0.05133792503387323\n"}
+,{"stream_name":"stdout","time":339.103743902,"data":"A5_OT_COMPLETE {\"policy\": {\"kind\": \"source_hota_lagrangian\", \"weight\": 32}, \"calibration_both_codecs_below_minus15\": false, \"test_scored\": false, \"seconds\": 279.05165177799995}\n"}
+,{"stream_name":"stdout","time":342.262246026,"data":"A4_CLOUD_STATUS {\"commit\": \"ac42edc62344546d093f98c9cbe4c8090e488e53\", \"test_scored\": false, \"new_model_inferences\": 0, \"new_encodes\": 0, \"complete\": true, \"wall_seconds\": 333.0470404624939}\n"}
+,{"stream_name":"stderr","time":344.810605812,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":344.810644505,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":345.167683921,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":345.167712942,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":346.041691218,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":347.274887339,"data":"[NbConvertApp] Writing 275276 bytes to __results__.html\n"}
+]

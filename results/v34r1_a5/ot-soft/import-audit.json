@@ -1,0 +1,58 @@
+{
+  "complete": true,
+  "scope": "saved640 sender choices,32 exact parent anchor tracker files, all official metric means/scalars, paid-rate/BD/FIT arithmetic; no local tracker or GT execution",
+  "archive_sha256": "f6b1b5c9593e39978b1ba5dc2e42fd817a0565139ea55262602528375c4b3d33",
+  "archive_bytes": 6078881,
+  "selection_rows_checked": 640,
+  "exact_anchor_tracker_files": 32,
+  "cloud_wall_seconds": 333.0470404624939,
+  "replay_seconds": 279.05165177799995,
+  "aggregate_paid_ratios": {
+    "fit/anchor": {
+      "h264": 1.0,
+      "h265": 1.0
+    },
+    "fit/lambda-0": {
+      "h264": 0.7901563964215661,
+      "h265": 0.7567889070206564
+    },
+    "fit/lambda-1": {
+      "h264": 0.7903385775899702,
+      "h265": 0.7619478917887978
+    },
+    "fit/lambda-2": {
+      "h264": 0.7914910335434528,
+      "h265": 0.765932107056153
+    },
+    "fit/lambda-4": {
+      "h264": 0.8015825897664239,
+      "h265": 0.7875998430823472
+    },
+    "fit/lambda-8": {
+      "h264": 0.8290675001600634,
+      "h265": 0.8164098677820874
+    },
+    "fit/lambda-16": {
+      "h264": 0.852726606017217,
+      "h265": 0.8316769412044768
+    },
+    "fit/lambda-32": {
+      "h264": 0.8501772337564826,
+      "h265": 0.8594431958801368
+    },
+    "validation/anchor": {
+      "h264": 1.0,
+      "h265": 1.0
+    },
+    "validation/lambda-32": {
+      "h264": 0.9072729539281168,
+      "h265": 0.9399072137776137
+    }
+  },
+  "selected_policy": {
+    "kind": "source_hota_lagrangian",
+    "weight": 32
+  },
+  "independent_validation": false,
+  "test_scored": false
+}
