@@ -1,0 +1,83 @@
+[{"stream_name":"stdout","time":9.757943632,"data":"RUN /usr/bin/python3 -m pip install -q --no-deps numpy==2.1.3 scipy==1.16.3 pycocotools==2.0.11 scikit-learn==1.7.2 joblib==1.5.2 threadpoolctl==3.6.0\n"}
+,{"stream_name":"stdout","time":14.411917178,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.4/9.4 MB 73.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":14.458883462,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 308.4/308.4 kB 8.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":20.425643254,"data":"RUN /usr/bin/python3 -m unittest tests.test_v34r1_a4_risk tests.test_v34r1_a4_marginal_ap tests.test_v34r1_a4_cloud_record tests.test_v34r1_a4_rd_fit tests.test_v34r1_a3_core -v\n"}
+,{"stream_name":"stdout","time":20.881399170999998,"data":"test_features_ignore_labels_identifiers_and_private_provenance (tests.test_v34r1_a4_risk.RiskContracts.test_features_ignore_labels_identifiers_and_private_provenance) ... ok\n"}
+,{"stream_name":"stdout","time":20.882042487,"data":"test_paid_cap_identity_fallback_and_ties_are_independent_of_gt (tests.test_v34r1_a4_risk.RiskContracts.test_paid_cap_identity_fallback_and_ties_are_independent_of_gt) ... ok\n"}
+,{"stream_name":"stdout","time":20.883106661,"data":"test_portable_tree_uses_safe_indices_and_sklearn_float32_boundary (tests.test_v34r1_a4_risk.RiskContracts.test_portable_tree_uses_safe_indices_and_sklearn_float32_boundary) ... ok\n"}
+,{"stream_name":"stdout","time":20.97240363,"data":"test_multiple_categories_and_crowd_match_full_official_ap (tests.test_v34r1_a4_marginal_ap.MarginalAPContracts.test_multiple_categories_and_crowd_match_full_official_ap) ... ok\n"}
+,{"stream_name":"stdout","time":20.97568136,"data":"test_negative_images_have_a_defined_marginal_false_positive_cost (tests.test_v34r1_a4_marginal_ap.MarginalAPContracts.test_negative_images_have_a_defined_marginal_false_positive_cost) ... ok\n"}
+,{"stream_name":"stdout","time":20.998002439,"data":"test_stitch_matches_full_official_evaluation_and_captures_global_score_order (tests.test_v34r1_a4_marginal_ap.MarginalAPContracts.test_stitch_matches_full_official_evaluation_and_captures_global_score_order) ... ok\n"}
+,{"stream_name":"stdout","time":21.00270581,"data":"test_teacher_does_not_mutate_cached_anchor_or_candidate_predictions (tests.test_v34r1_a4_marginal_ap.MarginalAPContracts.test_teacher_does_not_mutate_cached_anchor_or_candidate_predictions) ... ok\n"}
+,{"stream_name":"stdout","time":21.003245982,"data":"test_changed_fresh_reservation_cannot_be_silently_rebound (tests.test_v34r1_a4_cloud_record.CloudRecordContracts.test_changed_fresh_reservation_cannot_be_silently_rebound) ... ok\n"}
+,{"stream_name":"stdout","time":21.006835463,"data":"test_existing_output_is_preserved_and_success_omits_gt_from_bundle (tests.test_v34r1_a4_cloud_record.CloudRecordContracts.test_existing_output_is_preserved_and_success_omits_gt_from_bundle) ... A4_CLOUD_STATUS {\"test_scored\": false, \"complete\": true, \"wall_seconds\": 0.0002601146697998047}\n"}
+,{"stream_name":"stdout","time":21.007953076,"data":"ok\n"}
+,{"stream_name":"stdout","time":21.01065105,"data":"test_failed_setup_records_error_and_available_logs_without_masking_original (tests.test_v34r1_a4_cloud_record.CloudRecordContracts.test_failed_setup_records_error_and_available_logs_without_masking_original) ... A4_CLOUD_STATUS {\"commit\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"test_scored\": false, \"complete\": false, \"error_type\": \"RuntimeError\", \"error\": \"parent hash mismatch\", \"wall_seconds\": 6.318092346191406e-05}\n"}
+,{"stream_name":"stdout","time":21.011687451,"data":"ok\n"}
+,{"stream_name":"stdout","time":21.014624227,"data":"test_tracker_parity_rejects_changed_association_or_missing_output (tests.test_v34r1_a4_cloud_record.CloudRecordContracts.test_tracker_parity_rejects_changed_association_or_missing_output) ... ok\n"}
+,{"stream_name":"stdout","time":21.016439867,"data":"test_identity_fallback_and_stable_ties (tests.test_v34r1_a4_rd_fit.RDFitContracts.test_identity_fallback_and_stable_ties) ... ok\n"}
+,{"stream_name":"stdout","time":21.016824058,"data":"test_nonmonotone_interior_does_not_become_a_repaired_bd_curve (tests.test_v34r1_a4_rd_fit.RDFitContracts.test_nonmonotone_interior_does_not_become_a_repaired_bd_curve) ... ok\n"}
+,{"stream_name":"stdout","time":21.017337651,"data":"test_rate_quality_tradeoff_replaces_arbitrary_same_qp_quality_gate (tests.test_v34r1_a4_rd_fit.RDFitContracts.test_rate_quality_tradeoff_replaces_arbitrary_same_qp_quality_gate) ... ok\n"}
+,{"stream_name":"stdout","time":21.017670016,"data":"test_rejects_nonfinite_partial_or_invalid_endpoint_tables (tests.test_v34r1_a4_rd_fit.RDFitContracts.test_rejects_nonfinite_partial_or_invalid_endpoint_tables) ... ok\n"}
+,{"stream_name":"stdout","time":21.02083281,"data":"test_complete_grid_cannot_drop_or_duplicate_a_profile_condition (tests.test_v34r1_a3_core.A3Contracts.test_complete_grid_cannot_drop_or_duplicate_a_profile_condition) ... ok\n"}
+,{"stream_name":"stdout","time":21.021313655,"data":"test_fit_threshold_uses_fit_metrics_only_with_predeclared_quality_limits (tests.test_v34r1_a3_core.A3Contracts.test_fit_threshold_uses_fit_metrics_only_with_predeclared_quality_limits) ... ok\n"}
+,{"stream_name":"stdout","time":21.026958274,"data":"test_fresh_split_excludes_every_old_id_and_groups_images (tests.test_v34r1_a3_core.A3Contracts.test_fresh_split_excludes_every_old_id_and_groups_images) ... ok\n"}
+,{"stream_name":"stdout","time":21.027461214,"data":"test_identity_required_and_nonfinite_thresholds_are_rejected (tests.test_v34r1_a3_core.A3Contracts.test_identity_required_and_nonfinite_thresholds_are_rejected) ... ok\n"}
+,{"stream_name":"stdout","time":21.027887551,"data":"test_source_selector_rejects_guard_damage_and_paid_rate_overrun (tests.test_v34r1_a3_core.A3Contracts.test_source_selector_rejects_guard_damage_and_paid_rate_overrun) ... ok\n"}
+,{"stream_name":"stdout","time":21.02790235,"data":"\n"}
+,{"stream_name":"stdout","time":21.027906899,"data":"----------------------------------------------------------------------\n"}
+,{"stream_name":"stdout","time":21.027912064,"data":"Ran 20 tests in 0.471s\n"}
+,{"stream_name":"stdout","time":21.027915917,"data":"\n"}
+,{"stream_name":"stdout","time":21.027919429,"data":"OK\n"}
+,{"stream_name":"stdout","time":21.073610761,"data":"RUN /usr/bin/python3 /kaggle/temp/adaptive_preprocessing/scripts/verify_v34r1_a3.py --root /kaggle/temp/adaptive_preprocessing/results/v34r1_a3/od-dev\n"}
+,{"stream_name":"stdout","time":27.118627071,"data":"{\n"}
+,{"stream_name":"stdout","time":27.118668791,"data":"  \"files\": 20,\n"}
+,{"stream_name":"stdout","time":27.118675176,"data":"  \"grid\": {\n"}
+,{"stream_name":"stdout","time":27.118679442,"data":"    \"images\": 128,\n"}
+,{"stream_name":"stdout","time":27.118683746,"data":"    \"rows\": 21504,\n"}
+,{"stream_name":"stdout","time":27.118687698,"data":"    \"profiles\": 21,\n"}
+,{"stream_name":"stdout","time":27.11869193,"data":"    \"qps\": [\n"}
+,{"stream_name":"stdout","time":27.118695879,"data":"      30,\n"}
+,{"stream_name":"stdout","time":27.118699646,"data":"      35,\n"}
+,{"stream_name":"stdout","time":27.11870326,"data":"      40,\n"}
+,{"stream_name":"stdout","time":27.118707265,"data":"      45\n"}
+,{"stream_name":"stdout","time":27.118711237,"data":"    ],\n"}
+,{"stream_name":"stdout","time":27.118715222,"data":"    \"codecs\": [\n"}
+,{"stream_name":"stdout","time":27.118719074,"data":"      \"h264\",\n"}
+,{"stream_name":"stdout","time":27.118739836,"data":"      \"h265\"\n"}
+,{"stream_name":"stdout","time":27.11874278,"data":"    ]\n"}
+,{"stream_name":"stdout","time":27.11874521,"data":"  },\n"}
+,{"stream_name":"stdout","time":27.118747514,"data":"  \"validation_gate\": {\n"}
+,{"stream_name":"stdout","time":27.118750143,"data":"    \"pseudo_ap\": false,\n"}
+,{"stream_name":"stdout","time":27.118752741,"data":"    \"pseudo_loss\": false\n"}
+,{"stream_name":"stdout","time":27.118755266,"data":"  },\n"}
+,{"stream_name":"stdout","time":27.11875868,"data":"  \"test_scored\": false,\n"}
+,{"stream_name":"stdout","time":27.118762601,"data":"  \"scope\": \"hashes, paid-byte sums, source selector decisions and BD arithmetic from measured COCO AP; no GT inference repeated\"\n"}
+,{"stream_name":"stdout","time":27.118767234,"data":"}\n"}
+,{"stream_name":"stdout","time":572.180920068,"data":"A4_CLOUD_STATUS {\"commit\": \"d64a341e3f5cc874aebb064bed0948328c23c139\", \"label_archive_sha256\": \"f74d6b9002d0ea96a31c955142a1723ddf08b8c5cd36cb44ade35049b5fabca1\", \"test_scored\": false, \"fresh_dev64_scored\": false, \"new_encodes\": 0, \"new_task_model_inferences\": 0, \"critic_training\": true, \"complete\": false, \"error_type\": \"FileNotFoundError\", \"error\": \"[Errno 2] No such file or directory: '/kaggle/temp/adaptive_preprocessing/data/a4-labels'\", \"wall_seconds\": 562.4199957847595}\n"}
+,{"stream_name":"stderr","time":572.184500496,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":572.185418182,"data":"  File \"/kaggle/temp/adaptive_preprocessing/scripts/run_v34r1_a4_od_train_kaggle.py\", line 51, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":572.185457208,"data":"    if __name__=='__main__': main()\n"}
+,{"stream_name":"stderr","time":572.185465118,"data":"                             ~~~~^^\n"}
+,{"stream_name":"stderr","time":572.185470273,"data":"  File \"/kaggle/temp/adaptive_preprocessing/scripts/run_v34r1_a4_od_train_kaggle.py\", line 35, in main\n"}
+,{"stream_name":"stderr","time":572.185475608,"data":"    cache=ROOT/'data/a4-labels'; cache.mkdir()\n"}
+,{"stream_name":"stderr","time":572.185480741,"data":"                                 ~~~~~~~~~~~^^\n"}
+,{"stream_name":"stderr","time":572.185484064,"data":"  File \"/usr/lib/python3.13/pathlib/_local.py\", line 722, in mkdir\n"}
+,{"stream_name":"stderr","time":572.185487239,"data":"    os.mkdir(self, mode)\n"}
+,{"stream_name":"stderr","time":572.185490197,"data":"    ~~~~~~~~^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":572.185493184,"data":"FileNotFoundError: [Errno 2] No such file or directory: '/kaggle/temp/adaptive_preprocessing/data/a4-labels'\n"}
+,{"stream_name":"stderr","time":572.240792149,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":572.242195356,"data":"  File \"/kaggle/src/script.py\", line 5, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":572.242239319,"data":"    subprocess.run([sys.executable,'-u',str(repo/'scripts/run_v34r1_a4_od_train_kaggle.py'),'--commit','d64a341e3f5cc874aebb064bed0948328c23c139','--labels-sha256','f74d6b9002d0ea96a31c955142a1723ddf08b8c5cd36cb44ade35049b5fabca1'],cwd=repo,check=True)\n"}
+,{"stream_name":"stderr","time":572.242247334,"data":"    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":572.24225353,"data":"  File \"/usr/lib/python3.13/subprocess.py\", line 577, in run\n"}
+,{"stream_name":"stderr","time":572.242258127,"data":"    raise CalledProcessError(retcode, process.args,\n"}
+,{"stream_name":"stderr","time":572.242277803,"data":"                             output=stdout, stderr=stderr)\n"}
+,{"stream_name":"stderr","time":572.242282466,"data":"subprocess.CalledProcessError: Command '['/usr/bin/python3', '-u', '/kaggle/temp/adaptive_preprocessing/scripts/run_v34r1_a4_od_train_kaggle.py', '--commit', 'd64a341e3f5cc874aebb064bed0948328c23c139', '--labels-sha256', 'f74d6b9002d0ea96a31c955142a1723ddf08b8c5cd36cb44ade35049b5fabca1']' returned non-zero exit status 1.\n"}
+,{"stream_name":"stderr","time":575.20950348,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":575.209572412,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":575.679898182,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":575.679961262,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":576.991426521,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":578.505887943,"data":"[NbConvertApp] Writing 275461 bytes to __results__.html\n"}
+]

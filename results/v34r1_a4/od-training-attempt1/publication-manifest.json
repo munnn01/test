@@ -1,0 +1,39 @@
+{
+  "schema": "v34r1-A4-evidence-1",
+  "task": "od-training-attempt1",
+  "source_commit": "d64a341e3f5cc874aebb064bed0948328c23c139",
+  "complete": false,
+  "test_scored": false,
+  "files": [
+    {
+      "path": "attempt-audit.json",
+      "bytes": 465,
+      "sha256": "969bf0412f65e49093a2626effe2cec4bba207461e15b0956305a709d9503595"
+    },
+    {
+      "path": "cloud-status.json",
+      "bytes": 488,
+      "sha256": "5f15b79943a7f95734de99141ceddf91ecb7ba092c54fbf4e699eda07b7f9d22"
+    },
+    {
+      "path": "kaggle-execution.log",
+      "bytes": 12811,
+      "sha256": "3bb9d3bd7fcb74a6e6a8cd8e106251ce18969786f26bc3e1720956f4405b117a"
+    },
+    {
+      "path": "kaggle-metadata.json",
+      "bytes": 684,
+      "sha256": "20072b2ada9c6a7647f1d5cae05b7466475eb3f88303e2e661fdea4a9c5af481"
+    },
+    {
+      "path": "kaggle-notebook.py",
+      "bytes": 593,
+      "sha256": "82bbf3c039f3a81e6ccf36606f86c51c761e9657a47c1a03dcbcfc2ae0137440"
+    },
+    {
+      "path": "v34r1-a4-od-training.tgz",
+      "bytes": 1590,
+      "sha256": "33de9f872db485ea72c6dff0376a153ee197a79f7766f859b12b5170f9b8a01d"
+    }
+  ]
+}

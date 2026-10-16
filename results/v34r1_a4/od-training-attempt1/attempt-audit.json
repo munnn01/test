@@ -1,0 +1,11 @@
+{
+  "complete": false,
+  "training_started": false,
+  "new_task_model_inferences": 0,
+  "new_encodes": 0,
+  "fresh_dev64_scored": false,
+  "test_scored": false,
+  "error": "cache.mkdir omitted parents=True; parent data directory absent",
+  "resolution": "shared safe extraction creates all missing parents; regression RED->GREEN; no scientific parameters changed",
+  "archive_sha256": "33de9f872db485ea72c6dff0376a153ee197a79f7766f859b12b5170f9b8a01d"
+}

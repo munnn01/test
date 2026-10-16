@@ -1,5 +1,6 @@
 """CPU fixtures: failed cloud setup leaves evidence without overwriting old runs."""
 import importlib.util
+import io
 import json
 from pathlib import Path
 import tarfile
@@ -64,6 +65,33 @@ class CloudRecordContracts(unittest.TestCase):
         expected=hashlib.sha256(raw).hexdigest()
         self.assertEqual(m.require_sha256(raw,expected),expected)
         with self.assertRaises(ValueError): m.require_sha256(b'{"fresh_ids":[3,4]}',expected)
+
+    def test_artifact_lookup_skips_media_datasets_and_rejects_ambiguous_notebooks(self):
+        m=module()
+        with self.temp() as temp:
+            root=Path(temp); legitimate=root/'notebooks/owner/job'; unrelated=root/'datasets/awsaf49/coco-2017-dataset/val2017'
+            legitimate.mkdir(parents=True); unrelated.mkdir(parents=True)
+            (legitimate/'frozen.tgz').write_bytes(b'actual'); (unrelated/'frozen.tgz').write_bytes(b'must not search dataset')
+            self.assertTrue(hasattr(m,'kernel_artifact'),'bounded notebook artifact lookup missing')
+            self.assertEqual(m.kernel_artifact(root,'frozen.tgz'),legitimate/'frozen.tgz')
+            other=root/'legacy-slug'; other.mkdir(); (other/'frozen.tgz').write_bytes(b'duplicate')
+            with self.assertRaises(ValueError): m.kernel_artifact(root,'frozen.tgz')
+
+    def test_archive_extract_creates_absent_parents_and_blocks_escape_or_overwrite(self):
+        m=module()
+        with self.temp() as temp:
+            root=Path(temp); archive=root/'input.tgz'
+            with tarfile.open(archive,'w:gz') as tar:
+                item=tarfile.TarInfo('labels/result.json'); item.size=2; tar.addfile(item,io.BytesIO(b'{}'))
+            self.assertTrue(hasattr(m,'unpack_archive'),'safe nested cache extraction missing')
+            target=root/'absent/data/cache'; m.unpack_archive(archive,target)
+            self.assertEqual((target/'labels/result.json').read_bytes(),b'{}')
+            with self.assertRaises(ValueError): m.unpack_archive(archive,target)
+            bad=root/'bad.tgz'
+            with tarfile.open(bad,'w:gz') as tar:
+                item=tarfile.TarInfo('../escape'); item.size=1; tar.addfile(item,io.BytesIO(b'x'))
+            with self.assertRaises(ValueError): m.unpack_archive(bad,root/'other/cache')
+            self.assertFalse((root/'other/escape').exists())
 
 
 if __name__=='__main__': unittest.main()

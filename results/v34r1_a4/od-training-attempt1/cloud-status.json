@@ -1,0 +1,13 @@
+{
+  "commit": "d64a341e3f5cc874aebb064bed0948328c23c139",
+  "label_archive_sha256": "f74d6b9002d0ea96a31c955142a1723ddf08b8c5cd36cb44ade35049b5fabca1",
+  "test_scored": false,
+  "fresh_dev64_scored": false,
+  "new_encodes": 0,
+  "new_task_model_inferences": 0,
+  "critic_training": true,
+  "complete": false,
+  "error_type": "FileNotFoundError",
+  "error": "[Errno 2] No such file or directory: '/kaggle/temp/adaptive_preprocessing/data/a4-labels'",
+  "wall_seconds": 562.4199957847595
+}
