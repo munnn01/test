@@ -1,0 +1,7 @@
+{
+  "complete": true,
+  "scope": "label table membership, saved AP range and BD arithmetic; no local COCO GT scoring",
+  "rows": 21504,
+  "parent_publication_manifest_sha256": "43678006e290a6f5bba4716fbf6d659df627d5b7011c7d2f540fd9dffe824cd9",
+  "test_scored": false
+}

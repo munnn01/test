@@ -1,0 +1,22 @@
+{
+  "MOT17-04-FRCNN": {
+    "source_sha256": "f8cfbe36ef38a2e1857d7ebfe7d754b2355a3ffb9e1f9cedea435e86e4fbc948",
+    "staged_sha256": "cffee5526dbc6f8f56d2e24b5377514b3829fed2af9988029897fbdae2b2eaf0",
+    "selected_rows": 6361,
+    "retains_all_classes": true,
+    "frames": [
+      1,
+      64
+    ]
+  },
+  "MOT17-11-FRCNN": {
+    "source_sha256": "4952d6e4efc705c90688e434fd138a55ada2c0d5f576ba3847ee102fc18aff93",
+    "staged_sha256": "52cc824603dca39c8936f26d02c24fedf452f5e9dcb910b109206c111f4dd665",
+    "selected_rows": 1227,
+    "retains_all_classes": true,
+    "frames": [
+      1,
+      64
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+........................................................................ [ 81%]
+................                                                         [100%]
+=============================== warnings summary ===============================
+tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt
+  PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+
+tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt
+tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt
+tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt
+tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt
+tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt
+tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt
+  PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+
+tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt
+tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt
+tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt
+tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt
+tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt
+tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt
+  PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+
+tests/test_v34_arot_repair.py::test_repair_evaluates_shared_stream_and_clean_tracking_without_selection_gt
+  PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+88 passed, 14 warnings in 14.51s

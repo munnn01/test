@@ -1,0 +1,34 @@
+{
+  "complete": true,
+  "scope": "bytes, full cached grid, paid-rate lookup, saved TrackEval array arithmetic and BD math; no local tracker or GT evaluation",
+  "commit": "749f8f876ccca875536d4c88565ccc075d8a9197",
+  "archive_bytes": 81212388,
+  "archive_sha256": "2e13ec6e2aae813d3d54273bd341e21ae677ab3a23160f0c686967cefbdbeccd",
+  "source_manifest_sha256": "f90bcd9c62ed302b38c0b20a959dc3f9a514a1b1a32fb7a28c999df3dfe89a81",
+  "candidate_rows": 772,
+  "conditions": 128,
+  "workers": {
+    "0": {
+      "rows": 345,
+      "wall_seconds": 1301.5220118569998,
+      "actual_encodes": 345,
+      "decoded_frames": 5520,
+      "source_frames": 128,
+      "peak_cuda_bytes": 1651085824
+    },
+    "1": {
+      "rows": 427,
+      "wall_seconds": 1626.920780148,
+      "actual_encodes": 427,
+      "decoded_frames": 6832,
+      "source_frames": 128,
+      "peak_cuda_bytes": 1651081728
+    }
+  },
+  "cloud_wall_seconds": 2229.0445744991302,
+  "test_scored": false,
+  "validation_gate": {
+    "observed_prefix": false,
+    "observed_trailing32": false
+  }
+}

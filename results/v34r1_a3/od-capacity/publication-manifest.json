@@ -1,0 +1,50 @@
+{
+  "schema": "v34r1-A3-evidence-1",
+  "task": "od-capacity-diagnostic",
+  "source_commit": "e97f4778ac68074d697007a5e81dbe772f374180",
+  "qps": [
+    30,
+    35,
+    40,
+    45
+  ],
+  "codecs": [
+    "h264",
+    "h265"
+  ],
+  "test_scored": false,
+  "files": [
+    {
+      "path": "capacity-report.json",
+      "bytes": 2102030,
+      "sha256": "4fa31e5a7d31d7b6a53980c613e851d13986ca3bf0c2ff2b1278af0d1e34ccf7"
+    },
+    {
+      "path": "import-audit.json",
+      "bytes": 276,
+      "sha256": "7afcbb58a32ca43868355448b7a92a7249ee8b3ec67e0ac846ae31883d620579"
+    },
+    {
+      "path": "kaggle-execution.log",
+      "bytes": 7219,
+      "sha256": "88686452c8eae445a33737e6131edc8d9a1e44c4ca20cccdb1ddcc1b5eb5c58d"
+    },
+    {
+      "path": "kaggle-metadata.json",
+      "bytes": 650,
+      "sha256": "5731260251b08976511c282d5910de7e27bcba1679ef91c698302bab20e9d9b7"
+    },
+    {
+      "path": "kaggle-notebook.py",
+      "bytes": 1092,
+      "sha256": "f2c7e72937bd9925676f5e32da8a26aa3af8adbdfccd735a948318ccc8df3056"
+    },
+    {
+      "path": "per-image-gt-ap.json.gz",
+      "bytes": 120162,
+      "sha256": "f4557db7471c5613a0fc6dcbdc99736a00b77aa2feb98eedd692502776addb54"
+    }
+  ],
+  "deployable": false,
+  "global_ap_upper_bound": false
+}

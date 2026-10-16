@@ -1,0 +1,8 @@
+{
+  "rows": 427,
+  "wall_seconds": 1626.920780148,
+  "actual_encodes": 427,
+  "decoded_frames": 6832,
+  "source_frames": 128,
+  "peak_cuda_bytes": 1651081728
+}

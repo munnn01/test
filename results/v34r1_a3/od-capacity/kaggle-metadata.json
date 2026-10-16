@@ -1,0 +1,21 @@
+{
+  "id": "dieulinhh/v34r1-a3-od-capacity-diagnostic",
+  "id_no": 138961541,
+  "title": "v34r1-a3-od-capacity-diagnostic",
+  "code_file": "v34r1-a3-od-capacity-diagnostic.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [
+    "awsaf49/coco-2017-dataset"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+  "machine_shape": "None"
+}

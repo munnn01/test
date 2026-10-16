@@ -1,0 +1,17 @@
+OT_REPLAY_DONE fit anchor 0.0
+OT_REPLAY_DONE fit observed_prefix-0 -0.0982414370421694
+OT_REPLAY_DONE fit observed_prefix-0p005 -0.13819751583337778
+OT_REPLAY_DONE fit observed_prefix-0p01 -0.18473298724594286
+OT_REPLAY_DONE fit observed_prefix-0p02 -0.25159397090610275
+OT_REPLAY_DONE fit observed_prefix-0p04 -0.28424738837877006
+OT_REPLAY_DONE fit observed_prefix-0p08 -0.29598292688557293
+OT_REPLAY_DONE fit observed_trailing32-0 -0.09896174263109092
+OT_REPLAY_DONE fit observed_trailing32-0p005 -0.1411141094550608
+OT_REPLAY_DONE fit observed_trailing32-0p01 -0.16272245057702672
+OT_REPLAY_DONE fit observed_trailing32-0p02 -0.22427307424543458
+OT_REPLAY_DONE fit observed_trailing32-0p04 -0.27456137481763737
+OT_REPLAY_DONE fit observed_trailing32-0p08 -0.29598292688557293
+OT_REPLAY_DONE fit a2_native -0.23537897738751307
+OT_REPLAY_DONE validation anchor 0.0
+OT_REPLAY_DONE validation a2_native -0.1509872046027581
+OT_VALIDATION_GATE {"observed_prefix": false, "observed_trailing32": false}

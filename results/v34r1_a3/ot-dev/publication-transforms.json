@@ -1,0 +1,98 @@
+[
+  {
+    "source": "tracking/fit/a2_native/trackeval-raw.json",
+    "source_sha256": "e77ca20327847780b3fe759fe1ef2455f1a17982bb918a09e761f966ff25eddd",
+    "published": "tracking/fit/a2_native/trackeval-raw.json.gz",
+    "transform": "gzip mtime0, unmodified decompressed bytes"
+  },
+  {
+    "source": "tracking/fit/anchor/trackeval-raw.json",
+    "source_sha256": "35b3f10b13532370992917dab8c6e099702a7da828fa93743bdfc904b53606a3",
+    "published": "tracking/fit/anchor/trackeval-raw.json.gz",
+    "transform": "gzip mtime0, unmodified decompressed bytes"
+  },
+  {
+    "source": "tracking/fit/observed_prefix-0/trackeval-raw.json",
+    "source_sha256": "342b34efd35fd1d357d7405d91cafa6cd0e4ddbca75420d5f8d77c9f098734ea",
+    "published": "tracking/fit/observed_prefix-0/trackeval-raw.json.gz",
+    "transform": "gzip mtime0, unmodified decompressed bytes"
+  },
+  {
+    "source": "tracking/fit/observed_prefix-0p005/trackeval-raw.json",
+    "source_sha256": "2f094e8f0db1405dd10bea6e2b6c75c47b17446260fa076d16733107f071fcf6",
+    "published": "tracking/fit/observed_prefix-0p005/trackeval-raw.json.gz",
+    "transform": "gzip mtime0, unmodified decompressed bytes"
+  },
+  {
+    "source": "tracking/fit/observed_prefix-0p01/trackeval-raw.json",
+    "source_sha256": "6363d3554e95426ad0660d7ae7cad5b0ae368ce9cebbe6e12e5b4f361d3441aa",
+    "published": "tracking/fit/observed_prefix-0p01/trackeval-raw.json.gz",
+    "transform": "gzip mtime0, unmodified decompressed bytes"
+  },
+  {
+    "source": "tracking/fit/observed_prefix-0p02/trackeval-raw.json",
+    "source_sha256": "ebe209e0748ffc6044360e46ce58014f8708ec95416c38024b6e160c227c9572",
+    "published": "tracking/fit/observed_prefix-0p02/trackeval-raw.json.gz",
+    "transform": "gzip mtime0, unmodified decompressed bytes"
+  },
+  {
+    "source": "tracking/fit/observed_prefix-0p04/trackeval-raw.json",
+    "source_sha256": "a344a2d0fad827a092647ffb553cc790aeaad7d7b97479931ab5d1ece3d29ea3",
+    "published": "tracking/fit/observed_prefix-0p04/trackeval-raw.json.gz",
+    "transform": "gzip mtime0, unmodified decompressed bytes"
+  },
+  {
+    "source": "tracking/fit/observed_prefix-0p08/trackeval-raw.json",
+    "source_sha256": "65130d98756f0d0434b22101cbd1c3a6bf5c5dc2ade52d66ebea60c6c52c2cca",
+    "published": "tracking/fit/observed_prefix-0p08/trackeval-raw.json.gz",
+    "transform": "gzip mtime0, unmodified decompressed bytes"
+  },
+  {
+    "source": "tracking/fit/observed_trailing32-0/trackeval-raw.json",
+    "source_sha256": "3507426c284f9da2f4f1c7b79e1eec24317d1216136f69399650cb2669774983",
+    "published": "tracking/fit/observed_trailing32-0/trackeval-raw.json.gz",
+    "transform": "gzip mtime0, unmodified decompressed bytes"
+  },
+  {
+    "source": "tracking/fit/observed_trailing32-0p005/trackeval-raw.json",
+    "source_sha256": "8b2e34380c70e80e86e3edaba0bd4005f3e95f56e7c9250d210278d4bb116fa6",
+    "published": "tracking/fit/observed_trailing32-0p005/trackeval-raw.json.gz",
+    "transform": "gzip mtime0, unmodified decompressed bytes"
+  },
+  {
+    "source": "tracking/fit/observed_trailing32-0p01/trackeval-raw.json",
+    "source_sha256": "b56d627c9e3bb402aa7d3c75a6ca14676dac9f8b17aea74300aea239b99dc3ae",
+    "published": "tracking/fit/observed_trailing32-0p01/trackeval-raw.json.gz",
+    "transform": "gzip mtime0, unmodified decompressed bytes"
+  },
+  {
+    "source": "tracking/fit/observed_trailing32-0p02/trackeval-raw.json",
+    "source_sha256": "226f28828dbe613973cdf9cae85b5febb6369cf698e88a315779463249fee5eb",
+    "published": "tracking/fit/observed_trailing32-0p02/trackeval-raw.json.gz",
+    "transform": "gzip mtime0, unmodified decompressed bytes"
+  },
+  {
+    "source": "tracking/fit/observed_trailing32-0p04/trackeval-raw.json",
+    "source_sha256": "40d16d1891d6dff234a512f82df9afb44c52372d5cabea2314e6c5ba7efee221",
+    "published": "tracking/fit/observed_trailing32-0p04/trackeval-raw.json.gz",
+    "transform": "gzip mtime0, unmodified decompressed bytes"
+  },
+  {
+    "source": "tracking/fit/observed_trailing32-0p08/trackeval-raw.json",
+    "source_sha256": "65130d98756f0d0434b22101cbd1c3a6bf5c5dc2ade52d66ebea60c6c52c2cca",
+    "published": "tracking/fit/observed_trailing32-0p08/trackeval-raw.json.gz",
+    "transform": "gzip mtime0, unmodified decompressed bytes"
+  },
+  {
+    "source": "tracking/validation/a2_native/trackeval-raw.json",
+    "source_sha256": "b48a0ac36959feb98d3a72b3f98e6113b32182bf507178c21b98aa14f5345b7d",
+    "published": "tracking/validation/a2_native/trackeval-raw.json.gz",
+    "transform": "gzip mtime0, unmodified decompressed bytes"
+  },
+  {
+    "source": "tracking/validation/anchor/trackeval-raw.json",
+    "source_sha256": "85bebf9faf6c5343328e5a7cf539445332476ec4be2770e72a5a3c3fe34e821c",
+    "published": "tracking/validation/anchor/trackeval-raw.json.gz",
+    "transform": "gzip mtime0, unmodified decompressed bytes"
+  }
+]

@@ -1,0 +1,67 @@
+[{"stream_name":"stderr","time":9.206058383,"data":"test_complete_grid_cannot_drop_or_duplicate_a_profile_condition (tests.test_v34r1_a3_core.A3Contracts.test_complete_grid_cannot_drop_or_duplicate_a_profile_condition) ... ok\n"}
+,{"stream_name":"stderr","time":9.20652339,"data":"test_fit_threshold_uses_fit_metrics_only_with_predeclared_quality_limits (tests.test_v34r1_a3_core.A3Contracts.test_fit_threshold_uses_fit_metrics_only_with_predeclared_quality_limits) ... ok\n"}
+,{"stream_name":"stderr","time":9.211916276,"data":"test_fresh_split_excludes_every_old_id_and_groups_images (tests.test_v34r1_a3_core.A3Contracts.test_fresh_split_excludes_every_old_id_and_groups_images) ... ok\n"}
+,{"stream_name":"stderr","time":9.212388044,"data":"test_identity_required_and_nonfinite_thresholds_are_rejected (tests.test_v34r1_a3_core.A3Contracts.test_identity_required_and_nonfinite_thresholds_are_rejected) ... ok\n"}
+,{"stream_name":"stderr","time":9.212972722,"data":"test_source_selector_rejects_guard_damage_and_paid_rate_overrun (tests.test_v34r1_a3_core.A3Contracts.test_source_selector_rejects_guard_damage_and_paid_rate_overrun) ... ok\n"}
+,{"stream_name":"stderr","time":9.543576879,"data":"test_class_aware_localization_and_score_ordered_false_positives (tests.test_v34r1_a3_pseudo.PseudoAPContracts.test_class_aware_localization_and_score_ordered_false_positives) ... ok\n"}
+,{"stream_name":"stderr","time":9.552545845000001,"data":"test_source_threshold_and_top_target_cap_are_explicit (tests.test_v34r1_a3_pseudo.PseudoAPContracts.test_source_threshold_and_top_target_cap_are_explicit) ... ok\n"}
+,{"stream_name":"stderr","time":9.558532068,"data":"test_changed_and_undeclared_files_are_rejected (tests.test_v34r1_a3_evidence.EvidenceIntegrity.test_changed_and_undeclared_files_are_rejected) ... ok\n"}
+,{"stream_name":"stderr","time":9.559807346,"data":"test_path_escape_is_rejected_before_reading (tests.test_v34r1_a3_evidence.EvidenceIntegrity.test_path_escape_is_rejected_before_reading) ... ok\n"}
+,{"stream_name":"stderr","time":9.559834237,"data":"\n"}
+,{"stream_name":"stderr","time":9.559839115,"data":"----------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":9.559843349,"data":"Ran 9 tests in 0.357s\n"}
+,{"stream_name":"stderr","time":9.559847276,"data":"\n"}
+,{"stream_name":"stderr","time":9.55985092,"data":"OK\n"}
+,{"stream_name":"stdout","time":15.191405128,"data":"{\n"}
+,{"stream_name":"stdout","time":15.191450955,"data":"  \"files\": 20,\n"}
+,{"stream_name":"stdout","time":15.191457074,"data":"  \"grid\": {\n"}
+,{"stream_name":"stdout","time":15.191461435,"data":"    \"images\": 128,\n"}
+,{"stream_name":"stdout","time":15.191465344,"data":"    \"rows\": 21504,\n"}
+,{"stream_name":"stdout","time":15.191469203,"data":"    \"profiles\": 21,\n"}
+,{"stream_name":"stdout","time":15.191472941,"data":"    \"qps\": [\n"}
+,{"stream_name":"stdout","time":15.191476644,"data":"      30,\n"}
+,{"stream_name":"stdout","time":15.191480638,"data":"      35,\n"}
+,{"stream_name":"stdout","time":15.191483219,"data":"      40,\n"}
+,{"stream_name":"stdout","time":15.191485409,"data":"      45\n"}
+,{"stream_name":"stdout","time":15.191487867,"data":"    ],\n"}
+,{"stream_name":"stdout","time":15.191490127,"data":"    \"codecs\": [\n"}
+,{"stream_name":"stdout","time":15.191492537,"data":"      \"h264\",\n"}
+,{"stream_name":"stdout","time":15.19149489,"data":"      \"h265\"\n"}
+,{"stream_name":"stdout","time":15.19149715,"data":"    ]\n"}
+,{"stream_name":"stdout","time":15.191499359,"data":"  },\n"}
+,{"stream_name":"stdout","time":15.191501665,"data":"  \"validation_gate\": {\n"}
+,{"stream_name":"stdout","time":15.191503994,"data":"    \"pseudo_ap\": false,\n"}
+,{"stream_name":"stdout","time":15.191524382,"data":"    \"pseudo_loss\": false\n"}
+,{"stream_name":"stdout","time":15.191528855,"data":"  },\n"}
+,{"stream_name":"stdout","time":15.191532474,"data":"  \"test_scored\": false,\n"}
+,{"stream_name":"stdout","time":15.191536374,"data":"  \"scope\": \"hashes, paid-byte sums, source selector decisions and BD arithmetic from measured COCO AP; no GT inference repeated\"\n"}
+,{"stream_name":"stdout","time":15.191540985,"data":"}\n"}
+,{"stream_name":"stdout","time":45.011410456,"data":"CAPACITY_GT_ROWS 1024 / 21504 28.7\n"}
+,{"stream_name":"stdout","time":62.583049898,"data":"CAPACITY_GT_ROWS 2048 / 21504 46.3\n"}
+,{"stream_name":"stdout","time":78.159410941,"data":"CAPACITY_GT_ROWS 3072 / 21504 61.8\n"}
+,{"stream_name":"stdout","time":99.379691099,"data":"CAPACITY_GT_ROWS 4096 / 21504 83.1\n"}
+,{"stream_name":"stdout","time":117.651972361,"data":"CAPACITY_GT_ROWS 5120 / 21504 101.3\n"}
+,{"stream_name":"stdout","time":136.5988842,"data":"CAPACITY_GT_ROWS 6144 / 21504 120.3\n"}
+,{"stream_name":"stdout","time":156.196645536,"data":"CAPACITY_GT_ROWS 7168 / 21504 139.9\n"}
+,{"stream_name":"stdout","time":181.561064612,"data":"CAPACITY_GT_ROWS 8192 / 21504 165.2\n"}
+,{"stream_name":"stdout","time":206.011148383,"data":"CAPACITY_GT_ROWS 9216 / 21504 189.7\n"}
+,{"stream_name":"stdout","time":225.66173238,"data":"CAPACITY_GT_ROWS 10240 / 21504 209.3\n"}
+,{"stream_name":"stdout","time":245.03681946,"data":"CAPACITY_GT_ROWS 11264 / 21504 228.7\n"}
+,{"stream_name":"stdout","time":264.099461616,"data":"CAPACITY_GT_ROWS 12288 / 21504 247.8\n"}
+,{"stream_name":"stdout","time":284.718914149,"data":"CAPACITY_GT_ROWS 13312 / 21504 268.4\n"}
+,{"stream_name":"stdout","time":302.590219051,"data":"CAPACITY_GT_ROWS 14336 / 21504 286.3\n"}
+,{"stream_name":"stdout","time":324.395552655,"data":"CAPACITY_GT_ROWS 15360 / 21504 308.1\n"}
+,{"stream_name":"stdout","time":344.935730847,"data":"CAPACITY_GT_ROWS 16384 / 21504 328.6\n"}
+,{"stream_name":"stdout","time":363.800097759,"data":"CAPACITY_GT_ROWS 17408 / 21504 347.5\n"}
+,{"stream_name":"stdout","time":382.265723612,"data":"CAPACITY_GT_ROWS 18432 / 21504 366.0\n"}
+,{"stream_name":"stdout","time":406.757087115,"data":"CAPACITY_GT_ROWS 19456 / 21504 390.4\n"}
+,{"stream_name":"stdout","time":421.712657371,"data":"CAPACITY_GT_ROWS 20480 / 21504 405.4\n"}
+,{"stream_name":"stdout","time":441.877824777,"data":"CAPACITY_GT_ROWS 21504 / 21504 425.6\n"}
+,{"stream_name":"stdout","time":527.650870102,"data":"CAPACITY_COMPLETE {\"rows\": 21504, \"wall_seconds\": 511.318899953, \"test_scored\": false}\n"}
+,{"stream_name":"stderr","time":530.655315515,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":530.655352386,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":530.999833182,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":530.9998615,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":532.126534603,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":533.339632768,"data":"[NbConvertApp] Writing 278628 bytes to __results__.html\n"}
+]
