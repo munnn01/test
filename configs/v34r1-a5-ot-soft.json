@@ -1,0 +1,33 @@
+{
+  "schema": "v34r1-A5-OT-soft-1",
+  "frozen_utc": "2026-10-16T13:41:47.142288+00:00",
+  "scope": "A5 exploratory two-sequence FIT selection and two reused-sequence calibration; no independent confirmation or TEST",
+  "parent_commit": "749f8f876ccca875536d4c88565ccc075d8a9197",
+  "parent_report_sha256": "436391c8ddba2e630993e2a353f32ef2302947aaff5428f9950cb54b34733f12",
+  "parent_archive_sha256": "2e13ec6e2aae813d3d54273bd341e21ae677ab3a23160f0c686967cefbdbeccd",
+  "qps": [
+    30,
+    35,
+    40,
+    45
+  ],
+  "codecs": [
+    "h264",
+    "h265"
+  ],
+  "lambdas": [
+    0,
+    1,
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "lookback": 32,
+  "window_frames": 16,
+  "decision": "argmin log actual paid ratio + lambda * same-past identity-relative source HOTA cost; actual paid<=identity; smaller action ID ties; empty source reference->identity; causal clone all trials and commit exactly one",
+  "fit_rule": "select best negative endpoint-scaled FIT GT rate/quality utility; lower lambda ties, otherwise identity; objective is NOT BD-rate",
+  "calibration_rule": "freeze one policy and hashes before exactly one reusedCAL replay; report raw four-point PCHIP and nonmonotone undefined curves",
+  "test_rule": "no TEST in this job; positive reusedCAL evidence still requires a separately frozen untouched confirmation study"
+}
