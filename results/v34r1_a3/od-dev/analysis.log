@@ -1,0 +1,3 @@
+A3 FIT_SELECTED pseudo_ap {"kind": "fixed", "profile": 0}
+A3 FIT_SELECTED pseudo_loss {"kind": "source_proxy", "proxy": "pseudo_loss", "threshold": 0.025}
+A3_VALIDATION_GATE {"pseudo_ap": false, "pseudo_loss": false}

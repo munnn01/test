@@ -1,5 +1,7 @@
 > **v34r1:** TEST mới đã chạy trên Kaggle với đúng 4 QP 30/35/40/45. AR đạt BD-rate −31,35%/−21,22%; OD −7,84%/không hợp lệ; OT không hợp lệ/−16,08% (H.264/H.265). **Mục tiêu cả sáu endpoint dưới −15% chưa đạt; chưa xác nhận đồng thời bằng CI.** Xem [pipeline của ba tác vụ](docs/V34R1-PIPELINE.md), [kết quả và giới hạn](docs/V34R1-REPORT.md), [giao thức](docs/V34R1.md). Các số liệu v34 lịch sử bên dưới dùng giao thức cũ, khác lượt v34r1 này.
 
+> **A3:** Đã đo21.504 hàng OD DEV trên Kaggle (21 profile,128 ảnh, đúng4QP). Cả hai proxy mới chưa qua validation;512 ảnh TEST dự phòng vẫn giữ riêng. Xem [kết quả âm và bằng chứng](docs/V34R1-A3-OD-REPORT.md), [CSV raw curves](docs/V34R1-A3-OD-CURVES.csv), [thiết kế OT source-HOTA với native FPS](docs/V34R1-A3-OT-PLAN.md). Chưa có tuyên bố đạt cả sáu mục tiêu.
+
 # V34-R1 — Adaptive preprocessing for Video Swin
 
 CNN+GRU chọn bộ lọc theo vùng và theo thời gian **trước H.264/H.265**. Decoder chuẩn dựng RGB, sau đó **Video Swin-T đóng băng** nhận dạng hành động. Codec, bộ lọc và task model không được huấn luyện bằng backpropagation trong V34-R1.

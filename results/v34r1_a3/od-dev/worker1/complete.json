@@ -1,0 +1,34 @@
+{
+  "grid": {
+    "images": 64,
+    "rows": 10752,
+    "profiles": 21,
+    "qps": [
+      30,
+      35,
+      40,
+      45
+    ],
+    "codecs": [
+      "h264",
+      "h265"
+    ]
+  },
+  "wall_seconds": 1853.144795627,
+  "reproducibility": {
+    "codec": "h264",
+    "qp": 30,
+    "profile": 0,
+    "image_id": 210502,
+    "extra_actual_encodes": 1,
+    "exact_packet_and_pixels": true,
+    "prediction_absolute_tolerance": 1e-06,
+    "max_loss_delta": 0.0,
+    "note": "common RNG seeds for sampled loss; image-dependent proposals are not fixed across different candidates"
+  },
+  "peak_cuda_bytes": 293673472,
+  "actual_encodes": 10529,
+  "decoded_inferences": 10512,
+  "pseudo_loss_forwards": 10512,
+  "source_inferences": 64
+}

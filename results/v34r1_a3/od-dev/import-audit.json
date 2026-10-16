@@ -1,0 +1,99 @@
+{
+  "complete": true,
+  "scope": "artifact hashes/full21504grid/source-only selector replay/BD arithmetic; GT COCO inference not repeated locally",
+  "commit": "33ef4181abb9afb6b829de6c6094a2e015b6346a",
+  "archive_sha256": "683f16675e19b07ede7bce06444b3df203c31c261a4b495e51d908f61beddea0",
+  "archive_bytes": 64054207,
+  "grid": {
+    "images": 128,
+    "rows": 21504,
+    "profiles": 21,
+    "qps": [
+      30,
+      35,
+      40,
+      45
+    ],
+    "codecs": [
+      "h264",
+      "h265"
+    ]
+  },
+  "source_manifest_sha256": "b890b71121619cfd7f0023c38260cb614d502afb886169ac85e4fcaa6f112dca",
+  "policy_sha256": "c7d279f6022e1cbdd85c05dc3f4727c3af1762219072da48ce8ca502b5a62465",
+  "cloud_wall_seconds": 2185.1548840999603,
+  "workers": {
+    "0": {
+      "grid": {
+        "images": 64,
+        "rows": 10752,
+        "profiles": 21,
+        "qps": [
+          30,
+          35,
+          40,
+          45
+        ],
+        "codecs": [
+          "h264",
+          "h265"
+        ]
+      },
+      "wall_seconds": 1836.5403961880002,
+      "reproducibility": {
+        "codec": "h264",
+        "qp": 30,
+        "profile": 0,
+        "image_id": 565624,
+        "extra_actual_encodes": 1,
+        "exact_packet_and_pixels": true,
+        "prediction_absolute_tolerance": 1e-06,
+        "max_loss_delta": 0.0,
+        "note": "common RNG seeds for sampled loss; image-dependent proposals are not fixed across different candidates"
+      },
+      "peak_cuda_bytes": 293648896,
+      "actual_encodes": 10529,
+      "decoded_inferences": 10521,
+      "pseudo_loss_forwards": 10521,
+      "source_inferences": 64
+    },
+    "1": {
+      "grid": {
+        "images": 64,
+        "rows": 10752,
+        "profiles": 21,
+        "qps": [
+          30,
+          35,
+          40,
+          45
+        ],
+        "codecs": [
+          "h264",
+          "h265"
+        ]
+      },
+      "wall_seconds": 1853.144795627,
+      "reproducibility": {
+        "codec": "h264",
+        "qp": 30,
+        "profile": 0,
+        "image_id": 210502,
+        "extra_actual_encodes": 1,
+        "exact_packet_and_pixels": true,
+        "prediction_absolute_tolerance": 1e-06,
+        "max_loss_delta": 0.0,
+        "note": "common RNG seeds for sampled loss; image-dependent proposals are not fixed across different candidates"
+      },
+      "peak_cuda_bytes": 293673472,
+      "actual_encodes": 10529,
+      "decoded_inferences": 10512,
+      "pseudo_loss_forwards": 10512,
+      "source_inferences": 64
+    }
+  },
+  "validation_gate": {
+    "pseudo_ap": false,
+    "pseudo_loss": false
+  }
+}
