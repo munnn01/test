@@ -5,6 +5,26 @@ REQUIRED_SCALE_BLOCKS=('grid','policy_lock','source_provenance','paid_header',
     'independent_decode','source_only','no_substitution','measurement_reproducibility')
 
 
+def one_codec_gate(comparisons,blocks):
+    """User amendment2026-10-18; keep original two-codec gate reproducible."""
+    reasons=[];passed=[];status={}
+    if any(blocks.get(k) is not True for k in REQUIRED_SCALE_BLOCKS) or any(v is not True for v in blocks.values()):
+        reasons.append('incomplete or failed block/provenance checks')
+    for codec in ('h264','h265'):
+        r=comparisons.get(codec,{})
+        complete=(r.get('qps')==[30,35,40,45] and r.get('primary_interpolator')=='PCHIP'
+            and r.get('threshold_pct')==-15. and type(r.get('valid')) is bool and 'invalid_reason' in r and 'pchip_bd_rate_pct' in r)
+        if not complete:reasons.append(codec+': missing declared four-point comparison')
+        v=r.get('pchip_bd_rate_pct')
+        ok=(complete and r['valid'] and r['invalid_reason'] is None and type(v) in (float,int) and math.isfinite(v) and v < -15.)
+        status[codec]=dict(point_passes=bool(ok),valid=r.get('valid'),invalid_reason=r.get('invalid_reason'))
+        if ok:passed.append(codec)
+    if not passed:reasons.append('no valid codec BD strictly below -15%')
+    return dict(eligible_for_scale4=not reasons,codec_rule='at_least_one_per_task',passed_codecs=passed,codec_status=status,
+        reasons=reasons,threshold_pct=-15.,criterion_amended_after_A6=True,point_gate_only=True,
+        does_not_establish_confidence_confirmation=True)
+
+
 def audit_ot21(rows,sequences,*,codec=None):
     """Require every paid action for every declared64-frame source condition."""
     codecs=('h264','h265') if codec is None else (codec,)

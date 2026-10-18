@@ -1,0 +1,25 @@
+{
+  "complete": true,
+  "selection_rows_checked": 768,
+  "exact_anchor_and_a5_control_tracker_files": 64,
+  "archive_sha256": "f228db05c07ae92c7c37d6ce2406c23ee7c28c1c6c88e1b0717ca90b8f41c499",
+  "archive_bytes": 7699464,
+  "cloud_wall_seconds": 732.1737520694733,
+  "policy": {
+    "kind": "source_hota_lagrangian",
+    "weight": 32
+  },
+  "full21_grid_rows": 2688,
+  "resource_gate": {
+    "eligible_for_scale4": false,
+    "reasons": [
+      "h264: invalid four-point comparison"
+    ],
+    "threshold_pct": -15.0,
+    "point_gate_only": true,
+    "does_not_establish_confidence_confirmation": true
+  },
+  "independent_validation": false,
+  "test_scored": false,
+  "scope": "saved source-only choice arithmetic, tracker-file hashes, official19IoU metric means, paid rates, BD and FIT utility; no local real task work"
+}

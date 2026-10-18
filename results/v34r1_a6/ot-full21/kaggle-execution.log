@@ -1,0 +1,76 @@
+[{"stream_name":"stdout","time":10.9706137,"data":"RUN /usr/bin/python3 -m pip install -q --no-deps numpy==2.1.3 scipy==1.16.3 opencv-python==4.12.0.88 opencv-python-headless==4.12.0.88 supervision==0.27.0 pycocotools==2.0.11 tabulate==0.9.0\n"}
+,{"stream_name":"stdout","time":16.770205021,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.0/67.0 MB 29.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":17.313977472,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.0/54.0 MB 35.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":17.391072506,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 212.4/212.4 kB 8.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":21.966042023,"data":"RUN git clone -q https://github.com/JonathonLuiten/TrackEval.git /kaggle/temp/adaptive_preprocessing/data/TrackEval\n"}
+,{"stream_name":"stdout","time":22.962908535,"data":"RUN git -C /kaggle/temp/adaptive_preprocessing/data/TrackEval checkout -q 12c8791b303e0a0b50f753af204249e622d0281a\n"}
+,{"stream_name":"stdout","time":22.970241443,"data":"RUN /usr/bin/python3 -m unittest tests.test_v34r1_a6_contracts tests.test_v34r1_a6_ot_grid tests.test_v34r1_a5_ot_choice tests.test_v34r1_a3_hota tests.test_v34r1_a3_tracking tests.test_v34r1_a3_core tests.test_v34r1_a4_rd_fit tests.test_v34r1_a4_cloud_record -v\n"}
+,{"stream_name":"stdout","time":23.404441159,"data":"test_every_required_block_is_mandatory (tests.test_v34r1_a6_contracts.A6Contracts.test_every_required_block_is_mandatory) ... ok\n"}
+,{"stream_name":"stdout","time":23.404814268,"data":"test_invalid_or_repaired_tables_never_open_expansion (tests.test_v34r1_a6_contracts.A6Contracts.test_invalid_or_repaired_tables_never_open_expansion) ... ok\n"}
+,{"stream_name":"stdout","time":23.405149948,"data":"test_overlaps_forbidden_ids_and_incomplete_cohorts_fail (tests.test_v34r1_a6_contracts.A6Contracts.test_overlaps_forbidden_ids_and_incomplete_cohorts_fail) ... ok\n"}
+,{"stream_name":"stdout","time":23.405466648,"data":"test_scale_gate_requires_both_strict_bds_and_all_blocks (tests.test_v34r1_a6_contracts.A6Contracts.test_scale_gate_requires_both_strict_bds_and_all_blocks) ... ok\n"}
+,{"stream_name":"stdout","time":23.405761879,"data":"test_withhold_whole_cohort_without_any_image_overlap (tests.test_v34r1_a6_contracts.A6Contracts.test_withhold_whole_cohort_without_any_image_overlap) ... ok\n"}
+,{"stream_name":"stdout","time":23.407627018,"data":"test_full_bank_and_codec_shards (tests.test_v34r1_a6_ot_grid.TestOTGrid.test_full_bank_and_codec_shards) ... ok\n"}
+,{"stream_name":"stdout","time":23.409612197,"data":"test_reject_partial_duplicate_and_wrong_condition (tests.test_v34r1_a6_ot_grid.TestOTGrid.test_reject_partial_duplicate_and_wrong_condition) ... ok\n"}
+,{"stream_name":"stdout","time":23.410624477,"data":"test_invalid_or_unaligned_tables_fail_closed (tests.test_v34r1_a5_ot_choice.OTChoiceContracts.test_invalid_or_unaligned_tables_fail_closed) ... ok\n"}
+,{"stream_name":"stdout","time":23.411005937,"data":"test_paid_cap_empty_source_and_action_id_ties (tests.test_v34r1_a5_ot_choice.OTChoiceContracts.test_paid_cap_empty_source_and_action_id_ties) ... ok\n"}
+,{"stream_name":"stdout","time":23.411230437,"data":"test_soft_tradeoff_can_accept_five_point_proxy_loss_then_reject_at_larger_lambda (tests.test_v34r1_a5_ot_choice.OTChoiceContracts.test_soft_tradeoff_can_accept_five_point_proxy_loss_then_reject_at_larger_lambda) ... ok\n"}
+,{"stream_name":"stdout","time":24.73990026,"data":"test_empty_source_is_undefined_and_temporal_or_duplicate_ids_are_rejected (tests.test_v34r1_a3_hota.HOTASourceContracts.test_empty_source_is_undefined_and_temporal_or_duplicate_ids_are_rejected) ... ok\n"}
+,{"stream_name":"stdout","time":24.746132631000002,"data":"test_id_relabeling_is_invariant_but_a_switch_lowers_association (tests.test_v34r1_a3_hota.HOTASourceContracts.test_id_relabeling_is_invariant_but_a_switch_lowers_association) ... ok\n"}
+,{"stream_name":"stdout","time":24.909475942,"data":"test_long_prefix_dilutes_recent_misses_but_trailing_window_retains_them (tests.test_v34r1_a3_hota.HOTASourceContracts.test_long_prefix_dilutes_recent_misses_but_trailing_window_retains_them) ... ok\n"}
+,{"stream_name":"stdout","time":34.830411737,"data":"test_native_state_resets_at_sequence_boundary_and_preserves_prefix_alignment (tests.test_v34r1_a3_tracking.HOTAStateContracts.test_native_state_resets_at_sequence_boundary_and_preserves_prefix_alignment) ... PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'\n"}
+,{"stream_name":"stdout","time":34.831461527,"data":"PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'\n"}
+,{"stream_name":"stdout","time":34.831877688,"data":"PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'\n"}
+,{"stream_name":"stdout","time":34.95801005,"data":"PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'\n"}
+,{"stream_name":"stdout","time":35.0073746,"data":"In /usr/local/lib/python3.13/dist-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'parseString' deprecated - use 'parse_string'\n"}
+,{"stream_name":"stdout","time":35.00742514,"data":"In /usr/local/lib/python3.13/dist-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'resetCache' deprecated - use 'reset_cache'\n"}
+,{"stream_name":"stdout","time":35.414478666,"data":"ok\n"}
+,{"stream_name":"stdout","time":35.427203898,"data":"test_trials_share_committed_past_and_only_one_commit_advances_history (tests.test_v34r1_a3_tracking.HOTAStateContracts.test_trials_share_committed_past_and_only_one_commit_advances_history) ... ok\n"}
+,{"stream_name":"stdout","time":35.429218029,"data":"test_complete_grid_cannot_drop_or_duplicate_a_profile_condition (tests.test_v34r1_a3_core.A3Contracts.test_complete_grid_cannot_drop_or_duplicate_a_profile_condition) ... ok\n"}
+,{"stream_name":"stdout","time":35.429451628,"data":"test_fit_threshold_uses_fit_metrics_only_with_predeclared_quality_limits (tests.test_v34r1_a3_core.A3Contracts.test_fit_threshold_uses_fit_metrics_only_with_predeclared_quality_limits) ... ok\n"}
+,{"stream_name":"stdout","time":35.433288629,"data":"test_fresh_split_excludes_every_old_id_and_groups_images (tests.test_v34r1_a3_core.A3Contracts.test_fresh_split_excludes_every_old_id_and_groups_images) ... ok\n"}
+,{"stream_name":"stdout","time":35.433415369,"data":"test_identity_required_and_nonfinite_thresholds_are_rejected (tests.test_v34r1_a3_core.A3Contracts.test_identity_required_and_nonfinite_thresholds_are_rejected) ... ok\n"}
+,{"stream_name":"stdout","time":35.433820649,"data":"test_source_selector_rejects_guard_damage_and_paid_rate_overrun (tests.test_v34r1_a3_core.A3Contracts.test_source_selector_rejects_guard_damage_and_paid_rate_overrun) ... ok\n"}
+,{"stream_name":"stdout","time":35.434929449,"data":"test_identity_fallback_and_stable_ties (tests.test_v34r1_a4_rd_fit.RDFitContracts.test_identity_fallback_and_stable_ties) ... ok\n"}
+,{"stream_name":"stdout","time":35.435113099,"data":"test_nonmonotone_interior_does_not_become_a_repaired_bd_curve (tests.test_v34r1_a4_rd_fit.RDFitContracts.test_nonmonotone_interior_does_not_become_a_repaired_bd_curve) ... ok\n"}
+,{"stream_name":"stdout","time":35.43540758,"data":"test_rate_quality_tradeoff_replaces_arbitrary_same_qp_quality_gate (tests.test_v34r1_a4_rd_fit.RDFitContracts.test_rate_quality_tradeoff_replaces_arbitrary_same_qp_quality_gate) ... ok\n"}
+,{"stream_name":"stdout","time":35.435735049,"data":"test_rejects_nonfinite_partial_or_invalid_endpoint_tables (tests.test_v34r1_a4_rd_fit.RDFitContracts.test_rejects_nonfinite_partial_or_invalid_endpoint_tables) ... ok\n"}
+,{"stream_name":"stdout","time":35.43902893,"data":"test_archive_extract_creates_absent_parents_and_blocks_escape_or_overwrite (tests.test_v34r1_a4_cloud_record.CloudRecordContracts.test_archive_extract_creates_absent_parents_and_blocks_escape_or_overwrite) ... ok\n"}
+,{"stream_name":"stdout","time":35.44104581,"data":"test_artifact_lookup_skips_media_datasets_and_rejects_ambiguous_notebooks (tests.test_v34r1_a4_cloud_record.CloudRecordContracts.test_artifact_lookup_skips_media_datasets_and_rejects_ambiguous_notebooks) ... ok\n"}
+,{"stream_name":"stdout","time":35.44135224,"data":"test_changed_fresh_reservation_cannot_be_silently_rebound (tests.test_v34r1_a4_cloud_record.CloudRecordContracts.test_changed_fresh_reservation_cannot_be_silently_rebound) ... ok\n"}
+,{"stream_name":"stdout","time":35.442996931,"data":"test_existing_output_is_preserved_and_success_omits_gt_from_bundle (tests.test_v34r1_a4_cloud_record.CloudRecordContracts.test_existing_output_is_preserved_and_success_omits_gt_from_bundle) ... A4_CLOUD_STATUS {\"test_scored\": false, \"complete\": true, \"wall_seconds\": 0.0002162456512451172}\n"}
+,{"stream_name":"stdout","time":35.443681391,"data":"ok\n"}
+,{"stream_name":"stdout","time":35.445436911,"data":"test_failed_setup_records_error_and_available_logs_without_masking_original (tests.test_v34r1_a4_cloud_record.CloudRecordContracts.test_failed_setup_records_error_and_available_logs_without_masking_original) ... A4_CLOUD_STATUS {\"commit\": \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"test_scored\": false, \"complete\": false, \"error_type\": \"RuntimeError\", \"error\": \"parent hash mismatch\", \"wall_seconds\": 4.00543212890625e-05}\n"}
+,{"stream_name":"stdout","time":35.446179711,"data":"ok\n"}
+,{"stream_name":"stdout","time":35.449325712,"data":"test_tracker_parity_rejects_changed_association_or_missing_output (tests.test_v34r1_a4_cloud_record.CloudRecordContracts.test_tracker_parity_rejects_changed_association_or_missing_output) ... ok\n"}
+,{"stream_name":"stdout","time":35.449349922,"data":"\n"}
+,{"stream_name":"stdout","time":35.449353172,"data":"----------------------------------------------------------------------\n"}
+,{"stream_name":"stdout","time":35.449356652,"data":"Ran 30 tests in 12.045s\n"}
+,{"stream_name":"stdout","time":35.449360242,"data":"\n"}
+,{"stream_name":"stdout","time":35.449363172,"data":"OK\n"}
+,{"stream_name":"stdout","time":44.589155851,"data":"A6_MOT17_READY MOT17-02-FRCNN 2 metadata_only True\n"}
+,{"stream_name":"stdout","time":45.752931417,"data":"A6_MOT17_READY MOT17-05-FRCNN 2 metadata_only True\n"}
+,{"stream_name":"stdout","time":47.483266337,"data":"A6_MOT17_READY MOT17-04-FRCNN 2 metadata_only True\n"}
+,{"stream_name":"stdout","time":48.744470911,"data":"A6_MOT17_READY MOT17-11-FRCNN 2 metadata_only True\n"}
+,{"stream_name":"stdout","time":48.745034081,"data":"RUN /usr/bin/python3 -u -m adaptive_vcm.v34r1_a6.ot_replay --cache /kaggle/temp/adaptive_preprocessing/data/v34r1_a6/cache-merged/a6-ot-cache-bundle --sources /kaggle/temp/adaptive_preprocessing/data/v34r1_a6/metadata-only --out /kaggle/working/a6-ot-full21\n"}
+,{"stream_name":"stdout","time":68.603212302,"data":"A6_OT_REPLAY fit anchor 0.0\n"}
+,{"stream_name":"stdout","time":142.418739915,"data":"A6_OT_REPLAY fit full-lambda-0 -0.3463664288356646\n"}
+,{"stream_name":"stdout","time":217.186139191,"data":"A6_OT_REPLAY fit full-lambda-1 -0.34205075670428947\n"}
+,{"stream_name":"stdout","time":292.568207972,"data":"A6_OT_REPLAY fit full-lambda-2 -0.32938350442374054\n"}
+,{"stream_name":"stdout","time":368.597630522,"data":"A6_OT_REPLAY fit full-lambda-4 -0.30801102758372284\n"}
+,{"stream_name":"stdout","time":444.436147882,"data":"A6_OT_REPLAY fit full-lambda-8 -0.2720831191271129\n"}
+,{"stream_name":"stdout","time":519.873526392,"data":"A6_OT_REPLAY fit full-lambda-16 -0.231702912462997\n"}
+,{"stream_name":"stdout","time":595.383996794,"data":"A6_OT_REPLAY fit full-lambda-32 -0.1567035183027379\n"}
+,{"stream_name":"stdout","time":603.435200718,"data":"A6_OT_REPLAY validation anchor 0.0\n"}
+,{"stream_name":"stdout","time":690.532059459,"data":"A6_OT_REPLAY validation full-lambda-32 -0.04424020659384705\n"}
+,{"stream_name":"stdout","time":715.350290407,"data":"A6_OT_REPLAY fit shortlist-lambda-32 -0.2103085047472864\n"}
+,{"stream_name":"stdout","time":742.324206703,"data":"A6_OT_REPLAY validation shortlist-lambda-32 -0.05133792503387323\n"}
+,{"stream_name":"stdout","time":742.350858472,"data":"A6_OT_COMPLETE {\"policy\": {\"kind\": \"source_hota_lagrangian\", \"weight\": 32}, \"calibration_both_codecs_below_minus15\": false, \"test_scored\": false, \"seconds\": 680.548274087}\n"}
+,{"stream_name":"stdout","time":745.324862705,"data":"A4_CLOUD_STATUS {\"commit\": \"c46327828ab252ce81dc8501d7202ced49908046\", \"bundle_sha256\": \"75b921531305e3d1daed70a319d7f31c3e20865bc0137dae427e75219ea6fe46\", \"test_scored\": false, \"new_model_inferences\": 0, \"new_encodes\": 0, \"complete\": true, \"wall_seconds\": 732.1737520694733}\n"}
+,{"stream_name":"stderr","time":747.719224878,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":747.719258128,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":748.1280165,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":748.12805256,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":748.927727305,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":750.256494529,"data":"[NbConvertApp] Writing 275461 bytes to __results__.html\n"}
+]

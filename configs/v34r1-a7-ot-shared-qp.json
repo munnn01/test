@@ -1,0 +1,57 @@
+{
+  "schema": "v34r1-A7-shared-QP-1",
+  "frozen_utc": "2026-10-18T06:41:12.399954+00:00",
+  "codecs": [
+    "h264"
+  ],
+  "qps": [
+    30,
+    35,
+    40,
+    45
+  ],
+  "profiles": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "lambdas": [
+    0,
+    1,
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "lookback": 32,
+  "window_frames": 16,
+  "frames": 64,
+  "parent_a6_publication_sha256": "0ecf6457db843df33e160e10d8b930d378752f95603d9f8555cbe8ad02977993",
+  "source_protocol": "configs/v34r1-a6-ot21.json",
+  "selection": "H264 FIT02/05 only; require valid raw BD and negative endpoint utility; minutility, smallerlambda tie, elseidentity",
+  "h265_reference": "unchanged authenticated A6lambda32",
+  "success_criterion": "configs/v34r1-a7-goal-amendment.json",
+  "deployment_cost": "84 candidate conditions perwindow/codec, even if transmitting onlyone QP",
+  "no_gt_sender": true,
+  "no_future": true,
+  "no_point_repair": true
+}

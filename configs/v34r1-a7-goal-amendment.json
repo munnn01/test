@@ -1,0 +1,27 @@
+{
+  "schema": "v34r1-A7-user-goal-amendment-1",
+  "created_utc": "2026-10-18T06:38:52.487319+00:00",
+  "human_instruction": "Each task needs at least one of H.264/H.265 with valid BD-rate strictly below -15%; improve any undefined codec",
+  "codec_rule": "at_least_one_per_task",
+  "threshold_pct": -15.0,
+  "qps": [
+    30,
+    35,
+    40,
+    45
+  ],
+  "codecs": [
+    "h264",
+    "h265"
+  ],
+  "scope": "resource/success goal amended after A6 results; original two-codec gates remain archived unchanged",
+  "reporting": "retain both measured codecs and all invalid points; no smoothing, point dropping, interpolation repair or extrapolation",
+  "ot_a6_frozen_policy": {
+    "kind": "source_hota_lagrangian",
+    "weight": 32
+  },
+  "ot_expansion_reservation_sha256": "3be4258c8dd52d7309b9f2630c87222a6c5456c020084c94edbb6ff274209177",
+  "ot8_primary_policy": "unchanged A6; primary success at least one valid codec, report both",
+  "h264_improvement": "separate A7 experiment with source-only shared-profile choice across4QP per causal window; H264 FIT-only fixed lambda grid, lock before reusedCAL; no GT policy inputs",
+  "confidence": "point goal as requested; confidence reported separately, no claim retrospective criterion was prespecified"
+}

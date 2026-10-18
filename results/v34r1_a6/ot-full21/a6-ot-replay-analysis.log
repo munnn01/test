@@ -1,0 +1,13 @@
+A6_OT_REPLAY fit anchor 0.0
+A6_OT_REPLAY fit full-lambda-0 -0.3463664288356646
+A6_OT_REPLAY fit full-lambda-1 -0.34205075670428947
+A6_OT_REPLAY fit full-lambda-2 -0.32938350442374054
+A6_OT_REPLAY fit full-lambda-4 -0.30801102758372284
+A6_OT_REPLAY fit full-lambda-8 -0.2720831191271129
+A6_OT_REPLAY fit full-lambda-16 -0.231702912462997
+A6_OT_REPLAY fit full-lambda-32 -0.1567035183027379
+A6_OT_REPLAY validation anchor 0.0
+A6_OT_REPLAY validation full-lambda-32 -0.04424020659384705
+A6_OT_REPLAY fit shortlist-lambda-32 -0.2103085047472864
+A6_OT_REPLAY validation shortlist-lambda-32 -0.05133792503387323
+A6_OT_COMPLETE {"policy": {"kind": "source_hota_lagrangian", "weight": 32}, "calibration_both_codecs_below_minus15": false, "test_scored": false, "seconds": 680.548274087}
