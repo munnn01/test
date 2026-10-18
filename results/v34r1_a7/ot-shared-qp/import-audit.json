@@ -1,0 +1,59 @@
+{
+  "complete": true,
+  "checked_utc": "2026-10-18T07:09:34.646212+00:00",
+  "selection_rows_checked": 384,
+  "exact_a6_tracker_files": 32,
+  "official_metric_groups": 144,
+  "archive_sha256": "3e34cc551f93bd1d2a43edfecb48c5dd6fc0900ef13bd7737e0a4fae67193888",
+  "archive_bytes": 3979600,
+  "source_commit": "0a48d054ad088e97c14822536485280bbe8aad74",
+  "policy": {
+    "kind": "source_hota_shared_qp_lagrangian",
+    "weight": 8
+  },
+  "bd": {
+    "h264": {
+      "qps": [
+        30,
+        35,
+        40,
+        45
+      ],
+      "primary_interpolator": "PCHIP",
+      "threshold_pct": -15.0,
+      "valid": true,
+      "pchip_bd_rate_pct": -14.13693092747563,
+      "point_passes": false,
+      "threshold_confirmed": false,
+      "ci": null,
+      "invalid_reason": null,
+      "common_quality_interval": [
+        0.443015805739975,
+        0.5287049377025168
+      ]
+    },
+    "h265": {
+      "qps": [
+        30,
+        35,
+        40,
+        45
+      ],
+      "primary_interpolator": "PCHIP",
+      "threshold_pct": -15.0,
+      "valid": true,
+      "pchip_bd_rate_pct": -16.488408967344046,
+      "point_passes": true,
+      "threshold_confirmed": false,
+      "ci": null,
+      "invalid_reason": null,
+      "common_quality_interval": [
+        0.4283660303484717,
+        0.5360316367050045
+      ]
+    }
+  },
+  "cloud_wall_seconds": 653.6178812980652,
+  "independent_validation": false,
+  "scope": "saved arithmetic, decisions, hashes, and official metric means only; no local actual task work"
+}

@@ -1,0 +1,35 @@
+{
+  "schema": "A7-OT-evidence-1",
+  "files": [
+    {
+      "path": "a7-ot-replay-tests.log",
+      "bytes": 7038,
+      "sha256": "4c9b4e9d09739063fa43b6110ffba4bb893b699fa96ce58c2ec8c18cc677e517"
+    },
+    {
+      "path": "cloud-status.json",
+      "bytes": 276,
+      "sha256": "666ffa8594bac9b0a96de0beeedf23a8c54e540f2fb522399c80f2a6b4617d35"
+    },
+    {
+      "path": "fit-frozen-policy.json",
+      "bytes": 3006,
+      "sha256": "76b72aba661c16fbeddfdb2910ea6b6856a634f803c18187cca09cd19d37c8b6"
+    },
+    {
+      "path": "import-audit.json",
+      "bytes": 1575,
+      "sha256": "49842099ed5aefe870699fac0ea64f9f812feb4b09e983bb82e7df79c1008d85"
+    },
+    {
+      "path": "replay-report.json",
+      "bytes": 1793767,
+      "sha256": "77fc5a815dc43b911fe0ff5bffc28a5466bf5bea45d7dd15ffedc8062bbadd83"
+    },
+    {
+      "path": "v34r1-a7-ot-shared-qp.tgz",
+      "bytes": 3979600,
+      "sha256": "3e34cc551f93bd1d2a43edfecb48c5dd6fc0900ef13bd7737e0a4fae67193888"
+    }
+  ]
+}

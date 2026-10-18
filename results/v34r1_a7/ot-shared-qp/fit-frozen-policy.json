@@ -1,0 +1,116 @@
+{
+  "frozen_utc": "2026-10-18T07:01:53.006314+00:00",
+  "fit_only": true,
+  "bank_profiles": 21,
+  "protocol_sha256": "7e9a4e41098760d6c99d416e45edb92d31733623b6eefbc0881b4b63f8223e50",
+  "policy": {
+    "kind": "source_hota_shared_qp_lagrangian",
+    "weight": 8
+  },
+  "h265_policy": "unchanged authenticated A6 lambda32",
+  "fit_selection": {
+    "selected": {
+      "weight": 8,
+      "quality": [
+        0.3697341159270757,
+        0.3531172175313337,
+        0.3485971238688084,
+        0.3399910914456355
+      ],
+      "log_rate_ratio": -0.3064745056951283,
+      "bd_valid": true,
+      "utility": -0.27664866419227385
+    },
+    "endpoint_scale": 26.455678117195777,
+    "candidates": [
+      {
+        "weight": 0,
+        "quality": [
+          0.3594959603011338,
+          0.3568312988121521,
+          0.3512871904884298,
+          0.3257175855010573
+        ],
+        "log_rate_ratio": -0.32399299217096766,
+        "bd_valid": true,
+        "utility": -0.1744055123785212
+      },
+      {
+        "weight": 1,
+        "quality": [
+          0.3651617251632352,
+          0.3550852572656226,
+          0.34552996841362016,
+          0.3400725911566004
+        ],
+        "log_rate_ratio": -0.3227361734305104,
+        "bd_valid": true,
+        "utility": -0.2559384769576723
+      },
+      {
+        "weight": 2,
+        "quality": [
+          0.3667491328848116,
+          0.35220619746735443,
+          0.3384663968246307,
+          0.3452691750935811
+        ],
+        "log_rate_ratio": -0.31417628295436534,
+        "bd_valid": false,
+        "utility": -0.2264875974938554
+      },
+      {
+        "weight": 4,
+        "quality": [
+          0.3667491328848116,
+          0.35220619746735443,
+          0.3384663968246307,
+          0.3452691750935811
+        ],
+        "log_rate_ratio": -0.31417628295436534,
+        "bd_valid": false,
+        "utility": -0.2264875974938554
+      },
+      {
+        "weight": 8,
+        "quality": [
+          0.3697341159270757,
+          0.3531172175313337,
+          0.3485971238688084,
+          0.3399910914456355
+        ],
+        "log_rate_ratio": -0.3064745056951283,
+        "bd_valid": true,
+        "utility": -0.27664866419227385
+      },
+      {
+        "weight": 16,
+        "quality": [
+          0.3719320073469994,
+          0.3581496565436492,
+          0.3368211339257872,
+          0.334355989422479
+        ],
+        "log_rate_ratio": -0.25552292379257924,
+        "bd_valid": true,
+        "utility": -0.15836234475727354
+      },
+      {
+        "weight": 32,
+        "quality": [
+          0.3719320073469994,
+          0.3581496565436492,
+          0.3368211339257872,
+          0.334355989422479
+        ],
+        "log_rate_ratio": -0.25552292379257924,
+        "bd_valid": true,
+        "utility": -0.15836234475727354
+      }
+    ],
+    "scope": "H264 FIT only; valid BD and negative endpoint utility; no CAL selection"
+  },
+  "calibration_reused": true,
+  "independent_validation": false,
+  "test_scored": false
+}
