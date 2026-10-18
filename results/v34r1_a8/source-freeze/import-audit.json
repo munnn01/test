@@ -1,0 +1,24 @@
+{
+  "complete": true,
+  "source_manifest_sha256": "c1418f2ca848dc1cd51c1a09a0ca7030f35f7ad5e76fe8d0215eb3015fe7679b",
+  "selection_protocol_sha256": "cde244fab44481449c2376281a09969122d8e2a7db1f9e7278ca9aba8f34ea5f",
+  "archive_sha256": "d9d9c9436cb8efff355df52653c859c504f3e47e404dcd2889ff322fbc51af3a",
+  "source_commit": "e5f3fa585b4797b50205a144add477a25da139d3",
+  "counts": {
+    "ar": 1000,
+    "od": 1000,
+    "ot": 10
+  },
+  "ar_classes": 400,
+  "ar_selected_frames": 16000,
+  "ar_window_files": 32000,
+  "exact_a6_ar512_source_overlaps": 33,
+  "exact_reserved_od_byte_and_canonical_parity": 512,
+  "ot_window_files": 2570,
+  "ot_gt_file_hashes": 10,
+  "cloud_wall_seconds": 129.82407569885254,
+  "task_model_inferences": 0,
+  "codec_trials": 0,
+  "gt_metrics": 0,
+  "od_provenance_qualification": "legacy dedicated training artifact does not enumerate source IDs;64 reconstructed from pinned source recipe and settings, not from an original per-image training log; prior conservative whole-partition exclusion is explicitly amended"
+}

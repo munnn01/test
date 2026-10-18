@@ -1,0 +1,40 @@
+{
+  "schema": "A8-source-freeze-evidence-1",
+  "files": [
+    {
+      "path": "a8-source-tests.log",
+      "bytes": 2587,
+      "sha256": "a58bef461f53a544003495dee0fd6be039c7dee111b46417507b5f870a39a70d"
+    },
+    {
+      "path": "cloud-status.json",
+      "bytes": 210,
+      "sha256": "d7326033a86e366aedd9ed794c91cd0419a1452f5ab10e8bfcace405c8f5aa9d"
+    },
+    {
+      "path": "freeze-complete.json",
+      "bytes": 199,
+      "sha256": "68f3c9e96ee0cd91e0c8691143b84a4a1d99d26cb33aff594458da0739f3968b"
+    },
+    {
+      "path": "import-audit.json",
+      "bytes": 1069,
+      "sha256": "cf1eb773942b7ff83da8e1ad8afdb271ccb9153a2a0762249f3dcec4bef0080a"
+    },
+    {
+      "path": "kaggle-execution.log",
+      "bytes": 90645,
+      "sha256": "f26b2a3f15d2557af97a0e6b0be6197aa01d5d917f22c56dea7999b1577898e0"
+    },
+    {
+      "path": "source-manifest.json",
+      "bytes": 5491667,
+      "sha256": "c1418f2ca848dc1cd51c1a09a0ca7030f35f7ad5e76fe8d0215eb3015fe7679b"
+    },
+    {
+      "path": "v34r1-a8-source-freeze.tgz",
+      "bytes": 1681603,
+      "sha256": "d9d9c9436cb8efff355df52653c859c504f3e47e404dcd2889ff322fbc51af3a"
+    }
+  ]
+}

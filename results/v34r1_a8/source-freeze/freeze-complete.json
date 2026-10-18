@@ -1,0 +1,10 @@
+{
+  "complete": true,
+  "manifest_sha256": "c1418f2ca848dc1cd51c1a09a0ca7030f35f7ad5e76fe8d0215eb3015fe7679b",
+  "counts": {
+    "ar": 1000,
+    "od": 1000,
+    "ot": 10
+  },
+  "source_only": true
+}
