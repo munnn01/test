@@ -111,7 +111,12 @@ def source_cost(heads,record,decoded,tracking_state,cache,guard_mask=None):
     return cache[sha]
 
 
-def evaluate_condition(record,model,heads,maps,pair,codec_name,qp,cfg,state=None,filtered_cache=None,legacy_state=None):
+def ar_receiver_result(probabilities,record,*,defer=False):
+    label=int(np.argmax(probabilities))
+    return dict(predicted_label=label) if defer else dict(correct=int(label==record.gt_label))
+
+
+def evaluate_condition(record,model,heads,maps,pair,codec_name,qp,cfg,state=None,filtered_cache=None,legacy_state=None,*,defer_ar_labels=False,stage_callback=None,packet_sink=None):
     condition_start=time.perf_counter()
     codec=codec_factory(record.task,codec_name,qp,cfg)
     executable=Path(cfg['ffmpeg_executable'])
@@ -132,6 +137,7 @@ def evaluate_condition(record,model,heads,maps,pair,codec_name,qp,cfg,state=None
         return packets[action]
     anchor=encode(0)
     local_cfg={**cfg,'domain_condition':model.conditions==9}
+    if stage_callback:stage_callback('controller')
     prediction=infer(model,pair,condition(codec_name,qp,record.mask,local_cfg,domain=record.task))
     forced=int(np.argmax(prediction['logits']))
     arms_requested=cfg.get('arms',list(ARMS))
@@ -152,6 +158,7 @@ def evaluate_condition(record,model,heads,maps,pair,codec_name,qp,cfg,state=None
     candidate_packets=[encode(a) for a in candidates]
     rate=[p.coded_bytes/anchor.coded_bytes for p in candidate_packets]
     values=[]
+    if stage_callback:stage_callback('candidate_scoring')
     for packet,ratio in zip(candidate_packets,rate):
         values.append(source_cost(heads,record,packet.decoded,state,costs,guard_mask)[0] if ratio<=cfg['measured_budget_ratio'] else [None]*3)
     selected,guard=select_measured(rate,values,guard_mask,cfg['source_guard_limits'],
@@ -184,6 +191,7 @@ def evaluate_condition(record,model,heads,maps,pair,codec_name,qp,cfg,state=None
           'guard_legacy':(candidates[legacy_selected],candidate_packets[legacy_selected],{'source_guard':legacy_guard}),
           'adaptive':(candidates[selected],candidate_packets[selected],details)}
     predictions={}; rows=[]
+    if stage_callback:stage_callback('receiver')
     for arm,(action,packet,extra) in arms.items():
         if arm not in arms_requested: continue
         sha=packet.packet_sha256
@@ -195,13 +203,15 @@ def evaluate_condition(record,model,heads,maps,pair,codec_name,qp,cfg,state=None
                 cached=costs.get(pixel_sha)
                 predictions[sha]=cached[2] if cached and cached[2] is not None else heads.detections(packet.decoded)
         pred=predictions[sha]
+        packet_path=packet_sink(packet) if packet_sink else None
         row=dict(id=record.id,task=record.task,codec=codec_name,qp=qp,arm=arm,action=action,
                  bytes=packet.coded_bytes,elementary_bytes=packet.elementary_bytes,metadata_bytes=packet.metadata_bytes,
                  bpp=packet.coded_bytes*8/np.prod(record.rgb.shape[:3]),packet_sha256=sha,
                  decoded_sha256=hashlib.sha256(packet.decoded.tobytes()).hexdigest(),**extra)
-        if record.task=='ar': row['correct']=int(np.argmax(pred)==record.gt_label)
+        if record.task=='ar': row.update(ar_receiver_result(pred,record,defer=defer_ar_labels))
         elif record.task=='od': row.update(image_id=record.item['image_id'],coco=coco_predictions(pred,record.item,record.geometry))
         else: row['_detections']=pred
+        if packet_path is not None:row['packet_path']=packet_path
         if arm=='adaptive':
             row.update(candidate_encode_count=len(packets),candidate_search_encode_count=len(candidates),
                        candidate_work=[dict(action=a,**timings[a]) for a in packets],

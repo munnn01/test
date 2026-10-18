@@ -4,6 +4,7 @@ import configparser
 import gzip
 import hashlib
 import json
+import os
 from pathlib import Path
 import time
 import zipfile
@@ -45,7 +46,7 @@ def dance_zip(cfg):
         _DANCE_VALIDATED.add(key)
         return dest
     for attempt in range(4):
-        part=dest.with_suffix('.part');digest=hashlib.sha256();count=0
+        part=dest.with_name(dest.name+'.'+str(os.getpid())+'.part');digest=hashlib.sha256();count=0
         try:
             with requests.get(cfg['ot']['dance_archive_url'],stream=True,timeout=(30,180)) as response:
                 response.raise_for_status()
@@ -152,8 +153,10 @@ def freeze_all(base):
 def restore_ar(row):
     folder=mounted(row['id']+'/img_00001.jpg')
     if folder is None:raise FileNotFoundError('declared mounted AR source missing')
-    restored=dict(row,path=str(folder.parent))
-    for name,h in row['file_sha256'].items():require_sha256((folder.parent/name).read_bytes(),h)
+    destination=ROOT/'data/v34r1_a8/ar'/row['id'];destination.mkdir(parents=True,exist_ok=False)
+    restored=dict(row,path=str(destination))
+    for name,h in row['file_sha256'].items():
+        raw=(folder.parent/name).read_bytes();require_sha256(raw,h);safe_target(destination,name).write_bytes(raw)
     return restored
 
 
