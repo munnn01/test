@@ -1,0 +1,18 @@
+{
+  "frozen_utc": "2026-10-16T15:36:37.418658+00:00",
+  "policy": {
+    "kind": "risk_forest",
+    "model": "extra_trees_depth6-final192",
+    "threshold": 0,
+    "model_sha256": "97f1a43c1e5a7ddb9cc6098e65670e6b95ad93cef90ca8bd07896120d4be83ac"
+  },
+  "training_protocol_sha256": "185341c51bfbd9a7f5fd6d81b63f0b4f6b3ef8c2e091fc0361cf5bf0203bbf48",
+  "fresh_dev_id_protocol_sha256": "391f7503e19dc90af2ae3c7c98618cacd30f16eb24a5625cafa0a792af0ac6b8",
+  "oof_endpoint_scales": {
+    "h264": 14.539117886256298,
+    "h265": 11.148207153220097
+  },
+  "selection_scope": "development OOF192 only; final model fits192, OOF fits128; fresh64 is the prospective check",
+  "pilot_scored": false,
+  "test_scored": false
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "v34r1-A6-AR-source-evidence-1",
+  "source_commit": "c40ee4a2fd9937e4339026361a50678378e3dead",
+  "source_only": true,
+  "model_inferences": 0,
+  "files": [
+    {
+      "path": "cloud-status.json",
+      "bytes": 209,
+      "sha256": "b979198942af0bb4b1757907d1471183ef4a4ff8eae1fff959417b48c61210d1"
+    },
+    {
+      "path": "freeze-complete.json",
+      "bytes": 294,
+      "sha256": "44771f8800be0a100b2dfef3ad4e7abb71082ad2ba9d41750e4e43026256d289"
+    },
+    {
+      "path": "kaggle-execution.log",
+      "bytes": 48344,
+      "sha256": "71f49391b5c8184891311dd6fe3ec3581d5b8cd47352eeb0c3f3f4fc6f680648"
+    },
+    {
+      "path": "kaggle-metadata.json",
+      "bytes": 547,
+      "sha256": "c3d0f390f689b918a1c07e529c4230b766c04f6738c70183caa0b0465edd917d"
+    },
+    {
+      "path": "kaggle-notebook.py",
+      "bytes": 507,
+      "sha256": "6587041ced766b65a35ab2048fa1a6dc6f1b58b0fd063f81a3ee689cc4a0847e"
+    },
+    {
+      "path": "source-manifest.json",
+      "bytes": 3054003,
+      "sha256": "8ba8a0fe72be86e1a6cc8e8fb322f43ff6598ac08c018bf6ae13410ad88c1b40"
+    },
+    {
+      "path": "v34r1-a6-ar512-sources.tgz",
+      "bytes": 848578,
+      "sha256": "b5d4597624b57ea83351db8bcba4eb61647d41f8ef9ff48b488183e701005dfd"
+    }
+  ]
+}

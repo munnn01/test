@@ -1,0 +1,128 @@
+{
+  "schema": "v34r1-A6-OD-training-evidence-1",
+  "source_commit": "5fd58a25e4db72b39d1187212331c5c6ef9b2f93",
+  "qps": [
+    30,
+    35,
+    40,
+    45
+  ],
+  "codecs": [
+    "h264",
+    "h265"
+  ],
+  "pilot_scored": false,
+  "test_scored": false,
+  "files": [
+    {
+      "path": "a6-od-analysis.log",
+      "bytes": 1297,
+      "sha256": "8d7c485bf216e9164053592b078c2159db6feb5196288ff97ce024c94cd97c5b"
+    },
+    {
+      "path": "a6-od-tests.log",
+      "bytes": 5220,
+      "sha256": "5cf1f792a6e4e0ec84af3eb56e3f87682478a7894a0384cf39ddf2ed6a97a370"
+    },
+    {
+      "path": "cloud-status.json",
+      "bytes": 219,
+      "sha256": "0a9bbf9377c0b1070a675f096cf11e5f3c4af2724cc2e5166632a056594d3331"
+    },
+    {
+      "path": "import-audit.json",
+      "bytes": 498,
+      "sha256": "11811766f71bd017e5d3a20473fd0b036b2a415cb7913ba5c3a0771bdd697aa4"
+    },
+    {
+      "path": "kaggle-execution.log",
+      "bytes": 12228,
+      "sha256": "2f6d9a6ad60da0c5e701a7c90cce67002a5c3327b26f1678c7ad6e658aa3da33"
+    },
+    {
+      "path": "kaggle-metadata.json",
+      "bytes": 540,
+      "sha256": "20df707e84cfa36cb4f72619a3211c98ee88ec2fda0a09da9accd73e63589939"
+    },
+    {
+      "path": "kaggle-notebook.py",
+      "bytes": 510,
+      "sha256": "36f35d023ebc25dc59e2d6a8866eead3b13969ebbda5b7cfb6fcb8606c6dcee6"
+    },
+    {
+      "path": "training/crossfit-report.json",
+      "bytes": 3118371,
+      "sha256": "5860e14a077e1e3104f1c8f2cd0d7d17621de6b5e675b98e2d79d2c32c1bdf7d"
+    },
+    {
+      "path": "training/fresh-labels/label-report.json",
+      "bytes": 3090,
+      "sha256": "1726a056ad62e069147078f7c8288c9c8a30b23a88dfc9066d6f2e8f56321533"
+    },
+    {
+      "path": "training/fresh-labels/labels.json.gz",
+      "bytes": 211174,
+      "sha256": "9b49559d6b155620f7847b2f1e0cc0c955a1de2f4c6cd8f1021c077e00696260"
+    },
+    {
+      "path": "training/frozen-policy.json",
+      "bytes": 712,
+      "sha256": "78990d07365557f0b1232a859bf72f71d615090fd93197b54bb6ba21df541966"
+    },
+    {
+      "path": "training/models/extra_trees_depth10-final192.json",
+      "bytes": 862065,
+      "sha256": "4e7469642706fcd73ac64cf328cc0adc0cc5c6a08fd11e1c242947589c233a4c"
+    },
+    {
+      "path": "training/models/extra_trees_depth10-without-a3_cal.json",
+      "bytes": 726142,
+      "sha256": "65919590b015516337c47d2ebb79675ceaed408fb6e13a45608a621b4b0c7caf"
+    },
+    {
+      "path": "training/models/extra_trees_depth10-without-a3_fit.json",
+      "bytes": 736979,
+      "sha256": "d6e7bd6ca60642d33214c6658d6a26edf8b392f145d8887b31e785a3b762de52"
+    },
+    {
+      "path": "training/models/extra_trees_depth10-without-a4_fresh.json",
+      "bytes": 610186,
+      "sha256": "be9f2ad3961ba686ce3473fd18b6bd8d80d0e3e498864e05ea371814de74ee62"
+    },
+    {
+      "path": "training/models/extra_trees_depth6-final192.json",
+      "bytes": 264127,
+      "sha256": "97f1a43c1e5a7ddb9cc6098e65670e6b95ad93cef90ca8bd07896120d4be83ac"
+    },
+    {
+      "path": "training/models/extra_trees_depth6-without-a3_cal.json",
+      "bytes": 264030,
+      "sha256": "e818d467c747c3d27d030f969520b02f424faf704c377f95ca1298a9c165129c"
+    },
+    {
+      "path": "training/models/extra_trees_depth6-without-a3_fit.json",
+      "bytes": 260148,
+      "sha256": "180c26addf0278cbbbdb99e76a272514fbbd8e7cfe223eb0dfec74b06a0f5b07"
+    },
+    {
+      "path": "training/models/extra_trees_depth6-without-a4_fresh.json",
+      "bytes": 211220,
+      "sha256": "74a713752da18aefae54f90a8a66340b81fac77e7cb955d815f288fdab78aedf"
+    },
+    {
+      "path": "training/oof-predictions.json.gz",
+      "bytes": 774340,
+      "sha256": "af29631cfe4a3fb9c2ab0ce4634717ac46500f0b94044e4bcd85734b65416bee"
+    },
+    {
+      "path": "training/trained-model-manifest.json",
+      "bytes": 44040,
+      "sha256": "1e7cc0bd2c434520071bfbf2ba5356fc0f4aadcb52317c2a9ce556b35889ca87"
+    },
+    {
+      "path": "v34r1-a6-od-crossfit.tgz",
+      "bytes": 2653729,
+      "sha256": "77a4665ecdaa4d2818742124d9dd37212307bc9c056fb5e896c8f6e7fb930218"
+    }
+  ]
+}

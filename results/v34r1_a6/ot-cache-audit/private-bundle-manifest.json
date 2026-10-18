@@ -1,0 +1,324 @@
+{
+  "schema": "v34r1-A6-OT-measured-bundle-1",
+  "assembled_utc": "2026-10-18T06:12:10.527035+00:00",
+  "qps": [
+    30,
+    35,
+    40,
+    45
+  ],
+  "codecs": [
+    "h264",
+    "h265"
+  ],
+  "profiles": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "sequences": {
+    "MOT17-02-FRCNN": {
+      "folder": "a6-ot-mot17-02-frcnn",
+      "kernel": "nguyenhoanglan1232/v34r1-a6-ot21-02",
+      "files": [
+        {
+          "path": "cache-complete.json",
+          "bytes": 290,
+          "sha256": "30f8f4f15fa66be4009beef696bf5d747a2b6cc5a247c9e67531dbf015a676dc"
+        },
+        {
+          "path": "cloud-status.json",
+          "bytes": 220,
+          "sha256": "728c4bd5f388a342fbb3ddbc61ac61470f202b27df5468dc447cc91e2bd6320a"
+        },
+        {
+          "path": "environment.json",
+          "bytes": 314,
+          "sha256": "a28689259734ca57cab19aaee4f25d09053d36690cd5e7a726c93cddba85006d"
+        },
+        {
+          "path": "kaggle-execution.log",
+          "bytes": 19959,
+          "sha256": "d5c89e5ce987bb46e95e734f799c9090f8dfbd5640a4e2028aff928c95c85d8a"
+        },
+        {
+          "path": "kaggle-metadata.json",
+          "bytes": 531,
+          "sha256": "8b5fc8df4e4f59d9282770821b3e01f5d47e8e3b10679af008ba389f9b1e1fa1"
+        },
+        {
+          "path": "kaggle-notebook.py",
+          "bytes": 537,
+          "sha256": "cdb6469dee215ccefe317c77a49aa653873d22d427e169aa1637a54e0e0012d9"
+        },
+        {
+          "path": "source-manifest.json",
+          "bytes": 6416,
+          "sha256": "fa25aadf3ca7713ed101b14387254d0f582e911ebc3947722d21e4eebb8a1bda"
+        },
+        {
+          "path": "worker0/complete.json",
+          "bytes": 8401,
+          "sha256": "904b03cf16e7a606a331568e01a23ed95262479f28787fd679c3b469d21a1800"
+        },
+        {
+          "path": "worker0/rows.json.gz",
+          "bytes": 19557264,
+          "sha256": "86be8a7fc47cb15a7b7cfae72bd3562c39db4d2f7b8c20b7cc5390c52af7e9ff"
+        },
+        {
+          "path": "worker0/sources.json.gz",
+          "bytes": 271278,
+          "sha256": "7c37a8afa8ed37828d177f8d186fad5635fa725782352daee6451c9b20ed1244"
+        },
+        {
+          "path": "worker1/complete.json",
+          "bytes": 8401,
+          "sha256": "a6a98cdbdc630c6fedac503180550a9a16ef65397f0afcc122d10136fd93b3f3"
+        },
+        {
+          "path": "worker1/rows.json.gz",
+          "bytes": 18805801,
+          "sha256": "2c3008d2af1de11ba04258a40e117120f57edffb4e319718304476fc74277f95"
+        },
+        {
+          "path": "worker1/sources.json.gz",
+          "bytes": 271278,
+          "sha256": "7c37a8afa8ed37828d177f8d186fad5635fa725782352daee6451c9b20ed1244"
+        }
+      ]
+    },
+    "MOT17-05-FRCNN": {
+      "folder": "a6-ot-mot17-05-frcnn",
+      "kernel": "vtk269/v34r1-a6-ot21-05",
+      "files": [
+        {
+          "path": "cache-complete.json",
+          "bytes": 290,
+          "sha256": "30f8f4f15fa66be4009beef696bf5d747a2b6cc5a247c9e67531dbf015a676dc"
+        },
+        {
+          "path": "cloud-status.json",
+          "bytes": 220,
+          "sha256": "4118b82b0bd9b8bcefeae3229c6346e626f19fb1ea38f3008a6c98847655009a"
+        },
+        {
+          "path": "environment.json",
+          "bytes": 314,
+          "sha256": "a28689259734ca57cab19aaee4f25d09053d36690cd5e7a726c93cddba85006d"
+        },
+        {
+          "path": "kaggle-execution.log",
+          "bytes": 21480,
+          "sha256": "d0cc8acae886bef40caa7fc63c40a7c88ab60e463fe889feebb1683d6db2cc49"
+        },
+        {
+          "path": "kaggle-metadata.json",
+          "bytes": 519,
+          "sha256": "d88108847e76234a1d08909d2920cf2f4649f248c8703fc5968b923fc31989b0"
+        },
+        {
+          "path": "kaggle-notebook.py",
+          "bytes": 537,
+          "sha256": "cc96820ff2a597d53da8f7077f30bff43fafb07066b2febc82287ada81da22e2"
+        },
+        {
+          "path": "source-manifest.json",
+          "bytes": 6416,
+          "sha256": "989411f024b757a1a64f46b947cd1084b5e928ffa211a19351d82e668a23ce38"
+        },
+        {
+          "path": "worker0/complete.json",
+          "bytes": 12910,
+          "sha256": "36b0acc124744c384892d926c6260a7b6377fe1e0d83d5443006ae13e435d0c9"
+        },
+        {
+          "path": "worker0/rows.json.gz",
+          "bytes": 12549009,
+          "sha256": "2a335aa39591c9ef1280f19336954280cc7379fc39a01844cac082c0519d313a"
+        },
+        {
+          "path": "worker0/sources.json.gz",
+          "bytes": 132726,
+          "sha256": "6bdef06657ab871331703c138d06d94ed2d1dc94fa928ef72f87c03aa1ef9503"
+        },
+        {
+          "path": "worker1/complete.json",
+          "bytes": 12909,
+          "sha256": "1a4fb5f8ebfc8bbf94c36672fb25faff3d2e09a22df31a7f041d31bf00691632"
+        },
+        {
+          "path": "worker1/rows.json.gz",
+          "bytes": 11366332,
+          "sha256": "d845045b31da9c4dd2f432f456fca9a22139619749d15606467db626cad85b19"
+        },
+        {
+          "path": "worker1/sources.json.gz",
+          "bytes": 132726,
+          "sha256": "6bdef06657ab871331703c138d06d94ed2d1dc94fa928ef72f87c03aa1ef9503"
+        }
+      ]
+    },
+    "MOT17-04-FRCNN": {
+      "folder": "a6-ot-mot17-04-frcnn",
+      "kernel": "wagur124705/v34r1-a6-ot21-04",
+      "files": [
+        {
+          "path": "cache-complete.json",
+          "bytes": 290,
+          "sha256": "30f8f4f15fa66be4009beef696bf5d747a2b6cc5a247c9e67531dbf015a676dc"
+        },
+        {
+          "path": "cloud-status.json",
+          "bytes": 220,
+          "sha256": "cfebdb5e5511c2cdab99f9d2bd529f639ab0a00f15537f36142767dd47a4aa07"
+        },
+        {
+          "path": "environment.json",
+          "bytes": 314,
+          "sha256": "a28689259734ca57cab19aaee4f25d09053d36690cd5e7a726c93cddba85006d"
+        },
+        {
+          "path": "kaggle-execution.log",
+          "bytes": 20873,
+          "sha256": "bb2bca274b7d7da3b171953705e6b84cb140219792390e0389bcdb3e7f92d5b2"
+        },
+        {
+          "path": "kaggle-metadata.json",
+          "bytes": 524,
+          "sha256": "3ad14a5f4c5d8ad926d3e64c31a312915b18b5a0cf584d7ed56bd825419e3149"
+        },
+        {
+          "path": "kaggle-notebook.py",
+          "bytes": 537,
+          "sha256": "604548bce34ee2a84f0f774251bc0bd0bc2983894cda5b4d329bec85ffea4bfc"
+        },
+        {
+          "path": "source-manifest.json",
+          "bytes": 6423,
+          "sha256": "1b1cec109e94de0fc66ef8316460c6ebebc885ec5b8f0652ba30491a630be892"
+        },
+        {
+          "path": "worker0/complete.json",
+          "bytes": 9917,
+          "sha256": "f1f2e064481fd648bf6128da2bd0f93a6b07aaec43c26f2d1a6b11797454f72b"
+        },
+        {
+          "path": "worker0/rows.json.gz",
+          "bytes": 22886561,
+          "sha256": "f9dc3bc550712e6ac089f97526ad404e639e669f8fc840595a89b78301030f87"
+        },
+        {
+          "path": "worker0/sources.json.gz",
+          "bytes": 279181,
+          "sha256": "c8cdf795fa87cc26134977017342e15bf3b8964e6002dcf75590a491290b2eb3"
+        },
+        {
+          "path": "worker1/complete.json",
+          "bytes": 9254,
+          "sha256": "06145b0962810f469029927b737a4d645cb5516116cad26bf8064fb1323e6ed0"
+        },
+        {
+          "path": "worker1/rows.json.gz",
+          "bytes": 21248048,
+          "sha256": "3d9b81909ad21f8a9a3b5898bb0324d4171b189ed7ba24916fdf3f84fedd6f28"
+        },
+        {
+          "path": "worker1/sources.json.gz",
+          "bytes": 279181,
+          "sha256": "c8cdf795fa87cc26134977017342e15bf3b8964e6002dcf75590a491290b2eb3"
+        }
+      ]
+    },
+    "MOT17-11-FRCNN": {
+      "folder": "a6-ot-mot17-11-frcnn",
+      "kernel": "hieusunday0412/v34r1-a6-ot21-11",
+      "files": [
+        {
+          "path": "cache-complete.json",
+          "bytes": 290,
+          "sha256": "30f8f4f15fa66be4009beef696bf5d747a2b6cc5a247c9e67531dbf015a676dc"
+        },
+        {
+          "path": "cloud-status.json",
+          "bytes": 219,
+          "sha256": "3dfe1e11f104b7fc449734a93bc6a7bf15a7c0d4a90a1f101300afc06fd96fea"
+        },
+        {
+          "path": "environment.json",
+          "bytes": 314,
+          "sha256": "a28689259734ca57cab19aaee4f25d09053d36690cd5e7a726c93cddba85006d"
+        },
+        {
+          "path": "kaggle-execution.log",
+          "bytes": 21434,
+          "sha256": "a08d2bef3d0f332987a4ecdc130dc313326bfb49521d422597a3bdd39b710847"
+        },
+        {
+          "path": "kaggle-metadata.json",
+          "bytes": 527,
+          "sha256": "b9773fc8c911355d433a813ba73a0c3e17f515a39651400acdc648989c14d1b4"
+        },
+        {
+          "path": "kaggle-notebook.py",
+          "bytes": 537,
+          "sha256": "b2047815ca414caaebbefa1282b6cd0c1870ab63449a029fb8a8d9c561616df7"
+        },
+        {
+          "path": "source-manifest.json",
+          "bytes": 6423,
+          "sha256": "0db5d3d92635284c4f7f5648ab92c7b8903f8a0e0c89a9a98e2d2d67be06eaec"
+        },
+        {
+          "path": "worker0/complete.json",
+          "bytes": 9157,
+          "sha256": "066375ca95797327ee24ce1d287f3afaef128188834a30680645bd13b0769016"
+        },
+        {
+          "path": "worker0/rows.json.gz",
+          "bytes": 10795516,
+          "sha256": "185907142654ff9cd0c700ac2794f8e36316410f30544ca503411a72a8e45ae5"
+        },
+        {
+          "path": "worker0/sources.json.gz",
+          "bytes": 137349,
+          "sha256": "f313b2f5bc04d5ecefcd1d9d169aa2bb71cf71b915def338924216a7b0c0d62a"
+        },
+        {
+          "path": "worker1/complete.json",
+          "bytes": 8688,
+          "sha256": "739ec49b7c7e992d7cc91edfe3c96636ffce3056b34932bd80976353f6463466"
+        },
+        {
+          "path": "worker1/rows.json.gz",
+          "bytes": 10712377,
+          "sha256": "85e4cafc7bef81296faeff9548d308426706ea18260ebc6ec323b071ca2c0a7f"
+        },
+        {
+          "path": "worker1/sources.json.gz",
+          "bytes": 137349,
+          "sha256": "f313b2f5bc04d5ecefcd1d9d169aa2bb71cf71b915def338924216a7b0c0d62a"
+        }
+      ]
+    }
+  },
+  "local_task_execution": false
+}

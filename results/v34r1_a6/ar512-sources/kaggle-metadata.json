@@ -1,0 +1,17 @@
+{
+  "id": "vtk269/v34r1-a6-ar512-sources",
+  "title": "v34r1-a6-ar512-sources",
+  "code_file": "notebook.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+  "docker_image_pinning_type": "original",
+  "competition_sources": [],
+  "kernel_sources": [],
+  "dataset_sources": [
+    "jizeyong/kinetics400-rgb256-f10-val-data"
+  ]
+}

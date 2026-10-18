@@ -1,0 +1,10 @@
+{
+  "complete": true,
+  "source_manifest_sha256": "8ba8a0fe72be86e1a6cc8e8fb322f43ff6598ac08c018bf6ae13410ad88c1b40",
+  "original128_exact_source_byte_parity": true,
+  "physical_video_ids": 512,
+  "selected_frames": 8192,
+  "window_files": 16384,
+  "model_inferences": 0,
+  "codec_trials": 0
+}

@@ -1,0 +1,13 @@
+{
+  "imported_utc": "2026-10-16T15:43:38.276350+00:00",
+  "source_kernel": "nguyenhoanglan1232/v34r1-a6-od-crossfit",
+  "parent_archive_sha256": "77a4665ecdaa4d2818742124d9dd37212307bc9c056fb5e896c8f6e7fb930218",
+  "exact_oof_grid_rows": 32256,
+  "model_hashes_verified": 8,
+  "cohort_local_label_rows": 10752,
+  "full_official_replacement_checks": 16,
+  "source_only_features": 302,
+  "pilot_scored": false,
+  "test_scored": false,
+  "local_model_or_feature_or_gt_execution": false
+}

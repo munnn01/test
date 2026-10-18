@@ -1,0 +1,188 @@
+{
+  "cohort_ids": [
+    632,
+    10995,
+    12670,
+    22479,
+    26941,
+    52565,
+    60363,
+    68933,
+    71756,
+    97994,
+    102820,
+    108253,
+    112378,
+    119677,
+    129062,
+    134882,
+    136600,
+    138819,
+    140270,
+    156643,
+    166391,
+    172648,
+    184324,
+    194940,
+    205333,
+    212573,
+    213033,
+    225184,
+    241668,
+    261888,
+    269196,
+    273712,
+    281929,
+    287347,
+    295713,
+    302760,
+    307598,
+    317024,
+    326128,
+    339823,
+    345941,
+    351096,
+    356387,
+    370486,
+    370999,
+    376478,
+    396205,
+    402346,
+    407403,
+    426836,
+    435299,
+    445602,
+    460494,
+    480842,
+    494913,
+    501523,
+    515982,
+    517523,
+    530146,
+    531036,
+    559099,
+    562581,
+    565469,
+    568147
+  ],
+  "cohort_images": 64,
+  "label_rows": 10752,
+  "label_sha256": "9b49559d6b155620f7847b2f1e0cc0c955a1de2f4c6cd8f1021c077e00696260",
+  "full_official_parity_checks": [
+    {
+      "codec": "h264",
+      "qp": 30,
+      "image_id": 632,
+      "profile": 14,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "codec": "h264",
+      "qp": 30,
+      "image_id": 568147,
+      "profile": 20,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "codec": "h264",
+      "qp": 35,
+      "image_id": 632,
+      "profile": 14,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "codec": "h264",
+      "qp": 35,
+      "image_id": 568147,
+      "profile": 20,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "codec": "h264",
+      "qp": 40,
+      "image_id": 632,
+      "profile": 14,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "codec": "h264",
+      "qp": 40,
+      "image_id": 568147,
+      "profile": 20,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "codec": "h264",
+      "qp": 45,
+      "image_id": 632,
+      "profile": 14,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "codec": "h264",
+      "qp": 45,
+      "image_id": 568147,
+      "profile": 20,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "codec": "h265",
+      "qp": 30,
+      "image_id": 632,
+      "profile": 14,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "codec": "h265",
+      "qp": 30,
+      "image_id": 568147,
+      "profile": 20,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "codec": "h265",
+      "qp": 35,
+      "image_id": 632,
+      "profile": 14,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "codec": "h265",
+      "qp": 35,
+      "image_id": 568147,
+      "profile": 20,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "codec": "h265",
+      "qp": 40,
+      "image_id": 632,
+      "profile": 14,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "codec": "h265",
+      "qp": 40,
+      "image_id": 568147,
+      "profile": 20,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "codec": "h265",
+      "qp": 45,
+      "image_id": 632,
+      "profile": 14,
+      "absolute_ap_error": 0.0
+    },
+    {
+      "codec": "h265",
+      "qp": 45,
+      "image_id": 568147,
+      "profile": 20,
+      "absolute_ap_error": 0.0
+    }
+  ],
+  "pilot_scored": false,
+  "test_scored": false,
+  "wall_seconds": 356.022345031
+}
