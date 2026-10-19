@@ -1,0 +1,443 @@
+{
+  "scope": "Three completed250-image OD shards only; these are not pooled750-image results",
+  "producer_commit": "db6d8b5b162d6e0303fc9a94422c32648d34c98d",
+  "source_manifest_sha256": "c1418f2ca848dc1cd51c1a09a0ca7030f35f7ad5e76fe8d0215eb3015fe7679b",
+  "counts": {
+    "images": 750,
+    "shards": 3,
+    "selected_rows": 12000
+  },
+  "qps": [
+    30,
+    35,
+    40,
+    45
+  ],
+  "per_shard": [
+    {
+      "shard": 0,
+      "count": 250,
+      "comparisons": {
+        "h264": {
+          "qps": [
+            30,
+            35,
+            40,
+            45
+          ],
+          "primary_interpolator": "PCHIP",
+          "threshold_pct": -15.0,
+          "valid": true,
+          "pchip_bd_rate_pct": -21.065075927159093,
+          "point_passes": true,
+          "threshold_confirmed": false,
+          "ci": null,
+          "invalid_reason": null,
+          "common_quality_interval": [
+            0.16447598262113666,
+            0.25134753646707303
+          ]
+        },
+        "h265": {
+          "qps": [
+            30,
+            35,
+            40,
+            45
+          ],
+          "primary_interpolator": "PCHIP",
+          "threshold_pct": -15.0,
+          "valid": true,
+          "pchip_bd_rate_pct": -17.507517175777547,
+          "point_passes": true,
+          "threshold_confirmed": false,
+          "ci": null,
+          "invalid_reason": null,
+          "common_quality_interval": [
+            0.15992624041761663,
+            0.25235434258784745
+          ]
+        }
+      },
+      "curves": {
+        "h264": {
+          "anchor": {
+            "rate": [
+              0.7877225,
+              0.48078281250000005,
+              0.2948178125,
+              0.182805
+            ],
+            "quality": [
+              0.2523966553113561,
+              0.23136082014066975,
+              0.1924473634417781,
+              0.156254532464648
+            ]
+          },
+          "adaptive": {
+            "rate": [
+              0.6794771874999999,
+              0.40804656250000004,
+              0.257323125,
+              0.16140937500000002
+            ],
+            "quality": [
+              0.25134753646707303,
+              0.2339885053906536,
+              0.2031256127952338,
+              0.16447598262113666
+            ]
+          }
+        },
+        "h265": {
+          "anchor": {
+            "rate": [
+              0.8215634374999999,
+              0.5608640625,
+              0.3984,
+              0.29904875000000003
+            ],
+            "quality": [
+              0.25235434258784745,
+              0.23352767833037055,
+              0.1964605652708822,
+              0.14778328016072445
+            ]
+          },
+          "adaptive": {
+            "rate": [
+              0.7314021875000001,
+              0.49233000000000005,
+              0.3645203125,
+              0.28020000000000006
+            ],
+            "quality": [
+              0.2531851686246962,
+              0.24449393017390697,
+              0.20735203546285463,
+              0.15992624041761663
+            ]
+          }
+        }
+      }
+    },
+    {
+      "shard": 1,
+      "count": 250,
+      "comparisons": {
+        "h264": {
+          "qps": [
+            30,
+            35,
+            40,
+            45
+          ],
+          "primary_interpolator": "PCHIP",
+          "threshold_pct": -15.0,
+          "valid": true,
+          "pchip_bd_rate_pct": -22.198054167961352,
+          "point_passes": true,
+          "threshold_confirmed": false,
+          "ci": null,
+          "invalid_reason": null,
+          "common_quality_interval": [
+            0.1543105059863174,
+            0.23523148991552167
+          ]
+        },
+        "h265": {
+          "qps": [
+            30,
+            35,
+            40,
+            45
+          ],
+          "primary_interpolator": "PCHIP",
+          "threshold_pct": -15.0,
+          "valid": true,
+          "pchip_bd_rate_pct": -18.458086819451704,
+          "point_passes": true,
+          "threshold_confirmed": false,
+          "ci": null,
+          "invalid_reason": null,
+          "common_quality_interval": [
+            0.15788428050864045,
+            0.23328061048368867
+          ]
+        }
+      },
+      "curves": {
+        "h264": {
+          "anchor": {
+            "rate": [
+              0.7730565624999999,
+              0.471288125,
+              0.28866593749999997,
+              0.17906812500000002
+            ],
+            "quality": [
+              0.23925170557795084,
+              0.22083171534136153,
+              0.1803645116017442,
+              0.13541604217507214
+            ]
+          },
+          "adaptive": {
+            "rate": [
+              0.658195625,
+              0.4074521875,
+              0.25410625,
+              0.15978781250000001
+            ],
+            "quality": [
+              0.23523148991552167,
+              0.22409198505392514,
+              0.19289941196703964,
+              0.1543105059863174
+            ]
+          }
+        },
+        "h265": {
+          "anchor": {
+            "rate": [
+              0.809158125,
+              0.5536059375,
+              0.39382718749999995,
+              0.29597375
+            ],
+            "quality": [
+              0.23328061048368867,
+              0.2286927637633797,
+              0.19317616048706743,
+              0.14009834819607833
+            ]
+          },
+          "adaptive": {
+            "rate": [
+              0.7022371875,
+              0.4929484375,
+              0.35814968750000004,
+              0.27526875
+            ],
+            "quality": [
+              0.2403108710439682,
+              0.23443605404539858,
+              0.2088069062709516,
+              0.15788428050864045
+            ]
+          }
+        }
+      }
+    },
+    {
+      "shard": 2,
+      "count": 250,
+      "comparisons": {
+        "h264": {
+          "qps": [
+            30,
+            35,
+            40,
+            45
+          ],
+          "primary_interpolator": "PCHIP",
+          "threshold_pct": -15.0,
+          "valid": true,
+          "pchip_bd_rate_pct": -29.493191857487876,
+          "point_passes": true,
+          "threshold_confirmed": false,
+          "ci": null,
+          "invalid_reason": null,
+          "common_quality_interval": [
+            0.1714131828479727,
+            0.23868593752818776
+          ]
+        },
+        "h265": {
+          "qps": [
+            30,
+            35,
+            40,
+            45
+          ],
+          "primary_interpolator": "PCHIP",
+          "threshold_pct": -15.0,
+          "valid": true,
+          "pchip_bd_rate_pct": -21.143666810021003,
+          "point_passes": true,
+          "threshold_confirmed": false,
+          "ci": null,
+          "invalid_reason": null,
+          "common_quality_interval": [
+            0.16738059027183194,
+            0.23739780646380948
+          ]
+        }
+      },
+      "curves": {
+        "h264": {
+          "anchor": {
+            "rate": [
+              0.7695778124999999,
+              0.46845875000000003,
+              0.28590343749999997,
+              0.1772034375
+            ],
+            "quality": [
+              0.23868593752818776,
+              0.2195206101218088,
+              0.1915925598122046,
+              0.1430120196905618
+            ]
+          },
+          "adaptive": {
+            "rate": [
+              0.662750625,
+              0.4034196875,
+              0.24661843750000004,
+              0.1554959375
+            ],
+            "quality": [
+              0.2432802454298405,
+              0.22852352745275462,
+              0.20377205449163815,
+              0.1714131828479727
+            ]
+          }
+        },
+        "h265": {
+          "anchor": {
+            "rate": [
+              0.8106925,
+              0.5528881250000001,
+              0.391848125,
+              0.2946825
+            ],
+            "quality": [
+              0.23739780646380948,
+              0.22624823596270727,
+              0.18709076893605067,
+              0.15495971499768016
+            ]
+          },
+          "adaptive": {
+            "rate": [
+              0.6930596875000001,
+              0.4825665625,
+              0.35159375,
+              0.27402375
+            ],
+            "quality": [
+              0.23888035653631018,
+              0.22733513867128066,
+              0.2083156120715262,
+              0.16738059027183194
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "cloud_receipts": [
+    {
+      "shard": 0,
+      "archive_sha256": "85a92433acfd345ea8bd8f31ad40494dd14282383b8a9b4b64af69539af2fa1c",
+      "archive_bytes": 145513645,
+      "cloud_status": {
+        "commit": "db6d8b5b162d6e0303fc9a94422c32648d34c98d",
+        "shard": 0,
+        "source_manifest_sha256": "c1418f2ca848dc1cd51c1a09a0ca7030f35f7ad5e76fe8d0215eb3015fe7679b",
+        "evaluation_requested": true,
+        "tasks": {
+          "ar": {
+            "complete": true,
+            "wall_seconds": 1065.580833779
+          },
+          "od": {
+            "complete": true,
+            "wall_seconds": 2595.1049205360005
+          },
+          "ot": {
+            "complete": true,
+            "wall_seconds": 18062.91949662
+          }
+        },
+        "complete": true,
+        "wall_seconds": 21755.543123483658
+      },
+      "counts": {
+        "ar": 250,
+        "od": 250,
+        "ot": 3
+      }
+    },
+    {
+      "shard": 1,
+      "archive_sha256": "2fcdad1f27f3ae495bd59d082c5fc0a544be715ec2efdafd46f3a30ee91c6cbb",
+      "archive_bytes": 145184571,
+      "cloud_status": {
+        "commit": "db6d8b5b162d6e0303fc9a94422c32648d34c98d",
+        "shard": 1,
+        "source_manifest_sha256": "c1418f2ca848dc1cd51c1a09a0ca7030f35f7ad5e76fe8d0215eb3015fe7679b",
+        "evaluation_requested": true,
+        "tasks": {
+          "ar": {
+            "complete": true,
+            "wall_seconds": 1054.511039174
+          },
+          "od": {
+            "complete": true,
+            "wall_seconds": 2623.3473165429987
+          },
+          "ot": {
+            "complete": true,
+            "wall_seconds": 18303.878942014002
+          }
+        },
+        "complete": true,
+        "wall_seconds": 22017.30506825447
+      },
+      "counts": {
+        "ar": 250,
+        "od": 250,
+        "ot": 3
+      }
+    },
+    {
+      "shard": 2,
+      "archive_sha256": "43911b202c0670a1cac56e11600362d476aa5ae587547fb768e22654306eca0b",
+      "archive_bytes": 138844756,
+      "cloud_status": {
+        "commit": "db6d8b5b162d6e0303fc9a94422c32648d34c98d",
+        "shard": 2,
+        "source_manifest_sha256": "c1418f2ca848dc1cd51c1a09a0ca7030f35f7ad5e76fe8d0215eb3015fe7679b",
+        "evaluation_requested": true,
+        "tasks": {
+          "ar": {
+            "complete": true,
+            "wall_seconds": 1086.9191451329998
+          },
+          "od": {
+            "complete": true,
+            "wall_seconds": 2659.158858183
+          },
+          "ot": {
+            "complete": true,
+            "wall_seconds": 10267.928433886002
+          }
+        },
+        "complete": true,
+        "wall_seconds": 14045.497007369995
+      },
+      "counts": {
+        "ar": 250,
+        "od": 250,
+        "ot": 2
+      }
+    }
+  ],
+  "pooled_AP": null,
+  "pooled_BD_rate": null,
+  "od_provenance_qualification": "OD full1000 is qualified expanded assessment:512 established reserved TEST images are reported separately;475 additions reopen the historical conservative TRAIN hash partition. Original dedicated training artifact lacks per-image IDs;64 prior IDs are reconstructed from the pinned recipe, not an original training log."
+}

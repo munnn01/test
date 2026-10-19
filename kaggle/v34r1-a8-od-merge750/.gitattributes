@@ -1,0 +1,3 @@
+*.py -text
+*.json -text
+README.md text eol=lf

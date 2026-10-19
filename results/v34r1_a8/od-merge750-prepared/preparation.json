@@ -1,0 +1,59 @@
+{
+  "recorded_at_utc": "2026-10-19T07:34:57.590948+00:00",
+  "state": "prepared_reviewed_not_executed",
+  "producer_commit": "db6d8b5b162d6e0303fc9a94422c32648d34c98d",
+  "source_manifest_sha256": "c1418f2ca848dc1cd51c1a09a0ca7030f35f7ad5e76fe8d0215eb3015fe7679b",
+  "shards": [
+    0,
+    1,
+    2
+  ],
+  "images": 750,
+  "reserved_images": 384,
+  "additional_images": 366,
+  "qps": [
+    30,
+    35,
+    40,
+    45
+  ],
+  "codecs": [
+    "h264",
+    "h265"
+  ],
+  "input_archive": {
+    "name": "od-inputs750.tgz",
+    "sha256": "fa772dc6092f6474b7c6b65398b8cfcced764bcd5bb07dc0961f7ece3daf9652",
+    "bytes": 53957389,
+    "files": 10453,
+    "selected_packet_references": 12000,
+    "storage": "private local preparation; Kaggle upload not executed"
+  },
+  "source_files": {
+    "merge_od.py": "eac5a9f68ee0b0a70399a9ac13aa7bb72ef284be575bebacdfaf291795b5b0ce",
+    "test_a8_od_merge.py": "7eb366b0405dd7d8097b89df8cbe93c257ab502aed26c21e0fd2588027430879",
+    "notebook.py": "4dfd1e3cb1f19464abd378953308d0077a2d1b20202867ebd6f88650203c33e1",
+    "kernel-metadata.json": "4d01e4bf6a18fb2b2df332d578cf0ca28d15f32e943fad2cf52a9d7d4156e20c"
+  },
+  "planned_private_dataset": "nguyenhoanglan1232/v34r1-a8-od-merge-inputs750",
+  "planned_private_job": "nguyenhoanglan1232/v34r1-a8-od-merge750",
+  "dataset_uploaded": false,
+  "job_submitted": false,
+  "merged_results": null,
+  "checks": {
+    "synthetic_contract_tests": 3,
+    "synthetic_result": "PASS",
+    "saved_metadata_guard_result": "PASS750/12000/384/366",
+    "independent_review": "no blocking findings",
+    "cloud_runtime": "unverified"
+  },
+  "blocker": {
+    "action": "Kaggle dataset creation/upload",
+    "executed": false,
+    "error": "Automatic approval review failed: Selected model is at capacity"
+  },
+  "scope": "Descriptive partial750 of fixed1000; official COCO AP must be recomputed on Kaggle from all predictions; do not average shard AP/BD-rate.",
+  "ci": null,
+  "threshold_statistically_confirmed": false,
+  "od_provenance_qualification": "OD full1000 is qualified expanded assessment:512 established reserved TEST images are reported separately;475 additions reopen the historical conservative TRAIN hash partition. Original dedicated training artifact lacks per-image IDs;64 prior IDs are reconstructed from the pinned recipe, not an original training log."
+}
