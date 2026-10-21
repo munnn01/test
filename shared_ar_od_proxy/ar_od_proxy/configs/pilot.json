@@ -1,0 +1,19 @@
+{
+  "seed": 20261022,
+  "width": 12,
+  "frames": 16,
+  "size": 256,
+  "qps": [30, 35, 40, 45],
+  "codecs": ["h264", "h265"],
+  "preset": "medium",
+  "fps": 25,
+  "train_count": 16,
+  "dev_count": 8,
+  "proxy_steps": 512,
+  "npp_steps": 256,
+  "proxy_refresh_every": 128,
+  "proxy_refresh_steps": 64,
+  "learning_rate": 0.0001,
+  "od_frames": 1,
+  "loss_weights": {"rate": 1.0, "ar": 1.0, "od": 1.0, "pre": 0.5, "temp": 0.1}
+}

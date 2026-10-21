@@ -1,0 +1,13 @@
+__pycache__/
+.pytest_cache/
+*.egg-info/
+outputs/
+payloads/
+*.pth
+*.pt
+*.mp4
+*.264
+*.265
+.env
+kaggle.json
+pool.json
