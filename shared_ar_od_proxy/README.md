@@ -171,3 +171,10 @@ task protection, real-codec proposal/anchor guards, bounded regional filtering a
 expanded source cohorts. See [the protocol](docs/QUALITY_RECOVERY.md). This experiment
 has not established a 15% BD-rate improvement.
 
+The `recovery` action implements the E0–E2 follow-up: seven real-codec TRAIN
+candidate labels, balanced multi-source gradients with hard-case replay, short
+transactional guards and a paired identity versus distilled warm-start comparison.
+The proxy is fixed so the pilot isolates these changes. Read
+[the recovery pilot protocol](docs/RECOVERY_PILOT.md) for budgets, early stopping,
+checkpoint selection and the difference between TRAIN oracle results and final DEV curves.
+
