@@ -55,6 +55,34 @@ def test_detector_training_loss_keeps_frozen_weights_and_bn_unchanged():
         torch.testing.assert_close(buffer, before[name])
 
 
+def test_empty_pseudo_targets_keep_background_training_proposals_and_restore_score_threshold():
+    from ar_od_proxy.tasks import detection_loss
+    from torchvision.models.detection import fasterrcnn_mobilenet_v3_large_320_fpn
+    torch.set_num_threads(2); torch.manual_seed(37)
+    detector = fasterrcnn_mobilenet_v3_large_320_fpn(
+        weights=None,weights_backbone=None,min_size=64,max_size=64,
+        rpn_pre_nms_top_n_train=32,rpn_post_nms_top_n_train=16,
+        rpn_score_thresh=1.).eval().requires_grad_(False)
+    original_modes={m:m.training for m in detector.modules()}
+    original_buffers={n:b.clone() for n,b in detector.named_buffers()}
+    x=torch.rand(3,64,64,requires_grad=True)
+    target={'boxes':torch.empty(0,4),'labels':torch.empty(0,dtype=torch.long)}
+    loss=detection_loss(detector,[x],[target])
+    assert torch.isfinite(loss), 'Empty RPN proposals must not produce NaN ROI losses'
+    loss.backward()
+    assert x.grad is not None and torch.isfinite(x.grad).all() and x.grad.abs().sum()>0
+    assert detector.rpn.score_thresh==1.
+    assert all(m.training==state for m,state in original_modes.items())
+    assert all(p.grad is None for p in detector.parameters())
+    for name,buffer in detector.named_buffers():
+        torch.testing.assert_close(buffer,original_buffers[name],rtol=0,atol=0)
+    invalid={'boxes':torch.tensor([[10.,10.,10.,20.]]),'labels':torch.tensor([1])}
+    with pytest.raises(AssertionError,match='positive'):
+        detection_loss(detector,[x],[invalid])
+    assert detector.rpn.score_thresh==1.
+    assert all(m.training==state for m,state in original_modes.items())
+
+
 def test_identical_dense_detections_have_perfect_source_agreement():
     tasks = importlib.import_module("ar_od_proxy.tasks")
     evaluation = importlib.import_module("ar_od_proxy.evaluate")

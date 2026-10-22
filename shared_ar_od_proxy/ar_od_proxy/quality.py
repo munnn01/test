@@ -155,6 +155,9 @@ def real_measure(tasks, codec, y, record, refs, name, qp, seed):
     torch.manual_seed(seed)  # Pair TorchVision RPN/ROI sampling with identity.
     terms = task_terms(tasks.losses(packet.reconstruction, record, refs), record)
     result = {'terms': {k: float(v) for k, v in terms.items()}, 'bpp': float(packet.bpp.mean())}
+    for key, value in result['terms'].items():
+        if not math.isfinite(value) or value < 0:
+            raise ValueError(f"invalid task loss at {record.get('id','unknown')} {name} QP {qp}: {key}={value}")
     if record['task'] == 'ar':
         result['ar_correct'] = tasks.ar_logits(packet.reconstruction).argmax(-1).item() == record['ar_label']
     return result, packet
@@ -515,7 +518,7 @@ def main():
             baselines[(index,name,qp)] = result
             rows.append({'source':record['id'],'codec':name,'qp':qp,**result})
             if (step+1)%32==0: emit(None,{'stage':'quality_identity','completed':step+1,'total':len(train)*8})
-        (args.out/'identity_targets.json').write_text(json.dumps(rows,indent=2),encoding='utf-8')
+        (args.out/'identity_targets.json').write_text(json.dumps(rows,indent=2,allow_nan=False),encoding='utf-8')
         # Each arm has identical reset trunk/output weights, masks, source schedule and proposal budget.
         summaries,training = {},{}
         initial = identity_start(base,cfg['filter_limit'])

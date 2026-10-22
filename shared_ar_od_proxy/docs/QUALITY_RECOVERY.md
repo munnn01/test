@@ -94,3 +94,21 @@ python -m ar_od_proxy.kaggle prepare --experiment quality --account ACCOUNT `
 
 Follow with the existing `submit` command using external pool credentials. The input
 checkpoint and all result files stay outside the public source allowlist.
+
+## Empty-proposal training fix
+
+The first quality run stopped at proposal 353. One TRAIN video had no teacher
+boxes, and MobileNet-320's default RPN score threshold (.05) removed every proposal.
+TorchVision then computed classifier/box losses on zero ROI samples, producing NaN.
+The exact input and pretrained detector reproduced this failure locally.
+
+`detection_loss` now temporarily sets the RPN score threshold to zero so that
+background proposals remain available during loss computation. Its original value
+and every module mode are restored in `finally`, including exceptional exits.
+Evaluation and teacher inference retain their original threshold. This does not
+drop the source, fabricate labels, replace NaN with zero, or change frozen weights.
+
+Identity measurements now reject invalid task losses immediately with source ID,
+codec, QP and loss name; identity-target JSON also forbids NaN. Both arms restart
+from their declared common identity initialization and recompute all targets under
+the corrected detector-training procedure.

@@ -8,13 +8,19 @@ def detection_loss(model, images, targets):
     # TorchVision selects pre-NMS detector losses in training mode. Preserve all
     # module modes and prevent batch-normalization state updates while doing so.
     modes = {module: module.training for module in model.modules()}
+    score_threshold = model.rpn.score_thresh
     try:
         model.train()
+        # MobileNet-320's .05 inference threshold can remove every background
+        # proposal when pseudo targets are empty. ROI cross-entropy then sees
+        # zero samples and becomes NaN. Retain low-score negatives for training.
+        model.rpn.score_thresh = 0.
         for module in model.modules():
             if isinstance(module, (nn.modules.batchnorm._BatchNorm, nn.Dropout)):
                 module.eval()
         return sum(model(images, targets).values())
     finally:
+        model.rpn.score_thresh = score_threshold
         for module, training in modes.items():
             module.training = training
 

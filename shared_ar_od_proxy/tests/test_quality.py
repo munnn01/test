@@ -38,6 +38,19 @@ def test_real_guard_refuses_task_violation_flip_and_cumulative_drift():
     assert not q.quality_feasible({'terms': {'ar': 1.}}, baseline, .02)
 
 
+def test_identity_measurement_rejects_nan_immediately_with_source_and_point():
+    q=quality_module()
+    from ar_od_proxy.codec import RealCodec
+    class InvalidTasks:
+        def losses(self,x,record,refs):
+            zero=x.sum()*0
+            return {'ar_gt':zero,'ar_source':zero,'od_gt':zero+float('nan'),'od_source':zero}
+    x=torch.rand(1,1,3,32,32)
+    with pytest.raises(ValueError,match='fixture/bad.*h264.*30.*od'):
+        q.real_measure(InvalidTasks(),RealCodec(preset='ultrafast',gop=1),x,
+                       {'id':'fixture/bad','task':'od'},{},'h264',30,17)
+
+
 def test_rejected_adam_displacement_restores_parameters_and_moments():
     q = quality_module()
     model = torch.nn.Linear(1, 1)
