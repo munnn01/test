@@ -99,6 +99,29 @@ def test_screen_cloud_action_uses_owned_private_checkpoint_and_pinned_config(tmp
     assert cfg['qps'] == [30,35,40,45] and cfg['codecs'] == ['h264','h265']
 
 
+def test_notebook_embeds_exact_sources_and_logs_each_startup_phase(tmp_path):
+    import ast
+    import base64
+    import hashlib
+    import zlib
+    from ar_od_proxy.kaggle import prepare
+    root = Path(__file__).resolve().parents[1]
+    folder = tmp_path/'payload'
+    job = prepare(root,folder,'a'*40,'example','bdrate-screen',action='screen',
+                  baseline_sha256='b'*64,checkpoint_dataset='example/private-checkpoint')
+    code = ''.join(json.loads((folder/'notebook.ipynb').read_text())['cells'][0]['source'])
+    constants = {n.targets[0].id:ast.literal_eval(n.value) for n in ast.parse(code).body
+                 if isinstance(n,ast.Assign) and isinstance(n.value,ast.Constant)}
+    files = json.loads(zlib.decompress(base64.b64decode(constants['SOURCE_BUNDLE'])))
+    assert set(files)==set(job['source_hashes'])
+    for name, content in files.items():
+        assert hashlib.sha256(content.encode('utf-8')).hexdigest()==job['source_hashes'][name]
+    assert constants['CHECKPOINT_DATASET']=='example/private-checkpoint'
+    for phase in ('sources_verified','dependencies_ready','inputs_ready','runner_start'):
+        assert phase in code
+    assert 'timeout=180' in code
+
+
 def test_each_arm_runs_same_real_codec_grid_and_saves_frozen_proxy(tmp_path):
     from torch import nn
     from ar_od_proxy.screen import fit_arm

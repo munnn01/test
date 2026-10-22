@@ -78,7 +78,7 @@ Outputs include `manifest.json`, `training.jsonl`, `proxy_warmup.pt`, `last.pt`,
 
 ## Kaggle
 
-The launcher requests a **private free T4 GPU job** and mounts the existing datasets `qktttttttttt/kineticscleaned` and `awsaf49/coco-2017-dataset`. It downloads only this folder's allowlisted source files from an immutable public GitHub commit and verifies every SHA-256. External credentials never enter a notebook or published source.
+The launcher requests a **private free T4 GPU job** and mounts the existing datasets `qktttttttttt/kineticscleaned` and `awsaf49/coco-2017-dataset`. It embeds this folder's allowlisted source bytes in the notebook and verifies every SHA-256 on the GPU worker. Before preparing a notebook, verify that these local bytes match the immutable published Git commit and retain that publication receipt. The commit binding is established by the launcher; the worker verifies the embedded inventory and bytes. External credentials never enter a notebook or published source. Startup phase events identify dependency installation, input discovery and runner initialization; dependency installation has a 180-second timeout.
 
 ```shell
 python -m ar_od_proxy.kaggle prepare --account qktttttttttt --slug ar-od-proxy-qp4-20261022 --commit FULL_40_CHARACTER_COMMIT_SHA --directory outputs/kaggle-payload

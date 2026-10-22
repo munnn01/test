@@ -1,5 +1,6 @@
 """Prepare immutable public-source notebooks; keep Kaggle credentials local."""
 import argparse
+import base64
 import hashlib
 import json
 import os
@@ -7,6 +8,7 @@ from pathlib import Path
 import re
 import subprocess
 import sys
+import zlib
 
 
 DATASETS = ["qktttttttttt/kineticscleaned", "awsaf49/coco-2017-dataset"]
@@ -28,29 +30,23 @@ def source_files(root):
 
 
 BOOTSTRAP = r'''
-from concurrent.futures import ThreadPoolExecutor
-import hashlib, json, os, pathlib, subprocess, sys, tarfile, time, traceback
-from urllib.request import urlopen
+import base64, hashlib, json, os, pathlib, subprocess, sys, tarfile, time, traceback, zlib
 ROOT = pathlib.Path('/kaggle/working/shared_ar_od_proxy')
 OUT = pathlib.Path('/kaggle/working/ar_od_proxy_results')
 STATUS = pathlib.Path('/kaggle/working/cloud_status.json')
 receipt = {'commit': COMMIT, 'source_hashes': MANIFEST, 'complete': False, 'started': time.time()}
+embedded_sources = json.loads(zlib.decompress(base64.b64decode(SOURCE_BUNDLE)))
+
+def phase(name, **details):
+    print(json.dumps({'stage':'bootstrap_phase','phase':name,
+                      'seconds':time.time()-receipt['started'], **details}), flush=True)
 
 def fetch(item):
     name, expected = item
     destination = ROOT / name
     if not destination.resolve().is_relative_to(ROOT.resolve()):
         raise ValueError('unsafe source path')
-    url = f'https://raw.githubusercontent.com/munnn01/test/{COMMIT}/shared_ar_od_proxy/{name}'
-    for attempt in range(3):
-        try:
-            with urlopen(url, timeout=60) as response:
-                content = response.read()
-            break
-        except Exception:
-            if attempt == 2:
-                raise
-            time.sleep(2 ** attempt)
+    content = embedded_sources[name].encode('utf-8')
     if hashlib.sha256(content).hexdigest() != expected:
         raise ValueError('published source hash mismatch: ' + name)
     destination.parent.mkdir(parents=True, exist_ok=True)
@@ -64,16 +60,28 @@ try:
     STATUS.write_text(json.dumps(receipt, indent=2))
     print(json.dumps({'stage': 'bootstrap', 'gpu': receipt['gpu'], 'commit': COMMIT}), flush=True)
     ROOT.mkdir(exist_ok=False)
-    with ThreadPoolExecutor(max_workers=6) as pool:
-        list(pool.map(fetch, MANIFEST.items()))
-    subprocess.run([sys.executable, '-m', 'pip', 'install', '-q', 'pycocotools>=2.0.7', 'scipy>=1.10'], check=True)
+    if set(embedded_sources) != set(MANIFEST):
+        raise ValueError('embedded source inventory mismatch')
+    for item in MANIFEST.items():
+        fetch(item)
+    phase('sources_verified', files=len(MANIFEST))
+    phase('dependencies_start')
+    subprocess.run([sys.executable, '-m', 'pip', 'install', '-q', 'pycocotools>=2.0.7', 'scipy>=1.10'], check=True, timeout=180)
+    phase('dependencies_ready')
     import cv2
     inputs = pathlib.Path('/kaggle/input')
     kin_options = [inputs/'kineticscleaned', inputs/'datasets/qktttttttttt/kineticscleaned']
     kin = next((p for p in kin_options if p.is_dir()), None)
     if kin is None:
         raise FileNotFoundError('mounted kineticscleaned dataset not found')
-    annotations = list(inputs.rglob('instances_val2017.json'))
+    phase('input_discovery_start')
+    coco_options = [inputs/'coco-2017-dataset', inputs/'datasets/awsaf49/coco-2017-dataset']
+    annotations = {p.resolve():p for root in coco_options for prefix in ('coco2017','')
+                   if (p := root/prefix/'annotations/instances_val2017.json').is_file()}
+    if not annotations:
+        phase('annotation_fallback_scan')
+        annotations = {p.resolve():p for p in inputs.rglob('instances_val2017.json')}
+    annotations = list(annotations.values())
     if len(annotations) != 1:
         raise ValueError('exactly one COCO validation annotation is required')
     annotation = annotations[0]
@@ -95,7 +103,14 @@ try:
                    '--ar-root', str(kin), '--coco-root', str(images), '--annotations', str(annotation),
                    '--checkpoint', str(matches[0]), '--out', str(OUT)]
     elif ACTION in ('train-calibrated', 'screen'):
-        candidates = list(inputs.rglob('calibrated.pt'))
+        if CHECKPOINT_DATASET:
+            owner, slug = CHECKPOINT_DATASET.split('/')
+            folders = [inputs/slug, inputs/'datasets'/owner/slug]
+            candidates = list({p.resolve():p for folder in folders
+                               if (p := folder/'calibrated.pt').is_file()}.values())
+        else:
+            phase('checkpoint_fallback_scan')
+            candidates = list(inputs.rglob('calibrated.pt'))
         matches = [p for p in candidates if hashlib.sha256(p.read_bytes()).hexdigest() == BASELINE_SHA256]
         if len(matches) != 1:
             raise ValueError('calibrated checkpoint hash mismatch or ambiguous checkpoint')
@@ -108,6 +123,8 @@ try:
                        '--config', 'ar_od_proxy/configs/bdrate_screen.json',
                        '--ar-root', str(kin), '--coco-root', str(images), '--annotations', str(annotation),
                        '--checkpoint', str(matches[0]), '--out', str(OUT)]
+    phase('inputs_ready', kinetics=str(kin), annotations=str(annotation))
+    phase('runner_start', action=ACTION)
     with pathlib.Path('/kaggle/working/training_console.log').open('w') as log:
         process = subprocess.Popen(command, cwd=ROOT, env=env, stdout=subprocess.PIPE,
                                    stderr=subprocess.STDOUT, text=True, bufsize=1)
@@ -156,8 +173,14 @@ def prepare(root, directory, commit, account, slug, action="train", baseline_sha
             raise ValueError("checkpoint dataset must belong to the target account for calibrated deployment")
         kernel_sources = []
     datasets = DATASETS + ([checkpoint_dataset] if checkpoint_dataset else [])
+    contents = {name:(Path(root)/name).read_bytes().decode('utf-8') for name in manifest}
+    for name, content in contents.items():
+        if hashlib.sha256(content.encode('utf-8')).hexdigest() != manifest[name]:
+            raise ValueError('source changed while preparing notebook: '+name)
+    bundle = base64.b64encode(zlib.compress(json.dumps(contents).encode('utf-8'),9)).decode('ascii')
     code = (f"COMMIT = {commit!r}\nMANIFEST = {manifest!r}\nACTION = {action!r}\n"
-            f"BASELINE_SHA256 = {baseline_sha256!r}\n" + BOOTSTRAP)
+            f"BASELINE_SHA256 = {baseline_sha256!r}\nCHECKPOINT_DATASET = {checkpoint_dataset!r}\n"
+            f"SOURCE_BUNDLE = {bundle!r}\n" + BOOTSTRAP)
     compile(code, "kaggle-bootstrap", "exec")
     notebook = {"nbformat": 4, "nbformat_minor": 5,
                 "metadata": {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"}},

@@ -44,10 +44,18 @@ tests/test_screen.py, docs/BDRATE_SCREEN.md.
 - [ ] Independent review and fixes, then publish exact allowlisted source to GitHub.
 - [ ] Submit private T4 notebook, verify RUNNING, retrieve and inspect results when ready.
 
-Execution ledger: 51 tests passed on 2026-10-22; independent reviewer also ran
+Execution ledger: initial 51 tests passed on 2026-10-22; independent reviewer also ran
 51 tests and found no remaining Critical/Important blockers. Fixed per-case RNG
 pairing after observing its regression test fail. Ruling: compare the regional
 architecture plus an explicit scalar LR of 2e-3, with all convolutional LRs 2e-5;
 otherwise eight new scalar strengths cannot explore useful filtering in 3072
 updates. This limits attribution to the combined architecture and recipe. No
 confidence intervals or TEST claims are part of this initial screening.
+
+Startup follow-up: the first cloud version reported only GPU bootstrap during
+an extended silent setup. No specific blocking phase could be identified. Added
+embedded allowlisted sources (per-file hashes retained), explicit setup/runner
+phase events, dependency timeout180 and direct owned-checkpoint mount lookup.
+The new source-bundle test failed before implementation; full suite now52 passed.
+Independent review found no runtime blocker. Publication must assert that the
+prepared notebook manifest equals the remotely verified source manifest.

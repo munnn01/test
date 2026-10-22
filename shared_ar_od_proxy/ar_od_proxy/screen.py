@@ -197,6 +197,7 @@ def main():
                'started':time.time(),'completed_arms':[],'scope':'DEV screening; TEST untouched'}
     (args.out/'run.json').write_text(json.dumps(receipt,indent=2),encoding='utf-8')
     try:
+        emit(None,{'stage':'screen_init','phase':'checkpoint_load'})
         base,proxy,saved = load_checkpoint(args.checkpoint,device='cuda')
         if saved['format']!=2 or saved['stage']!='proxy_calibration':
             raise ValueError('screen requires calibrated format-2 checkpoint')
@@ -207,6 +208,7 @@ def main():
         proxy_hash = tensor_digest(proxy)
         receipt['warm_start'] = {'checkpoint_sha256':hashlib.sha256(args.checkpoint.read_bytes()).hexdigest(),
                                  'proxy_tensor_sha256':proxy_hash,'npp_tensor_sha256':tensor_digest(base)}
+        emit(None,{'stage':'screen_init','phase':'source_manifest'})
         manifest = manifest_for(args,cfg)
         previous = json.loads((args.checkpoint.parent/'manifest.json').read_text())
         if [r['id'] for r in manifest['train']] != [r['id'] for r in previous['train']]:
@@ -214,11 +216,14 @@ def main():
         if not {r['id'] for r in previous['dev']} <= {r['id'] for r in manifest['dev']}:
             raise ValueError('expanded DEV must include previous DEV sources')
         (args.out/'manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8')
+        emit(None,{'stage':'screen_init','phase':'task_heads'})
         tasks = TaskHeads(device='cuda',size=cfg['size'],od_frames=cfg['od_frames'])
         task_hashes = {k:tensor_digest(getattr(tasks,k)) for k in ('ar','od')}
         codec = RealCodec(preset=cfg['preset'],gop=cfg['frames'],fps=cfg['fps'])
+        emit(None,{'stage':'screen_init','phase':'load_samples','train':len(manifest['train']), 'dev':len(manifest['dev'])})
         train = samples_for(manifest['train'],cfg)
         dev = samples_for(manifest['dev'],cfg)  # validate every selected source before training
+        emit(None,{'stage':'screen_init','phase':'source_references'})
         references = [tasks.references(x.cuda(),r,gt) for r,x,gt in train]
         baselines,rows = {},[]
         with torch.no_grad():
