@@ -77,8 +77,11 @@ class VideoNPP(nn.Module):
 
 class RegionalVideoNPP(VideoNPP):
     """Causal learned spatial filter; RGB/codec/QP are its only inference inputs."""
-    def __init__(self, width=12, strength=0.12):
+    def __init__(self, width=12, strength=0.12, filter_limit=0.9):
         super().__init__(width, strength)
+        if not 0 < filter_limit <= .9:
+            raise ValueError('filter limit must be positive and at most .9')
+        self.filter_limit = float(filter_limit)
         self.filter_gate = nn.Sequential(nn.Conv2d(5, width, 3, padding=1), nn.SiLU(),
                                          nn.Conv2d(width, 1, 3, padding=1))
         self.filter_strength = nn.Parameter(torch.zeros(8))
@@ -101,7 +104,7 @@ class RegionalVideoNPP(VideoNPP):
         motion = torch.cat((torch.zeros_like(x[:, :1, :1]),
                             (x[:, 1:]-x[:, :-1]).abs().mean(2, keepdim=True)), 1)
         gate = self.filter_gate(torch.cat((flat, contrast, motion.reshape(b*t, 1, h, w)), 1)).sigmoid()
-        strength = .9 * self.filter_strength[CalibratedRateHead.point(codec, qp)].tanh()
+        strength = self.filter_limit * self.filter_strength[CalibratedRateHead.point(codec, qp)].tanh()
         residual = (strength * gate * (low-flat)).reshape_as(x)
         return (base+residual).clamp(0, 1)
 

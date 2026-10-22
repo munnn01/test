@@ -164,3 +164,10 @@ AR and COCO BD-rates on DEV; it contains no TEST result or uncertainty interval.
 `existing/`, `normalized/` and `regional/` contain checkpoints, optimizer/dual
 state, every training update and final evaluation streams/predictions. Training
 diagnostics compare real and proxy rate changes along actual guarded updates.
+# Quality recovery follow-up
+
+The new `quality` Kaggle action compares fixed and refreshed proxies with continuous
+task protection, real-codec proposal/anchor guards, bounded regional filtering and
+expanded source cohorts. See [the protocol](docs/QUALITY_RECOVERY.md). This experiment
+has not established a 15% BD-rate improvement.
+

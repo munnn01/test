@@ -52,7 +52,8 @@ def load_checkpoint(path, config=None, device="cpu", migrate_legacy=False):
     if kind not in ('video', 'regional'):
         raise ValueError('unknown NPP model kind')
     model = RegionalVideoNPP if kind == 'regional' else VideoNPP
-    npp, proxy = model(stored["width"]).to(device), VideoProxy(stored["width"]).to(device)
+    kwargs = {'filter_limit': stored.get('filter_limit', .9)} if kind == 'regional' else {}
+    npp, proxy = model(stored["width"], **kwargs).to(device), VideoProxy(stored["width"]).to(device)
     npp.load_state_dict(checkpoint["npp"], strict=True)
     missing, unexpected = proxy.load_state_dict(checkpoint["proxy"], strict=not legacy)
     if legacy and (unexpected or set(missing) != {"rate_head.log_header", "rate_head.raw_bias", "rate_head.raw_weights"}):
