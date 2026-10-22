@@ -130,7 +130,7 @@ finally:
 '''
 
 
-def prepare(root, directory, commit, account, slug, action="train", baseline_sha256=None):
+def prepare(root, directory, commit, account, slug, action="train", baseline_sha256=None, checkpoint_dataset=None):
     if not re.fullmatch(r"[0-9a-f]{40}", commit):
         raise ValueError("an immutable full commit SHA is required")
     if not re.fullmatch(r"[A-Za-z0-9_-]+", account) or not re.fullmatch(r"[a-z0-9][a-z0-9-]{5,70}", slug):
@@ -144,6 +144,12 @@ def prepare(root, directory, commit, account, slug, action="train", baseline_sha
         raise ValueError("calibration/deployment requires the exact input checkpoint SHA256")
     kernel_sources = {"train": [], "calibrate": ["qktttttttttt/ar-od-proxy-qp4-20261022"],
                       "train-calibrated": ["qktttttttttt/ar-od-proxy-calibration-qp4-20261022"]}[action]
+    if checkpoint_dataset is not None:
+        if (action != "train-calibrated" or not re.fullmatch(
+                re.escape(account) + r"/[a-z0-9][a-z0-9-]{5,70}", checkpoint_dataset)):
+            raise ValueError("checkpoint dataset must belong to the target account for calibrated deployment")
+        kernel_sources = []
+    datasets = DATASETS + ([checkpoint_dataset] if checkpoint_dataset else [])
     code = (f"COMMIT = {commit!r}\nMANIFEST = {manifest!r}\nACTION = {action!r}\n"
             f"BASELINE_SHA256 = {baseline_sha256!r}\n" + BOOTSTRAP)
     compile(code, "kaggle-bootstrap", "exec")
@@ -153,7 +159,7 @@ def prepare(root, directory, commit, account, slug, action="train", baseline_sha
                            "metadata": {}, "outputs": [], "source": code.splitlines(keepends=True)}]}
     metadata = {"id": f"{account}/{slug}", "title": slug, "code_file": "notebook.ipynb",
                 "language": "python", "kernel_type": "notebook", "is_private": True,
-                "enable_gpu": True, "enable_internet": True, "dataset_sources": DATASETS,
+                "enable_gpu": True, "enable_internet": True, "dataset_sources": datasets,
                 "kernel_sources": kernel_sources,
                 "competition_sources": [], "model_sources": []}
     directory = Path(directory)
@@ -161,7 +167,7 @@ def prepare(root, directory, commit, account, slug, action="train", baseline_sha
     for name, content in (("notebook.ipynb", notebook), ("kernel-metadata.json", metadata)):
         (directory / name).write_text(json.dumps(content, indent=2), encoding="utf-8")
     job = {"commit": commit, "handle": metadata["id"], "source_hashes": manifest,
-           "action": action, "baseline_sha256": baseline_sha256,
+           "action": action, "baseline_sha256": baseline_sha256, "checkpoint_dataset": checkpoint_dataset,
            "payload_hashes": {name: hashlib.sha256((directory / name).read_bytes()).hexdigest()
                               for name in ("notebook.ipynb", "kernel-metadata.json")}}
     (directory / "job.json").write_text(json.dumps(job, indent=2), encoding="utf-8")
@@ -177,8 +183,9 @@ def verify_payload(directory, handle):
         if hashlib.sha256((directory / name).read_bytes()).hexdigest() != expected:
             raise ValueError("payload hash mismatch")
     metadata = json.loads((directory / "kernel-metadata.json").read_text(encoding="utf-8"))
+    expected_datasets = DATASETS + ([job["checkpoint_dataset"]] if job.get("checkpoint_dataset") else [])
     if (metadata["id"] != handle or job["handle"] != handle or metadata["is_private"] is not True
-            or metadata["enable_gpu"] is not True or metadata["dataset_sources"] != DATASETS):
+            or metadata["enable_gpu"] is not True or metadata["dataset_sources"] != expected_datasets):
         raise ValueError("private GPU payload/account/dataset mismatch")
     return metadata, job
 
@@ -233,11 +240,13 @@ def main():
     parser.add_argument("--pool", type=Path)
     parser.add_argument("--experiment", choices=("train", "calibrate", "train-calibrated"), default="train")
     parser.add_argument("--baseline-sha256")
+    parser.add_argument("--checkpoint-dataset", help="Optional owned private input dataset for another pool account")
     args = parser.parse_args()
     handle = f"{args.account}/{args.slug}"
     if args.action == "prepare":
         job = prepare(Path(__file__).parents[1], args.directory, args.commit or "", args.account, args.slug,
-                      action=args.experiment, baseline_sha256=args.baseline_sha256)
+                      action=args.experiment, baseline_sha256=args.baseline_sha256,
+                      checkpoint_dataset=args.checkpoint_dataset)
         print(json.dumps({"prepared": str(args.directory), "handle": handle, "commit": job["commit"]}))
     elif args.action == "submit":
         verify_payload(args.directory, handle)

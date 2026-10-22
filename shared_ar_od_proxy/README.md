@@ -137,4 +137,12 @@ Kaggle preparation uses `--experiment train-calibrated --baseline-sha256 EXACT_S
 and mounts the completed calibration notebook output. The input checkpoint hash,
 calibration stage, config compatibility and source-ID manifest must match.
 
+If the original account has no free GPU slot, an explicitly authorized pool
+account can use an owned private dataset containing `calibrated.pt` and its
+sibling `manifest.json`. Add `--checkpoint-dataset ACCOUNT/PRIVATE_INPUT_SLUG`;
+the launcher mounts that dataset instead of the other account's private kernel.
+The dataset must belong to the target account, and the checkpoint SHA256 is
+still verified before loading. Dataset creation is private by default and is
+performed separately from notebook preparation.
+
 Architecture reference: [Preprocessing Enhanced Image Compression for Machine Vision](https://arxiv.org/abs/2206.05650). Temporal proxy context: [Sandwiched Video Compression](https://research.google/pubs/sandwiched-video-compression-an-efficient-learned-video-compression-approach/). This implementation is an adaptation with a different proxy and joint objective, not a reproduction of the reference's results.

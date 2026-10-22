@@ -94,3 +94,18 @@ def test_calibrated_training_cannot_silently_omit_or_disable_update_bound(tmp_pa
         requested['max_npp_update_rms']=bound
     with pytest.raises(ValueError,match='RMS'):
         engine.load_calibrated_start(path,requested)
+
+
+def test_deploy_can_use_an_owned_private_checkpoint_dataset_on_another_account(tmp_path):
+    from ar_od_proxy import kaggle
+    directory=tmp_path/'payload'
+    dataset='example/calibrated-private-input'
+    kaggle.prepare(Path(__file__).resolve().parents[1],directory,'a'*40,'example','calibrated-deploy',
+                   action='train-calibrated',baseline_sha256='b'*64,checkpoint_dataset=dataset)
+    metadata,job=kaggle.verify_payload(directory,'example/calibrated-deploy')
+    assert metadata['kernel_sources']==[]
+    assert metadata['dataset_sources']==kaggle.DATASETS+[dataset]
+    assert job['checkpoint_dataset']==dataset
+    with pytest.raises(ValueError,match='dataset'):
+        kaggle.prepare(Path(__file__).resolve().parents[1],tmp_path/'bad','a'*40,'example','calibrated-deploy',
+                       action='train-calibrated',baseline_sha256='b'*64,checkpoint_dataset='someone/other-input')

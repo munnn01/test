@@ -36,3 +36,8 @@
 - Independent deployment review found an omitted-RMS config could bypass the
   guard. Six observed RED regressions cover missing/zero/negative/nonfinite/too
   large bounds; the entry point now rejects them. Fresh full suite: 43 passed.
+- Initial deployment submission on qktttttttttt was rejected because its two
+  GPU slots were occupied. The user explicitly chose another configured pool
+  account. Added an owned private checkpoint-dataset input option so existing
+  private calibration output can be transferred without publishing weights.
+  Its regression first failed for the missing option; full suite: 44 passed.
