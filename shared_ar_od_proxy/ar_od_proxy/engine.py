@@ -10,7 +10,7 @@ import time
 import torch
 import torch.nn.functional as F
 
-from .models import VideoNPP, VideoProxy, real_value_proxy_grad
+from .models import VideoNPP, RegionalVideoNPP, VideoProxy, real_value_proxy_grad
 
 
 def operating_point(step, config):
@@ -48,7 +48,11 @@ def load_checkpoint(path, config=None, device="cpu", migrate_legacy=False):
     stored = checkpoint["config"]
     if config is not None and stored != config:
         raise ValueError("checkpoint config differs from requested config")
-    npp, proxy = VideoNPP(stored["width"]).to(device), VideoProxy(stored["width"]).to(device)
+    kind = stored.get('npp_kind', 'video')
+    if kind not in ('video', 'regional'):
+        raise ValueError('unknown NPP model kind')
+    model = RegionalVideoNPP if kind == 'regional' else VideoNPP
+    npp, proxy = model(stored["width"]).to(device), VideoProxy(stored["width"]).to(device)
     npp.load_state_dict(checkpoint["npp"], strict=True)
     missing, unexpected = proxy.load_state_dict(checkpoint["proxy"], strict=not legacy)
     if legacy and (unexpected or set(missing) != {"rate_head.log_header", "rate_head.raw_bias", "rate_head.raw_weights"}):

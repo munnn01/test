@@ -146,3 +146,21 @@ still verified before loading. Dataset creation is private by default and is
 performed separately from notebook preparation.
 
 Architecture reference: [Preprocessing Enhanced Image Compression for Machine Vision](https://arxiv.org/abs/2206.05650). Temporal proxy context: [Sandwiched Video Compression](https://research.google/pubs/sandwiched-video-compression-an-efficient-learned-video-compression-approach/). This implementation is an adaptation with a different proxy and joint objective, not a reproduction of the reference's results.
+
+The controlled BD-rate screening compares `existing`, `normalized` and `regional`
+arms, each with 3072 updates and a common calibrated start. It evaluates 32 DEV
+sources per task at the original four QPs, with real bitstreams. Plateau or
+nonmonotone quality curves produce an explicit unavailable BD-rate. Read
+[the screening protocol](docs/BDRATE_SCREEN.md) before interpreting results.
+
+```shell
+python -m ar_od_proxy.screen --checkpoint /data/calibration/calibrated.pt --config ar_od_proxy/configs/bdrate_screen.json --ar-root /data/kineticscleaned --coco-root /data/coco/val2017 --annotations /data/coco/annotations/instances_val2017.json --out outputs/bdrate-screen
+```
+
+For Kaggle preparation select `--experiment screen`, provide the exact calibrated
+checkpoint SHA256 and the owned private checkpoint dataset. The job requests one
+T4 with a maximum runtime of three hours. `screen_summary.json` reports separate
+AR and COCO BD-rates on DEV; it contains no TEST result or uncertainty interval.
+`existing/`, `normalized/` and `regional/` contain checkpoints, optimizer/dual
+state, every training update and final evaluation streams/predictions. Training
+diagnostics compare real and proxy rate changes along actual guarded updates.

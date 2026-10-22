@@ -66,7 +66,7 @@ try:
     ROOT.mkdir(exist_ok=False)
     with ThreadPoolExecutor(max_workers=6) as pool:
         list(pool.map(fetch, MANIFEST.items()))
-    subprocess.run([sys.executable, '-m', 'pip', 'install', '-q', 'pycocotools>=2.0.7'], check=True)
+    subprocess.run([sys.executable, '-m', 'pip', 'install', '-q', 'pycocotools>=2.0.7', 'scipy>=1.10'], check=True)
     import cv2
     inputs = pathlib.Path('/kaggle/input')
     kin_options = [inputs/'kineticscleaned', inputs/'datasets/qktttttttttt/kineticscleaned']
@@ -94,7 +94,7 @@ try:
         command = [sys.executable, '-u', '-m', 'ar_od_proxy.calibration',
                    '--ar-root', str(kin), '--coco-root', str(images), '--annotations', str(annotation),
                    '--checkpoint', str(matches[0]), '--out', str(OUT)]
-    elif ACTION == 'train-calibrated':
+    elif ACTION in ('train-calibrated', 'screen'):
         candidates = list(inputs.rglob('calibrated.pt'))
         matches = [p for p in candidates if hashlib.sha256(p.read_bytes()).hexdigest() == BASELINE_SHA256]
         if len(matches) != 1:
@@ -103,6 +103,11 @@ try:
                    '--config', 'ar_od_proxy/configs/calibrated_train.json',
                    '--ar-root', str(kin), '--coco-root', str(images), '--annotations', str(annotation),
                    '--checkpoint', str(matches[0]), '--out', str(OUT)]
+        if ACTION == 'screen':
+            command = [sys.executable, '-u', '-m', 'ar_od_proxy.screen',
+                       '--config', 'ar_od_proxy/configs/bdrate_screen.json',
+                       '--ar-root', str(kin), '--coco-root', str(images), '--annotations', str(annotation),
+                       '--checkpoint', str(matches[0]), '--out', str(OUT)]
     with pathlib.Path('/kaggle/working/training_console.log').open('w') as log:
         process = subprocess.Popen(command, cwd=ROOT, env=env, stdout=subprocess.PIPE,
                                    stderr=subprocess.STDOUT, text=True, bufsize=1)
@@ -138,14 +143,15 @@ def prepare(root, directory, commit, account, slug, action="train", baseline_sha
     manifest = source_files(root)
     if "ar_od_proxy/run.py" not in manifest or "ar_od_proxy/configs/pilot.json" not in manifest:
         raise ValueError("complete pipeline sources required")
-    if action not in ("train", "calibrate", "train-calibrated"):
+    if action not in ("train", "calibrate", "train-calibrated", "screen"):
         raise ValueError("unsupported experiment action")
     if action != "train" and not re.fullmatch(r"[0-9a-f]{64}", baseline_sha256 or ""):
         raise ValueError("calibration/deployment requires the exact input checkpoint SHA256")
     kernel_sources = {"train": [], "calibrate": ["qktttttttttt/ar-od-proxy-qp4-20261022"],
-                      "train-calibrated": ["qktttttttttt/ar-od-proxy-calibration-qp4-20261022"]}[action]
+                      "train-calibrated": ["qktttttttttt/ar-od-proxy-calibration-qp4-20261022"],
+                      "screen": ["qktttttttttt/ar-od-proxy-calibration-qp4-20261022"]}[action]
     if checkpoint_dataset is not None:
-        if (action != "train-calibrated" or not re.fullmatch(
+        if (action not in ("train-calibrated", "screen") or not re.fullmatch(
                 re.escape(account) + r"/[a-z0-9][a-z0-9-]{5,70}", checkpoint_dataset)):
             raise ValueError("checkpoint dataset must belong to the target account for calibrated deployment")
         kernel_sources = []
@@ -238,7 +244,7 @@ def main():
     parser.add_argument("--directory", type=Path, required=True)
     parser.add_argument("--commit")
     parser.add_argument("--pool", type=Path)
-    parser.add_argument("--experiment", choices=("train", "calibrate", "train-calibrated"), default="train")
+    parser.add_argument("--experiment", choices=("train", "calibrate", "train-calibrated", "screen"), default="train")
     parser.add_argument("--baseline-sha256")
     parser.add_argument("--checkpoint-dataset", help="Optional owned private input dataset for another pool account")
     args = parser.parse_args()
@@ -251,7 +257,7 @@ def main():
     elif args.action == "submit":
         verify_payload(args.directory, handle)
         output = kaggle_call(["kernels", "push", "-p", str(args.directory), "--accelerator", "NvidiaTeslaT4",
-                              "--timeout", "7200"], args.pool, args.account)
+                              "--timeout", "10800" if json.loads((args.directory/'job.json').read_text())['action']=='screen' else "7200"], args.pool, args.account)
         (args.directory / "submission.txt").write_text(output, encoding="utf-8")
         receipt = validate_submission(output, handle)
         (args.directory / "submission.json").write_text(json.dumps(receipt, indent=2), encoding="utf-8")

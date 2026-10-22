@@ -75,6 +75,37 @@ class VideoNPP(nn.Module):
         return torch.stack(output, 1)
 
 
+class RegionalVideoNPP(VideoNPP):
+    """Causal learned spatial filter; RGB/codec/QP are its only inference inputs."""
+    def __init__(self, width=12, strength=0.12):
+        super().__init__(width, strength)
+        self.filter_gate = nn.Sequential(nn.Conv2d(5, width, 3, padding=1), nn.SiLU(),
+                                         nn.Conv2d(width, 1, 3, padding=1))
+        self.filter_strength = nn.Parameter(torch.zeros(8))
+
+    @classmethod
+    def from_base(cls, base):
+        model = cls(base.spatial.out_channels, base.strength).to(next(base.parameters()).device)
+        missing, unexpected = model.load_state_dict(base.state_dict(), strict=False)
+        expected = {'filter_strength'} | {'filter_gate.' + k for k in model.filter_gate.state_dict()}
+        if unexpected or set(missing) != expected:
+            raise ValueError('regional initialization requires a plain VideoNPP')
+        return model
+
+    def forward(self, x, codec, qp):
+        base = super().forward(x, codec, qp)
+        b, t, c, h, w = x.shape
+        flat = x.reshape(b*t, c, h, w)
+        low = F.avg_pool2d(F.pad(flat, (2, 2, 2, 2), mode='reflect'), 5, stride=1)
+        contrast = (low-flat).abs().mean(1, keepdim=True)
+        motion = torch.cat((torch.zeros_like(x[:, :1, :1]),
+                            (x[:, 1:]-x[:, :-1]).abs().mean(2, keepdim=True)), 1)
+        gate = self.filter_gate(torch.cat((flat, contrast, motion.reshape(b*t, 1, h, w)), 1)).sigmoid()
+        strength = .9 * self.filter_strength[CalibratedRateHead.point(codec, qp)].tanh()
+        residual = (strength * gate * (low-flat)).reshape_as(x)
+        return (base+residual).clamp(0, 1)
+
+
 @dataclass
 class ProxyOutput:
     reconstruction: torch.Tensor

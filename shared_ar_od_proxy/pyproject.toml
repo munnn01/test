@@ -7,7 +7,7 @@ name = "shared-ar-od-proxy"
 version = "0.1.0"
 description = "One real-codec video stream for AR and OD with proxy backpropagation"
 requires-python = ">=3.10"
-dependencies = ["torch>=2.5,<3", "torchvision>=0.20,<1", "numpy>=1.24", "opencv-python-headless>=4.8", "Pillow>=10", "pycocotools>=2.0.7"]
+dependencies = ["torch>=2.5,<3", "torchvision>=0.20,<1", "numpy>=1.24", "scipy>=1.10", "opencv-python-headless>=4.8", "Pillow>=10", "pycocotools>=2.0.7"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8"]
