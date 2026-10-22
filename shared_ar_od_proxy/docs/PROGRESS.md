@@ -11,3 +11,12 @@
 - Package wheel built; packaged four-QP config verified. Public-source allowlist checked against external credential values; zero matches.
 - Independent review identified zero-exit Kaggle push errors and asymmetric source-box truncation. Both fixed with observed RED-to-GREEN regressions. Submission requires a returned version and matching URL; running/completion still require external status verification.
 - Publication uses a new branch ar-od-proxy-20261022 in munnn01/test. Notebook sources will be pinned to the resulting immutable commit and byte-hash verified before submission. Runtime/submission receipts live outside this published source folder.
+
+- v1 completed on Kaggle. Actual held-out rates exposed an unrepresentable logistic
+  rate floor; scalar mismatch was reported, without claiming gradient fidelity.
+- Current correction follows docs/PROXY_CALIBRATION.md. Five regressions first
+  failed for missing rate representability, header units, sensitivity and explicit
+  migration; three more failed for missing train-only fitting/reporting/launcher.
+  Fresh full suite: 32 passed. A real x264/x265 CPU fixture exercised calibration,
+  all eight points, reconstruction Jacobians, paired probes and descent steps;
+  32 diagnostic rows completed. This fixture is software verification only.

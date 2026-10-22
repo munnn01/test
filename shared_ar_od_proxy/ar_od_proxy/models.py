@@ -81,6 +81,58 @@ class ProxyOutput:
     bpp: torch.Tensor
 
 
+class CalibratedRateHead(nn.Module):
+    """Positive content regression plus stream overhead, for the fixed QP grid.
+
+    Unlike a latent entropy model, this predicts the complete real stream rate.
+    Nonnegative content coefficients make its smooth sensitivity interpretable;
+    fidelity still requires held-out real-codec finite-step measurements.
+    """
+    qps = (30, 35, 40, 45)
+
+    def __init__(self):
+        super().__init__()
+        self.log_header = nn.Parameter(torch.tensor([1024.] * 4 + [18000.] * 4).log())
+        self.raw_bias = nn.Parameter(torch.full((8,), -12.))
+        self.raw_weights = nn.Parameter(torch.full((8, 27), -3.))
+
+    @classmethod
+    def point(cls, codec, qp):
+        if codec not in ("h264", "h265") or qp not in cls.qps:
+            raise ValueError("rate calibration supports h264/h265 at QP 30/35/40/45 only")
+        return 4 * int(codec == "h265") + cls.qps.index(qp)
+
+    @staticmethod
+    def features(x):
+        # Fixed linear Y/Cb/Cr transform. Derivatives stay connected to RGB.
+        matrix = x.new_tensor([[.299, .587, .114], [-.168736, -.331264, .5],
+                               [.5, -.418688, -.081312]])
+        yuv = torch.einsum("oc,btchw->btohw", matrix, x)
+        spatial = []
+        for stride in (1, 2, 4, 8):
+            dx = (yuv[..., stride:] - yuv[..., :-stride]).abs().mean((-1, -2))
+            dy = (yuv[..., stride:, :] - yuv[..., :-stride, :]).abs().mean((-1, -2))
+            spatial.append((dx + dy) / 2)
+        spatial = torch.cat(spatial, 2)
+        count = x.shape[1]
+        intra = spatial[:, 0] / count
+        if count > 1:
+            inter = spatial[:, 1:].sum(1) / count
+            motion = (yuv[:, 1:] - yuv[:, :-1]).abs().mean((1, 3, 4)) * (count - 1) / count
+        else:
+            inter, motion = torch.zeros_like(intra), x.new_zeros(x.shape[0], 3)
+        return torch.cat((intra, inter, motion), 1)
+
+    def from_features(self, features, pixels, point):
+        # pixels is the actual T*H*W denominator, including T=1 for COCO.
+        return (self.log_header[point].exp() / pixels + F.softplus(self.raw_bias[point])
+                + (F.softplus(self.raw_weights[point]) * features).sum(-1))
+
+    def forward(self, x, codec, qp):
+        return self.from_features(self.features(x), x.shape[1] * x.shape[3] * x.shape[4],
+                                  self.point(codec, qp))
+
+
 class VideoProxy(nn.Module):
     """Learned surrogate; its entropy values are calibrated against actual bits.
 
@@ -97,8 +149,16 @@ class VideoProxy(nn.Module):
                                      nn.Conv2d(width, 3, 3, padding=1))
         self.entropy_scale = nn.Conv2d(2 * width, 2 * width, 1)
         self.entropy_mean = nn.Parameter(torch.zeros(1, 2 * width, 1, 1))
+        self.rate_head = CalibratedRateHead()
 
     def forward(self, x, codec, qp):
+        return self._forward(x, codec, qp, legacy=False)
+
+    def forward_legacy(self, x, codec, qp):
+        """Reproduce v1 only for paired diagnostics of a migrated checkpoint."""
+        return self._forward(x, codec, qp, legacy=True)
+
+    def _forward(self, x, codec, qp, legacy):
         validate_video(x)
         condition = self.condition(x, codec, qp)
         step = 0.05 * 2 ** ((qp - 30) / 6)
@@ -112,9 +172,11 @@ class VideoProxy(nn.Module):
             delta = F.interpolate(delta, frame.shape[-2:], mode="bilinear", align_corners=False)
             previous = (frame + 0.2 * delta.tanh()).clamp(0, 1)
             frames.append(previous)
-            scale = F.softplus(self.entropy_scale(hidden)) + 0.05
-            upper = ((quantized + step / 2 - self.entropy_mean) / scale).sigmoid()
-            lower = ((quantized - step / 2 - self.entropy_mean) / scale).sigmoid()
-            bits.append(-(upper - lower).clamp_min(1e-9).log2().flatten(1).sum(1))
-        bpp = torch.stack(bits, 1).sum(1) / (x.shape[1] * x.shape[3] * x.shape[4])
+            if legacy:
+                scale = F.softplus(self.entropy_scale(hidden)) + 0.05
+                upper = ((quantized + step / 2 - self.entropy_mean) / scale).sigmoid()
+                lower = ((quantized - step / 2 - self.entropy_mean) / scale).sigmoid()
+                bits.append(-(upper - lower).clamp_min(1e-9).log2().flatten(1).sum(1))
+        bpp = (torch.stack(bits, 1).sum(1) / (x.shape[1] * x.shape[3] * x.shape[4])
+               if legacy else self.rate_head(x, codec, qp))
         return ProxyOutput(torch.stack(frames, 1), bpp)

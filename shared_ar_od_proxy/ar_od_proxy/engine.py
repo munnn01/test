@@ -31,21 +31,26 @@ def save_checkpoint(path, npp, proxy, config, stage, step):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_suffix(".tmp")
-    torch.save({"format": 1, "npp": npp.state_dict(), "proxy": proxy.state_dict(),
+    torch.save({"format": 2, "npp": npp.state_dict(), "proxy": proxy.state_dict(),
                 "config": config, "stage": stage, "step": step, "source_hashes": source_hashes()}, temporary)
     temporary.replace(path)
 
 
-def load_checkpoint(path, config=None, device="cpu"):
+def load_checkpoint(path, config=None, device="cpu", migrate_legacy=False):
     checkpoint = torch.load(path, map_location=device, weights_only=True)
-    if checkpoint.get("format") != 1:
+    if checkpoint.get("format") not in (1, 2):
         raise ValueError("unsupported checkpoint format")
+    legacy = checkpoint["format"] == 1
+    if legacy and not migrate_legacy:
+        raise ValueError("legacy proxy rate head requires explicit migrate_legacy=True and calibration")
     stored = checkpoint["config"]
     if config is not None and stored != config:
         raise ValueError("checkpoint config differs from requested config")
     npp, proxy = VideoNPP(stored["width"]).to(device), VideoProxy(stored["width"]).to(device)
     npp.load_state_dict(checkpoint["npp"], strict=True)
-    proxy.load_state_dict(checkpoint["proxy"], strict=True)
+    missing, unexpected = proxy.load_state_dict(checkpoint["proxy"], strict=not legacy)
+    if legacy and (unexpected or set(missing) != {"rate_head.log_header", "rate_head.raw_bias", "rate_head.raw_weights"}):
+        raise ValueError("unexpected legacy checkpoint keys")
     return npp, proxy, checkpoint
 
 

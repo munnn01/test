@@ -86,6 +86,14 @@ try:
     env = dict(os.environ, AROD_SOURCE_COMMIT=COMMIT, PYTHONUNBUFFERED='1', OMP_NUM_THREADS='2', MKL_NUM_THREADS='2')
     command = [sys.executable, '-u', '-m', 'ar_od_proxy.run', 'train', '--config', 'ar_od_proxy/configs/pilot.json',
                '--ar-root', str(kin), '--coco-root', str(images), '--annotations', str(annotation), '--out', str(OUT)]
+    if ACTION == 'calibrate':
+        candidates = list(inputs.rglob('last.pt'))
+        matches = [p for p in candidates if hashlib.sha256(p.read_bytes()).hexdigest() == BASELINE_SHA256]
+        if len(matches) != 1:
+            raise ValueError('baseline checkpoint hash mismatch or ambiguous baseline')
+        command = [sys.executable, '-u', '-m', 'ar_od_proxy.calibration',
+                   '--ar-root', str(kin), '--coco-root', str(images), '--annotations', str(annotation),
+                   '--checkpoint', str(matches[0]), '--out', str(OUT)]
     with pathlib.Path('/kaggle/working/training_console.log').open('w') as log:
         process = subprocess.Popen(command, cwd=ROOT, env=env, stdout=subprocess.PIPE,
                                    stderr=subprocess.STDOUT, text=True, bufsize=1)
@@ -113,7 +121,7 @@ finally:
 '''
 
 
-def prepare(root, directory, commit, account, slug):
+def prepare(root, directory, commit, account, slug, action="train", baseline_sha256=None):
     if not re.fullmatch(r"[0-9a-f]{40}", commit):
         raise ValueError("an immutable full commit SHA is required")
     if not re.fullmatch(r"[A-Za-z0-9_-]+", account) or not re.fullmatch(r"[a-z0-9][a-z0-9-]{5,70}", slug):
@@ -121,7 +129,12 @@ def prepare(root, directory, commit, account, slug):
     manifest = source_files(root)
     if "ar_od_proxy/run.py" not in manifest or "ar_od_proxy/configs/pilot.json" not in manifest:
         raise ValueError("complete pipeline sources required")
-    code = f"COMMIT = {commit!r}\nMANIFEST = {manifest!r}\n" + BOOTSTRAP
+    if action not in ("train", "calibrate"):
+        raise ValueError("unsupported experiment action")
+    if action == "calibrate" and not re.fullmatch(r"[0-9a-f]{64}", baseline_sha256 or ""):
+        raise ValueError("calibration requires the exact baseline checkpoint SHA256")
+    code = (f"COMMIT = {commit!r}\nMANIFEST = {manifest!r}\nACTION = {action!r}\n"
+            f"BASELINE_SHA256 = {baseline_sha256!r}\n" + BOOTSTRAP)
     compile(code, "kaggle-bootstrap", "exec")
     notebook = {"nbformat": 4, "nbformat_minor": 5,
                 "metadata": {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"}},
@@ -130,12 +143,14 @@ def prepare(root, directory, commit, account, slug):
     metadata = {"id": f"{account}/{slug}", "title": slug, "code_file": "notebook.ipynb",
                 "language": "python", "kernel_type": "notebook", "is_private": True,
                 "enable_gpu": True, "enable_internet": True, "dataset_sources": DATASETS,
-                "kernel_sources": [], "competition_sources": [], "model_sources": []}
+                "kernel_sources": (["qktttttttttt/ar-od-proxy-qp4-20261022"] if action == "calibrate" else []),
+                "competition_sources": [], "model_sources": []}
     directory = Path(directory)
     directory.mkdir(parents=True, exist_ok=False)
     for name, content in (("notebook.ipynb", notebook), ("kernel-metadata.json", metadata)):
         (directory / name).write_text(json.dumps(content, indent=2), encoding="utf-8")
     job = {"commit": commit, "handle": metadata["id"], "source_hashes": manifest,
+           "action": action, "baseline_sha256": baseline_sha256,
            "payload_hashes": {name: hashlib.sha256((directory / name).read_bytes()).hexdigest()
                               for name in ("notebook.ipynb", "kernel-metadata.json")}}
     (directory / "job.json").write_text(json.dumps(job, indent=2), encoding="utf-8")
@@ -205,10 +220,13 @@ def main():
     parser.add_argument("--directory", type=Path, required=True)
     parser.add_argument("--commit")
     parser.add_argument("--pool", type=Path)
+    parser.add_argument("--experiment", choices=("train", "calibrate"), default="train")
+    parser.add_argument("--baseline-sha256")
     args = parser.parse_args()
     handle = f"{args.account}/{args.slug}"
     if args.action == "prepare":
-        job = prepare(Path(__file__).parents[1], args.directory, args.commit or "", args.account, args.slug)
+        job = prepare(Path(__file__).parents[1], args.directory, args.commit or "", args.account, args.slug,
+                      action=args.experiment, baseline_sha256=args.baseline_sha256)
         print(json.dumps({"prepared": str(args.directory), "handle": handle, "commit": job["commit"]}))
     elif args.action == "submit":
         verify_payload(args.directory, handle)

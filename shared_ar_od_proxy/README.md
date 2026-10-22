@@ -29,7 +29,7 @@ flowchart LR
 ## Architecture and protocol
 
 - NPP: pointwise branch plus compact U-Net/ConvGRU, codec/QP channel conditioning and a bounded residual initialized to identity.
-- Proxy: conditional recurrent analysis/synthesis, straight-through latent quantization and a logistic entropy model calibrated to actual codec bits. It sees past proxy reconstructions and resets at each clip/GOP boundary.
+- Proxy: conditional recurrent reconstruction with straight-through latent quantization, plus a positive content rate head with separate learned stream header bits. The rate head uses spatial Y/chroma detail and temporal differences with parameters for each codec/QP. The recurrent reconstruction sees past proxy reconstructions and resets at each clip/GOP boundary. The v1 logistic entropy head is retained only for baseline diagnostics.
 - QP adaptation: a two-layer MLP produces feature scales from normalized QP and codec ID. One set of NPP weights serves exactly **QP 30, 35, 40, 45**, for both H.264 and H.265. The training schedule gives each source all eight codec/QP pairs; DEV evaluates all eight. QP 50 is excluded.
 - Codec: closed GOP 16, no B frames or scene-cut insertion, `medium`, YUV420, 25 fps. All encoded frames are preserved. AR samples after decoding; OD operates on selected frames of the same decoded tensor.
 - Tasks: frozen TorchVision R3D-18 Kinetics400 V1 and Faster R-CNN MobileNetV3 320 FPN COCO V1. Input normalization and detector training-loss mode retain input gradients while preventing weight and BN-statistic updates.
@@ -47,6 +47,7 @@ The bridge is `proxy + (real - proxy).detach()` for both video and rate. Merely 
 | `ar_od_proxy/tasks.py` | Frozen pretrained differentiable task adapters |
 | `ar_od_proxy/engine.py` | Proxy fitting, NPP fitting and checkpoints |
 | `ar_od_proxy/evaluate.py` | Shared-stream predictions, official COCO AP and raw curves |
+| `ar_od_proxy/calibration.py` | Train-only proxy calibration and paired DEV sensitivity diagnostics |
 | `ar_od_proxy/run.py` | Real-data training, evaluation and clip encoding CLI |
 | `ar_od_proxy/kaggle.py` | Immutable-source notebook preparation and redacted launcher |
 
@@ -93,5 +94,28 @@ The notebook emits a cloud receipt and archives available outputs on failure as 
 Kinetics AR GT and COCO image OD GT do not constitute simultaneous AR+OD GT on the same video. Video detection agreement is consistency with a source detector, not mAP or proof of GT accuracy. Hash-defined DEV is separate from this NPP's TRAIN sources, but exposure of frozen pretrained task networks to original dataset training sources is not excluded. Previously used LAB data are not newly independent confirmation data.
 
 Matching proxy reconstruction and rate does not prove its derivatives are faithful. Inspect rate-calibration diagnostics and verify any improvement with actual codecs on held-out data. The small pilot reports operating points without claiming BD-rate targets or statistical significance.
+
+## Correct and audit a v1 proxy
+
+The v1 entropy head's scale floor prevents it from representing most measured rates.
+New checkpoints use format 2. Loading format 1 requires explicit migration and
+calibration; the migration does not silently label random new head weights as fitted.
+The calibration runner preserves the old NPP and proxy for paired comparisons:
+
+```shell
+python -m ar_od_proxy.calibration --checkpoint /data/v1/last.pt --ar-root /data/kineticscleaned --coco-root /data/coco/val2017 --annotations /data/coco/annotations/instances_val2017.json --out outputs/calibration
+```
+
+It fits 768 actual TRAIN rate targets (32 sources, eight operating points, three
+paired blur/sharpen settings), uses 4000 rate updates and 1024 reconstruction
+updates, then audits all 16 DEV sources at all eight points. Outputs include a
+format-2 `calibrated.pt`, TRAIN targets, per-source `diagnostics.jsonl`, grouped
+`summary.json`, and a completion receipt. Read [the protocol](docs/PROXY_CALIBRATION.md)
+for definitions, finite-step tolerances and limitations. This evaluates finite
+codec changes, without claiming an exact derivative of discrete coding decisions.
+
+For Kaggle preparation add `--experiment calibrate --baseline-sha256 EXACT_SHA256`.
+The calibration notebook mounts the previous pilot output and verifies the exact
+baseline checkpoint bytes before fitting. Normal submission/status commands apply.
 
 Architecture reference: [Preprocessing Enhanced Image Compression for Machine Vision](https://arxiv.org/abs/2206.05650). Temporal proxy context: [Sandwiched Video Compression](https://research.google/pubs/sandwiched-video-compression-an-efficient-learned-video-compression-approach/). This implementation is an adaptation with a different proxy and joint objective, not a reproduction of the reference's results.

@@ -59,3 +59,19 @@ def test_zero_exit_cli_error_is_not_a_submission_acknowledgment():
         "Kernel version 3 successfully pushed. Please check progress at https://www.kaggle.com/code/example/shared-ar-od-pilot",
         "example/shared-ar-od-pilot")
     assert receipt["version"] == 3 and receipt["running_verified"] is False
+def test_calibration_notebook_mounts_verified_baseline_and_runs_calibration(tmp_path):
+    from pathlib import Path
+    import json
+    from ar_od_proxy import kaggle
+    root = Path(__file__).resolve().parents[1]
+    directory = tmp_path / "calibration"
+    baseline = "b" * 64
+    kaggle.prepare(root, directory, "a" * 40, "example", "calibration-pilot",
+                   action="calibrate", baseline_sha256=baseline)
+    meta = json.loads((directory / "kernel-metadata.json").read_text())
+    notebook = json.loads((directory / "notebook.ipynb").read_text())
+    code = "".join(notebook["cells"][0]["source"])
+    assert meta["kernel_sources"] == ["qktttttttttt/ar-od-proxy-qp4-20261022"]
+    assert "ar_od_proxy.calibration" in code and baseline in code
+    assert "baseline checkpoint hash mismatch" in code
+
