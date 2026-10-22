@@ -20,3 +20,19 @@
   Fresh full suite: 32 passed. A real x264/x265 CPU fixture exercised calibration,
   all eight points, reconstruction Jacobians, paired probes and descent steps;
   32 diagnostic rows completed. This fixture is software verification only.
+
+- Calibration v1 completed on Tesla T4 (869.8 s cloud): 768 TRAIN rate targets,
+  256 DEV before/after rows. Rate MAPE fell to 16.52% on videos and 3.03% on
+  images; reconstruction improvement was small. Raw negative-gradient steps at
+  RMS 1/255 reduced actual rate on 121/128 cases, while 4/255 often increased
+  video rate at low QP. These are finite-step pilot diagnostics, not task gains.
+- Deployment now continues the NPP from calibrated.pt, freezes the entire proxy,
+  skips proxy fitting/refresh, uses LR 2e-5 and a current-case RMS 1/255 update
+  guard. Source-ID manifest and checkpoint provenance are verified; starting and
+  final NPPs receive the same actual-codec DEV evaluation. Five new tests first
+  failed for missing deployment behavior; full suite now 37 passed. An actual
+  calibrated-checkpoint CPU fixture completed bounded NPP steps through x264 and
+  x265 and verified frozen proxy weights and checkpoint reload (software only).
+- Independent deployment review found an omitted-RMS config could bypass the
+  guard. Six observed RED regressions cover missing/zero/negative/nonfinite/too
+  large bounds; the entry point now rejects them. Fresh full suite: 43 passed.

@@ -14,7 +14,7 @@ import torch
 
 from .codec import RealCodec
 from .data import kinetics_records, coco_records, select_records, load_record
-from .engine import fit_proxy, fit_npp, source_hashes, load_checkpoint
+from .engine import fit_proxy, fit_npp, source_hashes, load_checkpoint, load_calibrated_start, save_checkpoint
 from .evaluate import evaluate
 from .models import VideoNPP, VideoProxy
 from .tasks import TaskHeads
@@ -29,6 +29,8 @@ def configuration(path):
         raise ValueError("invalid spatial/temporal model settings")
     if any(type(cfg[k]) is not int or cfg[k] < 1 for k in ("train_count", "dev_count", "proxy_steps", "npp_steps")):
         raise ValueError("positive source counts and training budgets required")
+    if "max_npp_update_rms" in cfg and not 0 < cfg["max_npp_update_rms"] <= 1 / 255:
+        raise ValueError("NPP output update RMS must be positive and at most 1/255")
     return cfg
 
 
@@ -54,7 +56,7 @@ def manifest_for(args, cfg):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("action", choices=("train", "evaluate", "encode"))
+    parser.add_argument("action", choices=("train", "train-calibrated", "evaluate", "encode"))
     parser.add_argument("--config", type=Path, help="Defaults to the packaged four-QP pilot config")
     parser.add_argument("--ar-root", type=Path)
     parser.add_argument("--coco-root", type=Path)
@@ -101,7 +103,27 @@ def main():
             (args.out / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
             status.write_text(json.dumps(meta, indent=2), encoding="utf-8")
             tasks = TaskHeads(device=device, size=cfg["size"], od_frames=cfg["od_frames"])
-            if args.action == "train":
+            if args.action == "train-calibrated":
+                if args.checkpoint is None:
+                    raise ValueError("train-calibrated requires --checkpoint")
+                npp, proxy, saved = load_calibrated_start(args.checkpoint, cfg, device)
+                input_manifest = json.loads((args.checkpoint.parent / "manifest.json").read_text())
+                if any([r["id"] for r in manifest[s]] != [r["id"] for r in input_manifest[s]]
+                       for s in ("train", "dev")):
+                    raise ValueError("calibration source-ID manifest differs from requested data")
+                meta["warm_start"] = {"checkpoint_sha256": hashlib.sha256(args.checkpoint.read_bytes()).hexdigest(),
+                    "stage": saved["stage"], "source_hashes": saved["source_hashes"], "config": saved["config"],
+                    "proxy_frozen": True, "optimizer": "new Adam state; continue NPP weights"}
+                save_checkpoint(args.out / "start.pt", npp, proxy, cfg, "calibrated_start", 0)
+                dev = samples_for(manifest["dev"], cfg)
+                start_out = args.out / "start_evaluation"
+                start_out.mkdir()
+                evaluate(npp, proxy, codec, tasks, dev, cfg, args.annotations, start_out)
+                del dev
+                train = samples_for(manifest["train"], cfg)
+                fit_npp(npp, proxy, codec, tasks, train, cfg, args.out)
+                del train
+            elif args.action == "train":
                 train = samples_for(manifest["train"], cfg)
                 npp, proxy = VideoNPP(cfg["width"]).to(device), VideoProxy(cfg["width"]).to(device)
                 fit_proxy(npp, proxy, codec, train, cfg, cfg["proxy_steps"], args.out, "proxy_warmup")

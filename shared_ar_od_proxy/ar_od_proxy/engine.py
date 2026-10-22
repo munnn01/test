@@ -1,7 +1,9 @@
 """Proxy calibration, frozen-task optimization and checkpoint contracts."""
+import copy
 import hashlib
 import itertools
 import json
+import math
 from pathlib import Path
 import time
 
@@ -52,6 +54,49 @@ def load_checkpoint(path, config=None, device="cpu", migrate_legacy=False):
     if legacy and (unexpected or set(missing) != {"rate_head.log_header", "rate_head.raw_bias", "rate_head.raw_weights"}):
         raise ValueError("unexpected legacy checkpoint keys")
     return npp, proxy, checkpoint
+
+
+def load_calibrated_start(path, config, device="cpu"):
+    npp, proxy, saved = load_checkpoint(path, device=device)
+    if saved["format"] != 2 or saved["stage"] != "proxy_calibration":
+        raise ValueError("training requires a calibrated format-2 proxy checkpoint")
+    if config.get("proxy_refresh_every") != 0:
+        raise ValueError("disable proxy refresh to preserve the calibrated proxy")
+    maximum = config.get("max_npp_update_rms")
+    if (not isinstance(maximum, (int, float)) or not math.isfinite(maximum)
+            or not 0 < maximum <= 1 / 255):
+        raise ValueError("calibrated training requires finite positive NPP update RMS at most 1/255")
+    allowed = {"learning_rate", "proxy_refresh_every", "max_npp_update_rms"}
+    different = {k for k in set(config) | set(saved["config"])
+                 if config.get(k) != saved["config"].get(k)}
+    if different - allowed:
+        raise ValueError("calibrated checkpoint config differs: " + str(sorted(different - allowed)))
+    proxy.requires_grad_(False).eval()
+    return npp, proxy, saved
+
+
+def bounded_optimizer_step(npp, optimizer, x, previous, name, qp, maximum):
+    """Backtrack the Adam displacement; bound the CURRENT case's output change."""
+    if not 0 < maximum <= 1 / 255:
+        raise ValueError("NPP update RMS must be positive and at most 1/255")
+    parameters = list(npp.parameters())
+    before = [p.detach().clone() for p in parameters]
+    optimizer_before = copy.deepcopy(optimizer.state_dict())
+    optimizer.step()
+    proposed = [p.detach().clone() for p in parameters]
+    with torch.no_grad():
+        for attempt in range(17):
+            scale = .5 ** attempt
+            if attempt:
+                for p, old, new in zip(parameters, before, proposed):
+                    p.copy_(old + scale * (new - old))
+            change = (npp(x, name, qp) - previous).square().mean().sqrt()
+            if torch.isfinite(change) and change.item() <= maximum:
+                return float(change), scale
+        for p, old in zip(parameters, before):
+            p.copy_(old)
+    optimizer.load_state_dict(optimizer_before)
+    raise RuntimeError("NPP update failed finite output RMS bound; parameters and optimizer restored")
 
 
 def emit(log, row):
@@ -106,7 +151,8 @@ def fit_proxy(npp, proxy, codec, samples, config, steps, out, stage):
     save_checkpoint(Path(out) / f"{stage}.pt", npp, proxy, config, stage, steps)
 
 
-def npp_step(npp, proxy, codec, tasks, x, record, refs, optimizer, weights, name="h264", qp=35):
+def npp_step(npp, proxy, codec, tasks, x, record, refs, optimizer, weights, name="h264", qp=35,
+             max_output_rms=None):
     if any(p.requires_grad for p in proxy.parameters()):
         raise ValueError("freeze proxy parameters before NPP optimization")
     if any(p.requires_grad for m in (tasks.ar, tasks.od) for p in m.parameters()):
@@ -134,11 +180,15 @@ def npp_step(npp, proxy, codec, tasks, x, record, refs, optimizer, weights, name
     optimizer.zero_grad(set_to_none=True)
     loss.backward()
     norm = torch.nn.utils.clip_grad_norm_(npp.parameters(), 1.0, error_if_nonfinite=True)
-    optimizer.step()
+    if max_output_rms is None:
+        optimizer.step()
+        output_rms, step_scale = None, 1.
+    else:
+        output_rms, step_scale = bounded_optimizer_step(npp, optimizer, x, y.detach(), name, qp, max_output_rms)
     return {"loss": float(loss.detach()), "actual_bpp": float(actual.bpp.mean()),
             "proxy_bpp": float(predicted.bpp.detach().mean()), "npp_grad_norm": float(norm),
             "preservation": float(preservation.detach()), "temporal": float(temporal.detach()),
-            "seconds": time.perf_counter() - start,
+            "seconds": time.perf_counter() - start, "output_update_rms": output_rms, "step_scale": step_scale,
             **{k: float(v.detach()) for k, v in terms.items()}}
 
 
@@ -157,7 +207,7 @@ def fit_npp(npp, proxy, codec, tasks, samples, config, out):
         index, name, qp = training_case(step, len(samples), config)
         record, x, _ = samples[index]
         row = npp_step(npp, proxy, codec, tasks, x.to(device), record, references[index], optimizer,
-                       config["loss_weights"], name, qp)
+                       config["loss_weights"], name, qp, max_output_rms=config.get("max_npp_update_rms"))
         emit(Path(out) / "training.jsonl", {"stage": "npp", "step": step + 1,
              "source": record["id"], "task": record["task"], "codec": name, "qp": qp, **row})
         if (step + 1) % 16 == 0:

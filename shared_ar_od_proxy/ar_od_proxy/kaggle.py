@@ -94,6 +94,15 @@ try:
         command = [sys.executable, '-u', '-m', 'ar_od_proxy.calibration',
                    '--ar-root', str(kin), '--coco-root', str(images), '--annotations', str(annotation),
                    '--checkpoint', str(matches[0]), '--out', str(OUT)]
+    elif ACTION == 'train-calibrated':
+        candidates = list(inputs.rglob('calibrated.pt'))
+        matches = [p for p in candidates if hashlib.sha256(p.read_bytes()).hexdigest() == BASELINE_SHA256]
+        if len(matches) != 1:
+            raise ValueError('calibrated checkpoint hash mismatch or ambiguous checkpoint')
+        command = [sys.executable, '-u', '-m', 'ar_od_proxy.run', 'train-calibrated',
+                   '--config', 'ar_od_proxy/configs/calibrated_train.json',
+                   '--ar-root', str(kin), '--coco-root', str(images), '--annotations', str(annotation),
+                   '--checkpoint', str(matches[0]), '--out', str(OUT)]
     with pathlib.Path('/kaggle/working/training_console.log').open('w') as log:
         process = subprocess.Popen(command, cwd=ROOT, env=env, stdout=subprocess.PIPE,
                                    stderr=subprocess.STDOUT, text=True, bufsize=1)
@@ -129,10 +138,12 @@ def prepare(root, directory, commit, account, slug, action="train", baseline_sha
     manifest = source_files(root)
     if "ar_od_proxy/run.py" not in manifest or "ar_od_proxy/configs/pilot.json" not in manifest:
         raise ValueError("complete pipeline sources required")
-    if action not in ("train", "calibrate"):
+    if action not in ("train", "calibrate", "train-calibrated"):
         raise ValueError("unsupported experiment action")
-    if action == "calibrate" and not re.fullmatch(r"[0-9a-f]{64}", baseline_sha256 or ""):
-        raise ValueError("calibration requires the exact baseline checkpoint SHA256")
+    if action != "train" and not re.fullmatch(r"[0-9a-f]{64}", baseline_sha256 or ""):
+        raise ValueError("calibration/deployment requires the exact input checkpoint SHA256")
+    kernel_sources = {"train": [], "calibrate": ["qktttttttttt/ar-od-proxy-qp4-20261022"],
+                      "train-calibrated": ["qktttttttttt/ar-od-proxy-calibration-qp4-20261022"]}[action]
     code = (f"COMMIT = {commit!r}\nMANIFEST = {manifest!r}\nACTION = {action!r}\n"
             f"BASELINE_SHA256 = {baseline_sha256!r}\n" + BOOTSTRAP)
     compile(code, "kaggle-bootstrap", "exec")
@@ -143,7 +154,7 @@ def prepare(root, directory, commit, account, slug, action="train", baseline_sha
     metadata = {"id": f"{account}/{slug}", "title": slug, "code_file": "notebook.ipynb",
                 "language": "python", "kernel_type": "notebook", "is_private": True,
                 "enable_gpu": True, "enable_internet": True, "dataset_sources": DATASETS,
-                "kernel_sources": (["qktttttttttt/ar-od-proxy-qp4-20261022"] if action == "calibrate" else []),
+                "kernel_sources": kernel_sources,
                 "competition_sources": [], "model_sources": []}
     directory = Path(directory)
     directory.mkdir(parents=True, exist_ok=False)
@@ -220,7 +231,7 @@ def main():
     parser.add_argument("--directory", type=Path, required=True)
     parser.add_argument("--commit")
     parser.add_argument("--pool", type=Path)
-    parser.add_argument("--experiment", choices=("train", "calibrate"), default="train")
+    parser.add_argument("--experiment", choices=("train", "calibrate", "train-calibrated"), default="train")
     parser.add_argument("--baseline-sha256")
     args = parser.parse_args()
     handle = f"{args.account}/{args.slug}"

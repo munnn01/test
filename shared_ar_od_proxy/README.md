@@ -118,4 +118,23 @@ For Kaggle preparation add `--experiment calibrate --baseline-sha256 EXACT_SHA25
 The calibration notebook mounts the previous pilot output and verifies the exact
 baseline checkpoint bytes before fitting. Normal submission/status commands apply.
 
+To continue NPP training after calibration, use the complete `calibrated.pt`
+checkpoint together with its sibling `manifest.json`:
+
+```shell
+python -m ar_od_proxy.run train-calibrated --checkpoint /data/calibration/calibrated.pt --config ar_od_proxy/configs/calibrated_train.json --ar-root /data/kineticscleaned --coco-root /data/coco/val2017 --annotations /data/coco/annotations/instances_val2017.json --out outputs/calibrated-npp
+```
+
+This preserves and freezes the calibrated proxy, continues the existing NPP for
+256 updates, disables proxy warmup/refresh, and records `start.pt` plus actual
+DEV curves in `start_evaluation/` before training. The final checkpoint and curves
+use the normal output filenames. Adam starts with fresh state at learning rate
+2e-5. A parameter backtracking guard limits each current-case output update to
+RMS 1/255; it does not guarantee task quality or cumulative rate improvement.
+See [the deployment protocol](docs/DEPLOY_CALIBRATED.md).
+
+Kaggle preparation uses `--experiment train-calibrated --baseline-sha256 EXACT_SHA256`
+and mounts the completed calibration notebook output. The input checkpoint hash,
+calibration stage, config compatibility and source-ID manifest must match.
+
 Architecture reference: [Preprocessing Enhanced Image Compression for Machine Vision](https://arxiv.org/abs/2206.05650). Temporal proxy context: [Sandwiched Video Compression](https://research.google/pubs/sandwiched-video-compression-an-efficient-learned-video-compression-approach/). This implementation is an adaptation with a different proxy and joint objective, not a reproduction of the reference's results.
