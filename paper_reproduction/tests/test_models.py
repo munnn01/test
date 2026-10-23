@@ -12,6 +12,9 @@ def codec_api():
     return __import__('reproduce.virtual_codec',fromlist=['*'])
 
 def test_image_paper_npp_preserves_rgb_geometry_and_gradients():
+    # ReLU/clamp in the official model can legitimately saturate arbitrary random
+    # initializations. Test a reproducible state; cloud preflight rejects dead runs.
+    torch.manual_seed(20261023)
     m=model_api().ImageNPP(adaptive=False).eval()
     x=torch.rand(1,1,3,35,41,requires_grad=True)
     out=m(x,35)
