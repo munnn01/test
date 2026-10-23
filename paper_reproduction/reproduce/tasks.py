@@ -94,13 +94,16 @@ class Analyzer:
         boxes=target['boxes_xywh'].to(self.device)
         frames=x[0]
         if len(frames)<2:raise ValueError('tracking needs a reference and test frames')
+        cover=target.get('cover',torch.ones(len(frames))).to(self.device)
+        visible=cover[1:]>0
+        if cover[0]<=0 or not visible.any():raise ValueError('tracking task loss needs visible reference/test frames')
         reference=self.normalize(frames[:1])[:,None]
-        tests=self.normalize(frames[1:])[:,None]
+        tests=self.normalize(frames[1:][visible])[:,None]
         train_bb=boxes[:1,None]
-        proposals=boxes[1:,None,None]
+        test_boxes=boxes[1:][visible];proposals=test_boxes[:,None,None]
         # The paper leaves its analyzer task loss unspecified; report this reconstruction choice.
         scores,iou=self.model(reference,tests,train_bb,proposals)
-        cls=tracking_score_loss(scores[-1],boxes[1:],frames.shape[-2:])
+        cls=tracking_score_loss(scores[-1],test_boxes,frames.shape[-2:])
         return cls+F.mse_loss(iou,torch.ones_like(iou))
 
     def predict(self,x):

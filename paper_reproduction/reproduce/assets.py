@@ -88,9 +88,12 @@ def ensure_tracking(directory):
         extracted=temp/f'PreciseRoIPooling-{PRROI_SOURCE}'
         shutil.copytree(extracted,sub,dirs_exist_ok=True)
     # Source-only compatibility edits for current NumPy/PyTorch; record all changed files.
-    patches=[]
+    patches=materialize_prroi_links(sub)
+    for path in (source/'ltr').rglob('*.py'):
+        raw=path.read_text();fixed=modernize_tracking_python(raw)
+        if fixed!=raw:path.write_text(fixed);patches.append(str(path.relative_to(source)))
     for path in sub.rglob('*'):
-        if path.suffix in ('.h','.c','.cpp','.cu') and path.is_file():
+        if path.suffix in ('.h','.c','.cpp','.cu','.cuh') and path.is_file():
             raw=path.read_text();fixed=modernize_prroi_source(raw)
             if fixed!=raw:path.write_text(fixed);patches.append(str(path.relative_to(source)))
     sys.path.insert(0,str(source))
@@ -128,6 +131,25 @@ def modernize_prroi_source(source):
                   .replace('AT_CHECK(', 'TORCH_CHECK(')
                   .replace('.data<float>()','.data_ptr<float>()')
                   .replace('at::cuda::getCurrentCUDAStream','c10::cuda::getCurrentCUDAStream'))
+
+def modernize_tracking_python(source):
+    return source.replace('from torchvision.models.resnet import model_urls',
+          'from torchvision.models import ResNet18_Weights, ResNet50_Weights, ResNet101_Weights\n'
+          'model_urls={"resnet18":ResNet18_Weights.IMAGENET1K_V1.url, '
+          '"resnet50":ResNet50_Weights.IMAGENET1K_V1.url, "resnet101":ResNet101_Weights.IMAGENET1K_V1.url}')
+
+def materialize_prroi_links(root):
+    # GitHub ZIP stores Git symlinks as small files containing relative targets.
+    # Resolve only internal source links; otherwise nvcc tries compiling the path text.
+    root=Path(root).resolve();changed=[]
+    for path in root.rglob('*'):
+        if not path.is_file() or path.suffix not in ('.h','.c','.cpp','.cu','.cuh'):continue
+        raw=path.read_text().strip()
+        if not raw.startswith('../') or '\n' in raw or len(raw)>250:continue
+        target=(path.parent/raw).resolve()
+        if root not in target.parents or not target.is_file():raise ValueError('invalid ROI source link')
+        path.write_bytes(target.read_bytes());changed.append(str(path.relative_to(root)))
+    return changed
 
 def dataset_mount(inputs,reference):
     inputs=Path(inputs);owner,slug=reference.split('/')

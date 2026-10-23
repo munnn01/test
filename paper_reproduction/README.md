@@ -25,6 +25,8 @@ Mã tác giả và mô tả bài ảnh có khác biệt. Proxy dùng bản Minne
 
 Bài video chưa có code tác giả được xác minh trong lượt triển khai này. Figure2/3 thiếu thông số và có annotation channel mâu thuẫn. Width16, temporal kernel3, một residual block/branch, sigmoid channel attention, DCT8, intra DC.5,9 motion candidates, STE và khởi tạo/fit factorized prior là **lựa chọn triển khai công khai**, không nhận là mã tác giả chính xác. DiMP dùng code/checkpoint chính thức; NPP tracking task loss dùng classification-score MSE + IoU-head MSE vì bài không định nghĩa LAcc chi tiết.
 
+Tracking TRAIN chọn crop có reference nhìn thấy đối tượng và ít nhất một test frame nhìn thấy; loss task chỉ dùng các test frame có `cover>0`. Native PreciseRoIPooling giữ kernel gốc, materialize symlink từ ZIP trước compile, chuyển API THC sang C10; import backbone cũ được đổi từ `model_urls` sang enum weights V1. Mọi sửa tương thích được ghi trong `assets.json`.
+
 Kinetics TRAIN hiện có là subset5percent, không phải toàn bộ K400 train. Validation dùng `jizeyong/kinetics400-rgb256-f10-val-data`: JPEG được ghép bằng YouTube ID với CSV validation chính thức của CVDF, pin SHA256 `358eaf47e7f80ebf9b17d49eb0635ad5e0fdab98a9cbd75ffdd2ee5d5e5b6944`. Cadence của bản JPEG chưa được xác minh; không tự nhận tương đương video nguyên bản. GOT10k đánh giá local trên validation có GT; không giả lập hidden TEST. Ảnh/video được lấy mẫu/resize theo config; các lựa chọn được giữ giống nhau khi so sánh codec-only/NPP.
 
 ## Chạy

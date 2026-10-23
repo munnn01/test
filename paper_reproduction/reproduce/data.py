@@ -180,17 +180,6 @@ def load_sample(record,cfg,training=False):
         seq=Path(record['path']);paths=sorted(seq.glob('*.jpg'))
         gt=np.loadtxt(seq/'groundtruth.txt',delimiter=',',dtype=np.float32).reshape(-1,4)
         if len(paths)!=len(gt):raise ValueError('tracking frame/annotation alignment failed')
-        if t==0:
-            if training:raise ValueError('training requires an explicit finite temporal crop')
-            t=len(paths)
-        if len(paths)<t:raise ValueError('tracking sequence shorter than requested clip')
-        start=random.randrange(len(paths)-t+1) if training else 0
-        ims=[];boxes=[]
-        for i in range(start,start+t):
-            im=_rgb(paths[i]);w,h=im.size;ims.append(im.resize((size,size),Image.Resampling.BILINEAR))
-            boxes.append(gt[i]*[size/w,size/h,size/w,size/h])
-        boxes=torch.tensor(np.asarray(boxes),dtype=torch.float32)
-        if not torch.isfinite(boxes).all() or (boxes[:,2:]<=0).any():raise ValueError('invalid tracking target')
         cover_path=seq/'cover.label'
         if cover_path.is_file():
             cover=np.loadtxt(cover_path,dtype=np.float32).reshape(-1)
@@ -198,6 +187,24 @@ def load_sample(record,cfg,training=False):
         else:
             if record['split']=='val':raise ValueError('GOT validation requires original cover.label visibility metadata')
             cover=np.ones(len(paths),dtype=np.float32)
+        if t==0:
+            if training:raise ValueError('training requires an explicit finite temporal crop')
+            t=len(paths)
+        if len(paths)<t:raise ValueError('tracking sequence shorter than requested clip')
+        start=random.randrange(len(paths)-t+1) if training else 0
+        if training:
+            starts=np.arange(len(paths)-t+1);visible=cover>0
+            counts=np.r_[0,np.cumsum(visible)]
+            starts=starts[visible[starts] & ((counts[starts+t]-counts[starts+1])>0)]
+            if not len(starts):raise ValueError('tracking crop needs visible reference and test frames')
+            start=int(random.choice(starts.tolist()))
+        ims=[];boxes=[]
+        for i in range(start,start+t):
+            im=_rgb(paths[i]);w,h=im.size;ims.append(im.resize((size,size),Image.Resampling.BILINEAR))
+            boxes.append(gt[i]*[size/w,size/h,size/w,size/h])
+        boxes=torch.tensor(np.asarray(boxes),dtype=torch.float32)
+        visible=torch.from_numpy(cover[start:start+t]>0)
+        if not torch.isfinite(boxes).all() or (boxes[visible,2:]<=0).any():raise ValueError('invalid visible tracking target')
         meta.update(start_frame=start,frame_stride=1)
         return _tensor(ims),{'boxes_xywh':boxes,'cover':torch.from_numpy(cover[start:start+t].copy())},meta
     raise ValueError('unknown original task')
