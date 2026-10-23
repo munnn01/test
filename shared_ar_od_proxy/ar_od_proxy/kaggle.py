@@ -102,7 +102,7 @@ try:
         command = [sys.executable, '-u', '-m', 'ar_od_proxy.calibration',
                    '--ar-root', str(kin), '--coco-root', str(images), '--annotations', str(annotation),
                    '--checkpoint', str(matches[0]), '--out', str(OUT)]
-    elif ACTION in ('train-calibrated', 'screen', 'quality', 'recovery', 'capacity'):
+    elif ACTION in ('train-calibrated', 'screen', 'quality', 'recovery', 'capacity', 'paper-training'):
         if CHECKPOINT_DATASET:
             owner, slug = CHECKPOINT_DATASET.split('/')
             folders = [inputs/slug, inputs/'datasets'/owner/slug]
@@ -138,6 +138,11 @@ try:
                        '--config', 'ar_od_proxy/configs/capacity_pilot.json', '--arm', CAPACITY_ARM,
                        '--ar-root', str(kin), '--coco-root', str(images), '--annotations', str(annotation),
                        '--checkpoint', str(matches[0]), '--out', str(OUT)]
+        elif ACTION == 'paper-training':
+            command = [sys.executable, '-u', '-m', 'ar_od_proxy.paper_training',
+                       '--config', 'ar_od_proxy/configs/paper_training.json', '--arm', PAPER_ARM,
+                       '--ar-root', str(kin), '--coco-root', str(images), '--annotations', str(annotation),
+                       '--checkpoint', str(matches[0]), '--out', str(OUT)]
     phase('inputs_ready', kinetics=str(kin), annotations=str(annotation))
     phase('runner_start', action=ACTION)
     with pathlib.Path('/kaggle/working/training_console.log').open('w') as log:
@@ -168,7 +173,7 @@ finally:
 
 
 def prepare(root, directory, commit, account, slug, action="train", baseline_sha256=None, checkpoint_dataset=None,
-            capacity_arm=None):
+            capacity_arm=None, paper_arm=None):
     if not re.fullmatch(r"[0-9a-f]{40}", commit):
         raise ValueError("an immutable full commit SHA is required")
     if not re.fullmatch(r"[A-Za-z0-9_-]+", account) or not re.fullmatch(r"[a-z0-9][a-z0-9-]{5,70}", slug):
@@ -176,11 +181,14 @@ def prepare(root, directory, commit, account, slug, action="train", baseline_sha
     manifest = source_files(root)
     if "ar_od_proxy/run.py" not in manifest or "ar_od_proxy/configs/pilot.json" not in manifest:
         raise ValueError("complete pipeline sources required")
-    if action not in ("train", "calibrate", "train-calibrated", "screen", "quality", "recovery", "capacity"):
+    if action not in ("train", "calibrate", "train-calibrated", "screen", "quality", "recovery", "capacity", "paper-training"):
         raise ValueError("unsupported experiment action")
     if (action=='capacity' and capacity_arm not in ('small','matched','large')
             or action!='capacity' and capacity_arm is not None):
         raise ValueError('capacity arm must explicitly match a capacity experiment')
+    if (action=='paper-training' and paper_arm not in ('continuous','curriculum')
+            or action!='paper-training' and paper_arm is not None):
+        raise ValueError('paper arm must explicitly match a paper-training experiment')
     if action != "train" and not re.fullmatch(r"[0-9a-f]{64}", baseline_sha256 or ""):
         raise ValueError("calibration/deployment requires the exact input checkpoint SHA256")
     kernel_sources = {"train": [], "calibrate": ["qktttttttttt/ar-od-proxy-qp4-20261022"],
@@ -188,9 +196,10 @@ def prepare(root, directory, commit, account, slug, action="train", baseline_sha
                       "screen": ["qktttttttttt/ar-od-proxy-calibration-qp4-20261022"],
                       "quality": ["qktttttttttt/ar-od-proxy-calibration-qp4-20261022"],
                       "recovery": ["qktttttttttt/ar-od-proxy-calibration-qp4-20261022"],
-                      "capacity": ["qktttttttttt/ar-od-proxy-calibration-qp4-20261022"]}[action]
+                      "capacity": ["qktttttttttt/ar-od-proxy-calibration-qp4-20261022"],
+                      "paper-training": ["qktttttttttt/ar-od-proxy-calibration-qp4-20261022"]}[action]
     if checkpoint_dataset is not None:
-        if (action not in ("train-calibrated", "screen", "quality", "recovery", "capacity") or not re.fullmatch(
+        if (action not in ("train-calibrated", "screen", "quality", "recovery", "capacity", "paper-training") or not re.fullmatch(
                 re.escape(account) + r"/[a-z0-9][a-z0-9-]{5,70}", checkpoint_dataset)):
             raise ValueError("checkpoint dataset must belong to the target account for calibrated deployment")
         kernel_sources = []
@@ -201,7 +210,7 @@ def prepare(root, directory, commit, account, slug, action="train", baseline_sha
             raise ValueError('source changed while preparing notebook: '+name)
     bundle = base64.b64encode(zlib.compress(json.dumps(contents).encode('utf-8'),9)).decode('ascii')
     code = (f"COMMIT = {commit!r}\nMANIFEST = {manifest!r}\nACTION = {action!r}\n"
-            f"CAPACITY_ARM = {capacity_arm!r}\n"
+            f"CAPACITY_ARM = {capacity_arm!r}\nPAPER_ARM = {paper_arm!r}\n"
             f"BASELINE_SHA256 = {baseline_sha256!r}\nCHECKPOINT_DATASET = {checkpoint_dataset!r}\n"
             f"SOURCE_BUNDLE = {bundle!r}\n" + BOOTSTRAP)
     compile(code, "kaggle-bootstrap", "exec")
@@ -220,7 +229,7 @@ def prepare(root, directory, commit, account, slug, action="train", baseline_sha
         (directory / name).write_text(json.dumps(content, indent=2), encoding="utf-8")
     job = {"commit": commit, "handle": metadata["id"], "source_hashes": manifest,
            "action": action, "baseline_sha256": baseline_sha256, "checkpoint_dataset": checkpoint_dataset,
-           "capacity_arm":capacity_arm,
+           "capacity_arm":capacity_arm,"paper_arm":paper_arm,
            "payload_hashes": {name: hashlib.sha256((directory / name).read_bytes()).hexdigest()
                               for name in ("notebook.ipynb", "kernel-metadata.json")}}
     (directory / "job.json").write_text(json.dumps(job, indent=2), encoding="utf-8")
@@ -291,8 +300,9 @@ def main():
     parser.add_argument("--directory", type=Path, required=True)
     parser.add_argument("--commit")
     parser.add_argument("--pool", type=Path)
-    parser.add_argument("--experiment", choices=("train", "calibrate", "train-calibrated", "screen", "quality", "recovery", "capacity"), default="train")
+    parser.add_argument("--experiment", choices=("train", "calibrate", "train-calibrated", "screen", "quality", "recovery", "capacity", "paper-training"), default="train")
     parser.add_argument("--capacity-arm",choices=("small","matched","large"))
+    parser.add_argument("--paper-arm",choices=("continuous","curriculum"))
     parser.add_argument("--baseline-sha256")
     parser.add_argument("--checkpoint-dataset", help="Optional owned private input dataset for another pool account")
     args = parser.parse_args()
@@ -300,12 +310,12 @@ def main():
     if args.action == "prepare":
         job = prepare(Path(__file__).parents[1], args.directory, args.commit or "", args.account, args.slug,
                       action=args.experiment, baseline_sha256=args.baseline_sha256,
-                      checkpoint_dataset=args.checkpoint_dataset,capacity_arm=args.capacity_arm)
+                      checkpoint_dataset=args.checkpoint_dataset,capacity_arm=args.capacity_arm,paper_arm=args.paper_arm)
         print(json.dumps({"prepared": str(args.directory), "handle": handle, "commit": job["commit"]}))
     elif args.action == "submit":
         verify_payload(args.directory, handle)
         output = kaggle_call(["kernels", "push", "-p", str(args.directory), "--accelerator", "NvidiaTeslaT4",
-                              "--timeout", "21600" if json.loads((args.directory/'job.json').read_text())['action'] in ('quality','recovery','capacity')
+                              "--timeout", "21600" if json.loads((args.directory/'job.json').read_text())['action'] in ('quality','recovery','capacity','paper-training')
                               else "10800" if json.loads((args.directory/'job.json').read_text())['action']=='screen' else "7200"], args.pool, args.account)
         (args.directory / "submission.txt").write_text(output, encoding="utf-8")
         receipt = validate_submission(output, handle)

@@ -1,0 +1,49 @@
+{
+  "seed": 20261023,
+  "width": 12,
+  "frames": 16,
+  "size": 256,
+  "qps": [
+    30,
+    35,
+    40,
+    45
+  ],
+  "codecs": [
+    "h264",
+    "h265"
+  ],
+  "preset": "medium",
+  "fps": 25,
+  "train_count": 40,
+  "dev_count": 128,
+  "proxy_steps": 512,
+  "npp_steps": 512,
+  "learning_rate": 2e-05,
+  "filter_strength_learning_rate": 0.0002,
+  "filter_limit": 0.2,
+  "max_total_rms": 0.023529411764705882,
+  "od_frames": 1,
+  "loss_weights": {
+    "rate": 1.0,
+    "ar": 4.0,
+    "od": 2.0,
+    "pre": 50.0,
+    "temp": 1.0
+  },
+  "arms": [
+    "continuous",
+    "curriculum"
+  ],
+  "checkpoint_frames": true,
+  "quality_allowance": 0.02,
+  "quality_penalty": 20.0,
+  "rate_warmup": 128,
+  "fit_count": 32,
+  "selection_count": 8,
+  "fixed_qp": 35,
+  "fixed_steps": 128,
+  "selection_every": 128,
+  "lr_decay_step": 384,
+  "large_base_channels": 29
+}
