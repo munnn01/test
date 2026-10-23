@@ -272,7 +272,7 @@ def collect_candidates(context, out):
 
 
 def stored_config(cfg):
-    return dict(cfg,npp_kind='regional')
+    return dict(cfg,npp_kind=cfg.get('npp_kind','regional'))
 
 
 def fit_warmstart(npp, initial, proxy, context, labels, out):

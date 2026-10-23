@@ -11,6 +11,7 @@ import torch
 import torch.nn.functional as F
 
 from .models import VideoNPP, RegionalVideoNPP, VideoProxy, real_value_proxy_grad
+from .large_npp import LargeRegionalVideoNPP
 
 
 def operating_point(step, config):
@@ -49,10 +50,13 @@ def load_checkpoint(path, config=None, device="cpu", migrate_legacy=False):
     if config is not None and stored != config:
         raise ValueError("checkpoint config differs from requested config")
     kind = stored.get('npp_kind', 'video')
-    if kind not in ('video', 'regional'):
+    if kind not in ('video', 'regional', 'large_regional'):
         raise ValueError('unknown NPP model kind')
-    model = RegionalVideoNPP if kind == 'regional' else VideoNPP
-    kwargs = {'filter_limit': stored.get('filter_limit', .9)} if kind == 'regional' else {}
+    model = {'video':VideoNPP,'regional':RegionalVideoNPP,'large_regional':LargeRegionalVideoNPP}[kind]
+    kwargs = {'filter_limit': stored.get('filter_limit', .9)} if kind in ('regional','large_regional') else {}
+    if kind=='large_regional':
+        kwargs.update(base_channels=stored['large_base_channels'],
+                      checkpoint_frames=stored.get('checkpoint_frames',True))
     npp, proxy = model(stored["width"], **kwargs).to(device), VideoProxy(stored["width"]).to(device)
     npp.load_state_dict(checkpoint["npp"], strict=True)
     missing, unexpected = proxy.load_state_dict(checkpoint["proxy"], strict=not legacy)

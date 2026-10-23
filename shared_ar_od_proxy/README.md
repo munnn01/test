@@ -178,3 +178,8 @@ The proxy is fixed so the pilot isolates these changes. Read
 [the recovery pilot protocol](docs/RECOVERY_PILOT.md) for budgets, early stopping,
 checkpoint selection and the difference between TRAIN oracle results and final DEV curves.
 
+The `capacity` experiment compares a fresh small NPP control with two causal U-Net
+extensions near9.9M and12.0M parameters while keeping the calibrated proxy fixed.
+Each arm has512proposals and the same TRAIN/DEV protocol. See
+[the capacity pilot protocol](docs/CAPACITY_PILOT.md) for controls and limitations.
+
