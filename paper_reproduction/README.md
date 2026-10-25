@@ -45,6 +45,14 @@ Mỗi job kiểm tra thực trên GPU: đúng source hash, dữ liệu/nhãn, ch
 
 Kaggle notebooks luôn private và GPU-enabled; không nhúng credential. Khi hết ngân sách phiên, `last.pt` giữ NPP/proxy, optimizer, phase counters và RNG để tiếp tục. Nếu chưa có cập nhật NPP, không xuất `trained_npp.pt` và không đưa model khởi tạo vào metric thay thế.
 
+AR R3 đã hoàn thành100k NPP steps nhưng validation bị dừng khi gặp JPEG sequence dưới31frame. `reproduce.ar_validation` chạy riêng đánh giá từ checkpoint đã hoàn thành lịch, ràng buộc SHA256 file/source/config, data/analyzer identity và strict model weights; không tạo optimizer hoặc gọi training. Khai báo `ar_validation_short_clip=loop`: clip ngắn lặp chỉ số modulo số frame, vẫn lấy16frame với stride2; clip đủ dài giữ nguyên chỉ số center-crop trước đó. Cả codec-only và NPP dùng cùng nguồn/chỉ số; source rỗng vẫn báo lỗi. Chính sách này dựa trên `SampleFrames(out_of_bound_opt='loop')` của [MMAction2](https://github.com/open-mmlab/mmaction2/blob/main/mmaction/datasets/transforms/loading.py). Config và từng cache row lưu chính sách/chỉ số; cache cũ không trộn với lần đánh giá đã sửa. Đây là sửa protocol validation được công khai, không phải huấn luyện lại hoặc thay đổi checkpoint.
+
+```bash
+python -m reproduce.ar_validation --checkpoint /path/to/last.pt --checkpoint-sha256 CHECKPOINT_SHA256 --training-source-sha256 TRAINING_SOURCE_SHA256 --inputs /kaggle/input --out /kaggle/working/paper_results
+```
+
+Các trainer snapshot cũ ghi `last.pt` trước khi cập nhật cờ `completed`. Bộ đánh giá kiểm tra đủ prior512/adaptive100k và `selected_step=100k`; mô hình xuất cuối R3 được đối chiếu từng tensor với checkpoint. Lần đánh giá sau có thể tiếp tục cache bằng `--cache-from /path/to/previous/paper_results`, giữ đúng checkpoint và source đánh giá.
+
 Các input Kaggle được pin theo version: COCO2, ImageNet train1/val1, K400 train4/JPEG val1, GOT10k1. Checkpoint config còn ràng buộc hash analyzer, danh sách source/nhãn/COCO box và CSV nhãn K400. Resume từ phiên bản code hoặc dữ liệu khác sẽ bị từ chối. Với input local tự cung cấp, cần bảo đảm nội dung đúng version đã khai báo; tool không tự hash toàn bộ hàng triệu file ảnh/video.
 
 ## Kết quả và giới hạn báo cáo

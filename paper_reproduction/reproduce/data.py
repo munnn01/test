@@ -150,14 +150,21 @@ def load_sample(record,cfg,training=False):
     if task=='ar':
         if record.get('source_format')=='provider_jpeg_frames':
             paths=sorted(Path(record['path']).glob('img_*.jpg'));stride=2;needed=(t-1)*stride+1
-            if len(paths)<needed:raise ValueError('validation frame sequence too short for declared AR sampling')
-            start=random.randrange(len(paths)-needed+1) if training else (len(paths)-needed)//2
+            policy=cfg.get('ar_validation_short_clip','error')
+            if policy not in ('error','loop'):raise ValueError('unknown AR validation short-clip policy')
+            if not paths:raise ValueError('empty AR validation frame sequence')
+            short=len(paths)<needed
+            if short and (training or policy!='loop'):
+                raise ValueError('validation frame sequence too short for declared AR sampling')
+            start=0 if short else (random.randrange(len(paths)-needed+1) if training else (len(paths)-needed)//2)
+            indices=[(start+i*stride)%len(paths) for i in range(t)]
             imgs=[]
-            for index in range(start,start+needed,stride):
+            for index in indices:
                 im=_rgb(paths[index]);w,h=im.size;scale=round(size*256/224)/min(w,h)
                 nw=round(w*scale);nh=round(h*scale);im=im.resize((nw,nh),Image.Resampling.BILINEAR)
                 xx=(nw-size)//2;yy=(nh-size)//2;imgs.append(im.crop((xx,yy,xx+size,yy+size)))
-            meta.update(start_frame=start,frame_stride=stride,source_format='provider_jpeg_frames',provider_cadence='unverified')
+            meta.update(start_frame=start,frame_stride=stride,source_format='provider_jpeg_frames',provider_cadence='unverified',
+                        frame_indices=indices,source_frames=len(paths),short_clip_policy=policy,short_clip_looped=short)
             return _tensor(imgs),torch.tensor([record['label']],dtype=torch.long),meta
         cap=cv2.VideoCapture(record['path']);imgs=[];stride=2
         try:

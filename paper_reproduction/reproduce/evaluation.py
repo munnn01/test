@@ -112,6 +112,9 @@ def evaluate(cfg,rows,npp,analyzer,codec,out,annotation_path=None,max_seconds=No
                             row=dict(source=record['id'],codec=cod,qp=qp,arm=arm,bytes=actual.bytes,bpp=actual.bpp,
                                      pixels=int(x.shape[1]*x.shape[-2]*x.shape[-1]),stream_sha256=actual.sha256,
                                      source_mse=float((decoded-x).square().mean()))
+                            if task=='ar':
+                                row['sampling']={k:meta[k] for k in ('start_frame','frame_stride','frame_indices',
+                                    'source_frames','short_clip_policy','short_clip_looped','provider_cadence') if k in meta}
                             if task in ('ar','ic'):
                                 logits=analyzer.predict(decoded);label=int(target.item())
                                 hit=int(logits.argmax(1).item()==label);hit5=int(label in logits.topk(5,1).indices[0].tolist())
