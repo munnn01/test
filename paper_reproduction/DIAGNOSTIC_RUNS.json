@@ -1,0 +1,17 @@
+{
+  "runs": [
+    {
+      "task": "ot",
+      "stage": "diagnose",
+      "handle": "hieusunday0412/paper-ot-proxy-p05-20261028",
+      "url": "https://www.kaggle.com/code/hieusunday0412/paper-ot-proxy-p05-20261028",
+      "source_sha256": "76deaed3cd39abb64a3f23420be8ca375ad1fb29b90743cbaf65e33a8989386f",
+      "checkpoint_sha256": "c1f0de67d71a7ff0c89ec6ac31578dcde5c7e929f03c9af5ec1754482af65b4d",
+      "training_source_sha256": "3d03d131bebd669d3ba802f2bef65b45d7bfd317a4b238177209a1ea6d5d32d3",
+      "private_dataset": "hieusunday0412/paper-ot-state-r5-20261027/1",
+      "max_worker_seconds": 7200,
+      "status": "prepared",
+      "scientific_complete": false
+    }
+  ]
+}
