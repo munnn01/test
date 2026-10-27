@@ -110,6 +110,12 @@ def eligible_records(rows,count,frames=64):
             cover=[float(x)>0 for x in cover_path.read_text().splitlines() if x.strip()]
             if len(cover)<frames:continue
             if not any(cover[i] and any(cover[i+1:i+frames]) for i in range(len(cover)-frames+1)):continue
+        elif row['task']=='ar':
+            import cv2
+            capture=cv2.VideoCapture(row['path'])
+            try:
+                if not capture.isOpened() or int(capture.get(cv2.CAP_PROP_FRAME_COUNT))<(frames-1)*2+1:continue
+            finally:capture.release()
         eligible.append(row)
         if len(eligible)>=count:return eligible
     raise ValueError('insufficient independently eligible TRAIN sources')
@@ -185,7 +191,7 @@ def fit_candidates(original,train_cache,dev_cache,out,budget,args,phase=None):
         if seconds<=0:raise BudgetExpired('prior_evaluation_reserve')
         report=fit_prior(candidate,train_cache,dev_cache,steps=args.lr_probe_steps,lr=lr,
             eval_every=max(4,args.lr_probe_steps),max_seconds=seconds,log=emit)
-        trials.append(dict(lr=lr,**report))
+        trials.append(report)
     selected=min(trials,key=lambda r:r['best_loss'])['lr']
     (out/'prior_lr_screen.json').write_text(json.dumps(trials,indent=2))
     candidates=[]

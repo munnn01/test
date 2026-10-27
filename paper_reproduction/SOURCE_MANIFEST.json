@@ -1,9 +1,10 @@
 {
-  "source_sha256": "76deaed3cd39abb64a3f23420be8ca375ad1fb29b90743cbaf65e33a8989386f",
+  "source_sha256": "66a99baa57e996e6b75ecd4d010dafc2d85af918c5f66c42f086d2e683aaf15a",
   "source_hashes": {
     "docs/LEDGER.md": "b825d4536ce0523b2e99293f7d0bdc798db73bc6db95a89f05684de4566d3768",
     "docs/PLAN.md": "5fbb59b37d8112e97ada1f18b282ac7aca0e0a6e32e47e1b7120320343196e5d",
     "docs/PROXY_P05.md": "b2a83c3ab6aee8fe912a035d5da464d4ca2fa20f400d58f3c79489d7d43f20f4",
+    "docs/superpowers/plans/2026-10-28-parallel-task-p05.md": "4a6ea1fe0fb0e4fc80ec8a876662607fd5535f48211a8ffad1f4edef0073485b",
     "docs/superpowers/plans/2026-10-28-proxy-p05.md": "ba172eb71e78355e9eef9a3589b7241ff23337592ba8ec8e82e559bc6fae08fc",
     "pyproject.toml": "d28f9e82385f6cc67954af1820e6c8471f7e01012c4abbd06831e34899af8d38",
     "README.md": "4873fa6948d045726a0f7243ac57a2d718437a76a6f14ceec3243dbb6004d0ad",
@@ -19,7 +20,7 @@
     "reproduce/protocol.py": "f8b3c6d2a3a61cf8fad87352abd4440ad55811d72732ae04af6dea2d0cf8d182",
     "reproduce/proxy_cloud.py": "acf7918ad7ada7803a656f6252dd637b512c7b0448927d29aa1f64b61de02599",
     "reproduce/proxy_diagnostics.py": "ec0a4274140d88ec11f37a43f92cb088642f912a85cb1932e502bb1b4c3c28db",
-    "reproduce/proxy_recovery.py": "dea9eec5104cc44aaf6abeedb4a4308c65c32796376b509c9169fd90efe2b047",
+    "reproduce/proxy_recovery.py": "273af4c2c5347a70cf841c61eacf456f6b5484044762e78fd5795a5647cc1726",
     "reproduce/proxy_variants.py": "94ca9259b076cad966fa30de860b12c54a02aedef0e8350f60ae3edb2406e8df",
     "reproduce/run.py": "a9174757937e4c4b295f09d8e8de40fcf60c79200d81bf56757f7927813fc2ce",
     "reproduce/tasks.py": "67d1a6f1ee5c9f2b9b1ca228c88f39bd8973f9bb837601dd622d2122850d728e",
@@ -46,7 +47,7 @@
     "tests/test_protocol.py": "a1d62a0e5876bcda8bbd4d5af8659afe02abd5d4b0c8b3e0d7b8864cbc97d507",
     "tests/test_proxy_cloud.py": "d4e34e557c57ae5786f35e2278a08fe2b06766173c98f283c2a9dda883a03589",
     "tests/test_proxy_diagnostics.py": "63f841fd7c726725e7f0f1bb0a9f487bc3cb8815518b5fd639f31b9f54c7d7f2",
-    "tests/test_proxy_recovery.py": "d912a9e3fc76525cbae16a0684f68695a2c0f3291e58fc8b627bb99b5e68b3be",
+    "tests/test_proxy_recovery.py": "fb0f0b24b88be23b74b9154bdfc2ec4a6a96faec2842625eb9d99ac64e40c731",
     "tests/test_proxy_variants.py": "17339ed42de9ddd9d749e68a9a361127f764253d9031451ae449bfc33fa03922",
     "tests/test_runtime.py": "92e5d046ddf97a50dc677d0ca1971ecb2301ec19599ede03c8377faf2ce1d05c",
     "tests/test_runtime_identity.py": "27969c0fa66ea84d58ec11873278f6d5fa89dbac6fb405ad0c8ebcbb0f891994",
@@ -54,5 +55,5 @@
     "tests/test_tracking_visibility.py": "06a278780c6a87d4c395654e76300c3e42b552fc9c2a790be2eb917de2b61ffc",
     "tests/test_training_contracts.py": "fd9709ac04e11966ef3b8cb9acbe77ef39b9dd4fc6960ff6d133866aa2bf96a3"
   },
-  "parent_reproduction_source": "063785ac24511935c71b036ac92fac84b92f2e7a7f7cedd4b08b7c7a6fdac759"
+  "parent_diagnostic_source": "76deaed3cd39abb64a3f23420be8ca375ad1fb29b90743cbaf65e33a8989386f"
 }

@@ -10,7 +10,7 @@
       "training_source_sha256": "3d03d131bebd669d3ba802f2bef65b45d7bfd317a4b238177209a1ea6d5d32d3",
       "private_dataset": "hieusunday0412/paper-ot-state-r5-20261027/1",
       "max_worker_seconds": 7200,
-      "status": "running",
+      "status": "error",
       "scientific_complete": false,
       "version": 1,
       "diagnostic_ready": true,
@@ -32,7 +32,26 @@
       "legacy_files_unchanged": 42,
       "observed_unix": 1793126363.0991778,
       "npp_updates": 0,
-      "scope": "P0.5 diagnostics; no new task RD result"
+      "scope": "P0.5 diagnostics; no new task RD result",
+      "error": "duplicate lr in prior-screen report; fixed in subsequent source"
+    },
+    {
+      "task": "ot",
+      "handle": "hieusunday0412/paper-ot-proxy-p05-20261028",
+      "source_sha256": "66a99baa57e996e6b75ecd4d010dafc2d85af918c5f66c42f086d2e683aaf15a",
+      "checkpoint_sha256": "c1f0de67d71a7ff0c89ec6ac31578dcde5c7e929f03c9af5ec1754482af65b4d",
+      "stage": "diagnose",
+      "status": "prepared",
+      "scientific_complete": false
+    },
+    {
+      "task": "ar",
+      "handle": "hieusunday0412/paper-ar-proxy-p05-20261028",
+      "source_sha256": "66a99baa57e996e6b75ecd4d010dafc2d85af918c5f66c42f086d2e683aaf15a",
+      "checkpoint_sha256": "600865ee2cb2e0364fc95d2023f4425a97d26d1d59078083c0f6dfdcb8a086bb",
+      "stage": "diagnose",
+      "status": "prepared",
+      "scientific_complete": false
     }
   ]
 }

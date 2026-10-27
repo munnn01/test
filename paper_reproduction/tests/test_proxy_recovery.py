@@ -106,3 +106,11 @@ def test_real_gradient_audit_reports_eight_sample_means_for_output_and_parameter
     for row in noise:
         assert row['parameters']['noise_samples']==8 and row['output']['noise_samples']==8
         assert row['parameters']['noise_variance']>=0
+
+def test_prior_candidate_screen_merges_real_fit_report_without_duplicate_lr(tmp_path):
+    a=api();from types import SimpleNamespace
+    def batches(source):return [dict(source=source,qp=q,kind='raw',codes=torch.zeros(1,192,1,8)) for q in (30,35,40,45)]
+    result=a.fit_candidates(VirtualCodec(),batches('train'),batches('dev'),tmp_path,a.Budget(20),
+        SimpleNamespace(lr_probe_steps=4,prior_updates=4),phase=a.Budget(20))
+    assert [name for name,_,_ in result]==['shared','per_qp']
+    assert len(json.loads((tmp_path/'prior_lr_screen.json').read_text()))==3
