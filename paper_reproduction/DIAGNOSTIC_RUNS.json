@@ -10,8 +10,29 @@
       "training_source_sha256": "3d03d131bebd669d3ba802f2bef65b45d7bfd317a4b238177209a1ea6d5d32d3",
       "private_dataset": "hieusunday0412/paper-ot-state-r5-20261027/1",
       "max_worker_seconds": 7200,
-      "status": "prepared",
-      "scientific_complete": false
+      "status": "running",
+      "scientific_complete": false,
+      "version": 1,
+      "diagnostic_ready": true,
+      "paired_measurements_seen": false,
+      "latest": {
+        "stage": "diagnostic_ready",
+        "time": 1793126356.4237237,
+        "task": "ot",
+        "train_sources": 32,
+        "dev_sources": 16,
+        "npp": "6e3f6e1efcbd4a4bb5bb4a1cdf6f33a8b0a1269f75e45f67a6876573e7762b22",
+        "checkpoint_steps": {
+          "prior": 512,
+          "adaptive": 100000
+        }
+      },
+      "source_commit": "36212154f1d018f98d2d161837f6a9e71feeed4d",
+      "tests_passed": 98,
+      "legacy_files_unchanged": 42,
+      "observed_unix": 1793126363.0991778,
+      "npp_updates": 0,
+      "scope": "P0.5 diagnostics; no new task RD result"
     }
   ]
 }
