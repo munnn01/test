@@ -1,9 +1,9 @@
 {
-  "source_sha256": "66a99baa57e996e6b75ecd4d010dafc2d85af918c5f66c42f086d2e683aaf15a",
+  "source_sha256": "fe75e410959a6dc6fc611430dc5a8f0a9f91f47871d9a91a1677cbea470e7e97",
   "source_hashes": {
     "docs/LEDGER.md": "b825d4536ce0523b2e99293f7d0bdc798db73bc6db95a89f05684de4566d3768",
     "docs/PLAN.md": "5fbb59b37d8112e97ada1f18b282ac7aca0e0a6e32e47e1b7120320343196e5d",
-    "docs/PROXY_P05.md": "b2a83c3ab6aee8fe912a035d5da464d4ca2fa20f400d58f3c79489d7d43f20f4",
+    "docs/PROXY_P05.md": "87559883acc4faa71628be27c3bf1ab904a870299296a598eea9003d3b2e9c28",
     "docs/superpowers/plans/2026-10-28-parallel-task-p05.md": "4a6ea1fe0fb0e4fc80ec8a876662607fd5535f48211a8ffad1f4edef0073485b",
     "docs/superpowers/plans/2026-10-28-proxy-p05.md": "ba172eb71e78355e9eef9a3589b7241ff23337592ba8ec8e82e559bc6fae08fc",
     "pyproject.toml": "d28f9e82385f6cc67954af1820e6c8471f7e01012c4abbd06831e34899af8d38",
@@ -15,6 +15,8 @@
     "reproduce/data.py": "cc1a7fe077c169108e7925db756544eda8de7fed9ed3b2717e83d6983eb4e1bf",
     "reproduce/evaluation.py": "f7c3766bf2e4d229ae63309cbdf270b1be5332730dfe466c8fd5189bb0b248cf",
     "reproduce/image_proxy.py": "87928c13c600389a55dfabe5f86714f0742cc8a78e2523fb1fcae8e8b6c2af55",
+    "reproduce/image_proxy_audit.py": "21f17ee3fdf705c0afaab7802594cfb21aa7b0d88f4e572aa32724554f89bae8",
+    "reproduce/image_proxy_cloud.py": "f4f339fcfcf68bb5302cebb1a7682b4672dda3635e3f2c95cdd52a3943d95685",
     "reproduce/kaggle.py": "075575dd87e3ddea6fa13df886389c8f90f8db57f57824e15bd4c2ddf8ae87bc",
     "reproduce/models.py": "ed39de952ec02c4f86656d6fc397a47daab56b6d8815db41e44d54cb67ca83c7",
     "reproduce/protocol.py": "f8b3c6d2a3a61cf8fad87352abd4440ad55811d72732ae04af6dea2d0cf8d182",
@@ -40,6 +42,8 @@
     "tests/test_deployment.py": "c71aa38a5bf304587a3462076c39d91103c9f7c5f43b616aa9c47c4cfc442566",
     "tests/test_evaluation_resume.py": "84979197e93d9fcaa473f7458cf39becccb954246e2ba0ccd097dc5da01d0c8b",
     "tests/test_got_protocol.py": "6d090f06946d267adfd0069290442cfa532a8fb9ef6c073e8d67c13eba424268",
+    "tests/test_image_proxy_audit.py": "82bb972dd3e91f534542dc513f8dc6feca315409f14b228cf75f763dcbf23db1",
+    "tests/test_image_proxy_cloud.py": "2bf9ecdf207b71f12a0c07d595e7d24f4927f78bdd3ed6054519e1fbc0b66851",
     "tests/test_k400_frames.py": "bddc2484e42a95769090f30ce2d5c2921d975b87d2dde40d2cf7c72dde7a30fe",
     "tests/test_models.py": "757319c759f0c5b141ec5d789fa873d1905ffd390a235d883eb4a887a02d34b8",
     "tests/test_phase_integration.py": "a420f75a4526e034ee375c7354fd9d60c83ee95029d8cc87d30785b592d823c8",
@@ -54,6 +58,5 @@
     "tests/test_tracking_setup.py": "6d4ef4bdbbb27f06b78c14b0418c4de9500991c6977c91b72451120b67afcd41",
     "tests/test_tracking_visibility.py": "06a278780c6a87d4c395654e76300c3e42b552fc9c2a790be2eb917de2b61ffc",
     "tests/test_training_contracts.py": "fd9709ac04e11966ef3b8cb9acbe77ef39b9dd4fc6960ff6d133866aa2bf96a3"
-  },
-  "parent_diagnostic_source": "76deaed3cd39abb64a3f23420be8ca375ad1fb29b90743cbaf65e33a8989386f"
+  }
 }

@@ -1,6 +1,14 @@
 # Proxy P0.5 diagnostics and recovery
 
-The original reproduction runner, virtual codec, objectives and checkpoints are unchanged. This separate runner explicitly loads a SHA-bound completed video checkpoint and reports TRAIN-heldout diagnostics. The first deployed task is GOT10k/DiMP Tracking; codec primitives also support video AR. No OD or full benchmark gain is implied.
+The original reproduction runner, virtual codec, objectives and checkpoints are unchanged. Separate runners load SHA-bound task checkpoints and report TRAIN-heldout diagnostics for video AR/OT and image OD/IC. No full benchmark gain is implied.
+
+## Separate image tasks
+
+`python -m reproduce.image_proxy_audit --task od --checkpoint last.pt --checkpoint-sha256 <SHA256> --training-source-sha256 <SHA256> --legacy-root /kaggle/working/legacy_image_reproduction --continue-proxy --out /kaggle/working/paper_results`
+
+OD and IC each use their own R6 checkpoint and four CompressAI/Minnen proxies. The audit restores entropy buffers through each network's public loader, freezes weights, and measures actual BPG bytes on16 heldout TRAIN images. Controlled inputs are raw, two Gaussian blurs and a bounded perturbation; an untrained NPP is never scored. Original-pixel bpp and reconstruction error against BPG are reported at256-scale geometry. Eight noisy input-gradient vectors are averaged before computing their norm, followed by finite-step BPG direction checks. The video192-channel zero-reference formula does not apply here.
+
+Each private image payload mounts its owned version-pinned R6 kernel output, verifies checkpoint SHA, and extracts the exact original training bundle into a separate source root. After an audit budget of at most5400seconds, the remaining worker budget (total at most18000seconds) can continue only the original400k proxy phase. Original config, optimizer moments, RNG and counters are retained. A recorded operational wrapper blocks fixed/adaptive NPP phases, including when the proxy target is already complete. A parent watchdog bounds setup and training and terminates the entire worker process group. Completing the proxy alone does not mark the scientific experiment complete.
 
 ## What runs by default
 
