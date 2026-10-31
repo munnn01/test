@@ -35,4 +35,4 @@ COCO mask polygons/RLE/crowd and resizing must align; tracking frame/mask identi
 - [ ] Prioritize4COCOjobs on tranthihongdieu/hoangminhhuy123 after fresh quota checks; use public proxy and public version-pinned COCO dataset. Tracking remains a separate later batch with its own direction check/GPU preflight.
 - [ ] Verify server privacy/source, startup and task-gradient/fidelity stages; record real statuses and limitations.
 
-Ruling: user clarified �Image Segmentation Object Tracking�. No DAVIS/VOS job is implemented. Existing delegation authorizes architecture-preserving implementation and Kaggle trials; no additional approval gate. No private checkpoint transfer is needed.
+Ruling: user clarified “Image Segmentation Object Tracking”. No DAVIS/VOS job is implemented. Existing delegation authorizes architecture-preserving implementation and Kaggle trials; no additional approval gate. No private checkpoint transfer is needed.
