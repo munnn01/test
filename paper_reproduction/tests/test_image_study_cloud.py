@@ -7,6 +7,27 @@ def api():
     assert importlib.util.find_spec('reproduce.image_study_cloud') is not None,'study cloud not implemented'
     return __import__('reproduce.image_study_cloud',fromlist=['*'])
 
+def test_sam_payload_binds_offline_teacher_and_matched_configuration(tmp_path):
+    from reproduce.sam2_masks import sam_config
+    a=api();root=Path(__file__).parents[1];cfg=sam_config('od','foreground_bg')
+    p=tmp_path/'sam';spec=dict(kind='dataset',ref='owner123/image-state/1',member='od_proxy.pt',sha256='a'*64)
+    a.prepare_study(root,p,'owner123','sam2-od-foreground-bg-20261031',cfg,spec)
+    _,job=a.verify_study(p,root)
+    assert job['config']['sam2']['source_commit']=='2b90b9f5ceec907a1c18123530e92e794ad901a4'
+    assert job['config']['fixed_steps']==256 and job['config']['adaptive_steps']==256
+    cfg['sam2']['checkpoint_sha256']='0'*64
+    with pytest.raises(ValueError):a.prepare_study(root,tmp_path/'bad-sam','owner123','sam2-od-bad-20261031',cfg,spec)
+
+def test_explicit_public_dataset_can_be_shared_across_accounts_but_private_cannot(tmp_path):
+    from reproduce.sam2_masks import sam_config
+    a=api();root=Path(__file__).parents[1];cfg=sam_config('ic','foreground')
+    spec=dict(kind='dataset',ref='sharedowner/image-state/1',member='ic_proxy.pt',sha256='b'*64,visibility='public')
+    p=tmp_path/'public';a.prepare_study(root,p,'owner123','sam2-ic-public-20261031',cfg,spec)
+    meta,_=a.verify_study(p)
+    assert spec['ref'] in meta['dataset_sources'] and meta['is_private']
+    with pytest.raises(ValueError):a.input_valid('owner123',cfg,dict(spec,kind='kernel'))
+    with pytest.raises(ValueError):a.input_valid('owner123',cfg,{k:v for k,v in spec.items() if k!='visibility'})
+
 def test_study_cloud_binds_private_versioned_input_and_exact_config(tmp_path):
     a=api();root=Path(__file__).parents[1];cfg=study_config('od','screen',.5)
     spec=dict(kind='dataset',ref='owner123/image-proxy-state/1',member='od_proxy.pt',sha256='a'*64)

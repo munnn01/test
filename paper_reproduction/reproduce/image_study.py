@@ -57,6 +57,13 @@ def study_objective(cfg,rate,task,x,y,qp):
     return rate+cfg['lambda_scale']*task_lambda(qp)*task+cfg['beta']*(x-y).square().mean()
 
 
+def expected_config(cfg):
+    if cfg.get('study_profile')=='sam2':
+        from .sam2_masks import sam_config
+        return sam_config(cfg['study_task'],cfg['sam_arm'])
+    return study_config(cfg['study_task'],cfg['study_profile'],cfg['lambda_scale'])
+
+
 def load_proxy_input(path,sha,task):
     if digest(path)!=sha:raise ValueError('proxy input SHA differs')
     saved=torch.load(path,map_location='cpu',weights_only=False)
@@ -147,7 +154,11 @@ def study_context(cfg,progress=None,out=None,proxy=None):
             value=saved_proxy[0](*args,**kwargs)
             require_finite(value.bpp,'proxy rate');require_finite(value.reconstruction,'proxy reconstruction');return value
         proxy.forward=forward;proxy.aux_loss=lambda qp:require_finite(saved_proxy[1](qp),'proxy auxiliary loss')
-    try:yield
+    try:
+        if cfg.get('study_profile')=='sam2':
+            from .sam2_masks import mask_context
+            with mask_context(cfg,progress,out,study_sample):yield
+        else:yield
     finally:
         training.image_objective,training.qp_for_step,training.load_sample,training.sample_training,evaluation.load_sample,torch.optim.Adam,training.log_event=originals
         if saved_proxy is not None:proxy.forward,proxy.aux_loss=saved_proxy
@@ -252,7 +263,7 @@ def main():
     parser.add_argument('--proxy-sha256');parser.add_argument('--resume',type=Path)
     parser.add_argument('--inputs',type=Path,default=Path('/kaggle/input'))
     parser.add_argument('--out',type=Path,required=True);args=parser.parse_args()
-    cfg=json.loads(args.config.read_text());expected=study_config(cfg['study_task'],cfg['study_profile'],cfg['lambda_scale'])
+    cfg=json.loads(args.config.read_text());expected=expected_config(cfg)
     if cfg!=expected:raise ValueError('study config differs from frozen recipe')
     out=args.out;out.mkdir(parents=True,exist_ok=True);budget=Budget(cfg['max_session_seconds']);started=time.time()
     report=dict(task=cfg['study_task'],profile=cfg['study_profile'],scientific_complete=False,execution_complete=False,npp_updates=0,started=started)
@@ -282,7 +293,11 @@ def main():
             proxy=ImageProxyBank(saved['proxy_quality'],pretrained=False);restore_proxy_state(proxy,saved['proxy'])
             report['proxy_origin']={k:v for k,v in saved.items() if k!='proxy'};del saved
             report['proxy_mask_canonicalization']=canonicalize_proxy_masks(proxy)
-            proxy=proxy.to('cuda');train,validation,inventory=records_for_task(cfg['task'],args.inputs)
+            train,validation,inventory=records_for_task(cfg['task'],args.inputs)
+            if cfg['study_profile']=='sam2':
+                from .sam2_masks import prepare_training
+                train=prepare_training(cfg,train,out,budget,study_sample)
+            proxy=proxy.to('cuda')
             analyzer=StudyAnalyzer(cfg['task']);cfg['runtime_identity']=training.runtime_identity(train,validation,inventory,analyzer.weight_digest)
             (out/'analyzer.json').write_text(json.dumps(analyzer.receipt(),indent=2))
             torch.manual_seed(cfg['seed']);torch.cuda.manual_seed_all(cfg['seed']);npp=ImageNPP().to('cuda');runner_codec=codec
@@ -299,7 +314,7 @@ def main():
             if cfg['study_profile']!='proxy':
                 # Preflight imports native load_sample; adapt its bound reference too.
                 import reproduce.run as native_runner
-                previous=native_runner.load_sample;native_runner.load_sample=study_sample
+                previous=native_runner.load_sample;native_runner.load_sample=training.load_sample
                 try:preflight(cfg,train,npp,proxy,analyzer,codec,out)
                 finally:native_runner.load_sample=previous
             remaining=max(0,budget.remaining()-cfg['evaluation_reserve'])

@@ -26,6 +26,7 @@ from .proxy_diagnostics import (margin_interval,rd_should_stop,gradient_vectors,
     summarize_gradients,noise_gradient_summary,calibrate_rd_tolerance)
 from .training import config_digest,records_digest,log_event
 from .virtual_codec import VirtualCodec
+from .tensor_bytes import raw_tensor_bytes
 
 
 class BudgetExpired(TimeoutError):pass
@@ -55,7 +56,7 @@ def model_digest(model):
     h=hashlib.sha256()
     for name,value in sorted(model.state_dict().items()):
         h.update(name.encode());h.update(str(tuple(value.shape)).encode())
-        h.update(bytes(value.detach().cpu().contiguous().clone().untyped_storage()))
+        h.update(raw_tensor_bytes(value))
     return h.hexdigest()
 
 

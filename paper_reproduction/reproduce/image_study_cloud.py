@@ -6,7 +6,7 @@ from pathlib import Path,PurePosixPath
 import re
 
 from .assets import pinned_datasets
-from .image_study import study_config
+from .image_study import expected_config
 from .kaggle import prepare,source_files
 from .proxy_cloud import OLD_COMMAND
 from .image_proxy_cloud import validate_legacy
@@ -37,13 +37,17 @@ STUDY_COMMAND="""    configuration=OUT/'study_config.json';configuration.write_t
 
 
 def input_valid(account,cfg,spec):
-    if cfg!=study_config(cfg['study_task'],cfg['study_profile'],cfg['lambda_scale']):raise ValueError('study configuration differs')
+    if cfg!=expected_config(cfg):raise ValueError('study configuration differs')
     if cfg['study_profile']=='proxy':
         if spec is not None:raise ValueError('Flickr proxy starts from pretrained bank, not task checkpoint')
         return
-    if not isinstance(spec,dict) or set(spec)!={'kind','ref','member','sha256'} or spec['kind'] not in ('dataset','kernel'):
+    keys={'kind','ref','member','sha256'}
+    if not isinstance(spec,dict) or set(spec) not in (keys,keys|{'visibility'}) or spec['kind'] not in ('dataset','kernel'):
         raise ValueError('exact proxy input spec required')
-    if not re.fullmatch(re.escape(account)+r'/[a-z0-9-]+/[1-9][0-9]*',spec['ref']):raise ValueError('owned version-pinned input required')
+    public=spec.get('visibility')=='public'
+    if 'visibility' in spec and (not public or spec['kind']!='dataset'):raise ValueError('only datasets can be explicitly public inputs')
+    owner=r'[A-Za-z0-9_-]+' if public else re.escape(account)
+    if not re.fullmatch(owner+r'/[a-z0-9-]+/[1-9][0-9]*',spec['ref']):raise ValueError('owned or explicitly public version-pinned input required')
     path=PurePosixPath(spec['member'])
     if path.is_absolute() or '..' in path.parts or '\\' in spec['member'] or ':' in spec['member'] or path.suffix!='.pt':
         raise ValueError('safe relative checkpoint member required')
