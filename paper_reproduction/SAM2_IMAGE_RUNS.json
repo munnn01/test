@@ -1,6 +1,6 @@
 {
   "study": "image_paper_plus_offline_frozen_SAM2_1_Tiny",
-  "updated": 1793466796.99384,
+  "updated": 1793478427.6452303,
   "scientific_complete": false,
   "source": {
     "commit": "830950d028c46ec87a82769b4f14922c1245fd27",
@@ -24,8 +24,7 @@
   "worker_hours": 12,
   "service_timeout_hours": 18,
   "states": {
-    "RUNNING": 2,
-    "QUEUED": 4
+    "COMPLETE": 6
   },
   "jobs": [
     {
@@ -152,20 +151,43 @@
       "launch": {
         "key": "od-control",
         "handle": "wagur124705/sam2-image-od-control-20261101",
-        "status": "Warning: Looks like you're using an outdated `kaggle` version (installed: 2.2.4), please consider upgrading to the latest version (2.2.5)\nwagur124705/sam2-image-od-control-20261101 has status \"KernelWorkerStatus.RUNNING\"",
-        "observed": 1793466746.7360594,
+        "status": "Warning: Looks like you're using an outdated `kaggle` version (installed: 2.2.4), please consider upgrading to the latest version (2.2.5)\nwagur124705/sam2-image-od-control-20261101 has status \"KernelWorkerStatus.COMPLETE\"",
+        "observed": 1793477935.927503,
         "latest": {
-          "stage": "payload_verified",
+          "stage": "cloud_end",
           "task": "od",
           "mode": "full",
-          "source_sha256": "96ed57cf1898d532e9b2ba405eb8dacc14b1c33542d2bd2b5035a3e15bc13b30"
+          "source_sha256": "96ed57cf1898d532e9b2ba405eb8dacc14b1c33542d2bd2b5035a3e15bc13b30",
+          "bootstrap_complete": true,
+          "started": 1793466640.7863972,
+          "worker_exit_code": 0,
+          "wall_seconds": 7468.43239402771
         },
-        "mask_cache_ready": false,
-        "study_ready": false,
-        "training_seen": false,
-        "terminal": []
+        "mask_cache_ready": true,
+        "study_ready": true,
+        "training_seen": true,
+        "terminal": [
+          {
+            "stage": "study_end",
+            "time": 1793474100.806874,
+            "task": "od",
+            "execution_complete": true,
+            "npp_updates": 512,
+            "error": null
+          },
+          {
+            "stage": "cloud_end",
+            "task": "od",
+            "mode": "full",
+            "source_sha256": "96ed57cf1898d532e9b2ba405eb8dacc14b1c33542d2bd2b5035a3e15bc13b30",
+            "bootstrap_complete": true,
+            "started": 1793466640.7863972,
+            "worker_exit_code": 0,
+            "wall_seconds": 7468.43239402771
+          }
+        ]
       },
-      "status": "RUNNING"
+      "status": "COMPLETE"
     },
     {
       "key": "ic-control",
@@ -291,15 +313,43 @@
       "launch": {
         "key": "ic-control",
         "handle": "wagur124705/sam2-image-ic-control-20261101",
-        "status": "Warning: Looks like you're using an outdated `kaggle` version (installed: 2.2.4), please consider upgrading to the latest version (2.2.5)\nwagur124705/sam2-image-ic-control-20261101 has status \"KernelWorkerStatus.QUEUED\"",
-        "observed": 1793466778.5530019,
-        "latest": null,
-        "mask_cache_ready": false,
-        "study_ready": false,
-        "training_seen": false,
-        "terminal": []
+        "status": "Warning: Looks like you're using an outdated `kaggle` version (installed: 2.2.4), please consider upgrading to the latest version (2.2.5)\nwagur124705/sam2-image-ic-control-20261101 has status \"KernelWorkerStatus.COMPLETE\"",
+        "observed": 1793477936.5666845,
+        "latest": {
+          "stage": "cloud_end",
+          "task": "ic",
+          "mode": "full",
+          "source_sha256": "96ed57cf1898d532e9b2ba405eb8dacc14b1c33542d2bd2b5035a3e15bc13b30",
+          "bootstrap_complete": true,
+          "started": 1793468337.5222456,
+          "worker_exit_code": 0,
+          "wall_seconds": 4876.48352098465
+        },
+        "mask_cache_ready": true,
+        "study_ready": true,
+        "training_seen": true,
+        "terminal": [
+          {
+            "stage": "study_end",
+            "time": 1793473209.084792,
+            "task": "ic",
+            "execution_complete": true,
+            "npp_updates": 512,
+            "error": null
+          },
+          {
+            "stage": "cloud_end",
+            "task": "ic",
+            "mode": "full",
+            "source_sha256": "96ed57cf1898d532e9b2ba405eb8dacc14b1c33542d2bd2b5035a3e15bc13b30",
+            "bootstrap_complete": true,
+            "started": 1793468337.5222456,
+            "worker_exit_code": 0,
+            "wall_seconds": 4876.48352098465
+          }
+        ]
       },
-      "status": "QUEUED"
+      "status": "COMPLETE"
     },
     {
       "key": "od-foreground",
@@ -425,15 +475,43 @@
       "launch": {
         "key": "od-foreground",
         "handle": "dngbolm/sam2-image-od-foreground-20261101",
-        "status": "Warning: Looks like you're using an outdated `kaggle` version (installed: 2.2.4), please consider upgrading to the latest version (2.2.5)\ndngbolm/sam2-image-od-foreground-20261101 has status \"KernelWorkerStatus.QUEUED\"",
-        "observed": 1793466743.7564895,
-        "latest": null,
-        "mask_cache_ready": false,
-        "study_ready": false,
-        "training_seen": false,
-        "terminal": []
+        "status": "Warning: Looks like you're using an outdated `kaggle` version (installed: 2.2.4), please consider upgrading to the latest version (2.2.5)\ndngbolm/sam2-image-od-foreground-20261101 has status \"KernelWorkerStatus.COMPLETE\"",
+        "observed": 1793477936.111671,
+        "latest": {
+          "stage": "cloud_end",
+          "task": "od",
+          "mode": "full",
+          "source_sha256": "96ed57cf1898d532e9b2ba405eb8dacc14b1c33542d2bd2b5035a3e15bc13b30",
+          "bootstrap_complete": true,
+          "started": 1793468333.4225175,
+          "worker_exit_code": 0,
+          "wall_seconds": 7445.312452316284
+        },
+        "mask_cache_ready": true,
+        "study_ready": true,
+        "training_seen": true,
+        "terminal": [
+          {
+            "stage": "study_end",
+            "time": 1793475776.1164334,
+            "task": "od",
+            "execution_complete": true,
+            "npp_updates": 512,
+            "error": null
+          },
+          {
+            "stage": "cloud_end",
+            "task": "od",
+            "mode": "full",
+            "source_sha256": "96ed57cf1898d532e9b2ba405eb8dacc14b1c33542d2bd2b5035a3e15bc13b30",
+            "bootstrap_complete": true,
+            "started": 1793468333.4225175,
+            "worker_exit_code": 0,
+            "wall_seconds": 7445.312452316284
+          }
+        ]
       },
-      "status": "QUEUED"
+      "status": "COMPLETE"
     },
     {
       "key": "ic-foreground",
@@ -559,15 +637,43 @@
       "launch": {
         "key": "ic-foreground",
         "handle": "dngbolm/sam2-image-ic-foreground-20261101",
-        "status": "Warning: Looks like you're using an outdated `kaggle` version (installed: 2.2.4), please consider upgrading to the latest version (2.2.5)\ndngbolm/sam2-image-ic-foreground-20261101 has status \"KernelWorkerStatus.QUEUED\"",
-        "observed": 1793466776.6668048,
-        "latest": null,
-        "mask_cache_ready": false,
-        "study_ready": false,
-        "training_seen": false,
-        "terminal": []
+        "status": "Warning: Looks like you're using an outdated `kaggle` version (installed: 2.2.4), please consider upgrading to the latest version (2.2.5)\ndngbolm/sam2-image-ic-foreground-20261101 has status \"KernelWorkerStatus.COMPLETE\"",
+        "observed": 1793477936.00971,
+        "latest": {
+          "stage": "cloud_end",
+          "task": "ic",
+          "mode": "full",
+          "source_sha256": "96ed57cf1898d532e9b2ba405eb8dacc14b1c33542d2bd2b5035a3e15bc13b30",
+          "bootstrap_complete": true,
+          "started": 1793468339.617586,
+          "worker_exit_code": 0,
+          "wall_seconds": 4777.561244010925
+        },
+        "mask_cache_ready": true,
+        "study_ready": true,
+        "training_seen": true,
+        "terminal": [
+          {
+            "stage": "study_end",
+            "time": 1793473114.706864,
+            "task": "ic",
+            "execution_complete": true,
+            "npp_updates": 512,
+            "error": null
+          },
+          {
+            "stage": "cloud_end",
+            "task": "ic",
+            "mode": "full",
+            "source_sha256": "96ed57cf1898d532e9b2ba405eb8dacc14b1c33542d2bd2b5035a3e15bc13b30",
+            "bootstrap_complete": true,
+            "started": 1793468339.617586,
+            "worker_exit_code": 0,
+            "wall_seconds": 4777.561244010925
+          }
+        ]
       },
-      "status": "QUEUED"
+      "status": "COMPLETE"
     },
     {
       "key": "od-foreground-bg",
@@ -693,20 +799,43 @@
       "launch": {
         "key": "od-foreground-bg",
         "handle": "ngynanhthuw/sam2-image-od-foreground-bg-20261101",
-        "status": "Warning: Looks like you're using an outdated `kaggle` version (installed: 2.2.4), please consider upgrading to the latest version (2.2.5)\nngynanhthuw/sam2-image-od-foreground-bg-20261101 has status \"KernelWorkerStatus.RUNNING\"",
-        "observed": 1793466746.2816339,
+        "status": "Warning: Looks like you're using an outdated `kaggle` version (installed: 2.2.4), please consider upgrading to the latest version (2.2.5)\nngynanhthuw/sam2-image-od-foreground-bg-20261101 has status \"KernelWorkerStatus.COMPLETE\"",
+        "observed": 1793477936.6406026,
         "latest": {
-          "stage": "payload_verified",
+          "stage": "cloud_end",
           "task": "od",
           "mode": "full",
-          "source_sha256": "96ed57cf1898d532e9b2ba405eb8dacc14b1c33542d2bd2b5035a3e15bc13b30"
+          "source_sha256": "96ed57cf1898d532e9b2ba405eb8dacc14b1c33542d2bd2b5035a3e15bc13b30",
+          "bootstrap_complete": true,
+          "started": 1793466635.7556248,
+          "worker_exit_code": 0,
+          "wall_seconds": 7455.761251449585
         },
-        "mask_cache_ready": false,
-        "study_ready": false,
-        "training_seen": false,
-        "terminal": []
+        "mask_cache_ready": true,
+        "study_ready": true,
+        "training_seen": true,
+        "terminal": [
+          {
+            "stage": "study_end",
+            "time": 1793474089.2052698,
+            "task": "od",
+            "execution_complete": true,
+            "npp_updates": 512,
+            "error": null
+          },
+          {
+            "stage": "cloud_end",
+            "task": "od",
+            "mode": "full",
+            "source_sha256": "96ed57cf1898d532e9b2ba405eb8dacc14b1c33542d2bd2b5035a3e15bc13b30",
+            "bootstrap_complete": true,
+            "started": 1793466635.7556248,
+            "worker_exit_code": 0,
+            "wall_seconds": 7455.761251449585
+          }
+        ]
       },
-      "status": "RUNNING"
+      "status": "COMPLETE"
     },
     {
       "key": "ic-foreground-bg",
@@ -832,15 +961,43 @@
       "launch": {
         "key": "ic-foreground-bg",
         "handle": "ngynanhthuw/sam2-image-ic-foreground-bg-20261101",
-        "status": "Warning: Looks like you're using an outdated `kaggle` version (installed: 2.2.4), please consider upgrading to the latest version (2.2.5)\nngynanhthuw/sam2-image-ic-foreground-bg-20261101 has status \"KernelWorkerStatus.QUEUED\"",
-        "observed": 1793466778.6514711,
-        "latest": null,
-        "mask_cache_ready": false,
-        "study_ready": false,
-        "training_seen": false,
-        "terminal": []
+        "status": "Warning: Looks like you're using an outdated `kaggle` version (installed: 2.2.4), please consider upgrading to the latest version (2.2.5)\nngynanhthuw/sam2-image-ic-foreground-bg-20261101 has status \"KernelWorkerStatus.COMPLETE\"",
+        "observed": 1793477937.4319007,
+        "latest": {
+          "stage": "cloud_end",
+          "task": "ic",
+          "mode": "full",
+          "source_sha256": "96ed57cf1898d532e9b2ba405eb8dacc14b1c33542d2bd2b5035a3e15bc13b30",
+          "bootstrap_complete": true,
+          "started": 1793468338.489007,
+          "worker_exit_code": 0,
+          "wall_seconds": 5294.31945848465
+        },
+        "mask_cache_ready": true,
+        "study_ready": true,
+        "training_seen": true,
+        "terminal": [
+          {
+            "stage": "study_end",
+            "time": 1793473630.547697,
+            "task": "ic",
+            "execution_complete": true,
+            "npp_updates": 512,
+            "error": null
+          },
+          {
+            "stage": "cloud_end",
+            "task": "ic",
+            "mode": "full",
+            "source_sha256": "96ed57cf1898d532e9b2ba405eb8dacc14b1c33542d2bd2b5035a3e15bc13b30",
+            "bootstrap_complete": true,
+            "started": 1793468338.489007,
+            "worker_exit_code": 0,
+            "wall_seconds": 5294.31945848465
+          }
+        ]
       },
-      "status": "QUEUED"
+      "status": "COMPLETE"
     }
   ],
   "limitations": [
@@ -850,5 +1007,12 @@
     "SAM runs only before training; no SAM/mask inference or transmission.",
     "Current task-proxy warmstarts; no substitution of still-training Flickr proxy.",
     "Existing nine source-frozen jobs retain previous code; tensor hashing performance fix applies to these new jobs."
-  ]
+  ],
+  "verified_results": "SAM2_RESULTS_20261101.json",
+  "results_checked": 1793478426.3324993,
+  "result_summary": {
+    "IC": "all12learnedpoints lower accuracy and higher bpp than BPG; BD invalid from no quality overlap",
+    "OD": "evaluation budget exhausted; one control NPP point, SAM curves incomplete",
+    "Gaussian_IC_BD_percent": -9.936848102040425
+  }
 }
