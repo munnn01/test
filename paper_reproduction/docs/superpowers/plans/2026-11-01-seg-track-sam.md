@@ -12,7 +12,7 @@
 
 ## Global Constraints
 
-QP 30/35/40/45; real forward/proxy backward; no identity fallback; automatic TRAIN-only masks; only initial box at tracking inference; no GT prompts at segmentation inference. Current release: 4 COCO jobs, 8 worker-hours /12 timeout-hours. Tracking stays in a later separate batch.
+QP 30/35/40/45; real forward/proxy backward; no identity fallback; automatic TRAIN-only masks; only initial box at tracking inference; no GT prompts at segmentation inference. COCO retry R2: 4 jobs, 8 worker-hours /10 timeout-hours; pilot usage recorded separately. Tracking stays in a later separate batch.
 
 ## Review Focus
 
@@ -27,7 +27,7 @@ COCO mask polygons/RLE/crowd and resizing must align; tracking frame/mask identi
 
 - [x] Add failing tests for framewise proxy, positive rate calibration, STE clipping, fidelity gates, real-forward gradient chain, checkpoint phase accounting and immutable cloud inputs.
 - [x] Implement warm-up/task stages, mask preprocessing, evaluation and private payloads; run full suite.
-- [x] Independent whole-change review; Important findings RED-to-GREEN, full suite green (158 passed, four third-party deprecation warnings).
+- [x] Independent whole-change review; Important findings RED-to-GREEN, full suite green (158 passed). Cloud-driven convergence schedule revision has a fresh regression and full suite green (159 passed); four third-party deprecation warnings remain.
 
 ### Task3: Deploy
 

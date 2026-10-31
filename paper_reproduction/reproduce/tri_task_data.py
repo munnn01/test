@@ -25,7 +25,7 @@ def config(task,arm):
         backbone={'is':'maskrcnn_resnet50_fpn','od':'fcos_resnet50_fpn','ot':'dimp50'}[task],
         codecs=['h264'] if task=='ot' else ['bpg'],npp_size=288 if task=='ot' else 512,max_size=768,
         frames=4 if task=='ot' else 1,evaluation_frames=32,train_sources=64,dev_sources=8,
-        validation_sources=8 if task=='ot' else 32,warmup_steps=2000,task_steps=256,
+        validation_sources=8 if task=='ot' else 32,warmup_steps=12000,warmup_min_steps=2000,warmup_probe_every=1000,task_steps=256,
         proxy_steps=256 if task=='ot' else 0,proxy_crop=128,checkpoint_every=100,log_every=50,
         max_session_seconds=7200,evaluation_reserve=2400,gate_psnr=25.,collapse_psnr=20.,
         beta=5.,lambda_scale=.1,scope='three_task_bounded_study_not_full_reproduction')

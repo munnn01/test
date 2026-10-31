@@ -15,7 +15,7 @@ def test_three_tasks_keep_forward_pipeline_and_declared_gates():
     for task,codec in [('is','bpg'),('od','bpg'),('ot','h264')]:
         control=a.config(task,'control');masked=a.config(task,'foreground')
         assert control['qps']==[30,35,40,45] and control['codecs']==[codec]
-        assert not control['identity_fallback'] and control['warmup_steps']==2000
+        assert not control['identity_fallback'] and control['warmup_steps']==12000 and control['warmup_min_steps']==2000
         assert control['task_steps']==256 and control['gate_psnr']==25 and control['collapse_psnr']==20
         assert control['seed']==masked['seed'] and masked['sam2']['foreground_extra']==3
         assert control['sam2']['gamma']==0 and masked['sam2']['gamma']==.1
@@ -123,6 +123,16 @@ def test_task_constructor_isolated_from_saved_training_rng():
     a=api('study');torch.manual_seed(31);saved=torch.get_rng_state().clone()
     model=a.initialize_task(lambda:torch.nn.Linear(3,2))
     assert isinstance(model,torch.nn.Linear) and torch.equal(saved,torch.get_rng_state())
+
+def test_warmup_can_converge_before_cap_and_never_restarts_task_resume():
+    a=api('study');cfg=api('data').config('od','control')
+    state={'warmup_updates':2000,'task_updates':0,'warmup_converged':False}
+    assert a.continue_warmup(cfg,state,'warmup')
+    assert a.warmup_ready(cfg,state,{'passed':True})
+    assert not a.warmup_ready(cfg,state,{'passed':False})
+    assert not a.continue_warmup(cfg,state,'task')
+    state['warmup_converged']=True;assert not a.continue_warmup(cfg,state,'warmup')
+    state['warmup_updates']=1000;assert not a.warmup_ready(cfg,state,{'passed':True})
 
 def test_coco_uncompressed_and_compressed_rle_are_decoded_in_original_geometry():
     a=api('data');from pycocotools import mask as cm

@@ -58,6 +58,12 @@ def initialize_task(factory):
     try:return factory()
     finally:restore_rng(state)
 
+def continue_warmup(cfg,state,phase):
+    return phase=='warmup' and state['warmup_updates']<cfg['warmup_steps'] and not state.get('warmup_converged',False)
+
+def warmup_ready(cfg,state,gate):
+    return state['warmup_updates']>=cfg['warmup_min_steps'] and gate['passed']
+
 def finite_step(loss,model,optimizer,max_norm=10.):
     if not torch.isfinite(loss):raise RuntimeError('nonfinite objective')
     loss.backward();params=[p for p in model.parameters() if p.requires_grad]
@@ -239,7 +245,7 @@ def main():
             optimizer=torch.optim.Adam(npp.parameters(),lr=cfg['lr']);optimizer.load_state_dict(old['optimizer']);phase=old['optimizer_phase'];restore_rng(old['rng'])
         log_event(out,'tri_ready',task=cfg['task'],arm=cfg['sam_arm'],train=len(train),dev=len(dev),validation=len(validation),source=os.environ.get('PAPER_SOURCE_SHA256'))
         npp.train();initial={k:v.detach().cpu().clone() for k,v in npp.named_parameters()}
-        while state['warmup_updates']<cfg['warmup_steps']:
+        while continue_warmup(cfg,state,phase):
             if budget.remaining()<cfg['evaluation_reserve']+600:state['stop_reason']='warmup_budget';break
             x=samples[random.randrange(len(samples))][0].to('cuda');h,w=x.shape[-2:];scale=min(1,256/max(h,w))
             x=F.interpolate(x.flatten(0,1),size=(max(16,round(h*scale)),max(16,round(w*scale))),mode='bilinear',align_corners=False)[None]
@@ -248,6 +254,12 @@ def main():
             if state['warmup_updates']==1 or state['warmup_updates']%100==0:
                 log_event(out,'tri_warmup',step=state['warmup_updates'],mse=float(loss.detach()),gradient_norm=norm,lr=optimizer.param_groups[0]['lr'])
             if state['warmup_updates']%cfg['checkpoint_every']==0:save(out,cfg,state,npp,proxy,optimizer,phase)
+            if state['warmup_updates']>=cfg['warmup_min_steps'] and state['warmup_updates']%cfg['warmup_probe_every']==0:
+                calibrate_bn(npp,samples[:32]);state['warmup_calibrated']=True
+                probe=check_fidelity(npp,dev_samples,cfg,cfg['gate_psnr'],budget);state['warmup_fidelity']=probe
+                state['warmup_converged']=warmup_ready(cfg,state,probe)
+                log_event(out,'tri_warmup_dev',step=state['warmup_updates'],**probe);save(out,cfg,state,npp,proxy,optimizer,phase)
+                if not state['warmup_converged']:npp.train()
         task_resume=phase=='task' or task_trained(state)
         if not task_resume and not state.get('warmup_calibrated'):
             calibrate_bn(npp,samples[:32]);state['warmup_calibrated']=True
@@ -260,7 +272,7 @@ def main():
         if not gate['passed'] and not task_resume:
             state['stop_reason']='fidelity_gate_failed';report['execution_complete']=True;return
         if not gate['passed']:state['stop_reason']='task_fidelity_collapse'
-        if state['warmup_updates']<cfg['warmup_steps']:
+        if not task_resume and not warmup_ready(cfg,state,gate):
             report['execution_complete']=True;return
         def make_task():
             if cfg['task']=='ot':

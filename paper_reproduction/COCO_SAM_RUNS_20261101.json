@@ -1,6 +1,6 @@
 {
   "study": "COCO2017_segmentation_detection_first",
-  "updated": 1793481562.1448884,
+  "updated": 1793482192.398415,
   "scientific_complete": false,
   "source": {
     "commit": "6398ec39e989ff43aae16c40eacf0a7ad5519c60",
@@ -21,7 +21,7 @@
   "worker_hours": 8,
   "service_timeout_hours": 12,
   "states": {
-    "RUNNING": 4
+    "COMPLETE": 4
   },
   "jobs": [
     {
@@ -153,21 +153,58 @@
       "launch": {
         "key": "is-control",
         "handle": "tranthihongdieu/coco-sam-is-control-20261101",
-        "status": "Warning: Looks like you're using an outdated `kaggle` version (installed: 2.2.4), please consider upgrading to the latest version (2.2.5)\ntranthihongdieu/coco-sam-is-control-20261101 has status \"KernelWorkerStatus.RUNNING\"",
-        "observed": 1793481499.3418288,
+        "status": "Warning: Looks like you're using an outdated `kaggle` version (installed: 2.2.4), please consider upgrading to the latest version (2.2.5)\ntranthihongdieu/coco-sam-is-control-20261101 has status \"KernelWorkerStatus.COMPLETE\"",
+        "observed": 1793482085.8200393,
         "latest": {
-          "stage": "payload_verified",
+          "stage": "cloud_end",
           "task": "is",
           "mode": "full",
-          "source_sha256": "10d47cde15ac8fc69776ff3b9b3c2c891ab3f026556b48234170779ca0307ade"
+          "source_sha256": "10d47cde15ac8fc69776ff3b9b3c2c891ab3f026556b48234170779ca0307ade",
+          "bootstrap_complete": true,
+          "started": 1793481261.8860319,
+          "worker_exit_code": 0,
+          "wall_seconds": 549.0788519382477
         },
-        "ready": false,
-        "warmup_seen": false,
+        "ready": true,
+        "warmup_seen": true,
         "task_gradient_passed": false,
         "task_training_seen": false,
-        "terminal": []
+        "terminal": [
+          {
+            "stage": "tri_end",
+            "time": 1793481800.8218021,
+            "task": "is",
+            "execution_complete": true,
+            "state": {
+              "warmup_updates": 2000,
+              "task_updates": 0,
+              "proxy_updates": 0,
+              "stop_reason": "fidelity_gate_failed",
+              "warmup_calibrated": true,
+              "warmup_fidelity": {
+                "mse": 0.004408017834066413,
+                "psnr_db": 23.55756657073475,
+                "passed": false,
+                "threshold_db": 25.0,
+                "sources": 8,
+                "mean_clipped_pixel_fraction": 0.024030302288338135
+              }
+            },
+            "error": null
+          },
+          {
+            "stage": "cloud_end",
+            "task": "is",
+            "mode": "full",
+            "source_sha256": "10d47cde15ac8fc69776ff3b9b3c2c891ab3f026556b48234170779ca0307ade",
+            "bootstrap_complete": true,
+            "started": 1793481261.8860319,
+            "worker_exit_code": 0,
+            "wall_seconds": 549.0788519382477
+          }
+        ]
       },
-      "status": "RUNNING"
+      "status": "COMPLETE"
     },
     {
       "key": "is-foreground",
@@ -298,21 +335,58 @@
       "launch": {
         "key": "is-foreground",
         "handle": "tranthihongdieu/coco-sam-is-foreground-20261101",
-        "status": "Warning: Looks like you're using an outdated `kaggle` version (installed: 2.2.4), please consider upgrading to the latest version (2.2.5)\ntranthihongdieu/coco-sam-is-foreground-20261101 has status \"KernelWorkerStatus.RUNNING\"",
-        "observed": 1793481499.3735557,
+        "status": "Warning: Looks like you're using an outdated `kaggle` version (installed: 2.2.4), please consider upgrading to the latest version (2.2.5)\ntranthihongdieu/coco-sam-is-foreground-20261101 has status \"KernelWorkerStatus.COMPLETE\"",
+        "observed": 1793482150.203001,
         "latest": {
-          "stage": "payload_verified",
+          "stage": "cloud_end",
           "task": "is",
           "mode": "full",
-          "source_sha256": "10d47cde15ac8fc69776ff3b9b3c2c891ab3f026556b48234170779ca0307ade"
+          "source_sha256": "10d47cde15ac8fc69776ff3b9b3c2c891ab3f026556b48234170779ca0307ade",
+          "bootstrap_complete": true,
+          "started": 1793481407.641005,
+          "worker_exit_code": 0,
+          "wall_seconds": 591.4139149188995
         },
-        "ready": false,
-        "warmup_seen": false,
+        "ready": true,
+        "warmup_seen": true,
         "task_gradient_passed": false,
         "task_training_seen": false,
-        "terminal": []
+        "terminal": [
+          {
+            "stage": "tri_end",
+            "time": 1793481996.0344734,
+            "task": "is",
+            "execution_complete": true,
+            "state": {
+              "warmup_updates": 2000,
+              "task_updates": 0,
+              "proxy_updates": 0,
+              "stop_reason": "fidelity_gate_failed",
+              "warmup_calibrated": true,
+              "warmup_fidelity": {
+                "mse": 0.00407183107745368,
+                "psnr_db": 23.90210247285112,
+                "passed": false,
+                "threshold_db": 25.0,
+                "sources": 8,
+                "mean_clipped_pixel_fraction": 0.027913939356153605
+              }
+            },
+            "error": null
+          },
+          {
+            "stage": "cloud_end",
+            "task": "is",
+            "mode": "full",
+            "source_sha256": "10d47cde15ac8fc69776ff3b9b3c2c891ab3f026556b48234170779ca0307ade",
+            "bootstrap_complete": true,
+            "started": 1793481407.641005,
+            "worker_exit_code": 0,
+            "wall_seconds": 591.4139149188995
+          }
+        ]
       },
-      "status": "RUNNING"
+      "status": "COMPLETE"
     },
     {
       "key": "od-control",
@@ -443,20 +517,58 @@
       "launch": {
         "key": "od-control",
         "handle": "hoangminhhuy123/coco-sam-od-control-20261101",
-        "status": "Warning: Looks like you're using an outdated `kaggle` version (installed: 2.2.4), please consider upgrading to the latest version (2.2.5)\nhoangminhhuy123/coco-sam-od-control-20261101 has status \"KernelWorkerStatus.RUNNING\"",
-        "observed": 1793481499.7422662,
+        "status": "Warning: Looks like you're using an outdated `kaggle` version (installed: 2.2.4), please consider upgrading to the latest version (2.2.5)\nhoangminhhuy123/coco-sam-od-control-20261101 has status \"KernelWorkerStatus.COMPLETE\"",
+        "observed": 1793482087.059021,
         "latest": {
-          "stage": "study_input_verified",
+          "stage": "cloud_end",
           "task": "od",
-          "sha256": "ab9fde3e3418be44b532eb9c4492382a4a8204e0d64ab5d2b15dad1b2f535dbf"
+          "mode": "full",
+          "source_sha256": "10d47cde15ac8fc69776ff3b9b3c2c891ab3f026556b48234170779ca0307ade",
+          "bootstrap_complete": true,
+          "started": 1793481256.0299447,
+          "worker_exit_code": 0,
+          "wall_seconds": 441.36349964141846
         },
-        "ready": false,
-        "warmup_seen": false,
+        "ready": true,
+        "warmup_seen": true,
         "task_gradient_passed": false,
         "task_training_seen": false,
-        "terminal": []
+        "terminal": [
+          {
+            "stage": "tri_end",
+            "time": 1793481692.0671632,
+            "task": "od",
+            "execution_complete": true,
+            "state": {
+              "warmup_updates": 2000,
+              "task_updates": 0,
+              "proxy_updates": 0,
+              "stop_reason": "fidelity_gate_failed",
+              "warmup_calibrated": true,
+              "warmup_fidelity": {
+                "mse": 0.00409981535631232,
+                "psnr_db": 23.872357021925588,
+                "passed": false,
+                "threshold_db": 25.0,
+                "sources": 8,
+                "mean_clipped_pixel_fraction": 0.004296057663850661
+              }
+            },
+            "error": null
+          },
+          {
+            "stage": "cloud_end",
+            "task": "od",
+            "mode": "full",
+            "source_sha256": "10d47cde15ac8fc69776ff3b9b3c2c891ab3f026556b48234170779ca0307ade",
+            "bootstrap_complete": true,
+            "started": 1793481256.0299447,
+            "worker_exit_code": 0,
+            "wall_seconds": 441.36349964141846
+          }
+        ]
       },
-      "status": "RUNNING"
+      "status": "COMPLETE"
     },
     {
       "key": "od-foreground",
@@ -587,21 +699,58 @@
       "launch": {
         "key": "od-foreground",
         "handle": "hoangminhhuy123/coco-sam-od-foreground-20261101",
-        "status": "Warning: Looks like you're using an outdated `kaggle` version (installed: 2.2.4), please consider upgrading to the latest version (2.2.5)\nhoangminhhuy123/coco-sam-od-foreground-20261101 has status \"KernelWorkerStatus.RUNNING\"",
-        "observed": 1793481499.705881,
+        "status": "Warning: Looks like you're using an outdated `kaggle` version (installed: 2.2.4), please consider upgrading to the latest version (2.2.5)\nhoangminhhuy123/coco-sam-od-foreground-20261101 has status \"KernelWorkerStatus.COMPLETE\"",
+        "observed": 1793482086.6638157,
         "latest": {
-          "stage": "payload_verified",
+          "stage": "cloud_end",
           "task": "od",
           "mode": "full",
-          "source_sha256": "10d47cde15ac8fc69776ff3b9b3c2c891ab3f026556b48234170779ca0307ade"
+          "source_sha256": "10d47cde15ac8fc69776ff3b9b3c2c891ab3f026556b48234170779ca0307ade",
+          "bootstrap_complete": true,
+          "started": 1793481408.4427586,
+          "worker_exit_code": 0,
+          "wall_seconds": 600.3113486766815
         },
-        "ready": false,
-        "warmup_seen": false,
+        "ready": true,
+        "warmup_seen": true,
         "task_gradient_passed": false,
         "task_training_seen": false,
-        "terminal": []
+        "terminal": [
+          {
+            "stage": "tri_end",
+            "time": 1793482004.5554793,
+            "task": "od",
+            "execution_complete": true,
+            "state": {
+              "warmup_updates": 2000,
+              "task_updates": 0,
+              "proxy_updates": 0,
+              "stop_reason": "fidelity_gate_failed",
+              "warmup_calibrated": true,
+              "warmup_fidelity": {
+                "mse": 0.003590362874092534,
+                "psnr_db": 24.448616555298127,
+                "passed": false,
+                "threshold_db": 25.0,
+                "sources": 8,
+                "mean_clipped_pixel_fraction": 0.02082935263837271
+              }
+            },
+            "error": null
+          },
+          {
+            "stage": "cloud_end",
+            "task": "od",
+            "mode": "full",
+            "source_sha256": "10d47cde15ac8fc69776ff3b9b3c2c891ab3f026556b48234170779ca0307ade",
+            "bootstrap_complete": true,
+            "started": 1793481408.4427586,
+            "worker_exit_code": 0,
+            "wall_seconds": 600.3113486766815
+          }
+        ]
       },
-      "status": "RUNNING"
+      "status": "COMPLETE"
     }
   ],
   "tracking": {
