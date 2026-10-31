@@ -1,15 +1,17 @@
 {
-  "source_sha256": "96ed57cf1898d532e9b2ba405eb8dacc14b1c33542d2bd2b5035a3e15bc13b30",
+  "source_sha256": "10d47cde15ac8fc69776ff3b9b3c2c891ab3f026556b48234170779ca0307ade",
   "source_hashes": {
     "docs/IMAGE_PAPER_STUDY.md": "01fdea89c60354f28f68e1ac7881074382d7a4c68b171d48319b6318708d4eb6",
     "docs/LEDGER.md": "b825d4536ce0523b2e99293f7d0bdc798db73bc6db95a89f05684de4566d3768",
     "docs/PLAN.md": "5fbb59b37d8112e97ada1f18b282ac7aca0e0a6e32e47e1b7120320343196e5d",
     "docs/PROXY_P05.md": "87559883acc4faa71628be27c3bf1ab904a870299296a598eea9003d3b2e9c28",
     "docs/SAM2_IMAGE_STUDY.md": "3240dbc1bd9739936d435dbf762bfffd608b0e1a1ac5a62b2fd9c7bbce48f31a",
+    "docs/SEG_TRACK_SAM_STUDY.md": "ecb54ed5c83c4afd6385b0b94efadbbc57d9b650bca1e98e5fab077c65136189",
     "docs/superpowers/plans/2026-10-28-parallel-task-p05.md": "4a6ea1fe0fb0e4fc80ec8a876662607fd5535f48211a8ffad1f4edef0073485b",
     "docs/superpowers/plans/2026-10-28-proxy-p05.md": "ba172eb71e78355e9eef9a3589b7241ff23337592ba8ec8e82e559bc6fae08fc",
     "docs/superpowers/plans/2026-10-31-image-paper-study.md": "3ea45795e9f541d4643e9d1c582865ac3607be43e41b01575839e43f075da355",
     "docs/superpowers/plans/2026-10-31-sam2-image-study.md": "ac3afe12151c0578e8ac58f7eaa32f7fae37946b959f047932e87378ee8ad99a",
+    "docs/superpowers/plans/2026-11-01-seg-track-sam.md": "40b794c75e4d951edcf60ac6bb2bfc6554d18773b169de87ed8ed4d23ac83cf9",
     "pyproject.toml": "d28f9e82385f6cc67954af1820e6c8471f7e01012c4abbd06831e34899af8d38",
     "README.md": "4873fa6948d045726a0f7243ac57a2d718437a76a6f14ceec3243dbb6004d0ad",
     "reproduce/__init__.py": "470d103b325e9ab0e8b5e33f4e0b960259a8f221c32ffb25bc3bffc8327ab654",
@@ -35,6 +37,10 @@
     "reproduce/tasks.py": "67d1a6f1ee5c9f2b9b1ca228c88f39bd8973f9bb837601dd622d2122850d728e",
     "reproduce/tensor_bytes.py": "316bc2d3d9be10ae484954b4e91c48ef4ada3596ab912280ee7649eba056e64e",
     "reproduce/training.py": "039ef6149c1a608258c62894619e65126ca20aa7125ef0b3bb3e5ab83c60ca4b",
+    "reproduce/tri_task_cloud.py": "5f101e037e59ce8bf19e055167e66fe75bbf27cb2a394cdebc1bcbb401ce8a70",
+    "reproduce/tri_task_data.py": "d1e4433eb51baafe3459b5369fb3b50d23a4566b6d1e0cf94453b626f023fa79",
+    "reproduce/tri_task_models.py": "e00e6848f418a4f7d3a1cc24c5c888475474bd75fae54a8748abfb57be967d12",
+    "reproduce/tri_task_study.py": "6d700fcebe729966cee8c7e086daf8dc1aec1b7191ebc2846301d121de372831",
     "reproduce/vendor/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
     "reproduce/vendor/adaptive/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
     "reproduce/vendor/adaptive/Preprocessor.py": "6ca64c68c0b7f79b5d0e6c85ac727b4fbbcf3eb4af586e41e5ae06296b41f85e",
@@ -69,6 +75,8 @@
     "tests/test_tensor_bytes.py": "c6b8f34582468286c73a0f3f68a81ba79368b7fcda989115efaf4cf775830d93",
     "tests/test_tracking_setup.py": "6d4ef4bdbbb27f06b78c14b0418c4de9500991c6977c91b72451120b67afcd41",
     "tests/test_tracking_visibility.py": "06a278780c6a87d4c395654e76300c3e42b552fc9c2a790be2eb917de2b61ffc",
-    "tests/test_training_contracts.py": "fd9709ac04e11966ef3b8cb9acbe77ef39b9dd4fc6960ff6d133866aa2bf96a3"
+    "tests/test_training_contracts.py": "fd9709ac04e11966ef3b8cb9acbe77ef39b9dd4fc6960ff6d133866aa2bf96a3",
+    "tests/test_tri_task.py": "c5cf3a6afe6a7214939150cf0c97d3925a84c2be455f44ff1b1adb8147941daa",
+    "tests/test_tri_task_cloud.py": "d07bb1318ba7baf74462ff08fd22a15a4ef7b19fa70aefb755859d41e0534e8f"
   }
 }
