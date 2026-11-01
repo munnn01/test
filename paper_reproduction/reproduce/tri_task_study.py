@@ -106,7 +106,7 @@ def fit_video_proxy(proxy,samples,cfg,codec,out,budget):
         if budget.remaining()<cfg['evaluation_reserve']+900:break
         q=QPS[step%4];x=samples[(step//4)%len(samples)][0].to('cuda');h,w=x.shape[-2:];size=cfg['proxy_crop']
         yy=(h-size)//2;xx=(w-size)//2;x=x[...,yy:yy+size,xx:xx+size]
-        actual=codec(x,'h264',q);value=proxy(x,q)
+        actual=codec(x,cfg['codecs'][0],q);value=proxy(x,q)
         main[q].zero_grad(set_to_none=True);aux[q].zero_grad(set_to_none=True);head.zero_grad(set_to_none=True)
         loss=proxy_lambda(q)*(value.reconstruction-actual.reconstruction).square().mean()+(
             value.bpp.clamp_min(1e-8).log()-math.log(max(actual.bpp,1e-8))).square()+.001*value.raw_bpp
@@ -116,7 +116,7 @@ def fit_video_proxy(proxy,samples,cfg,codec,out,budget):
         if not torch.isfinite(auxloss):raise RuntimeError('nonfinite proxy auxiliary loss')
         auxloss.backward();aux[q].step();updates+=1
         if step%32==0:log_event(out,'tri_proxy_fit',step=updates,qp=q,real_bpp=actual.bpp,proxy_bpp=float(value.bpp.detach()),loss=float(loss.detach()))
-    freeze(proxy);return dict(updates=updates,target=cfg['proxy_steps'],scope='short actual-H264 reconstruction and rate refit; no convergence claim')
+    freeze(proxy);return dict(updates=updates,target=cfg['proxy_steps'],codec=cfg['codecs'][0],scope='short codec-specific reconstruction and rate refit; no convergence claim')
 
 def proxy_probe(proxy,samples,cfg,codec,out,budget):
     proxy.eval();rows=[]
@@ -203,7 +203,10 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--config',type=Path,required=True)
     parser.add_argument('--proxy',type=Path,required=True);parser.add_argument('--proxy-sha256',required=True)
     parser.add_argument('--inputs',type=Path,default=Path('/kaggle/input'));parser.add_argument('--out',type=Path,required=True)
-    parser.add_argument('--resume',type=Path);args=parser.parse_args();cfg=json.loads(args.config.read_text())
+    parser.add_argument('--resume',type=Path);parser.add_argument('--warm-start',type=Path);parser.add_argument('--export-warmup',type=Path)
+    args=parser.parse_args();cfg=json.loads(args.config.read_text())
+    if (args.warm_start or args.export_warmup) and cfg.get('study_profile')!='coco_codecs':raise ValueError('warm-start reserved for paired codec study')
+    if args.resume and args.warm_start:raise ValueError('resume and warm-start are exclusive')
     if cfg!=config(cfg['task'],cfg['sam_arm']):raise ValueError('declared configuration differs')
     if args.proxy_sha256!=PUBLIC_PROXY['sha256']:raise ValueError('declared public proxy SHA differs')
     out=args.out;out.mkdir(parents=True,exist_ok=True);budget=Budget(cfg['max_session_seconds']);started=time.time()
@@ -216,7 +219,7 @@ def main():
         random.seed(cfg['seed']);np.random.seed(cfg['seed']);torch.manual_seed(cfg['seed']);torch.cuda.manual_seed_all(cfg['seed']);torch.set_num_threads(2)
         torch.backends.cudnn.benchmark=False
         codec_args=dict(preset=cfg['preset'],gop=cfg['gop'],fps=cfg['fps'])
-        if cfg['task']!='ot':
+        if cfg['codecs'][0]=='bpg':
             assets=ensure_bpg(Path('/kaggle/working/paper_assets/bpg'));codec_args.update(bpgenc=assets['bpgenc'],bpgdec=assets['bpgdec'])
         codec=RealCodec(**codec_args);original_train,original_val,inventory=records_for_task('ot' if cfg['task']=='ot' else 'od',args.inputs)
         train,dev,validation,skipped=select_cohorts(original_train,original_val,cfg);annotation=None
@@ -234,10 +237,23 @@ def main():
         saved=load_proxy_input(args.proxy,args.proxy_sha256,'od');bank=ImageProxyBank(saved['proxy_quality'],pretrained=False);restore_proxy_state(bank,saved['proxy'])
         report['proxy_origin']={k:v for k,v in saved.items() if k!='proxy'};del saved
         report['proxy_mask_canonicalization']=canonicalize_proxy_masks(bank);proxy=FrameProxy(bank).to('cuda')
-        if cfg['task']=='ot':report['proxy_fit']=fit_video_proxy(proxy,samples,cfg,codec,out,budget);state['proxy_updates']=report['proxy_fit']['updates']
+        warm=None
+        if args.warm_start:
+            from .coco_codec_study import validate_warm_start
+            warm=torch.load(args.warm_start,map_location='cpu',weights_only=False)
+            validate_warm_start(warm,cfg,os.environ.get('PAPER_SOURCE_SHA256'));proxy.load_state_dict(warm['proxy'])
+        elif cfg['proxy_steps']>0:
+            report['proxy_fit']=fit_video_proxy(proxy,samples,cfg,codec,out,budget);state['proxy_updates']=report['proxy_fit']['updates']
         freeze(proxy);report['proxy_probe']=proxy_probe(proxy,dev_samples,cfg,codec,out,budget);report['frozen_proxy_sha256']=model_digest(proxy)
+        if cfg.get('study_profile')=='coco_codecs':
+            from .coco_codec_study import direction_probe
+            report['rate_direction']=direction_probe(proxy,dev_samples,cfg,codec,out,budget)
         torch.manual_seed(cfg['seed']);torch.cuda.manual_seed_all(cfg['seed']);npp=PaperNPP().to('cuda')
         report['initial_npp_sha256']=model_digest(npp);optimizer=torch.optim.Adam(npp.parameters(),lr=cfg['lr']);phase='warmup'
+        if warm is not None:
+            npp.load_state_dict(warm['npp']);optimizer.load_state_dict(warm['optimizer']);state.update(warm['state']);restore_rng(warm['rng'])
+            report['warm_start_sha256']=digest(args.warm_start)
+            del warm
         if args.resume:
             old=torch.load(args.resume,map_location='cpu',weights_only=False)
             validate_resume(old,cfg,os.environ.get('PAPER_SOURCE_SHA256'))
@@ -274,6 +290,12 @@ def main():
         if not gate['passed']:state['stop_reason']='task_fidelity_collapse'
         if not task_resume and not warmup_ready(cfg,state,gate):
             report['execution_complete']=True;return
+        report['warmup_npp_sha256']=model_digest(npp)
+        if args.export_warmup and not args.warm_start:
+            args.export_warmup.parent.mkdir(parents=True,exist_ok=True)
+            save(out,cfg,state,npp,proxy,optimizer,phase)
+            import shutil
+            shutil.copyfile(out/'last.pt',args.export_warmup)
         def make_task():
             if cfg['task']=='ot':
                 tracker_assets=ensure_tracking(Path('/kaggle/working/paper_assets/tracking'));return TrackingTask(tracker_assets['checkpoint'])
@@ -286,7 +308,8 @@ def main():
         while state['task_updates']<cfg['task_steps'] and state['stop_reason']!='task_fidelity_collapse':
             if budget.remaining()<cfg['evaluation_reserve']:state['stop_reason']='task_budget';break
             i=random.randrange(len(samples));x,target,meta=samples[i];mask=cache.load(train[i],x);x=x.to('cuda')
-            q=random.choice(cfg['qps']);optimizer.zero_grad(set_to_none=True);y=npp(x,q);p=proxy(y,q);actual=codec(y,cfg['codecs'][0],q)
+            q=cfg['qps'][state['task_updates']%4] if cfg.get('study_profile')=='coco_codecs' else random.choice(cfg['qps'])
+            optimizer.zero_grad(set_to_none=True);y=npp(x,q);p=proxy(y,q);actual=codec(y,cfg['codecs'][0],q)
             decoded=real_forward(p.reconstruction,actual.reconstruction);rate=real_forward(p.bpp,p.bpp.new_tensor(actual.bpp));task_loss=task.loss(decoded,target)
             if state['task_updates']==0:
                 report['task_npp_gradient_norm']=task_gradient_norm(task_loss,npp)
