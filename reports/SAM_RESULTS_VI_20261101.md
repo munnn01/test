@@ -1,3 +1,5 @@
+> Snapshot 01/11/2026. Four workers have now completed. See [final results 02/11/2026](SAM_RECOVERY_RESULTS_20261102_VI.md).
+
 # Kết quả kiểm tra ngày 01/11/2026
 
 NPP đối chứng chưa tiết kiệm bitrate. Gaussian σ=0,5 tốt hơn NPP trên cả bốn đường đã đánh giá; riêng IS–H.264 đạt BD-rate −16,96%. Hai nhánh SAM chưa có kết quả RD hoàn chỉnh trong snapshot này.
