@@ -45,7 +45,7 @@ def prepare(root,directory,account,slug,cfg,spec):
             c[node.targets[0].id]=ast.literal_eval(node.value)
     c.update(TASK=cfg['task'],STUDY=cfg,INPUT_SPEC=PUBLIC_PROXY,RECOVERY_SPEC=spec)
     nb['cells'][0]['source']=code_for(c).splitlines(True)
-    meta=json.loads((directory/'kernel-metadata.json').read_text());meta['kernel_sources']=[spec['ref']]
+    meta=json.loads((directory/'kernel-metadata.json').read_text());meta['kernel_sources']=[spec['ref'].rsplit('/',1)[0]]
     meta['dataset_sources']=pinned_datasets('od')+[PUBLIC_PROXY['ref']]
     job.update(task=cfg['task'],config=cfg,input_spec=PUBLIC_PROXY,recovery_spec=spec)
     for name,value in (('notebook.ipynb',nb),('kernel-metadata.json',meta)):
@@ -66,7 +66,7 @@ def verify(directory,root=None):
         or notebook['cells'][0].get('cell_type')!='code'):raise ValueError('exactly one canonical code cell required')
     expected_meta=dict(id=job['handle'],title=job['handle'].split('/')[1],code_file='notebook.ipynb',
         language='python',kernel_type='notebook',is_private=True,enable_gpu=True,enable_internet=True,
-        dataset_sources=pinned_datasets('od')+[PUBLIC_PROXY['ref']],kernel_sources=[spec['ref']],competition_sources=[],model_sources=[])
+        dataset_sources=pinned_datasets('od')+[PUBLIC_PROXY['ref']],kernel_sources=[spec['ref'].rsplit('/',1)[0]],competition_sources=[],model_sources=[])
     if meta!=expected_meta:raise ValueError('execution metadata or undeclared inputs differ')
     code=''.join(notebook['cells'][0]['source']);c={}
     names={'TASK','MODE','MANIFEST','SOURCE_SHA','RESUME_DATASET','RESUME_SHA','BUNDLE','STUDY','INPUT_SPEC','RECOVERY_SPEC'}
@@ -75,7 +75,7 @@ def verify(directory,root=None):
     if (set(c)!=names or c['TASK']!=cfg['task'] or c['MODE']!='full' or c['STUDY']!=cfg or c['INPUT_SPEC']!=PUBLIC_PROXY or c['RECOVERY_SPEC']!=spec
         or c['RESUME_DATASET'] is not None or c['RESUME_SHA'] is not None or c['SOURCE_SHA']!=job['source_sha256'] or c['MANIFEST']!=job['source_hashes']
         or meta['id']!=job['handle'] or meta['is_private'] is not True or meta['enable_gpu'] is not True or meta['enable_internet'] is not True
-        or meta['dataset_sources']!=pinned_datasets('od')+[PUBLIC_PROXY['ref']] or meta['kernel_sources']!=[spec['ref']]
+        or meta['dataset_sources']!=pinned_datasets('od')+[PUBLIC_PROXY['ref']] or meta['kernel_sources']!=[spec['ref'].rsplit('/',1)[0]]
         or code!=code_for(c)):raise ValueError('recovery cloud binding differs')
     validate_legacy(c['BUNDLE'],c['MANIFEST'],c['SOURCE_SHA'])
     if root is not None:

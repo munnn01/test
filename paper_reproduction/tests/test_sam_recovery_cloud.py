@@ -14,7 +14,7 @@ def test_recovery_notebook_binds_same_owner_parent_and_rejects_code_tamper(tmp_p
     names=['cloud_status.json','control/study_run.json','control/config.json','control/cohort.json','control/analyzer.json','control/validation/metrics.json']
     spec=dict(ref='owner/sam-power-is-h264-20261101/1',source_sha256=sha,source_hashes=manifest,files={n:'a'*64 for n in names})
     p=tmp_path/'payload';cloud.prepare(root,p,'owner','sam-recover-is-h264',config('is','control'),spec)
-    meta,job=cloud.verify(p,root);assert meta['kernel_sources']==[spec['ref']]
+    meta,job=cloud.verify(p,root);assert meta['kernel_sources']==['owner/sam-power-is-h264-20261101']
     wrong=dict(spec,ref=spec['ref'].replace('owner/','different/'))
     with pytest.raises(ValueError):cloud.validate_spec(wrong,'owner')
     nb=json.loads((p/'notebook.ipynb').read_text())
