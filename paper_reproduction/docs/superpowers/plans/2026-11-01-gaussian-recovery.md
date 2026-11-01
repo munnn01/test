@@ -1,0 +1,14 @@
+# Recover SAM-power workers after Gaussian device failure
+Evidence: all4proxy screens pass, controls trained768steps and evaluated8points. StopIteration originates processed_video(next(npp.parameters())) when Gaussian has only kernel buffer. Fix Gaussian with a frozen device anchor, matching its existing evaluation contract; original42core sources remain unchanged.
+
+TDD: reproduce through actual processed_video, not just direct Gaussian.forward. Verify warm snapshot metadata migration preserves exact NPP/proxy states and rejects wrong source/config/phase/digests. Recovery consumes same-owner pinnedv1 kernel outputs. Verify parent control report/cloud receipt/metric hashes and exact source/config/model identities. Source compatibility must show all old training modules unchanged except the one frozen Gaussian anchor line. No control training rerun; finish only Gaussian baselines, then train foreground and sam_boundary from original warm/proxy/optimizer/RNG snapshot with explicit source-migration receipt. Do not relax gates or change NPP/loss/QPs/cohorts.
+
+Four recovery workers on the same owners; private parent artifacts remain on each owner, no cross-owner dataset copies.6000s per remaining arm plus baseline budget,19200s service cap. Preserve old runs/results, distinct recovery slugs/output directory. Full pytest, independent final review, source/privacy/runtime verification. Report valid control BD-rate now; SAM and Gaussian comparisons remain incomplete until recovered workers finish.
+
+Verification ledger:
+- Gaussian regression observed StopIteration, then passed with frozen device anchor. Warm-state source/config/phase/digest mismatch tests pass.
+- Initial full suite189passed,4pycocotools deprecations; shared Windows pytest temp is inaccessible, so use unique SAM outputs basetemp.
+- Independent fresh reviewer found one Important canonical-notebook gap; mutation tests reproduced acceptance of extra code cells and changed execution metadata. Fixed via single-cell and exact execution-metadata binding; full suite rerun required. No deferred minors.
+- Ruling: preserve completed control artifacts and finish Gaussian separately rather than resume control training, to retain original warm-up identity; exact codec-only anchors must match or recovery stops.
+- Reviewer declined actual checkpoint, CUDA, mount/visibility and runtime claims: validate checkpoints/cohorts/task identities inside each worker, validate private server source after submission, observe live execution; runtime budgets remain caps rather than measured guarantees.
+- CPU real-codec integration:24points across Gaussian0.5/0.8, codec-only,4QP,H264/H265 using processed_video; shape and byte accounting passed.

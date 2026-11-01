@@ -105,6 +105,7 @@ class SAMGaussianNPP(nn.Module):
         r=math.ceil(3*sigma);v=torch.arange(-r,r+1,dtype=torch.float32)
         v=torch.exp(-v.square()/(2*sigma*sigma));v=v/v.sum()
         self.register_buffer('kernel',(v[:,None]*v[None,:])[None,None].repeat(3,1,1,1))
+        self.anchor=nn.Parameter(torch.zeros(1),requires_grad=False)
     def forward(self,x,qp):
         b,t,c,h,w=x.shape;r=self.kernel.shape[-1]//2
         return F.conv2d(F.pad(x.reshape(b*t,c,h,w),(r,r,r,r),mode='replicate'),self.kernel,groups=3).reshape_as(x).clamp(0,1)
