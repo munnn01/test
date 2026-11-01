@@ -1,6 +1,6 @@
 {
   "study": "sam_gaussian_recovery_v1",
-  "updated": 1793533538.9349475,
+  "updated": 1793534120.0995042,
   "code_commit": "d7a9ad7bfe8746cb38489b9998f5f736984b9d46",
   "scientific_complete": false,
   "tracking": "DEFERRED",
@@ -36,9 +36,22 @@
         "checked": 1793533165.8576982
       },
       "latest": {
-        "stage": "study_input_verified",
-        "task": "is",
-        "sha256": "ab9fde3e3418be44b532eb9c4492382a4a8204e0d64ab5d2b15dad1b2f535dbf"
+        "stage": "tri_validation_point",
+        "time": 1793533811.0598183,
+        "arm": "codec_only",
+        "qp": 30,
+        "codec": "h264",
+        "quality": 0.45853201452220715,
+        "metrics": {
+          "ap": 0.45853201452220715,
+          "ap50": 0.7098310332893668,
+          "ap75": 0.5189161377291235,
+          "iou_type": "segm"
+        },
+        "sources": 64,
+        "bytes": 2366684,
+        "pixels": 22908416,
+        "bpp": 0.8264854278881613
       },
       "artifact_copy": {
         "key": "is-h264",
@@ -84,10 +97,22 @@
         "checked": 1793533372.2502718
       },
       "latest": {
-        "stage": "payload_verified",
-        "task": "is",
-        "mode": "full",
-        "source_sha256": "9fa98ecc542dc0bc193c38cfa9dcb0b47f4da5cd44d24916815f3d6d964fa69c"
+        "stage": "tri_validation_point",
+        "time": 1793534079.2849758,
+        "arm": "codec_only",
+        "qp": 30,
+        "codec": "h265",
+        "quality": 0.45693534365487587,
+        "metrics": {
+          "ap": 0.45693534365487587,
+          "ap50": 0.702497154959059,
+          "ap75": 0.5275816484091929,
+          "iou_type": "segm"
+        },
+        "sources": 64,
+        "bytes": 2141431,
+        "pixels": 22908416,
+        "bpp": 0.7478233327000872
       },
       "artifact_copy": {
         "key": "is-h265",
@@ -133,10 +158,22 @@
         "checked": 1793533373.2862728
       },
       "latest": {
-        "stage": "payload_verified",
-        "task": "od",
-        "mode": "full",
-        "source_sha256": "9fa98ecc542dc0bc193c38cfa9dcb0b47f4da5cd44d24916815f3d6d964fa69c"
+        "stage": "tri_validation_point",
+        "time": 1793533954.3877156,
+        "arm": "codec_only",
+        "qp": 30,
+        "codec": "h264",
+        "quality": 0.5107680295108498,
+        "metrics": {
+          "ap": 0.5107680295108498,
+          "ap50": 0.7087570868234807,
+          "ap75": 0.566492617409424,
+          "iou_type": "bbox"
+        },
+        "sources": 64,
+        "bytes": 2366684,
+        "pixels": 22908416,
+        "bpp": 0.8264854278881613
       },
       "artifact_copy": {
         "key": "od-h264",
@@ -182,10 +219,22 @@
         "checked": 1793533371.490603
       },
       "latest": {
-        "stage": "payload_verified",
-        "task": "od",
-        "mode": "full",
-        "source_sha256": "9fa98ecc542dc0bc193c38cfa9dcb0b47f4da5cd44d24916815f3d6d964fa69c"
+        "stage": "tri_validation_point",
+        "time": 1793533958.1420667,
+        "arm": "codec_only",
+        "qp": 45,
+        "codec": "h265",
+        "quality": 0.3933578113398919,
+        "metrics": {
+          "ap": 0.3933578113398919,
+          "ap50": 0.5993313377590136,
+          "ap75": 0.4078133081474656,
+          "iou_type": "bbox"
+        },
+        "sources": 64,
+        "bytes": 480168,
+        "pixels": 22908416,
+        "bpp": 0.16768265426994167
       },
       "artifact_copy": {
         "key": "od-h265",

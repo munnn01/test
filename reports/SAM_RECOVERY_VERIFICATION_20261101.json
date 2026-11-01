@@ -62,5 +62,55 @@
     "deferred_minors": []
   },
   "transport": "successful private same-owner CPU artifact copy v2 of exact v1 checkpoint/report bytes",
-  "original_npp_retained": true
+  "original_npp_retained": true,
+  "local_parent_blob_copies_verified": [
+    {
+      "key": "is-h264",
+      "member": "shared_warmup.pt",
+      "sha256": "b70bba80111d6203f4f2c0c06ca524f0dde3396b692a1b6ef462f4c38094ff0c",
+      "bytes": 430942930
+    },
+    {
+      "key": "is-h264",
+      "member": "control/last.pt",
+      "sha256": "7e89bb5029273bbcfc42ab404d5e2f3423941642ebe10bde4a68a43941433464",
+      "bytes": 431448265
+    },
+    {
+      "key": "is-h265",
+      "member": "shared_warmup.pt",
+      "sha256": "391e0a004c68e406efbe3710ffcab050a84313753e7240318425730dd4a2b5fe",
+      "bytes": 430942930
+    },
+    {
+      "key": "is-h265",
+      "member": "control/last.pt",
+      "sha256": "be4714c2c4a317fe1178e64d7ce5a9d258e53afb71c6c9368e537af973485000",
+      "bytes": 431448265
+    },
+    {
+      "key": "od-h264",
+      "member": "shared_warmup.pt",
+      "sha256": "b33ce8f2409834cb63504fb21ce9eb306114bbb76db1117a03b1c8fbafd37008",
+      "bytes": 430942930
+    },
+    {
+      "key": "od-h264",
+      "member": "control/last.pt",
+      "sha256": "095d4eb972546d9270681475e69c3dbfe013482bc4a2abaf5effddf053756180",
+      "bytes": 431448201
+    },
+    {
+      "key": "od-h265",
+      "member": "shared_warmup.pt",
+      "sha256": "2d13a6fac63d082c50771f784c38d607ad5da93bc9eaf1932be47dc6e9c7d579",
+      "bytes": 430942930
+    },
+    {
+      "key": "od-h265",
+      "member": "control/last.pt",
+      "sha256": "98ce93b1ae2ca8b1ea99585c0cb056b886af4ecaa941e20a7d5e5faed2d60a9d",
+      "bytes": 431448201
+    }
+  ]
 }
