@@ -54,12 +54,23 @@ class ContentProxy(nn.Module):
     def __init__(self,bank,codec):
         super().__init__();self.bank=bank;self.codec=codec
         self.register_buffer('content_scale',torch.ones(4))
+        self.register_buffer('rounded_scale',torch.ones(4));self.register_buffer('rounded_power',torch.ones(4))
+        self.register_buffer('relaxed_scale',torch.ones(4));self.register_buffer('relaxed_power',torch.ones(4))
+        self.register_buffer('mode_power_enabled',torch.tensor(False))
+    @property
+    def separate_modes(self):return bool(self.mode_power_enabled)
+    @separate_modes.setter
+    def separate_modes(self,value):self.mode_power_enabled.fill_(bool(value))
     def forward(self,x,qp):
         if qp not in QPS or x.ndim!=5 or x.shape[1]!=1:raise ValueError('configured one-frame proxy input required')
         b,t,c,h,w=x.shape
         value=self.bank(x.reshape(b*t,1,c,h,w),qp)
-        scale=self.content_scale[QPS.index(qp)]
-        content=scale*value.bpp
+        i=QPS.index(qp)
+        if self.separate_modes:
+            scale=self.relaxed_scale[i] if self.bank.training else self.rounded_scale[i]
+            power=self.relaxed_power[i] if self.bank.training else self.rounded_power[i]
+            content=scale*value.bpp.clamp_min(1e-9).pow(power)
+        else:content=self.content_scale[i]*value.bpp
         overhead=x.new_tensor(self.codec.overhead(x,qp)*8/(t*h*w))
         return SimpleNamespace(reconstruction=value.reconstruction.reshape_as(x),bpp=content+overhead,
             content_bpp=content,overhead_bpp=overhead,raw_bpp=value.bpp)
@@ -113,3 +124,26 @@ def screen_gate(rows,direction,cfg):
         median_relative_error=median,p90_relative_error=p90,
         content_median_relative_error=content_median,content_p90_relative_error=content_p90,
         direction_alignment=alignment,direction_untied=direction['untied'])
+
+def fit_mode_power_scales(rows,allow_power=True):
+    result={}
+    for mode in ('rounded','relaxed'):
+        scales=[];powers=[]
+        for q in QPS:
+            selected=[r for r in rows if r.get('qp')==q and r.get('mode')==mode]
+            if not selected:raise ValueError('both modes and all QPs required')
+            xs=[];ys=[]
+            for r in selected:
+                a,b=r['raw_bpp'],r['content_bpp']
+                if not (math.isfinite(a) and math.isfinite(b) and a>0 and b>0):
+                    raise ValueError('positive finite calibration rates required')
+                xs.append(math.log(a));ys.append(math.log(b))
+            mx=sum(xs)/len(xs);my=sum(ys)/len(ys);power=1.
+            var=sum((x-mx)**2 for x in xs)
+            if allow_power and var>1e-12:
+                power=min(4.,max(.25,sum((x-mx)*(y-my) for x,y in zip(xs,ys))/var))
+            log_scale=my-power*mx
+            if not math.log(1e-4)<log_scale<math.log(1e4):raise ValueError('power calibration scale outside declared bounds')
+            scales.append(math.exp(log_scale));powers.append(power)
+        result[mode]=dict(scales=scales,powers=powers)
+    return result

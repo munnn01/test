@@ -5,7 +5,7 @@ from pathlib import Path
 import torch
 from . import coco_codec_study as paired
 from . import tri_task_study as study
-from .codec_content_rate import NALCodec,ContentProxy,fit_scales,screen_gate
+from .codec_content_rate import NALCodec,ContentProxy,fit_scales,fit_mode_power_scales,screen_gate
 from .protocol import QPS,proxy_lambda
 from .tasks import freeze
 from .training import log_event,rng_state,restore_rng
@@ -80,12 +80,21 @@ def calibrate_content(proxy,npp,samples,cfg,codec,out,budget):
                                 content_bpp=actual.content_bytes*8/pixels,overhead_bytes=actual.overhead_bytes,
                                 paid_bytes=actual.bytes))
                 if (i+1)%4==0:log_event(out,'content_rate_fit_cache',sources=i+1,target=cfg['rate_fit_sources'])
-        scales=fit_scales(rows);proxy.content_scale.copy_(proxy.content_scale.new_tensor(scales))
+        if cfg['rate_profile']=='nal_content_v2_power':
+            fits=fit_mode_power_scales(rows)
+            for mode,values in fits.items():
+                getattr(proxy,mode+'_scale').copy_(proxy.content_scale.new_tensor(values['scales']))
+                getattr(proxy,mode+'_power').copy_(proxy.content_scale.new_tensor(values['powers']))
+            proxy.separate_modes=True
+            scales=None;method='separate(mode,QP) positive power laws; TRAIN-only, non-VCL excluded'
+        else:
+            scales=fit_scales(rows);proxy.content_scale.copy_(proxy.content_scale.new_tensor(scales));fits=None
+            method='geometric-mean positive content scale per QP; non-VCL excluded from target'
         receipt=dict(sources=[s[2]['id'] for s in samples[:cfg['rate_fit_sources']]],rows=rows,scales=scales,
-            method='geometric-mean positive content scale per QP; non-VCL excluded from target')
+            mode_fits=fits,method=method)
         (out/'content_calibration.json').write_text(json.dumps(receipt,indent=2))
-        log_event(out,'content_rate_calibrated',scales=scales,rows=len(rows))
-        return dict(scales=scales,rows=len(rows),sources=len(receipt['sources']))
+        log_event(out,'content_rate_calibrated',scales=scales,mode_fits=fits,rows=len(rows))
+        return dict(scales=scales,mode_fits=fits,rows=len(rows),sources=len(receipt['sources']))
     finally:
         npp.train(training);proxy.eval();restore_rng(saved)
 

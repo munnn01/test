@@ -343,6 +343,12 @@ def main():
         if cfg.get('rate_profile'):
             report['final_content_screen']=audit_content(proxy,npp,dev_samples,cfg,codec,out,budget,'final')['gate']
         report['metrics']=evaluate(cfg,validation,npp,task,codec,out/'validation',annotation,budget)
+        if cfg.get('classical_sigmas') and cfg['sam_arm']=='control':
+            from .sam_structured import SAMGaussianNPP
+            report['classical_baselines']={}
+            for sigma in cfg['classical_sigmas']:
+                gaussian=SAMGaussianNPP(sigma).to('cuda')
+                report['classical_baselines'][str(sigma)]=evaluate(cfg,validation,gaussian,task,codec,out/'classical'/str(sigma),annotation,budget)
         report['execution_complete']=True
     except BaseException as error:
         report['error']=f'{type(error).__name__}: {error}'

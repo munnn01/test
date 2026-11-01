@@ -32,3 +32,13 @@ def test_full_geometry_fit_uses_train_only_and_audit_is_paired(tmp_path):
     assert all(r['source'].startswith('dev/') for r in result['rows'])
     assert result['gate']['passed'] and result['direction']['aligned']==16
     assert npp.training
+
+def test_v2_calibration_enables_persistent_mode_specific_heads(tmp_path):
+    codec=Codec();proxy=ContentProxy(Bank(),codec);npp=NPP();cfg=config('od','control','h265')
+    cfg.update(rate_profile='nal_content_v2_power',rate_fit_sources=2)
+    train=[(torch.full((1,1,3,16,32),v),{},dict(id='train/'+str(i))) for i,v in enumerate((.2,.5))]
+    fitted=calibrate_content(proxy,npp,train,cfg,codec,tmp_path,Budget())
+    assert proxy.separate_modes and fitted['mode_fits'] is not None
+    assert all(v>0 for m in fitted['mode_fits'].values() for v in m['powers'])
+    clone=ContentProxy(Bank(),codec);clone.load_state_dict(proxy.state_dict())
+    assert clone.separate_modes
