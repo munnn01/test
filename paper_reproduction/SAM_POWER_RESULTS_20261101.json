@@ -1,0 +1,793 @@
+{
+  "checked_date": "2026-11-01",
+  "source_sha256": "4fa546b69bc80dc1498f8490d92a639c53b1f907c6856fd883f8bb6803df9ffc",
+  "all_three_arm_comparisons_complete": false,
+  "protocol": "64 COCO VAL images; independent single-frame H264/H265 streams; QP30/35/40/45; MaskRCNN IS or FCOS OD",
+  "jobs": {
+    "is-h264": {
+      "handle": "tranthihongdieu/sam-power-is-h264-20261101",
+      "status": "ERROR_GAUSSIAN_AFTER_CONTROL",
+      "task_updates": 768,
+      "control_bd_rate_percent": 5.060548533640875,
+      "bd_rate_quadrature_error": 6.547286772857135e-17,
+      "quality_interval": [
+        0.32695565178006436,
+        0.4183447147788877
+      ],
+      "curves": [
+        {
+          "arm": "npp",
+          "qp": 30,
+          "codec": "h264",
+          "quality": 0.4183447147788877,
+          "metrics": {
+            "ap": 0.4183447147788877,
+            "ap50": 0.6458662772531274,
+            "ap75": 0.4688074716111929,
+            "iou_type": "segm"
+          },
+          "sources": 64,
+          "bytes": 1404545,
+          "pixels": 22908416,
+          "bpp": 0.4904904817513354
+        },
+        {
+          "arm": "codec_only",
+          "qp": 30,
+          "codec": "h264",
+          "quality": 0.45853201452220715,
+          "metrics": {
+            "ap": 0.45853201452220715,
+            "ap50": 0.7098310332893668,
+            "ap75": 0.5189161377291235,
+            "iou_type": "segm"
+          },
+          "sources": 64,
+          "bytes": 2366684,
+          "pixels": 22908416,
+          "bpp": 0.8264854278881613
+        },
+        {
+          "arm": "npp",
+          "qp": 35,
+          "codec": "h264",
+          "quality": 0.4014970789129574,
+          "metrics": {
+            "ap": 0.4014970789129574,
+            "ap50": 0.6133338227725497,
+            "ap75": 0.4237732468766263,
+            "iou_type": "segm"
+          },
+          "sources": 64,
+          "bytes": 805963,
+          "pixels": 22908416,
+          "bpp": 0.28145568859933395
+        },
+        {
+          "arm": "codec_only",
+          "qp": 35,
+          "codec": "h264",
+          "quality": 0.4270310610997198,
+          "metrics": {
+            "ap": 0.4270310610997198,
+            "ap50": 0.6569927623674393,
+            "ap75": 0.46951092712874376,
+            "iou_type": "segm"
+          },
+          "sources": 64,
+          "bytes": 1388335,
+          "pixels": 22908416,
+          "bpp": 0.48482968006168564
+        },
+        {
+          "arm": "npp",
+          "qp": 40,
+          "codec": "h264",
+          "quality": 0.3332683509521293,
+          "metrics": {
+            "ap": 0.3332683509521293,
+            "ap50": 0.5273359981433866,
+            "ap75": 0.3594910946565975,
+            "iou_type": "segm"
+          },
+          "sources": 64,
+          "bytes": 484966,
+          "pixels": 22908416,
+          "bpp": 0.16935819569541605
+        },
+        {
+          "arm": "codec_only",
+          "qp": 40,
+          "codec": "h264",
+          "quality": 0.3979951337043836,
+          "metrics": {
+            "ap": 0.3979951337043836,
+            "ap50": 0.6199048957855737,
+            "ap75": 0.43412077457647436,
+            "iou_type": "segm"
+          },
+          "sources": 64,
+          "bytes": 797089,
+          "pixels": 22908416,
+          "bpp": 0.278356740160472
+        },
+        {
+          "arm": "npp",
+          "qp": 45,
+          "codec": "h264",
+          "quality": 0.2624942390095785,
+          "metrics": {
+            "ap": 0.2624942390095785,
+            "ap50": 0.44607265886189634,
+            "ap75": 0.2653717786845797,
+            "iou_type": "segm"
+          },
+          "sources": 64,
+          "bytes": 299753,
+          "pixels": 22908416,
+          "bpp": 0.10467873466240529
+        },
+        {
+          "arm": "codec_only",
+          "qp": 45,
+          "codec": "h264",
+          "quality": 0.32695565178006436,
+          "metrics": {
+            "ap": 0.32695565178006436,
+            "ap50": 0.5374315310955662,
+            "ap75": 0.3333385682090547,
+            "iou_type": "segm"
+          },
+          "sources": 64,
+          "bytes": 435529,
+          "pixels": 22908416,
+          "bpp": 0.15209397280021456
+        }
+      ],
+      "last_precodec_dev_psnr": 25.459022450258637,
+      "initial_proxy_gate": {
+        "passed": true,
+        "median_relative_error": 0.06237814510253098,
+        "p90_relative_error": 0.12532980468141558,
+        "content_median_relative_error": 0.06628291548273718,
+        "content_p90_relative_error": 0.13273655181638275,
+        "direction_alignment": 1.0,
+        "direction_untied": 16
+      },
+      "final_proxy_gate": {
+        "passed": true,
+        "median_relative_error": 0.06033876639871316,
+        "p90_relative_error": 0.21902764595694668,
+        "content_median_relative_error": 0.06523923720660302,
+        "content_p90_relative_error": 0.23993205431149295,
+        "direction_alignment": 1.0,
+        "direction_untied": 16
+      },
+      "gradients": {
+        "30": {
+          "samples": 6,
+          "median_rate_task_ratio": 2.0990553637416647
+        },
+        "35": {
+          "samples": 6,
+          "median_rate_task_ratio": 0.2554081530274638
+        },
+        "40": {
+          "samples": 6,
+          "median_rate_task_ratio": 0.04724858735753126
+        },
+        "45": {
+          "samples": 6,
+          "median_rate_task_ratio": 0.027283381656461755
+        }
+      },
+      "foreground_task_updates": 0,
+      "sam_boundary_task_updates": 0,
+      "gaussian_complete": false,
+      "original_error": "StopIteration: ",
+      "report_hashes": {
+        "cloud_status.json": "409c7b6d36b8be7bc94f25300378fc99caa61e1bb36832c1a3de10821123361b",
+        "control\\analyzer.json": "8faaf3415825afc880d3a9448a173b93e8e32439cb5bbc2e4164fb34d04de661",
+        "control\\cohort.json": "7c9ebce66d572b4fd490404bf772b4c15904cc2f3dff72ce52ebea341b7939fe",
+        "control\\config.json": "47c3a990a5f3cf454e1b603b36bf1e03e577131903b62148c53a1c8bc49d421e",
+        "control\\content_audit_final.json": "34de1b00deda2086b15ce4658a0a19ab7d0889d25031a4623284ec057e598e52",
+        "control\\content_audit_initial.json": "79a6e2ea4148211af95f59803e36bb485555fc56a01a455330f35d5305c21f94",
+        "control\\content_calibration.json": "e89d5be31a5aad0a648b10d1a97b4b3ae58b51ffaad1f03d8de6e2bbd2cd941e",
+        "control\\proxy_probe.json": "05b54d3c302b60a13722f19474c81f5a574c36292d2e25c01428c31ccb1f67a1",
+        "control\\sam_cache.json": "0e3e9f206de4d3941d2e2b894870c1ca503cc9cf80b11068743cf896a6f969e8",
+        "control\\study_run.json": "ebcf8d30cd9483c54ebbdab213318d6126b9534f51dae7355973fabab6a03c59",
+        "control\\validation\\metrics.json": "116073e1d3c2553b17b437b3556dfdfe783425ae7f5c35865a718870f0c975d3"
+      }
+    },
+    "is-h265": {
+      "handle": "dngbolm/sam-power-is-h265-20261101",
+      "status": "ERROR_GAUSSIAN_AFTER_CONTROL",
+      "task_updates": 768,
+      "control_bd_rate_percent": 3.087273345308008,
+      "bd_rate_quadrature_error": 7.46148511597083e-17,
+      "quality_interval": [
+        0.32897670878267715,
+        0.4174373626154772
+      ],
+      "curves": [
+        {
+          "arm": "npp",
+          "qp": 30,
+          "codec": "h265",
+          "quality": 0.4174373626154772,
+          "metrics": {
+            "ap": 0.4174373626154772,
+            "ap50": 0.6297424943794937,
+            "ap75": 0.4701455643919069,
+            "iou_type": "segm"
+          },
+          "sources": 64,
+          "bytes": 1442482,
+          "pixels": 22908416,
+          "bpp": 0.5037387133182845
+        },
+        {
+          "arm": "codec_only",
+          "qp": 30,
+          "codec": "h265",
+          "quality": 0.45693534365487587,
+          "metrics": {
+            "ap": 0.45693534365487587,
+            "ap50": 0.702497154959059,
+            "ap75": 0.5275816484091929,
+            "iou_type": "segm"
+          },
+          "sources": 64,
+          "bytes": 2141431,
+          "pixels": 22908416,
+          "bpp": 0.7478233327000872
+        },
+        {
+          "arm": "npp",
+          "qp": 35,
+          "codec": "h265",
+          "quality": 0.4012199770370954,
+          "metrics": {
+            "ap": 0.4012199770370954,
+            "ap50": 0.6392082365226796,
+            "ap75": 0.4381104284389551,
+            "iou_type": "segm"
+          },
+          "sources": 64,
+          "bytes": 873292,
+          "pixels": 22908416,
+          "bpp": 0.3049680955680218
+        },
+        {
+          "arm": "codec_only",
+          "qp": 35,
+          "codec": "h265",
+          "quality": 0.44807583613717444,
+          "metrics": {
+            "ap": 0.44807583613717444,
+            "ap50": 0.6839769090098079,
+            "ap75": 0.48748945122406384,
+            "iou_type": "segm"
+          },
+          "sources": 64,
+          "bytes": 1310429,
+          "pixels": 22908416,
+          "bpp": 0.45762360872091723
+        },
+        {
+          "arm": "npp",
+          "qp": 40,
+          "codec": "h265",
+          "quality": 0.3617788690491093,
+          "metrics": {
+            "ap": 0.3617788690491093,
+            "ap50": 0.5621637125125041,
+            "ap75": 0.40316988292055805,
+            "iou_type": "segm"
+          },
+          "sources": 64,
+          "bytes": 562687,
+          "pixels": 22908416,
+          "bpp": 0.19649966195829516
+        },
+        {
+          "arm": "codec_only",
+          "qp": 40,
+          "codec": "h265",
+          "quality": 0.40106338822284016,
+          "metrics": {
+            "ap": 0.40106338822284016,
+            "ap50": 0.6536977394154948,
+            "ap75": 0.4618605143909323,
+            "iou_type": "segm"
+          },
+          "sources": 64,
+          "bytes": 795865,
+          "pixels": 22908416,
+          "bpp": 0.27792929899649105
+        },
+        {
+          "arm": "npp",
+          "qp": 45,
+          "codec": "h265",
+          "quality": 0.2738828220829863,
+          "metrics": {
+            "ap": 0.2738828220829863,
+            "ap50": 0.436755480542041,
+            "ap75": 0.31768984323840366,
+            "iou_type": "segm"
+          },
+          "sources": 64,
+          "bytes": 382431,
+          "pixels": 22908416,
+          "bpp": 0.13355126779607984
+        },
+        {
+          "arm": "codec_only",
+          "qp": 45,
+          "codec": "h265",
+          "quality": 0.32897670878267715,
+          "metrics": {
+            "ap": 0.32897670878267715,
+            "ap50": 0.5173093532206935,
+            "ap75": 0.3552234733185739,
+            "iou_type": "segm"
+          },
+          "sources": 64,
+          "bytes": 480168,
+          "pixels": 22908416,
+          "bpp": 0.16768265426994167
+        }
+      ],
+      "last_precodec_dev_psnr": 28.29256480496931,
+      "initial_proxy_gate": {
+        "passed": true,
+        "median_relative_error": 0.0545442470184242,
+        "p90_relative_error": 0.14465016373663808,
+        "content_median_relative_error": 0.07320550532923659,
+        "content_p90_relative_error": 0.20101300729713034,
+        "direction_alignment": 1.0,
+        "direction_untied": 16
+      },
+      "final_proxy_gate": {
+        "passed": true,
+        "median_relative_error": 0.04732402519787654,
+        "p90_relative_error": 0.15100518511188799,
+        "content_median_relative_error": 0.061857301660252884,
+        "content_p90_relative_error": 0.23582092086704484,
+        "direction_alignment": 1.0,
+        "direction_untied": 16
+      },
+      "gradients": {
+        "30": {
+          "samples": 6,
+          "median_rate_task_ratio": 5.225859079027066
+        },
+        "35": {
+          "samples": 6,
+          "median_rate_task_ratio": 0.5737017689404313
+        },
+        "40": {
+          "samples": 6,
+          "median_rate_task_ratio": 0.07205069361043874
+        },
+        "45": {
+          "samples": 6,
+          "median_rate_task_ratio": 0.023159719337334204
+        }
+      },
+      "foreground_task_updates": 0,
+      "sam_boundary_task_updates": 0,
+      "gaussian_complete": false,
+      "original_error": "StopIteration: ",
+      "report_hashes": {
+        "cloud_status.json": "cda71514b50604656dcc83549e5ebf3879d58acd4c3af5a434bab178a0d9f73c",
+        "control\\analyzer.json": "8faaf3415825afc880d3a9448a173b93e8e32439cb5bbc2e4164fb34d04de661",
+        "control\\cohort.json": "7c9ebce66d572b4fd490404bf772b4c15904cc2f3dff72ce52ebea341b7939fe",
+        "control\\config.json": "76a217b8659786164f1d0138ef4ab7f315af21bb5d4b6206cc73874b7051903b",
+        "control\\content_audit_final.json": "ca60529460556c579669854d4a0d7d0baeebecb56462934d641438e493467b86",
+        "control\\content_audit_initial.json": "1e5051d5bcd1b48b8886cfbeea9d3cee8f0a82a6bc944c2add5303c2c91322c9",
+        "control\\content_calibration.json": "ff72a4c822a63e2efd0ff74aff502b3dfea1481b0e13c476a6987f2d94b5e991",
+        "control\\proxy_probe.json": "70f788c15d3492463ab7dcec2c2b14e34bbf6fdfcfc291746f0ed99420b6b155",
+        "control\\sam_cache.json": "0e3e9f206de4d3941d2e2b894870c1ca503cc9cf80b11068743cf896a6f969e8",
+        "control\\study_run.json": "bd64053187345016fdc290c9a5669df5eac7324dea083f9f4a5b4b84044f20d4",
+        "control\\validation\\metrics.json": "5ee96f73abebb94b4844a25a70e53f1486a9dc73adf86d549b7745ee350db4cc"
+      }
+    },
+    "od-h264": {
+      "handle": "hoangminhhuy123/sam-power-od-h264-20261101",
+      "status": "ERROR_GAUSSIAN_AFTER_CONTROL",
+      "task_updates": 768,
+      "control_bd_rate_percent": 13.736877224481297,
+      "bd_rate_quadrature_error": 1.7278846456785226e-16,
+      "quality_interval": [
+        0.3469982253482868,
+        0.46752825129080355
+      ],
+      "curves": [
+        {
+          "arm": "npp",
+          "qp": 30,
+          "codec": "h264",
+          "quality": 0.46752825129080355,
+          "metrics": {
+            "ap": 0.46752825129080355,
+            "ap50": 0.6723987717789847,
+            "ap75": 0.5170732160331657,
+            "iou_type": "bbox"
+          },
+          "sources": 64,
+          "bytes": 1252875,
+          "pixels": 22908416,
+          "bpp": 0.437524794381244
+        },
+        {
+          "arm": "codec_only",
+          "qp": 30,
+          "codec": "h264",
+          "quality": 0.5107680295108498,
+          "metrics": {
+            "ap": 0.5107680295108498,
+            "ap50": 0.7087570868234807,
+            "ap75": 0.566492617409424,
+            "iou_type": "bbox"
+          },
+          "sources": 64,
+          "bytes": 2366684,
+          "pixels": 22908416,
+          "bpp": 0.8264854278881613
+        },
+        {
+          "arm": "npp",
+          "qp": 35,
+          "codec": "h264",
+          "quality": 0.4249091614746958,
+          "metrics": {
+            "ap": 0.4249091614746958,
+            "ap50": 0.6206253525184539,
+            "ap75": 0.44131797760634744,
+            "iou_type": "bbox"
+          },
+          "sources": 64,
+          "bytes": 720948,
+          "pixels": 22908416,
+          "bpp": 0.2517670361844311
+        },
+        {
+          "arm": "codec_only",
+          "qp": 35,
+          "codec": "h264",
+          "quality": 0.4977941399649052,
+          "metrics": {
+            "ap": 0.4977941399649052,
+            "ap50": 0.6864020512834329,
+            "ap75": 0.5465939683566825,
+            "iou_type": "bbox"
+          },
+          "sources": 64,
+          "bytes": 1388335,
+          "pixels": 22908416,
+          "bpp": 0.48482968006168564
+        },
+        {
+          "arm": "npp",
+          "qp": 40,
+          "codec": "h264",
+          "quality": 0.3509509656644154,
+          "metrics": {
+            "ap": 0.3509509656644154,
+            "ap50": 0.5310076493309643,
+            "ap75": 0.3648448074420651,
+            "iou_type": "bbox"
+          },
+          "sources": 64,
+          "bytes": 438113,
+          "pixels": 22908416,
+          "bpp": 0.15299634859084102
+        },
+        {
+          "arm": "codec_only",
+          "qp": 40,
+          "codec": "h264",
+          "quality": 0.4541663462456038,
+          "metrics": {
+            "ap": 0.4541663462456038,
+            "ap50": 0.6618771938631113,
+            "ap75": 0.49093210115879377,
+            "iou_type": "bbox"
+          },
+          "sources": 64,
+          "bytes": 797089,
+          "pixels": 22908416,
+          "bpp": 0.278356740160472
+        },
+        {
+          "arm": "npp",
+          "qp": 45,
+          "codec": "h264",
+          "quality": 0.23934752026002046,
+          "metrics": {
+            "ap": 0.23934752026002046,
+            "ap50": 0.36226543484098794,
+            "ap75": 0.26174480211299395,
+            "iou_type": "bbox"
+          },
+          "sources": 64,
+          "bytes": 273725,
+          "pixels": 22908416,
+          "bpp": 0.09558932402833963
+        },
+        {
+          "arm": "codec_only",
+          "qp": 45,
+          "codec": "h264",
+          "quality": 0.3469982253482868,
+          "metrics": {
+            "ap": 0.3469982253482868,
+            "ap50": 0.5313364444046225,
+            "ap75": 0.3642292567728,
+            "iou_type": "bbox"
+          },
+          "sources": 64,
+          "bytes": 435529,
+          "pixels": 22908416,
+          "bpp": 0.15209397280021456
+        }
+      ],
+      "last_precodec_dev_psnr": 24.320077206063257,
+      "initial_proxy_gate": {
+        "passed": true,
+        "median_relative_error": 0.06260966534041651,
+        "p90_relative_error": 0.11987213030039615,
+        "content_median_relative_error": 0.06569424402601565,
+        "content_p90_relative_error": 0.12548246184461573,
+        "direction_alignment": 1.0,
+        "direction_untied": 16
+      },
+      "final_proxy_gate": {
+        "passed": true,
+        "median_relative_error": 0.06168754965563639,
+        "p90_relative_error": 0.20662178825037503,
+        "content_median_relative_error": 0.06312012021197139,
+        "content_p90_relative_error": 0.22752429767363316,
+        "direction_alignment": 1.0,
+        "direction_untied": 16
+      },
+      "gradients": {
+        "30": {
+          "samples": 6,
+          "median_rate_task_ratio": 4.729580650013334
+        },
+        "35": {
+          "samples": 6,
+          "median_rate_task_ratio": 1.1164188596543712
+        },
+        "40": {
+          "samples": 6,
+          "median_rate_task_ratio": 0.19412214844736114
+        },
+        "45": {
+          "samples": 6,
+          "median_rate_task_ratio": 0.04813230737453967
+        }
+      },
+      "foreground_task_updates": 0,
+      "sam_boundary_task_updates": 0,
+      "gaussian_complete": false,
+      "original_error": "StopIteration: ",
+      "report_hashes": {
+        "cloud_status.json": "68ce3dd1e4c9f8e22367c88221eb918c3657b5aed14db268349d8aac9f7f4aca",
+        "control\\analyzer.json": "02247523fb4e2749d599bdd9e1921a2a00040acbc318ab3720d77fa9a2b990f9",
+        "control\\cohort.json": "6cce3b2007dd5abb14a7b0e114cf4247242a280e20987686bbb1e0f739b5bc71",
+        "control\\config.json": "1127c883a052cb80502124f26418f26c83e7d88711789f0b90d3a7ee0b46857a",
+        "control\\content_audit_final.json": "3192e8d196e38a0ffc46caa1ee6acffabe0eaa1ee6dafd3d23fc475fc2e10770",
+        "control\\content_audit_initial.json": "d5acb1902001280f06adce47b76c28b6b4022544c9ad1da8228dd7aecb9a6651",
+        "control\\content_calibration.json": "27c1e38f0214728ca343d143b14babc37ef84222f18c4fedd7367b3acd0797ee",
+        "control\\proxy_probe.json": "3c1a21694d32caaeb89be68d7f90a91bde422b9c0a86c1780f7e63437b1fedac",
+        "control\\sam_cache.json": "0e3e9f206de4d3941d2e2b894870c1ca503cc9cf80b11068743cf896a6f969e8",
+        "control\\study_run.json": "5afa7fd2eab127ebb97ba9f4c9434b03173c7cfc95f1eb6b7200a0418854758e",
+        "control\\validation\\metrics.json": "d49bbb9ec69064d9c2b427fc44def89254b4cc4daf4ba4327ed4d807e5f53e92"
+      }
+    },
+    "od-h265": {
+      "handle": "ngynanhthuw/sam-power-od-h265-20261101",
+      "status": "ERROR_GAUSSIAN_AFTER_CONTROL",
+      "task_updates": 768,
+      "control_bd_rate_percent": 12.806719621347664,
+      "bd_rate_quadrature_error": 9.87774648532418e-17,
+      "quality_interval": [
+        0.3933578113398919,
+        0.46718901951799363
+      ],
+      "curves": [
+        {
+          "arm": "npp",
+          "qp": 30,
+          "codec": "h265",
+          "quality": 0.46718901951799363,
+          "metrics": {
+            "ap": 0.46718901951799363,
+            "ap50": 0.6653544111990811,
+            "ap75": 0.4967005141647253,
+            "iou_type": "bbox"
+          },
+          "sources": 64,
+          "bytes": 1261692,
+          "pixels": 22908416,
+          "bpp": 0.4406038374717833
+        },
+        {
+          "arm": "codec_only",
+          "qp": 30,
+          "codec": "h265",
+          "quality": 0.5133001098543505,
+          "metrics": {
+            "ap": 0.5133001098543505,
+            "ap50": 0.7249009458896865,
+            "ap75": 0.561211679476001,
+            "iou_type": "bbox"
+          },
+          "sources": 64,
+          "bytes": 2141431,
+          "pixels": 22908416,
+          "bpp": 0.7478233327000872
+        },
+        {
+          "arm": "npp",
+          "qp": 35,
+          "codec": "h265",
+          "quality": 0.44189540335993693,
+          "metrics": {
+            "ap": 0.44189540335993693,
+            "ap50": 0.6680914492946164,
+            "ap75": 0.43689847128216597,
+            "iou_type": "bbox"
+          },
+          "sources": 64,
+          "bytes": 762848,
+          "pixels": 22908416,
+          "bpp": 0.26639921328475963
+        },
+        {
+          "arm": "codec_only",
+          "qp": 35,
+          "codec": "h265",
+          "quality": 0.5060785574387499,
+          "metrics": {
+            "ap": 0.5060785574387499,
+            "ap50": 0.7157380465548232,
+            "ap75": 0.5599372866946037,
+            "iou_type": "bbox"
+          },
+          "sources": 64,
+          "bytes": 1310429,
+          "pixels": 22908416,
+          "bpp": 0.45762360872091723
+        },
+        {
+          "arm": "npp",
+          "qp": 40,
+          "codec": "h265",
+          "quality": 0.37881940109134593,
+          "metrics": {
+            "ap": 0.37881940109134593,
+            "ap50": 0.5775470354736203,
+            "ap75": 0.3816266239430924,
+            "iou_type": "bbox"
+          },
+          "sources": 64,
+          "bytes": 502485,
+          "pixels": 22908416,
+          "bpp": 0.17547612196321213
+        },
+        {
+          "arm": "codec_only",
+          "qp": 40,
+          "codec": "h265",
+          "quality": 0.4560009485801842,
+          "metrics": {
+            "ap": 0.4560009485801842,
+            "ap50": 0.6664328859137351,
+            "ap75": 0.46736935038566285,
+            "iou_type": "bbox"
+          },
+          "sources": 64,
+          "bytes": 795865,
+          "pixels": 22908416,
+          "bpp": 0.27792929899649105
+        },
+        {
+          "arm": "npp",
+          "qp": 45,
+          "codec": "h265",
+          "quality": 0.27115503585230366,
+          "metrics": {
+            "ap": 0.27115503585230366,
+            "ap50": 0.4104090854559643,
+            "ap75": 0.3004821940344708,
+            "iou_type": "bbox"
+          },
+          "sources": 64,
+          "bytes": 350300,
+          "pixels": 22908416,
+          "bpp": 0.12233058802494245
+        },
+        {
+          "arm": "codec_only",
+          "qp": 45,
+          "codec": "h265",
+          "quality": 0.3933578113398919,
+          "metrics": {
+            "ap": 0.3933578113398919,
+            "ap50": 0.5993313377590136,
+            "ap75": 0.4078133081474656,
+            "iou_type": "bbox"
+          },
+          "sources": 64,
+          "bytes": 480168,
+          "pixels": 22908416,
+          "bpp": 0.16768265426994167
+        }
+      ],
+      "last_precodec_dev_psnr": 24.359220864375,
+      "initial_proxy_gate": {
+        "passed": true,
+        "median_relative_error": 0.0572778336847396,
+        "p90_relative_error": 0.14743459697771916,
+        "content_median_relative_error": 0.08050329472790729,
+        "content_p90_relative_error": 0.1829734698340022,
+        "direction_alignment": 1.0,
+        "direction_untied": 16
+      },
+      "final_proxy_gate": {
+        "passed": true,
+        "median_relative_error": 0.04359857880687079,
+        "p90_relative_error": 0.15184938220526054,
+        "content_median_relative_error": 0.060155702437339476,
+        "content_p90_relative_error": 0.1979271613638462,
+        "direction_alignment": 1.0,
+        "direction_untied": 16
+      },
+      "gradients": {
+        "30": {
+          "samples": 6,
+          "median_rate_task_ratio": 4.524064350070772
+        },
+        "35": {
+          "samples": 6,
+          "median_rate_task_ratio": 0.7179759511264998
+        },
+        "40": {
+          "samples": 6,
+          "median_rate_task_ratio": 0.2820994246606534
+        },
+        "45": {
+          "samples": 6,
+          "median_rate_task_ratio": 0.04274015811383642
+        }
+      },
+      "foreground_task_updates": 0,
+      "sam_boundary_task_updates": 0,
+      "gaussian_complete": false,
+      "original_error": "StopIteration: ",
+      "report_hashes": {
+        "cloud_status.json": "02be8d2b6157c7d82c3bc6229f4a7e164373148131be8f943ce85c5433a0b896",
+        "control\\analyzer.json": "02247523fb4e2749d599bdd9e1921a2a00040acbc318ab3720d77fa9a2b990f9",
+        "control\\cohort.json": "6cce3b2007dd5abb14a7b0e114cf4247242a280e20987686bbb1e0f739b5bc71",
+        "control\\config.json": "dec326541d5ed5a4c6d1fce9b8a5ffd14a50e0e5682537f4436fdf9ec892c156",
+        "control\\content_audit_final.json": "cf0c70b03b366855bb7373778fa6eedebafb30437b5aba199545efbaf1662ab9",
+        "control\\content_audit_initial.json": "c3b4bd62edb230ca4ad2d9a7c5f15143485877d5cc342d4d7d91abfcbc083996",
+        "control\\content_calibration.json": "08aab0023aea99349c1ed2af0329cfbac36ecfd63188aa904c8d19b9ed5dd17f",
+        "control\\proxy_probe.json": "fe8c55c1680c474ef84b7c0cc8c63f85b59cd2f8786919cbe298a53612de5707",
+        "control\\sam_cache.json": "0e3e9f206de4d3941d2e2b894870c1ca503cc9cf80b11068743cf896a6f969e8",
+        "control\\study_run.json": "b7fdf6efbfaee2d1f68bb3ce65c5720751da7d40066ed0e91dfdbc3adc36d09a",
+        "control\\validation\\metrics.json": "25138975d695ecff228cb0f0e8c08902c498254317664b8fbefa224e5c5ccfe8"
+      }
+    }
+  },
+  "limitations": [
+    "Positive BD-rate is worse than codec-only. These are completed controls, not SAM results.",
+    "Subset evaluation is not full COCO5000 or temporal-video benchmark.",
+    "Proxy dev screening is a diagnostic gate, not proof of globally correct NPP gradients."
+  ]
+}
