@@ -12,20 +12,30 @@ from .tri_task_data import PUBLIC_PROXY
 
 COMMAND=STUDY_COMMAND.replace('reproduce.image_study','reproduce.sam_power_recover')+"""
     recovery_file=OUT/'recovery_spec.json';recovery_file.write_text(json.dumps(RECOVERY_SPEC))
-    owner,slug,version=RECOVERY_SPEC['ref'].split('/')
-    roots=[pathlib.Path('/kaggle/input')/slug,pathlib.Path('/kaggle/input/notebooks')/owner/slug,pathlib.Path('/kaggle/input/kernels')/owner/slug]
+    dataset=RECOVERY_SPEC.get('dataset_ref')
+    owner,slug,version=(dataset or RECOVERY_SPEC['ref']).split('/')
+    roots=[pathlib.Path('/kaggle/input')/slug]
+    if dataset:roots+=[pathlib.Path('/kaggle/input/datasets')/owner/slug]
+    else:roots+=[pathlib.Path('/kaggle/input/notebooks')/owner/slug,pathlib.Path('/kaggle/input/kernels')/owner/slug]
     parents=set()
     for root in roots:
         for base in (root,root/version):
-            parent=base/'paper_results'
-            report=parent/'control/study_run.json'
+            parent=base if dataset else base/'paper_results'
+            report=parent/('control__study_run.json' if dataset else 'control/study_run.json')
             if report.is_file() and stream_sha(report)==RECOVERY_SPEC['files']['control/study_run.json']:parents.add(parent.resolve())
     if len(parents)!=1:raise ValueError('pinned completed-control parent missing or ambiguous')
     args+=['--parent',str(parents.pop()),'--recovery-spec',str(recovery_file)]
 """
 
+def dataset_refs(spec):
+    return pinned_datasets('od')+[PUBLIC_PROXY['ref']]+([spec['dataset_ref']] if spec.get('dataset_ref') else [])
+
+def kernel_refs(spec):
+    return [] if spec.get('dataset_ref') else [spec['ref'].rsplit('/',1)[0]]
+
 def validate_spec(spec,account):
     if not re.fullmatch(re.escape(account)+r'/sam-power-(?:is|od)-h26[45]-20261101/1',spec.get('ref','')):raise ValueError('same-owner pinned predecessor required')
+    if spec.get('dataset_ref') and spec['dataset_ref']!=account+'/'+spec['ref'].split('/')[1].replace('sam-power-','sam-parent-',1)+'/1':raise ValueError('same-owner matching private parent dataset required')
     if spec.get('source_sha256')!=PARENT_SOURCE:raise ValueError('parent source differs')
     if hashlib.sha256(json.dumps(spec['source_hashes'],sort_keys=True,separators=(',',':')).encode()).hexdigest()!=PARENT_SOURCE:raise ValueError('parent manifest differs')
     expected={'cloud_status.json','control/study_run.json','control/config.json','control/cohort.json','control/analyzer.json','control/validation/metrics.json'}
@@ -45,8 +55,8 @@ def prepare(root,directory,account,slug,cfg,spec):
             c[node.targets[0].id]=ast.literal_eval(node.value)
     c.update(TASK=cfg['task'],STUDY=cfg,INPUT_SPEC=PUBLIC_PROXY,RECOVERY_SPEC=spec)
     nb['cells'][0]['source']=code_for(c).splitlines(True)
-    meta=json.loads((directory/'kernel-metadata.json').read_text());meta['kernel_sources']=[spec['ref'].rsplit('/',1)[0]]
-    meta['dataset_sources']=pinned_datasets('od')+[PUBLIC_PROXY['ref']]
+    meta=json.loads((directory/'kernel-metadata.json').read_text());meta['kernel_sources']=kernel_refs(spec)
+    meta['dataset_sources']=dataset_refs(spec)
     job.update(task=cfg['task'],config=cfg,input_spec=PUBLIC_PROXY,recovery_spec=spec)
     for name,value in (('notebook.ipynb',nb),('kernel-metadata.json',meta)):
         (directory/name).write_text(json.dumps(value,indent=2),encoding='utf-8')
@@ -66,7 +76,7 @@ def verify(directory,root=None):
         or notebook['cells'][0].get('cell_type')!='code'):raise ValueError('exactly one canonical code cell required')
     expected_meta=dict(id=job['handle'],title=job['handle'].split('/')[1],code_file='notebook.ipynb',
         language='python',kernel_type='notebook',is_private=True,enable_gpu=True,enable_internet=True,
-        dataset_sources=pinned_datasets('od')+[PUBLIC_PROXY['ref']],kernel_sources=[spec['ref'].rsplit('/',1)[0]],competition_sources=[],model_sources=[])
+        dataset_sources=dataset_refs(spec),kernel_sources=kernel_refs(spec),competition_sources=[],model_sources=[])
     if meta!=expected_meta:raise ValueError('execution metadata or undeclared inputs differ')
     code=''.join(notebook['cells'][0]['source']);c={}
     names={'TASK','MODE','MANIFEST','SOURCE_SHA','RESUME_DATASET','RESUME_SHA','BUNDLE','STUDY','INPUT_SPEC','RECOVERY_SPEC'}
@@ -75,7 +85,7 @@ def verify(directory,root=None):
     if (set(c)!=names or c['TASK']!=cfg['task'] or c['MODE']!='full' or c['STUDY']!=cfg or c['INPUT_SPEC']!=PUBLIC_PROXY or c['RECOVERY_SPEC']!=spec
         or c['RESUME_DATASET'] is not None or c['RESUME_SHA'] is not None or c['SOURCE_SHA']!=job['source_sha256'] or c['MANIFEST']!=job['source_hashes']
         or meta['id']!=job['handle'] or meta['is_private'] is not True or meta['enable_gpu'] is not True or meta['enable_internet'] is not True
-        or meta['dataset_sources']!=pinned_datasets('od')+[PUBLIC_PROXY['ref']] or meta['kernel_sources']!=[spec['ref'].rsplit('/',1)[0]]
+        or meta['dataset_sources']!=dataset_refs(spec) or meta['kernel_sources']!=kernel_refs(spec)
         or code!=code_for(c)):raise ValueError('recovery cloud binding differs')
     validate_legacy(c['BUNDLE'],c['MANIFEST'],c['SOURCE_SHA'])
     if root is not None:

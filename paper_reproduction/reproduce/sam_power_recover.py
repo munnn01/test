@@ -17,6 +17,13 @@ from .kaggle import source_files
 PARENT_SOURCE='4fa546b69bc80dc1498f8490d92a639c53b1f907c6856fd883f8bb6803df9ffc'
 ANCHOR="        self.anchor=nn.Parameter(torch.zeros(1),requires_grad=False)\n"
 
+class FlatParent:
+    def __init__(self,root):self.root=Path(root)
+    def __truediv__(self,name):
+        allowed={'cloud_status.json','control/study_run.json','control/config.json','control/cohort.json','control/analyzer.json','control/validation/metrics.json','shared_warmup.pt','control/last.pt'}
+        if name not in allowed:raise ValueError('undeclared parent member')
+        return self.root/name.replace('/','__')
+
 def state_digest(state):
     h=hashlib.sha256()
     for name,value in sorted(state.items()):
@@ -113,6 +120,7 @@ def main():
     args=parser.parse_args();cfg=json.loads(args.config.read_text());spec=json.loads(args.recovery_spec.read_text())
     if cfg!=power.config(cfg['task'],'control',cfg['codecs'][0]):raise ValueError('recovery recipe differs')
     validate_sources(Path(__file__).resolve().parents[1],spec['source_hashes'],PARENT_SOURCE)
+    if spec.get('dataset_ref'):args.parent=FlatParent(args.parent)
     old=verify_parent(args.parent,spec,cfg);saved_cfg=old['control/config.json'];report=old['control/study_run.json']
     warm=torch.load(args.parent/'shared_warmup.pt',map_location='cpu',weights_only=False)
     migrated=migrate_warm(warm,report,saved_cfg,PARENT_SOURCE,os.environ['PAPER_SOURCE_SHA256'])

@@ -33,3 +33,18 @@ def test_exact_baseline_match_required():
     a={'curves':[dict(arm='codec_only',qp=30,bytes=100,quality=.4)]}
     same_codec_baseline(a,a)
     with pytest.raises(ValueError):same_codec_baseline(a,{'curves':[dict(arm='codec_only',qp=30,bytes=101,quality=.4)]})
+
+def test_private_dataset_transport_and_flat_member_mapping(tmp_path,monkeypatch):
+    from reproduce.sam_power_recover import FlatParent
+    root=tmp_path/'source';(root/'reproduce').mkdir(parents=True);(root/'reproduce/run.py').write_text('pass\n')
+    manifest={'reproduce/run.py':hashlib.sha256((root/'reproduce/run.py').read_bytes()).hexdigest()}
+    sha=config_digest(manifest);monkeypatch.setattr(cloud,'PARENT_SOURCE',sha);monkeypatch.setattr(recovery,'PARENT_SOURCE',sha)
+    names=['cloud_status.json','control/study_run.json','control/config.json','control/cohort.json','control/analyzer.json','control/validation/metrics.json']
+    spec=dict(ref='owner/sam-power-is-h264-20261101/1',source_sha256=sha,source_hashes=manifest,files={n:'a'*64 for n in names},
+        dataset_ref='owner/sam-parent-is-h264-20261101/1')
+    p=tmp_path/'payload';cloud.prepare(root,p,'owner','sam-recover-is-h264',config('is','control'),spec)
+    meta,_=cloud.verify(p,root)
+    assert meta['kernel_sources']==[] and meta['dataset_sources'][-1]==spec['dataset_ref']
+    with pytest.raises(ValueError):cloud.validate_spec(dict(spec,dataset_ref='other/sam-parent-is-h264-20261101/1'),'owner')
+    assert FlatParent(tmp_path)/'control/last.pt'==tmp_path/'control__last.pt'
+    with pytest.raises(ValueError):FlatParent(tmp_path)/'../outside.pt'
