@@ -1,0 +1,174 @@
+[
+  {
+    "key": "is-h264",
+    "mode_fits": {
+      "rounded": {
+        "scales": [
+          1.4422877616147574,
+          1.7067441977256972,
+          1.9790087891058683,
+          2.36083010121743
+        ],
+        "powers": [
+          0.9260011062335894,
+          1.006044921469543,
+          1.034332313535899,
+          1.0509634521457356
+        ]
+      },
+      "relaxed": {
+        "scales": [
+          1.14290499910048,
+          1.7013140628364416,
+          3.136356498169097,
+          18.321369138062547
+        ],
+        "powers": [
+          1.3129902576225474,
+          1.5224909070508943,
+          1.921263118970122,
+          2.9591049367319537
+        ]
+      }
+    },
+    "gate": {
+      "passed": true,
+      "median_relative_error": 0.06477519961362793,
+      "p90_relative_error": 0.12965950665470657,
+      "content_median_relative_error": 0.06911075074660927,
+      "content_p90_relative_error": 0.1393144472129168,
+      "direction_alignment": 1.0,
+      "direction_untied": 16
+    },
+    "scope": "cached-feature TRAIN fit / existing TRAIN-dev assessment; direction sign preserved by positive power; no fresh GPU or BD-rate"
+  },
+  {
+    "key": "is-h265",
+    "mode_fits": {
+      "rounded": {
+        "scales": [
+          1.2794023223871165,
+          1.64095499703069,
+          2.105968260558575,
+          2.906471184034701
+        ],
+        "powers": [
+          0.9898572377778478,
+          1.0955752243807018,
+          1.1518235805749453,
+          1.1958741491410714
+        ]
+      },
+      "relaxed": {
+        "scales": [
+          0.9977423579957274,
+          1.6495279619040686,
+          3.5456748208525686,
+          31.556962686523082
+        ],
+        "powers": [
+          1.4115160506569824,
+          1.67051007159569,
+          2.1470405249092996,
+          3.402762436057771
+        ]
+      }
+    },
+    "gate": {
+      "passed": true,
+      "median_relative_error": 0.06536453931849867,
+      "p90_relative_error": 0.1555114914800184,
+      "content_median_relative_error": 0.08528999612101312,
+      "content_p90_relative_error": 0.19452239951310868,
+      "direction_alignment": 1.0,
+      "direction_untied": 16
+    },
+    "scope": "cached-feature TRAIN fit / existing TRAIN-dev assessment; direction sign preserved by positive power; no fresh GPU or BD-rate"
+  },
+  {
+    "key": "od-h264",
+    "mode_fits": {
+      "rounded": {
+        "scales": [
+          1.4433574040063304,
+          1.6908824681497852,
+          1.9941174412889406,
+          2.2983731347616123
+        ],
+        "powers": [
+          0.9241298933368399,
+          0.9945096614662067,
+          1.0360069523502073,
+          1.0377183129474807
+        ]
+      },
+      "relaxed": {
+        "scales": [
+          1.1434252091618333,
+          1.68719806720715,
+          3.1642845013950973,
+          18.520746765752687
+        ],
+        "powers": [
+          1.3045695554864407,
+          1.5082109767649627,
+          1.9262167529571552,
+          2.9650447424349355
+        ]
+      }
+    },
+    "gate": {
+      "passed": true,
+      "median_relative_error": 0.06178316065345124,
+      "p90_relative_error": 0.12507502427230988,
+      "content_median_relative_error": 0.06841855561909477,
+      "content_p90_relative_error": 0.1308946314009064,
+      "direction_alignment": 1.0,
+      "direction_untied": 16
+    },
+    "scope": "cached-feature TRAIN fit / existing TRAIN-dev assessment; direction sign preserved by positive power; no fresh GPU or BD-rate"
+  },
+  {
+    "key": "od-h265",
+    "mode_fits": {
+      "rounded": {
+        "scales": [
+          1.282474909222321,
+          1.6070740655638875,
+          2.0391855161450727,
+          2.7385266659551317
+        ],
+        "powers": [
+          0.9653396908761561,
+          1.0740588231856687,
+          1.130023959813202,
+          1.172712557084919
+        ]
+      },
+      "relaxed": {
+        "scales": [
+          1.0035069026989518,
+          1.5778725384365717,
+          3.2378555232106074,
+          25.480132533603207
+        ],
+        "powers": [
+          1.3595561451931,
+          1.6081363365822536,
+          2.068927009968802,
+          3.271658808606226
+        ]
+      }
+    },
+    "gate": {
+      "passed": true,
+      "median_relative_error": 0.052446099125920076,
+      "p90_relative_error": 0.13997010437253105,
+      "content_median_relative_error": 0.0794332613113179,
+      "content_p90_relative_error": 0.16871435531074563,
+      "direction_alignment": 1.0,
+      "direction_untied": 16
+    },
+    "scope": "cached-feature TRAIN fit / existing TRAIN-dev assessment; direction sign preserved by positive power; no fresh GPU or BD-rate"
+  }
+]
