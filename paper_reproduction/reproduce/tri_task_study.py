@@ -245,7 +245,7 @@ def main():
         elif cfg['proxy_steps']>0:
             report['proxy_fit']=fit_video_proxy(proxy,samples,cfg,codec,out,budget);state['proxy_updates']=report['proxy_fit']['updates']
         freeze(proxy);report['proxy_probe']=proxy_probe(proxy,dev_samples,cfg,codec,out,budget);report['frozen_proxy_sha256']=model_digest(proxy)
-        if cfg.get('study_profile')=='coco_codecs':
+        if cfg.get('study_profile')=='coco_codecs' and not cfg.get('rate_profile'):
             from .coco_codec_study import direction_probe
             report['rate_direction']=direction_probe(proxy,dev_samples,cfg,codec,out,budget)
         torch.manual_seed(cfg['seed']);torch.cuda.manual_seed_all(cfg['seed']);npp=PaperNPP().to('cuda')
@@ -290,6 +290,13 @@ def main():
         if not gate['passed']:state['stop_reason']='task_fidelity_collapse'
         if not task_resume and not warmup_ready(cfg,state,gate):
             report['execution_complete']=True;return
+        if cfg.get('rate_profile'):
+            from .coco_content_rate_study import calibrate_content,audit_content
+            if not args.warm_start and not task_resume:
+                report['content_calibration']=calibrate_content(proxy,npp,samples,cfg,codec,out,budget)
+            audit=audit_content(proxy,npp,dev_samples,cfg,codec,out,budget,'initial')
+            report['content_screen']=audit['gate'];report['frozen_proxy_sha256']=model_digest(proxy)
+            if not audit['gate']['passed']:raise RuntimeError('content proxy failed held-out screening before task optimization')
         report['warmup_npp_sha256']=model_digest(npp)
         if args.export_warmup and not args.warm_start:
             args.export_warmup.parent.mkdir(parents=True,exist_ok=True)
@@ -314,7 +321,13 @@ def main():
             if state['task_updates']==0:
                 report['task_npp_gradient_norm']=task_gradient_norm(task_loss,npp)
                 log_event(out,'tri_task_gradient_passed',task=cfg['task'],norm=report['task_npp_gradient_norm'])
-            loss,parts=mask_objective(cfg,rate,task_loss,x,y,q,mask);norm=finite_step(loss,npp,optimizer);state['task_updates']+=1
+            loss,parts=mask_objective(cfg,rate,task_loss,x,y,q,mask)
+            if cfg.get('rate_profile') and state['task_updates']%128<4:
+                from .codec_content_rate import gradient_balance
+                task_term=cfg['lambda_scale']*task_lambda(q)*task_loss
+                info=gradient_balance(rate,task_term,loss-rate-task_term,npp.parameters())
+                log_event(out,'content_component_gradients',step=state['task_updates']+1,qp=q,**info)
+            norm=finite_step(loss,npp,optimizer);state['task_updates']+=1
             if state['task_updates']==1 or state['task_updates']%cfg['log_every']==0:
                 log_event(out,'tri_task_train',step=state['task_updates'],qp=q,source=meta['id'],loss=float(loss.detach()),real_bpp=actual.bpp,
                     task_loss=float(task_loss.detach()),gradient_norm=norm,lr=optimizer.param_groups[0]['lr'],**{k:float(v.detach()) for k,v in parts.items()})
@@ -327,6 +340,8 @@ def main():
         if model_digest(proxy)!=report['frozen_proxy_sha256'] or model_digest(task.model)!=task.weight_digest:raise RuntimeError('frozen task/proxy changed')
         report['npp_sha256']=model_digest(npp);report['task_trained']=task_trained(state)
         report['theta_delta_norm']=float(torch.sqrt(sum((v.detach().cpu()-initial[k]).square().sum() for k,v in npp.named_parameters() if k in initial)))
+        if cfg.get('rate_profile'):
+            report['final_content_screen']=audit_content(proxy,npp,dev_samples,cfg,codec,out,budget,'final')['gate']
         report['metrics']=evaluate(cfg,validation,npp,task,codec,out/'validation',annotation,budget)
         report['execution_complete']=True
     except BaseException as error:
