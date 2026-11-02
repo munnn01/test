@@ -1,0 +1,99 @@
+{
+  "source": {
+    "commit": "35da98c759177f807f3b2b55d835ca0ada9f99ac",
+    "branch": "paper-proxy-p05-20261028",
+    "source_sha256": "ff796936fa09639368b1dc1dc6a678c401faf035884e8f78a55a2d2586618dcf",
+    "remote_manifest_verified": true,
+    "core42_unchanged": true,
+    "tests": 230,
+    "review_important_fixed": 2,
+    "checked": 1793606012.3326206,
+    "all10_published_blobs_exact": true,
+    "all112_source_blobs_exact": true,
+    "source_file_count": 112
+  },
+  "actual_codec_smoke": {
+    "passed": true,
+    "kind": "actual_codecs_parent_original_NPP_toy_proxy_toy_task_autograd_only",
+    "rows": [
+      {
+        "codec": "h264",
+        "qp": 30,
+        "total_bytes": 3813,
+        "content_bytes": 3217,
+        "overhead_bytes": 596,
+        "bpp": 5.9578125,
+        "gradient_norm": 8.700428009033203
+      },
+      {
+        "codec": "h264",
+        "qp": 35,
+        "total_bytes": 2959,
+        "content_bytes": 2363,
+        "overhead_bytes": 596,
+        "bpp": 4.6234375,
+        "gradient_norm": 9.175341606140137
+      },
+      {
+        "codec": "h264",
+        "qp": 40,
+        "total_bytes": 2168,
+        "content_bytes": 1572,
+        "overhead_bytes": 596,
+        "bpp": 3.3875,
+        "gradient_norm": 10.361666679382324
+      },
+      {
+        "codec": "h264",
+        "qp": 45,
+        "total_bytes": 1414,
+        "content_bytes": 818,
+        "overhead_bytes": 596,
+        "bpp": 2.209375,
+        "gradient_norm": 13.042098999023438
+      },
+      {
+        "codec": "h265",
+        "qp": 30,
+        "total_bytes": 5260,
+        "content_bytes": 2930,
+        "overhead_bytes": 2330,
+        "bpp": 8.21875,
+        "gradient_norm": 8.699946403503418
+      },
+      {
+        "codec": "h265",
+        "qp": 35,
+        "total_bytes": 4457,
+        "content_bytes": 2127,
+        "overhead_bytes": 2330,
+        "bpp": 6.9640625,
+        "gradient_norm": 9.173982620239258
+      },
+      {
+        "codec": "h265",
+        "qp": 40,
+        "total_bytes": 3726,
+        "content_bytes": 1396,
+        "overhead_bytes": 2330,
+        "bpp": 5.821875,
+        "gradient_norm": 10.346648216247559
+      },
+      {
+        "codec": "h265",
+        "qp": 45,
+        "total_bytes": 3090,
+        "content_bytes": 760,
+        "overhead_bytes": 2330,
+        "bpp": 4.828125,
+        "gradient_norm": 13.020404815673828
+      }
+    ]
+  },
+  "tests": {
+    "passed": 230,
+    "log": "outputs/teacher_final_suite.log",
+    "review_regression_log": "outputs/teacher_final_review_green.log"
+  },
+  "native_proxy_task_local": "not_run_CompressAI_unavailable_Windows_cloud_required"
+}

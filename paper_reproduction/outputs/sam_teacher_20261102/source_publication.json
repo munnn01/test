@@ -1,0 +1,13 @@
+{
+  "commit": "35da98c759177f807f3b2b55d835ca0ada9f99ac",
+  "branch": "paper-proxy-p05-20261028",
+  "source_sha256": "ff796936fa09639368b1dc1dc6a678c401faf035884e8f78a55a2d2586618dcf",
+  "remote_manifest_verified": true,
+  "core42_unchanged": true,
+  "tests": 230,
+  "review_important_fixed": 2,
+  "checked": 1793606012.3326206,
+  "all10_published_blobs_exact": true,
+  "all112_source_blobs_exact": true,
+  "source_file_count": 112
+}

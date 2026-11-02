@@ -1,0 +1,185 @@
+{
+  "study": "sam_teacher_balance_v1",
+  "scientific_complete": false,
+  "updated": 1793605964.270137,
+  "local_root": "D:\\STUDY\\LAB\\SAM",
+  "jobs": [
+    {
+      "key": "is-h264",
+      "handle": "tranthihongdieu/sam-teacher-is-h264-20261102",
+      "source_sha256": "ff796936fa09639368b1dc1dc6a678c401faf035884e8f78a55a2d2586618dcf",
+      "submission": {
+        "version": 1,
+        "url": "https://www.kaggle.com/code/tranthihongdieu/sam-teacher-is-h264-20261102",
+        "acknowledged": true,
+        "running_verified": false
+      },
+      "server_verification": {
+        "handle": "tranthihongdieu/sam-teacher-is-h264-20261102",
+        "private_verified": true,
+        "notebook_verified": true,
+        "source_sha256": "ff796936fa09639368b1dc1dc6a678c401faf035884e8f78a55a2d2586618dcf",
+        "checked": 1793605279.2382774
+      },
+      "launch": {
+        "key": "is-h264",
+        "handle": "tranthihongdieu/sam-teacher-is-h264-20261102",
+        "status": "Warning: Looks like you're using an outdated `kaggle` version (installed: 2.2.4), please consider upgrading to the latest version (2.2.5)\ntranthihongdieu/sam-teacher-is-h264-20261102 has status \"KernelWorkerStatus.RUNNING\"",
+        "checked": 1793605912.0853448,
+        "latest": {
+          "stage": "teacher_proxy_fit",
+          "time": 1793605904.9734821,
+          "step": 154,
+          "qp": 35,
+          "variant": "gaussian",
+          "loss": 0.5849217176437378
+        },
+        "gates": [
+          {
+            "stage": "teacher_fidelity",
+            "time": 1793605771.959543,
+            "updates": 500,
+            "passed": false,
+            "teacher_psnr_db": 35.993157063515305,
+            "source_psnr_db": 31.53425136497923,
+            "sources": 8
+          },
+          {
+            "stage": "teacher_fidelity",
+            "time": 1793605846.4836607,
+            "updates": 1000,
+            "passed": true,
+            "teacher_psnr_db": 38.37080341985092,
+            "source_psnr_db": 31.468758170232345,
+            "sources": 8
+          }
+        ],
+        "terminal": []
+      },
+      "status": "RUNNING"
+    },
+    {
+      "key": "is-h265",
+      "handle": "dngbolm/sam-teacher-is-h265-20261102",
+      "source_sha256": "ff796936fa09639368b1dc1dc6a678c401faf035884e8f78a55a2d2586618dcf",
+      "submission": {
+        "version": 1,
+        "url": "https://www.kaggle.com/code/dngbolm/sam-teacher-is-h265-20261102",
+        "acknowledged": true,
+        "running_verified": false
+      },
+      "server_verification": {
+        "handle": "dngbolm/sam-teacher-is-h265-20261102",
+        "private_verified": true,
+        "notebook_verified": true,
+        "source_sha256": "ff796936fa09639368b1dc1dc6a678c401faf035884e8f78a55a2d2586618dcf",
+        "checked": 1793605869.4888287
+      },
+      "launch": {
+        "key": "is-h265",
+        "handle": "dngbolm/sam-teacher-is-h265-20261102",
+        "status": "Warning: Looks like you're using an outdated `kaggle` version (installed: 2.2.4), please consider upgrading to the latest version (2.2.5)\ndngbolm/sam-teacher-is-h265-20261102 has status \"KernelWorkerStatus.RUNNING\"",
+        "checked": 1793605909.9029434,
+        "latest": {
+          "stage": "payload_verified",
+          "task": "is",
+          "mode": "full",
+          "source_sha256": "ff796936fa09639368b1dc1dc6a678c401faf035884e8f78a55a2d2586618dcf"
+        },
+        "gates": [],
+        "terminal": []
+      },
+      "status": "RUNNING"
+    },
+    {
+      "key": "od-h264",
+      "handle": "hoangminhhuy123/sam-teacher-od-h264-20261102",
+      "source_sha256": "ff796936fa09639368b1dc1dc6a678c401faf035884e8f78a55a2d2586618dcf",
+      "submission": {
+        "version": 1,
+        "url": "https://www.kaggle.com/code/hoangminhhuy123/sam-teacher-od-h264-20261102",
+        "acknowledged": true,
+        "running_verified": false
+      },
+      "server_verification": {
+        "handle": "hoangminhhuy123/sam-teacher-od-h264-20261102",
+        "private_verified": true,
+        "notebook_verified": true,
+        "source_sha256": "ff796936fa09639368b1dc1dc6a678c401faf035884e8f78a55a2d2586618dcf",
+        "checked": 1793605868.059415
+      },
+      "launch": {
+        "key": "od-h264",
+        "handle": "hoangminhhuy123/sam-teacher-od-h264-20261102",
+        "status": "Warning: Looks like you're using an outdated `kaggle` version (installed: 2.2.4), please consider upgrading to the latest version (2.2.5)\nhoangminhhuy123/sam-teacher-od-h264-20261102 has status \"KernelWorkerStatus.RUNNING\"",
+        "checked": 1793605904.7677798,
+        "latest": {
+          "stage": "payload_verified",
+          "task": "od",
+          "mode": "full",
+          "source_sha256": "ff796936fa09639368b1dc1dc6a678c401faf035884e8f78a55a2d2586618dcf"
+        },
+        "gates": [],
+        "terminal": []
+      },
+      "status": "RUNNING"
+    },
+    {
+      "key": "od-h265",
+      "handle": "ngynanhthuw/sam-teacher-od-h265-20261102",
+      "source_sha256": "ff796936fa09639368b1dc1dc6a678c401faf035884e8f78a55a2d2586618dcf",
+      "submission": {
+        "version": 1,
+        "url": "https://www.kaggle.com/code/ngynanhthuw/sam-teacher-od-h265-20261102",
+        "acknowledged": true,
+        "running_verified": false
+      },
+      "server_verification": {
+        "handle": "ngynanhthuw/sam-teacher-od-h265-20261102",
+        "private_verified": true,
+        "notebook_verified": true,
+        "source_sha256": "ff796936fa09639368b1dc1dc6a678c401faf035884e8f78a55a2d2586618dcf",
+        "checked": 1793605870.6629183
+      },
+      "launch": {
+        "key": "od-h265",
+        "handle": "ngynanhthuw/sam-teacher-od-h265-20261102",
+        "status": "Warning: Looks like you're using an outdated `kaggle` version (installed: 2.2.4), please consider upgrading to the latest version (2.2.5)\nngynanhthuw/sam-teacher-od-h265-20261102 has status \"KernelWorkerStatus.RUNNING\"",
+        "checked": 1793605911.7679362,
+        "latest": {
+          "stage": "payload_verified",
+          "task": "od",
+          "mode": "full",
+          "source_sha256": "ff796936fa09639368b1dc1dc6a678c401faf035884e8f78a55a2d2586618dcf"
+        },
+        "gates": [],
+        "terminal": []
+      },
+      "status": "RUNNING"
+    }
+  ],
+  "pipeline": "original Conv1x1+U-Net NPP -> actual H264/H265 -> frozen task; proxy backward; offline frozen SAM2",
+  "protocol": "COCO IS/OD independent intra images, QP30/35/40/45;32TRAIN ranking;256newVAL; two matched arms",
+  "tracking": "DEFERRED",
+  "max_service_seconds_per_worker": 10800,
+  "max_total_session_hours": 12,
+  "limitation": "Prepared/submitted/running is not evidence of improved BD-rate; teacher/proxy/native-gradient gates may stop training.",
+  "source_publication": {
+    "commit": "35da98c759177f807f3b2b55d835ca0ada9f99ac",
+    "branch": "paper-proxy-p05-20261028",
+    "source_sha256": "ff796936fa09639368b1dc1dc6a678c401faf035884e8f78a55a2d2586618dcf",
+    "remote_manifest_verified": true,
+    "core42_unchanged": true,
+    "tests": 230,
+    "review_important_fixed": 2,
+    "checked": 1793606012.3326206,
+    "all10_published_blobs_exact": true,
+    "all112_source_blobs_exact": true,
+    "source_file_count": 112
+  },
+  "verification": {
+    "pytest_passed": 230,
+    "independent_review_fixed": 2,
+    "original_core_files_unchanged": 42
+  }
+}
