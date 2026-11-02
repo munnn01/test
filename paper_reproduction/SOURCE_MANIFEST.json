@@ -1,5 +1,5 @@
 {
-  "source_sha256": "9fa98ecc542dc0bc193c38cfa9dcb0b47f4da5cd44d24916815f3d6d964fa69c",
+  "source_sha256": "ff796936fa09639368b1dc1dc6a678c401faf035884e8f78a55a2d2586618dcf",
   "source_hashes": {
     "docs/IMAGE_PAPER_STUDY.md": "01fdea89c60354f28f68e1ac7881074382d7a4c68b171d48319b6318708d4eb6",
     "docs/LEDGER.md": "b825d4536ce0523b2e99293f7d0bdc798db73bc6db95a89f05684de4566d3768",
@@ -16,6 +16,9 @@
     "docs/superpowers/plans/2026-11-01-gaussian-recovery.md": "75c2d868f03c005e650080afedf0eb45f8a79829eb43963f1b3ab799da60a34b",
     "docs/superpowers/plans/2026-11-01-sam-power-followup.md": "1500e1f81b2ce67cbf8b40be224e1b1c3f32a290837ca9362e99347929e19bd4",
     "docs/superpowers/plans/2026-11-01-seg-track-sam.md": "1c66cec779f5597c2ec760063469abcf6210e91f81b36ebd7939aed54067740f",
+    "docs/superpowers/plans/2026-11-02-sam-teacher-balance-ledger.md": "9b9781ab7fbddf06e9a224f36f9571c3098f38a147108411dcbb6d6e12d4b1df",
+    "docs/superpowers/plans/2026-11-02-sam-teacher-balance.md": "476d412a363254b84b5e546fabe28fb96dc10942bdb146fb172d148fbc1003c9",
+    "docs/superpowers/specs/2026-11-02-sam-teacher-balance-design.md": "0509454d64213b46e95c14714ba013da4fab0110d1176046ffe3cc2ed2b8d3b1",
     "pyproject.toml": "d28f9e82385f6cc67954af1820e6c8471f7e01012c4abbd06831e34899af8d38",
     "README.md": "4873fa6948d045726a0f7243ac57a2d718437a76a6f14ceec3243dbb6004d0ad",
     "reproduce/__init__.py": "470d103b325e9ab0e8b5e33f4e0b960259a8f221c32ffb25bc3bffc8327ab654",
@@ -48,6 +51,9 @@
     "reproduce/sam_power_study.py": "54b32900b790efeda765a676a67bcd5c567567aef03a15681b6ac40ec8efe309",
     "reproduce/sam_recovery_cloud.py": "2c161519f30c6b2d69acf19a657ec20f04102d0671c692045fa2aa1b3467f8a0",
     "reproduce/sam_structured.py": "c5bdae66be2dc3d6b970a211f3e36900b2daab593cc4555cce03491413816781",
+    "reproduce/sam_teacher_cloud.py": "2194c4c88dfb0c15cb4cb9c3c46b6f0dfcc6f7d4a87553f15ff943c34364fe05",
+    "reproduce/sam_teacher_recipe.py": "fa670e12477c28a9862942f88e0595bcb3fda712c3ecccbf91d547f3aad1d34c",
+    "reproduce/sam_teacher_study.py": "44026d22878d44684ce774c03364b9bd22a621cf1232790df97a7efe7b92d106",
     "reproduce/tasks.py": "67d1a6f1ee5c9f2b9b1ca228c88f39bd8973f9bb837601dd622d2122850d728e",
     "reproduce/tensor_bytes.py": "316bc2d3d9be10ae484954b4e91c48ef4ada3596ab912280ee7649eba056e64e",
     "reproduce/training.py": "039ef6149c1a608258c62894619e65126ca20aa7125ef0b3bb3e5ab83c60ca4b",
@@ -97,6 +103,9 @@
     "tests/test_sam_power_protocol.py": "e40c121c26d73e5f68b5af6fa7ecd9fe81abe84db523f19bd3563a3398912a87",
     "tests/test_sam_power_recovery.py": "5bf537d785c3104a46aea7e6001bd6d24c98be5b047002ce7a53ac29b16bc2e9",
     "tests/test_sam_recovery_cloud.py": "68e0513b650b2e008b1b4091b6f0a4d671c0ff46e227424b3f78f3feeb8799af",
+    "tests/test_sam_teacher_cloud.py": "054b2eff24b40a46cddbf79caaed44555efb98eb351c2d38b5b7755a27c13147",
+    "tests/test_sam_teacher_recipe.py": "2d571c378196818fb32065304514b192234dbb1a807f4892392587acb990e8b8",
+    "tests/test_sam_teacher_study.py": "7d83c7857beaa345a78e18f27ed50dc8e3c6eb8b6342553a23be02e00f663bd8",
     "tests/test_structured_sam.py": "f0ea930bba3bbe78af1f89e1e57b7859b3174025d7e5e286eaedcf2e35ac9eb6",
     "tests/test_tensor_bytes.py": "c6b8f34582468286c73a0f3f68a81ba79368b7fcda989115efaf4cf775830d93",
     "tests/test_tracking_setup.py": "6d4ef4bdbbb27f06b78c14b0418c4de9500991c6977c91b72451120b67afcd41",
@@ -104,5 +113,8 @@
     "tests/test_training_contracts.py": "fd9709ac04e11966ef3b8cb9acbe77ef39b9dd4fc6960ff6d133866aa2bf96a3",
     "tests/test_tri_task.py": "dcb078b32ecfad4c55df9011a5b67c3d08b7e5290e6cb68ae803bdb9b64bda84",
     "tests/test_tri_task_cloud.py": "d07bb1318ba7baf74462ff08fd22a15a4ef7b19fa70aefb755859d41e0534e8f"
-  }
+  },
+  "original_core_unchanged": 42,
+  "tests": "230passed",
+  "review": "2Important fixed;0Critical/Minor;8regressions RED->GREEN"
 }
